@@ -72,8 +72,9 @@
                         SelectedItem="{Binding Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="LocationPicker" HorizontalOptions="Start"/>
                 </Grid>
-
+                    
                     <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center">
+                        <!--Stack layout for Range-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
 
                             <Label 
@@ -96,26 +97,29 @@
 
                             </StackLayout>
                         </StackLayout>
-
-                    <Label 
-                        Text="Value"
-                        Style="{StaticResource LabelStyle}"/>
-
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
                         
-                        <Label 
-                            Text="{Binding Data.Value}" 
-                            x:Name="ValueValue"
-                            Style="{StaticResource ValueStyle}"
-                            Padding="0,0,10,0"
-                            HorizontalOptions="End"
-                            HorizontalTextAlignment="End"/>
+                        <!--stacklayout for Value-->
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                            <Label 
+                                Text="Value"
+                                Style="{StaticResource LabelStyle}"/>
 
-                        <Stepper 
-                            Value="{Binding Data.Value, Mode=TwoWay}"
-                            ValueChanged="Value_OnStepperValueChanged"/>
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
+                        
+                                <Label 
+                                    Text="{Binding Data.Value}" 
+                                    x:Name="ValueValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="End"
+                                    HorizontalTextAlignment="End"/>
 
-                    </StackLayout>
+                                <Stepper 
+                                    Value="{Binding Data.Value, Mode=TwoWay}"
+                                    ValueChanged="Value_OnStepperValueChanged"/>
+
+                            </StackLayout>
+                        </StackLayout>
 
                     <Label 
                         Text="Damage" 
