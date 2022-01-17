@@ -75,6 +75,30 @@
                     
                     <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center">
                         
+                        <!--stacklyout for damage-->
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+
+                            <Label 
+                                Text="Damage" 
+                                Style="{StaticResource LabelStyle}"/>
+
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
+
+                                <Label 
+                                    Text="{Binding Data.Damage}" 
+                                    x:Name="DamageValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="End"
+                                    HorizontalTextAlignment="End"/>
+
+                                <Stepper 
+                                    Value="{Binding Data.Damage, Mode=TwoWay}"
+                                    ValueChanged="Damage_OnStepperValueChanged"/>
+
+                            </StackLayout>
+                        </StackLayout>
+
                         <!--Stack layout for Range-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
 
@@ -122,29 +146,7 @@
                             </StackLayout>
                         </StackLayout>
                         
-                        <!--stacklyout for damage-->
-                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
-
-                        <Label 
-                                Text="Damage" 
-                                Style="{StaticResource LabelStyle}"/>
-
-                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-
-                            <Label 
-                                    Text="{Binding Data.Damage}" 
-                                    x:Name="DamageValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
-                                    HorizontalOptions="End"
-                                    HorizontalTextAlignment="End"/>
-
-                            <Stepper 
-                                    Value="{Binding Data.Damage, Mode=TwoWay}"
-                                    ValueChanged="Damage_OnStepperValueChanged"/>
-
-                        </StackLayout>
-                    </StackLayout>
+                    
                 </StackLayout>
             </StackLayout>
         </ScrollView>
