@@ -75,16 +75,16 @@
                 </Grid>
                 
                 <!--stack layout for 2nd part of the page-->
-                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center">
+                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center" Spacing="20">
                         
                     <!--stacklyout for damage-->
-                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
 
                         <Label 
                             Text="Damage" 
                             Style="{StaticResource LabelStyle}"/>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
+                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
 
                             <Label 
                                 Text="{Binding Data.Damage}" 
