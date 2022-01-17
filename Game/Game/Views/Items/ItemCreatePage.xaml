@@ -150,7 +150,7 @@
                 </StackLayout>
                 
                 <!--stack layout for create and cancel buttons-->
-                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
                     <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
                     <Button Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
                 </StackLayout>
