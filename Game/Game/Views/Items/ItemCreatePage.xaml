@@ -70,7 +70,7 @@
                     <Picker Grid.Row="2" Grid.Column="1"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListCharacter}" 
                         SelectedItem="{Binding Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
-                        x:Name="LocationPicker"/>
+                        x:Name="LocationPicker" HorizontalOptions="Start"/>
                 </Grid>
 
                     <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
