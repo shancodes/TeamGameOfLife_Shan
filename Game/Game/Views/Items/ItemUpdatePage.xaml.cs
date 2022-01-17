@@ -34,7 +34,7 @@ namespace Game.Views
 
             //Need to make the SelectedItem a string, so it can select the correct item.
             LocationPicker.SelectedItem = data.Data.Location.ToString();
-            AttributePicker.SelectedItem = data.Data.Attribute.ToString();
+            //AttributePicker.SelectedItem = data.Data.Attribute.ToString();
         }
 
         /// <summary>
