@@ -9,11 +9,11 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.ItemCreatePage"
              Title="{Binding Title}">
-
-    <ContentPage.ToolbarItems>
+<!--
+     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -28,7 +28,8 @@
                 Spacing="10">
 
                 <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
-
+                
+                <!--grid for first part of the page-->
                 <Grid
                     RowSpacing="1"
                     ColumnSpacing="2"
@@ -72,8 +73,9 @@
                         SelectedItem="{Binding Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="LocationPicker" HorizontalOptions="Start"/>
                 </Grid>
-                    
-                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center">
+                
+                <!--stack layout for 2nd part of the page-->
+                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center">
                         
                         <!--stacklyout for damage-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
@@ -130,7 +132,7 @@
                                 Style="{StaticResource LabelStyle}"/>
 
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-                        
+
                                 <Label 
                                     Text="{Binding Data.Value}" 
                                     x:Name="ValueValue"
@@ -145,9 +147,11 @@
 
                             </StackLayout>
                         </StackLayout>
-                        
-                    
                 </StackLayout>
+                
+                <!--stack layout for create and cancel buttons-->
+                
+                   
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
