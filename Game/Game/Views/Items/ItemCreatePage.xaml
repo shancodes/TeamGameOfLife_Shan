@@ -73,7 +73,7 @@
                         x:Name="LocationPicker" HorizontalOptions="Start"/>
                 </Grid>
 
-                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
+                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center">
 
                         <Label 
                             Text="Range" 
