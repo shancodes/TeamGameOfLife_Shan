@@ -53,12 +53,14 @@
                            HorizontalOptions="Start"/>
 
                     <Label Grid.Row="1" Grid.Column="0"
-                        Text="Description" 
-                        Style="{StaticResource LabelStyle}"/>
+                        Text="Description:" 
+                        Style="{StaticResource LabelStyle}"
+                           HorizontalOptions="End"/>
                     
                     <Entry Grid.Row="1" Grid.Column="1"
                         Text="{Binding Data.Description}" 
-                        Style="{StaticResource EntryStyle}"/>
+                        Style="{StaticResource EntryStyle}"
+                           HorizontalOptions="Start"/>
 
                     <Label Grid.Row="2" Grid.Column="0"
                         Text="Location" 
