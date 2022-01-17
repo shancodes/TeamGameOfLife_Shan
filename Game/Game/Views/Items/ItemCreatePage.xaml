@@ -151,8 +151,8 @@
                 
                 <!--stack layout for create and cancel buttons-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
-                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
-                    <Button Text="Create" Clicked="Save_Clicked" HorizontalOptions="Start"/>
+                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+                    <Button Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
