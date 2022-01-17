@@ -32,22 +32,25 @@
                 <Grid
                     RowSpacing="1"
                     ColumnSpacing="2"
-                    VerticalOptions="Center">
+                    VerticalOptions="Center"
+                    Margin="10">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0"
-                        Text="Name" 
-                        Style="{StaticResource LabelStyle}"/>
+                        Text="Name:" 
+                        Style="{StaticResource LabelStyle}"
+                           HorizontalOptions="End"/>
                     
                     <Entry Grid.Row="0" Grid.Column="1"
                         Text="{Binding Data.Name}" 
-                        Style="{StaticResource EntryStyle}"/>
+                        Style="{StaticResource EntryStyle}"
+                           HorizontalOptions="Start"/>
 
                     <Label Grid.Row="1" Grid.Column="0"
                         Text="Description" 
