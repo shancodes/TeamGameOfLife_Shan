@@ -102,13 +102,13 @@
                     </StackLayout>
 
                     <!--Stack layout for Range-->
-                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
 
                         <Label 
                             Text="Range" 
                             Style="{StaticResource LabelStyle}"/>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
+                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
 
                             <Label 
                                     Text="{Binding Data.Range}" 
@@ -126,12 +126,12 @@
                     </StackLayout>
                         
                     <!--stacklayout for Value-->
-                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
                         <Label 
                             Text="Value"
                             Style="{StaticResource LabelStyle}"/>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
+                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
 
                             <Label 
                                 Text="{Binding Data.Value}" 
