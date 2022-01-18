@@ -25,7 +25,7 @@
             Spacing="10" HorizontalOptions="FillAndExpand">
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
-            
+
             <StackLayout Style="{StaticResource VerticalStack}" Spacing="20" HorizontalOptions="CenterAndExpand">
                 <Label 
                     Text="{Binding Data.Name}" 
@@ -38,16 +38,9 @@
                 <Label 
                     Text="{Binding Data.Location}" 
                     Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Attribute : " 
-                    Style="{StaticResource LabelStyle}"/>
-                <Label 
-                    Text="{Binding Data.Attribute}" 
-                    Style="{StaticResource ValueStyle}"/>
             </StackLayout>
+            
 
             <StackLayout Style="{StaticResource HorizontalStack}">
                 <Label 
