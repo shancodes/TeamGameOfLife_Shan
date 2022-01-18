@@ -56,16 +56,18 @@
                     Text="{Binding Data.Range}" 
                     Style="{StaticResource ValueStyle}"/>
                 </StackLayout>
-
-            </StackLayout>
-            
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Value : " 
+                
+                <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10">
+                    <Label 
+                    Text="Value  " 
                     Style="{StaticResource LabelStyle}"/>
-                <Label 
+                    <Label 
                     Text="{Binding Data.Value}" 
                     Style="{StaticResource ValueStyle}"/>
+
+                </StackLayout>
+            
+
             </StackLayout>
         </StackLayout>
     </ScrollView>
