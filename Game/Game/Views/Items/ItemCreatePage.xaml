@@ -15,7 +15,11 @@
         <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
     </ContentPage.ToolbarItems>-->
     <NavigationPage.TitleView>
-        <Button Text="Back" Clicked="Cancel_Clicked" ImageSource="icon_cancel.png"  HorizontalOptions="Start"/>
+        <!--Button Text="Back" Clicked="Cancel_Clicked" ImageSource="icon_cancel.png"  HorizontalOptions="Start"/-->
+            <StackLayout Orientation="Horizontal" Spacing="20">
+            <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+            <Label Text="Create an Item" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
     </NavigationPage.TitleView>
 
     <ContentPage.Resources>
