@@ -48,7 +48,7 @@
                     Style="{StaticResource ValueStyle}"/>
                 </StackLayout>
 
-                <StackLayout Style="{StaticResource HorizontalStack}">
+                <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10">
                     <Label 
                     Text="Range   " 
                     Style="{StaticResource LabelStyle}"/>
