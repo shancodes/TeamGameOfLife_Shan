@@ -48,18 +48,17 @@
                     Style="{StaticResource ValueStyle}"/>
                 </StackLayout>
 
-            </StackLayout>
-            
-
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Range : " 
+                <StackLayout Style="{StaticResource HorizontalStack}">
+                    <Label 
+                    Text="Range   " 
                     Style="{StaticResource LabelStyle}"/>
-                <Label 
+                    <Label 
                     Text="{Binding Data.Range}" 
                     Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
+                </StackLayout>
 
+            </StackLayout>
+            
             <StackLayout Style="{StaticResource HorizontalStack}">
                 <Label 
                     Text="Value : " 
