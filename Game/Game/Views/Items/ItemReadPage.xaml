@@ -39,7 +39,7 @@
                     Text="{Binding Data.Location}" 
                     Style="{StaticResource ValueStyle}"/>
 
-                <StackLayout Style="{StaticResource HorizontalStack}">
+                <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10">
                     <Label 
                     Text="Damage   " 
                     Style="{StaticResource LabelStyle}"/>
@@ -56,7 +56,7 @@
                     Text="{Binding Data.Range}" 
                     Style="{StaticResource ValueStyle}"/>
                 </StackLayout>
-                
+
                 <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10">
                     <Label 
                     Text="Value  " 
@@ -64,10 +64,8 @@
                     <Label 
                     Text="{Binding Data.Value}" 
                     Style="{StaticResource ValueStyle}"/>
-
                 </StackLayout>
-            
-
+                
             </StackLayout>
         </StackLayout>
     </ScrollView>
