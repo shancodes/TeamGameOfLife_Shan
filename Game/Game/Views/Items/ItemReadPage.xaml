@@ -11,6 +11,7 @@
         <ToolbarItem Text="Update" Clicked="Update_Clicked" IconImageSource="icon_edit.png"/>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems-->
+    
     <NavigationPage.TitleView>
         <!--Button Text="Back" Clicked="Cancel_Clicked" ImageSource="icon_cancel.png"  HorizontalOptions="Start"/-->
         <StackLayout Orientation="Horizontal" Spacing="20">
@@ -21,34 +22,19 @@
 
     <ScrollView>
         <StackLayout Style="{StaticResource OuterBoxStack}"
-            Spacing="20">
+            Spacing="10" HorizontalOptions="FillAndExpand">
 
-            <Label Text="Detail Page" Style="{StaticResource HeaderStyle}"/>
-
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
-
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                   Text="Name : " 
-                    Style="{StaticResource LabelStyle}"/>
+            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+            
+            <StackLayout Style="{StaticResource VerticalStack}" Spacing="20" HorizontalOptions="CenterAndExpand">
                 <Label 
                     Text="{Binding Data.Name}" 
                     Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Description : " 
-                    Style="{StaticResource LabelStyle}"/>
                 <Label 
                     Text="{Binding Data.Description}" 
                     Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Location : " 
-                    Style="{StaticResource LabelStyle}"/>
                 <Label 
                     Text="{Binding Data.Location}" 
                     Style="{StaticResource ValueStyle}"/>
