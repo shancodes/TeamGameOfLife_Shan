@@ -38,7 +38,7 @@
                 
                 <!--grid for first part of the page-->
                 <Grid
-                    RowSpacing="1"
+                    RowSpacing="5"
                     ColumnSpacing="2"
                     VerticalOptions="Center"
                     Margin="10">
