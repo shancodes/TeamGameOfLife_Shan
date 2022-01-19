@@ -67,7 +67,7 @@
                     Style="{StaticResource ValueStyle}"/>
             </StackLayout>
 
-            <Button Text="Done!" Clicked="Cancel_Clicked" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Done!" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
