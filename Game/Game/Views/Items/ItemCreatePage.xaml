@@ -79,6 +79,16 @@
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListCharacter}" 
                         SelectedItem="{Binding Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="LocationPicker" HorizontalOptions="Start"/>
+
+
+                    <Label Grid.Row="3" Grid.Column="0"
+                        Text="Attribute" 
+                        Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
+
+                    <Picker Grid.Row="3" Grid.Column="1"
+                        ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" 
+                        SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
+                        x:Name="AttributePicker" HorizontalOptions="Start"/>
                 </Grid>
                 
                 <!--stack layout for 2nd part of the page-->
