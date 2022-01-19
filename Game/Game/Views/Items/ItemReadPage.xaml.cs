@@ -63,7 +63,6 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Done_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new ItemIndexPage()));
             _ = await Navigation.PopAsync();
         }
     }
