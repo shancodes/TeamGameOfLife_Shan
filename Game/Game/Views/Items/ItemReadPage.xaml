@@ -38,35 +38,35 @@
                 <Label 
                     Text="{Binding Data.Location}" 
                     Style="{StaticResource ValueStyle}"/>
+            </StackLayout>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10">
-                    <Label 
+            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="CenterAndExpand">
+                <Label 
                     Text="Damage   " 
                     Style="{StaticResource LabelStyle}"/>
-                    <Label 
+                <Label 
                     Text="{Binding Data.Damage}" 
                     Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
+            </StackLayout>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10">
-                    <Label 
+            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="CenterAndExpand">
+                <Label 
                     Text="Range   " 
                     Style="{StaticResource LabelStyle}"/>
-                    <Label 
+                <Label 
                     Text="{Binding Data.Range}" 
                     Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
+            </StackLayout>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10">
-                    <Label 
+            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="CenterAndExpand">
+                <Label 
                     Text="Value  " 
                     Style="{StaticResource LabelStyle}"/>
-                    <Label 
+                <Label 
                     Text="{Binding Data.Value}" 
                     Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
-                
             </StackLayout>
+
             <Button Text="Done!" Clicked="Cancel_Clicked" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ScrollView>
