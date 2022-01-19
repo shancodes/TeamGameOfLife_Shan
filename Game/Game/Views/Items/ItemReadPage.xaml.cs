@@ -55,5 +55,16 @@ namespace Game.Views
             await Navigation.PushModalAsync(new NavigationPage(new ItemDeletePage(ViewModel)));
             _ = await Navigation.PopAsync();
         }
+
+        /// <summary>
+        /// Displays index page with items
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void Cancel_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ItemIndexPage()));
+            _ = await Navigation.PopAsync();
+        }
     }
 }

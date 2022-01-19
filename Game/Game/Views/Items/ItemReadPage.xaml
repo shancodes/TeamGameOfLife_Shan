@@ -67,6 +67,7 @@
                 </StackLayout>
                 
             </StackLayout>
+            <Button Text="Done!" Clicked="Cancel_Clicked" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
