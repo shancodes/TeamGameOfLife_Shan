@@ -89,6 +89,15 @@
                         ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" 
                         SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="AttributePicker" HorizontalOptions="Start"/>
+
+                    <Label Grid.Row="4" Grid.Column="0"
+                        Text="Attribute" 
+                        Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
+
+                    <Entry Grid.Row="4" Grid.Column="1"
+                        Text="{Binding Data.ImageURI}" 
+                        Style="{StaticResource EntryStyle}"
+                           HorizontalOptions="Start"/>
                 </Grid>
                 
                 <!--stack layout for 2nd part of the page-->
