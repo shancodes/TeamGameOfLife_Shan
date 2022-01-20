@@ -30,11 +30,11 @@ namespace Game.Views
 
             BindingContext = this.ViewModel = data;
 
-            this.ViewModel.Title = "Update " + data.Title;
+            //this.ViewModel.Title = "Update " + data.Title;
 
             //Need to make the SelectedItem a string, so it can select the correct item.
-            LocationPicker.SelectedItem = data.Data.Location.ToString();
-            AttributePicker.SelectedItem = data.Data.Attribute.ToString();
+            LocationPicker.SelectedItem = ViewModel.Data.Location.ToString();
+            AttributePicker.SelectedItem = ViewModel.Data.Attribute.ToString();
         }
 
         /// <summary>
