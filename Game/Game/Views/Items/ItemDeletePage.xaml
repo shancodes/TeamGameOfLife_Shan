@@ -18,9 +18,9 @@
 
             <Label Text="Delete Page" Style="{StaticResource HeaderStyle}"/>
 
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                 <Label 
                    Text="Name : " 
                     Style="{StaticResource LabelStyle}"/>
@@ -29,7 +29,7 @@
                     Style="{StaticResource ValueStyle}"/>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                 <Label 
                     Text="Description : " 
                     Style="{StaticResource LabelStyle}"/>
