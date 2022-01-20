@@ -60,7 +60,7 @@
 
                 <Button 
                     Text="No" 
-                    Clicked="Delete_Clicked" 
+                    Clicked="Cancel_Clicked"
                     HorizontalOptions="Center"
                     FontSize="Medium"
                     BorderWidth="1" 
