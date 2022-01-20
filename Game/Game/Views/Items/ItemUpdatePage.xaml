@@ -96,6 +96,7 @@
                         x:Name="AttributePicker" 
                             HorizontalOptions="Start"/>
 
+                    <!--Image Field-->
                     <Label Grid.Row="4" Grid.Column="0"
                         Text="Image" 
                         Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
@@ -106,68 +107,81 @@
                            HorizontalOptions="Start"/>
                 </Grid>
 
-                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
+                <!--stack layout for Damage,Range and Value-->
+                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center" Spacing="20">
 
-                    <Label 
-                        Text="Range" 
-                        Style="{StaticResource LabelStyle}"/>
-
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
+                    <!--stacklyout for damage-->
+                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
 
                         <Label 
-                            Text="{Binding Data.Range}" 
-                            x:Name="RangeValue"
-                            Style="{StaticResource ValueStyle}"
-                            Padding="0,0,10,0"
-                            HorizontalOptions="End"
-                            HorizontalTextAlignment="End"/>
+                            Text="Damage" 
+                            Style="{StaticResource LabelStyle}"/>
 
-                        <Stepper 
-                            Value="{Binding Data.Range, Mode=TwoWay}"
-                            ValueChanged="Range_OnStepperValueChanged"/>
+                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
 
+                            <Label 
+                                Text="{Binding Data.Damage}" 
+                                x:Name="DamageValue"
+                                Style="{StaticResource ValueStyle}"
+                                Padding="0,0,10,0"
+                                HorizontalOptions="End"
+                                HorizontalTextAlignment="End"/>
+
+                            <Stepper 
+                                Value="{Binding Data.Damage, Mode=TwoWay}"
+                                ValueChanged="Damage_OnStepperValueChanged"/>
+
+                        </StackLayout>
                     </StackLayout>
 
-                    <Label 
-                        Text="Value"
-                        Style="{StaticResource LabelStyle}"/>
-
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
+                    <!--Stack layout for Range-->
+                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
 
                         <Label 
-                            Text="{Binding Data.Value}" 
-                            x:Name="ValueValue"
-                            Style="{StaticResource ValueStyle}"
-                            Padding="0,0,10,0"
-                            HorizontalOptions="End"
-                            HorizontalTextAlignment="End"/>
+                            Text="Range" 
+                            Style="{StaticResource LabelStyle}"/>
 
-                        <Stepper 
-                            Value="{Binding Data.Value, Mode=TwoWay}"
-                            ValueChanged="Value_OnStepperValueChanged"/>
+                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
 
+                            <Label 
+                                    Text="{Binding Data.Range}" 
+                                    x:Name="RangeValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="End"
+                                    HorizontalTextAlignment="End"/>
+
+                            <Stepper 
+                                    Value="{Binding Data.Range, Mode=TwoWay}"
+                                    ValueChanged="Range_OnStepperValueChanged"/>
+
+                        </StackLayout>
                     </StackLayout>
 
-                    <Label 
-                        Text="Damage" 
-                        Style="{StaticResource LabelStyle}"/>
-
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-
+                    <!--stacklayout for Value-->
+                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
                         <Label 
-                            Text="{Binding Data.Damage}" 
-                            x:Name="DamageValue"
-                            Style="{StaticResource ValueStyle}"
-                            Padding="0,0,10,0"
-                            HorizontalOptions="End"
-                            HorizontalTextAlignment="End"/>
+                            Text="Value"
+                            Style="{StaticResource LabelStyle}"/>
 
-                        <Stepper 
-                            Value="{Binding Data.Damage, Mode=TwoWay}"
-                            ValueChanged="Damage_OnStepperValueChanged"/>
+                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
 
+                            <Label 
+                                Text="{Binding Data.Value}" 
+                                x:Name="ValueValue"
+                                Style="{StaticResource ValueStyle}"
+                                Padding="0,0,10,0"
+                                HorizontalOptions="End"
+                                HorizontalTextAlignment="End"/>
+
+                            <Stepper 
+                                Value="{Binding Data.Value, Mode=TwoWay}"
+                                ValueChanged="Value_OnStepperValueChanged"/>
+
+                        </StackLayout>
                     </StackLayout>
                 </StackLayout>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
