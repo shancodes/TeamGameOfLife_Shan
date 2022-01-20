@@ -84,10 +84,34 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            CreateButton.IsEnabled = true;
             if (String.IsNullOrEmpty(e.NewTextValue))
             {
                 CreateButton.IsEnabled = false;
+                Description_entry.IsVisible = false;
+            }
+            else
+            {
+                CreateButton.IsEnabled = true;
+                Description_entry.IsVisible = true;
+            }
+        }
+
+        /// <summary>
+        /// Input validation for description
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(e.NewTextValue))
+            {
+                Name_Entry.IsVisible = false;
+                CreateButton.IsEnabled = false;
+            }
+            else
+            {
+                Name_Entry.IsVisible = true;
+                CreateButton.IsEnabled = true;
             }
         }
 

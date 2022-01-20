@@ -56,7 +56,8 @@
                            HorizontalOptions="End"/>
                     
                     <Entry Grid.Row="0" Grid.Column="1"
-                        Text="{Binding Data.Name}" 
+                        Text="{Binding Data.Name}"
+                           x:Name="Name_Entry"
                         Style="{StaticResource EntryStyle}"
                            TextChanged="EntryName_TextChanged"
                            HorizontalOptions="Start"/>
@@ -68,6 +69,8 @@
                     
                     <Entry Grid.Row="1" Grid.Column="1"
                         Text="{Binding Data.Description}" 
+                           x:Name="Description_entry"
+                           TextChanged="EntryDescription_TextChanged"
                         Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
 
