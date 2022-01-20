@@ -57,12 +57,19 @@
                 <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
             </StackLayout>
 
+            <!--stack layout for Delete and Cancel buttons-->
+            
+            <!--stack layout for Update and Reset buttons-->
 
-            <StackLayout 
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+                <Button Text="Yes" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
+                <Button Text="No" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+            </StackLayout>
+            <!-- <StackLayout 
             Orientation="Horizontal"
-            HorizontalOptions="Center">
+            HorizontalOptions="Center"> -->
 
-                <Button 
+                <!--<Button 
                 Text="Yes" 
                 Clicked="Delete_Clicked" 
                 HorizontalOptions="Center"
@@ -79,7 +86,7 @@
                     BorderWidth="1" 
                     BorderColor="black">
                 </Button>
-            </StackLayout>
+            </StackLayout> -->
 
         </StackLayout>
     </ScrollView>
