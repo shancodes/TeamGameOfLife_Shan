@@ -43,56 +43,39 @@
                 </StackLayout>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+            <!--Stack layout for Description-->
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
 
-                <Label 
-                    Text="Description : " 
+                <Label
+                    Text="Description: " 
                     Style="{StaticResource LabelStyle}"/>
 
-                <Label 
-                    Text="{Binding Data.Description}" 
-                    Style="{StaticResource ValueStyle}"/>
+                <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
 
+                    <Label 
+                        Text="{Binding Data.Description}"
+                        Style="{StaticResource ValueStyle}"
+                        Padding="0,0,10,0"
+                        HorizontalOptions="End"
+                        HorizontalTextAlignment="End"/>
+                </StackLayout>
             </StackLayout>
 
-            <StackLayout 
-            HorizontalOptions="Center" 
-            Padding="20">
+            <StackLayout HorizontalOptions="Center" Padding="20">
 
                 <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
+                
             </StackLayout>
 
             <!--stack layout for Delete and Cancel buttons-->
-            
-            <!--stack layout for Update and Reset buttons-->
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+                
                 <Button Text="Yes" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
                 <Button Text="No" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+                
             </StackLayout>
-            <!-- <StackLayout 
-            Orientation="Horizontal"
-            HorizontalOptions="Center"> -->
-
-                <!--<Button 
-                Text="Yes" 
-                Clicked="Delete_Clicked" 
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                BorderWidth="1" 
-                BorderColor="black">
-                </Button>
-
-                <Button 
-                    Text="No" 
-                    Clicked="Cancel_Clicked"
-                    HorizontalOptions="Center"
-                    FontSize="Medium"
-                    BorderWidth="1" 
-                    BorderColor="black">
-                </Button>
-            </StackLayout> -->
-
+            
         </StackLayout>
     </ScrollView>
 </ContentPage>
