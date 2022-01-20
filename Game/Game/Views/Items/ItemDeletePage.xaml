@@ -46,6 +46,9 @@
                 <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
             </StackLayout>
 
+
+            <StackLayout Orientation="Horizontal">
+
                 <Button 
                 Text="Yes" 
                 Clicked="Delete_Clicked" 
@@ -63,9 +66,7 @@
                     BorderWidth="1" 
                     BorderColor="black">
                 </Button>
-
-
-
+            </StackLayout>
 
         </StackLayout>
     </ScrollView>
