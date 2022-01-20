@@ -40,6 +40,20 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Cancel and close this page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void Cancel_Clicked(object sender, EventArgs e)
+        {
+            _ = await Navigation.PopModalAsync();
+
+
+        }
+
+
+
+        /// <summary>
         /// Save calls to Update
         /// </summary>
         /// <param name="sender"></param>
@@ -56,15 +70,8 @@ namespace Game.Views
             _ = await Navigation.PopModalAsync();
         }
 
-        /// <summary>
-        /// Cancel and close this page
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public async void Cancel_Clicked(object sender, EventArgs e)
-        {
-            _ = await Navigation.PopModalAsync();
-        }
+        
+       
 
         /// <summary>
         /// Reset and close this page
@@ -75,8 +82,8 @@ namespace Game.Views
         {
             this.ViewModel.Data.Update(OriginalModel);
             MessagingCenter.Send(this, "Update", ViewModel.Data);
-            ItemName.Text = ViewModel.Data.Name;
-            ItemDescription.Text = ViewModel.Data.Description;
+            Name_Entry.Text = ViewModel.Data.Name;
+            Description_entry.Text = ViewModel.Data.Description;
             LocationPicker.SelectedIndex = ItemLocationEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Location.ToString());
             AttributePicker.SelectedIndex = AttributeEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Attribute.ToString());
             ImageEntry.Text = ViewModel.Data.ImageURI;
@@ -84,6 +91,8 @@ namespace Game.Views
             DamageValue.Text = String.Format("{0}", ViewModel.Data.Damage);
             ValueValue.Text = String.Format("{0}", ViewModel.Data.Value);
         }
+
+
 
         /// <summary>
         /// Catch the change to the Stepper for Range
@@ -113,6 +122,36 @@ namespace Game.Views
         public void Damage_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
             DamageValue.Text = String.Format("{0}", e.NewValue);
+        }
+
+
+        //Input Validation for Name
+        public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(e.NewTextValue))
+            {
+                Update.IsEnabled = false;
+            }
+            else
+            {
+                Update.IsEnabled = true;
+                
+            }
+        }
+
+        // Input Validation for Description
+
+        public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(e.NewTextValue))
+            {
+               
+                Update.IsEnabled = false;
+            }
+            else
+            {
+                Update.IsEnabled = true;
+            }
         }
     }
 }
