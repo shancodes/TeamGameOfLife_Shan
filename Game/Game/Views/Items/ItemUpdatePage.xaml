@@ -70,17 +70,15 @@
                         Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
 
-                     <!--Location Field-->
+
                     <Label Grid.Row="2" Grid.Column="0"
-                        Text="Location:" 
-                        Style="{StaticResource LabelStyle}"
-                           HorizontalOptions="End"/>
+                        Text="Location" 
+                        Style="{StaticResource LabelStyle}"/>
 
                     <Picker Grid.Row="2" Grid.Column="1"
-                        ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListCharacter}" 
+                        ItemsSource="{x:Static local:ItemLocationEnumHelper.GetListCharacter}" 
                         SelectedItem="{Binding Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
-                        x:Name="LocationPicker" HorizontalOptions="Start"/>
-
+                        x:Name="LocationPicker"/>
 
                     <Label Grid.Row="3" Grid.Column="0"
                         Text="Attribute" 
