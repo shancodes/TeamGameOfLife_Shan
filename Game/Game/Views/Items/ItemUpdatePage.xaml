@@ -177,9 +177,19 @@
                             <Stepper 
                                 Value="{Binding Data.Value, Mode=TwoWay}"
                                 ValueChanged="Value_OnStepperValueChanged"/>
+                            
+                           
 
                         </StackLayout>
+                        
+                        
                     </StackLayout>
+                </StackLayout>
+
+                <!--stack layout for Update and Reset buttons-->
+                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+                    <Button Text="Reset" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+                    <Button Text="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
                 </StackLayout>
 
             </StackLayout>
