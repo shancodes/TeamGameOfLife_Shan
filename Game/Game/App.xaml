@@ -22,9 +22,9 @@
                 Dark
                 -->
 
-            <Color x:Key="PageBackgroundColor">Pink</Color>
-            <Color x:Key="ViewBackgroundColor">green</Color>
-            <Color x:Key="NavigationBarColor">orange</Color>
+            <Color x:Key="PageBackgroundColor">lightgray</Color>
+            <Color x:Key="ViewBackgroundColor">Teal</Color>
+            <Color x:Key="NavigationBarColor">Teal</Color>
 
             <Color x:Key="PrimaryBackgroundColor">red</Color>
             <Color x:Key="SecondaryBackgroundColor">gray</Color>
