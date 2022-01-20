@@ -7,11 +7,13 @@
              x:Class="Game.Views.ItemDeletePage"
              >
 
+    <!--stack layout for Delete and Cancel buttons-->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
 
+    <!--stack layout for Back button and Title-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
             <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
@@ -40,6 +42,7 @@
                         Padding="0,0,10,0"
                         HorizontalOptions="End"
                         HorizontalTextAlignment="End"/>
+                    
                 </StackLayout>
             </StackLayout>
 
@@ -58,6 +61,7 @@
                         Padding="0,0,10,0"
                         HorizontalOptions="End"
                         HorizontalTextAlignment="End"/>
+                    
                 </StackLayout>
             </StackLayout>
 
