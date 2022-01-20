@@ -58,6 +58,7 @@
                     <Entry Grid.Row="0" Grid.Column="1"
                         Text="{Binding Data.Name}" 
                         Style="{StaticResource EntryStyle}"
+                           TextChanged="EntryName_TextChanged"
                            HorizontalOptions="Start"/>
 
                     <Label Grid.Row="1" Grid.Column="0"
@@ -178,7 +179,7 @@
                 <!--stack layout for create and cancel buttons-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
                     <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
-                    <Button Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                    <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

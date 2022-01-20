@@ -78,6 +78,20 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Input validation for Name
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            CreateButton.IsEnabled = true;
+            if (String.IsNullOrEmpty(e.NewTextValue))
+            {
+                CreateButton.IsEnabled = false;
+            }
+        }
+
+        /// <summary>
         /// Catch the change to the stepper for Value
         /// </summary>
         /// <param name="sender"></param>
