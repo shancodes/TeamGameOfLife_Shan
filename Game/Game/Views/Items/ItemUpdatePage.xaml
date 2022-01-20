@@ -9,10 +9,16 @@
              x:Class="Game.Views.ItemUpdatePage"
              Title="{Binding Title}">
 
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems> -->
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+            <Label Text="Update Item Stats" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Resources>
         <ResourceDictionary>
