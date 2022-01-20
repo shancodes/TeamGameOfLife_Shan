@@ -55,8 +55,18 @@
                 BorderColor="black">
                 </Button>
 
-            
-            
+                <Button 
+                    Text="No" 
+                    Clicked="Delete_Clicked" 
+                    HorizontalOptions="Center"
+                    FontSize="Medium"
+                    BorderWidth="1" 
+                    BorderColor="black">
+                </Button>
+
+
+
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
