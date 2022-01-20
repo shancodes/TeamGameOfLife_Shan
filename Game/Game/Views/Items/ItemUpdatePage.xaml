@@ -7,8 +7,8 @@
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              xmlns:local_enum="clr-namespace:Game.Models"
              xmlns:local="using:Game.Models"
-             x:Class="Game.Views.ItemUpdatePage"
-             Title="{Binding Title}">
+             x:Class="Game.Views.ItemUpdatePage">
+    <!--Title="{Binding Title}">-->
 
     <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
@@ -95,22 +95,15 @@
                         SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="AttributePicker" 
                             HorizontalOptions="Start"/>
-                    
+
                     <Label Grid.Row="4" Grid.Column="0"
                         Text="Image" 
-                        Style="{StaticResource LabelStyle}"/>
+                        Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
 
-                    <StackLayout Grid.Row="4" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
-
-                        <Image 
-                            Source="{Binding Data.ImageURI}"
-                            Style="{StaticResource ImageSmallStyle}"/>
-
-                        <Entry 
-                            Text="{Binding Data.ImageURI}" 
-                            Style="{StaticResource EntryStyle}"/>
-
-                    </StackLayout>
+                        <Entry Grid.Row="4" Grid.Column="1"
+                        Text="{Binding Data.ImageURI}" 
+                        Style="{StaticResource EntryStyle}"
+                           HorizontalOptions="Start"/>
                 </Grid>
 
                 <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
