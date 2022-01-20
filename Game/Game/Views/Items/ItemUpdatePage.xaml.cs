@@ -17,6 +17,7 @@ namespace Game.Views
     {
         // View Model for Item
         public readonly GenericViewModel<ItemModel> ViewModel;
+        private ItemModel OriginalModel;
 
         // Empty Constructor for Tests
         public ItemUpdatePage(bool UnitTest) { }
@@ -27,6 +28,7 @@ namespace Game.Views
         public ItemUpdatePage(GenericViewModel<ItemModel> data)
         {
             InitializeComponent();
+            this.OriginalModel = new ItemModel(data.Data);
 
             BindingContext = this.ViewModel = data;
 
@@ -62,6 +64,25 @@ namespace Game.Views
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
             _ = await Navigation.PopModalAsync();
+        }
+
+        /// <summary>
+        /// Reset and close this page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void Reset_Clicked(object sender, EventArgs e)
+        {
+            this.ViewModel.Data.Update(OriginalModel);
+            MessagingCenter.Send(this, "Update", ViewModel.Data);
+            ItemName.Text = ViewModel.Data.Name;
+            ItemDescription.Text = ViewModel.Data.Description;
+            LocationPicker.SelectedIndex = ItemLocationEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Location.ToString());
+            AttributePicker.SelectedIndex = AttributeEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Attribute.ToString());
+            ImageEntry.Text = ViewModel.Data.ImageURI;
+            RangeValue.Text = String.Format("{0}", ViewModel.Data.Range);
+            DamageValue.Text = String.Format("{0}", ViewModel.Data.Damage);
+            ValueValue.Text = String.Format("{0}", ViewModel.Data.Value);
         }
 
         /// <summary>

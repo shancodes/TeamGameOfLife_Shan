@@ -56,6 +56,7 @@
                         HorizontalOptions="End"/>
 
                     <Entry Grid.Row="0" Grid.Column="1"
+                        x:Name="ItemName"
                         Text="{Binding Data.Name}" 
                         Style="{StaticResource EntryStyle}"
                         HorizontalOptions="Start"/>
@@ -67,6 +68,7 @@
                            HorizontalOptions="End"/>
 
                     <Entry Grid.Row="1" Grid.Column="1"
+                        x:Name="ItemDescription"
                         Text="{Binding Data.Description}" 
                         Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
@@ -102,6 +104,7 @@
                         Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
 
                         <Entry Grid.Row="4" Grid.Column="1"
+                               x:Name="ImageEntry"
                         Text="{Binding Data.ImageURI}" 
                         Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
@@ -188,7 +191,7 @@
 
                 <!--stack layout for Update and Reset buttons-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
-                    <Button Text="Reset" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+                    <Button Text="Reset" Clicked="Reset_Clicked" HorizontalOptions="Start"/>
                     <Button Text="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
                 </StackLayout>
 
