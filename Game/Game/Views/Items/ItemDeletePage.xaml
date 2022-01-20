@@ -43,7 +43,7 @@
             HorizontalOptions="Center" 
             Padding="20">
 
-                <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
+                <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
 
                 <Button 
                 Text="Yes" 
@@ -53,6 +53,7 @@
                 BorderWidth="1" 
                 BorderColor="black">
                 </Button>
+
             </StackLayout>
             
         </StackLayout>
