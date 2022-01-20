@@ -105,12 +105,12 @@ namespace Game.Views
         {
             if (String.IsNullOrEmpty(e.NewTextValue))
             {
-                Name_Entry.IsVisible = false;
+                LocationPicker.IsVisible = false;
                 CreateButton.IsEnabled = false;
             }
             else
             {
-                Name_Entry.IsVisible = true;
+                LocationPicker.IsVisible = true;
                 CreateButton.IsEnabled = true;
             }
         }
