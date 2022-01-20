@@ -56,10 +56,11 @@
                         HorizontalOptions="End"/>
 
                     <Entry Grid.Row="0" Grid.Column="1"
-                        x:Name="ItemName"
-                        Text="{Binding Data.Name}" 
+                        Text="{Binding Data.Name}"
+                           x:Name="Name_Entry"
                         Style="{StaticResource EntryStyle}"
-                        HorizontalOptions="Start"/>
+                           TextChanged="EntryName_TextChanged"
+                           HorizontalOptions="Start"/>
                     
                     <!--Description Field-->
                     <Label Grid.Row="1" Grid.Column="0"
@@ -68,8 +69,9 @@
                            HorizontalOptions="End"/>
 
                     <Entry Grid.Row="1" Grid.Column="1"
-                        x:Name="ItemDescription"
                         Text="{Binding Data.Description}" 
+                           x:Name="Description_entry"
+                           TextChanged="EntryDescription_TextChanged"
                         Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
 
@@ -192,7 +194,7 @@
                 <!--stack layout for Update and Reset buttons-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
                     <Button Text="Reset" Clicked="Reset_Clicked" HorizontalOptions="Start"/>
-                    <Button Text="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                    <Button x:Name="Update" Text="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
                 </StackLayout>
 
             </StackLayout>
