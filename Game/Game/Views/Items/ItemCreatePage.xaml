@@ -40,7 +40,7 @@
                 <Grid
                     RowSpacing="5"
                     ColumnSpacing="2"
-                    VerticalOptions="Center"
+                    HorizontalOptions="CenterAndExpand"
                     Margin="10">
 
                     <Grid.RowDefinitions>
