@@ -55,7 +55,8 @@
                         Style="{StaticResource LabelStyle}"
                            HorizontalOptions="End"/>
                     
-                    <Entry Placeholder="Enter item name"
+                    <Entry
+                           Text="{Binding Data.Name}"
                            WidthRequest="280"
                            Grid.Row="0" Grid.Column="1"
                            x:Name="Name_Entry"
@@ -68,7 +69,8 @@
                            Style="{StaticResource LabelStyle}"
                            HorizontalOptions="End"/>
 
-                    <Entry Placeholder="Enter item description"
+                    <Entry
+                           Text="{Binding Data.Description}"
                            WidthRequest="280"
                            Grid.Row="1" Grid.Column="1"
                            x:Name="Description_entry"
