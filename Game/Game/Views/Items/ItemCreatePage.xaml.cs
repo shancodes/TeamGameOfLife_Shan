@@ -53,6 +53,12 @@ namespace Game.Views
                 return;
             }
 
+            //input validation for Attribute picker
+            if (ViewModel.Data.Attribute == AttributeEnum.Unknown)
+            {
+                return;
+            }
+
             // If the image in the data box is empty, use the default one..
             if (string.IsNullOrEmpty(ViewModel.Data.ImageURI))
             {
