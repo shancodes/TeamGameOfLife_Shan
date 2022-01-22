@@ -38,8 +38,8 @@
                 
                 <!--grid for first part of the page-->
                 <Grid
-                    RowSpacing="5"
-                    ColumnSpacing="2"
+                    RowSpacing="10"
+                    ColumnSpacing="5"
                     HorizontalOptions="CenterAndExpand"
                     Margin="10">
 
@@ -109,34 +109,51 @@
                         Text="{Binding Data.ImageURI}" 
                         Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
-                </Grid>
-                
-                <!--stack layout for 2nd part of the page-->
-                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center" Spacing="20">
-                        
-                    <!--stacklyout for damage-->
-                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
+                    
+                    <Label Grid.Row="5" Grid.Column="0"
+                        Text= "Damage:" 
+                        Style="{StaticResource LabelStyle}"
+                           HorizontalOptions="End"/>
+                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
 
                         <Label 
-                            Text="Damage" 
-                            Style="{StaticResource LabelStyle}"/>
-
-                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
-
-                            <Label 
                                 Text="{Binding Data.Damage}" 
                                 x:Name="DamageValue"
                                 Style="{StaticResource ValueStyle}"
                                 Padding="0,0,10,0"
-                                HorizontalOptions="End"
-                                HorizontalTextAlignment="End"/>
+                                HorizontalOptions="Start"
+                                />
 
-                            <Stepper 
+                        <Stepper 
                                 Value="{Binding Data.Damage, Mode=TwoWay}"
-                                ValueChanged="Damage_OnStepperValueChanged"/>
+                                ValueChanged="Damage_OnStepperValueChanged" HorizontalOptions="End"/>
 
-                        </StackLayout>
                     </StackLayout>
+                </Grid>
+
+
+
+                <Grid
+                    RowSpacing="5"
+                    ColumnSpacing="2"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="10">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                </Grid>
+
+
+
+
+                <!--stack layout for 2nd part of the page-->
+                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center" Spacing="20">
 
                     <!--Stack layout for Range-->
                     <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
