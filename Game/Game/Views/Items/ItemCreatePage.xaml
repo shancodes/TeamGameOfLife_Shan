@@ -167,13 +167,11 @@
                                 Value="{Binding Data.Value, Mode=TwoWay}"
                                 ValueChanged="Value_OnStepperValueChanged"/>
                     </StackLayout>
+
+                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1"/>
+                    <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1"/>
                 </Grid>
                 
-                <!--stack layout for create and cancel buttons-->
-                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
-                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
-                    <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
-                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
