@@ -49,12 +49,12 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    
+
                     <Label Grid.Row="0" Grid.Column="0"
                         Text="Name:" 
                         Style="{StaticResource LabelStyle}"
                            HorizontalOptions="End"/>
-                    
+
                     <Entry
                            Text="{Binding Data.Name}"
                            WidthRequest="280"
@@ -82,7 +82,7 @@
                            Text="Location:" 
                            Style="{StaticResource LabelStyle}"
                            HorizontalOptions="End"/>
-                    
+
                     <Picker Grid.Row="2" Grid.Column="1"
                         WidthRequest="280"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListCharacter}" 
@@ -109,7 +109,7 @@
                         Text="{Binding Data.ImageURI}" 
                         Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
-                    
+
                     <Label Grid.Row="5" Grid.Column="0"
                         Text= "Damage:" 
                         Style="{StaticResource LabelStyle}"
@@ -148,36 +148,26 @@
                                     ValueChanged="Range_OnStepperValueChanged"/>
 
                     </StackLayout>
-                </Grid>
-
-                <!--stack layout for 2nd part of the page-->
-                <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="Center" Spacing="20">
 
 
-                        
-                    <!--stacklayout for Value-->
-                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
-                        <Label 
+                    <Label 
                             Text="Value"
-                            Style="{StaticResource LabelStyle}"/>
+                            Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="7" Grid.Column="0"/>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
+                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="7" Grid.Column="1" HorizontalOptions="Start">
 
-                            <Label
+                        <Label
                                 Text="{Binding Data.Value}" 
                                 x:Name="ValueValue"
                                 Style="{StaticResource ValueStyle}"
                                 Padding="0,0,10,0"
-                                HorizontalOptions="End"
-                                HorizontalTextAlignment="End"/>
+                                HorizontalOptions="Start"/>
 
-                            <Stepper 
+                        <Stepper 
                                 Value="{Binding Data.Value, Mode=TwoWay}"
                                 ValueChanged="Value_OnStepperValueChanged"/>
-
-                        </StackLayout>
                     </StackLayout>
-                </StackLayout>
+                </Grid>
                 
                 <!--stack layout for create and cancel buttons-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
