@@ -90,9 +90,9 @@ namespace Game.Views
             AttributePicker.SelectedIndex = AttributeEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Attribute.ToString());
 
             ImageEntry.Text = ViewModel.Data.ImageURI;
-            RangeValue.Text = String.Format("{0}", ViewModel.Data.Range);
-            DamageValue.Text = String.Format("{0}", ViewModel.Data.Damage);
-            ValueValue.Text = String.Format("{0}", ViewModel.Data.Value);
+            RangeValue.Text = string.Format("{0}", ViewModel.Data.Range);
+            DamageValue.Text = string.Format("{0}", ViewModel.Data.Damage);
+            ValueValue.Text = string.Format("{0}", ViewModel.Data.Value);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Range_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            RangeValue.Text = String.Format("{0}", e.NewValue);
+            RangeValue.Text = string.Format("{0}", e.NewValue);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Value_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            ValueValue.Text = String.Format("{0}", e.NewValue);
+            ValueValue.Text = string.Format("{0}", e.NewValue);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Damage_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            DamageValue.Text = String.Format("{0}", e.NewValue);
+            DamageValue.Text = string.Format("{0}", e.NewValue);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            if (String.IsNullOrEmpty(e.NewTextValue))
+            if (string.IsNullOrEmpty(e.NewTextValue))
             {
                 Update.IsEnabled = false;
                 return;
@@ -148,7 +148,7 @@ namespace Game.Views
 
         public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            if (String.IsNullOrEmpty(e.NewTextValue))
+            if (string.IsNullOrEmpty(e.NewTextValue))
             {
                 Update.IsEnabled = false;
                 return;
