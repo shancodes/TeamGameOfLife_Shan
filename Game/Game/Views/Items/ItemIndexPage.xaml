@@ -8,8 +8,9 @@
              x:Class="Game.Views.ItemIndexPage"
              Title="{Binding Title}">
 
-    <ContentPage.ToolbarItems>
-    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <Button Text="Create" Clicked="AddItem_Clicked" HorizontalOptions="End"/>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
