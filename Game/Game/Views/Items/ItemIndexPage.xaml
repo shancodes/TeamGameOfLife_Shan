@@ -117,7 +117,14 @@
                         Grid.Column="1"
                         Text="Range:"/>
                         <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
-                        </Grid>
+
+                        <Label 
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="Value:"/>
+                        <Label Grid.Row="3" Grid.Column="2" Text="{Binding Value}"></Label>
+                        
+                    </Grid>
 
                     </DataTemplate>
             </CollectionView.ItemTemplate>
