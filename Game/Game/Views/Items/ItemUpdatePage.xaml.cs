@@ -132,12 +132,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrEmpty(e.NewTextValue))
-            {
-                Update.IsEnabled = false;
-                return;
-            }
-            Update.IsEnabled = true;
+            SetUpdateVisibility();
         }
 
         /// <summary>
@@ -148,7 +143,12 @@ namespace Game.Views
 
         public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrEmpty(e.NewTextValue))
+            SetUpdateVisibility();
+        }
+
+        private void SetUpdateVisibility()
+        {
+            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Description_entry.Text))
             {
                 Update.IsEnabled = false;
                 return;
