@@ -135,11 +135,9 @@ namespace Game.Views
             if (String.IsNullOrEmpty(e.NewTextValue))
             {
                 Update.IsEnabled = false;
+                return;
             }
-            else
-            {
-                Update.IsEnabled = true;   
-            }
+            Update.IsEnabled = true;
         }
 
         /// <summary>
@@ -153,11 +151,10 @@ namespace Game.Views
             if (String.IsNullOrEmpty(e.NewTextValue))
             {
                 Update.IsEnabled = false;
+                return;
             }
-            else
-            {
-                Update.IsEnabled = true;
-            }
+
+            Update.IsEnabled = true;
         }
     }
 }
