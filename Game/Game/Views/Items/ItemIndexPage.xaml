@@ -105,12 +105,12 @@
                             Text="{Binding Name}"
                         />
 
-                        <Label 
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            Text="{Binding Description}"
-                        />
-                    </Grid>
+                         <Label 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="Damage:"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Damage}"></Label>
+                        </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             </CollectionView>
