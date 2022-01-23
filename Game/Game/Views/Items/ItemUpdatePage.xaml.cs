@@ -75,10 +75,20 @@ namespace Game.Views
         {
             this.ViewModel.Data.Update(OriginalModel);
             MessagingCenter.Send(this, "Update", ViewModel.Data);
+            UpdateUIElements();
+        }
+
+        /// <summary>
+        /// Helper Function that updates all the fields with current values from ViewModel.Data
+        /// </summary>
+        private void UpdateUIElements()
+        {
             Name_Entry.Text = ViewModel.Data.Name;
             Description_entry.Text = ViewModel.Data.Description;
+
             LocationPicker.SelectedIndex = ItemLocationEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Location.ToString());
             AttributePicker.SelectedIndex = AttributeEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Attribute.ToString());
+
             ImageEntry.Text = ViewModel.Data.ImageURI;
             RangeValue.Text = String.Format("{0}", ViewModel.Data.Range);
             DamageValue.Text = String.Format("{0}", ViewModel.Data.Damage);
