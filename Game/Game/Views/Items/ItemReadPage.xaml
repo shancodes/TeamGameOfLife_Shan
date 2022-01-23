@@ -74,7 +74,9 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Text="Done!" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+                <Button Text="Delete" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+                <Button Text="Done!" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
+                <Button Text="Update" Clicked="Update_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2"/>
             </Grid>
 
 
