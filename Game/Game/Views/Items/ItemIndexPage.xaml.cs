@@ -6,6 +6,7 @@ using Xamarin.Forms.Xaml;
 
 using Game.Models;
 using Game.ViewModels;
+using System.Linq;
 
 namespace Game.Views
 {
@@ -88,5 +89,16 @@ namespace Game.Views
 
             BindingContext = ViewModel;
         }
+
+
+        public async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var current = (e.CurrentSelection.FirstOrDefault() as ItemModel);
+
+            await Navigation.PushAsync(new ItemReadPage(new GenericViewModel<ItemModel>(current)));
+
+            return;
+        }
+
     }
 }

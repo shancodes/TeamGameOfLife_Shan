@@ -9,15 +9,24 @@
              Title="{Binding Title}">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" IconImageSource="icon_add.png"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <Label Text="Items List Page" Style="{StaticResource HeaderStyle}"/>
+            <Label Text="Items Index" Style="{StaticResource HeaderStyle}"/>
 
-            <ListView x:Name="ItemsListView" 
+            <CollectionView x:Name="ItemsListView" 
+                    ItemsSource="{Binding Dataset, Mode=OneWay}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnCollectionViewSelectionChanged"
+                    ItemsLayout="VerticalGrid,2"
+                    Margin="5,0,5,0"
+                    HorizontalOptions="Center"
+                    >
+
+
+                <!--ListView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset}"
                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     RefreshCommand="{Binding LoadItemsCommand}"
@@ -26,9 +35,9 @@
                     HasUnevenRows="true"
                     Margin="5,0,5,0"
                     RowHeight="80"
-                    >
+                    -->
                 
-                <ListView.ItemTemplate>
+                <!--ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid ColumnSpacing="5" RowSpacing="1">
@@ -72,7 +81,38 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView-->
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.RowSpan="2"
+                            Source="{Binding ImageURI}"
+                            Style="{StaticResource ImageMediumStyle}"
+                        />
+
+                        <Label Grid.Column="1"
+                            Text="{Binding Name}"
+                        />
+
+                        <Label 
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding Description}"
+                        />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
