@@ -15,7 +15,9 @@ namespace Game.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemUpdatePage : ContentPage
     {
-        // View Model for Item
+        /// <summary>
+        /// View Model for Item
+        /// </summary>
         public readonly GenericViewModel<ItemModel> ViewModel;
         private ItemModel OriginalModel;
 
@@ -32,8 +34,6 @@ namespace Game.Views
 
             BindingContext = this.ViewModel = data;
 
-            //this.ViewModel.Title = "Update " + data.Title;
-
             //Need to make the SelectedItem a string, so it can select the correct item.
             LocationPicker.SelectedItem = data.Data.Location.ToString();
             AttributePicker.SelectedItem = data.Data.Attribute.ToString();
@@ -47,11 +47,7 @@ namespace Game.Views
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
             _ = await Navigation.PopModalAsync();
-
-
         }
-
-
 
         /// <summary>
         /// Save calls to Update
@@ -70,11 +66,8 @@ namespace Game.Views
             _ = await Navigation.PopModalAsync();
         }
 
-        
-       
-
         /// <summary>
-        /// Reset and close this page
+        /// Reset the fields to original values before update
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -91,8 +84,6 @@ namespace Game.Views
             DamageValue.Text = String.Format("{0}", ViewModel.Data.Damage);
             ValueValue.Text = String.Format("{0}", ViewModel.Data.Value);
         }
-
-
 
         /// <summary>
         /// Catch the change to the Stepper for Range
@@ -124,8 +115,11 @@ namespace Game.Views
             DamageValue.Text = String.Format("{0}", e.NewValue);
         }
 
-
-        //Input Validation for Name
+        /// <summary>
+        /// Input Validation for Name
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
         public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
         {
             if (String.IsNullOrEmpty(e.NewTextValue))
@@ -134,18 +128,20 @@ namespace Game.Views
             }
             else
             {
-                Update.IsEnabled = true;
-                
+                Update.IsEnabled = true;   
             }
         }
 
-        // Input Validation for Description
+        /// <summary>
+        /// Input Validation for Description
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
 
         public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
         {
             if (String.IsNullOrEmpty(e.NewTextValue))
             {
-               
                 Update.IsEnabled = false;
             }
             else
