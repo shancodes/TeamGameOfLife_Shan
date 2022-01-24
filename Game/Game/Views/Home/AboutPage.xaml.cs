@@ -30,13 +30,13 @@ namespace Game.Views
             InitializeComponent();
 
             // Hide the Debug Settings
-            DatabaseSettingsFrame.IsVisible = false;
+            //DatabaseSettingsFrame.IsVisible = false;
 
             // Turn off the Settings Frame
-            DebugSettingsFrame.IsVisible = false;
+            //DebugSettingsFrame.IsVisible = false;
 
             // Set to the curent date and time
-            CurrentDateTime.Text = DateTime.Now.ToString("MM/dd/yy hh:mm:ss");
+            //CurrentDateTime.Text = DateTime.Now.ToString("MM/dd/yy hh:mm:ss");
 
             // Init the Server Item Value to 100 to get everything
             SetServerItemValue("100");
@@ -50,7 +50,7 @@ namespace Game.Views
         public void DatabaseSettingsSwitch_OnToggled(object sender, ToggledEventArgs e)
         {
             // Show or hide the Database Section
-            DatabaseSettingsFrame.IsVisible = (e.Value);
+            //DatabaseSettingsFrame.IsVisible = (e.Value);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Game.Views
         public void DebugSettingsSwitch_OnToggled(object sender, ToggledEventArgs e)
         {
             // Show or hide the Debug Settings
-            DebugSettingsFrame.IsVisible = (e.Value);
+            //DebugSettingsFrame.IsVisible = (e.Value);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void DataSource_Toggled(object sender, EventArgs e)
         {
-            // Flip the settings
+            /* Flip the settings
             if (DataSourceValue.IsToggled == true)
             {
                 MessagingCenter.Send(this, "SetDataSource", 1);
@@ -79,7 +79,7 @@ namespace Game.Views
             else
             {
                 MessagingCenter.Send(this, "SetDataSource", 0);
-            }
+            }*/
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Game.Views
         /// <param name="value"></param>
         public void SetServerItemValue(string value)
         {
-            ServerItemValue.Text = value;
+            //ServerItemValue.Text = value;
         }
 
         /// <summary>
@@ -126,10 +126,10 @@ namespace Game.Views
             // The ServerItemValue Code stands for the batch of items to get
             // as the group to request.  1, 2, 3, 100 (All), or if not specified All
 
-            var value = Convert.ToInt32(ServerItemValue.Text);
-            var dataList = await ItemService.GetItemsFromServerGetAsync(value);
+            //var value = Convert.ToInt32(ServerItemValue.Text);
+            //var dataList = await ItemService.GetItemsFromServerGetAsync(value);
 
-            _ = DisplayServerResults(dataList);
+           // _ = DisplayServerResults(dataList);
 
             return true;
         }
@@ -152,8 +152,8 @@ namespace Game.Views
         public bool DisplayServerResults(List<ItemModel> dataList)
         {
             var result = new StringBuilder("");
-            ServerItemsList.IsVisible = true;
-            ServerItemsList.Text = "No Results";
+           // ServerItemsList.IsVisible = true;
+            //ServerItemsList.Text = "No Results";
 
             if (dataList == null)
             {
@@ -170,7 +170,7 @@ namespace Game.Views
             // If there is results show them
             if (dataList.Count > 0)
             {
-                ServerItemsList.Text = result.ToString();
+                //ServerItemsList.Text = result.ToString();
             }
 
             return true;
@@ -182,7 +182,7 @@ namespace Game.Views
         /// <returns></returns>
         public async Task<bool> GetItemsPost()
         {
-            var number = Convert.ToInt32(ServerItemValue.Text);
+            /*var number = Convert.ToInt32(ServerItemValue.Text);
             var level = 6;  // Max Value of 6
             var attribute = AttributeEnum.Unknown;  // Any Attribute
             var location = ItemLocationEnum.Unknown;    // Any Location
@@ -193,7 +193,7 @@ namespace Game.Views
             // will return shoes value 10 of speed.
             // Example  result = await ItemsController.Instance.GetItemsFromGame(1, 10, AttributeEnum.Speed, ItemLocationEnum.Feet, false, true);
             var dataList = await ItemService.GetItemsFromServerPostAsync(number, level, attribute, location, category, random, updateDataBase);
-
+            */
             return true;
         }
     }
