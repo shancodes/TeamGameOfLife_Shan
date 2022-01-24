@@ -15,10 +15,15 @@
     <ScrollView>
         <StackLayout Style="{StaticResource OuterBoxStack}">
             <Image Source="action_ability.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
- 
+            <Label Text="Makers" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label
+                           Text="Developers"
+                           WidthRequest="280"
+                           Grid.Row="2" Grid.Column="1"
+                           HorizontalTextAlignment="Center"/>
 
-        <Grid
-            RowSpacing="10"
+            <Grid
+            RowSpacing="1"
             ColumnSpacing="5"
             HorizontalOptions="CenterAndExpand"
             Margin="10">
@@ -30,43 +35,24 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="1"
-                      Text="About the Game:"
-                        WidthRequest="280"
-                        Style="{StaticResource LabelStyle}"
-                           HorizontalTextAlignment="Center"/>
 
-                <Label
-                           Text="Makers:" 
-                            FontSize="Subtitle"
-                           WidthRequest="280"
-                           Grid.Row="1" Grid.Column="1"
-                           HorizontalTextAlignment="Center"/>
-
-                <Label
-                           Text="Developers"
-                           WidthRequest="280"
-                           Grid.Row="2" Grid.Column="1"
-                           HorizontalTextAlignment="Center"/>
-
+                <StackLayout Style="{StaticResource VerticalStack}" Grid.Row="0" Grid.Column="0">
+                    <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Label Text="Kruta" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            
+            
                 <Entry
                            Text="{Binding Data.Name}"
                            WidthRequest="280"
-                           Grid.Row="3" Grid.Column="0"
+                           Grid.Row="0" Grid.Column="1"
                            Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
 
                 <Entry
                            Text="{Binding Data.Name}"
                            WidthRequest="280"
-                           Grid.Row="3" Grid.Column="1"
-                           Style="{StaticResource EntryStyle}"
-                           HorizontalOptions="Start"/>
-
-                <Entry
-                           Text="{Binding Data.Name}"
-                           WidthRequest="280"
-                           Grid.Row="3" Grid.Column="2"
+                           Grid.Row="0" Grid.Column="2"
                            Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
             </Grid>
