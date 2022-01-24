@@ -37,29 +37,36 @@
                            HorizontalTextAlignment="Center"/>
 
                 <Label
-                           Text="Makers:"
+                           Text="Makers:" 
+                            FontSize="Subtitle"
                            WidthRequest="280"
                            Grid.Row="1" Grid.Column="1"
+                           HorizontalTextAlignment="Center"/>
+
+                <Label
+                           Text="Developers"
+                           WidthRequest="280"
+                           Grid.Row="2" Grid.Column="1"
                            HorizontalTextAlignment="Center"/>
 
                 <Entry
                            Text="{Binding Data.Name}"
                            WidthRequest="280"
-                           Grid.Row="2" Grid.Column="0"
+                           Grid.Row="3" Grid.Column="0"
                            Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
 
                 <Entry
                            Text="{Binding Data.Name}"
                            WidthRequest="280"
-                           Grid.Row="2" Grid.Column="1"
+                           Grid.Row="3" Grid.Column="1"
                            Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
 
                 <Entry
                            Text="{Binding Data.Name}"
                            WidthRequest="280"
-                           Grid.Row="2" Grid.Column="2"
+                           Grid.Row="3" Grid.Column="2"
                            Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>
             </Grid>
