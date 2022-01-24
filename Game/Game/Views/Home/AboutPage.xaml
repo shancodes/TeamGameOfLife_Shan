@@ -13,7 +13,7 @@
     </NavigationPage.TitleView>
 
     <ScrollView>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
+        <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
             <Image Source="action_ability.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
             <Label Text="About the game" HorizontalTextAlignment="Center" />
             <Label Text="Makers" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
@@ -23,40 +23,26 @@
                            Grid.Row="2" Grid.Column="1"
                            HorizontalTextAlignment="Center"/>
 
-            <Grid
-            RowSpacing="1"
-            ColumnSpacing="5"
-            HorizontalOptions="Center"
-            Margin="10">
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-
-                <StackLayout Style="{StaticResource VerticalStack}" Grid.Row="0" Grid.Column="0">
-                    
+            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
+                <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
                     <Label Text="Kruta" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
 
-
-                <StackLayout Style="{StaticResource VerticalStack}" Grid.Row="0" Grid.Column="2">
-
-                    <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
-                    <Label Text="Shanmugapriya" HorizontalTextAlignment="Center"></Label>
-                </StackLayout>
-
-                <StackLayout Style="{StaticResource VerticalStack}" Grid.Row="0" Grid.Column="4">
-
+                <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
                     <Label Text="Shipra" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
-            </Grid>
+
+
+                <StackLayout Style="{StaticResource VerticalStack}">
+                    <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Label Text="Shanmugapriya" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </StackLayout>
+            
             <Label Text="Designers" HorizontalOptions="CenterAndExpand"/>
+            
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
