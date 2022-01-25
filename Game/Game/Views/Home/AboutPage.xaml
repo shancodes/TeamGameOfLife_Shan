@@ -15,12 +15,13 @@
     <ScrollView>
         <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
             <Image Source="action_ability.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="About the game" HorizontalTextAlignment="Center" />
+
+            <Label Text="Our game is a battle game between kingdoms and white walkers" Style="{StaticResource CenterMessageStyle}"/>
             <Label Text="Makers" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
             <Label
                            Text="Developers"
                            WidthRequest="280"
-                           Grid.Row="2" Grid.Column="1"
+
                            HorizontalTextAlignment="Center"/>
 
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
