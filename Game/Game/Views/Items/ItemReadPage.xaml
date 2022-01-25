@@ -21,7 +21,7 @@
                 Spacing="20">
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
-            <Label Text="{Binding Data.Name}" Style="{StaticResource ValueStyle}" HorizontalOptions="Center"/>
+            <Label Text="{Binding Data.Name}" Style="{StaticResource LabelBaseStyle}" HorizontalOptions="Center"  FontSize="Medium"/>
             <Label 
                     Text="{Binding Data.Description}" 
                     Style="{StaticResource LabelBaseStyle}" HorizontalOptions ="Center"/>
