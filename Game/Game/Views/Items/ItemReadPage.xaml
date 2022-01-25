@@ -18,7 +18,7 @@
 
     <ScrollView>
         <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="50">
+                Spacing="20">
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
             <Label Text="{Binding Data.Name}" Style="{StaticResource ValueStyle}" HorizontalOptions="Center"/>
@@ -30,7 +30,7 @@
                     Text="{Binding Data.Location}" 
                     Style="{StaticResource ValueStyle}" HorizontalOptions="Center"/>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="Center">
                 <Label
                     Text="Damage   "
                     Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
