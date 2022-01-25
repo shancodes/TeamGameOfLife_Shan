@@ -24,7 +24,7 @@
             <Label Text="{Binding Data.Name}" Style="{StaticResource ValueStyle}" HorizontalOptions="Center"/>
             <Label 
                     Text="{Binding Data.Description}" 
-                    Style="{StaticResource ValueStyle}"  HorizontalOptions ="Center"/>
+                    Style="{StaticResource LabelBaseStyle}" HorizontalOptions ="Center"/>
 
             <Label 
                     Text="{Binding Data.Location}" 
