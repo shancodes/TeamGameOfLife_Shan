@@ -28,7 +28,7 @@
 
             <Label 
                     Text="{Binding Data.Location}" 
-                    Style="{StaticResource ValueStyle}" HorizontalOptions="Center"/>
+                    Style="{StaticResource LabelBaseStyle}" HorizontalOptions="Center"/>
 
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="Center">
                 <Label
