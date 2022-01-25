@@ -59,11 +59,11 @@
                         Text="Defense:"/>
                             <Label Grid.Row="2" Grid.Column="2" Text="{Binding GetDefenseTotal}"></Label>
 
-                            <!--Label 
+                            <Label 
                         Grid.Row="3"
                         Grid.Column="1"
                         Text="Speed:"/>
-                            <Label Grid.Row="3" Grid.Column="2" Text="{Binding GetSpeedTotal}"></Label-->
+                            <Label Grid.Row="3" Grid.Column="2" Text="{Binding GetSpeedTotal}"></Label>
 
                         </Grid>
 
