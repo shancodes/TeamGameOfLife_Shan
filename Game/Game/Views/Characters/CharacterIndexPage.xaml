@@ -8,27 +8,69 @@
              x:Class="Game.Views.CharacterIndexPage"
              Title="{Binding Title}">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="Add_Clicked" IconImageSource="icon_add.png"/>
-    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <Button Text="Create" Clicked="Add_Clicked" HorizontalOptions="End"/>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <Label Text="Items List Page" Style="{StaticResource HeaderStyle}"/>
+            <Label Text="Character Index" Style="{StaticResource HeaderStyle}"/>
 
-            <ListView x:Name="CharactersListView" 
-                    ItemsSource="{Binding Dataset}"
-                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                    RefreshCommand="{Binding LoadItemsCommand}"
-                    CachingStrategy="RecycleElement"
-                    ItemSelected="OnItemSelected"
-                    HasUnevenRows="true"
+            <CollectionView x:Name="ItemsListView" 
+                    ItemsSource="{Binding Dataset, Mode=OneWay}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnCollectionViewSelectionChanged"
+                    ItemsLayout="VerticalGrid,2"
                     Margin="5,0,5,0"
-                    RowHeight="80"
-                    >
-                
-                <ListView.ItemTemplate>
+                    HorizontalOptions="Center">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.RowSpan="2"
+                            Source="{Binding ImageURI}"
+                            Style="{StaticResource ImageMediumStyle}"
+                        />
+
+                            <Label Grid.Column="1"
+                            Text="{Binding Name}"
+                        />
+
+                            <Label 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="Description:"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Description}"></Label>
+
+
+                            <!--Label 
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="Range:"/>
+                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
+
+                            <Label 
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="Value:"/>
+                            <Label Grid.Row="3" Grid.Column="2" Text="{Binding Value}"></Label-->
+
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <!--ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid ColumnSpacing="5" RowSpacing="1">
@@ -72,7 +114,7 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
