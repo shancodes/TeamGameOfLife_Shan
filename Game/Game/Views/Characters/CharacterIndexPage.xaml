@@ -6,16 +6,18 @@
              mc:Ignorable="d"
              x:Name="BrowseItemsPage"
              x:Class="Game.Views.CharacterIndexPage"
-             Title="{Binding Title}">
+             >
 
     <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+        <Label Text="Character Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+
         <Button Text="Create" Clicked="Add_Clicked" HorizontalOptions="End"/>
+        </StackLayout>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
-
-            <Label Text="Character Index" Style="{StaticResource HeaderStyle}"/>
 
             <CollectionView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
