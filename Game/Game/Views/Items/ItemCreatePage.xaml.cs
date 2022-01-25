@@ -86,7 +86,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Range_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            RangeValue.Text = String.Format("{0}", e.NewValue);
+            RangeValue.Text = string.Format("{0}", e.NewValue);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            if (String.IsNullOrEmpty(e.NewTextValue))
+            if (string.IsNullOrEmpty(e.NewTextValue))
             {
                 CreateButton.IsEnabled = false;
                 Description_entry.IsVisible = false;
@@ -115,7 +115,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            if (String.IsNullOrEmpty(e.NewTextValue))
+            if (string.IsNullOrEmpty(e.NewTextValue))
             {
                 LocationPicker.IsVisible = false;
                 CreateButton.IsEnabled = false;
@@ -134,7 +134,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Value_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            ValueValue.Text = String.Format("{0}", e.NewValue);
+            ValueValue.Text = string.Format("{0}", e.NewValue);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Damage_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            DamageValue.Text = String.Format("{0}", e.NewValue);
+            DamageValue.Text = string.Format("{0}", e.NewValue);
         }
     }
 }
