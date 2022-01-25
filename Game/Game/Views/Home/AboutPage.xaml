@@ -13,7 +13,7 @@
     </NavigationPage.TitleView>
 
     <ScrollView>
-        <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand" Spacing="20">
             <Image Source="action_ability.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
             <Label Text="Our game is a battle game between kingdoms and white walkers" Style="{StaticResource CenterMessageStyle}"/>
