@@ -22,21 +22,21 @@
                     AbsoluteLayout.LayoutFlags="All">
 
             <ScrollView x:Name="ScrollView">
-                <StackLayout Style="{StaticResource OuterBoxStack}">
+                <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
 
-                    <StackLayout Style="{StaticResource VerticalStack}">
+                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
                         <Label Text="Read Page" Style="{StaticResource HeaderStyle}"/>
 
-                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Label 
                                Text="Name : " 
-                               Style="{StaticResource LabelStyle}"/>
+                               Style="{StaticResource LabelStyle}" HorizontalOptions="Center"/>
                             <Label 
                                 Text="{Binding Data.Name}" 
-                                Style="{StaticResource ValueStyle}"/>
+                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
                         </StackLayout>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
@@ -226,5 +226,5 @@
                 </Frame>
             </StackLayout>
         </StackLayout>
-    </AbsoluteLayout>
+    </AbsoluteLayout> 
 </ContentPage>
