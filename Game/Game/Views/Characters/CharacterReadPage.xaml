@@ -48,7 +48,7 @@
                                 Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
                         </StackLayout>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}">
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                 Text="Level : " 
                                 Style="{StaticResource LabelStyle}"/>
