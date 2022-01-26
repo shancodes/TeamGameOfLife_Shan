@@ -168,7 +168,7 @@
             <Style TargetType="Label"
                 x:Key="GridLabelStyle"
                 BasedOn="{StaticResource LabelStyle}">
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundColor}" />
+                <Setter Property="BackgroundColor" Value= "{StaticResource ViewBackgroundColor}" />
                 <Setter Property="HorizontalOptions" Value="Fill" />
                 <Setter Property="Padding" Value="3" />
             </Style>
@@ -176,7 +176,7 @@
             <Style TargetType="Label"
                 x:Key="GridValueStyle"
                 BasedOn="{StaticResource ValueStyle}">
-                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBackgroundColor}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource ViewBackgroundColor}" />
                 <Setter Property="HorizontalOptions" Value="Fill" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="Padding" Value="3" />
