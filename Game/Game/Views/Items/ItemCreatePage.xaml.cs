@@ -96,16 +96,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrEmpty(e.NewTextValue))
-            {
-                CreateButton.IsEnabled = false;
-                Description_entry.IsVisible = false;
-            }
-            else
-            {
-                CreateButton.IsEnabled = true;
-                Description_entry.IsVisible = true;
-            }
+            SetCreateVisibility();
         }
 
         /// <summary>
