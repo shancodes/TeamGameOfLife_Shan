@@ -115,16 +115,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrEmpty(e.NewTextValue))
-            {
-                LocationPicker.IsVisible = false;
-                CreateButton.IsEnabled = false;
-            }
-            else
-            {
-                LocationPicker.IsVisible = true;
-                CreateButton.IsEnabled = true;
-            }
+            SetCreateVisibility();
         }
 
         /// <summary>
@@ -145,6 +136,21 @@ namespace Game.Views
         public void Damage_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
             DamageValue.Text = string.Format("{0}", e.NewValue);
+        }
+
+
+        /// <summary>
+        /// function to check if Name and Description is empty field
+        /// </summary>
+        private void SetCreateVisibility()
+        {
+            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Description_entry.Text))
+            {
+                CreateButton.IsEnabled = false;
+                return;
+            }
+
+            CreateButton.IsEnabled = true;
         }
     }
 }
