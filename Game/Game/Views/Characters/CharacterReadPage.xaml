@@ -5,12 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Game.Views.CharacterReadPage"
-             Title="{Binding Title}">
+             >
 
-    <ContentPage.ToolbarItems>
+    <!--ContentPage.ToolbarItems>
+        
         <ToolbarItem Text="Update" Clicked="Update_Clicked" IconImageSource="icon_edit.png"/>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems-->
+
+    <NavigationPage.TitleView >
+        <Label  Text ="{Binding Title}"   FontSize="Medium" TextColor="Black"  HorizontalTextAlignment="Center" />
+    </NavigationPage.TitleView>
 
     <AbsoluteLayout
         HorizontalOptions="FillAndExpand"
