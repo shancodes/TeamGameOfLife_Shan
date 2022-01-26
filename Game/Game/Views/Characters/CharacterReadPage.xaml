@@ -39,13 +39,13 @@
                                 Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
                         </StackLayout>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}">
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                 Text="Description : " 
-                                Style="{StaticResource LabelStyle}"/>
+                                Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
                             <Label 
                                 Text="{Binding Data.Description}" 
-                                Style="{StaticResource ValueStyle}"/>
+                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
                         </StackLayout>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
