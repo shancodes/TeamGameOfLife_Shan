@@ -18,7 +18,7 @@ namespace Game.Models
         Head = 10,
 
         // Things to put around the neck, such as necklass, broaches, scarfs, neck ribbons.  Can have at the same time with Head items ex. Ribbon for Hair, and Ribbon for Neck is OK to have
-        Necklass = 12,
+        Necklace = 12,
 
         // The primary hand used for fighting with a sword or a staff.  
         PrimaryHand = 20,
