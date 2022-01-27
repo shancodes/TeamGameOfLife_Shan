@@ -41,7 +41,7 @@
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10">
 
-                        <StackLayout Style="{StaticResource HorizontalStack}">
+                        <!--<StackLayout Style="{StaticResource HorizontalStack}">-->
                             <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
                             <ImageButton 
@@ -49,7 +49,7 @@
                                 Style="{StaticResource ImageLargeStyle}"
                                 Source="d10.png"
                                 Clicked="RollDice_Clicked"/>
-                        </StackLayout>
+                        <!--</StackLayout>-->
 
                         <Grid
                             RowSpacing="1"
