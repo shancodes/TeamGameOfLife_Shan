@@ -31,7 +31,10 @@
                     Style="{StaticResource LabelStyle}"/>
                 <Label 
                     Text="{Binding Data.Name}" 
-                    Style="{StaticResource ValueStyle}"/>
+                    Style="{StaticResource ValueStyle}"
+                    Padding="0,0,10,0"
+                    HorizontalOptions="End"
+                    HorizontalTextAlignment="End"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}">
