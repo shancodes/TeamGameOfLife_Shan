@@ -66,11 +66,14 @@
 
                             <Label Grid.Row="0" Grid.Column="0"
                                 Text="Name" 
-                                Style="{StaticResource LabelStyle}"/>
+                                Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="End"/>
 
                             <Entry Grid.Row="0" Grid.Column="1"
                                 Text="{Binding Data.Name, Mode=TwoWay}" 
-                                Style="{StaticResource EntryStyle}"/>
+                                Style="{StaticResource EntryStyle}"
+                                WidthRequest="280"
+                                HorizontalOptions="Start"/>
 
                             <Label Grid.Row="1" Grid.Column="0"
                                 Text="Description" 
