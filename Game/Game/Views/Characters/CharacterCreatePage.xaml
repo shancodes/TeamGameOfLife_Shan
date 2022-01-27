@@ -46,7 +46,7 @@
 
                             <ImageButton 
                                 x:Name="RollDice"
-                                Style="{StaticResource ImageLargeStyle}"
+                                Style="{StaticResource BattleToolbarStyle}"
                                 Source="d10.png"
                                 Clicked="RollDice_Clicked"/>
                         <!--</StackLayout>-->
