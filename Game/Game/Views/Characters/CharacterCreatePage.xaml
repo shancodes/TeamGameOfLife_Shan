@@ -86,12 +86,12 @@
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
-                            <Label Grid.Row="2" Grid.Column="0"
+                            <!--<Label Grid.Row="2" Grid.Column="0"
                                 Text="Image" 
                                 Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="End"/>
+                                HorizontalOptions="End"/>-->
 
-                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                            <!--<StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
 
                                 <Image 
                                     Source="{Binding Data.ImageURI, Mode=TwoWay}"
@@ -103,7 +103,7 @@
                                     WidthRequest="250"
                                     HorizontalOptions="Start"/>
 
-                            </StackLayout>
+                            </StackLayout>-->
 
                             <Label Grid.Row="3" Grid.Column="0"
                                 Text="Level" 
