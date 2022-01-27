@@ -90,13 +90,18 @@ namespace Game.Views
             BindingContext = ViewModel;
         }
 
-
+        /// <summary>
+        /// Displaying items as Collection View
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var current = (e.CurrentSelection.FirstOrDefault() as ItemModel);
-
-            await Navigation.PushAsync(new ItemReadPage(new GenericViewModel<ItemModel>(current)));
-
+            if(current != null)
+            {
+                await Navigation.PushAsync(new ItemReadPage(new GenericViewModel<ItemModel>(current)));
+            }
             return;
         }
 
