@@ -90,6 +90,11 @@ namespace Game.Views
             BindingContext = ViewModel;
         }
 
+        /// <summary>
+        /// Displaying Characters as a collection view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var current = (e.CurrentSelection.FirstOrDefault() as CharacterModel);
