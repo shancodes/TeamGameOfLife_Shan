@@ -114,30 +114,37 @@
                                 Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
-                            <Entry Grid.Row="2" Grid.Column="1"
-                                    Style="{StaticResource EntryStyle}"
-                                   WidthRequest="50"
-                                HorizontalOptions="Start"/>
-                                <!--Text="{Binding Data.Description, Mode=TwoWay}"--> 
-                               
+                            <Label Grid.Row="2" Grid.Column="1"
+                                x:Name="MaxHealthValue"
+                                Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
+                                Style="{StaticResource ValueStyle}"
+                                   HorizontalOptions="Start"
+                                   WidthRequest="50" />
 
+
+
+
+                            <!--Level-->
                             <Label Grid.Row="3" Grid.Column="0"
                                 Text="Level" 
-                                Style="{StaticResource LabelStyle}"/>
+                                Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
 
                             <Picker Grid.Row="3" Grid.Column="1"
                                 SelectedItem="{Binding SelectedItemProperty}" 
                                 SelectedIndexChanged="Level_Changed"
-                                x:Name="LevelPicker"/>
+                                x:Name="LevelPicker"
+                                    WidthRequest="50"
+                                HorizontalOptions="Start"/>
 
-                            <Label Grid.Row="4" Grid.Column="0"
+                            <!--<Label Grid.Row="4" Grid.Column="0"
                                 Text="Max Health" 
                                 Style="{StaticResource LabelStyle}"/>
 
                             <Label Grid.Row="4" Grid.Column="1"
                                 x:Name="MaxHealthValue"
                                 Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
-                                Style="{StaticResource ValueStyle}"/>
+                                Style="{StaticResource ValueStyle}"/>-->
                         </Grid>
 
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
