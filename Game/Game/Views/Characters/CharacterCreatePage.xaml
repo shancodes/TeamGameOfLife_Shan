@@ -146,7 +146,8 @@
                                     ValueChanged="Attack_OnStepperValueChanged"/>
                             </StackLayout>
 
-                            <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
 
                             <Label Grid.Row="5" Grid.Column="0"
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
