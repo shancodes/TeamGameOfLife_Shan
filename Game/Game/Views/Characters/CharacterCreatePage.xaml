@@ -213,9 +213,12 @@
                         x:Name="ItemBox">
                         </FlexLayout>
 
-                        <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1"/>
-                        <Button Text="Create" Clicked="Save_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1"/>
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
+                            <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+                            <Button Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                        </StackLayout>
+                        
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
