@@ -103,14 +103,14 @@
                                 Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
                                 Style="{StaticResource ValueStyle}"
                                    HorizontalOptions="Start"
-                                   WidthRequest="50" />
+                                   Padding="10,10,40,10" />
 
 
 
 
                             <!--Level-->
                             <Label Grid.Row="3" Grid.Column="0"
-                                Text="Level" 
+                                Text="Level : " 
                                 Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
@@ -118,69 +118,70 @@
                                 SelectedItem="{Binding SelectedItemProperty}" 
                                 SelectedIndexChanged="Level_Changed"
                                 x:Name="LevelPicker"
-                                    WidthRequest="50"
+                                    WidthRequest="80"
                                 HorizontalOptions="Start"/>
+                            
+                            <!--Attack-->
+                            <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
 
-                           
-                        </Grid>
-
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
-
-                            <Label Text="Attack" Style="{StaticResource LabelStyle}"/>
-
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-
-                                <Label 
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="4" Grid.Column="1">
+                                <Label
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
                                     Style="{StaticResource ValueStyle}"
                                     Padding="0,0,10,0"
-                                    HorizontalOptions="End"
+                                    HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
-                                <Stepper 
+                                <Stepper
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged"/>
-
+                                    ValueChanged="Attack_OnStepperValueChanged" HorizontalOptions="End"/>
                             </StackLayout>
+                            
+                            <!--Defense-->
 
-                            <Label Text="Defense" Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
 
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-
-                                <Label 
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="5" Grid.Column="1">
+                                <Label
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
                                     Style="{StaticResource ValueStyle}"
                                     Padding="0,0,10,0"
-                                    HorizontalOptions="End"
+                                    HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
-                                <Stepper 
+                                <Stepper
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
                                     ValueChanged="Defense_OnStepperValueChanged"/>
-
                             </StackLayout>
+                            
+                            <!--Speed-->
 
-                            <Label Text="Speed" Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
 
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-
-                                <Label 
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="6" Grid.Column="1">
+                                <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
                                     Style="{StaticResource ValueStyle}"
                                     Padding="0,0,10,0"
-                                    HorizontalOptions="End"
+                                    HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
-                                <Stepper 
+                                <Stepper
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
                                     ValueChanged="Speed_OnStepperValueChanged"/>
-
                             </StackLayout>
-                        </StackLayout>
 
+
+
+                        </Grid>
+
+                        
                         <FlexLayout 
                         Padding="5"
                         Wrap="Wrap"
