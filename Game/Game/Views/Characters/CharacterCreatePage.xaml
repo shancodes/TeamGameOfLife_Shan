@@ -100,7 +100,7 @@
                                 <Entry 
                                     Text="{Binding Data.ImageURI, Mode=TwoWay}" 
                                     Style="{StaticResource EntryStyle}"
-                                    WidthRequest="280"
+                                    WidthRequest="250"
                                     HorizontalOptions="Start"/>
 
                             </StackLayout>
