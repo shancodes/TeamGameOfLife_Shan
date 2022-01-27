@@ -81,7 +81,7 @@
                                  
                             <!--Description Field-->
                             <Label Grid.Row="1" Grid.Column="0"
-                                Text="Description" 
+                                Text="Description : " 
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
@@ -106,6 +106,20 @@
                                     Style="{StaticResource EntryStyle}"/>
 
                             </StackLayout>-->
+                            
+                            
+                            <!--Max HP Field-->
+                            <Label Grid.Row="2" Grid.Column="0"
+                                Text="Max HP : " 
+                                Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
+
+                            <Entry Grid.Row="2" Grid.Column="1"
+                                    Style="{StaticResource EntryStyle}"
+                                   WidthRequest="50"
+                                HorizontalOptions="Start"/>
+                                <!--Text="{Binding Data.Description, Mode=TwoWay}"--> 
+                               
 
                             <Label Grid.Row="3" Grid.Column="0"
                                 Text="Level" 
