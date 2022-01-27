@@ -88,7 +88,8 @@
 
                             <Label Grid.Row="2" Grid.Column="0"
                                 Text="Image" 
-                                Style="{StaticResource LabelStyle}"/>
+                                Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="End"/>
 
                             <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
 
@@ -98,13 +99,16 @@
 
                                 <Entry 
                                     Text="{Binding Data.ImageURI, Mode=TwoWay}" 
-                                    Style="{StaticResource EntryStyle}"/>
+                                    Style="{StaticResource EntryStyle}"
+                                    WidthRequest="280"
+                                    HorizontalOptions="Start"/>
 
                             </StackLayout>
 
                             <Label Grid.Row="3" Grid.Column="0"
                                 Text="Level" 
-                                Style="{StaticResource LabelStyle}"/>
+                                Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="End"/>
 
                             <Picker Grid.Row="3" Grid.Column="1"
                                 SelectedItem="{Binding SelectedItemProperty}" 
