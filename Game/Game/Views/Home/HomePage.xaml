@@ -30,7 +30,7 @@
                         />
 
                     <Label 
-                        Text="Help them on their mission."
+                        Text="Come On... Let's Play!!!"
                         Style="{StaticResource CenterMessageStyle}"
                         FontSize="Micro"
                         LineBreakMode="WordWrap"
