@@ -193,6 +193,8 @@
 
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
                 <Button Text="Delete" Clicked="Delete_Clicked" HorizontalOptions="StartAndExpand"></Button>
+
+                <Button Text="Update" Clicked="Update_Clicked" HorizontalOptions="EndAndExpand"></Button>
             </StackLayout>
             
         </StackLayout>
