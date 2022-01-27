@@ -119,7 +119,8 @@
 
                             <Label Grid.Row="3" Grid.Column="0"
                                 Text="Max Health" 
-                                Style="{StaticResource LabelStyle}"/>
+                                Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="End"/>
 
                             <Label Grid.Row="3" Grid.Column="1"
                                 x:Name="MaxHealthValue"
