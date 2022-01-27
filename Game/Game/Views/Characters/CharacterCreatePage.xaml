@@ -158,7 +158,7 @@
                                     HorizontalOptions="End"
                                     HorizontalTextAlignment="End"/>
 
-                                <Stepper Grid.Row="5" Grid.Column="1"
+                                <Stepper
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
                                     ValueChanged="Defense_OnStepperValueChanged"/>
                             </StackLayout>
@@ -166,7 +166,8 @@
                             <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
-                            <Label Grid.Row="6" Grid.Column="0"
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Grid.Row="6" Grid.Column="1">
+                                <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
                                     Style="{StaticResource ValueStyle}"
@@ -174,9 +175,10 @@
                                     HorizontalOptions="End"
                                     HorizontalTextAlignment="End"/>
 
-                            <Stepper Grid.Row="6" Grid.Column="1"
+                                <Stepper
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
                                     ValueChanged="Speed_OnStepperValueChanged"/>
+                            </StackLayout>
 
                         </Grid>
 
