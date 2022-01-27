@@ -155,7 +155,7 @@
                                     x:Name="DefenseValue"
                                     Style="{StaticResource ValueStyle}"
                                     Padding="0,0,10,0"
-                                    HorizontalOptions="End"
+                                    HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
                                 <Stepper
@@ -172,7 +172,7 @@
                                     x:Name="SpeedValue"
                                     Style="{StaticResource ValueStyle}"
                                     Padding="0,0,10,0"
-                                    HorizontalOptions="End"
+                                    HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
                                 <Stepper
