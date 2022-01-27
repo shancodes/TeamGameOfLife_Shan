@@ -73,6 +73,8 @@
                             <Entry Grid.Row="0" Grid.Column="1"
                                 Text="{Binding Data.Name, Mode=TwoWay}" 
                                 Style="{StaticResource EntryStyle}"
+                                x:Name="Name_Entry"
+                                TextChanged="EntryName_TextChanged"
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
@@ -84,6 +86,8 @@
                             <Entry Grid.Row="1" Grid.Column="1"
                                 Text="{Binding Data.Description, Mode=TwoWay}" 
                                 Style="{StaticResource EntryStyle}"
+                                x:Name="Description_entry"
+                                TextChanged="EntryDescription_TextChanged"
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
@@ -217,7 +221,7 @@
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                             <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
-                            <Button Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                            <Button x:Name="CreateButton" Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
                         </StackLayout>
                         
                     </StackLayout>
