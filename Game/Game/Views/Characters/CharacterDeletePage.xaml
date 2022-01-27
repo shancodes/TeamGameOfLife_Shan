@@ -35,25 +35,21 @@
                     Text="{Binding Data.Description}" 
                     Style="{StaticResource ValueStyle}"/>
             </StackLayout>
-
-
-            <StackLayout 
-            HorizontalOptions="Center" 
-            Padding="20">
-
+            
+            <StackLayout HorizontalOptions="Center" Padding="20">
+                
                 <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
+                
             </StackLayout>
 
             <!--stack layout for Delete and Cancel buttons-->
-                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
-                    <Button Text="Yes" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
-                    <Button Text="No" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+                <Button Text="Yes" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
+                <Button Text="No" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
 
-                </StackLayout>
+            </StackLayout>
 
-
-            
         </StackLayout>
     </ScrollView>
 </ContentPage>
