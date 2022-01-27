@@ -9,13 +9,15 @@
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
 
             <FlexLayout x:Name="flexLayout"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround"
-                        AlignContent="SpaceAround">
+                        AlignContent="SpaceAround"
+                        JustifyContent="Center"
+                        AlignItems="Center"
+                        Direction="Column">
                 <!--AlignItems="Center"
                         Direction="Column">-->
                 <!--<FlexLayout Direction="Row">-->
-                    <StackLayout Style="{StaticResource CardImageTextBox}">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <StackLayout Style="{StaticResource CardImageTextBox}" Padding="50">
 
                         <ImageButton
                         Source="item.png"
@@ -29,7 +31,7 @@
 
                     </StackLayout>
 
-                    <StackLayout Style="{StaticResource CardImageTextBox}">
+                    <StackLayout Style="{StaticResource CardImageTextBox}" Padding="50">
                         <ImageButton
                         Source="item.png"
                         Style="{StaticResource ImageLargeStyle}"
@@ -41,6 +43,8 @@
 
                     </StackLayout>
 
+                </StackLayout>
+                    
                 <!--</FlexLayout>
                 <FlexLayout Direction="Row">-->
 
