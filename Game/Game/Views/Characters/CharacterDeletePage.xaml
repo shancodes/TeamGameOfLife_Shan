@@ -25,7 +25,7 @@
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
                 <Label 
                    Text="Name : " 
                     Style="{StaticResource LabelStyle}"/>
