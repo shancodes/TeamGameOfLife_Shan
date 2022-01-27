@@ -397,28 +397,31 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Input validation for Name
+        /// Input validation for Name field
         /// </summary>
         /// <param name="Sender"></param>
         /// <param name="e"></param>
+        /// 
         public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
         {
             SetCreateVisibility();
         }
 
         /// <summary>
-        /// Input validation for description
+        /// Input validation for Description field
         /// </summary>
         /// <param name="Sender"></param>
         /// <param name="e"></param>
+        /// 
         public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
         {
             SetCreateVisibility();
         }
 
         /// <summary>
-        /// function to check if Name and Description is empty field
+        /// function to check if Name and Description is empty field, then create button will be disable.
         /// </summary>
+        /// 
         private void SetCreateVisibility()
         {
             if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Description_entry.Text))
