@@ -105,23 +105,23 @@
 
                             </StackLayout>-->
 
-                            <Label Grid.Row="3" Grid.Column="0"
+                            <Label Grid.Row="2" Grid.Column="0"
                                 Text="Level" 
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
-                            <Picker Grid.Row="3" Grid.Column="1"
+                            <Picker Grid.Row="2" Grid.Column="1"
                                 SelectedItem="{Binding SelectedItemProperty}" 
                                 SelectedIndexChanged="Level_Changed"
                                 x:Name="LevelPicker"
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
-                            <Label Grid.Row="4" Grid.Column="0"
+                            <Label Grid.Row="3" Grid.Column="0"
                                 Text="Max Health" 
                                 Style="{StaticResource LabelStyle}"/>
 
-                            <Label Grid.Row="4" Grid.Column="1"
+                            <Label Grid.Row="3" Grid.Column="1"
                                 x:Name="MaxHealthValue"
                                 Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
                                 Style="{StaticResource ValueStyle}"/>
