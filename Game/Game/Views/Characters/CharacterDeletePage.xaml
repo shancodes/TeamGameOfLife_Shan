@@ -43,6 +43,7 @@
 
                 <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
 
+                <!--stack layout for Delete and Cancel buttons-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                     <Button Text="Yes" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
