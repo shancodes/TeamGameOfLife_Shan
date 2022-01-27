@@ -15,10 +15,10 @@
         </StackLayout>
     </NavigationPage.TitleView>
     
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Resources>
         <ResourceDictionary>
