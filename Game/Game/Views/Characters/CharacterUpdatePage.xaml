@@ -90,23 +90,6 @@
                                 Style="{StaticResource EntryStyle}"
                                    WidthRequest="280"
                                 HorizontalOptions="Start"/>
-
-                            <!--<Label Grid.Row="2" Grid.Column="0"
-                                Text="Image" 
-                                Style="{StaticResource LabelStyle}"/>
-
-                            <StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
-
-                                <Image 
-                                    Source="{Binding Data.ImageURI, Mode=TwoWay}"
-                                    Style="{StaticResource ImageSmallStyle}"/>
-
-                                <Entry 
-                                    Text="{Binding Data.ImageURI, Mode=TwoWay}" 
-                                    Style="{StaticResource EntryStyle}"/>
-
-                            </StackLayout>-->
-                            
                             
                             <!--Max HP Field-->
                             <Label Grid.Row="2" Grid.Column="0"
