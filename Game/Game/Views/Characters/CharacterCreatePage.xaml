@@ -156,13 +156,27 @@
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
                                     ValueChanged="Defense_OnStepperValueChanged"/>
 
+                            <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"/>
+
+                            <Label Grid.Row="6" Grid.Column="0"
+                                    Text="{Binding Data.Speed, Mode=TwoWay}" 
+                                    x:Name="SpeedValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="End"
+                                    HorizontalTextAlignment="End"/>
+
+                            <Stepper Grid.Row="6" Grid.Column="1"
+                                    Value="{Binding Data.Speed, Mode=TwoWay}"
+                                    ValueChanged="Speed_OnStepperValueChanged"/>
+
                         </Grid>
 
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
+                        <!--<StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">-->
 
                             <!--<Label Text="Attack:" Style="{StaticResource LabelStyle}"/>-->
 
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
+                            <!--<StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">-->
 
                                 <!--<Label 
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
@@ -176,26 +190,10 @@
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
                                     ValueChanged="Attack_OnStepperValueChanged"/>-->
 
-                            </StackLayout>
+                            <!--</StackLayout>-->
 
-                            <Label Text="Speed:" Style="{StaticResource LabelStyle}"/>
                             
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
-
-                                <Label 
-                                    Text="{Binding Data.Speed, Mode=TwoWay}" 
-                                    x:Name="SpeedValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
-                                    HorizontalOptions="End"
-                                    HorizontalTextAlignment="End"/>
-
-                                <Stepper 
-                                    Value="{Binding Data.Speed, Mode=TwoWay}"
-                                    ValueChanged="Speed_OnStepperValueChanged"/>
-
-                            </StackLayout>
-                        </StackLayout>
+                        <!--</StackLayout>-->
 
                         <FlexLayout 
                         Padding="5"
