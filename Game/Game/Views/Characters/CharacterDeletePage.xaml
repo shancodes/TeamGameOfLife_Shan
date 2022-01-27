@@ -42,8 +42,9 @@
             Padding="20">
 
                 <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
+            </StackLayout>
 
-                <!--stack layout for Delete and Cancel buttons-->
+            <!--stack layout for Delete and Cancel buttons-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                     <Button Text="Yes" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
@@ -51,7 +52,7 @@
 
                 </StackLayout>
 
-            </StackLayout>
+
             
         </StackLayout>
     </ScrollView>
