@@ -177,8 +177,8 @@
                                 </Grid>
                             </Frame>
                         </StackLayout>
-                    </StackLayout>
 
+                    </StackLayout>
 
                     <FlexLayout 
                         Margin="5"
@@ -190,6 +190,11 @@
 
                 </StackLayout>
             </ScrollView>
+
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
+                <Button Text="Delete" Clicked="Delete_Clicked" HorizontalOptions="StartAndExpand"></Button>
+            </StackLayout>
+            
         </StackLayout>
 
         <!--The Item Popup-->
@@ -230,6 +235,8 @@
                     </StackLayout>
                 </Frame>
             </StackLayout>
+
         </StackLayout>
+
     </AbsoluteLayout> 
 </ContentPage>
