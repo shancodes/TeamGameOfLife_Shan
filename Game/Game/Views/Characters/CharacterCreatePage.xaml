@@ -65,7 +65,7 @@
                             </Grid.ColumnDefinitions>
 
                             <Label Grid.Row="0" Grid.Column="0"
-                                Text="Name" 
+                                Text="Name:" 
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
@@ -76,7 +76,7 @@
                                 HorizontalOptions="Start"/>
 
                             <Label Grid.Row="1" Grid.Column="0"
-                                Text="Description" 
+                                Text="Description:" 
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
@@ -106,7 +106,7 @@
                             </StackLayout>-->
 
                             <Label Grid.Row="2" Grid.Column="0"
-                                Text="Level" 
+                                Text="Level:" 
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
@@ -118,7 +118,7 @@
                                 HorizontalOptions="Start"/>
 
                             <Label Grid.Row="3" Grid.Column="0"
-                                Text="Max Health" 
+                                Text="Max Health:" 
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
@@ -132,7 +132,7 @@
 
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
 
-                            <Label Text="Attack" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="Attack:" Style="{StaticResource LabelStyle}"/>
 
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
 
@@ -150,7 +150,7 @@
 
                             </StackLayout>
 
-                            <Label Text="Defense" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="Defense:" Style="{StaticResource LabelStyle}"/>
 
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
 
@@ -168,7 +168,7 @@
 
                             </StackLayout>
 
-                            <Label Text="Speed" Style="{StaticResource LabelStyle}"/>
+                            <Label Text="Speed:" Style="{StaticResource LabelStyle}"/>
                             
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
 
