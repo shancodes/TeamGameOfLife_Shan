@@ -94,7 +94,10 @@ namespace Game.Views
         {
             var current = (e.CurrentSelection.FirstOrDefault() as CharacterModel);
 
-            await Navigation.PushAsync(new CharacterReadPage(new GenericViewModel<CharacterModel>(current)));
+            if(current != null)
+            {
+                await Navigation.PushAsync(new CharacterReadPage(new GenericViewModel<CharacterModel>(current)));
+            }
 
             return;
         }
