@@ -161,7 +161,8 @@
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
                                     ValueChanged="Defense_OnStepperValueChanged"/>
 
-                            <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
 
                             <Label Grid.Row="6" Grid.Column="0"
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
