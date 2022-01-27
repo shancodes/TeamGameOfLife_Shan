@@ -214,6 +214,7 @@
                         </FlexLayout>
 
                         <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1"/>
+                        <Button Text="Create" Clicked="Save_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1"/>
 
                     </StackLayout>
                 </ScrollView>
