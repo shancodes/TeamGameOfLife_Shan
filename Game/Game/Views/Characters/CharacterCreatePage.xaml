@@ -128,6 +128,20 @@
                                 Style="{StaticResource ValueStyle}"
                                 Padding="10,10,40,10"
                                 HorizontalOptions="Start"/>
+
+                            <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"/>
+                            <Label Grid.Row="4" Grid.Column="0"
+                                    Text="{Binding Data.Attack, Mode=TwoWay}" 
+                                    x:Name="AttackValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="End"
+                                    HorizontalTextAlignment="End"/>
+
+                            <Stepper Grid.Row="4" Grid.Column="1"
+                                    Value="{Binding Data.Attack, Mode=TwoWay}"
+                                    ValueChanged="Attack_OnStepperValueChanged"/>
+                            
                         </Grid>
 
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
@@ -136,7 +150,7 @@
 
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">
 
-                                <Label 
+                                <!--<Label 
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
                                     Style="{StaticResource ValueStyle}"
@@ -146,7 +160,7 @@
 
                                 <Stepper 
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged"/>
+                                    ValueChanged="Attack_OnStepperValueChanged"/>-->
 
                             </StackLayout>
 
