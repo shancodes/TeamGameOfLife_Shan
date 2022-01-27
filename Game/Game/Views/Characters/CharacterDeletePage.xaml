@@ -43,23 +43,13 @@
 
                 <Label Text="Really delete this?" Style="{StaticResource MessageStyle}"/>
 
-                <Button 
-                Text="Yes" 
-                Clicked="Delete_Clicked" 
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                BorderWidth="1" 
-                BorderColor="black">
-                </Button>
+                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
-                <Button 
-                Text="No" 
-                Clicked="Cancel_Clicked" 
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                BorderWidth="1" 
-                BorderColor="black">
-                </Button>
+                    <Button Text="Yes" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
+                    <Button Text="No" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+
+                </StackLayout>
+
             </StackLayout>
             
         </StackLayout>
