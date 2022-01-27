@@ -53,7 +53,7 @@ namespace Game.Views
             await Navigation.PushAsync(new CharacterReadPage(new GenericViewModel<CharacterModel>(data)));
 
             // Manually deselect Character.
-            //CharactersListView.SelectedItem = null;
+            
         }
 
         /// <summary>
@@ -103,6 +103,7 @@ namespace Game.Views
             {
                 await Navigation.PushAsync(new CharacterReadPage(new GenericViewModel<CharacterModel>(current)));
             }
+            ItemsListView.SelectedItem = null;
 
             return;
         }
