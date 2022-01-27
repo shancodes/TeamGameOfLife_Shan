@@ -26,32 +26,41 @@
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
+                
                 <Label 
-                   Text="Name : " 
+                    Text="Name : " 
                     Style="{StaticResource LabelStyle}"/>
 
                 <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
+                    
                     <Label 
                     Text="{Binding Data.Name}" 
                     Style="{StaticResource ValueStyle}"
                     Padding="0,0,10,0"
                     HorizontalOptions="End"
                     HorizontalTextAlignment="End"/>
+                    
                 </StackLayout>
+                
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
+                
                 <Label 
                     Text="Description : " 
                     Style="{StaticResource LabelStyle}"/>
+                
                 <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
+                    
                     <Label 
                     Text="{Binding Data.Description}" 
                     Style="{StaticResource ValueStyle}"
                     Padding="0,0,10,0"
                     HorizontalOptions="End"
                     HorizontalTextAlignment="End"/>
+                    
                 </StackLayout>
+                
             </StackLayout>
             
             <StackLayout HorizontalOptions="Center" Padding="20">
