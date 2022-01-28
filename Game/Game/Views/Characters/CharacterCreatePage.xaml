@@ -10,11 +10,13 @@
              x:Class="Game.Views.CharacterCreatePage"
              >
 
+    <!--Toolbar items with Cancel and Save buttons-->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
     </ContentPage.ToolbarItems>
 
+    <!--NavigationPage with Back button and Text-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
             <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
@@ -30,8 +32,8 @@
 
     <ContentPage.Content>
         <AbsoluteLayout
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
         >
 
             <StackLayout Style="{StaticResource VerticalStack}"
@@ -41,16 +43,14 @@
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10">
 
-                        <!--<StackLayout Style="{StaticResource HorizontalStack}">-->
                             <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
-                            <ImageButton 
+                        <ImageButton 
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
                                 Source="d10.png"
                                 Clicked="RollDice_Clicked"
                                 HorizontalOptions="Center"/>
-                        <!--</StackLayout>-->
 
                         <Grid
                             RowSpacing="1"
@@ -65,6 +65,7 @@
                                 <ColumnDefinition Width="auto"/>
                             </Grid.ColumnDefinitions>
 
+                            <!--Grid for Name-->
                             <Label Grid.Row="0" Grid.Column="0"
                                 Text="Name:" 
                                 Style="{StaticResource LabelStyle}"
@@ -78,6 +79,7 @@
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
+                            <!--Grid for Description-->
                             <Label Grid.Row="1" Grid.Column="0"
                                 Text="Description:" 
                                 Style="{StaticResource LabelStyle}"
@@ -91,25 +93,7 @@
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
-                            <!--<Label Grid.Row="2" Grid.Column="0"
-                                Text="Image" 
-                                Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="End"/>-->
-
-                            <!--<StackLayout Grid.Row="2" Grid.Column="1" Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
-
-                                <Image 
-                                    Source="{Binding Data.ImageURI, Mode=TwoWay}"
-                                    Style="{StaticResource ImageSmallStyle}"/>
-
-                                <Entry 
-                                    Text="{Binding Data.ImageURI, Mode=TwoWay}" 
-                                    Style="{StaticResource EntryStyle}"
-                                    WidthRequest="250"
-                                    HorizontalOptions="Start"/>
-
-                            </StackLayout>-->
-
+                            <!--Grid for Level-->
                             <Label Grid.Row="2" Grid.Column="0"
                                 Text="Level:" 
                                 Style="{StaticResource LabelStyle}"
@@ -122,6 +106,7 @@
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
+                            <!--Grid for Max Health-->
                             <Label Grid.Row="3" Grid.Column="0"
                                 Text="Max Health:" 
                                 Style="{StaticResource LabelStyle}"
@@ -134,6 +119,7 @@
                                 Padding="10,10,40,10"
                                 HorizontalOptions="Start"/>
 
+                            <!--Grid for Attack-->
                             <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
@@ -151,6 +137,7 @@
                                     ValueChanged="Attack_OnStepperValueChanged" HorizontalOptions="End"/>
                             </StackLayout>
 
+                            <!--Grid for Defense-->
                             <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
@@ -168,6 +155,7 @@
                                     ValueChanged="Defense_OnStepperValueChanged"/>
                             </StackLayout>
 
+                            <!--Grid for Speed-->
                             <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
@@ -187,41 +175,19 @@
 
                         </Grid>
 
-                        <!--<StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">-->
-
-                            <!--<Label Text="Attack:" Style="{StaticResource LabelStyle}"/>-->
-
-                            <!--<StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0">-->
-
-                                <!--<Label 
-                                    Text="{Binding Data.Attack, Mode=TwoWay}" 
-                                    x:Name="AttackValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
-                                    HorizontalOptions="End"
-                                    HorizontalTextAlignment="End"/>
-
-                                <Stepper 
-                                    Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged"/>-->
-
-                            <!--</StackLayout>-->
-
-                            
-                        <!--</StackLayout>-->
-
                         <FlexLayout 
-                        Padding="5"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround"
-                        AlignContent="SpaceAround"
-                        x:Name="ItemBox">
+                            Padding="5"
+                            Wrap="Wrap"
+                            JustifyContent="SpaceAround"
+                            AlignContent="SpaceAround"
+                            x:Name="ItemBox">
                         </FlexLayout>
 
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                             <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
                             <Button x:Name="CreateButton" Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                            
                         </StackLayout>
                         
                     </StackLayout>
