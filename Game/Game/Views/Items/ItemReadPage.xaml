@@ -31,14 +31,32 @@
                 Spacing="20">
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
-            <Label Text="{Binding Data.Name}" Style="{StaticResource LabelBaseStyle}" HorizontalOptions="Center"  FontSize="Medium"/>
-            <Label 
-                    Text="{Binding Data.Description}" 
-                    Style="{StaticResource LabelBaseStyle}" HorizontalOptions ="Center"/>
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                <Label 
+                               Text="Name : " 
+                               Style="{StaticResource LabelStyle}"  HorizontalTextAlignment="Center"/>
+                <Label 
+                                Text="{Binding Data.Name}" 
+                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
+            </StackLayout>
 
-            <Label 
-                    Text="{Binding Data.Location, Converter={StaticResource ItemLocationEnumConverter}}" 
-                    Style="{StaticResource LabelBaseStyle}" HorizontalOptions="Center"/>
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                <Label 
+                                Text="Description : " 
+                                Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
+                <Label 
+                                Text="{Binding Data.Description}" 
+                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                <Label 
+                                Text="Location : " 
+                                Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
+                <Label 
+                                Text="{Binding Data.Location}" 
+                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
+            </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="Center">
                 <Label
