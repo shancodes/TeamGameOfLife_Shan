@@ -27,7 +27,7 @@
                     <Label 
                         Text="Game Of Life"
                         Style="{StaticResource CenterMessageStyle}"
-                        FontSize="Micro"
+                        FontSize="Header"
                         LineBreakMode="WordWrap"
                         MaxLines="5"
                         />
@@ -35,7 +35,7 @@
                     <Label 
                         Text="Come On... Let's Play!!!"
                         Style="{StaticResource CenterMessageStyle}"
-                        FontSize="Micro"
+                        FontSize="Title"
                         LineBreakMode="WordWrap"
                         MaxLines="5"
                         />
