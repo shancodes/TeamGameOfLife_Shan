@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              xmlns:local="using:Game.Models"
              xmlns:local_helpers="clr-namespace:Game.Helpers"
+             
              xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.ItemCreatePage"
             >
@@ -25,6 +26,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -32,16 +34,16 @@
 
         <ScrollView>
             <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="10">
+                Spacing="10" HorizontalOptions="FillAndExpand">
  
                 <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
                 
                 <!--grid for first part of the page-->
                 <Grid
                     RowSpacing="10"
-                    ColumnSpacing="5"
-                    HorizontalOptions="CenterAndExpand"
-                    Margin="10">
+                    ColumnSpacing="10"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10" >
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
@@ -85,8 +87,8 @@
 
                     <Picker Grid.Row="2" Grid.Column="1"
                         WidthRequest="280"
-                        ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListCharacter}" 
-                        SelectedItem="{Binding Data.Location, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
+                        ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItemMessage}" 
+                        SelectedItem="{Binding Data.Location, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}"  
                         x:Name="LocationPicker" HorizontalOptions="Start"/>
 
 

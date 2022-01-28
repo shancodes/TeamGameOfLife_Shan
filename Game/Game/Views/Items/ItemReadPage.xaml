@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local_helpers="clr-namespace:Game.Helpers"
+             xmlns:local="using:Game.Models"
              mc:Ignorable="d"
              x:Class="Game.Views.ItemReadPage"
              >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
 
     <NavigationPage.TitleView>
         <!--Button Text="Back" Clicked="Cancel_Clicked" ImageSource="icon_cancel.png"  HorizontalOptions="Start"/-->
@@ -27,7 +37,7 @@
                     Style="{StaticResource LabelBaseStyle}" HorizontalOptions ="Center"/>
 
             <Label 
-                    Text="{Binding Data.Location}" 
+                    Text="{Binding Data.Location, Converter={StaticResource ItemLocationEnumConverter}}" 
                     Style="{StaticResource LabelBaseStyle}" HorizontalOptions="Center"/>
 
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="Center">
