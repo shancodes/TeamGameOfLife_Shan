@@ -46,6 +46,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Cancel_Clicked(object sender, EventArgs e)
         {
+            this.ViewModel.Data.Update(OriginalModel);
             _ = await Navigation.PopModalAsync();
         }
 
