@@ -12,13 +12,16 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center">
 
+                <!--Image for home page-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                    
                     <Image
                          Source="https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABVHhBovOkKUt8dLqe64oy0AeSqqUxtdSEh3Ws72Ho153kuAnC4z6Db-SYkmTjmOk87c14eWAQZj2RZfOXOvGJWJStSQSkwih0jzE.png?r=1d0"
                          Style="{StaticResource ImageLargeStyle}"/>
                 
                 </StackLayout>
-                
+
+                <!--stack layout for Label-->
                 <StackLayout HorizontalOptions="Center" Padding="70,5,70,0"> 
                
                     <Label 
@@ -36,8 +39,10 @@
                         LineBreakMode="WordWrap"
                         MaxLines="5"
                         />
+                    
                 </StackLayout>
 
+                <!--Enter button-->
                 <Button
                     Text="Enter"
                     Clicked="GameButton_Clicked"/>
