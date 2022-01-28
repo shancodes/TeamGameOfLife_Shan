@@ -10,16 +10,20 @@
     <!--stack layout for Delete and Cancel buttons-->
     
     <ContentPage.ToolbarItems>
+        
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
+        
     </ContentPage.ToolbarItems>
 
     <!--stack layout for Back button and Title-->
     
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
+            
             <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
             <Label Text= "{Binding Title}" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -36,14 +40,14 @@
                     Style="{StaticResource LabelStyle}"/>
 
                 <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
-                    
+
                     <Label 
-                    Text="{Binding Data.Name}" 
-                    Style="{StaticResource ValueStyle}"
-                    Padding="0,0,10,0"
-                    HorizontalOptions="End"
-                    HorizontalTextAlignment="End"/>
-                    
+                        Text="{Binding Data.Name}" 
+                        Style="{StaticResource ValueStyle}"
+                        Padding="0,0,10,0"
+                        HorizontalOptions="End"
+                        HorizontalTextAlignment="End"/>
+
                 </StackLayout>
                 
             </StackLayout>
@@ -56,14 +60,14 @@
                     Style="{StaticResource LabelStyle}"/>
                 
                 <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
-                    
+
                     <Label 
-                    Text="{Binding Data.Description}" 
-                    Style="{StaticResource ValueStyle}"
-                    Padding="0,0,10,0"
-                    HorizontalOptions="End"
-                    HorizontalTextAlignment="End"/>
-                    
+                        Text="{Binding Data.Description}" 
+                        Style="{StaticResource ValueStyle}"
+                        Padding="0,0,10,0"
+                        HorizontalOptions="End"
+                        HorizontalTextAlignment="End"/>
+
                 </StackLayout>
                 
             </StackLayout>
