@@ -71,6 +71,8 @@
                 </StackLayout>
                 
             </StackLayout>
+
+            <!--stack layout for Label-->
             
             <StackLayout HorizontalOptions="Center" Padding="20">
                 
