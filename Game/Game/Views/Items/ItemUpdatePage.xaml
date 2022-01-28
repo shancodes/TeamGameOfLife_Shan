@@ -17,7 +17,7 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
             <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
-            <Label Text="Update Item Stats" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            <Label Text="Update Item" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
