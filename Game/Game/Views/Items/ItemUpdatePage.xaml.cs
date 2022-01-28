@@ -35,7 +35,7 @@ namespace Game.Views
             BindingContext = this.ViewModel = data;
 
             //Need to make the SelectedItem a string, so it can select the correct item.
-            LocationPicker.SelectedItem = data.Data.Location.ToString();
+            LocationPicker.SelectedItem = data.Data.Location.ToMessage();
             AttributePicker.SelectedItem = data.Data.Attribute.ToString();
         }
 
@@ -87,7 +87,7 @@ namespace Game.Views
             Name_Entry.Text = ViewModel.Data.Name;
             Description_entry.Text = ViewModel.Data.Description;
 
-            LocationPicker.SelectedIndex = ItemLocationEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Location.ToString());
+            LocationPicker.SelectedItem = ViewModel.Data.Location.ToMessage();
             AttributePicker.SelectedIndex = AttributeEnumHelper.GetListCharacter.IndexOf(ViewModel.Data.Attribute.ToString());
 
             ImageEntry.Text = ViewModel.Data.ImageURI;
