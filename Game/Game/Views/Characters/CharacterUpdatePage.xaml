@@ -118,7 +118,7 @@
                                 <Label Text="Attack:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="0" />
                                 <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
                                     <Label 
-                                    Text="{Binding Data.GetAttackTotal, Mode=TwoWay}" 
+                                    Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
                                     Style="{StaticResource ValueStyle}"
                                     Padding="0,0,10,0"
@@ -134,7 +134,7 @@
                                 <Label Text="Defense:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0"/>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1">
                                     <Label
-                                        Text="{Binding Data.GetDefenseTotal, Mode=TwoWay}" 
+                                        Text="{Binding Data.Defense, Mode=TwoWay}" 
                                         x:Name="DefenseValue"
                                         Style="{StaticResource ValueStyle}"
                                         Padding="0,0,10,0"
@@ -149,7 +149,7 @@
                                 <Label Text="Speed:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="0"/>
                                 <StackLayout  Orientation="Horizontal" HorizontalOptions="Start" Grid.Row="2" Grid.Column="1">
                                     <Label 
-                                    Text="{Binding Data.GetSpeedTotal, Mode=TwoWay}" 
+                                    Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
                                     Style="{StaticResource ValueStyle}"
                                     Padding="0,0,10,0"
