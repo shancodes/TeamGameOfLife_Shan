@@ -21,6 +21,8 @@ namespace Game.Views
     {
         // The Character to create
         public GenericViewModel<CharacterModel> ViewModel { get; set; }
+        private CharacterModel OriginalModel;
+        private bool reset_started = false;
 
         // Hold the current location selected
         public ItemLocationEnum PopupLocationEnum = ItemLocationEnum.Unknown;
@@ -34,7 +36,7 @@ namespace Game.Views
         public CharacterUpdatePage(GenericViewModel<CharacterModel> data)
         {
             InitializeComponent();
-
+            this.OriginalModel = new CharacterModel(data.Data);
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = "Update " + data.Title;
@@ -73,6 +75,31 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Redo the Binding to cause a refresh - this time without updating health
+        /// </summary>
+        /// <returns></returns>
+        public bool UpdatePBContextWithoutHealth()
+        {
+            // Temp store off the Level
+            var level = this.ViewModel.Data.Level;
+
+            // Clear the Binding and reset it
+            BindingContext = null;
+            BindingContext = this.ViewModel;
+
+            // This resets the Picker to -1 index, need to reset it back
+            //ViewModel.Data.Level = level;
+            LevelPicker.SelectedIndex = OriginalModel.Level - 1;
+
+            ViewModel.Data.MaxHealth = OriginalModel.MaxHealth;
+            MaxHealthValue.Text = ViewModel.Data.MaxHealth.ToString();
+
+            AddItemsToDisplay();
+
+            return true;
+        }
+
+        /// <summary>
         /// The Level selected from the list
         /// Need to recalculate Max Health
         /// </summary>
@@ -83,7 +110,10 @@ namespace Game.Views
             // Change the Level
             ViewModel.Data.Level = LevelPicker.SelectedIndex + 1;
 
-            ManageHealth();
+            if (!reset_started)
+            {
+                ManageHealth();
+            }
         }
 
         /// <summary>
@@ -111,9 +141,23 @@ namespace Game.Views
                 ViewModel.Data.ImageURI = new CharacterModel().ImageURI;
             }
 
-            MessagingCenter.Send(this, "Create", ViewModel.Data);
+            MessagingCenter.Send(this, "Update", ViewModel.Data);
 
             _ = await Navigation.PopModalAsync();
+        }
+
+
+        /// <summary>
+        /// Reset the fields to original values before update
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void Reset_Clicked(object sender, EventArgs e)
+        {
+            reset_started = true;
+            recover_original_values();
+            UpdatePBContextWithoutHealth();
+            reset_started = false;
         }
 
         /// <summary>
@@ -127,8 +171,14 @@ namespace Game.Views
             // Don't want to set the value on update constructor, only after save on the page
             // need to make sure that cancel from a save, actually cancels.
             // Make a copy of the object and work from that and then have that passed in to update
-
+            recover_original_values();
             _ = await Navigation.PopModalAsync();
+        }
+
+        private void recover_original_values()
+        {
+            this.ViewModel.Data.Update(OriginalModel);
+            MessagingCenter.Send(this, "Update", ViewModel.Data);
         }
 
         /// <summary>
