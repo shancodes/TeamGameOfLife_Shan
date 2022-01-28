@@ -122,7 +122,8 @@
                             <!--Grid for Attack-->
                             <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
-
+                            
+                            <!--StackLayout for Text and Stepper for Attack field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="4" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
@@ -141,6 +142,7 @@
                             <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
+                            <!--StackLayout for Text and Stepper for Defense field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="5" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
@@ -159,6 +161,7 @@
                             <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
+                            <!--StackLayout for Text and Stepper for Speed field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="6" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
@@ -175,6 +178,7 @@
 
                         </Grid>
 
+                        <!--Flex Layout to show items to select-->
                         <FlexLayout 
                             Padding="5"
                             Wrap="Wrap"
@@ -183,6 +187,7 @@
                             x:Name="ItemBox">
                         </FlexLayout>
 
+                        <!--Cancel and Create buttons -->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                             <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
