@@ -129,6 +129,41 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Input Validation for Name
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            SetUpdateVisibility();
+        }
+
+        /// <summary>
+        /// Input Validation for Description
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+
+        public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            SetUpdateVisibility();
+        }
+
+        /// <summary>
+        /// Disable Update button when Name and Description entries are empty
+        /// </summary>
+        private void SetUpdateVisibility()
+        {
+            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Description_Entry.Text))
+            {
+                Update.IsEnabled = false;
+                return;
+            }
+
+            Update.IsEnabled = true;
+        }
+
+        /// <summary>
         /// Save by calling for Create
         /// </summary>
         /// <param name="sender"></param>
