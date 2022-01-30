@@ -6,12 +6,12 @@
              mc:Ignorable="d"
              x:Name="BrowseItemsPage"
              x:Class="Game.Views.MonsterIndexPage"
-             Title="{Binding Title}">
+             >
 
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="Character Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Monster Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
 
             <Button Text="Create" Clicked="Add_Clicked" HorizontalOptions="End"/>
         </StackLayout>
