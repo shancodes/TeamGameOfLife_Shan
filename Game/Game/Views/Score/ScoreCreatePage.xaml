@@ -60,7 +60,11 @@
                         Text="{Binding Data.ScoreTotal}" 
                         Style="{StaticResource EntryStyle}" HorizontalOptions="Start" WidthRequest="280"/>
 
+                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1"/>
+                    <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="3" Grid.Column="1"/>
+
                 </Grid>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
