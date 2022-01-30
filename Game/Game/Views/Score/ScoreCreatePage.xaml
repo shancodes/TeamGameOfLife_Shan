@@ -8,12 +8,13 @@
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.ScoreCreatePage"
-             Title="{Binding Title}">
+             >
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding Title}" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Resources>
         <ResourceDictionary>
