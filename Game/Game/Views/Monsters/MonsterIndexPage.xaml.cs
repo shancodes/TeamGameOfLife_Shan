@@ -6,6 +6,7 @@ using Xamarin.Forms.Xaml;
 
 using Game.Models;
 using Game.ViewModels;
+using System.Linq;
 
 namespace Game.Views
 {
@@ -51,8 +52,6 @@ namespace Game.Views
             // Open the Read Page
             await Navigation.PushAsync(new MonsterReadPage(new GenericViewModel<MonsterModel>(data)));
 
-            // Manually deselect Monster.
-            MonstersListView.SelectedItem = null;
         }
 
         /// <summary>
@@ -87,6 +86,25 @@ namespace Game.Views
             }
 
             BindingContext = ViewModel;
+        }
+
+
+        /// <summary>
+        /// Displaying Characters as a collection view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var current = (e.CurrentSelection.FirstOrDefault() as MonsterModel);
+
+            if (current != null)
+            {
+                await Navigation.PushAsync(new MonsterReadPage(new GenericViewModel<MonsterModel>(current)));
+            }
+            ItemsListView.SelectedItem = null;
+
+            return;
         }
     }
 }
