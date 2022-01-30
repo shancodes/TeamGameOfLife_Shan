@@ -8,10 +8,15 @@
              x:Class="Game.Views.MonsterIndexPage"
              Title="{Binding Title}">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="Add_Clicked" IconImageSource="icon_add.png"/>
-    </ContentPage.ToolbarItems>
 
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Character Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+
+            <Button Text="Create" Clicked="Add_Clicked" HorizontalOptions="End"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
