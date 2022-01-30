@@ -26,14 +26,15 @@
 
         <ScrollView>
             <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="10" HorizontalOptions="FillAndExpand">
+                Spacing="100" HorizontalOptions="Center">
 
 
                 <Grid
-                    RowSpacing="1"
-                    ColumnSpacing="2"
+                    RowSpacing="10"
+                    ColumnSpacing="0"
                     VerticalOptions="Center"
-                    HorizontalOptions="FillAndExpand">
+                    HorizontalOptions="Center"
+                    >
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
@@ -42,26 +43,32 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Label Grid.Row="0" Grid.Column="0"
+                    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                        <Label
                         Text="Name" 
                         Style="{StaticResource LabelStyle}"
-                        HorizontalOptions="End"/>
-                    
-                    <Entry Grid.Row="0" Grid.Column="1"
+                        HorizontalTextAlignment="Start"/>
+
+                        <Entry
                         Text="{Binding Data.Name}" 
                         Style="{StaticResource EntryStyle}"
-                           HorizontalOptions="Start" WidthRequest="280"/>
+                        WidthRequest="280" HorizontalTextAlignment="Start"/>
+                    </StackLayout>
 
-                    <Label Grid.Row="1" Grid.Column="0"
+                    <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                        <Label
                         Text="Score" 
-                        Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
+                        Style="{StaticResource LabelStyle}"
+                        />
 
-                    <Entry Grid.Row="1" Grid.Column="1"
+                        <Entry
                         Text="{Binding Data.ScoreTotal}" 
-                        Style="{StaticResource EntryStyle}" HorizontalOptions="Start" WidthRequest="280"/>
+                        Style="{StaticResource EntryStyle}"
+                        WidthRequest="280"/>
+                    </StackLayout>
 
-                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1"/>
-                    <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="3" Grid.Column="1"/>
+                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
+                    <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="2" Grid.Column="2"/>
 
                 </Grid>
                 
