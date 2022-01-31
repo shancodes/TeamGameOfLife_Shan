@@ -62,5 +62,42 @@ namespace Game.Views
         {
             _ = await Navigation.PopModalAsync();
         }
+
+        /// <summary>
+        /// Input validation for Name
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            SetCreateVisibility();
+        }
+
+        /// <summary>
+        /// Input validation for Score
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            SetCreateVisibility();
+        }
+
+        /// <summary>
+        /// function to check if Name and Score is empty field
+        /// </summary>
+        private void SetCreateVisibility()
+        {
+            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Score_Entry.Text))
+            {
+                CreateButton.IsEnabled = false;
+                return;
+            }
+
+            CreateButton.IsEnabled = true;
+        }
     }
+
+
+ 
 }

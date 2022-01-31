@@ -50,21 +50,25 @@
                         HorizontalTextAlignment="Start"/>
 
                         <Entry
-                        Text="{Binding Data.Name}" 
-                        Style="{StaticResource EntryStyle}"
-                        WidthRequest="280" HorizontalTextAlignment="Start"/>
+                            x:Name="Name_Entry"
+                            TextChanged="EntryName_TextChanged"
+                            Text="{Binding Data.Name}" 
+                            Style="{StaticResource EntryStyle}"
+                            WidthRequest="280" HorizontalTextAlignment="Start"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand">
                         <Label
-                        Text="Score" 
-                        Style="{StaticResource LabelStyle}"
+                            Text="Score" 
+                            Style="{StaticResource LabelStyle}"
                         />
 
                         <Entry
-                        Text="{Binding Data.ScoreTotal}" 
-                        Style="{StaticResource EntryStyle}"
-                        WidthRequest="280"/>
+                            x:Name="Score_Entry"
+                            Text="{Binding Data.ScoreTotal}" 
+                            TextChanged="EntryDescription_TextChanged"
+                            Style="{StaticResource EntryStyle}"
+                            WidthRequest="280"/>
                     </StackLayout>
 
                     <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
