@@ -5,8 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Game.Views.ScoreReadPage"
-             Title="{Binding Title}">
+             >
 
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Label Text="Score Page " FontSize="Subtitle"/>
+        </StackLayout>
+     </NavigationPage.TitleView>
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Update" Clicked="Update_Clicked" IconImageSource="icon_edit.png"/>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
@@ -16,8 +22,6 @@
     <ScrollView>
         <StackLayout Style="{StaticResource OuterBoxStack}"
             Spacing="10" HorizontalOptions="FillAndExpand">
-
-            <Label Text="Detail Page" Style="{StaticResource HeaderStyle}"/>
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
                 <Label 
