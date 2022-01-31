@@ -42,23 +42,14 @@
                     Style="{StaticResource ValueStyle}"/>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="AutoBattle:"                      
-                    Style="{StaticResource LabelStyle}"/>
 
+            <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
                 <Label 
-                    Text="{Binding Data.AutoBattle}"
-                    Style="{StaticResource ValueStyle}"/>
-            </StackLayout>
-
-            <StackLayout Style="{StaticResource HorizontalStack}">
-                <Label 
-                    Text="Score:" 
-                    Style="{StaticResource LabelStyle}"/>
+                    Text=" Your Score:" 
+                    Style="{StaticResource LabelStyle}" FontSize="Subtitle"/>
                 <Label 
                     Text="{Binding Data.ScoreTotal}"
-                    Style="{StaticResource ValueStyle}"/>
+                    Style="{StaticResource ValueStyle}"  FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
             
             <StackLayout Style="{StaticResource HorizontalStack}">
