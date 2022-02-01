@@ -20,8 +20,8 @@
 
 
     <ScrollView>
-        <StackLayout Style="{StaticResource OuterBoxStack}"
-            Spacing="10" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource OuterBoxStack}" 
+            Spacing="20" HorizontalOptions="FillAndExpand">
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
                 <Label 
@@ -49,7 +49,7 @@
                     Style="{StaticResource LabelStyle}" FontSize="Subtitle"/>
                 <Label 
                     Text="{Binding Data.ScoreTotal}"
-                    Style="{StaticResource ValueStyle}"  FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+                    Style="{StaticResource ValueStyle}"  FontSize="Medium" HorizontalOptions="CenterAndExpand" TextColor="Red"/>
             </StackLayout>
             
             <StackLayout Style="{StaticResource HorizontalStack}">
