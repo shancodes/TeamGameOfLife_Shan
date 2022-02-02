@@ -9,17 +9,11 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-            <Label Text="Score Page " FontSize="Subtitle"/>
+            <Label Text="Score Detail " FontSize="Subtitle"/>
         </StackLayout>
      </NavigationPage.TitleView>
     
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Update" Clicked="Update_Clicked" IconImageSource="icon_edit.png"/>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
-    </ContentPage.ToolbarItems>
-
-
-    <ScrollView             VerticalOptions="CenterAndExpand"
+    <ScrollView VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand">
         <StackLayout Style="{StaticResource OuterBoxStack}" 
             Spacing="50" HorizontalOptions="FillAndExpand">
