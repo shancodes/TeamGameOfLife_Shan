@@ -42,6 +42,15 @@
                                 Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
                         </StackLayout>
 
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                            <Label 
+                                Text="Description : " 
+                                Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
+                            <Label 
+                                Text="{Binding Data.Description}" 
+                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
