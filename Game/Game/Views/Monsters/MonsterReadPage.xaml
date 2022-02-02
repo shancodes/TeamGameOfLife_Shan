@@ -27,11 +27,11 @@
                     AbsoluteLayout.LayoutFlags="All">
 
             <ScrollView x:Name="ScrollView">
-                <StackLayout Style="{StaticResource OuterBoxStack}">
+                <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
 
-                    <StackLayout Style="{StaticResource VerticalStack}">
+                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
-                        <Label Text="Read Page" Style="{StaticResource HeaderStyle}"/>
+                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
                     </StackLayout>
                 </StackLayout>
