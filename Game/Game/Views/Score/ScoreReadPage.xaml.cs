@@ -54,5 +54,15 @@ namespace Game.Views
             await Navigation.PushModalAsync(new NavigationPage(new ScoreDeletePage(ViewModel)));
             _ = await Navigation.PopAsync();
         }
+
+        /// <summary>
+        /// defination for Done button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void Done_Clicked(object sender, EventArgs e)
+        {
+            _ = await Navigation.PopAsync();
+        }
     }
 }

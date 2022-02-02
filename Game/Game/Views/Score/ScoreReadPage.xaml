@@ -52,8 +52,9 @@
                     Style="{StaticResource ValueStyle}"  FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="Red"/>
             </StackLayout>
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                <Button Text="Update" Clicked="Update_Clicked" />
                 <Button Text="Delete" Clicked="Delete_Clicked" />
+                <Button Text="Done" Clicked="Done_Clicked" />
+                <Button Text="Update" Clicked="Update_Clicked" />
             </StackLayout>
 
         </StackLayout>
