@@ -21,7 +21,8 @@
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <ScrollView>
+    <ScrollView VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
         <StackLayout Style="{StaticResource OuterBoxStack}"
                 Spacing="10" HorizontalOptions="FillAndExpand">
 
