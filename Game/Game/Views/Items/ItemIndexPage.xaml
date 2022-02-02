@@ -15,8 +15,6 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <Label Text="Items Index" Style="{StaticResource HeaderStyle}"/>
-
             <CollectionView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
