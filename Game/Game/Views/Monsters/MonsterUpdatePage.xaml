@@ -42,6 +42,28 @@
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
                             <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
+                            <!--Name Field-->
+                            <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Row="0" Grid.Column="0"
+                                    Text="Name : " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                                <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
+                                     WidthRequest="280"
+                                     x:Name="Name_Entry"
+                                     Style="{StaticResource EntryStyle}" HorizontalOptions="Start" TextChanged="EntryName_TextChanged"/>
+
+                            </Grid>
+
+
 
 
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 using Xamarin.Forms;
@@ -6,6 +8,7 @@ using Xamarin.Forms.Xaml;
 
 using Game.ViewModels;
 using Game.Models;
+using Game.GameRules;
 
 namespace Game.Views
 {
@@ -18,6 +21,8 @@ namespace Game.Views
     {
         // The Monster to create
         public GenericViewModel<MonsterModel> ViewModel { get; set; }
+        private MonsterModel OriginalModel;
+        private bool reset_started = false;
 
         // Hold the current location selected
         public ItemLocationEnum PopupLocationEnum = ItemLocationEnum.Unknown;
@@ -31,10 +36,16 @@ namespace Game.Views
         public MonsterUpdatePage(GenericViewModel<MonsterModel> data)
         {
             InitializeComponent();
-
+            this.OriginalModel = new MonsterModel(data.Data);
             BindingContext = this.ViewModel = data;
 
             this.ViewModel.Title = "Update " + data.Title;
+
+            // Load the values for the Level into the Picker
+            //for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
+            //{
+            //    LevelPicker.Items.Add(i.ToString());
+            //}
 
             _ = UpdatePageBindingContext();
         }
@@ -85,6 +96,16 @@ namespace Game.Views
             _ = await Navigation.PopModalAsync();
         }
 
+
+        /// <summary>
+        /// Input Validation for Name
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+           // SetUpdateVisibility();
+        }
         ///// <summary>
         ///// Randomize the Monster, keep the level the same
         ///// </summary>
