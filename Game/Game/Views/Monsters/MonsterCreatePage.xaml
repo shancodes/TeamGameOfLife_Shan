@@ -117,9 +117,12 @@
 
                                 <Stepper
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged" HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                             </StackLayout>
+
+                            <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
 
                         </Grid>
 
