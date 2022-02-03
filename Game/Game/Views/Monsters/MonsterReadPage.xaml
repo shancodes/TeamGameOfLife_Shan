@@ -22,9 +22,7 @@
         VerticalOptions="FillAndExpand"
         >
 
-        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
-            <Button Text="Delete" Clicked="Delete_Clicked" HorizontalOptions="StartAndExpand"></Button>
-        </StackLayout>
+        
 
         <StackLayout Style="{StaticResource VerticalStack}"
                     AbsoluteLayout.LayoutBounds="1,1,1,1" 
@@ -62,6 +60,10 @@
                             <Label 
                                 Text="{Binding Data.Level}" 
                                 Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
+
+                        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
+                            <Button Text="Delete" Clicked="Delete_Clicked" HorizontalOptions="StartAndExpand"></Button>
                         </StackLayout>
 
                     </StackLayout>
