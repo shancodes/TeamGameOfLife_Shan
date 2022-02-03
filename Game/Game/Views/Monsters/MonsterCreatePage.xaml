@@ -115,6 +115,10 @@
                                     HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
+                                <Stepper
+                                    Value="{Binding Data.Attack, Mode=TwoWay}"
+                                    ValueChanged="Attack_OnStepperValueChanged" HorizontalOptions="End"/>
+
                             </StackLayout>
 
                         </Grid>
