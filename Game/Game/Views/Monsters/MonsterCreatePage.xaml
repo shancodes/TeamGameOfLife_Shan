@@ -43,6 +43,12 @@
 
                         <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
+                        <ImageButton 
+                                x:Name="RollDice"
+                                Style="{StaticResource BattleToolbarStyle}"
+                                Source="d10.png"
+                                HorizontalOptions="Center"/>
+
                         <Grid
                             RowSpacing="1"
                             ColumnSpacing="2"
