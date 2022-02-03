@@ -168,6 +168,7 @@
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                             <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+                            <Button x:Name="CreateButton" Text="Create" Clicked="Save_Clicked" HorizontalOptions="End"/>
 
                         </StackLayout>
 
