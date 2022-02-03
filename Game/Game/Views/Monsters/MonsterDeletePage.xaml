@@ -67,6 +67,12 @@
 
             </StackLayout>
 
+            <StackLayout HorizontalOptions="Center" Padding="20">
+
+                <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
+
+            </StackLayout>
+
             <!--<Label Text="Delete Page" Style="{StaticResource HeaderStyle}"/>-->
             
         </StackLayout>
