@@ -111,14 +111,6 @@
 
                         </Grid>
 
-                        <FlexLayout 
-                            Padding="5"
-                            Wrap="Wrap"
-                            JustifyContent="SpaceAround"
-                            AlignContent="SpaceAround"
-                            x:Name="ItemBox">
-                        </FlexLayout>
-
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                             <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
