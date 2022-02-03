@@ -26,9 +26,10 @@
                     Text="Completion Time:"
                     Style="{StaticResource LabelStyle}"/>
 
-                <Label 
+                <Entry 
                     Text="{Binding Data.GameDate}"
-                    Style="{StaticResource ValueStyle}"/>
+                    WidthRequest="280"
+                    Style="{StaticResource EntryStyle}"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
@@ -41,6 +42,15 @@
                     Style="{StaticResource EntryStyle}"/>
             </StackLayout>
 
+            <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                <Label 
+                    Text=" Your Score:" 
+                    Style="{StaticResource LabelStyle}" FontSize="Subtitle"/>
+                <Entry 
+                    Text="{Binding Data.ScoreTotal}"
+                    Style="{StaticResource EntryStyle}"  FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="Red"/>
+            </StackLayout>
+            
 
         </StackLayout>
         </ScrollView>
