@@ -127,7 +127,7 @@
 
                         <StackLayout Style="{StaticResource HorizontalStack}"  HorizontalOptions="Center" Spacing="40">
 
-                            <Button Text="Reset"  HorizontalOptions="End"/>
+                            <Button Text="Reset"  Clicked="Reset_Clicked" HorizontalOptions="End"/>
                             <Button Text="Update" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
                         </StackLayout>
                     </StackLayout>

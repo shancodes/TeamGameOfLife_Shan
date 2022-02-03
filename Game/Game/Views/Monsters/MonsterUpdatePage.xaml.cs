@@ -83,6 +83,19 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Helper Function that updates all the fields with current values from ViewModel.Data
+        /// </summary>
+        private void UpdateUIElements()
+        {
+            Name_Entry.Text = ViewModel.Data.Name;
+            Description_Entry.Text = ViewModel.Data.Description;
+            AttackValue.Text = string.Format("{0}", ViewModel.Data.Attack);
+            DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToMessage();
+        }
+
+
+
+        /// <summary>
         /// Cancel the Create
         /// </summary>
         /// <param name="sender"></param>
@@ -104,6 +117,17 @@ namespace Game.Views
         //    MaxHealthValue.Text = ViewModel.Data.MaxHealth.ToString();
         //}
 
+        /// <summary>
+        /// Reset the fields to original values before update
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void Reset_Clicked(object sender, EventArgs e)
+        {
+            this.ViewModel.Data.Update(OriginalModel);
+            MessagingCenter.Send(this, "Update", ViewModel.Data);
+            UpdateUIElements();
+        }
 
 
         /// <summary>
