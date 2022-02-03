@@ -85,6 +85,13 @@
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
+                            <Picker Grid.Row="2" Grid.Column="1"
+                                SelectedItem="{Binding SelectedItemProperty}" 
+                                SelectedIndexChanged="Level_Changed"
+                                x:Name="LevelPicker"
+                                WidthRequest="280"
+                                HorizontalOptions="Start"/>
+
                         </Grid>
 
 
