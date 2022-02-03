@@ -89,7 +89,7 @@
                                         ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
                                     SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                     x:Name="DifficultyPicker"
-                                        WidthRequest="200"
+                                        WidthRequest="280"
                                     HorizontalOptions="Start"
                                 />
                                 
@@ -122,13 +122,10 @@
                                 </StackLayout>
                             </Grid>
 
-
-
-
-
                         </StackLayout>
+                       
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+                        <StackLayout Style="{StaticResource HorizontalStack}"  HorizontalOptions="Center" Spacing="40">
 
                             <Button Text="Reset"  HorizontalOptions="End"/>
                             <Button Text="Update" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
