@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Game.Views.MonsterDeletePage"
-             Title="{Binding Title}">
+             >
 
     <!--stack layout for Delete and Cancel buttons-->
 
@@ -18,6 +18,7 @@
         <StackLayout Orientation="Horizontal" Spacing="20">
 
             <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+            <Label Text= "{Binding Title}" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
 
         </StackLayout>
     </NavigationPage.TitleView>
