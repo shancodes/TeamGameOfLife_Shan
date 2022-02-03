@@ -138,7 +138,9 @@
                                 
                             </StackLayout>
 
-                            
+                            <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
+                                   HorizontalOptions="End"/>
+
 
                         </Grid>
 
