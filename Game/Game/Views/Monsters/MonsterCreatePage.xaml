@@ -165,6 +165,12 @@
                             x:Name="ItemBox">
                         </FlexLayout>
 
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+
+                            <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+
+                        </StackLayout>
+
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
