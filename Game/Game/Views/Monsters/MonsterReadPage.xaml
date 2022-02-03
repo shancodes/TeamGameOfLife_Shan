@@ -35,75 +35,95 @@
 
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                               Text="Name : " 
-                               Style="{StaticResource LabelStyle}"  HorizontalTextAlignment="Center"/>
-                            <Label 
-                                Text="{Binding Data.Name}" 
-                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
-                        </StackLayout>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Description : " 
-                                Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
-                            <Label 
-                                Text="{Binding Data.Description}" 
-                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
-                        </StackLayout>
+                        <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Difficulty : " 
-                                Style="{StaticResource LabelStyle}"/>
-                            <Label 
-                                Text="{Binding Data.Difficulty}" 
-                                Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
+                            <!--Name Field-->
+                            <Label Grid.Row="0" Grid.Column="0"
+                                    Text="Name : " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Data.Name}" Grid.Row="0" Grid.Column="1"
+                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+
+                            <!--Description Field-->
+                            <Label Grid.Row="1" Grid.Column="0"
+                                    Text="Description : " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Data.Description}" Grid.Row="1" Grid.Column="1"
+                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+
+                            <!--Difficulty Field-->
+                            <Label Grid.Row="2" Grid.Column="0"
+                                    Text="Difficulty : " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Data.Difficulty}" Grid.Row="2" Grid.Column="1"
+                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+
+                            <!--Attack Field-->
+                            <Label Grid.Row="3" Grid.Column="0"
+                                    Text="Attack : " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Data.Attack}" Grid.Row="3" Grid.Column="1"
+                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+
+                            <!--Total Exp Field-->
+                            <Label Grid.Row="4" Grid.Column="0"
+                                    Text="Total Experience : " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Data.ExperienceTotal}" Grid.Row="4" Grid.Column="1"
+                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+
+                            <!--Experience Remaining Field-->
+                            <Label Grid.Row="5" Grid.Column="0"
+                                    Text="Experience Remaining: " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Data.ExperienceRemaining}" Grid.Row="5" Grid.Column="1"
+                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+
+                        </Grid>
 
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Attack : " 
-                                Style="{StaticResource LabelStyle}"/>
-                            <Label 
-                                Text="{Binding Data.GetAttackTotal}" 
-                                Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
+                        <Grid
+                            RowSpacing="10"
+                            ColumnSpacing="5"
+                            HorizontalOptions="CenterAndExpand"
+                            Margin="10">
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Total Experience : " 
-                                Style="{StaticResource LabelStyle}"/>
-                            <Label 
-                                Text="{Binding Data.ExperienceTotal}" 
-                                Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                            <Label 
-                                Text="Experience Remaining: " 
-                                Style="{StaticResource LabelStyle}"/>
-                            <Label 
-                                Text="{Binding Data.ExperienceRemaining}" 
-                                Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
-
-
-
-
+                            <Button Text="Delete" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+                            <Button Text="Done!" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
+                            <Button Text="Update" Clicked="Update_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2"/>
+                        </Grid>
 
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
 
-            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
-                <Button Text="Delete" Clicked="Delete_Clicked" HorizontalOptions="StartAndExpand"></Button>
-                <Button Text="Done" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand"></Button>
-                <Button Text="Update" Clicked="Update_Clicked" HorizontalOptions="EndAndExpand"></Button>
-            </StackLayout>
-
+          
 
         </StackLayout>
                
