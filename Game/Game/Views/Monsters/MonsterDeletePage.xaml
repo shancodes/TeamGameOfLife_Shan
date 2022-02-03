@@ -73,6 +73,12 @@
 
             </StackLayout>
 
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+
+                <Button Text="Yes" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
+
+            </StackLayout>
+
             <!--<Label Text="Delete Page" Style="{StaticResource HeaderStyle}"/>-->
             
         </StackLayout>
