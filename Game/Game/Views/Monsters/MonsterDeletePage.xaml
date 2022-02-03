@@ -16,6 +16,8 @@
         
     </ContentPage.ToolbarItems>
 
+    <!--stack layout for Back button and Title-->
+
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
 
@@ -33,6 +35,7 @@
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
+            <!--Stack layout for Name-->
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
 
                 <Label 
@@ -52,6 +55,7 @@
 
             </StackLayout>
 
+            <!--Stack layout for Description-->
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
 
                 <Label 
@@ -71,11 +75,15 @@
 
             </StackLayout>
 
+            <!--stack layout for Label-->
+
             <StackLayout HorizontalOptions="Center" Padding="20">
 
                 <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
 
             </StackLayout>
+
+            <!--stack layout for Delete and Cancel buttons-->
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
