@@ -7,13 +7,19 @@
              xmlns:local="using:Game.Models"
              xmlns:local_helpers="clr-namespace:Game.Helpers"
              xmlns:local_enum="clr-namespace:Game.Models"
-             x:Class="Game.Views.MonsterUpdatePage"
-             Title="{Binding Title}">
+             x:Class="Game.Views.MonsterUpdatePage">
 
-    <ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+            <Label Text="Update Monster" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Resources>
         <ResourceDictionary>
