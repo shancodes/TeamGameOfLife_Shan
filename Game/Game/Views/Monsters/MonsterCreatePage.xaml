@@ -49,7 +49,10 @@
                             HorizontalOptions="CenterAndExpand"
                             Margin="10">
 
-                            
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
                         </Grid>
 
 
