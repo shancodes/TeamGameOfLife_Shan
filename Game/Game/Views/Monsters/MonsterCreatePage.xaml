@@ -141,6 +141,19 @@
                             <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="6" Grid.Column="1">
+                                <Label
+                                    Text="{Binding Data.Speed, Mode=TwoWay}" 
+                                    x:Name="SpeedValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="Start"
+                                    HorizontalTextAlignment="End"/>
+
+                                <Stepper
+                                    Value="{Binding Data.Speed, Mode=TwoWay}"
+                                    />
+                            </StackLayout>
 
                         </Grid>
 
