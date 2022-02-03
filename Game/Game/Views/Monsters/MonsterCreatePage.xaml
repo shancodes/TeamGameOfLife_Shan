@@ -56,6 +56,11 @@
                                 <ColumnDefinition Width="auto"/>
                             </Grid.ColumnDefinitions>
 
+                            <Label Grid.Row="0" Grid.Column="0"
+                                Text="Name:" 
+                                Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="End"/>
+
                         </Grid>
 
 
