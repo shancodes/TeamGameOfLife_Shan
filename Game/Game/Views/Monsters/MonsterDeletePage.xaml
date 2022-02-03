@@ -10,8 +10,10 @@
     <!--stack layout for Delete and Cancel buttons-->
 
     <ContentPage.ToolbarItems>
+        
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
+        
     </ContentPage.ToolbarItems>
 
     <NavigationPage.TitleView>
