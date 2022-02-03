@@ -106,6 +106,11 @@ namespace Game.Views
         {
            // SetUpdateVisibility();
         }
+
+        public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            //SetUpdateVisibility();
+        }
         ///// <summary>
         ///// Randomize the Monster, keep the level the same
         ///// </summary>
