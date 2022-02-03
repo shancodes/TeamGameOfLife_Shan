@@ -14,6 +14,14 @@
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
 
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="20">
+
+            <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+
     <ScrollView>
         <StackLayout Style="{StaticResource OuterBoxStack}"
                 Spacing="10">
