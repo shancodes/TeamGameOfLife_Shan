@@ -87,10 +87,14 @@
 
                             <Picker Grid.Row="2" Grid.Column="1"
                                 SelectedItem="{Binding SelectedItemProperty}" 
-                                SelectedIndexChanged="Level_Changed"
                                 x:Name="LevelPicker"
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
+
+                            <Label Grid.Row="3" Grid.Column="0"
+                                Text="Max Health:" 
+                                Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="End"/>
 
                         </Grid>
 
