@@ -69,6 +69,11 @@
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
+                            <Label Grid.Row="1" Grid.Column="0"
+                                Text="Description:" 
+                                Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="End"/>
+
                         </Grid>
 
 
