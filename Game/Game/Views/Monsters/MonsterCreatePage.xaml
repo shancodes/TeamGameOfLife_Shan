@@ -91,10 +91,10 @@
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
-                            <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
+                            <Label Grid.Row="3" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="4" Grid.Column="1">
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="3" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
