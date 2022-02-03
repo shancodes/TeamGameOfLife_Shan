@@ -47,6 +47,7 @@
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
                                 Source="d10.png"
+                                Clicked="RollDice_Clicked"
                                 HorizontalOptions="Center"/>
 
                         <Grid
