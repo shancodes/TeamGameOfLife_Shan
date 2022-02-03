@@ -161,7 +161,6 @@ namespace Game.Views
             SpeedValue.Text = String.Format("{0}", e.NewValue);
         }
 
-
         /// <summary>
         /// The row selected from the list
         /// </summary>
