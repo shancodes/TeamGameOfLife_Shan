@@ -65,12 +65,12 @@
                                 <!--Description Field-->
 
                                 
-                                <Label Grid.Row="1" Grid.Column="0"
+                                <Label Grid.Row="2" Grid.Column="0"
                                     Text="Description : " 
                                     Style="{StaticResource LabelStyle}"
                                        HorizontalOptions="End"/>
 
-                                <Entry Grid.Row="1" Grid.Column="1"
+                                <Entry Grid.Row="2" Grid.Column="1"
                                             Text="{Binding Data.Description, Mode=TwoWay}" 
                                      WidthRequest="280"
                                      x:Name="Description_Entry"
@@ -80,25 +80,58 @@
                                 
 
                                 <!--Difficulty-->
-                                <Label Grid.Row="3" Grid.Column="0"
+                                <Label Grid.Row="4" Grid.Column="0"
                                     Text="Difficulty : " 
                                     Style="{StaticResource LabelStyle}"
                                        HorizontalOptions="End"/>
 
-                                <Picker Grid.Row="3" Grid.Column="1"
+                                <Picker Grid.Row="4" Grid.Column="1"
                                         ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
                                     SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                     x:Name="DifficultyPicker"
-                                        WidthRequest="80"
+                                        WidthRequest="200"
                                     HorizontalOptions="Start"
                                 />
+                                
+                                
 
+                            </Grid>
+
+                            <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="Attack:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" />
+                                <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                                    <Label 
+                                    Text="{Binding Data.Attack, Mode=TwoWay}" 
+                                    x:Name="AttackValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="Center"
+                                    HorizontalTextAlignment="Center"/>
+
+                                    <Stepper 
+                                    Value="{Binding Data.Attack, Mode=TwoWay}"
+                                    ValueChanged="Attack_OnStepperValueChanged"
+                                        HorizontalOptions="Start"/>
+                                </StackLayout>
                             </Grid>
 
 
 
 
 
+                        </StackLayout>
+
+                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+
+                            <Button Text="Reset"  HorizontalOptions="End"/>
+                            <Button Text="Update" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
                         </StackLayout>
                     </StackLayout>
                 </ScrollView>

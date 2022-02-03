@@ -116,10 +116,27 @@ namespace Game.Views
            // SetUpdateVisibility();
         }
 
+        /// <summary>
+        /// Input Validation for Description
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
         public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
         {
             //SetUpdateVisibility();
         }
+
+        /// <summary>
+        /// Catch the change to the Stepper for Attack
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Attack_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            AttackValue.Text = String.Format("{0}", e.NewValue);
+        }
+
+
         ///// <summary>
         ///// Randomize the Monster, keep the level the same
         ///// </summary>
