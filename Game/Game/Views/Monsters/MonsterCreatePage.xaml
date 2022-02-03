@@ -106,6 +106,17 @@
                             <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
+                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="4" Grid.Column="1">
+                                <Label
+                                    Text="{Binding Data.Attack, Mode=TwoWay}" 
+                                    x:Name="AttackValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="Start"
+                                    HorizontalTextAlignment="End"/>
+
+                            </StackLayout>
+
                         </Grid>
 
 
