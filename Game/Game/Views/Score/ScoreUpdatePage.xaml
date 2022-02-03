@@ -50,8 +50,12 @@
                     Text="{Binding Data.ScoreTotal}"
                     Style="{StaticResource EntryStyle}"  FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="Red"/>
             </StackLayout>
-            
 
+            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+
+                <Button Text="Reset" />
+                <Button Text="Update"  />
+            </StackLayout>
         </StackLayout>
         </ScrollView>
     
