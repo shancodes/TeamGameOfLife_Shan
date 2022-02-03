@@ -52,6 +52,13 @@
                     Text="Description : " 
                     Style="{StaticResource LabelStyle}"/>
 
+            <Label 
+                        Text="{Binding Data.Description}" 
+                        Style="{StaticResource ValueStyle}"
+                        Padding="0,0,10,0"
+                        HorizontalOptions="End"
+                        HorizontalTextAlignment="End"/>
+
             <!--<Label Text="Delete Page" Style="{StaticResource HeaderStyle}"/>-->
             
         </StackLayout>
