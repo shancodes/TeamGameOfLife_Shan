@@ -132,7 +132,13 @@
                                     Padding="0,0,10,0"
                                     HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
+
+                                <Stepper
+                                    Value="{Binding Data.Defense, Mode=TwoWay}"/>
+                                
                             </StackLayout>
+
+                            
 
                         </Grid>
 
