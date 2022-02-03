@@ -92,8 +92,6 @@
 
             </StackLayout>
 
-            <!--<Label Text="Delete Page" Style="{StaticResource HeaderStyle}"/>-->
-            
         </StackLayout>
     </ScrollView>
 </ContentPage>
