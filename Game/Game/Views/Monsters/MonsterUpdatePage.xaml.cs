@@ -138,7 +138,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
         {
-           // SetUpdateVisibility();
+           SetUpdateVisibility();
         }
 
         /// <summary>
@@ -148,7 +148,21 @@ namespace Game.Views
         /// <param name="e"></param>
         public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
         {
-            //SetUpdateVisibility();
+            SetUpdateVisibility();
+        }
+
+        /// <summary>
+        /// Disable Update button when Name and Description entries are empty
+        /// </summary>
+        private void SetUpdateVisibility()
+        {
+            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Description_Entry.Text))
+            {
+                Update.IsEnabled = false;
+                return;
+            }
+
+            Update.IsEnabled = true;
         }
 
         /// <summary>
