@@ -76,6 +76,22 @@
                                      x:Name="Description_Entry"
                                      Style="{StaticResource EntryStyle}"
                                        HorizontalOptions="Start" TextChanged="EntryDescription_TextChanged"/>
+                                
+                                
+
+                                <!--Difficulty-->
+                                <Label Grid.Row="3" Grid.Column="0"
+                                    Text="Difficulty : " 
+                                    Style="{StaticResource LabelStyle}"
+                                       HorizontalOptions="End"/>
+
+                                <Picker Grid.Row="3" Grid.Column="1"
+                                        ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
+                                    SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
+                                    x:Name="DifficultyPicker"
+                                        WidthRequest="80"
+                                    HorizontalOptions="Start"
+                                />
 
                             </Grid>
 

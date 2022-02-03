@@ -41,12 +41,6 @@ namespace Game.Views
 
             this.ViewModel.Title = "Update " + data.Title;
 
-            // Load the values for the Level into the Picker
-            //for (var i = 1; i <= LevelTableHelper.MaxLevel; i++)
-            //{
-            //    LevelPicker.Items.Add(i.ToString());
-            //}
-
             _ = UpdatePageBindingContext();
         }
 
@@ -63,7 +57,9 @@ namespace Game.Views
             BindingContext = null;
             BindingContext = this.ViewModel;
 
+            // This resets the Picker to -1 index, need to reset it back
             ViewModel.Data.Difficulty = difficulty;
+            DifficultyPicker.SelectedItem = difficulty.ToMessage();
 
             return true;
         }
@@ -95,6 +91,19 @@ namespace Game.Views
         {
             _ = await Navigation.PopModalAsync();
         }
+
+        ///// <summary>
+        ///// Change the Level Picker
+        ///// </summary>
+        //public void ManageHealth()
+        //{
+        //    // Roll for new HP
+        //    ViewModel.Data.MaxHealth = RandomPlayerHelper.GetHealth(ViewModel.Data.Level);
+
+        //    // Show the Result
+        //    MaxHealthValue.Text = ViewModel.Data.MaxHealth.ToString();
+        //}
+
 
 
         /// <summary>
