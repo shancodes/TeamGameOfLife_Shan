@@ -61,6 +61,14 @@
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
+                            <Entry Grid.Row="0" Grid.Column="1"
+                                Text="{Binding Data.Name, Mode=TwoWay}" 
+                                Style="{StaticResource EntryStyle}"
+                                x:Name="Name_Entry"
+                                TextChanged="EntryName_TextChanged"
+                                WidthRequest="280"
+                                HorizontalOptions="Start"/>
+
                         </Grid>
 
 
