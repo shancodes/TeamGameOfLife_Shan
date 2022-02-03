@@ -43,6 +43,15 @@
 
                         <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
+                        <Grid
+                            RowSpacing="1"
+                            ColumnSpacing="2"
+                            HorizontalOptions="CenterAndExpand"
+                            Margin="10">
+
+                            
+                        </Grid>
+
 
 
                     </StackLayout>
