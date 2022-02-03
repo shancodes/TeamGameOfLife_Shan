@@ -33,6 +33,17 @@
                     Text="Name : " 
                     Style="{StaticResource LabelStyle}"/>
 
+                <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
+
+                    <Label 
+                        Text="{Binding Data.Name}" 
+                        Style="{StaticResource ValueStyle}"
+                        Padding="0,0,10,0"
+                        HorizontalOptions="End"
+                        HorizontalTextAlignment="End"/>
+
+                </StackLayout>
+
             </StackLayout>
 
             <!--<Label Text="Delete Page" Style="{StaticResource HeaderStyle}"/>-->
