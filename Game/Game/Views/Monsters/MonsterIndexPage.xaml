@@ -59,14 +59,8 @@
                             <Label 
                         Grid.Row="2"
                         Grid.Column="1"
-                        Text="Defense:"/>
-                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding GetDefenseTotal}"></Label>
-
-                            <Label 
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        Text="Speed:"/>
-                            <Label Grid.Row="3" Grid.Column="2" Text="{Binding GetSpeedTotal}"></Label>
+                        Text="Difficluty:"/>
+                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding Difficulty}"></Label>
 
                         </Grid>
 
