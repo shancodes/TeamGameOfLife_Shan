@@ -146,7 +146,7 @@ namespace Game.Views
             // Randomize the Attributes
             ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
 
-            ViewModel.Data.ImageURI = RandomPlayerHelper.GetCharacterImage();
+            ViewModel.Data.ImageURI = RandomPlayerHelper.GetMonsterImage();
 
             _ = UpdatePageBindingContext();
 
