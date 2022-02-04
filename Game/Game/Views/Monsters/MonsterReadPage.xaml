@@ -22,8 +22,6 @@
         VerticalOptions="FillAndExpand"
         >
 
-        
-
         <StackLayout Style="{StaticResource VerticalStack}"
                     AbsoluteLayout.LayoutBounds="1,1,1,1" 
                     AbsoluteLayout.LayoutFlags="All">
@@ -34,7 +32,6 @@
                     <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
 
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
-
 
                         <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
                             <Grid.RowDefinitions>
@@ -118,7 +115,6 @@
 
                         </Grid>
 
-
                         <Grid
                             RowSpacing="10"
                             ColumnSpacing="5"
@@ -140,11 +136,6 @@
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
-
-          
-
         </StackLayout>
-               
-
     </AbsoluteLayout>
 </ContentPage>

@@ -30,9 +30,7 @@ namespace Game.Views
         {
             InitializeComponent();
             this.OriginalModel = new ScoreModel(data.Data);
-
             BindingContext = this.ViewModel = data;
-
             this.ViewModel.Title = "Update " + data.Title;
         }
 
@@ -94,16 +92,31 @@ namespace Game.Views
             Update.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Input Validation for Score
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
         private void Score_Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
             SetUpdateVisibility();
         }
 
+        /// <summary>
+        /// Input Validation for Name
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
         private void Name_Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
             SetUpdateVisibility();
         }
 
+        /// <summary>
+        /// Input Validation for GameTime
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
         private void GameTime_Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
             SetUpdateVisibility();
