@@ -8,16 +8,13 @@
              x:Class="Game.Views.ScoreIndexPage"
              >
 
+    <!--NavigationPage with Create button and Text-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label Text="Score Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
             <Button Text="Create" Clicked="AddScore_Clicked" HorizontalOptions="End"/>
         </StackLayout>
     </NavigationPage.TitleView>
-
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddScore_Clicked" IconImageSource="icon_add.png"/>
-    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
@@ -41,7 +38,8 @@
                                   VerticalOptions="CenterAndExpand"
                                   >
 
-                                <StackLayout HorizontalOptions="CenterAndExpand">
+                                <StackLayout 
+                                    HorizontalOptions="CenterAndExpand">
 
                                     <Frame 
                                     OutlineColor="Black" 
@@ -55,50 +53,53 @@
                                         Padding="20"
                                         >
 
+                                            <!--Label for Name-->
                                             <Label 
-                                           Text="{Binding Name}" 
-                                           Style="{StaticResource ListStyle}"
-                                           HorizontalTextAlignment="Center"
-                                           HorizontalOptions="CenterAndExpand"
-                                           />
+                                               Text="{Binding Name}" 
+                                               Style="{StaticResource ListStyle}"
+                                               HorizontalTextAlignment="Center"
+                                               HorizontalOptions="CenterAndExpand"
+                                               />
 
                                             <StackLayout 
-                                           Orientation="Horizontal"
-                                           HorizontalOptions="CenterAndExpand"
-                                           >
+                                               Orientation="Horizontal"
+                                               HorizontalOptions="CenterAndExpand"
+                                               >
 
+                                                <!--Label for Rounds-->
                                                 <Label 
-                                               Text="Rounds:"
-                                               Style="{StaticResource ListStyle}"
-                                                />
+                                                   Text="Rounds:"
+                                                   Style="{StaticResource ListStyle}"
+                                                    />
 
+                                                <!--Label for Roundcount-->
                                                 <Label 
-                                                Text="{Binding RoundCount}" 
-                                                Style="{StaticResource ListStyle}"
-                                                />
+                                                    Text="{Binding RoundCount}" 
+                                                    Style="{StaticResource ListStyle}"
+                                                    />
 
                                             </StackLayout>
 
                                             <StackLayout 
-                                           Orientation="Horizontal"
-                                           HorizontalOptions="CenterAndExpand"
-                                           >
+                                               Orientation="Horizontal"
+                                               HorizontalOptions="CenterAndExpand"
+                                               >
 
+                                                <!--Label for Score-->
                                                 <Label 
-                                               Text="Score:"
-                                               Style="{StaticResource ListStyle}"
-                                                />
+                                                   Text="Score:"
+                                                   Style="{StaticResource ListStyle}"
+                                                    />
 
+                                                <!--Label for ScoreTotal-->
                                                 <Label 
-                                                Text="{Binding ScoreTotal}" 
-                                                Style="{StaticResource ListStyle}"
-                                                />
+                                                    Text="{Binding ScoreTotal}" 
+                                                    Style="{StaticResource ListStyle}"
+                                                    />
 
                                             </StackLayout>
-
                                         </StackLayout>
                                     </Frame>
-                                    
                                 </StackLayout>
                             </Grid>
                         </ViewCell>
