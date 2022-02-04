@@ -10,11 +10,13 @@
              x:Class="Game.Views.MonsterCreatePage"
              >
 
+    <!--Toolbar items with Cancel and Save buttons-->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
     </ContentPage.ToolbarItems>
 
+    <!--NavigationPage with Back button and Text-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
             <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
@@ -63,6 +65,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
+                            <!--Grid for Name-->
                             <Label Grid.Row="0" Grid.Column="0"
                                 Text="Name:" 
                                 Style="{StaticResource LabelStyle}"
@@ -76,6 +79,7 @@
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
+                            <!--Grid for Description-->
                             <Label Grid.Row="1" Grid.Column="0"
                                 Text="Description:" 
                                 Style="{StaticResource LabelStyle}"
@@ -89,6 +93,7 @@
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
+                            <!--Grid for Difficulty-->
                             <Label Grid.Row="2" Grid.Column="0"
                                 Text="Difficulty:" 
                                 Style="{StaticResource LabelStyle}"
@@ -116,9 +121,11 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
+                            <!--Grid for Attack-->
                             <Label Grid.Row="0" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
+                            <!--StackLayout for Text and Stepper for Attack field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="0" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
@@ -135,9 +142,11 @@
 
                             </StackLayout>
 
+                            <!--Grid for Defense-->
                             <Label Grid.Row="1" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
+                            <!--StackLayout for Text and Stepper for Defense field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="1" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
@@ -153,9 +162,11 @@
 
                             </StackLayout>
 
+                            <!--Grid for Speed-->
                             <Label Grid.Row="2" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
                                    HorizontalOptions="End"/>
 
+                            <!--StackLayout for Text and Stepper for Speed field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="2" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
@@ -172,6 +183,7 @@
 
                         </Grid>
 
+                        <!--Cancel and Create buttons -->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                             <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
