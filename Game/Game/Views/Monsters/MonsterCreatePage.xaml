@@ -39,7 +39,7 @@
                     AbsoluteLayout.LayoutFlags="All">
 
                 <ScrollView>
-                    <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10">
+                    <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="5">
 
                         <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
@@ -51,7 +51,7 @@
                                 HorizontalOptions="Center"/>
 
                         <Grid
-                            RowSpacing="1"
+                            RowSpacing="5"
                             ColumnSpacing="2"
                             HorizontalOptions="CenterAndExpand"
                             Margin="10">
@@ -60,7 +60,7 @@
                                 <RowDefinition Height="auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <Label Grid.Row="0" Grid.Column="0"
@@ -104,7 +104,7 @@
                         </Grid>
 
                         <Grid
-                            RowSpacing="1"
+                            RowSpacing="5"
                             ColumnSpacing="2"
                             HorizontalOptions="CenterAndExpand"
                             Margin="10">
@@ -113,7 +113,7 @@
                                 <RowDefinition Height="auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <Label Grid.Row="0" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
