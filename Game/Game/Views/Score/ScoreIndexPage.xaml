@@ -49,7 +49,7 @@
                                     >
 
                                         <StackLayout 
-                                        BackgroundColor="Goldenrod"
+                                        BackgroundColor="Teal"
                                         WidthRequest="200"
                                         MinimumHeightRequest="800"
                                         Padding="20"
