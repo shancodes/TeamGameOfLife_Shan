@@ -175,6 +175,26 @@ namespace Game.Views
             AttackValue.Text = String.Format("{0}", e.NewValue);
         }
 
+        /// <summary>
+        /// Catch the change to the Stepper for Defense
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Defense_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            DefenseValue.Text = String.Format("{0}", e.NewValue);
+        }
+
+        /// <summary>
+        /// Catch the change to the Stepper for Speed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Speed_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            SpeedValue.Text = String.Format("{0}", e.NewValue);
+        }
+
 
         ///// <summary>
         ///// Randomize the Monster, keep the level the same

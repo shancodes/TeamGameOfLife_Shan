@@ -104,7 +104,8 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-
+                                
+                                <!--Attack-->
                                 <Label Text="Attack:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" />
                                 <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
                                     <Label 
@@ -118,6 +119,40 @@
                                     <Stepper 
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
                                     ValueChanged="Attack_OnStepperValueChanged"
+                                        HorizontalOptions="Start"/>
+                                </StackLayout>
+                                
+                                <!--Defense-->
+                                <Label Text="Defense:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="0" />
+                                <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                                    <Label 
+                                    Text="{Binding Data.Defense, Mode=TwoWay}" 
+                                    x:Name="DefenseValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="Center"
+                                    HorizontalTextAlignment="Center"/>
+
+                                    <Stepper 
+                                    Value="{Binding Data.Defense, Mode=TwoWay}"
+                                    ValueChanged="Defense_OnStepperValueChanged"
+                                        HorizontalOptions="Start"/>
+                                </StackLayout>
+
+                                <!--Speed-->
+                                <Label Text="Speed:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="3" Grid.Column="0" />
+                                <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+                                    <Label 
+                                    Text="{Binding Data.Speed, Mode=TwoWay}" 
+                                    x:Name="SpeedValue"
+                                    Style="{StaticResource ValueStyle}"
+                                    Padding="0,0,10,0"
+                                    HorizontalOptions="Center"
+                                    HorizontalTextAlignment="Center"/>
+
+                                    <Stepper 
+                                    Value="{Binding Data.Speed, Mode=TwoWay}"
+                                    ValueChanged="Speed_OnStepperValueChanged"
                                         HorizontalOptions="Start"/>
                                 </StackLayout>
                             </Grid>
