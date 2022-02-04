@@ -79,6 +79,23 @@
 
                                             </StackLayout>
 
+                                            <StackLayout 
+                                           Orientation="Horizontal"
+                                           HorizontalOptions="CenterAndExpand"
+                                           >
+
+                                                <Label 
+                                               Text="Score:"
+                                               Style="{StaticResource ListStyle}"
+                                                />
+
+                                                <Label 
+                                                Text="{Binding ScoreTotal}" 
+                                                Style="{StaticResource ListStyle}"
+                                                />
+
+                                            </StackLayout>
+
                                         </StackLayout>
                                     </Frame>
                                     <!--<Label Grid.Column="0" Grid.Row="0"
