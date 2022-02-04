@@ -55,14 +55,14 @@
                         <Grid
                             RowSpacing="1"
                             ColumnSpacing="2"
-                            HorizontalOptions="CenterAndExpand"
+                            HorizontalOptions="Center"
                             Margin="10">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <!--Grid for Name-->
