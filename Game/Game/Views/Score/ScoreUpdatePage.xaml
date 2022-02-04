@@ -30,6 +30,7 @@
                 <Entry 
                     Text="{Binding Data.GameDate}"
                     WidthRequest="280"
+                    TextChanged="GameTime_Entry_TextChanged"
                     x:Name="GameTime_Entry"
                     Style="{StaticResource EntryStyle}"/>
             </StackLayout>
@@ -40,6 +41,7 @@
                     Style="{StaticResource LabelStyle}"/>
                 <Entry 
                     Text="{Binding Data.Name, Mode=TwoWay}" 
+                    TextChanged="Name_Entry_TextChanged"
                     x:Name="Name_Entry"
                     WidthRequest="280"
                     Style="{StaticResource EntryStyle}"/>
@@ -52,6 +54,7 @@
                 <Entry 
                     Text="{Binding Data.ScoreTotal, Mode=TwoWay}"
                     x:Name="Score_Entry"
+                    TextChanged="Score_Entry_TextChanged"
                     Style="{StaticResource EntryStyle}"  FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="Red"/>
             </StackLayout>
 

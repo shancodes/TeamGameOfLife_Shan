@@ -79,5 +79,34 @@ namespace Game.Views
             MessagingCenter.Send(this, "Update", ViewModel.Data);
             UpdateUIElements();
         }
+
+        /// <summary>
+        /// Disable Update button when Name and Description entries are empty
+        /// </summary>
+        private void SetUpdateVisibility()
+        {
+            if (string.IsNullOrEmpty(Score_Entry.Text) || string.IsNullOrEmpty(GameTime_Entry.Text) || string.IsNullOrEmpty(Name_Entry.Text))
+            {
+                Update.IsEnabled = false;
+                return;
+            }
+
+            Update.IsEnabled = true;
+        }
+
+        private void Score_Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SetUpdateVisibility();
+        }
+
+        private void Name_Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SetUpdateVisibility();
+        }
+
+        private void GameTime_Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            SetUpdateVisibility();
+        }
     }
 }
