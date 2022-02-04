@@ -11,8 +11,9 @@
              >
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-            <Label Text="Update Score " FontSize="Subtitle"/>
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+            <Label Text="Update Score " HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
