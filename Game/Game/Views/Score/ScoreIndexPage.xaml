@@ -8,9 +8,15 @@
              x:Class="Game.Views.ScoreIndexPage"
              Title="{Binding Title}">
 
-    <ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Score Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddScore_Clicked" IconImageSource="icon_add.png"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
