@@ -53,7 +53,7 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         Text="Attack:"/>
-                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding GetAttackTotal}"></Label>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Attack}"></Label>
 
 
                             <Label 
