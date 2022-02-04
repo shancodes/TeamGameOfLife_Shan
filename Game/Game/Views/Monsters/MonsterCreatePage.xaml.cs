@@ -157,6 +157,51 @@ namespace Game.Views
             return true;
         }
 
+        /// <summary>
+        /// Input Validation for Name
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void EntryName_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            SetUpdateVisibility();
+        }
+
+        /// <summary>
+        /// Input Validation for Description
+        /// </summary>
+        /// <param name="Sender"></param>
+        /// <param name="e"></param>
+        public void EntryDescription_TextChanged(object Sender, TextChangedEventArgs e)
+        {
+            SetUpdateVisibility();
+        }
+
+        /// <summary>
+        /// Disable Update button when Name and Description entries are empty
+        /// </summary>
+        private void SetUpdateVisibility()
+        {
+            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Description_Entry.Text))
+            {
+                CreateButton.IsEnabled = false;
+                return;
+            }
+
+            CreateButton.IsEnabled = true;
+        }
+
+        /// <summary>
+        /// Helper Function that updates all the fields with current values from ViewModel.Data
+        /// </summary>
+        private void UpdateUIElements()
+        {
+            Name_Entry.Text = ViewModel.Data.Name;
+            Description_Entry.Text = ViewModel.Data.Description;
+            AttackValue.Text = string.Format("{0}", ViewModel.Data.Attack);
+            DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToMessage();
+        }
+
         ///// <summary>
         ///// 
         ///// Randomize the Monster
