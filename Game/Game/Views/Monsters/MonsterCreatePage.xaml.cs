@@ -106,6 +106,16 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Catch the change to the Stepper for Speed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Speed_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            SpeedValue.Text = String.Format("{0}", e.NewValue);
+        }
+
+        /// <summary>
         /// Randomize Character Values and Items
         /// </summary>
         /// <param name="sender"></param>

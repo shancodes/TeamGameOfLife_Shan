@@ -167,7 +167,7 @@
 
                                 <Stepper
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
-                                    />
+                                    ValueChanged="Speed_OnStepperValueChanged"/>
                             </StackLayout>
 
                         </Grid>
