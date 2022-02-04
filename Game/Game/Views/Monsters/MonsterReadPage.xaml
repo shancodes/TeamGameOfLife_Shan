@@ -80,22 +80,40 @@
                             <Label Text="{Binding Data.GetAttackTotal}" Grid.Row="3" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
 
-                            <!--Total Exp Field-->
+                            <!--Defense Field-->
                             <Label Grid.Row="4" Grid.Column="0"
+                                    Text="Defense : " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Data.Defense}" Grid.Row="4" Grid.Column="1"
+                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+
+                            <!--Speed Field-->
+                            <Label Grid.Row="5" Grid.Column="0"
+                                    Text="Speed : " 
+                                    Style="{StaticResource LabelStyle}"
+                                        HorizontalOptions="End"/>
+
+                            <Label Text="{Binding Data.Speed}" Grid.Row="5" Grid.Column="1"
+                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+
+                            <!--Total Exp Field-->
+                            <Label Grid.Row="6" Grid.Column="0"
                                     Text="Total Experience : " 
                                     Style="{StaticResource LabelStyle}"
                                         HorizontalOptions="End"/>
 
-                            <Label Text="{Binding Data.ExperienceTotal}" Grid.Row="4" Grid.Column="1"
+                            <Label Text="{Binding Data.ExperienceTotal}" Grid.Row="6" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
 
                             <!--Experience Remaining Field-->
-                            <Label Grid.Row="5" Grid.Column="0"
+                            <Label Grid.Row="7" Grid.Column="0"
                                     Text="Experience Remaining: " 
                                     Style="{StaticResource LabelStyle}"
                                         HorizontalOptions="End"/>
 
-                            <Label Text="{Binding Data.ExperienceRemaining}" Grid.Row="5" Grid.Column="1"
+                            <Label Text="{Binding Data.ExperienceRemaining}" Grid.Row="7" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
 
                         </Grid>
