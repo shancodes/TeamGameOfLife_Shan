@@ -88,13 +88,14 @@
                                 HorizontalOptions="Start"/>
 
                             <Label Grid.Row="2" Grid.Column="0"
-                                Text="Level:" 
+                                Text="Difficulty:" 
                                 Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="End"/>
 
                             <Picker Grid.Row="2" Grid.Column="1"
-                                SelectedItem="{Binding SelectedItemProperty}" 
-                                x:Name="LevelPicker"
+                                ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
+                                SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
+                                x:Name="DifficultyPicker"
                                 WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
