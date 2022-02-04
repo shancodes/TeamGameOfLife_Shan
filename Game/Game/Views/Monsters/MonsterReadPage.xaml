@@ -74,7 +74,7 @@
                                     Style="{StaticResource LabelStyle}"
                                         HorizontalOptions="End"/>
 
-                            <Label Text="{Binding Data.GetAttackTotal}" Grid.Row="3" Grid.Column="1"
+                            <Label Text="{Binding Data.Attack}" Grid.Row="3" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
 
                             <!--Defense Field-->
