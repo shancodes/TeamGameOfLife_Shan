@@ -11,6 +11,7 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label Text="Score Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Create" Clicked="AddScore_Clicked" HorizontalOptions="End"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
