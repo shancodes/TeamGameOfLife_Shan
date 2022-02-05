@@ -307,4 +307,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\troll3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mystic_staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\long_flame_sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fast_dagger.png" />
+  </ItemGroup>
 </Project>

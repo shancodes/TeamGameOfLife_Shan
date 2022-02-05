@@ -146,6 +146,7 @@
     <Content Include="elf5.png" />
     <Content Include="elf6.png" />
     <Content Include="elf7.png" />
+    <Content Include="fast_dagger.png" />
     <Content Include="feet1.png" />
     <Content Include="feet2.png" />
     <Content Include="hat1.png" />
@@ -159,6 +160,8 @@
     <Content Include="item.png" />
     <Content Include="items.png" />
     <Content Include="knight.png" />
+    <Content Include="long_flame_sword.png" />
+    <Content Include="mystic_staff.png" />
     <Content Include="neck1.png" />
     <Content Include="neck2.png" />
     <Content Include="Properties\Default.rd.xml" />
