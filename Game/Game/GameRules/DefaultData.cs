@@ -16,16 +16,16 @@ namespace Game.GameRules
             var datalist = new List<ItemModel>()
             {
                 new ItemModel {
-                    Name = "Gold Sword",
-                    Description = "Sword made of Gold, really expensive looking",
-                    ImageURI = "sword1.png",
+                    Name = "Long Flame Sword",
+                    Description = "Sword made of flame",
+                    ImageURI = "long_flame_sword.png",
                     Range = 0,
                     Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.Attack},
 
-                new ItemModel {
+              /*  new ItemModel {
                     Name = "Pirate Sword",
                     Description = "Aye matie",
                     ImageURI = "sword2.png",
@@ -253,7 +253,7 @@ namespace Game.GameRules
                     Damage = 0,
                     Value = 9,
                     Location = ItemLocationEnum.Feet,
-                    Attribute = AttributeEnum.Speed},
+                    Attribute = AttributeEnum.Speed},*/
             };
 
             return datalist;
