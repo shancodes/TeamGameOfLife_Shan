@@ -25,7 +25,7 @@ namespace Game.GameRules
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.Attack},
 
-              /*  new ItemModel {
+               new ItemModel {
                     Name = "Pirate Sword",
                     Description = "Aye matie",
                     ImageURI = "sword2.png",
@@ -253,7 +253,7 @@ namespace Game.GameRules
                     Damage = 0,
                     Value = 9,
                     Location = ItemLocationEnum.Feet,
-                    Attribute = AttributeEnum.Speed},*/
+                    Attribute = AttributeEnum.Speed},
             };
 
             return datalist;
