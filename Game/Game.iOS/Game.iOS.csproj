@@ -316,4 +316,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\fast_dagger.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\burning_polyarm.png" />
+  </ItemGroup>
 </Project>
