@@ -17,7 +17,7 @@
 
                     <Image
                          Source="logo_medium.png"
-                         Style="{StaticResource ImageLargeStyle}"/>
+                         Style="{StaticResource ImageLargeLogoStyle}"/>
 
                 </StackLayout>
 
