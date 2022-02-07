@@ -93,6 +93,23 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void ItemCreatePage_Save_Clicked_Null_Attribute_Should_Pass()
+        {
+            // Arrange
+             
+            page.ViewModel.Data.Location = Game.Models.ItemLocationEnum.Necklace;
+            page.ViewModel.Data.Attribute = Game.Models.AttributeEnum.Unknown;
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void ItemCreatePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
