@@ -337,7 +337,7 @@ namespace Game.Views
             }
 
             ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Head));
-            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Necklass));
+            ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.Necklace));
             ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.PrimaryHand));
             ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.OffHand));
             ItemBox.Children.Add(GetItemToDisplay(ItemLocationEnum.RightFinger));
@@ -429,7 +429,7 @@ namespace Game.Views
 
             // Randomize an Item for Location
             ViewModel.Data.Head = RandomPlayerHelper.GetItem(ItemLocationEnum.Head);
-            ViewModel.Data.Necklass = RandomPlayerHelper.GetItem(ItemLocationEnum.Necklass);
+            ViewModel.Data.Necklass = RandomPlayerHelper.GetItem(ItemLocationEnum.Necklace);
             ViewModel.Data.PrimaryHand = RandomPlayerHelper.GetItem(ItemLocationEnum.PrimaryHand);
             ViewModel.Data.OffHand = RandomPlayerHelper.GetItem(ItemLocationEnum.OffHand);
             ViewModel.Data.RightFinger = RandomPlayerHelper.GetItem(ItemLocationEnum.Finger);
