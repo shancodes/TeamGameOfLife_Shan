@@ -319,4 +319,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\burning_polyarm.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fire_ring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blazing_hammer.png" />
+  </ItemGroup>
 </Project>
