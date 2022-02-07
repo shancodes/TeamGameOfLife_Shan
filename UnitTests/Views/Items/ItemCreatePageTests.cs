@@ -110,6 +110,24 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void ItemCreatePage_Save_Clicked_Null_ImageURI_Should_Pass()
+        {
+            // Arrange
+
+            page.ViewModel.Data.Location = Game.Models.ItemLocationEnum.Necklace;
+            page.ViewModel.Data.Attribute = Game.Models.AttributeEnum.Attack;
+            page.ViewModel.Data.ImageURI = null;
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void ItemCreatePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
