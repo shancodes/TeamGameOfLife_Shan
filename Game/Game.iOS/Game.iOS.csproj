@@ -325,4 +325,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\blazing_hammer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_medium.png" />
+  </ItemGroup>
 </Project>

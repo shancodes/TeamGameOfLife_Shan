@@ -16,7 +16,7 @@
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
                     
                     <Image
-                         Source="https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABVHhBovOkKUt8dLqe64oy0AeSqqUxtdSEh3Ws72Ho153kuAnC4z6Db-SYkmTjmOk87c14eWAQZj2RZfOXOvGJWJStSQSkwih0jzE.png?r=1d0"
+                         Source="logo_medium.png"
                          Style="{StaticResource ImageLargeStyle}"/>
                 
                 </StackLayout>

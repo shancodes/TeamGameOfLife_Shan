@@ -163,6 +163,7 @@
     <Content Include="item.png" />
     <Content Include="items.png" />
     <Content Include="knight.png" />
+    <Content Include="logo_medium.png" />
     <Content Include="long_flame_sword.png" />
     <Content Include="mystic_staff.png" />
     <Content Include="neck1.png" />
