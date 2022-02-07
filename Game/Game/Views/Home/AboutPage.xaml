@@ -8,15 +8,15 @@
              >
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
-            <Label Text="About" FontSize="Medium"/>
+            <Label Text="About Us" FontSize="Medium"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
     <ScrollView>
         <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand" Spacing="20">
-            <Image Source="action_ability.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="logo_small.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
-            <Label Text="Our game is a battle game between Heroes of Kingdoms and Monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
+            <Label Text=" A battle between powerful ladies that rule the world and Ice monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
             <Label Text="Makers" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
             <Label
                            Text="Developers"
@@ -26,18 +26,18 @@
 
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="kruta.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
                     <Label Text="Kruta" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="shipra.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
                     <Label Text="Shipra" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
 
 
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="priya.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
                     <Label Text="Shanmugapriya" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
             </StackLayout>
@@ -46,12 +46,12 @@
             
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="natasha.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
                     <Label Text="Natasha" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="action_ability.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="megan.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
                     <Label Text="Megan" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
             </StackLayout>
