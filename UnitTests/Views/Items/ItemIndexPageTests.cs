@@ -147,5 +147,26 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+
+        [Test]
+        public void ItemIndexPage_OnCollectionViewSelectionChanged_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            var selectedItem = new ItemModel();
+
+            CollectionView ItemsListView = (CollectionView)page.FindByName("ItemsListView");
+
+            // Act
+
+            // Triggers the OnCollectionViewSelectionChanged
+            ItemsListView.SelectedItem = selectedItem;
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
