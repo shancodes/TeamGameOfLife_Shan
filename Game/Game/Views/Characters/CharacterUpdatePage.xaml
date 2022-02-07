@@ -101,8 +101,8 @@
                                 <Picker Grid.Row="3" Grid.Column="1"
                                     SelectedItem="{Binding SelectedItemProperty}" 
                                     SelectedIndexChanged="Level_Changed"
+                                        WidthRequest="280"
                                     x:Name="LevelPicker"
-                                        WidthRequest="80"
                                     HorizontalOptions="Start"/>
                             </Grid>
 
