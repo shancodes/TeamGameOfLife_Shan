@@ -163,11 +163,16 @@
     <Content Include="item.png" />
     <Content Include="items.png" />
     <Content Include="knight.png" />
+    <Content Include="kruta.png" />
     <Content Include="logo_medium.png" />
+    <Content Include="logo_small.png" />
     <Content Include="long_flame_sword.png" />
+    <Content Include="megan.png" />
     <Content Include="mystic_staff.png" />
+    <Content Include="natasha.png" />
     <Content Include="neck1.png" />
     <Content Include="neck2.png" />
+    <Content Include="priya.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="ring1.png" />
     <Content Include="ring2.png" />
@@ -176,6 +181,7 @@
     <Content Include="shield2.png" />
     <Content Include="shield3.png" />
     <Content Include="shield4.png" />
+    <Content Include="shipra.png" />
     <Content Include="sword1.png" />
     <Content Include="sword10.png" />
     <Content Include="sword11.png" />

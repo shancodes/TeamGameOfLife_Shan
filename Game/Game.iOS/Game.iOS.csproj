@@ -328,4 +328,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\logo_medium.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\kruta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\megan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\natasha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\priya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shipra.png" />
+  </ItemGroup>
 </Project>
