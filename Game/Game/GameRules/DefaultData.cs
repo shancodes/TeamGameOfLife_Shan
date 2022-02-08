@@ -301,10 +301,10 @@ namespace Game.GameRules
             {
                 new CharacterModel {
                     Name = "Mike",
-                    Description = "Archer Wannabe",
+                    Description = "Fire Princess",
                     Level = 1,
                     MaxHealth = 5,
-                    ImageURI = "elf1.png",
+                    ImageURI = "fire_princess.png",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -316,10 +316,10 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "Tim",
-                    Description = "Hawk eye",
+                    Description = "Fire Wielder",
                     Level = 1,
                     MaxHealth = 5,
-                    ImageURI = "elf2.png",
+                    ImageURI = "fire_wielder.png",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -331,10 +331,10 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "Doug",
-                    Description = "Warrior in training",
+                    Description = "Night Walker",
                     Level = 1,
                     MaxHealth = 8,
-                    ImageURI = "elf4.png",
+                    ImageURI = "night_walker.png",
                     Head = HeadString,
                     Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
@@ -346,34 +346,34 @@ namespace Game.GameRules
 
                 new CharacterModel {
                     Name = "Sue",
-                    Description = "A strong Warrior",
+                    Description = "Sharp Shooter",
                     Level = 4,
                     MaxHealth = 38,
-                    ImageURI = "elf3.png"
+                    ImageURI = "sharpshooter.png"
                 },
 
                 new CharacterModel {
                     Name = "Jea",
-                    Description = "Come and get me",
+                    Description = "Swiftblade",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "elf5.png"
+                    ImageURI = "swiftblade.png"
                 },
 
                 new CharacterModel {
                     Name = "Darren",
-                    Description = "The Wiz",
+                    Description = "Wizard",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "elf6.png"
+                    ImageURI = "wizard.png"
                 },
 
                 new CharacterModel {
                     Name = "Dani",
-                    Description = "A powerfull Cleric",
+                    Description = "Swiftblade",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "elf7.png"
+                    ImageURI = "swiftblade.png"
                 }
             };
 
