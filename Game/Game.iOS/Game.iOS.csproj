@@ -379,4 +379,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\update.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scores_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\character_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\items_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monster_icon.png" />
+  </ItemGroup>
 </Project>

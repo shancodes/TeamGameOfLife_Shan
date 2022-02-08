@@ -142,6 +142,7 @@
     <Content Include="blazing_hammer.png" />
     <Content Include="burning_polyarm.png" />
     <Content Include="cancel.png" />
+    <Content Include="character_icon.png" />
     <Content Include="confirm.png" />
     <Content Include="create.png" />
     <Content Include="create_navibar_top.png" />
@@ -178,6 +179,7 @@
     <Content Include="logo_small.png" />
     <Content Include="long_flame_sword.png" />
     <Content Include="megan.png" />
+    <Content Include="monster_icon.png" />
     <Content Include="mystic_staff.png" />
     <Content Include="natasha.png" />
     <Content Include="neck1.png" />
@@ -188,6 +190,7 @@
     <Content Include="ring1.png" />
     <Content Include="ring2.png" />
     <Content Include="score.png" />
+    <Content Include="scores_icon.png" />
     <Content Include="shield1.png" />
     <Content Include="shield2.png" />
     <Content Include="shield3.png" />
