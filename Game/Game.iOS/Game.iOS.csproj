@@ -352,4 +352,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\auto_battle.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\create_navibar_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\update.png" />
+  </ItemGroup>
 </Project>
