@@ -18,7 +18,7 @@
     <NavigationPage.TitleView>
         <!--Button Text="Back" Clicked="Cancel_Clicked" ImageSource="icon_cancel.png"  HorizontalOptions="Start"/-->
             <StackLayout Orientation="Horizontal" Spacing="20">
-            <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+            <Button ImageSource="back_trangle.png" Clicked="Cancel_Clicked" HorizontalOptions="Start" BackgroundColor="Transparent"/>
             <Label Text="Create An Item" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
         </StackLayout>
     </NavigationPage.TitleView>
@@ -35,8 +35,6 @@
         <ScrollView>
             <StackLayout Style="{StaticResource OuterBoxStack}"
                 Spacing="10" HorizontalOptions="FillAndExpand">
- 
-                <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
                 
                 <!--grid for first part of the page-->
                 <Grid
@@ -170,8 +168,8 @@
                                 ValueChanged="Value_OnStepperValueChanged"/>
                     </StackLayout>
 
-                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1"/>
-                    <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1"/>
+                    <Button ImageSource="cancel.png" BackgroundColor="Transparent" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1"/>
+                    <Button x:Name="CreateButton" BackgroundColor="Transparent"  ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1"/>
                 </Grid>
                 
             </StackLayout>
