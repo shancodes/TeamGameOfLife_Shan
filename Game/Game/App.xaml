@@ -289,7 +289,7 @@
 
             <!-- Button -->
             <Style TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryBackgroundColor}" />
+                <Setter Property="BackgroundColor" Value= "Transparent" />
                 <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}" />
                 <Setter Property="BorderColor" Value="{StaticResource TriciaryBackgroundColor}"/>
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -297,7 +297,7 @@
                 <Setter Property="FontSize" Value="Micro"/>
                 <Setter Property="Padding" Value="1"/>
                 <Setter Property="Margin" Value="0,5,0,5"/>
-                <Setter Property="HeightRequest" Value="30"/>
+                <Setter Property="HeightRequest" Value="50"/>
             </Style>
 
             <!-- Stack Layouts -->
