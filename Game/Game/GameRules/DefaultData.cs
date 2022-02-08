@@ -300,7 +300,7 @@ namespace Game.GameRules
             var datalist = new List<CharacterModel>()
             {
                 new CharacterModel {
-                    Name = "Mike",
+                    Name = "Fire Princess",
                     Description = "Fire Princess",
                     Level = 1,
                     MaxHealth = 5,
@@ -315,7 +315,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Tim",
+                    Name = "Fire Wielder",
                     Description = "Fire Wielder",
                     Level = 1,
                     MaxHealth = 5,
@@ -330,7 +330,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Doug",
+                    Name = "Night Walker",
                     Description = "Night Walker",
                     Level = 1,
                     MaxHealth = 8,
@@ -345,7 +345,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Sue",
+                    Name = "Sharp Shooter",
                     Description = "Sharp Shooter",
                     Level = 4,
                     MaxHealth = 38,
@@ -353,7 +353,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Jea",
+                    Name = "Swiftblade",
                     Description = "Swiftblade",
                     Level = 5,
                     MaxHealth = 43,
@@ -361,7 +361,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Darren",
+                    Name = "Wizard",
                     Description = "Wizard",
                     Level = 5,
                     MaxHealth = 43,
@@ -369,7 +369,7 @@ namespace Game.GameRules
                 },
 
                 new CharacterModel {
-                    Name = "Dani",
+                    Name = "Swiftblade",
                     Description = "Swiftblade",
                     Level = 5,
                     MaxHealth = 43,
