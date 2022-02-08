@@ -135,6 +135,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="auto_battle.png" />
+    <Content Include="battle.png" />
     <Content Include="battleboard.png" />
     <Content Include="blazing_hammer.png" />
     <Content Include="burning_polyarm.png" />

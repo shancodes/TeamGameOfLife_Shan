@@ -346,4 +346,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\shipra.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\battle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\auto_battle.png" />
+  </ItemGroup>
 </Project>
