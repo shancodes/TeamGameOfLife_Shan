@@ -16,11 +16,7 @@
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>-->
-
+   
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
@@ -60,7 +56,7 @@
                                      WidthRequest="280"
                                      x:Name="Name_Entry"
                                      Style="{StaticResource EntryStyle}" HorizontalOptions="Start" TextChanged="EntryName_TextChanged"/>
-                                
+
                                 <!--Description Field-->
                                 <Label Grid.Row="2" Grid.Column="0"
                                     Text="Description : " 
@@ -73,7 +69,7 @@
                                      x:Name="Description_Entry"
                                      Style="{StaticResource EntryStyle}"
                                      HorizontalOptions="Start" TextChanged="EntryDescription_TextChanged"/>
-                                
+
                                 <!--Difficulty-->
                                 <Label Grid.Row="4" Grid.Column="0"
                                     Text="Difficulty : " 
@@ -97,7 +93,7 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                
+
                                 <!--Attack-->
                                 <Label Text="Attack:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" />
                                 <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
@@ -114,7 +110,7 @@
                                     ValueChanged="Attack_OnStepperValueChanged"
                                         HorizontalOptions="Start"/>
                                 </StackLayout>
-                                
+
                                 <!--Defense-->
                                 <Label Text="Defense:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="0" />
                                 <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
@@ -160,8 +156,6 @@
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
-
         </AbsoluteLayout>
-
     </ContentPage.Content>
 </ContentPage>
