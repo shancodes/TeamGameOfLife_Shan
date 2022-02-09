@@ -76,7 +76,7 @@
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                 <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
-                <Button Text="No" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+                <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
 
             </StackLayout>
 
