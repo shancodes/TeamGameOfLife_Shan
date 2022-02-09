@@ -9,7 +9,9 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            
             <Label Text="Score Detail " FontSize="Subtitle"/>
+            
         </StackLayout>
      </NavigationPage.TitleView>
     
@@ -19,6 +21,7 @@
             Spacing="50" HorizontalOptions="FillAndExpand">
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                
                 <Label 
                     Text="Game Date:"
                     Style="{StaticResource LabelStyle}"/>
@@ -26,29 +29,39 @@
                 <Label 
                     Text="{Binding Data.GameDate}"
                     Style="{StaticResource ValueStyle}"/>
+                
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                
                 <Label 
                    Text="Name: " 
                     Style="{StaticResource LabelStyle}"/>
+                
                 <Label 
                     Text="{Binding Data.Name}" 
                     Style="{StaticResource ValueStyle}"/>
+                
             </StackLayout>
 
             <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                
                 <Label 
                     Text=" Your Score:" 
                     Style="{StaticResource LabelStyle}" FontSize="Subtitle"/>
+                
                 <Label 
                     Text="{Binding Data.ScoreTotal}"
                     Style="{StaticResource ValueStyle}"  FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+                
             </StackLayout>
+            
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                
                 <Button ImageSource="delete.png" Clicked="Delete_Clicked" />
                 <Button ImageSource="done.png" Clicked="Done_Clicked" />
                 <Button ImageSource="update.png" Clicked="Update_Clicked" />
+                
             </StackLayout>
 
         </StackLayout>
