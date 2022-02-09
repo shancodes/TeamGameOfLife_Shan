@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 using Game.ViewModels;
 using Game.Models;
 
@@ -30,7 +29,6 @@ namespace Game.Views
         public MonsterReadPage(GenericViewModel<MonsterModel> data)
         {
             InitializeComponent();
-
             BindingContext = this.ViewModel = data;
         }
 
