@@ -7,18 +7,13 @@
              x:Class="Game.Views.MonsterDeletePage"
              >
 
-    <!--stack layout for Delete and Cancel buttons-->
-
-    
 
     <!--stack layout for Back button and Title-->
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
-
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
             <Label Text= "{Binding Title}" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
-
         </StackLayout>
     </NavigationPage.TitleView>
 
