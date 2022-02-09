@@ -50,7 +50,7 @@
                                 HorizontalOptions="Center"/>
 
                             <!--Name Field-->
-                            <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
+                            <Grid RowSpacing="10" ColumnSpacing="5" VerticalOptions="CenterAndExpand" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto" />
                                 </Grid.RowDefinitions>
