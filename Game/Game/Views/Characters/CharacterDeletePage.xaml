@@ -21,7 +21,7 @@
     <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
         <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10" HorizontalOptions="FillAndExpand">
 
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
             <!--Stack layout for Name-->
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
