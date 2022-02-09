@@ -391,4 +391,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\monster_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back_image_two.png" />
+  </ItemGroup>
 </Project>

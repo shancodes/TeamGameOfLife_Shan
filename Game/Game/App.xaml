@@ -290,7 +290,7 @@
             <Style TargetType="Button">
                 <Setter Property="BackgroundColor" Value= "Transparent" />
                 <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}" />
-                <Setter Property="BorderColor" Value="{StaticResource TriciaryBackgroundColor}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="FontSize" Value="Micro"/>
@@ -303,7 +303,7 @@
                     x:Key="ButtoNavigationBar">
                 <Setter Property="BackgroundColor" Value= "Transparent" />
                 <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}" />
-                <Setter Property="BorderColor" Value="{StaticResource TriciaryBackgroundColor}"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="FontSize" Value="Micro"/>
