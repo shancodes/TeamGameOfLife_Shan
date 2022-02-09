@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Game.Models;
@@ -31,12 +30,9 @@ namespace Game.Views
         public MonsterCreatePage(GenericViewModel<MonsterModel> data)
         {
             InitializeComponent();
-
             data.Data = new MonsterModel();
             this.ViewModel = data;
-
             this.ViewModel.Title = "Create";
-
             _ = UpdatePageBindingContext();
         }
 
@@ -48,13 +44,10 @@ namespace Game.Views
         {
             // Temp store off the difficulty
             var difficulty = this.ViewModel.Data.Difficulty;
-
             // Clear the Binding and reset it
             BindingContext = null;
             BindingContext = this.ViewModel;
-
             ViewModel.Data.Difficulty = difficulty;
-
             return true;
         }
 
@@ -123,9 +116,7 @@ namespace Game.Views
         public void RollDice_Clicked(object sender, EventArgs e)
         {
             _ = DiceAnimationHandeler();
-
             _ = RandomizeMonster();
-
             return;
         }
 
@@ -139,7 +130,6 @@ namespace Game.Views
             // Animate the Rolling of the Dice
             var image = RollDice;
             uint duration = 1000;
-
             var parentAnimation = new Animation();
 
             // Grow the image Size
@@ -150,13 +140,10 @@ namespace Game.Views
 
             // Shrink the Image
             var scaleDownAnimation = new Animation(v => image.Scale = v, 2, 1, Easing.SpringOut);
-
             parentAnimation.Add(0, 0.5, scaleUpAnimation);
             parentAnimation.Add(0, 1, rotateAnimation);
             parentAnimation.Add(0.5, 1, scaleDownAnimation);
-
             parentAnimation.Commit(this, "ChildAnimations", 16, duration, null, null);
-
             return true;
         }
 
@@ -172,18 +159,13 @@ namespace Game.Views
             // Randomize Name
             ViewModel.Data.Name = RandomPlayerHelper.GetMonsterName();
             ViewModel.Data.Description = RandomPlayerHelper.GetCharacterDescription();
-
             // Randomize the Attributes
             ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
             ViewModel.Data.Speed = RandomPlayerHelper.GetAbilityValue();
             ViewModel.Data.Defense = RandomPlayerHelper.GetAbilityValue();
-
             ViewModel.Data.Difficulty = RandomPlayerHelper.GetMonsterDifficultyValue();
-
             ViewModel.Data.ImageURI = RandomPlayerHelper.GetMonsterImage();
-
             _ = UpdatePageBindingContext();
-
             return true;
         }
 
@@ -232,33 +214,6 @@ namespace Game.Views
             DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToMessage();
         }
 
-        ///// <summary>
-        ///// 
-        ///// Randomize the Monster
-        ///// Keep the Level the Same
-        ///// 
-        ///// </summary>
-        ///// <returns></returns>
-        //public bool RandomizeMonster()
-        //{
-        //    // Randomize Name
-        //    ViewModel.Data.Name = RandomPlayerHelper.GetMonsterName();
-        //    ViewModel.Data.Description = RandomPlayerHelper.GetMonsterDescription();
-
-        //    // Randomize the Attributes
-        //    ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
-        //    ViewModel.Data.Speed = RandomPlayerHelper.GetAbilityValue();
-        //    ViewModel.Data.Defense = RandomPlayerHelper.GetAbilityValue();
-
-        //    ViewModel.Data.Difficulty = RandomPlayerHelper.GetMonsterDifficultyValue();
-
-        //    ViewModel.Data.ImageURI = RandomPlayerHelper.GetMonsterImage();
-
-        //    ViewModel.Data.UniqueItem = RandomPlayerHelper.GetMonsterUniqueItem();
-
-        //    _ = UpdatePageBindingContext();
-
-        //    return true;
-        //}
+       
     }
 }
