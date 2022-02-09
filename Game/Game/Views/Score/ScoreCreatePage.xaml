@@ -43,7 +43,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                         <Label
                         Text="Name: " 
                         Style="{StaticResource LabelStyle}"
@@ -57,7 +57,7 @@
                             WidthRequest="280" HorizontalTextAlignment="Start"/>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand">
                         <Label
                             Text="Score: " 
                             Style="{StaticResource LabelStyle}"
