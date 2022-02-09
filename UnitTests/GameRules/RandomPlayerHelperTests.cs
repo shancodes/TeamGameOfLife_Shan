@@ -210,7 +210,7 @@ namespace UnitTests.Helpers
             _ = DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual("elf2.png", result);
+            Assert.AreEqual("fire_princess.png", result);
         }
 
         [Test]
@@ -244,7 +244,7 @@ namespace UnitTests.Helpers
             // Reset
 
             // Assert
-            Assert.AreEqual(true, result.Name.Contains("Elf"));
+            Assert.AreEqual(true, result.Name.Contains("Fire Princess"));
         }
 
         [Test]
