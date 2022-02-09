@@ -59,7 +59,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Label Grid.Row="0" Grid.Column="0"
-                                    Text="Name : " 
+                                    Text="Name: " 
                                     Style="{StaticResource LabelStyle}"
                                         HorizontalOptions="End"/>
 
@@ -70,7 +70,7 @@
 
                                 <!--Description Field-->
                                 <Label Grid.Row="1" Grid.Column="0"
-                                    Text="Description : " 
+                                    Text="Description: " 
                                     Style="{StaticResource LabelStyle}"
                                        HorizontalOptions="End"/>
 
@@ -82,7 +82,7 @@
                                        HorizontalOptions="Start" TextChanged="EntryDescription_TextChanged"/>
 
                                 <Label Grid.Row="2" Grid.Column="0"
-                                    Text="Max HP : " 
+                                    Text="Max HP: " 
                                     Style="{StaticResource LabelStyle}"
                                        HorizontalOptions="End"/>
 
@@ -94,7 +94,7 @@
 
                                 <!--Level-->
                                 <Label Grid.Row="3" Grid.Column="0"
-                                    Text="Level : " 
+                                    Text="Level: " 
                                     Style="{StaticResource LabelStyle}"
                                        HorizontalOptions="End"/>
 
