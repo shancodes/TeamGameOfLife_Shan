@@ -13,6 +13,7 @@
         <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems-->
 
+    <!--NavigationPage with Text-->
     <NavigationPage.TitleView >
         <Label  Text ="{Binding Title}"   FontSize="Medium"  HorizontalTextAlignment="Center" />
     </NavigationPage.TitleView>
@@ -33,6 +34,7 @@
 
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
+                        <!--Name-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                Text="Name: " 
@@ -42,6 +44,7 @@
                                 Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
                         </StackLayout>
 
+                        <!--Description-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                 Text="Description: " 
@@ -51,6 +54,7 @@
                                 Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
                         </StackLayout>
 
+                        <!--Level-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label 
                                 Text="Level: " 
@@ -93,6 +97,7 @@
                                        Text="Total Value" 
                                        Style="{StaticResource GridLabelStyle}"/>
 
+                                    <!--Attack-->
                                     <Label Grid.Column="0" Grid.Row="1"
                                        Text="Attack" 
                                        Style="{StaticResource GridLabelStyle}"/>
@@ -109,6 +114,7 @@
                                        Text="{Binding Data.GetAttackTotal}"  
                                        Style="{StaticResource GridValueStyle}"/>
 
+                                    <!--Defense-->
                                     <Label Grid.Column="0" Grid.Row="2"
                                        Text="Defense" 
                                        Style="{StaticResource GridLabelStyle}"/>
@@ -125,6 +131,7 @@
                                        Text="{Binding Data.GetDefenseTotal}"  
                                        Style="{StaticResource GridValueStyle}"/>
 
+                                    <!--Speed-->
                                     <Label Grid.Column="0" Grid.Row="3"
                                        Text="Speed" 
                                        Style="{StaticResource GridLabelStyle}"/>
@@ -141,6 +148,7 @@
                                        Text="{Binding Data.GetSpeedTotal}"  
                                        Style="{StaticResource GridValueStyle}"/>
 
+                                    <!--Max Health-->
                                     <Label Grid.Column="0" Grid.Row="4"
                                        Text="Max Health" 
                                        Style="{StaticResource GridLabelStyle}"/>
@@ -157,6 +165,7 @@
                                        Text="{Binding Data.GetMaxHealthTotal}"  
                                        Style="{StaticResource GridValueStyle}"/>
 
+                                    <!--Damage-->
                                     <Label Grid.Column="0" Grid.Row="5"
                                        Text="Damage" 
                                        Style="{StaticResource GridLabelStyle}"/>
@@ -189,6 +198,7 @@
                 </StackLayout>
             </ScrollView>
 
+            <!--Delete Done and Update buttons-->
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
                 <Button ImageSource="delete.png" BackgroundColor="Transparent" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand"></Button>
                 <Button ImageSource="done.png" BackgroundColor="Transparent" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand"></Button>
