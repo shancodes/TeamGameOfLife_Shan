@@ -8,7 +8,7 @@
              >
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
-            <Label Text="About Us" FontSize="Medium"/>
+            <Label Text="Game Information" Style="{StaticResource HeaderStyle}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -16,7 +16,7 @@
         <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand" Spacing="20">
             <Image Source="logo_small.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
-            <Label Text=" A battle between powerful ladies that rule the world and Ice monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
+            <Label Text=" A battle between powerful ladies and Ice monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
             <Label Text="Makers" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
             <Label
                            Text="Developers"
