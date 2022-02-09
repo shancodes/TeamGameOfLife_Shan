@@ -7,13 +7,8 @@
              x:Class="Game.Views.MonsterReadPage"
              >
 
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Update" Clicked="Update_Clicked" IconImageSource="icon_edit.png"/>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
-    </ContentPage.ToolbarItems>-->
 
     <NavigationPage.TitleView >
-        <!--<Label  Text ="{Binding Title}"   FontSize="Medium" TextColor="Black"  HorizontalTextAlignment="Center" />-->
         <Label  Text ="Monster Detail"   FontSize="Medium" TextColor="Black"  HorizontalTextAlignment="Center" />
     </NavigationPage.TitleView>
 
@@ -45,7 +40,7 @@
                             <Label Grid.Row="0" Grid.Column="0"
                                     Text="Name : " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                             <Label Text="{Binding Data.Name}" Grid.Row="0" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
@@ -54,7 +49,7 @@
                             <Label Grid.Row="1" Grid.Column="0"
                                     Text="Description : " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                     HorizontalOptions="End"/>
 
                             <Label Text="{Binding Data.Description}" Grid.Row="1" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
@@ -63,7 +58,7 @@
                             <Label Grid.Row="2" Grid.Column="0"
                                     Text="Difficulty : " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                             <Label Text="{Binding Data.Difficulty}" Grid.Row="2" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
@@ -72,7 +67,7 @@
                             <Label Grid.Row="3" Grid.Column="0"
                                     Text="Attack : " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                             <Label Text="{Binding Data.Attack}" Grid.Row="3" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
@@ -81,7 +76,7 @@
                             <Label Grid.Row="4" Grid.Column="0"
                                     Text="Defense : " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                             <Label Text="{Binding Data.Defense}" Grid.Row="4" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
@@ -90,7 +85,7 @@
                             <Label Grid.Row="5" Grid.Column="0"
                                     Text="Speed : " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                             <Label Text="{Binding Data.Speed}" Grid.Row="5" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
@@ -99,7 +94,7 @@
                             <Label Grid.Row="6" Grid.Column="0"
                                     Text="Total Experience : " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                             <Label Text="{Binding Data.ExperienceTotal}" Grid.Row="6" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
@@ -108,7 +103,7 @@
                             <Label Grid.Row="7" Grid.Column="0"
                                     Text="Experience Remaining: " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                             <Label Text="{Binding Data.ExperienceRemaining}" Grid.Row="7" Grid.Column="1"
                                      Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
