@@ -18,14 +18,14 @@ namespace Game.Models
         {
             PlayerType = PlayerTypeEnum.Monster;
             Guid = Id;
-            Name = "Troll";
-            Description = "Angry Troll";
+            Name = "Cruel Monster";
+            Description = "Long thin Cruel Monster";
             Attack = 1;
             Defense = 1;
             Speed = 1;
             Difficulty = DifficultyEnum.Average;
             UniqueItem = null;
-            ImageURI = "troll.png";
+            ImageURI = "ice_thief.png";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
 
