@@ -190,9 +190,9 @@
             </ScrollView>
 
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
-                <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="StartAndExpand"></Button>
-                <Button ImageSource="done.png" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand"></Button>
-                <Button  ImageSource="update.png" Clicked="Update_Clicked" HorizontalOptions="EndAndExpand"></Button>
+                <Button ImageSource="delete.png" BackgroundColor="Transparent" Clicked="Delete_Clicked" HorizontalOptions="StartAndExpand"></Button>
+                <Button ImageSource="done.png" BackgroundColor="Transparent" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand"></Button>
+                <Button  ImageSource="update.png" BackgroundColor="Transparent" Clicked="Update_Clicked" HorizontalOptions="EndAndExpand"></Button>
             </StackLayout>
             
         </StackLayout>
