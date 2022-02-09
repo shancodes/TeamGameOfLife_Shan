@@ -49,64 +49,28 @@
                             />
 
                             <Label 
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Text="Attack:"/>
-                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Attack}"></Label>
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Text="Attack:"/>
 
+                            <Label Grid.Row="1" 
+                                   Grid.Column="2" 
+                                   Text="{Binding Attack}"></Label>
 
                             <Label 
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Text="Difficluty:"/>
-                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding Difficulty}"></Label>
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Text="Difficluty:"/>
+
+                            <Label Grid.Row="2" 
+                                   Grid.Column="2" 
+                                   Text="{Binding Difficulty}"></Label>
 
                         </Grid>
 
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-    <!--ContentPage.Content>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
-
-            <Label Text="Items List Page" Style="{StaticResource HeaderStyle}"/>
-
-            <ListView x:Name="MonstersListView" 
-                    ItemsSource="{Binding Dataset}"
-                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                    RefreshCommand="{Binding LoadItemsCommand}"
-                    CachingStrategy="RecycleElement"
-                    ItemSelected="OnItemSelected"
-                    HasUnevenRows="true"
-                    Margin="5,0,5,0"
-                    RowHeight="80"
-                    >
-                
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid ColumnSpacing="5" RowSpacing="1">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                </Grid.RowDefinitions>
-
-                                <Label Grid.Column="1" Grid.Row="0"
-                                       Text="{Binding Name}" 
-                                       Style="{StaticResource ListStyle}"/>
-
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
-    </ContentPage.Content-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
