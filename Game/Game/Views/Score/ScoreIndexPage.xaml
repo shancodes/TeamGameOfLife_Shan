@@ -26,10 +26,9 @@
                     CachingStrategy="RecycleElement"
                     ItemSelected="OnItemSelected"
                     HasUnevenRows="true"
-                    Margin="5,0,5,0"
-                    HorizontalOptions="Center"
-                    >
-                
+                    HorizontalOptions="Center">
+
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -42,16 +41,14 @@
                                     HorizontalOptions="CenterAndExpand">
 
                                     <Frame 
-                                    OutlineColor="Black" 
-                                    Padding="1"
-                                    >
+                                    OutlineColor="Black" >
+
 
                                         <StackLayout 
                                         BackgroundColor="Teal"
                                         WidthRequest="200"
-                                        MinimumHeightRequest="800"
-                                        Padding="20"
-                                        >
+                                        MinimumHeightRequest="800">
+
 
                                             <!--Label for Name-->
                                             <Label 
