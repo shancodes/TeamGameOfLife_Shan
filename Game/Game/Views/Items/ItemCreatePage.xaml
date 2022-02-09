@@ -35,11 +35,13 @@
         <ScrollView>
             <StackLayout Style="{StaticResource OuterBoxStack}"
                 Spacing="10" HorizontalOptions="FillAndExpand">
-                
+
+                <Image Source="items_icon.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+
                 <!--grid for first part of the page-->
                 <Grid
                     RowSpacing="10"
-                    ColumnSpacing="10"
+                    ColumnSpacing="5"
                     HorizontalOptions="FillAndExpand"
                     Margin="10" >
 
