@@ -72,8 +72,12 @@
                             WidthRequest="280"/>
                     </StackLayout>
 
-                    <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
-                    <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="2" Grid.Column="2"/>
+                    <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+
+                        <Button Text="Cancel" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
+                        <Button x:Name="CreateButton"  Text="Create" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="2" Grid.Column="2"/>
+
+                    </StackLayout>
 
                 </Grid>
                 
