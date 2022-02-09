@@ -18,10 +18,9 @@
 
 
     <NavigationPage.TitleView>
-        <!--Button Text="Back" Clicked="Cancel_Clicked" ImageSource="icon_cancel.png"  HorizontalOptions="Start"/-->
         <StackLayout Orientation="Horizontal" Spacing="20">
-            <Button Text="Back" Clicked="Done_Clicked" HorizontalOptions="Start"></Button>
-            <Label Text= "{Binding Title}" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            <Button ImageSource="back_image_two.png" Clicked="Done_Clicked" HorizontalOptions="Start" Style="{StaticResource ButtoNavigationBar}"/>
+            <Label Text="Details" HorizontalOptions="CenterAndExpand" Style="{StaticResource HeaderStyle}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
