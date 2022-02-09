@@ -48,7 +48,7 @@
                         <ImageButton 
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
-                                Source="d10.png"
+                                Source="dice.png"
                                 Clicked="RollDice_Clicked"
                                 HorizontalOptions="Center"/>
 
