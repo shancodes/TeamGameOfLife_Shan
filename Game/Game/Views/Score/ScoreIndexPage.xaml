@@ -17,7 +17,7 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
+        <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="Center" VerticalOptions="Center">
 
             <ListView x:Name="DataListView" 
                     ItemsSource="{Binding Dataset}"
