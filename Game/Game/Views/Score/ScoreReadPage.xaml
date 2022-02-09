@@ -10,8 +10,8 @@
     <!--NavigationView for label-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-            
-            <Label Text="Score Detail " FontSize="Subtitle"/>
+
+            <Label Text="Score Detail " FontSize="Subtitle" Style="{StaticResource HeaderStyle}" />
             
         </StackLayout>
      </NavigationPage.TitleView>
