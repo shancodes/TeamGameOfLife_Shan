@@ -14,7 +14,7 @@
     </ContentPage.ToolbarItems-->
 
     <NavigationPage.TitleView >
-        <Label  Text ="{Binding Title}"   FontSize="Medium" TextColor="Black"  HorizontalTextAlignment="Center" />
+        <Label  Text ="{Binding Title}"   FontSize="Medium"  HorizontalTextAlignment="Center" />
     </NavigationPage.TitleView>
 
     <AbsoluteLayout
