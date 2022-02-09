@@ -40,7 +40,7 @@
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
+                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
                             <ImageButton 
                                 x:Name="RollDice"
