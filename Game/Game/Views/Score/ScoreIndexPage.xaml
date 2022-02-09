@@ -12,7 +12,7 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Label Text="Score Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
-            <Button Text="Create" Clicked="AddScore_Clicked" HorizontalOptions="End"/>
+            <Button ImageSource="create_navibar_top.png" Clicked="AddScore_Clicked" HorizontalOptions="End"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
