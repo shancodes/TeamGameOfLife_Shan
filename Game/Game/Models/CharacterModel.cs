@@ -18,10 +18,10 @@ namespace Game.Models
         {
             PlayerType = PlayerTypeEnum.Character;
             Guid = Id;
-            Name = "Elf";
-            Description = "Happy Elf";
+            Name = "Fire Princess";
+            Description = "The amazing fire fighter";
             Level = 1;
-            ImageURI = "knight.png";
+            ImageURI = "fire_princess.png";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
 
