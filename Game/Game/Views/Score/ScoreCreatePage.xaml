@@ -10,10 +10,13 @@
              x:Class="Game.Views.ScoreCreatePage"
              >
 
+    <!--NavigationView for button and label-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
+            
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
             <Label Text="{Binding Title}" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+            
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -45,10 +48,12 @@
                     </Grid.ColumnDefinitions>
 
                     <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+
+                        <!--Name-->
                         <Label
-                        Text="Name: " 
-                        Style="{StaticResource LabelStyle}"
-                        HorizontalTextAlignment="Start"/>
+                            Text="Name: " 
+                            Style="{StaticResource LabelStyle}"
+                            HorizontalTextAlignment="Start"/>
 
                         <Entry
                             x:Name="Name_Entry"
@@ -59,10 +64,10 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                        
                         <Label
                             Text="Score: " 
-                            Style="{StaticResource LabelStyle}"
-                        />
+                            Style="{StaticResource LabelStyle}"/>
 
                         <Entry
                             x:Name="Score_Entry"
@@ -72,6 +77,7 @@
                             WidthRequest="280"/>
                     </StackLayout>
 
+                    <!--Cancel and Create buttons-->
                     <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
                     <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="2" Grid.Column="2"/>
 
