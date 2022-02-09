@@ -296,7 +296,7 @@
                 <Setter Property="FontSize" Value="Micro"/>
                 <Setter Property="Padding" Value="1"/>
                 <Setter Property="Margin" Value="0,5,0,5"/>
-                <Setter Property="HeightRequest" Value="70"/>
+                <Setter Property="HeightRequest" Value="30"/>
             </Style>
 
             <Style TargetType="Button"
