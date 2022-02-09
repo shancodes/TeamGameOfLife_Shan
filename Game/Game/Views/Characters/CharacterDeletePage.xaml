@@ -27,7 +27,7 @@
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
                 
                 <Label 
-                    Text="Name : " 
+                    Text="Name: " 
                     Style="{StaticResource LabelStyle}"/>
 
                 <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
@@ -47,7 +47,7 @@
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
                 
                 <Label 
-                    Text="Description : " 
+                    Text="Description: " 
                     Style="{StaticResource LabelStyle}"/>
                 
                 <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
