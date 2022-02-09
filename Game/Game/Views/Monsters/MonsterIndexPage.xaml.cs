@@ -32,7 +32,6 @@ namespace Game.Views
         public MonsterIndexPage()
         {
             InitializeComponent();
-
             BindingContext = ViewModel;
         }
 
@@ -70,7 +69,6 @@ namespace Game.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
             BindingContext = null;
 
             // If no data, then set it for needing refresh
