@@ -7,7 +7,10 @@
              x:Class="Game.Views.ScoreDeletePage"
              >
     <NavigationPage.TitleView>
-        <Label Text="{Binding Title}" HorizontalOptions="Center" FontSize="Medium"></Label>
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+            <Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+        </StackLayout>
     </NavigationPage.TitleView>
 
     <ScrollView VerticalOptions="CenterAndExpand"
