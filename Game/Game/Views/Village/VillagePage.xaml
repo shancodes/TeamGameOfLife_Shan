@@ -19,55 +19,35 @@
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="item.png"
+                                Source="character_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="CharactersButton_Clicked"/>
-
-
-                    <Label 
-                                Text="Characters"
-                                Style="{StaticResource CenterMessageStyle}"/>
-
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="item.png"
+                                Source="monster_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="MonstersButton_Clicked"/>
-
-                    <Label 
-                                Text="Monsters"
-                                Style="{StaticResource CenterMessageStyle}"/>
-
                 </StackLayout>
 
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="item.png"
+                                Source="items_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ItemsButton_Clicked"/>
-
-                    <Label 
-                                Text="Items"
-                                Style="{StaticResource CenterMessageStyle}"/>
                 </StackLayout>
 
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
-                                Source="item.png"
+                                Source="scores_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ScoresButton_Clicked"/>
-
-                    <Label 
-                                Text="Scores"
-                                Style="{StaticResource CenterMessageStyle}"/>
-
                 </StackLayout>
             
             </FlexLayout>
