@@ -20,6 +20,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -82,24 +83,24 @@
                                 <Label Grid.Row="2" Grid.Column="0"
                                     Text="Max HP: " 
                                     Style="{StaticResource LabelStyle}"
-                                       HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                                 <Label Grid.Row="2" Grid.Column="1"
                                     x:Name="MaxHealthValue"
                                     Style="{StaticResource ValueStyle}"
-                                       HorizontalOptions="Start"
-                                       Padding="10,10,40,10" />
+                                    HorizontalOptions="Start"
+                                    Padding="10,10,40,10" />
 
                                 <!--Level-->
                                 <Label Grid.Row="3" Grid.Column="0"
                                     Text="Level: " 
                                     Style="{StaticResource LabelStyle}"
-                                       HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                                 <Picker Grid.Row="3" Grid.Column="1"
                                     SelectedItem="{Binding SelectedItemProperty}" 
                                     SelectedIndexChanged="Level_Changed"
-                                        WidthRequest="280"
+                                    WidthRequest="280"
                                     x:Name="LevelPicker"
                                     HorizontalOptions="Start"/>
                             </Grid>
@@ -126,12 +127,14 @@
                                     <Stepper 
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
                                     ValueChanged="Attack_OnStepperValueChanged"
-                                        HorizontalOptions="Start"/>
+                                    HorizontalOptions="Start"/>
                                 </StackLayout>
 
                                 <!--Defense-->
                                 <Label Text="Defense:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0"/>
+                                
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1">
+                                    
                                     <Label
                                         Text="{Binding Data.Defense, Mode=TwoWay}" 
                                         x:Name="DefenseValue"
@@ -139,10 +142,12 @@
                                         Padding="0,0,10,0"
                                         HorizontalOptions="Center"
                                         HorizontalTextAlignment="Center"/>
+                                    
                                     <Stepper
-                                    Value="{Binding Data.Defense, Mode=TwoWay}"
-                                    ValueChanged="Defense_OnStepperValueChanged"
+                                        Value="{Binding Data.Defense, Mode=TwoWay}"
+                                        ValueChanged="Defense_OnStepperValueChanged"
                                         HorizontalOptions="Start"/>
+                                    
                                 </StackLayout>
 
                                 <!--Speed-->
@@ -157,8 +162,8 @@
                                     HorizontalTextAlignment="End"/>
 
                                     <Stepper
-                                    Value="{Binding Data.Speed, Mode=TwoWay}"
-                                    ValueChanged="Speed_OnStepperValueChanged"
+                                        Value="{Binding Data.Speed, Mode=TwoWay}"
+                                        ValueChanged="Speed_OnStepperValueChanged"
                                         HorizontalOptions="Start"/>
 
                                 </StackLayout>
@@ -178,6 +183,7 @@
 
                             <Button ImageSource="reset.png" Clicked="Reset_Clicked" HorizontalOptions="End"/>
                             <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                            
                         </StackLayout>
 
                     </StackLayout>
