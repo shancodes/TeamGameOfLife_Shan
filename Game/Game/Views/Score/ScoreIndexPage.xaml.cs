@@ -31,7 +31,6 @@ namespace Game.Views
         public ScoreIndexPage()
         {
             InitializeComponent();
-
             BindingContext = ViewModel;
         }
 
@@ -50,7 +49,6 @@ namespace Game.Views
 
             // Open the Read Page
             await Navigation.PushAsync(new ScoreReadPage(new GenericViewModel<ScoreModel>(data)));
-
             // Manually deselect item.
             DataListView.SelectedItem = null;
         }
@@ -71,9 +69,7 @@ namespace Game.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
             BindingContext = null;
-
             // If no data, then set it for needing refresh
             if (ViewModel.Dataset.Count == 0)
             {
