@@ -12,6 +12,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
+            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
             <Label Text="{Binding Title}" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </NavigationPage.TitleView>
