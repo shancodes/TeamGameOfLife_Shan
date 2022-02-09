@@ -483,14 +483,14 @@ namespace UnitTests.Engine.EngineBase
         }
 
         [Test]
-        public void TurnEngine_RolltoHitTarget_Forced_20_Should_Hit()
+        public void TurnEngine_RolltoHitTarget_Forced_6_Should_Hit()
         {
             // Arrange
             var AttackScore = 1;
             var DefenseScore = 100;
 
             _ = DiceHelper.EnableForcedRolls();
-            _ = DiceHelper.SetForcedRollValue(20);
+            _ = DiceHelper.SetForcedRollValue(6);
 
             // Act
             var result = Engine.Round.Turn.RollToHitTarget(AttackScore, DefenseScore);
@@ -527,14 +527,14 @@ namespace UnitTests.Engine.EngineBase
         }
 
         [Test]
-        public void TurnEngine_RolltoHitTarget_Valid_Forced_20_Critical_Hit_Should_Return_CriticalHit()
+        public void TurnEngine_RolltoHitTarget_Valid_Forced_6_Critical_Hit_Should_Return_CriticalHit()
         {
             // Arrange
             var AttackScore = 1;
             var DefenseScore = 100;
 
             _ = DiceHelper.EnableForcedRolls();
-            _ = DiceHelper.SetForcedRollValue(20);
+            _ = DiceHelper.SetForcedRollValue(6);
 
             var oldSeting = EngineSettingsModel.Instance.BattleSettingsModel.AllowCriticalHit;
             EngineSettingsModel.Instance.BattleSettingsModel.AllowCriticalHit = true;
@@ -832,9 +832,9 @@ namespace UnitTests.Engine.EngineBase
             var MonsterPlayer = new PlayerInfoModel(Monster);
             Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
 
-            // Forece a Miss
+            // Force a Miss
             _ = DiceHelper.EnableForcedRolls();
-            _ = DiceHelper.SetForcedRollValue(20);
+            _ = DiceHelper.SetForcedRollValue(6);
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(CharacterPlayer, MonsterPlayer);
@@ -861,7 +861,7 @@ namespace UnitTests.Engine.EngineBase
 
             // Forece a Miss
             _ = DiceHelper.EnableForcedRolls();
-            _ = DiceHelper.SetForcedRollValue(20);
+            _ = DiceHelper.SetForcedRollValue(6);
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(CharacterPlayer, MonsterPlayer);
@@ -913,7 +913,7 @@ namespace UnitTests.Engine.EngineBase
 
             // Forece a Miss
             _ = DiceHelper.EnableForcedRolls();
-            _ = DiceHelper.SetForcedRollValue(20);
+            _ = DiceHelper.SetForcedRollValue(6);
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(MonsterPlayer, CharacterPlayer);
@@ -939,7 +939,7 @@ namespace UnitTests.Engine.EngineBase
 
             // Forece a Miss
             _ = DiceHelper.EnableForcedRolls();
-            _ = DiceHelper.SetForcedRollValue(20);
+            _ = DiceHelper.SetForcedRollValue(6);
 
             var oldSetting = Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit;
             Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = true;
@@ -1059,7 +1059,7 @@ namespace UnitTests.Engine.EngineBase
 
             // Forece a Miss
             _ = DiceHelper.EnableForcedRolls();
-            _ = DiceHelper.SetForcedRollValue(20);
+            _ = DiceHelper.SetForcedRollValue(6);
 
             // Act
             var result = Engine.Round.Turn.TurnAsAttack(CharacterPlayer, MonsterPlayer);
@@ -1329,7 +1329,7 @@ namespace UnitTests.Engine.EngineBase
         }
 
         [Test]
-        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Attack()
+        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Move()
         {
             // Arrange
 
@@ -1355,7 +1355,7 @@ namespace UnitTests.Engine.EngineBase
             // Reset
 
             // Assert
-            Assert.AreEqual(ActionEnum.Attack, result);
+            Assert.AreEqual(ActionEnum.Move, result);
         }
         #endregion DetermineActionChoice
 
