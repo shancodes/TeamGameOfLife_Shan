@@ -116,7 +116,7 @@ namespace Game.GameRules
         public static string GetCharacterName()
         {
 
-            List<String> FirstNameList = new List<String> { "Fire Princess", "Fire Wielder", "Night Walker", "Sharp Shooter.png", "Swiftblade", "Wizard" };
+            List<String> FirstNameList = new List<String> { "Fire Princess", "Fire Wielder", "Night Walker", "Sharp Shooter", "Swiftblade", "Wizard" };
 
             var result = FirstNameList.ElementAt(DiceHelper.RollDice(1, FirstNameList.Count()) - 1);
 
