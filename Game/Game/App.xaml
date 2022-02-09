@@ -309,7 +309,7 @@
                 <Setter Property="FontSize" Value="Micro"/>
                 <Setter Property="Padding" Value="1"/>
                 <Setter Property="Margin" Value="0,5,0,5"/>
-                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="HeightRequest" Value="35"/>
             </Style>
 
             <!-- Stack Layouts -->

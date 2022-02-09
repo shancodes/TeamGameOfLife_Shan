@@ -170,8 +170,8 @@
                                 ValueChanged="Value_OnStepperValueChanged"/>
                     </StackLayout>
 
-                    <Button ImageSource="cancel.png" BackgroundColor="Transparent" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1"/>
-                    <Button x:Name="CreateButton" BackgroundColor="Transparent"  ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1"/>
+                    <Button ImageSource="cancel.png" BackgroundColor="Transparent" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1" Style="{StaticResource ButtoNavigationBar}"/>
+                    <Button x:Name="CreateButton" BackgroundColor="Transparent"  ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtoNavigationBar}"/>
                 </Grid>
                 
             </StackLayout>
