@@ -9,10 +9,7 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.MonsterCreatePage"
              >
-
-    <!--Toolbar items with Cancel and Save buttons-->
-   
-
+    
     <!--NavigationPage with Back button and Text-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
@@ -187,12 +184,9 @@
                             <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="End"/>
 
                         </StackLayout>
-
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
-
         </AbsoluteLayout>
-
     </ContentPage.Content>
 </ContentPage>
