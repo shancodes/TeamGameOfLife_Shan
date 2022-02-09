@@ -64,6 +64,20 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public async Task MainPage_Navigate_Home_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            await page.NavigateFromMenu((int)MenuItemEnum.Home);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
+        [Test]
         public async Task MainPage_Navigate_Game_Should_Pass()
         {
             // Arrange
