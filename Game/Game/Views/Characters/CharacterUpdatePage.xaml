@@ -9,6 +9,7 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.CharacterUpdatePage" >
 
+    <!--NavigationPage with Back button and Text-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
@@ -106,7 +107,6 @@
                                     HorizontalOptions="Start"/>
                             </Grid>
 
-                            <!--Defense-->
                             <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto" />
@@ -115,6 +115,7 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
+                                <!--Attack-->
                                 <Label Text="Attack:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="0" />
                                 <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
                                     <Label 
@@ -131,6 +132,7 @@
                                         HorizontalOptions="Start"/>
                                 </StackLayout>
 
+                                <!--Defense-->
                                 <Label Text="Defense:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0"/>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1">
                                     <Label
@@ -146,6 +148,7 @@
                                         HorizontalOptions="Start"/>
                                 </StackLayout>
 
+                                <!--Speed-->
                                 <Label Text="Speed:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="0"/>
                                 <StackLayout  Orientation="Horizontal" HorizontalOptions="Start" Grid.Row="2" Grid.Column="1">
                                     <Label 
@@ -173,6 +176,7 @@
                             x:Name="ItemBox">
                         </FlexLayout>
 
+                        <!--Reset and Update buttons-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
                             <Button ImageSource="reset.png" Clicked="Reset_Clicked" HorizontalOptions="End"/>
