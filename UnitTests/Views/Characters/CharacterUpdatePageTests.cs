@@ -278,12 +278,12 @@ namespace UnitTests.Views
         {
             // Arrange
 
-            var item = page.GetItemToDisplay(ItemLocationEnum.Head);
+            var item = page.GetItemToDisplay(ItemLocationEnum.Finger);
 
             // Act
             var itemButton = item.Children.FirstOrDefault(m => m.GetType().Name.Equals("Button"));
 
-            _ = page.ShowPopup(ItemLocationEnum.Head);
+            _ = page.ShowPopup(ItemLocationEnum.Finger);
 
             // Reset
 
@@ -295,9 +295,9 @@ namespace UnitTests.Views
         public void CharacterUpdatePage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
         {
             // Arrange
-            var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.Head);
-            page.ViewModel.Data.Head = item.Id;
-            var StackItem = page.GetItemToDisplay(ItemLocationEnum.Head);
+            var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.PrimaryHand);
+            page.ViewModel.Data.PrimaryHand = item.Id;
+            var StackItem = page.GetItemToDisplay(ItemLocationEnum.PrimaryHand);
             var dataImage = StackItem.Children[0];
 
             // Act
