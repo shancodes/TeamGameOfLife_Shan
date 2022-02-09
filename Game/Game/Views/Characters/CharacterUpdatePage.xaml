@@ -17,11 +17,6 @@
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>-->
-
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
@@ -30,17 +25,19 @@
 
     <ContentPage.Content>
         <AbsoluteLayout
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
-        >
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
 
             <StackLayout Style="{StaticResource VerticalStack}"
-                    AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                    AbsoluteLayout.LayoutFlags="All">
+                AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                AbsoluteLayout.LayoutFlags="All">
 
                 <ScrollView>
+                    
                     <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
+                        
                         <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                            
                             <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
                             <ImageButton 
@@ -73,14 +70,14 @@
                                 <Label Grid.Row="1" Grid.Column="0"
                                     Text="Description: " 
                                     Style="{StaticResource LabelStyle}"
-                                       HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                                 <Entry Grid.Row="1" Grid.Column="1"
-                                            Text="{Binding Data.Description, Mode=TwoWay}" 
+                                     Text="{Binding Data.Description, Mode=TwoWay}" 
                                      WidthRequest="280"
                                      x:Name="Description_Entry"
                                      Style="{StaticResource EntryStyle}"
-                                       HorizontalOptions="Start" TextChanged="EntryDescription_TextChanged"/>
+                                     HorizontalOptions="Start" TextChanged="EntryDescription_TextChanged"/>
 
                                 <Label Grid.Row="2" Grid.Column="0"
                                     Text="Max HP: " 
@@ -185,11 +182,6 @@
 
                     </StackLayout>
 
-                    <!--<Label Text="Update Page" Style="{StaticResource HeaderStyle}"/>-->
-
-                    <!--StackLayout Style="{StaticResource HorizontalStack}">-->
-
-                    <!--</StackLayout>-->
                 </ScrollView>
             </StackLayout>
 
