@@ -8,17 +8,20 @@
              x:Class="Game.Views.CharacterIndexPage"
              >
 
+    <!--NavigationPage with Text-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-        <Label Text="Character Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
-
+            
+            <Label Text="Character Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
             <Button ImageSource="create_navibar_top.png" Clicked="Add_Clicked" HorizontalOptions="End" Style="{StaticResource ButtoNavigationBar}"/>
+            
         </StackLayout>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
+            <!--Collection View-->
             <CollectionView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
@@ -30,6 +33,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
+                            
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
@@ -40,31 +44,32 @@
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.RowSpan="2"
-                            Source="{Binding ImageURI}"
-                            Style="{StaticResource ImageMediumStyle}"
-                            />
+                                Source="{Binding ImageURI}"
+                                Style="{StaticResource ImageMediumStyle}"/>
 
                             <Label Grid.Column="1"
-                            Text="{Binding Name}"
-                            />
+                                Text="{Binding Name}"/>
 
                             <Label 
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Text="Attack:"/>
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Text="Attack:"/>   
+                            
                             <Label Grid.Row="1" Grid.Column="2" Text="{Binding GetAttackTotal}"></Label>
 
 
                             <Label 
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Text="Defense:"/>
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Text="Defense:"/>  
+                            
                             <Label Grid.Row="2" Grid.Column="2" Text="{Binding GetDefenseTotal}"></Label>
 
                             <Label 
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        Text="Speed:"/>
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                Text="Speed:"/>
+                            
                             <Label Grid.Row="3" Grid.Column="2" Text="{Binding GetSpeedTotal}"></Label>
 
                         </Grid>
