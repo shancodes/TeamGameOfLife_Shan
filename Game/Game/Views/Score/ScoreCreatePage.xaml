@@ -45,7 +45,7 @@
 
                     <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand">
                         <Label
-                        Text="Name" 
+                        Text="Name: " 
                         Style="{StaticResource LabelStyle}"
                         HorizontalTextAlignment="Start"/>
 
@@ -59,7 +59,7 @@
 
                     <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand">
                         <Label
-                            Text="Score" 
+                            Text="Score: " 
                             Style="{StaticResource LabelStyle}"
                         />
 
