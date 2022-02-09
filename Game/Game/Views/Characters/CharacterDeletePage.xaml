@@ -65,7 +65,7 @@
 
             <!--stack layout for Label-->
             
-            <StackLayout HorizontalOptions="Center" Padding="20">
+            <StackLayout HorizontalOptions="Center" Padding="10">
                 
                 <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
                 
