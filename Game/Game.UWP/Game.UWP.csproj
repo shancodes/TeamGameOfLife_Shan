@@ -168,6 +168,12 @@
     <Content Include="fire_wielder.png" />
     <Content Include="hat1.png" />
     <Content Include="hat2.png" />
+    <Content Include="ice_thief.png" />
+    <Content Include="ice_bear.png" />
+    <Content Include="ice_jester.png" />
+    <Content Include="ice_princess.png" />
+    <Content Include="ice_queen.png" />
+    <Content Include="ice_wolf.png" />
     <Content Include="icon_add.png" />
     <Content Include="icon_cancel.png" />
     <Content Include="icon_delete.png" />

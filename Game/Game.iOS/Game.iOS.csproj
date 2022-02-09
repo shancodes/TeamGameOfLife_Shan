@@ -392,6 +392,24 @@
     <BundleResource Include="Resources\monster_icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\ice_wolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ice_thief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ice_bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ice_jester.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ice_princess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ice_queen.png" />
+  </ItemGroup>
+  <ItemGroup>
     <BundleResource Include="Resources\back_image_two.png" />
   </ItemGroup>
 </Project>
