@@ -131,7 +131,7 @@ namespace Game.GameRules
         /// <returns></returns>
         public static string GetCharacterDescription()
         {
-            List<String> StringList = new List<String> { "the terrible", "the awesome", "the lost", "the old", "the younger", "the quiet", "the loud", "the helpless", "the happy", "the sleepy", "the angry", "the clever" };
+            List<String> StringList = new List<String> { "The amazing fire fighter", "Awesome fighter", "Sharp fighter", "Fast", "Tough fighhter", "Wonderful" };
 
             var result = StringList.ElementAt(DiceHelper.RollDice(1, StringList.Count()) - 1);
 
