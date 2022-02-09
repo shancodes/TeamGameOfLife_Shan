@@ -13,8 +13,10 @@
     <!--NavigationPage with Back button and Text-->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
+            
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
             <Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -27,8 +29,7 @@
     <ContentPage.Content>
         <AbsoluteLayout
             HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand"
-        >
+            VerticalOptions="FillAndExpand">
 
             <StackLayout Style="{StaticResource VerticalStack}"
                     AbsoluteLayout.LayoutBounds="1,1,1,1" 
