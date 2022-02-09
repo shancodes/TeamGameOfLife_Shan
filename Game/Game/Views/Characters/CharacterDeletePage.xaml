@@ -7,15 +7,6 @@
              x:Class="Game.Views.CharacterDeletePage"
              >
 
-    <!--stack layout for Delete and Cancel buttons-->
-    
-    <ContentPage.ToolbarItems>
-        
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
-        
-    </ContentPage.ToolbarItems>
-
     <!--stack layout for Back button and Title-->
     
     <NavigationPage.TitleView>
