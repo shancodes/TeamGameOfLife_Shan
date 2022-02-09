@@ -16,9 +16,9 @@ namespace Game.GameRules
             var datalist = new List<ItemModel>()
             {
                 new ItemModel {
-                    Name = "Long Flame Sword",
+                    Name = "Blazing Hammer",
                     Description = "Sword made of flame",
-                    ImageURI = "long_flame_sword.png",
+                    ImageURI = "blazing_hammer.png",
                     Range = 0,
                     Damage = 10,
                     Value = 9,
@@ -26,9 +26,9 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                new ItemModel {
-                    Name = "Pirate Sword",
+                    Name = "Burning Polyarm",
                     Description = "Aye matie",
-                    ImageURI = "sword2.png",
+                    ImageURI = "burning_polyarm.png",
                     Range = 0,
                     Damage = 8,
                     Value = 9,
@@ -36,9 +36,9 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Dagger",
+                    Name = "Fast Dagger",
                     Description = "watch out",
-                    ImageURI = "sword3.png",
+                    ImageURI = "fast_dagger.png",
                     Range = 0,
                     Damage = 6,
                     Value = 9,
@@ -46,25 +46,37 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Strong Sword",
+                    Name = "Fire Ring",
                     Description = "watch out",
-                    ImageURI = "sword4.png",
+                    ImageURI = "fire_ring.png",
                     Range = 0,
                     Damage = 12,
                     Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
+                    Location = ItemLocationEnum.Finger,
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Wand",
+                    Name = "Mystic Staff",
                     Description = "watch out",
-                    ImageURI = "sword5.png",
+                    ImageURI = "mystic_staff.png",
                     Range = 0,
                     Damage = 4,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.Defense},
 
+
+                new ItemModel {
+                    Name = "Long Flame Sword",
+                    Description = "Feeling Good",
+                    ImageURI = "long_flame_sword.png",
+                    Range = 2,
+                    Damage = 6,
+                    Value = 9,
+                    Location = ItemLocationEnum.PrimaryHand,
+                    Attribute = AttributeEnum.CurrentHealth},
+/*
+                
                 new ItemModel {
                     Name = "Mace",
                     Description = "watch out",
@@ -74,17 +86,6 @@ namespace Game.GameRules
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.Speed},
-
-                new ItemModel {
-                    Name = "Mace of Health",
-                    Description = "Feeling Good",
-                    ImageURI = "sword7.png",
-                    Range = 0,
-                    Damage = 6,
-                    Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
-                    Attribute = AttributeEnum.CurrentHealth},
-
                 new ItemModel {
                     Name = "Arrows",
                     Description = "Poke your eye out",
@@ -253,7 +254,7 @@ namespace Game.GameRules
                     Damage = 0,
                     Value = 9,
                     Location = ItemLocationEnum.Feet,
-                    Attribute = AttributeEnum.Speed},
+                    Attribute = AttributeEnum.Speed},*/
             };
 
             return datalist;
