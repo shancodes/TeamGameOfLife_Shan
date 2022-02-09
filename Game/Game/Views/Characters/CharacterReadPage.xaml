@@ -7,12 +7,6 @@
              x:Class="Game.Views.CharacterReadPage"
              >
 
-    <!--ContentPage.ToolbarItems>
-        
-        <ToolbarItem Text="Update" Clicked="Update_Clicked" IconImageSource="icon_edit.png"/>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="icon_delete.png"/>
-    </ContentPage.ToolbarItems-->
-
     <!--NavigationPage with Text-->
     <NavigationPage.TitleView >
         <Label  Text ="{Binding Title}"   FontSize="Medium"  HorizontalTextAlignment="Center" />
@@ -20,12 +14,11 @@
 
     <AbsoluteLayout
         HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
-        >
+        VerticalOptions="FillAndExpand">
 
         <StackLayout Style="{StaticResource VerticalStack}"
-                    AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                    AbsoluteLayout.LayoutFlags="All">
+                     AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                     AbsoluteLayout.LayoutFlags="All">
 
             <ScrollView x:Name="ScrollView">
                 <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
@@ -67,8 +60,8 @@
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Frame OutlineColor="Black" Padding="1">
                                 <Grid ColumnSpacing="1" 
-                                RowSpacing="1"
-                                BackgroundColor="black">
+                                    RowSpacing="1"
+                                    BackgroundColor="black">
 
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto"/>
@@ -200,9 +193,11 @@
 
             <!--Delete Done and Update buttons-->
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
+                
                 <Button ImageSource="delete.png" BackgroundColor="Transparent" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand"></Button>
                 <Button ImageSource="done.png" BackgroundColor="Transparent" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand"></Button>
                 <Button  ImageSource="update.png" BackgroundColor="Transparent" Clicked="Update_Clicked" HorizontalOptions="CenterAndExpand"></Button>
+                
             </StackLayout>
             
         </StackLayout>
@@ -245,8 +240,6 @@
                     </StackLayout>
                 </Frame>
             </StackLayout>
-
         </StackLayout>
-
     </AbsoluteLayout> 
 </ContentPage>
