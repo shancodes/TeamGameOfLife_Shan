@@ -12,7 +12,7 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
             <Button Text="Back" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
-            <Label Text="Update Character" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black"/>
+            <Label Text="Update Character" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
