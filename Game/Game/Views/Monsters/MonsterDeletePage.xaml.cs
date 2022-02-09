@@ -1,9 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 using Game.ViewModels;
 using Game.Models;
 
@@ -26,9 +24,7 @@ namespace Game.Views
         public MonsterDeletePage(GenericViewModel<MonsterModel> data)
         {
             InitializeComponent();
-
             BindingContext = this.viewModel = data;
-
             this.viewModel.Title = "Delete " + data.Title;
         }
 
