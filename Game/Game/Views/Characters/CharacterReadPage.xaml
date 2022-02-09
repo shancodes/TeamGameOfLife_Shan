@@ -192,7 +192,7 @@
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
                 <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="StartAndExpand"></Button>
                 <Button ImageSource="done.png" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand"></Button>
-                <Button Text="Update" Clicked="Update_Clicked" HorizontalOptions="EndAndExpand"></Button>
+                <Button  ImageSource="update.png" Clicked="Update_Clicked" HorizontalOptions="EndAndExpand"></Button>
             </StackLayout>
             
         </StackLayout>
