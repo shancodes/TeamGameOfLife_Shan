@@ -176,6 +176,7 @@
     <Content Include="icon_save.png" />
     <Content Include="item.png" />
     <Content Include="items.png" />
+    <Content Include="items_icon.png" />
     <Content Include="knight.png" />
     <Content Include="kruta.png" />
     <Content Include="logo_medium.png" />
