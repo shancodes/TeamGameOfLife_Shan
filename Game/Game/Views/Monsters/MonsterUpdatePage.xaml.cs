@@ -38,9 +38,7 @@ namespace Game.Views
             InitializeComponent();
             this.OriginalModel = new MonsterModel(data.Data);
             BindingContext = this.ViewModel = data;
-
             this.ViewModel.Title = "Update " + data.Title;
-
             _ = UpdatePageBindingContext();
         }
 
@@ -106,17 +104,7 @@ namespace Game.Views
             _ = await Navigation.PopModalAsync();
         }
 
-        ///// <summary>
-        ///// Change the Level Picker
-        ///// </summary>
-        //public void ManageHealth()
-        //{
-        //    // Roll for new HP
-        //    ViewModel.Data.MaxHealth = RandomPlayerHelper.GetHealth(ViewModel.Data.Level);
-
-        //    // Show the Result
-        //    MaxHealthValue.Text = ViewModel.Data.MaxHealth.ToString();
-        //}
+        
 
         /// <summary>
         /// Reset the fields to original values before update
@@ -196,30 +184,5 @@ namespace Game.Views
         }
 
 
-        ///// <summary>
-        ///// Randomize the Monster, keep the level the same
-        ///// </summary>
-        ///// <returns></returns>
-        //public bool RandomizeMonster()
-        //{
-        //    // Randomize Name
-        //    ViewModel.Data.Name = RandomPlayerHelper.GetMonsterName();
-        //    ViewModel.Data.Description = RandomPlayerHelper.GetMonsterDescription();
-
-        //    // Randomize the Attributes
-        //    ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
-        //    ViewModel.Data.Speed = RandomPlayerHelper.GetAbilityValue();
-        //    ViewModel.Data.Defense = RandomPlayerHelper.GetAbilityValue();
-
-        //    ViewModel.Data.Difficulty = RandomPlayerHelper.GetMonsterDifficultyValue();
-
-        //    ViewModel.Data.ImageURI = RandomPlayerHelper.GetMonsterImage();
-
-        //    ViewModel.Data.UniqueItem = RandomPlayerHelper.GetMonsterUniqueItem();
-
-        //    _ = UpdatePageBindingContext();
-
-        //    return true;
-        //}
     }
 }
