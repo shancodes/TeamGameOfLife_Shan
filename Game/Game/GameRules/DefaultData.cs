@@ -367,14 +367,6 @@ namespace Game.GameRules
                     Level = 5,
                     MaxHealth = 43,
                     ImageURI = "wizard.png"
-                },
-
-                new CharacterModel {
-                    Name = "Swiftblade",
-                    Description = "Swiftblade",
-                    Level = 5,
-                    MaxHealth = 43,
-                    ImageURI = "swiftblade.png"
                 }
             };
 
