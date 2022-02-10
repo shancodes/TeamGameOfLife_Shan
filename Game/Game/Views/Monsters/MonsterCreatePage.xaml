@@ -48,17 +48,7 @@
                                 HorizontalOptions="Center"/>
 
                         <Grid
-                            RowSpacing="5"
-                            ColumnSpacing="2"
-                            HorizontalOptions="CenterAndExpand"
-                            Margin="10">
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                             Style="{StaticResource MonsterCreateGridStyle}" >
 
                             <!--Grid for Name-->
                             <Label Grid.Row="0" Grid.Column="0"
@@ -104,17 +94,7 @@
                         </Grid>
 
                         <Grid
-                            RowSpacing="5"
-                            ColumnSpacing="2"
-                            HorizontalOptions="CenterAndExpand"
-                            Margin="10">
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                            Style="{StaticResource MonsterCreateGridStyle}" >
 
                             <!--Grid for Attack-->
                             <Label Grid.Row="0" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
