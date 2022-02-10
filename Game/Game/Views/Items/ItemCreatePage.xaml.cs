@@ -39,6 +39,11 @@ namespace Game.Views
             LocationPicker.SelectedItem = ViewModel.Data.Location.ToString();
             AttributePicker.SelectedItem = ViewModel.Data.Attribute.ToString();
         }
+        
+        public bool CreateButton_state()
+        {
+            return CreateButton.IsEnabled;
+        }
 
         /// <summary>
         /// Save by calling for Create
@@ -133,9 +138,9 @@ namespace Game.Views
         /// <summary>
         /// function to check if Name and Description is empty field
         /// </summary>
-        private void SetCreateVisibility()
+        public void SetCreateVisibility()
         {
-            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Description_entry.Text))
+            if (string.IsNullOrEmpty(ViewModel.Data.Name) || string.IsNullOrEmpty(ViewModel.Data.Description))
             {
                 CreateButton.IsEnabled = false;
                 return;
