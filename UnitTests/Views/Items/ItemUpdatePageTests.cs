@@ -208,5 +208,25 @@ namespace UnitTests.Views
             Assert.IsTrue(false == page.UpdateButton_State());
             
         }
+
+        /// <summary>
+        /// Test to check update button
+        /// is disabled if Description is null
+        /// </summary>
+        [Test]
+        public void ItemUpdatePage_SetUpdateVisibility_Description_Null_Should_Pass()
+        {
+            //Arrange
+            page.ViewModel.Data.Name = "Hammer";
+            page.ViewModel.Data.Description = null;
+
+            //Act
+            page.SetUpdateVisibility();
+
+            //Reset
+
+            //Assert
+            Assert.IsTrue(false == page.UpdateButton_State());
+        }
     }
 }
