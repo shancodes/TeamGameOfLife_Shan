@@ -9,13 +9,8 @@
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
 
             <FlexLayout x:Name="flexLayout"
-                        AlignContent="SpaceAround"
-                        JustifyContent="Center"
-                        AlignItems="Center"
-                        Direction="Column">
-                <!--AlignItems="Center"
-                        Direction="Column">-->
-                <!--<FlexLayout Direction="Row">-->
+                        Style="{StaticResource FlexLayoutGamePage}">
+
                 <StackLayout Orientation="Horizontal">
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
@@ -31,17 +26,11 @@
                         Source="auto_battle.png"
                         Style="{StaticResource ImageLargeStyle}"
                         Clicked="AutobattleButton_Clicked"/>
-
-
-
                     </StackLayout>
 
                 </StackLayout>
-                    
-                <!--</FlexLayout>
-                <FlexLayout Direction="Row">-->
 
-                    <StackLayout Style="{StaticResource CardImageTextBox}">
+                <StackLayout Style="{StaticResource CardImageTextBox}">
 
                     <ImageButton
                         Source="village.png"
@@ -49,7 +38,6 @@
                         Clicked="VillageButton_Clicked"/>
 
                 </StackLayout>
-                <!--</FlexLayout>-->
             </FlexLayout>
         </ScrollView>
     </ContentPage.Content>
