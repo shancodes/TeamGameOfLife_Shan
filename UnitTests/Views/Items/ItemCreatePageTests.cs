@@ -5,6 +5,7 @@ using Game.Views;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Mocks;
+using Game.Models;
 
 namespace UnitTests.Views
 {
@@ -199,5 +200,28 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        /// <summary>
+        /// Test to check if create button 
+        /// is disabled if Name is null
+        /// </summary>
+        [Test]
+        public void ItemCreatePage_SetCreateVisibility_Name_Null_Should_Pass()
+        {
+            // Arrange
+            page = new ItemCreatePage();
+            page.ViewModel.Data = new ItemModel();
+            page.ViewModel.Data.Name = null;
+            page.ViewModel.Data.Description = "Sword";
+        
+            // Act
+            page.SetCreateVisibility();
+            // Reset
+
+            // Assert
+            Assert.IsTrue(false == page.CreateButton_state());
+        }
+
+        
     }
 }
