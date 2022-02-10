@@ -187,6 +187,19 @@
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
             
+            
+            <!--Grid-->
+
+            <Style TargetType="Grid"
+                x:Key="GridCrudiStyle">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="RowSpacing" Value="10" />
+                <Setter Property="ColumnSpacing" Value="5" />
+                <Setter Property="Margin" Value="20"/>
+                <Setter Property="RowDefinitions" Value="auto"/>
+                <Setter Property="ColumnDefinitions" Value="auto"/>
+            </Style>
+
             <!-- Image -->
             <Style TargetType="Image"
                 x:Key="ImageLargeStyle">
