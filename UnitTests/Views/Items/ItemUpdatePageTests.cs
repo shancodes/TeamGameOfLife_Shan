@@ -187,5 +187,29 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        /// <summary>
+        /// Test to check update button
+        /// is disabled if name is null
+        /// </summary>
+        [Test]
+        public void ItemUpdatePage_SetUpdateVisibility_Name_Null_Should_Pass()
+        {
+            //Arrange
+            var data = new ItemModel();
+            var ViewModel = new GenericViewModel<ItemModel>(data);
+
+            page = new ItemUpdatePage(ViewModel);
+            page.ViewModel.Data.Name = null;
+            page.ViewModel.Data.Description = "Sword Description";
+
+            //Act
+
+            //Reset
+
+            //Assert
+            Assert.IsTrue(false ==  UpdateButton_State());
+
+        }
     }
 }
