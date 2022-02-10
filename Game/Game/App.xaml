@@ -120,7 +120,8 @@
             <Style TargetType="Label"
                 x:Key="ValueStyle"
                 BasedOn="{StaticResource LabelStyle}">
-                <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}" />
+                <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+                <Setter Property="Padding" Value="0,0,10,0"/>
             </Style>
 
             <Style TargetType="Label"
@@ -331,8 +332,8 @@
                 <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="VerticalOptions" Value="Start" />
                 <Setter Property="Margin" Value="0" />
-                <Setter Property="Padding" Value="0" />
-                <Setter Property="Spacing" Value="1" />
+                <Setter Property="Padding" Value="10,0,10,0" />
+                <Setter Property="Spacing" Value="20" />
             </Style>
 
             <Style TargetType="StackLayout"

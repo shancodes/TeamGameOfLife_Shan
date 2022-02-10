@@ -96,13 +96,12 @@
                         Text= "Damage:" 
                         Style="{StaticResource LabelStyle}"
                            HorizontalOptions="End"/>
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
 
                         <Label 
                                 Text="{Binding Data.Damage}" 
                                 x:Name="DamageValue"
                                 Style="{StaticResource ValueStyle}"
-                                Padding="0,0,10,0"
                                 HorizontalOptions="Start"
                                 />
 
@@ -116,13 +115,12 @@
                             Text="Range:" 
                             Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="6" Grid.Column="0"/>
 
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand">
 
                         <Label 
                                     Text="{Binding Data.Range}" 
                                     x:Name="RangeValue"
                                     Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
                                     HorizontalOptions="Start"/>
 
                         <Stepper 
@@ -136,13 +134,12 @@
                             Text="Value:"
                             Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="7" Grid.Column="0"/>
 
-                    <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="7" Grid.Column="1" HorizontalOptions="Start">
+                    <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="7" Grid.Column="1" HorizontalOptions="Start">
 
                         <Label
                                 Text="{Binding Data.Value}" 
                                 x:Name="ValueValue"
                                 Style="{StaticResource ValueStyle}"
-                                Padding="0,0,10,0"
                                 HorizontalOptions="Start"/>
 
                         <Stepper 
@@ -150,7 +147,7 @@
                                 ValueChanged="Value_OnStepperValueChanged"/>
                     </StackLayout>
 
-                    <Button ImageSource="cancel.png" BackgroundColor="Transparent"  Clicked="Cancel_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="1" Style="{StaticResource ButtoNavigationBar}"/>
+                    <Button ImageSource="cancel.png" BackgroundColor="Transparent"  Clicked="Cancel_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtoNavigationBar}"/>
                     <Button x:Name="CreateButton" BackgroundColor="Transparent"  ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtoNavigationBar}"/>
                 </Grid>
                 
