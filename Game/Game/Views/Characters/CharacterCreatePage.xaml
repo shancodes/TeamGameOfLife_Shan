@@ -160,11 +160,7 @@
                         </Grid>
 
                         <!--Flex Layout to show items to select-->
-                        <FlexLayout 
-                            Padding="5"
-                            Wrap="Wrap"
-                            JustifyContent="SpaceAround"
-                            AlignContent="SpaceAround"
+                        <FlexLayout Style="{StaticResource CharacterFlex}"
                             x:Name="ItemBox">
                         </FlexLayout>
 

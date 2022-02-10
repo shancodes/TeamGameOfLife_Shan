@@ -235,6 +235,15 @@
                 <Setter Property="ColumnDefinitions" Value="*"/>
             </Style>
 
+            <!--Flex-->
+            <Style TargetType="FlexLayout"
+                x:Key="CharacterFlex">
+                <Setter Property="Padding" Value="5" />
+                <Setter Property="Wrap" Value="Wrap" />
+                <Setter Property="JustifyContent" Value="SpaceAround" />
+                <Setter Property="AlignContent" Value="SpaceAround" />
+            </Style>
+
             <!-- Image -->
             <Style TargetType="Image"
                 x:Key="ImageLargeStyle">
