@@ -26,40 +26,34 @@
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
             <!--Stack layout for Name-->
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
+            <StackLayout Style="{StaticResource HorizontalCenterStack}">
 
                 <Label 
                     Text="Name : " 
                     Style="{StaticResource LabelStyle}"/>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
+                <StackLayout Style="{StaticResource HorizontalCenterStack}" >
 
                     <Label 
                         Text="{Binding Data.Name}" 
-                        Style="{StaticResource ValueStyle}"
-                        Padding="0,0,10,0"
-                        HorizontalOptions="End"
-                        HorizontalTextAlignment="End"/>
+                        Style="{StaticResource ValueStyleTextRight}"/>
 
                 </StackLayout>
 
             </StackLayout>
 
             <!--Stack layout for Description-->
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
+            <StackLayout Style="{StaticResource HorizontalCenterStack}" >
 
                 <Label 
                     Text="Description : " 
                     Style="{StaticResource LabelStyle}"/>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
+                <StackLayout Style="{StaticResource HorizontalCenterStack}">
 
                     <Label 
                         Text="{Binding Data.Description}" 
-                        Style="{StaticResource ValueStyle}"
-                        Padding="0,0,10,0"
-                        HorizontalOptions="End"
-                        HorizontalTextAlignment="End"/>
+                        Style="{StaticResource ValueStyleTextRight}"/>
                     
                 </StackLayout>
 
@@ -67,7 +61,7 @@
 
             <!--stack layout for Label-->
 
-            <StackLayout HorizontalOptions="Center" Padding="20">
+            <StackLayout Style="{StaticResource StackIsland}">
 
                 <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
 
@@ -75,7 +69,7 @@
 
             <!--stack layout for Delete and Cancel buttons-->
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+            <StackLayout Style="{StaticResource ButtonPair}">
 
                 <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
                 <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
