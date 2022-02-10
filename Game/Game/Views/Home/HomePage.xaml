@@ -4,12 +4,9 @@
              x:Class="Game.Views.HomePage">
 
     <ContentPage.Content>
-        <ScrollView VerticalOptions="CenterAndExpand"
-            HorizontalOptions="CenterAndExpand">
+        <ScrollView Style="{StaticResource ScrollViewHomePage}">
             
-            <StackLayout
-                VerticalOptions="Center"
-                HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource StackLayoutHomePage}">
 
                 <!--Image for home page-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
