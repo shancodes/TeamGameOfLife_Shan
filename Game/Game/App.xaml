@@ -224,6 +224,18 @@
                 <Setter Property="ColumnDefinitions" Value="auto"/>
             </Style>
 
+            <!--Grid-->
+
+            <Style TargetType="Grid"
+                x:Key="CharacterGridStyle">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="RowSpacing" Value="1" />
+                <Setter Property="ColumnSpacing" Value="2" />
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="RowDefinitions" Value="auto"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
+            </Style>
+
             <!-- Image -->
             <Style TargetType="Image"
                 x:Key="ImageLargeStyle">
