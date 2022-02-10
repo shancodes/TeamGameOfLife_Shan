@@ -4,28 +4,23 @@
              x:Class="Game.Views.HomePage">
 
     <ContentPage.Content>
-        <ScrollView
-            VerticalOptions="CenterAndExpand"
-            HorizontalOptions="CenterAndExpand">
+        <ScrollView Style="{StaticResource ScrollViewHomePage}">
             
             <StackLayout
-                VerticalOptions="Center"
-                HorizontalOptions="Center">
+                Style="{StaticResource StackLayoutHomePage}">
 
                 <!--Image for home page-->
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
-
                     <Image
                          Source="logo_medium.png"
                          Style="{StaticResource ImageLargeLogoStyle}"/>
-
                 </StackLayout>
 
                 <!--Enter button-->
                 <Button
                     Text="Enter"
                     Clicked="GameButton_Clicked"/>
-
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
