@@ -149,7 +149,7 @@ namespace Game.Views
 
         private void SetUpdateVisibility()
         {
-            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Description_entry.Text))
+            if (string.IsNullOrEmpty(ViewModel.Data.Name) || string.IsNullOrEmpty(ViewModel.Data.Description))
             {
                 Update.IsEnabled = false;
                 return;
