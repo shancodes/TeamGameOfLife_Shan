@@ -33,8 +33,11 @@
     <ContentPage.Content>
 
         <ScrollView>
-            <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="10" HorizontalOptions="FillAndExpand">
+            <FlexLayout x:Name="flexLayout"
+                        AlignContent="SpaceAround"
+                        JustifyContent="Center"
+                        AlignItems="Center"
+                        Direction="Column" >
 
                 <Image Source="items_icon.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
@@ -43,13 +46,13 @@
                     RowSpacing="10"
                     ColumnSpacing="5"
                     HorizontalOptions="FillAndExpand"
-                    Margin="10" >
+                     Margin="20">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Row="0" Grid.Column="0"
@@ -170,11 +173,11 @@
                                 ValueChanged="Value_OnStepperValueChanged"/>
                     </StackLayout>
 
-                    <Button ImageSource="cancel.png" BackgroundColor="Transparent" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="1" Style="{StaticResource ButtoNavigationBar}"/>
-                    <Button x:Name="CreateButton" BackgroundColor="Transparent"  ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtoNavigationBar}"/>
+                    <Button ImageSource="cancel.png" BackgroundColor="Transparent"  Clicked="Cancel_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="1" Style="{StaticResource ButtoNavigationBar}"/>
+                    <Button x:Name="CreateButton" BackgroundColor="Transparent"  ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtoNavigationBar}"/>
                 </Grid>
                 
-            </StackLayout>
+            </FlexLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
