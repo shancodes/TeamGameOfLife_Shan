@@ -10,14 +10,9 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              x:Class="Game.Views.ItemCreatePage"
             >
-<!--
-     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems>-->
+
     <NavigationPage.TitleView>
-        <!--Button Text="Back" Clicked="Cancel_Clicked" ImageSource="icon_cancel.png"  HorizontalOptions="Start"/-->
-            <StackLayout Orientation="Horizontal" Spacing="20">
+        <StackLayout Orientation="Horizontal" Spacing="20">
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start" Style="{StaticResource ButtoNavigationBar}"/>
             <Label Text="Create a new item" HorizontalOptions="CenterAndExpand" Style="{StaticResource HeaderStyle}"/>
         </StackLayout>
@@ -62,7 +57,6 @@
 
                     <Entry
                            Text="{Binding Data.Name}"
-                           WidthRequest="280"
                            Grid.Row="0" Grid.Column="1"
                            x:Name="Name_Entry"
                            Style="{StaticResource EntryStyle}"
@@ -76,7 +70,6 @@
 
                     <Entry
                            Text="{Binding Data.Description}"
-                           WidthRequest="280"
                            Grid.Row="1" Grid.Column="1"
                            x:Name="Description_entry"
                            TextChanged="EntryDescription_TextChanged"
@@ -89,7 +82,6 @@
                            HorizontalOptions="End"/>
 
                     <Picker Grid.Row="2" Grid.Column="1"
-                        WidthRequest="280"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItemMessage}" 
                         SelectedItem="{Binding Data.Location, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}"  
                         x:Name="LocationPicker" HorizontalOptions="Start"/>
@@ -100,7 +92,6 @@
                         Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
 
                     <Picker Grid.Row="3" Grid.Column="1"
-                        WidthRequest="280"
                         ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" 
                         SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="AttributePicker" HorizontalOptions="Start"/>
@@ -110,7 +101,6 @@
                         Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
 
                     <Entry Grid.Row="4" Grid.Column="1"
-                        WidthRequest="280"
                         Text="{Binding Data.ImageURI}" 
                         Style="{StaticResource EntryStyle}"
                            HorizontalOptions="Start"/>

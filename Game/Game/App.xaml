@@ -8,7 +8,6 @@
 
     <Application.Resources>
         <ResourceDictionary>
-            <!--Global Styles-->
             <!--Colors -->
 
             <!--
@@ -495,6 +494,7 @@
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}" />
                 <Setter Property="BackgroundColor" Value= "LightGray" />
+                <Setter Property="WidthRequest" Value="280"/>
                 <Setter Property="PlaceholderColor" Value="{StaticResource TriciaryTextColor}" />
             </Style>
 
@@ -527,6 +527,7 @@
                 <Setter Property="TitleColor" Value="{StaticResource PrimaryTextColor}" />
                 <Setter Property="FontSize" Value="Small" />
                 <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="WidthRequest" Value="280"/>
                 <Setter Property="BackgroundColor" Value = "LightGray" />
             </Style>
 
