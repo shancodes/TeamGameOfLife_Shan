@@ -206,7 +206,7 @@ namespace UnitTests.Views
 
             //Assert
             Assert.IsTrue(false == page.UpdateButton_State());
-            
+
         }
 
         /// <summary>
@@ -247,6 +247,26 @@ namespace UnitTests.Views
 
             //Assert
             Assert.IsTrue(false == page.UpdateButton_State());
+        }
+
+        /// <summary>
+        /// Test to check update button is enabled for 
+        /// Name and description is  not null
+        /// </summary>
+        [Test]
+        public void ItemUpdatePage_SetUpdateVisibility_Description_And_Name_Not_Null_Should_Pass()
+        {
+            //Arrange
+            page.ViewModel.Data.Name = "Sword";
+            page.ViewModel.Data.Description = "Weapon";
+
+            //Act
+            page.SetUpdateVisibility();
+
+            //Reset
+
+            //Assert
+            Assert.IsTrue(page.UpdateButton_State());
         }
     }
 }
