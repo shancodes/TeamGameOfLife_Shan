@@ -73,8 +73,7 @@
                         IsVisible="False">
 
                 <!--Database Settings-->
-                <StackLayout Style="{StaticResource HorizontalStack}"
-                                    Padding="50,0,0,0">
+                <StackLayout Style="{StaticResource HorizontalStackWithPaddingAboutPage}">
 
                     <Label Text="SQL Data Source"
                             Style="{DynamicResource LabelStyle}"/>
@@ -89,8 +88,7 @@
 
                 </StackLayout>
 
-                <StackLayout Style="{StaticResource HorizontalStack}"
-                                    Padding="50,0,0,0">
+                <StackLayout Style="{StaticResource HorizontalStackWithPaddingAboutPage}">
 
                     <Label Text="Wipe Data List"
                            Style="{DynamicResource LabelStyle}"/>
@@ -120,7 +118,7 @@
 
             <StackLayout Style="{StaticResource VerticalStack}" x:Name="DebugSettingsFrame" IsVisible="False">
 
-                <StackLayout Style="{StaticResource VerticalStack}" Padding="5,0,0,0">
+                <StackLayout Style="{StaticResource VerticalStackWithPaddingAboutPage}">
 
                     <Label Text="More Debug Settings to come..." Style="{DynamicResource MessageStyle}"/>
 
