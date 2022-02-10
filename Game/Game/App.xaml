@@ -187,14 +187,6 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
-            
-            <!--ScrollView-->
-            <Style TargetType="ScrollView" x:Key="ScrollViewHomePage">
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-            </Style>
-            
-           
 
             <!--FlexLayout-->
             <Style TargetType="FlexLayout"
@@ -227,7 +219,7 @@
             <!--Grid-->
 
             <Style TargetType="Grid"
-                x:Key="CharacterGridStyle">
+                x:Key="CharacterCreateGridStyle">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="RowSpacing" Value="1" />
                 <Setter Property="ColumnSpacing" Value="2" />
@@ -369,12 +361,6 @@
                 <Setter Property="Margin" Value="0" />
                 <Setter Property="Padding" Value="10,0,10,0" />
                 <Setter Property="Spacing" Value="20" />
-            </Style>
-
-            <Style TargetType="StackLayout"
-                   x:Key="StackLayoutHomePage">
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
             </Style>
 
             <Style TargetType="StackLayout"
