@@ -187,7 +187,14 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
-            
+
+            <!--FlexLayout-->
+            <Style TargetType="FlexLayout"
+                   x:Key="FlexLayoutCrudi">
+                <Setter Property="AlignContent" Value="SpaceAround"/>
+                <Setter Property="AlignItems" Value="Center"/>
+                <Setter Property="Direction" Value="Column"/>
+            </Style>
             
             <!--Grid-->
 
