@@ -23,32 +23,32 @@
 
             <StackLayout Style="{StaticResource HorizontalStackAboutPage}">
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="kruta.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="kruta.png" Style="{StaticResource ImageAboutPage}"/>
                     <Label Text="Kruta" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="shipra.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="shipra.png" Style="{StaticResource ImageAboutPage}"/>
                     <Label Text="Shipra" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
 
 
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="priya.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="priya.png" Style="{StaticResource ImageAboutPage}"/>
                     <Label Text="Shanmugapriya" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
             </StackLayout>
             
             <Label Text="Designers" HorizontalOptions="CenterAndExpand"/>
             
-            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalStackAboutPage}">
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="natasha.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="natasha.png" Style="{StaticResource ImageAboutPage}"/>
                     <Label Text="Natasha" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource VerticalStack}">
-                    <Image Source="megan.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
+                    <Image Source="megan.png" Style="{StaticResource ImageAboutPage}"/>
                     <Label Text="Megan" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
             </StackLayout>
