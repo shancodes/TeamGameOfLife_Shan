@@ -9,7 +9,9 @@
 
 
     <NavigationPage.TitleView >
-        <Label  Text ="Monster Detail"   FontSize="Medium" TextColor="Black"  HorizontalTextAlignment="Center" />
+        <StackLayout Orientation="Horizontal" Spacing="20">
+            <Label  Text ="Monster Detail"   FontSize="Medium" TextColor="Black"  HorizontalTextAlignment="Center" Style="{StaticResource HeaderStyle}"/>
+        </StackLayout>
     </NavigationPage.TitleView>
 
     <AbsoluteLayout
