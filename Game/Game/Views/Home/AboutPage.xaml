@@ -134,15 +134,8 @@
 
                             <Entry
                                 x:Name="ServerItemValue"
-                                Text="1" 
-                                FontSize="Micro"
-                                MaxLength="5"
-                                CursorPosition="0"
-                                SelectionLength = "5"
-                                Keyboard="Numeric"
-                                WidthRequest="50"
-                                HorizontalOptions="FillAndExpand"
-                                Style="{DynamicResource EntryStyle}"
+
+                                Style="{DynamicResource EntryAboutPage}"
                                 />
                         </StackLayout>
 
