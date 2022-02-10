@@ -50,6 +50,11 @@ namespace Game.Views
             _ = await Navigation.PopModalAsync();
         }
 
+        public bool UpdateButton_State()
+        {
+            return Update.IsEnabled;
+        }
+
         /// <summary>
         /// Save calls to Update
         /// </summary>
