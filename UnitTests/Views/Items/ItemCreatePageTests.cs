@@ -264,6 +264,28 @@ namespace UnitTests.Views
             Assert.IsTrue(false == page.CreateButton_state());
         }
 
+        /// <summary>
+        /// Test to check if create button 
+        /// is enabled if Description and Name is not null
+        /// </summary>
+        [Test]
+        public void ItemCreatePage_SetCreateVisibility_Name_And_Description_Not_Null_Should_Pass()
+        {
+            // Arrange
+            page = new ItemCreatePage();
+            page.ViewModel.Data = new ItemModel();
+            page.ViewModel.Data.Name = "This is a Sword";
+            page.ViewModel.Data.Description = "Sword";
+
+            // Act
+            page.SetCreateVisibility();
+            // Reset
+
+            // Assert
+            Assert.IsTrue(page.CreateButton_state());
+        }
+
+
 
     }
 }
