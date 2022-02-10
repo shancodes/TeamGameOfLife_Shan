@@ -9,11 +9,7 @@
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" Padding="10">
             <!--<StackLayout Spacing="10" VerticalOptions="CenterAndExpand">-->
 
-                <FlexLayout x:Name="flexLayout"
-                        JustifyContent="SpaceAround"
-                        AlignContent="SpaceAround"
-                            AlignItems="Center"
-                            Direction="Column">
+                <FlexLayout x:Name="flexLayout" Style="{StaticResource FlexLayoutGamePage}">
 
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
