@@ -18,13 +18,10 @@
 
             <Label Text=" A battle between powerful ladies and Ice monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
             <Label Text="Makers" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
-            <Label
-                           Text="Developers"
-                           WidthRequest="280"
+            <Label Text="Developers" WidthRequest="280" HorizontalTextAlignment="Center"/>
 
-                           HorizontalTextAlignment="Center"/>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalStackAboutPage}">
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="kruta.png" HorizontalOptions="Center" MinimumHeightRequest="10"/>
                     <Label Text="Kruta" HorizontalTextAlignment="Center"></Label>
