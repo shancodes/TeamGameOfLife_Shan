@@ -7,13 +7,13 @@
              x:Class="Game.Views.AboutPage"
              >
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal" Style="{StaticResource StackLayoutAboutPage}">
             <Label Text="Game Information" Style="{StaticResource HeaderStyle}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
     <ScrollView>
-        <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand" Spacing="20">
+        <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
             <Image Source="logo_small.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
             <Label Text=" A battle between powerful ladies and Ice monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
