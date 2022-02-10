@@ -168,7 +168,7 @@ namespace Game.Views
         {
             // Randomize Name
             ViewModel.Data.Name = RandomPlayerHelper.GetMonsterName();
-            ViewModel.Data.Description = RandomPlayerHelper.GetCharacterDescription();
+            ViewModel.Data.Description = RandomPlayerHelper.GetMonsterDescription();
             // Randomize the Attributes
             ViewModel.Data.Attack = RandomPlayerHelper.GetAbilityValue();
             ViewModel.Data.Speed = RandomPlayerHelper.GetAbilityValue();
@@ -221,9 +221,7 @@ namespace Game.Views
             Name_Entry.Text = ViewModel.Data.Name;
             Description_Entry.Text = ViewModel.Data.Description;
             AttackValue.Text = string.Format("{0}", ViewModel.Data.Attack);
-            DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToMessage();
+            DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToString();
         }
-
-       
     }
 }
