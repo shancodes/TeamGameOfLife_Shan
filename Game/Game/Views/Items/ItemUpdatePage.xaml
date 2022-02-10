@@ -182,7 +182,7 @@
                 <!--stack layout for Update and Reset buttons-->
 
                 <Button ImageSource="reset.png" Clicked="Reset_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="1"/>
-                <Button x:Name="Update" ImageSource="update.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1"/>
+                <Button x:Name="Update_button" ImageSource="update.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1"/>
             </Grid>
 
         </FlexLayout>

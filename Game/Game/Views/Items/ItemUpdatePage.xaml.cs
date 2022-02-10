@@ -52,7 +52,7 @@ namespace Game.Views
 
         public bool UpdateButton_State()
         {
-            return Update.IsEnabled;
+            return Update_button.IsEnabled;
         }
 
         /// <summary>
@@ -152,15 +152,15 @@ namespace Game.Views
             SetUpdateVisibility();
         }
 
-        private void SetUpdateVisibility()
+        public void SetUpdateVisibility()
         {
             if (string.IsNullOrEmpty(ViewModel.Data.Name) || string.IsNullOrEmpty(ViewModel.Data.Description))
             {
-                Update.IsEnabled = false;
+                Update_button.IsEnabled = false;
                 return;
             }
 
-            Update.IsEnabled = true;
+            Update_button.IsEnabled = true;
         }
     }
 }
