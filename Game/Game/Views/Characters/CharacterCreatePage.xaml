@@ -49,17 +49,7 @@
                                 HorizontalOptions="Center"/>
 
                         <Grid
-                            RowSpacing="1"
-                            ColumnSpacing="2"
-                            HorizontalOptions="Center"
-                            Margin="10">
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                            Style="{StaticResource GridCrudiStyle}">
 
                             <!--Grid for Name-->
                             <Label Grid.Row="0" Grid.Column="0"
