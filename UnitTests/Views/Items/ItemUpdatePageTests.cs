@@ -196,20 +196,17 @@ namespace UnitTests.Views
         public void ItemUpdatePage_SetUpdateVisibility_Name_Null_Should_Pass()
         {
             //Arrange
-            var data = new ItemModel();
-            var ViewModel = new GenericViewModel<ItemModel>(data);
-
-            page = new ItemUpdatePage(ViewModel);
             page.ViewModel.Data.Name = null;
-            page.ViewModel.Data.Description = "Sword Description";
+            page.ViewModel.Data.Description = "Powerful Hammer";
 
             //Act
+            page.SetUpdateVisibility();
 
             //Reset
 
             //Assert
-            Assert.IsTrue(false ==  UpdateButton_State());
-
+            Assert.IsTrue(false == page.UpdateButton_State());
+            
         }
     }
 }
