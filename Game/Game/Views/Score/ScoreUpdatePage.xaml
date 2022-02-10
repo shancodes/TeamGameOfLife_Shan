@@ -22,6 +22,7 @@
         <StackLayout Style="{StaticResource OuterBoxStack}" 
             Spacing="50" HorizontalOptions="FillAndExpand">
 
+            <!--Completion Time-->
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
                 <Label 
                     Text="Completion Time:"
@@ -34,7 +35,8 @@
                     x:Name="GameTime_Entry"
                     Style="{StaticResource EntryStyle}"/>
             </StackLayout>
-
+            
+             <!--Name-->
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
                 <Label 
                    Text="Name : " 
@@ -47,6 +49,7 @@
                     Style="{StaticResource EntryStyle}"/>
             </StackLayout>
 
+            <!--Score-->
             <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
                 <Label 
                     Text=" Your Score:" 
