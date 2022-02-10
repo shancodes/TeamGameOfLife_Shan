@@ -60,7 +60,7 @@
                             <Label 
                                 Grid.Row="2"
                                 Grid.Column="1"
-                                Text="Difficluty:"/>
+                                Text="Difficulty:"/>
 
                             <Label Grid.Row="2" 
                                    Grid.Column="2" 
