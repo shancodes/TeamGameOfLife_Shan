@@ -39,7 +39,7 @@
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10">
 
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
+                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
                         <ImageButton 
                                 x:Name="RollDice"
@@ -62,7 +62,6 @@
                                 Style="{StaticResource EntryStyle}"
                                 x:Name="Name_Entry"
                                 TextChanged="EntryName_TextChanged"
-                                WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
                             <!--Grid for Description-->
@@ -76,7 +75,6 @@
                                 Style="{StaticResource EntryStyle}"
                                 x:Name="Description_entry"
                                 TextChanged="EntryDescription_TextChanged"
-                                WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
                             <!--Grid for Level-->
@@ -89,7 +87,6 @@
                                 SelectedItem="{Binding SelectedItemProperty}" 
                                 SelectedIndexChanged="Level_Changed"
                                 x:Name="LevelPicker"
-                                WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
                             <!--Grid for Max Health-->
