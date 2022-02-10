@@ -62,7 +62,6 @@
                                 Style="{StaticResource EntryStyle}"
                                 x:Name="Name_Entry"
                                 TextChanged="EntryName_TextChanged"
-                                WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
                             <!--Grid for Description-->
@@ -76,7 +75,6 @@
                                 Style="{StaticResource EntryStyle}"
                                 x:Name="Description_entry"
                                 TextChanged="EntryDescription_TextChanged"
-                                WidthRequest="280"
                                 HorizontalOptions="Start"/>
 
                             <!--Grid for Level-->
@@ -115,7 +113,6 @@
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
                                     Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
                                     HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
@@ -134,7 +131,6 @@
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
                                     Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
                                     HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
@@ -153,7 +149,6 @@
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
                                     Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
                                     HorizontalOptions="Start"
                                     HorizontalTextAlignment="End"/>
 
