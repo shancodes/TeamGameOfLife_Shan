@@ -34,6 +34,9 @@ namespace Game.Views
             this.ViewModel = data;
             this.ViewModel.Title = "Create";
             _ = UpdatePageBindingContext();
+
+            //Need to make the SelectedItem a string, so it can select the correct item.
+            DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToString();
         }
 
         /// <summary>
@@ -63,6 +66,13 @@ namespace Game.Views
             {
                 ViewModel.Data.ImageURI = new MonsterModel().ImageURI;
             }
+
+            //Input validation for Difficulty picker
+            if (ViewModel.Data.Difficulty == DifficultyEnum.Unknown)
+            {
+                return;
+            }
+
 
             MessagingCenter.Send(this, "Create", ViewModel.Data);
             _ = await Navigation.PopModalAsync();
