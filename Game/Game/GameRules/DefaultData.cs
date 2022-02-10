@@ -17,7 +17,7 @@ namespace Game.GameRules
             {
                 new ItemModel {
                     Name = "Blazing Hammer",
-                    Description = "Sword made of flame",
+                    Description = "Powerful Hammer",
                     ImageURI = "blazing_hammer.png",
                     Range = 0,
                     Damage = 10,
@@ -27,7 +27,7 @@ namespace Game.GameRules
 
                new ItemModel {
                     Name = "Burning Polyarm",
-                    Description = "Aye matie",
+                    Description ="A Burning Polyarm",
                     ImageURI = "burning_polyarm.png",
                     Range = 0,
                     Damage = 8,
@@ -37,7 +37,7 @@ namespace Game.GameRules
 
                 new ItemModel {
                     Name = "Fast Dagger",
-                    Description = "watch out",
+                    Description = "Powerful Weapon",
                     ImageURI = "fast_dagger.png",
                     Range = 0,
                     Damage = 6,
@@ -47,7 +47,7 @@ namespace Game.GameRules
 
                 new ItemModel {
                     Name = "Fire Ring",
-                    Description = "watch out",
+                    Description = "Ring made of fire",
                     ImageURI = "fire_ring.png",
                     Range = 0,
                     Damage = 12,
@@ -57,7 +57,7 @@ namespace Game.GameRules
 
                 new ItemModel {
                     Name = "Mystic Staff",
-                    Description = "watch out",
+                    Description = "Powerful Weapon",
                     ImageURI = "mystic_staff.png",
                     Range = 0,
                     Damage = 4,
@@ -68,7 +68,7 @@ namespace Game.GameRules
 
                 new ItemModel {
                     Name = "Long Flame Sword",
-                    Description = "Feeling Good",
+                    Description = "Sword that is long and made of fire",
                     ImageURI = "long_flame_sword.png",
                     Range = 2,
                     Damage = 6,
