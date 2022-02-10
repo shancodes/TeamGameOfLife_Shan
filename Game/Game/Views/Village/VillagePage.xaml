@@ -7,13 +7,11 @@
     <ContentPage.Content>
 
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" Padding="10">
-            <!--<StackLayout Spacing="10" VerticalOptions="CenterAndExpand">-->
 
-                <FlexLayout x:Name="flexLayout" Style="{StaticResource FlexLayoutGamePage}">
-
+            <FlexLayout x:Name="flexLayout" Style="{StaticResource FlexLayoutGamePage}">
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
-
+                    
                     <ImageButton
                                 Source="character_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
@@ -36,7 +34,6 @@
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ItemsButton_Clicked"/>
                 </StackLayout>
-
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
