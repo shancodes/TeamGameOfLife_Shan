@@ -9,7 +9,7 @@
 
     <!--NavigationView for label-->
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+        <StackLayout Style="{StaticResource StackScore}">
 
             <Label Text="Score Detail " FontSize="Subtitle" Style="{StaticResource HeaderStyle}" />
             
