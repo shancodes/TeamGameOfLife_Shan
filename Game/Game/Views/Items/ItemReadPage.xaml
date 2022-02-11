@@ -18,7 +18,7 @@
 
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" Spacing="20">
+        <StackLayout Orientation="Horizontal">
             <Button ImageSource="back_image_two.png" Clicked="Done_Clicked" HorizontalOptions="Start" Style="{StaticResource ButtoNavigationBar}"/>
             <Label Text="Details" HorizontalOptions="CenterAndExpand" Style="{StaticResource HeaderStyle}"/>
         </StackLayout>
@@ -26,17 +26,12 @@
 
 
     <ScrollView>
-        <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="20">
+        <StackLayout Style="{StaticResource OuterBoxStack}">
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                <Label 
-                               Text="Name : " 
-                               Style="{StaticResource LabelStyle}"  HorizontalTextAlignment="Center"/>
-                <Label 
-                                Text="{Binding Data.Name}" 
-                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
+                <Label Text="Name : " Style="{StaticResource LabelStyle}"  HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Data.Name}"  Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
