@@ -268,7 +268,12 @@
                 <Setter Property="ColumnDefinitions" Value="*"/>
             </Style>
 
-
+            <Style TargetType="Grid"
+                x:Key="CharacterReadGridStyle">
+                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="RowSpacing" Value="1" />
+                <Setter Property="ColumnSpacing" Value="1" />
+            </Style>
 
             <Style TargetType="StackLayout"
                 x:Key="CharacterDeleteStyle">
