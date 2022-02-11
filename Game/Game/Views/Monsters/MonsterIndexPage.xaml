@@ -10,8 +10,8 @@
 
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Monster Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout Style="{StaticResource NavigationHeader}">
+            <Label Text="Monster Index" Style="{StaticResource MonsterHeader}"/>
             <Button ImageSource="create_navibar_top.png" Clicked="Add_Clicked" HorizontalOptions="End" Style="{StaticResource ButtoNavigationBar}"/>
         </StackLayout>
     </NavigationPage.TitleView>
@@ -27,15 +27,7 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
+                        <Grid Style="{StaticResource GridIndexStyle}">
 
                             <Image Grid.RowSpan="2"
                             Source="{Binding ImageURI}"
