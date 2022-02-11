@@ -108,9 +108,9 @@
                         <Grid
                             Style="{StaticResource ReadPageButtonGrid}">
 
-                            <Button ImageSource="delete.png" BackgroundColor="Transparent" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
-                            <Button ImageSource="done.png" BackgroundColor="Transparent" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
-                            <Button ImageSource="update.png" BackgroundColor="Transparent" Clicked="Update_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2"/>
+                            <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
+                            <Button ImageSource="done.png"  Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
+                            <Button ImageSource="update.png" Clicked="Update_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2"/>
                         </Grid>
 
                     </StackLayout>
