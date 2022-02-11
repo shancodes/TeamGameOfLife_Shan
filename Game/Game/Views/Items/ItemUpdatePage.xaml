@@ -8,12 +8,7 @@
              xmlns:local_enum="clr-namespace:Game.Models"
              xmlns:local="using:Game.Models"
              x:Class="Game.Views.ItemUpdatePage">
-    <!--Title="{Binding Title}">-->
-
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="icon_save.png"/>
-    </ContentPage.ToolbarItems> -->
+ 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Spacing="20">
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start" Style="{StaticResource ButtoNavigationBar}"/>
@@ -32,26 +27,13 @@
         <ScrollView>
 
         <FlexLayout x:Name="flexLayout"
-                        AlignContent="SpaceAround"
-                        JustifyContent="Center"
-                        AlignItems="Center"
-                        Direction="Column" >
+                        Style="{StaticResource FlexLayoutCrudi}">
 
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
             <Grid
-                    RowSpacing="10"
-                    ColumnSpacing="5"
-                    VerticalOptions="CenterAndExpand"
-                    Margin="20">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
+                    Style="{StaticResource GridCrudiStyle}">
 
                 <!--Name Field-->
                 <Label Grid.Row="0" Grid.Column="0"
@@ -61,7 +43,6 @@
 
                 <Entry Grid.Row="0" Grid.Column="1"
                         Text="{Binding Data.Name}"
-                           WidthRequest="280"
                            x:Name="Name_Entry"
                         Style="{StaticResource EntryStyle}"
                            TextChanged="EntryName_TextChanged"
@@ -75,7 +56,6 @@
 
                 <Entry Grid.Row="1" Grid.Column="1"
                         Text="{Binding Data.Description}" 
-                           WidthRequest="280"
                            x:Name="Description_entry"
                            TextChanged="EntryDescription_TextChanged"
                         Style="{StaticResource EntryStyle}"
@@ -102,7 +82,6 @@
                         HorizontalOptions="End"/>
 
                 <Picker Grid.Row="3" Grid.Column="1"
-                        WidthRequest="280"
                         ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" 
                         SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="AttributePicker" 
@@ -114,7 +93,6 @@
                         Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
 
                 <Entry Grid.Row="4" Grid.Column="1"
-                        WidthRequest="280"
                         x:Name="ImageEntry"
                         Text="{Binding Data.ImageURI}" 
                         Style="{StaticResource EntryStyle}"
@@ -125,13 +103,12 @@
                         Text= "Damage:" 
                         Style="{StaticResource LabelStyle}"
                            HorizontalOptions="End"/>
-                <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
 
                     <Label 
                                 Text="{Binding Data.Damage}" 
                                 x:Name="DamageValue"
                                 Style="{StaticResource ValueStyle}"
-                                Padding="0,0,10,0"
                                 HorizontalOptions="Start"
                                 />
 
@@ -145,13 +122,12 @@
                             Text="Range:" 
                             Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="6" Grid.Column="0"/>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                <StackLayout Style="{StaticResource HorizontalStack}"  Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand">
 
                     <Label 
                                     Text="{Binding Data.Range}" 
                                     x:Name="RangeValue"
                                     Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
                                     HorizontalOptions="Start"/>
 
                     <Stepper 
@@ -165,13 +141,12 @@
                             Text="Value:"
                             Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="7" Grid.Column="0"/>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="7" Grid.Column="1" HorizontalOptions="Start">
+                <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="7" Grid.Column="1" HorizontalOptions="Start">
 
                     <Label
                                 Text="{Binding Data.Value}" 
                                 x:Name="ValueValue"
                                 Style="{StaticResource ValueStyle}"
-                                Padding="0,0,10,0"
                                 HorizontalOptions="Start"/>
 
                     <Stepper 
