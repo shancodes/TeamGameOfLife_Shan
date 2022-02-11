@@ -282,6 +282,15 @@
                 <Setter Property="AlignContent" Value="SpaceAround" />
             </Style>
 
+            <Style TargetType="FlexLayout"
+                x:Key="CharacterReadFlex">
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Wrap" Value="Wrap" />
+                <Setter Property="JustifyContent" Value="SpaceAround" />
+                <Setter Property="AlignContent" Value="SpaceAround" />
+            </Style>
+
+
             <!--ItemPopUp-->
             <Style TargetType="StackLayout"
                 x:Key="CharacterItemPopup">

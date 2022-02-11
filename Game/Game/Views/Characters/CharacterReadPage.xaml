@@ -179,10 +179,7 @@
                     </StackLayout>
 
                     <FlexLayout 
-                        Margin="5"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround"
-                        AlignContent="SpaceAround"
+                        Style="{StaticResource CharacterReadFlex}"
                         x:Name="ItemBox">
                     </FlexLayout>
 
