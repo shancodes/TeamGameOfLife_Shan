@@ -23,52 +23,41 @@
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
                     SelectionChanged="OnCollectionViewSelectionChanged"
-                    ItemsLayout="VerticalGrid,2"
-                    Margin="5,0,5,0"
-                    HorizontalOptions="Center"
+                    Style="{StaticResource CollectionViewIndexPage}"
                     >
                 
                 <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-
-                        <Image Grid.RowSpan="2"
+                        <Grid Style="{StaticResource GridIndexStyle}">
+                            <Image Grid.RowSpan="2"
                             Source="{Binding ImageURI}"
                             Style="{StaticResource ImageMediumStyle}"
-                        />
+                            />
 
-                        <Label Grid.Column="1"
+                            <Label Grid.Column="1"
                             Text="{Binding Name}"
-                        />
+                            />
 
-                         <Label 
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Text="Damage:"/>
+                            <Label 
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="Damage:"/>
                             <Label Grid.Row="1" Grid.Column="2" Text="{Binding Damage}"></Label>
 
 
-                        <Label 
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Text="Range:"/>
-                        <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
+                            <Label 
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Text="Range:"/>
+                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
 
-                        <Label 
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        Text="Value:"/>
-                        <Label Grid.Row="3" Grid.Column="2" Text="{Binding Value}"></Label>
-                        
-                    </Grid>
+                            <Label 
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Text="Value:"/>
+                            <Label Grid.Row="3" Grid.Column="2" Text="{Binding Value}"></Label>
+
+                        </Grid>
 
                     </DataTemplate>
             </CollectionView.ItemTemplate>

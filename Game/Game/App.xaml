@@ -247,6 +247,15 @@
                 <Setter Property="ColumnDefinitions" Value="auto"/>
             </Style>
 
+            <Style TargetType="Grid"
+                x:Key="GridIndexStyle">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="RowDefinitions" Value="auto"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
+            </Style>
+
             <!--Grid-->
             
             <Style TargetType="Grid"
@@ -345,8 +354,7 @@
                 <Setter Property="MinimumHeightRequest" Value="10"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
             </Style>
-                   
-
+            
             <Style TargetType="Image"
                 x:Key="ImageLargeLogoStyle"
                 BasedOn="{StaticResource ImageLargeStyle}">
