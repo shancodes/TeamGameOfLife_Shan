@@ -171,7 +171,6 @@
                             <Button ImageSource="create.png" x:Name="CreateButton" Clicked="Save_Clicked" HorizontalOptions="End"/>
 
                         </StackLayout>
-
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
