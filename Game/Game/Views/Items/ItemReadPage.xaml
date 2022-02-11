@@ -31,52 +31,41 @@
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                 <Label Text="Name : " Style="{StaticResource LabelStyle}"  HorizontalTextAlignment="Center"/>
+                
                 <Label Text="{Binding Data.Name}"  Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                <Label 
-                                Text="Description : " 
-                                Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
-                <Label 
-                                Text="{Binding Data.Description}" 
-                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
+                <Label Text="Description : " Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
+                
+                <Label Text="{Binding Data.Description}" Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
-                <Label 
-                                Text="Location : " 
-                                Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
-                <Label 
-                                Text="{Binding Data.Location}" 
-                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
+                <Label Text="Location : " Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
+                
+                <Label Text="{Binding Data.Location}" Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="Center">
                 <Label
-                    Text="Damage   "
-                    Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
+                    Text="Damage   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
                 <Label 
-                    Text="{Binding Data.Damage}" 
-                    Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
+                    Text="{Binding Data.Damage}" Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
                 <Label
-                    Text="Range   "
-                    Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
+                    Text="Range   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
                 <Label 
-                    Text="{Binding Data.Range}" 
-                    Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
+                    Text="{Binding Data.Range}" Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
                 <Label
-                    Text="Value   "
-                    Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
+                    Text="Value   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
                 <Label 
-                    Text="{Binding Data.Value}" 
-                    Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
+                    Text="{Binding Data.Value}" Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
             </StackLayout>
 
             <Grid Style="{StaticResource GridItemReadStyle}">
