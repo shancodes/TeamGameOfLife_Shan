@@ -62,7 +62,7 @@
 
             <!--stack layout for Delete and Cancel buttons-->
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+            <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
                 
                 <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
                 <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
