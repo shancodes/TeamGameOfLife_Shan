@@ -188,10 +188,10 @@
 
             <!--Delete Done and Update buttons-->
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
-                
-                <Button ImageSource="delete.png" BackgroundColor="Transparent" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand"></Button>
-                <Button ImageSource="done.png" BackgroundColor="Transparent" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand"></Button>
-                <Button  ImageSource="update.png" BackgroundColor="Transparent" Clicked="Update_Clicked" HorizontalOptions="CenterAndExpand"></Button>
+
+                <Button ImageSource="delete.png" Style="{StaticResource CharacterButtons}" Clicked="Delete_Clicked"></Button>
+                <Button ImageSource="done.png" Style="{StaticResource CharacterButtons}" Clicked="Done_Clicked"></Button>
+                <Button  ImageSource="update.png" Style="{StaticResource CharacterButtons}" Clicked="Update_Clicked"></Button>
                 
             </StackLayout>
             
