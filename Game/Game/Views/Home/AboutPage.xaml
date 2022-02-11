@@ -21,7 +21,7 @@
             <Label Text="Developers" WidthRequest="280" HorizontalTextAlignment="Center"/>
 
 
-            <StackLayout Style="{StaticResource HorizontalStackAboutPage}">
+            <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="kruta.png" Style="{StaticResource ImageAboutPage}"/>
                     <Label Text="Kruta" HorizontalTextAlignment="Center"></Label>
@@ -41,7 +41,7 @@
             
             <Label Text="Designers" HorizontalOptions="CenterAndExpand"/>
             
-            <StackLayout Style="{StaticResource HorizontalStackAboutPage}">
+            <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="natasha.png" Style="{StaticResource ImageAboutPage}"/>
                     <Label Text="Natasha" HorizontalTextAlignment="Center"></Label>
