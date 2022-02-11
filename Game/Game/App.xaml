@@ -132,12 +132,32 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="StyleLabel"
+                BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="LabelStyleForAttributes"
+                BasedOn="{StaticResource StyleLabel}">
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="ValueStyle"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
                 <Setter Property="Padding" Value="0,0,10,0"/>
             </Style>
-
+            
+            <Style TargetType="Label"
+                x:Key="StyleValue"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="0,0,10,0"/>
+            </Style>
+            
             <Style TargetType="Label"
                 x:Key="ValueStyleTextRight"
                 BasedOn="{StaticResource ValueStyle}">
@@ -552,6 +572,11 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="OuterStack" BasedOn="{StaticResource OuterBoxStack}">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="CardImageTextBox">
                 <Setter Property="Orientation" Value="Vertical" />
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -688,6 +713,11 @@
                 <Setter Property="VerticalOptions" Value="EndAndExpand" />
             </Style>
 
+            <Style TargetType="AbsoluteLayout"
+                x:Key="BasicAbsoluteLayout">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
             <!-- Frame -->
             <Style TargetType="Frame">
                 <Setter Property="Margin" Value="0" />
@@ -745,6 +775,11 @@
                 <Setter Property="BackgroundColor" Value= "LightGray" />
                 <Setter Property="WidthRequest" Value="280"/>
                 <Setter Property="PlaceholderColor" Value="{StaticResource TriciaryTextColor}" />
+            </Style>
+
+            <Style TargetType="Entry"
+                x:Key="EntryStyleMonster" BasedOn="{StaticResource EntryStyle}">
+                <Setter Property="HorizontalOptions" Value="Start" />
             </Style>
 
             <Style TargetType="Entry" x:Key="EntryAboutPage" BasedOn="{StaticResource EntryStyle}">

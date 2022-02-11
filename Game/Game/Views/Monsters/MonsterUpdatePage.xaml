@@ -10,13 +10,13 @@
              x:Class="Game.Views.MonsterUpdatePage">
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" Spacing="20">
-            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start" Style="{StaticResource ButtoNavigationBar}"/>
-            <Label Text="Update Monster" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black" Style="{StaticResource HeaderStyle}"/>
+        <StackLayout Style="{StaticResource NavigationHeader}">
+            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked"  Style="{StaticResource ButtoNavigationBar}"/>
+            <Label Text="Update Monster" Style="{StaticResource MonsterHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
-   
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
@@ -25,102 +25,78 @@
 
     <ContentPage.Content>
         <AbsoluteLayout
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
-        >
+       Style="{StaticResource BasicAbsoluteLayout}">
 
-            <StackLayout Style="{StaticResource VerticalStack}"
-                    AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                    AbsoluteLayout.LayoutFlags="All">
+            <StackLayout Style="{StaticResource Boundaries}">
 
                 <ScrollView>
-                    <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
+                    <StackLayout Style="{StaticResource OuterStack}">
+                        <StackLayout Style="{StaticResource BattleMapBox}" >
+                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
 
                             <!--Name Field-->
-                            <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+                            <Grid Style="{StaticResource MonsterReadGridStyle}">
 
                                 <Label Grid.Row="0" Grid.Column="0"
                                     Text="Name : " 
-                                    Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                                 <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
-                                     WidthRequest="280"
                                      x:Name="Name_Entry"
-                                     Style="{StaticResource EntryStyle}" HorizontalOptions="Start" TextChanged="EntryName_TextChanged"/>
+                                     Style="{StaticResource EntryStyleMonster}"  TextChanged="EntryName_TextChanged"/>
 
                                 <!--Description Field-->
                                 <Label Grid.Row="2" Grid.Column="0"
                                     Text="Description : " 
-                                    Style="{StaticResource LabelStyle}"
-                                       HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
+                                       
 
                                 <Entry Grid.Row="2" Grid.Column="1"
                                      Text="{Binding Data.Description, Mode=TwoWay}" 
-                                     WidthRequest="280"
                                      x:Name="Description_Entry"
-                                     Style="{StaticResource EntryStyle}"
-                                     HorizontalOptions="Start" TextChanged="EntryDescription_TextChanged"/>
+                                     Style="{StaticResource EntryStyleMonster}"
+                                     TextChanged="EntryDescription_TextChanged"/>
 
                                 <!--Difficulty-->
                                 <Label Grid.Row="4" Grid.Column="0"
                                     Text="Difficulty : " 
-                                    Style="{StaticResource LabelStyle}"
-                                       HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
+
 
                                 <Picker Grid.Row="4" Grid.Column="1"
                                         ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
                                     SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                     x:Name="DifficultyPicker"
-                                        WidthRequest="280"
-                                    HorizontalOptions="Start"
-                                />
+                                    Style="{StaticResource EntryStyleMonster}"/>
+
+
 
                             </Grid>
 
-                            <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+                            <Grid Style="{StaticResource MonsterReadGridStyle}">
 
                                 <!--Attack-->
-                                <Label Text="Attack:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="1" Grid.Column="0" />
+                                <Label Text="Attack:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="1" Grid.Column="0" />
                                 <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
-                                    HorizontalOptions="Center"
-                                    HorizontalTextAlignment="Center"/>
+                                    Style="{StaticResource StyleValue}"/>
+
 
                                     <Stepper 
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
                                     ValueChanged="Attack_OnStepperValueChanged"
-                                        HorizontalOptions="Start"/>
+                                    HorizontalOptions="Start"/>
                                 </StackLayout>
 
                                 <!--Defense-->
-                                <Label Text="Defense:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="2" Grid.Column="0" />
+                                <Label Text="Defense:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="2" Grid.Column="0" />
                                 <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
-                                    HorizontalOptions="Center"
-                                    HorizontalTextAlignment="Center"/>
+                                    Style="{StaticResource StyleValue}"/>
 
                                     <Stepper 
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
@@ -129,15 +105,12 @@
                                 </StackLayout>
 
                                 <!--Speed-->
-                                <Label Text="Speed:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="3" Grid.Column="0" />
+                                <Label Text="Speed:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="3" Grid.Column="0" />
                                 <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    Padding="0,0,10,0"
-                                    HorizontalOptions="Center"
-                                    HorizontalTextAlignment="Center"/>
+                                    Style="{StaticResource StyleValue}"/>
 
                                     <Stepper 
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
@@ -149,7 +122,7 @@
                         </StackLayout>
 
 
-                        <StackLayout Style="{StaticResource HorizontalStack}"  HorizontalOptions="Center" Spacing="40">
+                        <StackLayout Style="{StaticResource ButtonPair}">
                             <Button ImageSource="reset.png"  Clicked="Reset_Clicked" HorizontalOptions="End"/>
                             <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
                         </StackLayout>
