@@ -596,6 +596,13 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="StackOuterBox"
+                BasedOn="{StaticResource OuterBoxStack}">
+                <Setter Property="Spacing" Value="10"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="OuterStack" BasedOn="{StaticResource OuterBoxStack}">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
             </Style>
