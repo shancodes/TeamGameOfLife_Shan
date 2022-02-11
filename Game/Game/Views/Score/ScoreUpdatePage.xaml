@@ -11,9 +11,9 @@
              >
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" Spacing="20">
+        <StackLayout Style="{StaticResource NavigationHeader}">
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
-            <Label Text="Update Score " HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="Black"/>
+            <Label Text="Update Score " Style="{StaticResource MonsterHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -30,10 +30,9 @@
 
                 <Entry 
                     Text="{Binding Data.GameDate}"
-                    WidthRequest="280"
                     TextChanged="GameTime_Entry_TextChanged"
                     x:Name="GameTime_Entry"
-                    Style="{StaticResource EntryStyle}"/>
+                    Style="{StaticResource EntryStyleMonster}"/>
             </StackLayout>
             
              <!--Name-->
@@ -45,8 +44,7 @@
                     Text="{Binding Data.Name, Mode=TwoWay}" 
                     TextChanged="Name_Entry_TextChanged"
                     x:Name="Name_Entry"
-                    WidthRequest="280"
-                    Style="{StaticResource EntryStyle}"/>
+                    Style="{StaticResource EntryStyleMonster}"/>
             </StackLayout>
 
             <!--Score-->
@@ -58,10 +56,10 @@
                     Text="{Binding Data.ScoreTotal, Mode=TwoWay}"
                     x:Name="Score_Entry"
                     TextChanged="Score_Entry_TextChanged"
-                    Style="{StaticResource EntryStyle}"  FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="Red"/>
+                    Style="{StaticResource EntryStyleRed}"  />
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+            <StackLayout Style="{StaticResource ButtonPair}" >
 
                 <Button ImageSource="reset.png" Clicked="Reset_Clicked" HorizontalOptions="End"/>
                 <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End" />

@@ -721,6 +721,8 @@
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
 
+
+
             <Style TargetType="StackLayout" x:Key="StackColorSpacing">
                 <Setter Property="BackgroundColor" Value="{StaticResource NavigationBarColor}" />
                 <Setter Property="WidthRequest" Value="200" />
@@ -836,6 +838,12 @@
                 <Setter Property="BackgroundColor" Value= "LightGray" />
                 <Setter Property="WidthRequest" Value="280"/>
                 <Setter Property="PlaceholderColor" Value="{StaticResource TriciaryTextColor}" />
+            </Style>
+
+            <Style x:Key="EntryStyleRed" TargetType="Entry" BasedOn="{StaticResource EntryStyle}" >
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="Red" />
             </Style>
 
             <Style TargetType="Entry"
