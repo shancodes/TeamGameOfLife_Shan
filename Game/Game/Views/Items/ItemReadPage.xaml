@@ -47,21 +47,21 @@
                 <Label Text="{Binding Data.Location}" Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="10" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                 <Label
                     Text="Damage   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
                 <Label 
                     Text="{Binding Data.Damage}" Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                 <Label
                     Text="Range   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
                 <Label 
                     Text="{Binding Data.Range}" Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" Spacing="20" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                 <Label
                     Text="Value   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
                 <Label 

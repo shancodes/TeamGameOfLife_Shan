@@ -551,6 +551,12 @@
                 <Setter Property="Spacing" Value="40"/>
             </Style>
 
+            <Style TargetType="StackLayout"
+                   x:Key="HorizontalReadItemStyle" BasedOn="{StaticResource HorizontalStack}">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Spacing" Value="20"/>
+            </Style>
+
 
             <Style TargetType="StackLayout"
                    x:Key="NavigationHeader" >
