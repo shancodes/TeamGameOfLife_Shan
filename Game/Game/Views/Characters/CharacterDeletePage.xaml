@@ -34,9 +34,7 @@
 
                     <Label 
                         Text="{Binding Data.Name}" 
-                        Style="{StaticResource ValueStyle}"
-                        HorizontalOptions="End"
-                        HorizontalTextAlignment="End"/>
+                        Style="{StaticResource ValueStyleTextRight}"/>
 
                 </StackLayout>
                 
@@ -53,9 +51,7 @@
 
                     <Label 
                         Text="{Binding Data.Description}" 
-                        Style="{StaticResource ValueStyle}"
-                        HorizontalOptions="End"
-                        HorizontalTextAlignment="End"/>
+                        Style="{StaticResource ValueStyleTextRight}"/>
 
                 </StackLayout>
                 
@@ -70,8 +66,8 @@
             </StackLayout>
 
             <!--stack layout for Delete and Cancel buttons-->
-            
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+
+            <StackLayout Style="{StaticResource ButtonPair}">
 
                 <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
                 <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
