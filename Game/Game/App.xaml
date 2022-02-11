@@ -304,6 +304,16 @@
             </Style>
 
             <Style TargetType="Grid"
+                x:Key="GridItemReadStyle">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="RowSpacing" Value="10" />
+                <Setter Property="ColumnSpacing" Value="5" />
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="RowDefinitions" Value="auto"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
+            </Style>
+
+            <Style TargetType="Grid"
                 x:Key="CharacterReadGridStyle">
                 <Setter Property="BackgroundColor" Value="Black" />
                 <Setter Property="RowSpacing" Value="1" />
