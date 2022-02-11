@@ -60,7 +60,7 @@
                             TextChanged="EntryName_TextChanged"
                             Text="{Binding Data.Name}" 
                             Style="{StaticResource EntryStyle}"
-                            WidthRequest="280" HorizontalTextAlignment="Start"/>
+                            HorizontalTextAlignment="Start"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand">
@@ -73,8 +73,7 @@
                             x:Name="Score_Entry"
                             Text="{Binding Data.ScoreTotal}" 
                             TextChanged="EntryDescription_TextChanged"
-                            Style="{StaticResource EntryStyle}"
-                            WidthRequest="280"/>
+                            Style="{StaticResource EntryStyle}"/>
                     </StackLayout>
 
                     <!--Cancel and Create buttons-->
