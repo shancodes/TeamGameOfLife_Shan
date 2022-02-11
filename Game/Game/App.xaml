@@ -168,6 +168,15 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="MonsterHeader"
+                BasedOn="{StaticResource HeaderStyle}">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource TriciaryTextColor}" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="MessageLargeStyle"
                 BasedOn="{StaticResource MessageStyle}">
                 <Setter Property="FontSize" Value="Large" />
@@ -268,6 +277,26 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="RowSpacing" Value="5" />
                 <Setter Property="ColumnSpacing" Value="2" />
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="RowDefinitions" Value="auto"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
+            </Style>
+
+            <Style TargetType="Grid"
+                x:Key="MonsterReadGridStyle">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="RowSpacing" Value="10" />
+                <Setter Property="ColumnSpacing" Value="15" />
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="RowDefinitions" Value="auto"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
+            </Style>
+
+            <Style TargetType="Grid"
+                x:Key="ReadPageButtonGrid">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="RowSpacing" Value="10" />
+                <Setter Property="ColumnSpacing" Value="5" />
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="RowDefinitions" Value="auto"/>
                 <Setter Property="ColumnDefinitions" Value="*"/>
@@ -452,6 +481,12 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                   x:Key="NavigationHeader" >
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="Spacing" Value="20" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                    x:Key="StackIsland" >
                 <Setter Property="Padding" Value="20" />
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -475,6 +510,11 @@
                 x:Key="VerticalStack"
                    BasedOn="{StaticResource HorizontalStack}">
                 <Setter Property="Orientation" Value="Vertical" />
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="Boundaries" BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="1,1,1,1" />
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
             </Style>
 
             <Style TargetType="StackLayout"
@@ -644,7 +684,7 @@
                 <Setter Property="Margin" Value="0" />
                 <Setter Property="Padding" Value="0" />
             </Style>
-            
+
             <Style TargetType="Grid"
                 x:Key="MapGridStyle">
                 <Setter Property="VerticalOptions" Value="Fill" />

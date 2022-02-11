@@ -9,8 +9,8 @@
 
 
     <NavigationPage.TitleView >
-        <StackLayout Orientation="Horizontal" Spacing="20">
-            <Label  Text ="Monster Detail"   FontSize="Medium" TextColor="Black" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Style="{StaticResource HeaderStyle}"/>
+        <StackLayout Style="{StaticResource NavigationHeader}">
+            <Label  Text ="Monster Detail"   Style="{StaticResource MonsterHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -19,9 +19,8 @@
         VerticalOptions="FillAndExpand"
         >
 
-        <StackLayout Style="{StaticResource VerticalStack}"
-                    AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                    AbsoluteLayout.LayoutFlags="All">
+        <StackLayout Style="{StaticResource Boundaries}">
+            
 
             <ScrollView x:Name="ScrollView">
                 <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
@@ -30,13 +29,7 @@
 
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
-                        <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                        <Grid  Style="{StaticResource MonsterReadGridStyle}">
 
                             <!--Name Field-->
                             <Label Grid.Row="0" Grid.Column="0"
@@ -113,17 +106,7 @@
                         </Grid>
 
                         <Grid
-                            RowSpacing="10"
-                            ColumnSpacing="5"
-                            HorizontalOptions="CenterAndExpand"
-                            Margin="10">
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                            Style="{StaticResource ReadPageButtonGrid}">
 
                             <Button ImageSource="delete.png" BackgroundColor="Transparent" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
                             <Button ImageSource="done.png" BackgroundColor="Transparent" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
