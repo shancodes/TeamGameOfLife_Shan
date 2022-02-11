@@ -159,6 +159,13 @@
             </Style>
             
             <Style TargetType="Label"
+                x:Key="ValueStyleLabel"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="ValueStyleTextRight"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="End" />
