@@ -25,8 +25,7 @@
             Spacing="10">
 
             <StackLayout 
-                HorizontalOptions="Center" 
-                Padding="20">
+                Style="{StaticResource ScoreDeleteStyle}">
 
                 <Label Text="Are you sure you want to &#x0d; delete this Score page?" Style="{StaticResource MessageStyle}" FontSize="Medium"/>
 

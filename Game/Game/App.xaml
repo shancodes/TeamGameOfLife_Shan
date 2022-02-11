@@ -327,6 +327,12 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="ScoreDeleteStyle">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Padding" Value="20" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="StackLayoutIndexPageStyle">
                 <Setter Property="Orientation" Value="Horizontal" />
                 <Setter Property="Spacing" Value="20" />
