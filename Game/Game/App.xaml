@@ -772,6 +772,12 @@
                 <Setter Property="BackgroundColor" Value = "LightGray" />
             </Style>
 
+            <Style TargetType="Picker"
+                 x:Key="CharacterUpdatePicker">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="WidthRequest" Value="280"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

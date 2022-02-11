@@ -98,9 +98,8 @@
                                 <Picker Grid.Row="3" Grid.Column="1"
                                     SelectedItem="{Binding SelectedItemProperty}" 
                                     SelectedIndexChanged="Level_Changed"
-                                    WidthRequest="280"
-                                    x:Name="LevelPicker"
-                                    HorizontalOptions="Start"/>
+                                    Style="{StaticResource CharacterUpdatePicker}"
+                                    x:Name="LevelPicker"/>
                             </Grid>
 
                             <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
