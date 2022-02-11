@@ -623,7 +623,7 @@
             </Style>
 
             <Style TargetType="StackLayout"
-                x:Key="HorizontalStackAboutPage"
+                x:Key="HorizontalStackAboutPageStyle"
                 BasedOn="{StaticResource HorizontalStack}">
                 <Setter Property="Spacing" Value="20" />
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -631,6 +631,11 @@
 
             <Style TargetType="StackLayout" BasedOn="{StaticResource HorizontalStack}" x:Key="HorizontalStackWithPaddingAboutPage">
                    <Setter Property="Padding" Value="50,0,0,0"/>
+            </Style>
+
+            <Style TargetType="StackLayout" BasedOn="{StaticResource HorizontalStack}" x:Key="HorizontalStackPaddingStyle">
+                <Setter Property="Padding" Value="10,0,10,0"/>
+                <Setter Property="Spacing" Value="20"/>
             </Style>
 
             <Style TargetType="StackLayout" BasedOn="{StaticResource VerticalStack}" x:Key="VerticalStackWithPaddingAboutPage">
