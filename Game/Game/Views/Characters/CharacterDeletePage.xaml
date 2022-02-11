@@ -49,12 +49,11 @@
                     Text="Description: " 
                     Style="{StaticResource LabelStyle}"/>
                 
-                <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20">
+                <StackLayout Style="{StaticResource HorizontalStack}" >
 
                     <Label 
                         Text="{Binding Data.Description}" 
                         Style="{StaticResource ValueStyle}"
-                        Padding="0,0,10,0"
                         HorizontalOptions="End"
                         HorizontalTextAlignment="End"/>
 
