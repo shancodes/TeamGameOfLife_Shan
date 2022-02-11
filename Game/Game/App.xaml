@@ -267,6 +267,12 @@
                 <Setter Property="Padding" Value="10" />
             </Style>
 
+            <Style TargetType="StackLayout"
+                x:Key="StackLayoutIndexPageStyle">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="Spacing" Value="20" />
+            </Style>
+
             <Style TargetType="Grid"
                 x:Key="MonsterCreateGridStyle">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
