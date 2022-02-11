@@ -60,10 +60,9 @@
                                 <Label Grid.Row="0" Grid.Column="0"
                                     Text="Name: " 
                                     Style="{StaticResource LabelStyle}"
-                                        HorizontalOptions="End"/>
+                                    HorizontalOptions="End"/>
 
                                 <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
-                                     WidthRequest="280"
                                      x:Name="Name_Entry"
                                      Style="{StaticResource EntryStyle}" HorizontalOptions="Start" TextChanged="EntryName_TextChanged"/>
 
@@ -75,7 +74,6 @@
 
                                 <Entry Grid.Row="1" Grid.Column="1"
                                      Text="{Binding Data.Description, Mode=TwoWay}" 
-                                     WidthRequest="280"
                                      x:Name="Description_Entry"
                                      Style="{StaticResource EntryStyle}"
                                      HorizontalOptions="Start" TextChanged="EntryDescription_TextChanged"/>
