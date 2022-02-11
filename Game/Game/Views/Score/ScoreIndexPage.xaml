@@ -10,8 +10,8 @@
 
     <!--NavigationPage with Create button and Text-->
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Score Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout Style="{StaticResource NavigationHeader}">
+            <Label Text="Score Index" Style="{StaticResource MonsterHeader}"/>
             <Button ImageSource="create_navibar_top.png" Clicked="AddScore_Clicked" HorizontalOptions="End"/>
         </StackLayout>
     </NavigationPage.TitleView>
@@ -32,9 +32,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid RowSpacing="1"
-                                  HorizontalOptions="CenterAndExpand"
-                                  VerticalOptions="CenterAndExpand"
+                            <Grid Style="{StaticResource ScoreIndexGrid}"
                                   >
 
                                 <StackLayout 
@@ -44,12 +42,7 @@
                                     OutlineColor="Black" >
 
 
-                                        <StackLayout 
-                                        BackgroundColor="Teal"
-                                        WidthRequest="200"
-                                        MinimumHeightRequest="800">
-
-
+                                        <StackLayout Style="{StaticResource StackColorSpacing}">
                                             <!--Label for Name-->
                                             <Label 
                                                Text="{Binding Name}" 
