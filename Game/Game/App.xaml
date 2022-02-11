@@ -239,7 +239,7 @@
             </Style>
 
             <!--Grid-->
-
+            
             <Style TargetType="Grid"
                 x:Key="CharacterCreateGridStyle">
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -248,6 +248,13 @@
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="RowDefinitions" Value="auto"/>
                 <Setter Property="ColumnDefinitions" Value="*"/>
+            </Style>
+
+            <Style TargetType="Grid"
+                 x:Key="CharacterCreateGridStyle">
+                <Setter Property="ColumnSpacing" Value="1" />
+                <Setter Property="RowSpacing" Value="1" />
+                <Setter Property="BackgroundColor" Value="black" />
             </Style>
 
             <Style TargetType="StackLayout"

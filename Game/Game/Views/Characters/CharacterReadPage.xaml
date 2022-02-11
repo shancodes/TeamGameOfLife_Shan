@@ -59,9 +59,7 @@
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Frame OutlineColor="Black" Padding="1">
-                                <Grid ColumnSpacing="1" 
-                                    RowSpacing="1"
-                                    BackgroundColor="black">
+                                <Grid Style="{StaticResource CharacterCreateGridStyle}">
 
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto"/>
