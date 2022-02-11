@@ -219,7 +219,15 @@
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
 
-            <!--FlexLayout-->
+            <Style TargetType="Label"
+                   x:Key="DeletePageLabelStyle">
+                   <Setter Property="Padding" Value="0,0,10,0"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="HorizontalTextAlignment" Value="End"/>
+            </Style>
+
+
+                <!--FlexLayout-->
             <Style TargetType="FlexLayout"
                    x:Key="FlexLayoutCrudi">
                 <Setter Property="AlignContent" Value="SpaceAround"/>
@@ -561,6 +569,17 @@
                 <Setter Property="Spacing" Value="1" />
             </Style>
 
+            <Style TargetType="StackLayout"
+                   x:Key="HorizontalStackPageStyle">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="40"></Setter>
+            </Style>
+
+            <Style TargetType="StackLayout"
+                   x:Key="HorizontalStackDeleteItemPageStyle">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="10"></Setter>
+            </Style>
 
             <Style TargetType="StackLayout"
                 x:Key="ItemImageLabelBox"
