@@ -1329,7 +1329,7 @@ namespace UnitTests.Engine.EngineBase
         }
 
         [Test]
-        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Move()
+        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Attack()
         {
             // Arrange
 
