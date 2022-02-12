@@ -163,6 +163,7 @@
     <Content Include="fast_dagger.png" />
     <Content Include="feet1.png" />
     <Content Include="feet2.png" />
+    <Content Include="fiery_katana.png" />
     <Content Include="fire_princess.png" />
     <Content Include="fire_ring.png" />
     <Content Include="fire_wielder.png" />
@@ -180,6 +181,8 @@
     <Content Include="icon_edit.png" />
     <Content Include="icon_new.png" />
     <Content Include="icon_save.png" />
+    <Content Include="infinity_tiara.png" />
+    <Content Include="iron shield.png" />
     <Content Include="item.png" />
     <Content Include="items.png" />
     <Content Include="items_icon.png" />
@@ -197,6 +200,7 @@
     <Content Include="night_walker.png" />
     <Content Include="priya.png" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="red_necklace.png" />
     <Content Include="reset.png" />
     <Content Include="ring1.png" />
     <Content Include="ring2.png" />

@@ -412,4 +412,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\back_image_two.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fiery_katana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\infinity_tiara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iron shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\red_necklace.png" />
+  </ItemGroup>
 </Project>

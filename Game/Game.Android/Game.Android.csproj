@@ -350,7 +350,7 @@
     <AndroidResource Include="Resources\drawable\monster_icon.png" />
   </ItemGroup>
   <ItemGroup>
-	<AndroidResource Include="Resources\drawable\back_image_two.png" />
+    <AndroidResource Include="Resources\drawable\back_image_two.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ice_wolf.png" />
@@ -369,6 +369,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ice_queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fiery_katana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\infinity_tiara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\iron shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\red_necklace.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
