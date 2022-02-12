@@ -75,31 +75,31 @@ namespace Game.GameRules
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.CurrentHealth},
-/*
+
                 
                 new ItemModel {
-                    Name = "Mace",
-                    Description = "watch out",
-                    ImageURI = "sword6.png",
+                    Name = "Fiery Katana",
+                    Description = "Katana made of fire",
+                    ImageURI = "fiery_katana.png",
                     Range = 0,
                     Damage = 6,
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.Speed},
                 new ItemModel {
-                    Name = "Arrows",
-                    Description = "Poke your eye out",
-                    ImageURI = "sword8.png",
+                    Name = "Infinity Tiara",
+                    Description = "Powerful tiara",
+                    ImageURI = "infinity_tiara.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
+                    Location = ItemLocationEnum.Head,
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Boxing",
-                    Description = "watch out",
-                    ImageURI = "sword9.png",
+                    Name = "Iron Shield",
+                    Description = "Shield made of iron",
+                    ImageURI = "iron_shield.png",
                     Range = 0,
                     Damage = 6,
                     Value = 9,
@@ -107,15 +107,15 @@ namespace Game.GameRules
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
-                    Name = "Bow",
-                    Description = "Fast Bow",
-                    ImageURI = "sword10.png",
+                    Name = "Red Necklace",
+                    Description = "Fast Red Necklace",
+                    ImageURI = "red_necklace.png",
                     Range = 10,
                     Damage = 10,
                     Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
+                    Location = ItemLocationEnum.Necklace,
                     Attribute = AttributeEnum.Attack},
-
+/*
                 new ItemModel {
                     Name = "Fire Bow",
                     Description = "Fast Bow",
