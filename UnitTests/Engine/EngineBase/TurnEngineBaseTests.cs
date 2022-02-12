@@ -1355,7 +1355,7 @@ namespace UnitTests.Engine.EngineBase
             // Reset
 
             // Assert
-            Assert.AreEqual(ActionEnum.Move, result);
+            Assert.AreEqual(ActionEnum.Attack, result);
         }
 
         /// <summary>
