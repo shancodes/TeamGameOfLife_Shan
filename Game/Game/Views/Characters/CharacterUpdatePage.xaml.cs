@@ -190,7 +190,7 @@ namespace Game.Views
         public async void Reset_Clicked(object sender, EventArgs e)
         {
             reset_started = true;
-            recover_original_values();
+            Recover_Original_Values();
             UpdatePBContextWithoutHealth();
             reset_started = false;
         }
@@ -206,11 +206,14 @@ namespace Game.Views
             // Don't want to set the value on update constructor, only after save on the page
             // need to make sure that cancel from a save, actually cancels.
             // Make a copy of the object and work from that and then have that passed in to update
-            recover_original_values();
+            Recover_Original_Values();
             _ = await Navigation.PopModalAsync();
         }
 
-        private void recover_original_values()
+        /// <summary>
+        /// Sets the ViewModel data object to the original state when the page was loaded which was backed up in OriginalModel
+        /// </summary>
+        private void Recover_Original_Values()
         {
             this.ViewModel.Data.Update(OriginalModel);
             MessagingCenter.Send(this, "Update", ViewModel.Data);
