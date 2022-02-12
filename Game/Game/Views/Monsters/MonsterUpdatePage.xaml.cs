@@ -21,8 +21,8 @@ namespace Game.Views
     {
         // The Monster to create
         public GenericViewModel<MonsterModel> ViewModel { get; set; }
+        // Object to store backup of original values of the view model
         private MonsterModel OriginalModel;
-        private bool reset_started = false;
 
         // Hold the current location selected
         public ItemLocationEnum PopupLocationEnum = ItemLocationEnum.Unknown;
