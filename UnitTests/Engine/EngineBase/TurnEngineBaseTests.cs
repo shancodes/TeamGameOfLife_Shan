@@ -1357,40 +1357,6 @@ namespace UnitTests.Engine.EngineBase
             // Assert
             Assert.AreEqual(ActionEnum.Attack, result);
         }
-
-        /// <summary>
-        /// Test to check valid character with range return an Attack
-        /// </summary>
-        [Test]
-        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Attack()
-        {
-            // Arrange
-
-            var CharacterPlayer = new PlayerInfoModel(new CharacterModel());
-
-            // Get the longest range weapon in stock.
-            var weapon = ItemIndexViewModel.Instance.Dataset.Where(m => m.Range > 1).ToList().OrderByDescending(m => m.Range).FirstOrDefault();
-            CharacterPlayer.PrimaryHand = weapon.Id;
-            CharacterPlayer.Range = 500;
-            Engine.EngineSettings.PlayerList.Add(CharacterPlayer);
-
-            var Monster = new MonsterModel();
-            Engine.EngineSettings.PlayerList.Add(new PlayerInfoModel(Monster));
-            Engine.EngineSettings.PlayerList.Add(new PlayerInfoModel(Monster));
-
-            _ = Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
-
-            Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
-            Engine.EngineSettings.BattleScore.AutoBattle = true;
-
-            // Act
-            var result = Engine.Round.Turn.DetermineActionChoice(CharacterPlayer);
-
-            // Reset
-
-            // Assert
-            Assert.AreEqual(ActionEnum.Attack, result);
-        }
         #endregion DetermineActionChoice
 
         #region ChooseToUseAbility
