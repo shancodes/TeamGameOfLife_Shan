@@ -21,8 +21,10 @@ namespace Game.Views
     {
         // The Character to create
         public GenericViewModel<CharacterModel> ViewModel { get; set; }
+        // Object to store backup of original values of the view model
         private CharacterModel OriginalModel;
-        private bool reset_started = false;
+        // Boolean flag to control health management
+        private bool ResetStarted = false;
 
         // Hold the current location selected
         public ItemLocationEnum PopupLocationEnum = ItemLocationEnum.Unknown;
@@ -109,8 +111,8 @@ namespace Game.Views
         {
             // Change the Level
             ViewModel.Data.Level = LevelPicker.SelectedIndex + 1;
-
-            if (!reset_started)
+            // Manage health only if we are not in reset mode
+            if (!ResetStarted)
             {
                 ManageHealth();
             }
@@ -189,10 +191,10 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void Reset_Clicked(object sender, EventArgs e)
         {
-            reset_started = true;
+            ResetStarted = true;
             Recover_Original_Values();
             UpdatePBContextWithoutHealth();
-            reset_started = false;
+            ResetStarted = false;
         }
 
         /// <summary>
