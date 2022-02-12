@@ -55,7 +55,7 @@ namespace Game.GameRules
         public static string GetMonsterImage()
         {
 
-            List<String> FirstNameList = new List<String> { "ice_bear.png", "ice_jester.png", "ice_princess.png", "ice_queen.png", "ice_thief.png", "ice_wolf.png" };
+            List<string> FirstNameList = new List<string> { "ice_bear.png", "ice_jester.png", "ice_princess.png", "ice_queen.png", "ice_thief.png", "ice_wolf.png" };
 
             var result = FirstNameList.ElementAt(DiceHelper.RollDice(1, FirstNameList.Count()) - 1);
 
@@ -116,7 +116,7 @@ namespace Game.GameRules
         public static string GetCharacterName()
         {
 
-            List<String> FirstNameList = new List<String> { "Fire Princess", "Fire Wielder", "Night Walker", "Sharp Shooter", "Swiftblade", "Wizard" };
+            List<string> FirstNameList = new List<string> { "Fire Princess", "Fire Wielder", "Night Walker", "Sharp Shooter", "Swiftblade", "Wizard" };
 
             var result = FirstNameList.ElementAt(DiceHelper.RollDice(1, FirstNameList.Count()) - 1);
 
@@ -131,7 +131,7 @@ namespace Game.GameRules
         /// <returns></returns>
         public static string GetCharacterDescription()
         {
-            List<String> StringList = new List<String> { "The amazing fire fighter", "Awesome fighter", "Sharp fighter", "Fast", "Tough fighhter", "Wonderful" };
+            List<string> StringList = new List<string> { "The amazing fire fighter", "Awesome fighter", "Sharp fighter", "Fast", "Tough fighhter", "Wonderful" };
 
             var result = StringList.ElementAt(DiceHelper.RollDice(1, StringList.Count()) - 1);
 
