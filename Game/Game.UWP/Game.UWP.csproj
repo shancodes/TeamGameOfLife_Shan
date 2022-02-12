@@ -183,6 +183,7 @@
     <Content Include="icon_save.png" />
     <Content Include="infinity_tiara.png" />
     <Content Include="iron shield.png" />
+    <Content Include="iron_shield.png" />
     <Content Include="item.png" />
     <Content Include="items.png" />
     <Content Include="items_icon.png" />
