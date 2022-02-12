@@ -660,7 +660,7 @@ namespace Game.Engine.EngineBase
         /// <returns></returns>
         public virtual HitStatusEnum RollToHitTarget(int AttackScore, int DefenseScore)
         {
-            var d20 = DiceHelper.RollDice(1, 6);
+            var d20 = DiceHelper.RollDice(1, 20);
 
             if (d20 == 1)
             {
@@ -676,7 +676,7 @@ namespace Game.Engine.EngineBase
                 return EngineSettings.BattleMessagesModel.HitStatus;
             }
 
-            if (d20 == 6)
+            if (d20 == 20)
             {
                 EngineSettings.BattleMessagesModel.AttackStatus = " rolls 20 for hit ";
                 EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Hit;

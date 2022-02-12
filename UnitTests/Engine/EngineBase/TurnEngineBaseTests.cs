@@ -483,7 +483,7 @@ namespace UnitTests.Engine.EngineBase
         }
 
         [Test]
-        public void TurnEngine_RolltoHitTarget_Forced_6_Should_Hit()
+        public void TurnEngine_RolltoHitTarget_Forced_6_Should_Miss()
         {
             // Arrange
             var AttackScore = 1;
@@ -499,7 +499,7 @@ namespace UnitTests.Engine.EngineBase
             _ = DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual(HitStatusEnum.Hit, result);
+            Assert.AreEqual(HitStatusEnum.Miss, result);
         }
 
         [Test]
@@ -527,7 +527,7 @@ namespace UnitTests.Engine.EngineBase
         }
 
         [Test]
-        public void TurnEngine_RolltoHitTarget_Valid_Forced_6_Critical_Hit_Should_Return_CriticalHit()
+        public void TurnEngine_RolltoHitTarget_Valid_Forced_6_Critical_Hit_Should_Return_Miss()
         {
             // Arrange
             var AttackScore = 1;
@@ -547,7 +547,7 @@ namespace UnitTests.Engine.EngineBase
             EngineSettingsModel.Instance.BattleSettingsModel.AllowCriticalHit = oldSeting;
 
             // Assert
-            Assert.AreEqual(HitStatusEnum.CriticalHit, result);
+            Assert.AreEqual(HitStatusEnum.Miss, result);
         }
         #endregion RollToHitTarget
 
