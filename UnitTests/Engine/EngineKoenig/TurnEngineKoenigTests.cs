@@ -1327,7 +1327,7 @@ namespace UnitTests.Engine.EngineKoenig
         }
 
         [Test]
-        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Move()
+        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Attack()
         {
             // Arrange
 
@@ -1353,7 +1353,7 @@ namespace UnitTests.Engine.EngineKoenig
             // Reset
 
             // Assert
-            Assert.AreEqual(ActionEnum.Move, result);
+            Assert.AreEqual(ActionEnum.Attack, result);
         }
         #endregion DetermineActionChoice
 
