@@ -377,9 +377,6 @@
     <AndroidResource Include="Resources\drawable\infinity_tiara.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\iron shield.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\red_necklace.png" />
   </ItemGroup>
   <ItemGroup>
