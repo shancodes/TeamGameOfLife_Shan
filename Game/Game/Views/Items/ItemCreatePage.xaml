@@ -43,9 +43,9 @@
                            Text="{Binding Data.Name}"
                            Grid.Row="0" Grid.Column="1"
                            x:Name="Name_Entry"
-                           Style="{StaticResource EntryStyle}"
+                           Style="{StaticResource EntryItemCreateNonStackStyle}"
                            TextChanged="EntryName_TextChanged"
-                           HorizontalOptions="Start"/>
+                           />
 
                     <Label Grid.Row="1" Grid.Column="0"
                            Text="Description:" 
@@ -57,8 +57,8 @@
                            Grid.Row="1" Grid.Column="1"
                            x:Name="Description_entry"
                            TextChanged="EntryDescription_TextChanged"
-                           Style="{StaticResource EntryStyle}"
-                           HorizontalOptions="Start"/>
+                           Style="{StaticResource EntryItemCreateNonStackStyle}"
+                          />
 
                     <Label Grid.Row="2" Grid.Column="0"
                            Text="Location:" 
@@ -86,8 +86,8 @@
 
                     <Entry Grid.Row="4" Grid.Column="1"
                         Text="{Binding Data.ImageURI}" 
-                        Style="{StaticResource EntryStyle}"
-                           HorizontalOptions="Start"/>
+                        Style="{StaticResource EntryItemCreateNonStackStyle}"
+                         />
 
                     <Label Grid.Row="5" Grid.Column="0"
                         Text= "Damage:" 
@@ -104,7 +104,7 @@
 
                         <Stepper 
                                 Value="{Binding Data.Damage, Mode=TwoWay}"
-                                ValueChanged="Damage_OnStepperValueChanged" HorizontalOptions="End"/>
+                                ValueChanged="Damage_OnStepperValueChanged" />
 
                     </StackLayout>
 

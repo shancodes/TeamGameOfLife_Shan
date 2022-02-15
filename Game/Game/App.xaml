@@ -853,6 +853,10 @@
                 <Setter Property="PlaceholderColor" Value="{StaticResource TriciaryTextColor}" />
             </Style>
 
+            <Style x:Key="EntryItemCreateNonStackStyle" TargetType="Entry" BasedOn="{StaticResource EntryStyle}" >
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+
             <Style x:Key="EntryStyleRed" TargetType="Entry" BasedOn="{StaticResource EntryStyle}" >
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
