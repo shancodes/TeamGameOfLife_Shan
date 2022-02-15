@@ -406,6 +406,11 @@
                 <Setter Property="Aspect" Value="Fill" />
             </Style>
 
+
+            <Style TargetType="Image" x:Key="ImageItemCreatePageStyle" BasedOn="{StaticResource ImageLargeStyle}">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+
             <Style TargetType="Image" x:Key="ImageAboutPage">
                 <Setter Property="MinimumHeightRequest" Value="10"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>

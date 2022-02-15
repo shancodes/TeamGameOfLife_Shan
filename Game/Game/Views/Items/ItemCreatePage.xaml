@@ -9,9 +9,9 @@
              x:Class="Game.Views.ItemCreatePage">
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start" Style="{StaticResource ButtoNavigationBar}"/>
-            <Label Text="Create a new item" HorizontalOptions="CenterAndExpand" Style="{StaticResource HeaderStyle}"/>
+        <StackLayout Style="{StaticResource NavigationHeader}">
+            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
+            <Label Text="Create a new item" Style="{StaticResource MonsterHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -28,7 +28,7 @@
             <FlexLayout x:Name="flexLayout"
                         Style="{StaticResource FlexLayoutCrudi}">
 
-                <Image Source="items_icon.png" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+                <Image Source="items_icon.png" Style="{StaticResource ImageItemCreatePageStyle}" />
 
                 <!--grid for first part of the page-->
                 <Grid
