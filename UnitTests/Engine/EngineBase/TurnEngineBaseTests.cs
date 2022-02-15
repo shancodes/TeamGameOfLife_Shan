@@ -443,6 +443,27 @@ namespace UnitTests.Engine.EngineBase
         }
 
         [Test]
+        public void TurnEngine_RollToCriticalHit_Should_Pass()
+        {
+            //Arrange
+            var AttackScore = 1;
+            var DefenseScore = 100;
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(20);
+            Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = true;
+
+            //Act
+            Engine.Round.Turn.RollToHitTarget(AttackScore, DefenseScore);
+
+            //Reset
+            _ = DiceHelper.DisableForcedRolls();
+
+            //Assert
+            Assert.AreEqual(" rolls 20 for lucky hit ", Engine.EngineSettings.BattleMessagesModel.AttackStatus);
+            Assert.AreEqual(HitStatusEnum.CriticalHit, Engine.EngineSettings.BattleMessagesModel.HitStatus);
+        }
+
+        [Test]
         public void TurnEngine_RolltoHitTarget_Miss_Should_Pass()
         {
             // Arrange

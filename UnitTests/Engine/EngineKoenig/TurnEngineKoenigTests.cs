@@ -489,6 +489,7 @@ namespace UnitTests.Engine.EngineKoenig
 
             _ = DiceHelper.EnableForcedRolls();
             _ = DiceHelper.SetForcedRollValue(20);
+            Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = false;
 
             // Act
             var result = Engine.Round.Turn.RollToHitTarget(AttackScore, DefenseScore);
