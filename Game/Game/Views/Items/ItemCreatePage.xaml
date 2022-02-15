@@ -36,8 +36,8 @@
 
                     <Label Grid.Row="0" Grid.Column="0"
                         Text="Name:" 
-                        Style="{StaticResource LabelStyle}"
-                           HorizontalOptions="End"/>
+                        Style="{StaticResource labelItemCreateNonStackStyle}"
+                           />
 
                     <Entry
                            Text="{Binding Data.Name}"
@@ -49,8 +49,8 @@
 
                     <Label Grid.Row="1" Grid.Column="0"
                            Text="Description:" 
-                           Style="{StaticResource LabelStyle}"
-                           HorizontalOptions="End"/>
+                           Style="{StaticResource labelItemCreateNonStackStyle}"
+                          />
 
                     <Entry
                            Text="{Binding Data.Description}"
@@ -62,8 +62,8 @@
 
                     <Label Grid.Row="2" Grid.Column="0"
                            Text="Location:" 
-                           Style="{StaticResource LabelStyle}"
-                           HorizontalOptions="End"/>
+                           Style="{StaticResource labelItemCreateNonStackStyle}"
+                           />
 
                     <Picker Grid.Row="2" Grid.Column="1"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItemMessage}" 
@@ -73,7 +73,7 @@
 
                     <Label Grid.Row="3" Grid.Column="0"
                         Text="Attribute:" 
-                        Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
+                        Style="{StaticResource labelItemCreateNonStackStyle}" />
 
                     <Picker Grid.Row="3" Grid.Column="1"
                         ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" 
@@ -82,7 +82,7 @@
 
                     <Label Grid.Row="4" Grid.Column="0"
                         Text="Image:" 
-                        Style="{StaticResource LabelStyle}" HorizontalOptions="End"/>
+                        Style="{StaticResource labelItemCreateNonStackStyle}" />
 
                     <Entry Grid.Row="4" Grid.Column="1"
                         Text="{Binding Data.ImageURI}" 
@@ -91,8 +91,8 @@
 
                     <Label Grid.Row="5" Grid.Column="0"
                         Text= "Damage:" 
-                        Style="{StaticResource LabelStyle}"
-                           HorizontalOptions="End"/>
+                        Style="{StaticResource labelItemCreateNonStackStyle}"
+                           />
                     <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
 
                         <Label 

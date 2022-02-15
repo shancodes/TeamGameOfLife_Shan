@@ -149,7 +149,15 @@
                 <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
                 <Setter Property="Padding" Value="0,0,10,0"/>
             </Style>
-            
+
+            <Style TargetType="Label"
+                x:Key="labelItemCreateNonStackStyle"
+                BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+
+
+
             <Style TargetType="Label"
                 x:Key="StyleValue"
                 BasedOn="{StaticResource ValueStyle}">
