@@ -143,8 +143,8 @@
                                 ValueChanged="Value_OnStepperValueChanged"/>
                     </StackLayout>
 
-                    <Button ImageSource="cancel.png"  Clicked="Cancel_Clicked" HorizontalOptions="Start" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtoNavigationBar}"/>
-                    <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtoNavigationBar}"/>
+                    <Button ImageSource="cancel.png"  Clicked="Cancel_Clicked" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtonItemCreatepageOneStyle}"/>
+                    <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
                 </Grid>
                 
             </FlexLayout>
