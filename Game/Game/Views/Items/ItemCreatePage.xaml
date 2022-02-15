@@ -68,7 +68,7 @@
                     <Picker Grid.Row="2" Grid.Column="1"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItemMessage}" 
                         SelectedItem="{Binding Data.Location, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}"  
-                        x:Name="LocationPicker" HorizontalOptions="Start"/>
+                        x:Name="LocationPicker" Style="{StaticResource PickerItemCreateStyle}"/>
 
 
                     <Label Grid.Row="3" Grid.Column="0"
@@ -78,7 +78,7 @@
                     <Picker Grid.Row="3" Grid.Column="1"
                         ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" 
                         SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
-                        x:Name="AttributePicker" HorizontalOptions="Start"/>
+                        x:Name="AttributePicker" Style="{StaticResource PickerItemCreateStyle}"/>
 
                     <Label Grid.Row="4" Grid.Column="0"
                         Text="Image:" 
@@ -93,13 +93,12 @@
                         Text= "Damage:" 
                         Style="{StaticResource labelItemCreateNonStackStyle}"
                            />
-                    <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="5" Grid.Column="1" >
 
                         <Label 
                                 Text="{Binding Data.Damage}" 
                                 x:Name="DamageValue"
-                                Style="{StaticResource ValueStyle}"
-                                HorizontalOptions="Start"
+                                Style="{StaticResource LabelItemCreateStackStyle}"
                                 />
 
                         <Stepper 
@@ -112,13 +111,13 @@
                             Text="Range:" 
                             Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="6" Grid.Column="0"/>
 
-                    <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="6" Grid.Column="1" >
 
                         <Label 
                                     Text="{Binding Data.Range}" 
                                     x:Name="RangeValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    HorizontalOptions="Start"/>
+                                    Style="{StaticResource LabelItemCreateStackStyle}"
+                         />
 
                         <Stepper 
                                     Value="{Binding Data.Range, Mode=TwoWay}"
@@ -131,7 +130,7 @@
                             Text="Value:"
                             Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="7" Grid.Column="0"/>
 
-                    <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="7" Grid.Column="1" HorizontalOptions="Start">
+                    <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="7" Grid.Column="1">
 
                         <Label
                                 Text="{Binding Data.Value}" 

@@ -151,6 +151,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="LabelItemCreateStackStyle"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="labelItemCreateNonStackStyle"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="HorizontalOptions" Value="End"/>
@@ -554,6 +560,11 @@
                 <Setter Property="Spacing" Value="20" />
             </Style>
 
+            <Style TargetType="StackLayout" BasedOn="{StaticResource HorizontalStack}"
+                x:Key="StackLayoutItemCreateStyle">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+            </Style>
+
             <Style TargetType="StackLayout"
                    x:Key="HorizontalCenterStack" BasedOn="{StaticResource HorizontalStack}">
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -910,6 +921,10 @@
                 <Setter Property="FontAttributes" Value="None" />
                 <Setter Property="WidthRequest" Value="280"/>
                 <Setter Property="BackgroundColor" Value = "LightGray" />
+            </Style>
+
+            <Style TargetType="Picker" x:Key="PickerItemCreateStyle">
+                <Setter Property="HorizontalOptions" Value="Start" />   
             </Style>
 
             <Style TargetType="Picker"
