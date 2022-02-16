@@ -308,5 +308,19 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void CharacterUpdatePage_OnResetButtonPressed_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.Reset_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
