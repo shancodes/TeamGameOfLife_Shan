@@ -178,9 +178,9 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void Done_Clicked(object sender, EventArgs e)
+        public async void Done_Clicked(object sender, EventArgs e)
         {
             _ = await Navigation.PopAsync();
-         }
+        }
     }
 }
