@@ -93,6 +93,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Done Clicked
+        /// </summary>
         [Test]
         public void ScoreReadPage_OnDonePressed_Valid_Should_Pass()
         {
