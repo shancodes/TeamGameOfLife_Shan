@@ -103,7 +103,7 @@ namespace Game.Views
             {
                 await Navigation.PushAsync(new CharacterReadPage(new GenericViewModel<CharacterModel>(current)));
             }
-            ItemsListView.SelectedItem = null;
+            CharactersListView.SelectedItem = null;
 
             return;
         }

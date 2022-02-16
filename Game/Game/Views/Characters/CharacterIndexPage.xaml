@@ -22,7 +22,7 @@
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
             <!--Collection View-->
-            <CollectionView x:Name="ItemsListView" 
+            <CollectionView x:Name="CharactersListView" 
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
                     SelectionChanged="OnCollectionViewSelectionChanged"
