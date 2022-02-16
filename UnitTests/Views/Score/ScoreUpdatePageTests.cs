@@ -94,7 +94,24 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Score reset button functionality
+        /// </summary>
         [Test]
+        public void ScoreUpdatePage_OnResetButtonPressed_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.Reset_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
+            [Test]
         public void ScoreUpdatePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
