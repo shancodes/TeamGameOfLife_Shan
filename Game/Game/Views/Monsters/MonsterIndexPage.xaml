@@ -19,7 +19,7 @@
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
 
-            <CollectionView x:Name="ItemsListView" 
+            <CollectionView x:Name="MonstersListView" 
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
                     SelectionChanged="OnCollectionViewSelectionChanged"

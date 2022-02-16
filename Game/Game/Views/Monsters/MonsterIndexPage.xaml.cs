@@ -100,7 +100,7 @@ namespace Game.Views
             {
                 await Navigation.PushAsync(new MonsterReadPage(new GenericViewModel<MonsterModel>(current)));
             }
-            ItemsListView.SelectedItem = null;
+            MonstersListView.SelectedItem = null;
 
             return;
         }
