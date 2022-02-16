@@ -107,5 +107,90 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+
+        /// <summary>
+        /// Test to check if create button 
+        /// is disabled if Name is null
+        /// </summary>
+        [Test]
+        public void ScoreCreatePage_SetCreateVisibility_Name_Null_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel.Data.Name = null;
+            page.ViewModel.Data.ScoreTotal = 1;
+
+            // Act
+            page.SetCreateVisibility();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(false == page.CreateButton_Enabled());
+        }
+
+        /// <summary>
+        /// Test to check if create button 
+        /// is disabled if Score is null
+        /// </summary>
+        [Test]
+        public void ScoreCreatePage_SetCreateVisibility_Score_Zero_Or_Less_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel.Data.Name = "Score1";
+            page.ViewModel.Data.ScoreTotal = 0;
+
+            // Act
+            page.SetCreateVisibility();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(false == page.CreateButton_Enabled());
+        }
+
+        /// <summary>
+        /// Test to check if create button 
+        /// is disabled if Score and Name is null
+        /// </summary>
+        [Test]
+        public void ScoreCreatePage_SetCreateVisibility_Name_And_Score_Null_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel.Data.Name = null;
+            page.ViewModel.Data.Description = null;
+
+            // Act
+            page.SetCreateVisibility();
+            // Reset
+
+            // Assert
+            Assert.IsTrue(false == page.CreateButton_Enabled());
+        }
+
+        /// <summary>
+        /// Test to check if create button 
+        /// is enabled if Score and Name is not null
+        /// </summary>
+        [Test]
+        public void ScoreCreatePage_SetCreateVisibility_Name_And_Score_Not_Null_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel.Data.Name = "Score1";
+            page.ViewModel.Data.ScoreTotal = 1;
+
+            // Act
+            page.SetCreateVisibility();
+            // Reset
+
+            // Assert
+            Assert.IsTrue(page.CreateButton_Enabled());
+        }
+
+
+
+
+
+
     }
 }

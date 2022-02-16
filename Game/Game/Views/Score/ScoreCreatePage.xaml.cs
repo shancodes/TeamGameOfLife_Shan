@@ -83,10 +83,18 @@ namespace Game.Views
             SetCreateVisibility();
         }
 
+        ///
+        ///function return if SetCreateVisisbility is set
+        ///
+        public bool CreateButton_Enabled()
+        {
+            return CreateButton.IsEnabled;
+        }
+
         /// <summary>
         /// function to check if Name and Score is empty field
         /// </summary>
-        private void SetCreateVisibility()
+        public void SetCreateVisibility()
         {
             if (string.IsNullOrEmpty(ViewModel.Data.Name) || (ViewModel.Data.ScoreTotal <= 0))
             {
