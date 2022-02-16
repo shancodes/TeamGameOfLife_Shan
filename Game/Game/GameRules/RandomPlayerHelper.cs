@@ -69,7 +69,7 @@ namespace Game.GameRules
         public static string GetCharacterImage()
         {
 
-            List<String> FirstNameList = new List<String> { "fire_princess.png", "fire_wielder.png", "night_walker.png", "sharpshooter.png", "swiftblade.png", "wizard.png" };
+            List<string> FirstNameList = new List<string> { "fire_princess.png", "fire_wielder.png", "night_walker.png", "sharpshooter.png", "swiftblade.png", "wizard.png" };
 
             var result = FirstNameList.ElementAt(DiceHelper.RollDice(1, FirstNameList.Count()) - 1);
 
@@ -85,7 +85,7 @@ namespace Game.GameRules
         public static string GetMonsterName()
         {
 
-            List<String> FirstNameList = new List<String> { "Ice Bear", "Ice Jester", "Ice Princess", "Ice Queen", "Ice Thief", "Ice Wolf"};
+            List<string> FirstNameList = new List<string> { "Ice Bear", "Ice Jester", "Ice Princess", "Ice Queen", "Ice Thief", "Ice Wolf"};
 
             var result = FirstNameList.ElementAt(DiceHelper.RollDice(1, FirstNameList.Count()) - 1);
 
@@ -100,7 +100,7 @@ namespace Game.GameRules
         /// <returns></returns>
         public static string GetMonsterDescription()
         {
-            List<String> StringList = new List<String> { "A large, brown thick fur Bear", "The Foolish Cannibal", "The Wicked Princess", "The Evil Queen", "Cruel Monster Thief", "Large Blue Cunning Wolf" };
+            List<string> StringList = new List<string> { "A large, brown thick fur Bear", "The Foolish Cannibal", "The Wicked Princess", "The Evil Queen", "Cruel Monster Thief", "Large Blue Cunning Wolf" };
 
             var result = StringList.ElementAt(DiceHelper.RollDice(1, StringList.Count()) - 1);
 
