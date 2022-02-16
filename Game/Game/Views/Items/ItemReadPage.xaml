@@ -18,15 +18,18 @@
 
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <Button ImageSource="back_image_two.png" Clicked="Done_Clicked" HorizontalOptions="Start" Style="{StaticResource ButtoNavigationBar}"/>
-            <Label Text="Details" HorizontalOptions="CenterAndExpand" Style="{StaticResource HeaderStyle}"/>
+        <StackLayout Style="{StaticResource NavigationHeader}">
+            <Button ImageSource="back_image_two.png" Clicked="Done_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
+            <Label Text="Details" Style="{StaticResource MonsterHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
 
     <ScrollView>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
+        <FlexLayout x:Name="flexLayout"
+                        Style="{StaticResource FlexLayoutCrudi}">
+
+            <StackLayout x:Name="StackLayout" Style="{StaticResource ItemReadStyle}">
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
@@ -73,6 +76,7 @@
                 <Button ImageSource="done.png" BackgroundColor="Transparent" Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
                 <Button ImageSource="update.png" BackgroundColor="Transparent" Clicked="Update_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2"/>
             </Grid>
-        </StackLayout>
+            </StackLayout>
+        </FlexLayout>
     </ScrollView>
 </ContentPage>

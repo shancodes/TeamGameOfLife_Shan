@@ -341,6 +341,11 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="ItemReadStyle">
+                <Setter Property="Spacing" Value="20" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="ScoreDeleteStyle">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="Padding" Value="20" />
