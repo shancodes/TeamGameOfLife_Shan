@@ -17,6 +17,7 @@
 
     <ScrollView VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand">
+        <FlexLayout Style="{StaticResource FlexLayoutCrudi}">
         <StackLayout Style="{StaticResource OuterBoxStack}"
                  HorizontalOptions="FillAndExpand">
 
@@ -63,12 +64,13 @@
             <!--stack layout for Delete and Cancel buttons-->
 
             <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
-                
-                <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
-                <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+
+                <Button ImageSource="delete.png" Clicked="Delete_Clicked" Style="{StaticResource ButtonItemDeleteOneStyle}"/>
+                <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}"/>
                 
             </StackLayout>
-            
+        
         </StackLayout>
+        </FlexLayout>
     </ScrollView>
 </ContentPage>

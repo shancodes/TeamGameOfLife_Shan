@@ -571,6 +571,14 @@
                 <Setter Property="BackgroundColor" Value="Transparent"/>
             </Style>
 
+            <Style TargetType="Button" x:Key="ButtonItemDeleteOneStyle">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+
+            <Style TargetType="Button" x:Key="ButtonItemDeleteTwoStyle">
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+
             <Style TargetType="Button"
                     x:Key="ButtoNavigationBar">
                 <Setter Property="BackgroundColor" Value= "Transparent" />
