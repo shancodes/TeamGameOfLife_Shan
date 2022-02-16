@@ -44,9 +44,9 @@
                 <Entry Grid.Row="0" Grid.Column="1"
                         Text="{Binding Data.Name}"
                            x:Name="Name_Entry"
-                        Style="{StaticResource EntryStyle}"
+                        Style="{StaticResource EntryItemCreateNonStackStyle}"
                            TextChanged="EntryName_TextChanged"
-                           HorizontalOptions="Start"/>
+                />
 
                 <!--Description Field-->
                 <Label Grid.Row="1" Grid.Column="0"
@@ -58,8 +58,8 @@
                         Text="{Binding Data.Description}" 
                            x:Name="Description_entry"
                            TextChanged="EntryDescription_TextChanged"
-                        Style="{StaticResource EntryStyle}"
-                           HorizontalOptions="Start"/>
+                        Style="{StaticResource  EntryItemCreateNonStackStyle}"
+                />
 
 
                 <!--Location Field-->
@@ -70,9 +70,10 @@
 
                 <Picker Grid.Row="2" Grid.Column="1"
                         WidthRequest="280"
+                        Style="{StaticResource PickerItemCreateStyle}"
                         ItemsSource="{x:Static local_enum:ItemLocationEnumHelper.GetListItemMessage}" 
                         SelectedItem="{Binding Data.Location, Converter={StaticResource ItemLocationEnumConverter}, Mode=TwoWay}"
-                        x:Name="LocationPicker" HorizontalOptions="Start"/>
+                        x:Name="LocationPicker" />
 
 
                 <!--Attribute Field-->
@@ -85,7 +86,7 @@
                         ItemsSource="{x:Static local_enum:AttributeEnumHelper.GetListCharacter}" 
                         SelectedItem="{Binding Data.Attribute, Converter={StaticResource StringEnum}, Mode=TwoWay}" 
                         x:Name="AttributePicker" 
-                        HorizontalOptions="Start"/>
+                        Style="{StaticResource PickerItemCreateStyle}"/>
 
                 <!--Image Field-->
                 <Label Grid.Row="4" Grid.Column="0"
@@ -95,15 +96,15 @@
                 <Entry Grid.Row="4" Grid.Column="1"
                         x:Name="ImageEntry"
                         Text="{Binding Data.ImageURI}" 
-                        Style="{StaticResource EntryStyle}"
-                        HorizontalOptions="Start"/>
+                        Style="{StaticResource EntryItemCreateNonStackStyle}"
+                 />
 
 
                 <Label Grid.Row="5" Grid.Column="0"
                         Text= "Damage:" 
                         Style="{StaticResource labelItemCreateNonStackStyle}"
                 />
-                <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="5" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="5" Grid.Column="1">
 
                     <Label 
                                 Text="{Binding Data.Damage}" 
@@ -120,9 +121,9 @@
 
                 <Label 
                             Text="Range:" 
-                            Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="6" Grid.Column="0"/>
+                            Style="{StaticResource labelItemCreateNonStackStyle}" Grid.Row="6" Grid.Column="0"/>
 
-                <StackLayout Style="{StaticResource HorizontalStack}"  Grid.Row="6" Grid.Column="1" HorizontalOptions="StartAndExpand">
+                    <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}"  Grid.Row="6" Grid.Column="1">
 
                     <Label 
                                     Text="{Binding Data.Range}" 
