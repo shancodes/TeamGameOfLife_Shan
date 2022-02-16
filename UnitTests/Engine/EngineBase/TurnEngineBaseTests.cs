@@ -841,6 +841,32 @@ namespace UnitTests.Engine.EngineBase
             Assert.AreEqual(true, result);
         }
 
+        /// <summary>
+        /// Test to check for critical hit
+        /// </summary>
+        [Test]
+        public void TurnEngine_TurnAsAttack_Valid_Character_Attacks_Monster_Critical_Hit_Should_Pass()
+        {
+            // Arrange
+            var Character = new CharacterModel();
+            var CharacterPlayer = new PlayerInfoModel(Character);
+            Engine.EngineSettings.CharacterList.Add(CharacterPlayer);
+
+            var Monster = new MonsterModel();
+            var MonsterPlayer = new PlayerInfoModel(Monster);
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+
+            // Act
+            Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.CriticalHit;
+            var result = Engine.Round.Turn.TurnAsAttack(CharacterPlayer, MonsterPlayer);
+
+            // Reset
+            Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Default;
+
+            // Assert
+            Assert.AreEqual(2, Engine.EngineSettings.BattleMessagesModel.DamageAmount);
+        }
+
         [Test]
         public void TurnEngine_TurnAsAttack_Valid_Character_Attacks_Monster_Hit_Should_Pass()
         {
