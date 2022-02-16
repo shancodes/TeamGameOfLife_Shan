@@ -109,7 +109,7 @@
 
                     <Label 
                             Text="Range:" 
-                            Style="{StaticResource LabelStyle}" HorizontalOptions="End" Grid.Row="6" Grid.Column="0"/>
+                            Style="{StaticResource LabelItemCreateStackStyle}"  Grid.Row="6" Grid.Column="0"/>
 
                     <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="6" Grid.Column="1" >
 
@@ -135,8 +135,8 @@
                         <Label
                                 Text="{Binding Data.Value}" 
                                 x:Name="ValueValue"
-                                Style="{StaticResource ValueStyle}"
-                                HorizontalOptions="Start"/>
+                                Style="{StaticResource LabelItemCreateStackStyle}"
+                                />
 
                         <Stepper 
                                 Value="{Binding Data.Value, Mode=TwoWay}"
