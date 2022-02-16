@@ -109,7 +109,7 @@
 
                     <Label 
                             Text="Range:" 
-                            Style="{StaticResource LabelItemCreateStackStyle}"  Grid.Row="6" Grid.Column="0"/>
+                            Style="{StaticResource labelItemCreateNonStackStyle}"  Grid.Row="6" Grid.Column="0"/>
 
                     <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="6" Grid.Column="1" >
 
