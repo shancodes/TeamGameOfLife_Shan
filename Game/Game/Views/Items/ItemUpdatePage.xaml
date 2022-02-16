@@ -104,18 +104,17 @@
                         Text= "Damage:" 
                         Style="{StaticResource labelItemCreateNonStackStyle}"
                 />
-                    <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="5" Grid.Column="1">
+                <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="5" Grid.Column="1">
 
                     <Label 
                                 Text="{Binding Data.Damage}" 
                                 x:Name="DamageValue"
-                                Style="{StaticResource ValueStyle}"
-                                HorizontalOptions="Start"
+                                Style="{StaticResource LabelItemCreateStackStyle}"
                                 />
 
                     <Stepper 
                                 Value="{Binding Data.Damage, Mode=TwoWay}"
-                                ValueChanged="Damage_OnStepperValueChanged" HorizontalOptions="End"/>
+                                ValueChanged="Damage_OnStepperValueChanged" />
 
                 </StackLayout>
 
@@ -123,13 +122,13 @@
                             Text="Range:" 
                             Style="{StaticResource labelItemCreateNonStackStyle}" Grid.Row="6" Grid.Column="0"/>
 
-                    <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}"  Grid.Row="6" Grid.Column="1">
+                <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}"  Grid.Row="6" Grid.Column="1">
 
                     <Label 
                                     Text="{Binding Data.Range}" 
                                     x:Name="RangeValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    HorizontalOptions="Start"/>
+                                    Style="{StaticResource LabelItemCreateStackStyle}"
+                    />
 
                     <Stepper 
                                     Value="{Binding Data.Range, Mode=TwoWay}"
@@ -142,13 +141,13 @@
                             Text="Value:"
                             Style="{StaticResource labelItemCreateNonStackStyle}" Grid.Row="7" Grid.Column="0"/>
 
-                <StackLayout Style="{StaticResource HorizontalStack}" Grid.Row="7" Grid.Column="1" HorizontalOptions="Start">
+                <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="7" Grid.Column="1">
 
                     <Label
                                 Text="{Binding Data.Value}" 
                                 x:Name="ValueValue"
-                                Style="{StaticResource ValueStyle}"
-                                HorizontalOptions="Start"/>
+                                Style="{StaticResource LabelItemCreateStackStyle}"
+                     />
 
                     <Stepper 
                                 Value="{Binding Data.Value, Mode=TwoWay}"
@@ -157,8 +156,8 @@
 
                 <!--stack layout for Update and Reset buttons-->
 
-                <Button ImageSource="reset.png" Clicked="Reset_Clicked" HorizontalOptions="End" Grid.Row="8" Grid.Column="1"/>
-                <Button x:Name="Update_button" ImageSource="update.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="8" />
+                    <Button ImageSource="reset.png" Clicked="Reset_Clicked" Style="{StaticResource ButtonItemCreatepageOneStyle}" Grid.Row="8" Grid.Column="1"/>
+                    <Button x:Name="Update_button" ImageSource="update.png" Clicked="Save_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}" Grid.Row="8" Grid.Column="1" />
             </Grid>
 
         </FlexLayout>
