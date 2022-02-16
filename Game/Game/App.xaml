@@ -144,11 +144,18 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="StyleItemReadStackLabelStyle"
+                BasedOn="{StaticResource LabelBaseStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="LabelStyleForAttributes"
                 BasedOn="{StaticResource StyleLabel}">
                 <Setter Property="HorizontalTextAlignment" Value="End" />
             </Style>
 
+            
             <Style TargetType="Label"
                 x:Key="ValueStyle"
                 BasedOn="{StaticResource LabelStyle}">
@@ -158,6 +165,12 @@
 
             <Style TargetType="Label"
                 x:Key="LabelItemCreateStackStyle"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="LabelItemReadStyle"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalOptions" Value="Start" />
             </Style>

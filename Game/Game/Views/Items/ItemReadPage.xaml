@@ -53,23 +53,23 @@
 
             <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                 <Label
-                    Text="Damage   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
+                    Text="Damage   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
                 <Label 
-                    Text="{Binding Data.Damage}" Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
+                    Text="{Binding Data.Damage}" Style="{StaticResource LabelItemReadStyle}"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                 <Label
-                    Text="Range   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
+                    Text="Range   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
                 <Label 
-                    Text="{Binding Data.Range}" Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
+                    Text="{Binding Data.Range}" Style="{StaticResource LabelItemReadStyle}"/>
             </StackLayout>
 
             <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                 <Label
-                    Text="Value   " Style="{StaticResource LabelBaseStyle}"  HorizontalOptions="End"/>
+                    Text="Value   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
                 <Label 
-                    Text="{Binding Data.Value}" Style="{StaticResource ValueStyle}"  HorizontalOptions="Start"/>
+                    Text="{Binding Data.Value}" Style="{StaticResource LabelItemReadStyle}"/>
             </StackLayout>
 
             <Grid Style="{StaticResource GridItemReadStyle}">
