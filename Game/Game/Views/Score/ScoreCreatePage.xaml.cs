@@ -88,7 +88,7 @@ namespace Game.Views
         /// </summary>
         private void SetCreateVisibility()
         {
-            if (string.IsNullOrEmpty(Name_Entry.Text) || string.IsNullOrEmpty(Score_Entry.Text))
+            if (string.IsNullOrEmpty(ViewModel.Data.Name) || (ViewModel.Data.ScoreTotal <= 0))
             {
                 CreateButton.IsEnabled = false;
                 return;
