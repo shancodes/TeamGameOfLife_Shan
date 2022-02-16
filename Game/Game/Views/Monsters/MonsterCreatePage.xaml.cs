@@ -95,7 +95,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Attack_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            AttackValue.Text = String.Format("{0}", e.NewValue);
+            AttackValue.Text = string.Format("{0}", e.NewValue);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Defense_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            DefenseValue.Text = String.Format("{0}", e.NewValue);
+            DefenseValue.Text = string.Format("{0}", e.NewValue);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public void Speed_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
-            SpeedValue.Text = String.Format("{0}", e.NewValue);
+            SpeedValue.Text = string.Format("{0}", e.NewValue);
         }
 
         /// <summary>
