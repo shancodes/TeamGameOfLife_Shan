@@ -104,7 +104,7 @@
 
                                 <Stepper
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged" HorizontalOptions="End"/>
+                                    ValueChanged="Attack_OnStepperValueChanged" Style="{StaticResource StepperStyle}"/>
                             </StackLayout>
 
                             <!--Grid for Defense-->
