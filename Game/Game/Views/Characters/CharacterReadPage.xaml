@@ -22,7 +22,7 @@
 
                     <StackLayout Style="{StaticResource CharacterStackBox}" >
 
-                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
+                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" />
 
                         <!--Name-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
