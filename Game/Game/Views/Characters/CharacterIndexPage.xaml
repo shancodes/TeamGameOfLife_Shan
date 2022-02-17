@@ -10,10 +10,10 @@
 
     <!--NavigationPage with Text-->
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            
-            <Label Text="Character Index" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
-            <Button ImageSource="create_navibar_top.png" Clicked="Add_Clicked" HorizontalOptions="End" Style="{StaticResource ButtoNavigationBar}"/>
+        <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
+
+            <Label Text="Character Index" Style="{StaticResource HeaderStyleItemIndexStyle}" />
+            <Button ImageSource="create_navibar_top.png" Clicked="Add_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
             
         </StackLayout>
     </NavigationPage.TitleView>
