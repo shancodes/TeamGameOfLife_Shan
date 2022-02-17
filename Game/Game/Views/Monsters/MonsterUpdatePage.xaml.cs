@@ -83,7 +83,7 @@ namespace Game.Views
         /// <summary>
         /// Helper Function that updates all the fields with current values from ViewModel.Data
         /// </summary>
-        private void UpdateUIElements()
+        public void UpdateUIElements()
         {
             Name_Entry.Text = ViewModel.Data.Name;
             Description_Entry.Text = ViewModel.Data.Description;
