@@ -9,7 +9,7 @@
 
     <!--NavigationPage with Text-->
     <NavigationPage.TitleView >
-        <Label  Text ="{Binding Title}"  HorizontalOptions="CenterAndExpand" FontSize="Medium"  HorizontalTextAlignment="Center" Style="{StaticResource HeaderStyle}" />
+        <Label  Text ="{Binding Title}"  Style="{StaticResource MonsterHeader}"/>
     </NavigationPage.TitleView>
 
     <AbsoluteLayout
