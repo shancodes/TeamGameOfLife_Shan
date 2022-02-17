@@ -96,7 +96,7 @@
                             <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Attack field-->
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="4" Grid.Column="1">
+                            <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="4" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
@@ -111,7 +111,7 @@
                             <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Defense field-->
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="5" Grid.Column="1">
+                            <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="5" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
@@ -126,7 +126,7 @@
                             <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Speed field-->
-                            <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="6" Grid.Column="1">
+                            <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="6" Grid.Column="1">
                                 <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
