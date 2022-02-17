@@ -18,9 +18,9 @@
         <StackLayout Style="{StaticResource Boundaries}">
 
             <ScrollView x:Name="ScrollView">
-                <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
+                <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
 
-                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Style="{StaticResource CharacterStackBox}" >
 
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
 
