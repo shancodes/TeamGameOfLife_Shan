@@ -194,6 +194,13 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="StyleCharacterValueStyle"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="labelItemCreateNonStackStyle"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="HorizontalOptions" Value="End"/>
