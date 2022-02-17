@@ -11,7 +11,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
-            <Label Text="Monster Index" Style="{StaticResource MonsterHeader}"/>
+            <Label Text="Monster Index" Style="{StaticResource TitleHeader}"/>
             <Button ImageSource="create_navibar_top.png" Clicked="Add_Clicked" HorizontalOptions="End" Style="{StaticResource ButtoNavigationBar}"/>
         </StackLayout>
     </NavigationPage.TitleView>

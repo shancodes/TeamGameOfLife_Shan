@@ -11,7 +11,7 @@
     <!--NavigationPage with Create button and Text-->
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
-            <Label Text="Score Index" Style="{StaticResource MonsterHeader}"/>
+            <Label Text="Score Index" Style="{StaticResource TitleHeader}"/>
             <Button ImageSource="create_navibar_top.png" Clicked="AddScore_Clicked" HorizontalOptions="End"/>
         </StackLayout>
     </NavigationPage.TitleView>

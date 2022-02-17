@@ -10,7 +10,7 @@
 
     <NavigationPage.TitleView >
         <StackLayout Style="{StaticResource NavigationHeader}">
-            <Label  Text ="Monster Detail"   Style="{StaticResource MonsterHeader}"/>
+            <Label  Text ="Monster Detail"   Style="{StaticResource TitleHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 

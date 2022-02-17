@@ -20,7 +20,7 @@
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
             <Button ImageSource="back_image_two.png" Clicked="Done_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
-            <Label Text="Details" Style="{StaticResource MonsterHeader}"/>
+            <Label Text="Details" Style="{StaticResource TitleHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 

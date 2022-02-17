@@ -245,7 +245,7 @@
             </Style>
 
             <Style TargetType="Label"
-                x:Key="MonsterHeader"
+                x:Key="TitleHeader"
                 BasedOn="{StaticResource HeaderStyle}">
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />

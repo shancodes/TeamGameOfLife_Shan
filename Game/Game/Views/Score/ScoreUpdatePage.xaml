@@ -13,7 +13,7 @@
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
-            <Label Text="Update Score " Style="{StaticResource MonsterHeader}"/>
+            <Label Text="Update Score " Style="{StaticResource TitleHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 

@@ -11,7 +11,7 @@
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
-            <Label Text="Create a new item" Style="{StaticResource MonsterHeader}"/>
+            <Label Text="Create a new item" Style="{StaticResource TitleHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 

@@ -15,7 +15,7 @@
         <StackLayout Style="{StaticResource NavigationHeader}">
 
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
-            <Label Text="{Binding Title}" Style="{StaticResource MonsterHeader}"/>
+            <Label Text="{Binding Title}" Style="{StaticResource TitleHeader}"/>
             
         </StackLayout>
     </NavigationPage.TitleView>
