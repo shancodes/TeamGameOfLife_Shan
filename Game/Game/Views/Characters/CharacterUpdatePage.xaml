@@ -31,10 +31,10 @@
             <StackLayout Style="{StaticResource Boundaries}">
 
                 <ScrollView>
-                    
-                    <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
-                        
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+
+                    <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
+
+                        <StackLayout Style="{StaticResource CharacterStackBox}" >
                             
                             <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
 
