@@ -122,5 +122,22 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void MonsterCreatePage_UpdateUIElements_Default_Should_Pass()
+        {
+            // Arrange
+            var monster = new MonsterModel();
+            page.ViewModel.Data = monster;
+            Entry nameField = (Entry)page.FindByName("Name_Entry");
+            Assert.AreEqual(nameField.Text, "Cruel Monster");
+
+            // Act
+            monster.Name = "Shanmugapriya";
+            page.UpdateUIElements();
+
+            // Assert
+            Assert.AreEqual(nameField.Text, monster.Name);
+        }
     }
 }
