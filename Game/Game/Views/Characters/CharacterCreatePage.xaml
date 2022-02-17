@@ -90,9 +90,7 @@
                             <Label Grid.Row="3" Grid.Column="1"
                                 x:Name="MaxHealthValue"
                                 Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
-                                Style="{StaticResource ValueStyle}"
-                                Padding="10,10,40,10"
-                                HorizontalOptions="Start"/>
+                                Style="{StaticResource LabelCharacterCreateStyle}"/>
 
                             <!--Grid for Attack-->
                             <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource StyleLabel}"/>
