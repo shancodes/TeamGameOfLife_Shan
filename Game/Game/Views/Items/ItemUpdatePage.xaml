@@ -38,7 +38,7 @@
                 <!--Name Field-->
                 <Label Grid.Row="0" Grid.Column="0"
                         Text="Name : " 
-                        Style="{StaticResource labelItemCreateNonStackStyle}"
+                        Style="{StaticResource StyleLabel}"
                  />
 
                 <Entry Grid.Row="0" Grid.Column="1"
@@ -51,7 +51,7 @@
                 <!--Description Field-->
                 <Label Grid.Row="1" Grid.Column="0"
                         Text="Description:" 
-                        Style="{StaticResource labelItemCreateNonStackStyle}"
+                        Style="{StaticResource StyleLabel}"
                  />
 
                 <Entry Grid.Row="1" Grid.Column="1"
@@ -65,7 +65,7 @@
                 <!--Location Field-->
                 <Label Grid.Row="2" Grid.Column="0"
                         Text="Location:" 
-                        Style="{StaticResource labelItemCreateNonStackStyle}"
+                        Style="{StaticResource StyleLabel}"
                 />
 
                 <Picker Grid.Row="2" Grid.Column="1"
@@ -79,7 +79,7 @@
                 <!--Attribute Field-->
                 <Label Grid.Row="3" Grid.Column="0"
                         Text="Attribute:" 
-                        Style="{StaticResource labelItemCreateNonStackStyle}" 
+                        Style="{StaticResource StyleLabel}" 
                  />
 
                 <Picker Grid.Row="3" Grid.Column="1"
@@ -91,7 +91,7 @@
                 <!--Image Field-->
                 <Label Grid.Row="4" Grid.Column="0"
                         Text="Image:" 
-                        Style="{StaticResource labelItemCreateNonStackStyle}"/>
+                        Style="{StaticResource StyleLabel}"/>
 
                 <Entry Grid.Row="4" Grid.Column="1"
                         x:Name="ImageEntry"
@@ -102,7 +102,7 @@
 
                 <Label Grid.Row="5" Grid.Column="0"
                         Text= "Damage:" 
-                        Style="{StaticResource labelItemCreateNonStackStyle}"
+                        Style="{StaticResource StyleLabel}"
                 />
                 <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="5" Grid.Column="1">
 
@@ -120,7 +120,7 @@
 
                 <Label 
                             Text="Range:" 
-                            Style="{StaticResource labelItemCreateNonStackStyle}" Grid.Row="6" Grid.Column="0"/>
+                            Style="{StaticResource StyleLabel}" Grid.Row="6" Grid.Column="0"/>
 
                 <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}"  Grid.Row="6" Grid.Column="1">
 
@@ -139,7 +139,7 @@
 
                 <Label 
                             Text="Value:"
-                            Style="{StaticResource labelItemCreateNonStackStyle}" Grid.Row="7" Grid.Column="0"/>
+                            Style="{StaticResource StyleLabel}" Grid.Row="7" Grid.Column="0"/>
 
                 <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="7" Grid.Column="1">
 
