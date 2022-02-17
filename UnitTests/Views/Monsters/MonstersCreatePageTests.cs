@@ -95,6 +95,36 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void MonsterCreatePage_Save_Clicked_Null_Attribute_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel.Data.Difficulty = Game.Models.DifficultyEnum.Unknown;
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); 
+        }
+
+        [Test]
+        public void MonsterCreatePage_Save_Clicked_Null_ImageURI_Should_Pass()
+        {
+            // Arrange
+            page.ViewModel.Data.ImageURI = null;
+
+            // Act
+            page.Save_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); 
+        }
+
+        [Test]
         public void MonsterCreatePage_OnBackButtonPressed_Valid_Should_Pass()
         {
             // Arrange
