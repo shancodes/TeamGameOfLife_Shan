@@ -44,8 +44,7 @@
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
                                 Source="dice.png"
-                                Clicked="RollDice_Clicked"
-                                HorizontalOptions="Center"/>
+                                Clicked="RollDice_Clicked"/>
 
                         <Grid
                             Style="{StaticResource CharacterCreateGridStyle}" >
