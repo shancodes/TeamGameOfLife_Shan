@@ -25,27 +25,27 @@
                         <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" />
 
                         <!--Name-->
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                             <Label 
                                Text="Name: " 
-                               Style="{StaticResource LabelStyle}"  HorizontalTextAlignment="Center"/>
+                               Style="{StaticResource StyleItemReadLabelStyle}" />
                             <Label 
                                 Text="{Binding Data.Name}" 
                                 Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
                         </StackLayout>
 
                         <!--Description-->
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                             <Label 
                                 Text="Description: " 
-                                Style="{StaticResource LabelStyle}" HorizontalTextAlignment="Center"/>
+                                Style="{StaticResource StyleItemReadLabelStyle}" />
                             <Label 
                                 Text="{Binding Data.Description}" 
                                 Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
                         </StackLayout>
 
                         <!--Level-->
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                             <Label 
                                 Text="Level: " 
                                 Style="{StaticResource LabelStyle}"/>
