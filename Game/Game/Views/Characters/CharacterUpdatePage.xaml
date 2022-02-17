@@ -42,8 +42,7 @@
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
                                 Source="dice.png"
-                                Clicked="RollDice_Clicked"
-                                HorizontalOptions="Center"/>
+                                Clicked="RollDice_Clicked"/>
 
                             <!--Name Field-->
                             <Grid RowSpacing="10" ColumnSpacing="5" VerticalOptions="CenterAndExpand" Margin="10">
