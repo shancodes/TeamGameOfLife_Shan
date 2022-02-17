@@ -56,10 +56,9 @@
 
                             <Entry Grid.Row="0" Grid.Column="1"
                                 Text="{Binding Data.Name, Mode=TwoWay}" 
-                                Style="{StaticResource EntryStyle}"
+                                Style="{StaticResource EntryItemCreateNonStackStyle}"
                                 x:Name="Name_Entry"
-                                TextChanged="EntryName_TextChanged"
-                                HorizontalOptions="Start"/>
+                                TextChanged="EntryName_TextChanged"/>
 
                             <!--Grid for Description-->
                             <Label Grid.Row="1" Grid.Column="0"
@@ -68,10 +67,9 @@
 
                             <Entry Grid.Row="1" Grid.Column="1"
                                 Text="{Binding Data.Description, Mode=TwoWay}" 
-                                Style="{StaticResource EntryStyle}"
+                                Style="{StaticResource EntryItemCreateNonStackStyle}"
                                 x:Name="Description_entry"
-                                TextChanged="EntryDescription_TextChanged"
-                                HorizontalOptions="Start"/>
+                                TextChanged="EntryDescription_TextChanged"/>
 
                             <!--Grid for Level-->
                             <Label Grid.Row="2" Grid.Column="0"
