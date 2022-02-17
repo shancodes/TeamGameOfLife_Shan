@@ -52,8 +52,7 @@
                             <!--Grid for Name-->
                             <Label Grid.Row="0" Grid.Column="0"
                                 Text="Name:" 
-                                Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="End"/>
+                                Style="{StaticResource StyleLabel}"/>
 
                             <Entry Grid.Row="0" Grid.Column="1"
                                 Text="{Binding Data.Name, Mode=TwoWay}" 
@@ -65,8 +64,7 @@
                             <!--Grid for Description-->
                             <Label Grid.Row="1" Grid.Column="0"
                                 Text="Description:" 
-                                Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="End"/>
+                                Style="{StaticResource StyleLabel}"/>
 
                             <Entry Grid.Row="1" Grid.Column="1"
                                 Text="{Binding Data.Description, Mode=TwoWay}" 
@@ -78,8 +76,7 @@
                             <!--Grid for Level-->
                             <Label Grid.Row="2" Grid.Column="0"
                                 Text="Level:" 
-                                Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="End"/>
+                                Style="{StaticResource StyleLabel}"/>
 
                             <Picker Grid.Row="2" Grid.Column="1"
                                 SelectedItem="{Binding SelectedItemProperty}" 
@@ -91,8 +88,7 @@
                             <!--Grid for Max Health-->
                             <Label Grid.Row="3" Grid.Column="0"
                                 Text="Max Health:" 
-                                Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="End"/>
+                                Style="{StaticResource StyleLabel}"/>
 
                             <Label Grid.Row="3" Grid.Column="1"
                                 x:Name="MaxHealthValue"
@@ -102,8 +98,7 @@
                                 HorizontalOptions="Start"/>
 
                             <!--Grid for Attack-->
-                            <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
-                                   HorizontalOptions="End"/>
+                            <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Attack field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="4" Grid.Column="1">
@@ -120,8 +115,7 @@
                             </StackLayout>
 
                             <!--Grid for Defense-->
-                            <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"
-                                   HorizontalOptions="End"/>
+                            <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Defense field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="5" Grid.Column="1">
@@ -138,8 +132,7 @@
                             </StackLayout>
 
                             <!--Grid for Speed-->
-                            <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
-                                   HorizontalOptions="End"/>
+                            <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Speed field-->
                             <StackLayout Style="{StaticResource HorizontalStack}" Padding="10,0,10,0" Spacing="20" Grid.Row="6" Grid.Column="1">
