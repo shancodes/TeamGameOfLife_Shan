@@ -144,10 +144,10 @@
                         </FlexLayout>
 
                         <!--Cancel and Create buttons -->
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+                        <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
 
-                            <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
-                            <Button ImageSource="create.png" x:Name="CreateButton" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                            <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}" />
+                            <Button ImageSource="create.png" x:Name="CreateButton" Clicked="Save_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}" />
 
                         </StackLayout>
                     </StackLayout>
