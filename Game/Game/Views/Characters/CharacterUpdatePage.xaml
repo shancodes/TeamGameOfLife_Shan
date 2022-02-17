@@ -55,8 +55,7 @@
 
                                 <Label Grid.Row="0" Grid.Column="0"
                                     Text="Name: " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                                 <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
                                      x:Name="Name_Entry"
@@ -65,8 +64,7 @@
                                 <!--Description Field-->
                                 <Label Grid.Row="1" Grid.Column="0"
                                     Text="Description: " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                                 <Entry Grid.Row="1" Grid.Column="1"
                                      Text="{Binding Data.Description, Mode=TwoWay}" 
@@ -76,8 +74,7 @@
 
                                 <Label Grid.Row="2" Grid.Column="0"
                                     Text="Max HP: " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                                 <Label Grid.Row="2" Grid.Column="1"
                                     x:Name="MaxHealthValue"
@@ -88,8 +85,7 @@
                                 <!--Level-->
                                 <Label Grid.Row="3" Grid.Column="0"
                                     Text="Level: " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                                 <Picker Grid.Row="3" Grid.Column="1"
                                     SelectedItem="{Binding SelectedItemProperty}" 
