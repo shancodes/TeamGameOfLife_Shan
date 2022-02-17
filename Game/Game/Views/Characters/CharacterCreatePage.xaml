@@ -80,8 +80,7 @@
                                 SelectedItem="{Binding SelectedItemProperty}" 
                                 SelectedIndexChanged="Level_Changed"
                                 x:Name="LevelPicker"
-                                WidthRequest="280"
-                                HorizontalOptions="Start"/>
+                                Style="{StaticResource CharacterUpdatePicker}"/>
 
                             <!--Grid for Max Health-->
                             <Label Grid.Row="3" Grid.Column="0"
