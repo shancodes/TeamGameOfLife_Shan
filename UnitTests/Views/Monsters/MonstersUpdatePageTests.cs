@@ -107,5 +107,27 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void MonsterUpdatePage_UpdateUIElements_Default_Should_Pass()
+        {
+            // Arrange
+            var monster = new MonsterModel();
+            page.ViewModel.Data = monster;
+            Entry nameField = (Entry)page.FindByName("Name_Entry");
+            Assert.AreEqual(nameField.Text, "Cruel Monster");
+            Entry descriptionField = (Entry)page.FindByName("Description_Entry");
+            Assert.AreEqual(descriptionField.Text, "Long thin Cruel Monster");
+
+            // Act
+            monster.Name = "Monster Dino";
+            monster.Description = "Giant Monster Dino";
+            page.UpdateUIElements();
+
+            // Assert
+            Assert.AreEqual(nameField.Text, monster.Name);
+            Assert.AreEqual(descriptionField.Text, monster.Description);
+
+        }
     }
 }
