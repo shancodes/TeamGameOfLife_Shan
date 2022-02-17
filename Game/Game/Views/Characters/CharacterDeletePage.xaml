@@ -18,10 +18,10 @@
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-        <StackLayout Style="{StaticResource OuterBoxStack}" Spacing="10" HorizontalOptions="FillAndExpand">
+    <ScrollView Style="{StaticResource ScrollViewHomePage}">
+        <StackLayout Style="{StaticResource StackOuterBox}" >
 
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" />
 
             <!--Stack layout for Name-->
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" >
