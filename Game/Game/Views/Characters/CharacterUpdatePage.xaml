@@ -35,8 +35,8 @@
                     <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
 
                         <StackLayout Style="{StaticResource CharacterStackBox}" >
-                            
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="CenterAndExpand"/>
+
+                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageItemCreatePageStyle}" />
 
                             <ImageButton 
                                 x:Name="RollDice"
