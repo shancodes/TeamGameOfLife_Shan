@@ -284,5 +284,36 @@ namespace UnitTests.ViewModels
             // Assert
             Assert.AreEqual(dataTest.Id, result.Id);
         }
+
+        [Test]
+        public async Task BaseViewModel_Return_Should_Pass()
+        {
+            // Arrange
+
+            // Add items into the list Z ordered
+            var dataTest = new ItemModel { Name = "Burning Polyarm", Description = "A Burning Polyarm",
+                ImageURI = "burning_polyarm.png",
+                Range = 0,
+                Damage = 8,
+                Value = 9,
+                Location = ItemLocationEnum.PrimaryHand,
+                Attribute = AttributeEnum.Attack
+            };
+
+            //Act
+            ViewModel.Dataset = new ObservableCollection<ItemModel>();
+            _ = await ViewModel.SetDataSource(1);
+            ViewModel.Dataset.Insert(0, dataTest);
+
+            var result = ViewModel.CreateUpdateAsync(dataTest);
+
+            //Reset
+            ViewModel.Dataset = null;
+            ViewModel.DataStore = null;
+
+            //Assert
+            Assert.AreEqual(false, result.Result);
+
+        }
     }
 }
