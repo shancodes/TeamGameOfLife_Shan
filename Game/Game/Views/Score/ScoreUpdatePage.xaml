@@ -19,8 +19,7 @@
 
     <ScrollView VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand">
-        <StackLayout Style="{StaticResource OuterBoxStack}" 
-            Spacing="50" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource StackLayoutOuterBox}">
 
             <!--Completion Time-->
             <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
