@@ -175,6 +175,13 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="LabelCharacterCreateStyle"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="Padding" Value="10,10,40,10"/>
+            </Style>
+            
+            <Style TargetType="Label"
                 x:Key="LabelItemReadStyle"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalOptions" Value="Start" />
