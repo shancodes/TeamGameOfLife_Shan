@@ -31,7 +31,7 @@
                                Style="{StaticResource StyleItemReadLabelStyle}" />
                             <Label 
                                 Text="{Binding Data.Name}" 
-                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center" />
+                                Style="{StaticResource StyleItemReadValueStyle}" />
                         </StackLayout>
 
                         <!--Description-->
@@ -41,7 +41,7 @@
                                 Style="{StaticResource StyleItemReadLabelStyle}" />
                             <Label 
                                 Text="{Binding Data.Description}" 
-                                Style="{StaticResource ValueStyle}" HorizontalTextAlignment="Center"/>
+                                Style="{StaticResource StyleItemReadValueStyle}" />
                         </StackLayout>
 
                         <!--Level-->
