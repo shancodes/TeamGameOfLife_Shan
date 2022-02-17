@@ -131,13 +131,18 @@ namespace UnitTests.Views
             page.ViewModel.Data = monster;
             Entry nameField = (Entry)page.FindByName("Name_Entry");
             Assert.AreEqual(nameField.Text, "Cruel Monster");
+            Entry descriptionField = (Entry)page.FindByName("Description_Entry");
+            Assert.AreEqual(descriptionField.Text, "Long thin Cruel Monster");
 
             // Act
-            monster.Name = "Shanmugapriya";
+            monster.Name = "Monster Dino";
+            monster.Description = "Giant Monster Dino";
             page.UpdateUIElements();
 
             // Assert
             Assert.AreEqual(nameField.Text, monster.Name);
+            Assert.AreEqual(descriptionField.Text, monster.Description);
+           
         }
     }
 }
