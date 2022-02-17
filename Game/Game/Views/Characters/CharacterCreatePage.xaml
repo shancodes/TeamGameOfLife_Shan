@@ -115,9 +115,7 @@
                                 <Label
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    HorizontalOptions="Start"
-                                    HorizontalTextAlignment="End"/>
+                                    Style="{StaticResource StyleCharacterValueStyle}"/>
 
                                 <Stepper
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
@@ -132,15 +130,12 @@
                                 <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    HorizontalOptions="Start"
-                                    HorizontalTextAlignment="End"/>
+                                    Style="{StaticResource StyleCharacterValueStyle}"/>
 
                                 <Stepper
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
                                     ValueChanged="Speed_OnStepperValueChanged"/>
                             </StackLayout>
-
                         </Grid>
 
                         <!--Flex Layout to show items to select-->
