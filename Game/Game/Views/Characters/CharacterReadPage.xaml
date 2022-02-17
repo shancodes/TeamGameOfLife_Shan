@@ -55,7 +55,7 @@
                         </StackLayout>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
-                            <Frame OutlineColor="Black" Padding="1">
+                            <Frame Style="{StaticResource FrameStyle}">
                                 <Grid Style="{StaticResource CharacterReadGridStyle}">
 
                                     <Grid.ColumnDefinitions>
