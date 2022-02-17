@@ -129,5 +129,27 @@ namespace UnitTests.Views
             Assert.AreEqual(descriptionField.Text, monster.Description);
 
         }
+
+        [Test]
+        public void MonsterUpdatePage_Reset_Clicked_Valid_Should_Pass()
+        {
+            // Arrange
+            var monster = new MonsterModel();
+            page.ViewModel.Data = monster;
+            Entry nameField = (Entry)page.FindByName("Name_Entry");
+            Assert.AreEqual(nameField.Text, "Cruel Monster");
+            Entry descriptionField = (Entry)page.FindByName("Description_Entry");
+            Assert.AreEqual(descriptionField.Text, "Long thin Cruel Monster");
+
+            // Act
+            monster.Name = "Monster Dinos";
+            monster.Description = "Giant Cruel Dinos";
+            page.Reset_Clicked(null,null);
+
+            // Assert
+            Assert.AreEqual(nameField.Text, monster.Name);
+            Assert.AreEqual(descriptionField.Text, monster.Description);
+
+        }
     }
 }
