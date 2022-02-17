@@ -43,7 +43,7 @@
 
                                 <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
                                      x:Name="Name_Entry"
-                                     Style="{StaticResource EntryStyleMonster}"  TextChanged="EntryName_TextChanged"/>
+                                     Style="{StaticResource EntryItemCreateNonStackStyle}"  TextChanged="EntryName_TextChanged"/>
 
                                 <!--Description Field-->
                                 <Label Grid.Row="2" Grid.Column="0"
@@ -54,7 +54,7 @@
                                 <Entry Grid.Row="2" Grid.Column="1"
                                      Text="{Binding Data.Description, Mode=TwoWay}" 
                                      x:Name="Description_Entry"
-                                     Style="{StaticResource EntryStyleMonster}"
+                                     Style="{StaticResource EntryItemCreateNonStackStyle}"
                                      TextChanged="EntryDescription_TextChanged"/>
 
                                 <!--Difficulty-->
@@ -67,7 +67,7 @@
                                         ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
                                     SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                     x:Name="DifficultyPicker"
-                                    Style="{StaticResource EntryStyleMonster}"/>
+                                    Style="{StaticResource EntryItemCreateNonStackStyle}"/>
 
 
 
