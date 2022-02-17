@@ -13,12 +13,9 @@
     </NavigationPage.TitleView>
 
     <AbsoluteLayout
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand">
+        Style="{StaticResource BasicAbsoluteLayout}">
 
-        <StackLayout Style="{StaticResource VerticalStack}"
-                     AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                     AbsoluteLayout.LayoutFlags="All">
+        <StackLayout Style="{StaticResource Boundaries}">
 
             <ScrollView x:Name="ScrollView">
                 <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
