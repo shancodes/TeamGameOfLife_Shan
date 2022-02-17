@@ -24,7 +24,7 @@
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" />
 
             <!--Stack layout for Name-->
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" >
+            <StackLayout Style="{StaticResource HorizontalCenterStack}">
                 
                 <Label 
                     Text="Name: " 
@@ -41,7 +41,7 @@
             </StackLayout>
 
             <!--Stack layout for Description-->
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="20">
+            <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
                 
                 <Label 
                     Text="Description: " 
@@ -69,8 +69,8 @@
 
             <StackLayout Style="{StaticResource ButtonPair}">
 
-                <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="Start"/>
-                <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
+                <Button ImageSource="delete.png" Clicked="Delete_Clicked" Style="{StaticResource ButtonItemDeleteOneStyle}"/>
+                <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}"/>
 
             </StackLayout>
 
