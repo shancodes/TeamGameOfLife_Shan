@@ -10,8 +10,8 @@
 
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
-            <Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" Style="{StaticResource HeaderStyle}"/>
-            <Button  ImageSource="create_navibar_top.png"  Clicked="AddItem_Clicked" HorizontalOptions="End" Style="{StaticResource ButtoNavigationBar}"/>
+            <Label Text="{Binding Title}" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
+            <Button  ImageSource="create_navibar_top.png"  Clicked="AddItem_Clicked" Style="{StaticResource ButtonIndexpageStyle}"/>
         </StackLayout>
 
     </NavigationPage.TitleView>
