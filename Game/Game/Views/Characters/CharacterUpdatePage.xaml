@@ -78,9 +78,7 @@
 
                                 <Label Grid.Row="2" Grid.Column="1"
                                     x:Name="MaxHealthValue"
-                                    Style="{StaticResource ValueStyle}"
-                                    HorizontalOptions="Start"
-                                    Padding="10,10,40,10" />
+                                    Style="{StaticResource LabelCharacterCreateStyle}"/>
 
                                 <!--Level-->
                                 <Label Grid.Row="3" Grid.Column="0"
