@@ -57,7 +57,7 @@
             </StackLayout>
 
             <!--Delete Done and Update buttons-->
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+            <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                 
                 <Button ImageSource="delete.png" Clicked="Delete_Clicked" />
                 <Button ImageSource="done.png" Clicked="Done_Clicked" />
