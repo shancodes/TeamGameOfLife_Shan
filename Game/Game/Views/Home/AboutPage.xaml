@@ -147,10 +147,8 @@
                             x:Name="ServerItemsList"
                             IsVisible="false"
                             IsEnabled="false"
-                            HorizontalOptions="StartAndExpand"
-                            VerticalOptions="StartAndExpand"
-                            />
-
+                            Style="{StaticResource EditorAboutPageStyle}"
+                        />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>

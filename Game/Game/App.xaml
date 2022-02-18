@@ -1075,6 +1075,11 @@
                 <Setter Property="AutoSize" Value="TextChanges" />
             </Style>
 
+            <Style TargetType="Editor" x:Key="EditorAboutPageStyle">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+            </Style>
+
             <!-- Stepper -->
             <Style TargetType="Stepper">
                 <Setter Property="HorizontalOptions" Value="Start" />
