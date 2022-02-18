@@ -63,7 +63,7 @@
 
                 <Switch
                         x:Name="DatabaseSettingsSwitch"
-                        HorizontalOptions="EndAndExpand"
+                        Style="{StaticResource AboutSwitchStyle}"
                         Toggled="DatabaseSettingsSwitch_OnToggled"
                         IsToggled="False"/>
             </StackLayout>
@@ -79,8 +79,7 @@
                             Style="{DynamicResource LabelStyle}"/>
 
                     <Switch
-                        HorizontalOptions="Start" 
-                        VerticalOptions="Center"
+                       Style="{StaticResource AboutSwitchCenterStyle}"
                         x:Name="DataSourceValue"
                         IsToggled="{Binding ItemIndexViewModel.Instance.CurrentDataSource}"
                         Toggled="DataSource_Toggled" 

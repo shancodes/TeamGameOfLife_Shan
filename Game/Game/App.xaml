@@ -1085,6 +1085,16 @@
                    x:Key="StepperStyle">
                 <Setter Property="HorizontalOptions" Value="End" />
             </Style>
+            
+            <!--switch-->
+            <Style TargetType="Switch" x:Key="AboutSwitchStyle">
+                <Setter Property="HorizontalOptions" Value="EndAndExpand"/>
+            </Style>
+
+            <Style TargetType="Switch" x:Key="AboutSwitchCenterStyle">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
 
             <!-- Picker -->
             <Style TargetType="Picker">
