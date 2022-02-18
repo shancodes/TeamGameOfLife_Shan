@@ -124,6 +124,11 @@
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="LabelInsideStackAboutStyle" BasedOn="{StaticResource LabelBaseStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
             <Style TargetType="Label" x:Key="LabelAboutMakersStyle">
                 <Setter Property="FontSize" Value="Subtitle"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>

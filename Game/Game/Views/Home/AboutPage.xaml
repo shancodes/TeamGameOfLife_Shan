@@ -125,17 +125,12 @@
 
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
                             <Label
-                                Text="Number of Items "
-                                HorizontalTextAlignment="Start"
-                                HorizontalOptions="Start"
-                                Style="{DynamicResource LabelStyle}"
-                                />
+                                Style="{DynamicResource LabelInsideStackAboutStyle}"/>
 
                             <Entry
-                                x:Name="ServerItemValue"
-
-                                Style="{DynamicResource EntryAboutPage}"
-                                />
+                                x:Name="ServerItemValue" Style="{DynamicResource EntryAboutPage}"
+                            />
+                            
                         </StackLayout>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
