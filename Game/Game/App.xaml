@@ -493,7 +493,6 @@
                 <Setter Property="Aspect" Value="Fill" />
             </Style>
 
-
             <Style TargetType="Image" x:Key="ImageItemCreatePageStyle" BasedOn="{StaticResource ImageLargeStyle}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
             </Style>
@@ -757,7 +756,11 @@
                 BasedOn="{StaticResource VerticalStack}">
                 <Setter Property="Spacing" Value="20"/>
             </Style>
-            
+
+            <Style TargetType="StackLayout" BasedOn="{StaticResource OuterBoxStack}" x:Key="OuterStackAboutStyle">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+
             <Style TargetType="StackLayout"
                 x:Key="ScoreOuterBoxStack"
                 BasedOn="{StaticResource OuterBoxStack}">
