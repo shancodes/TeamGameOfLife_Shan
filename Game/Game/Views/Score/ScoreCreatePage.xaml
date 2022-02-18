@@ -28,10 +28,8 @@
 
     <ContentPage.Content>
 
-        <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
-            <StackLayout Style="{StaticResource OuterBoxStack}"
-                Spacing="100" HorizontalOptions="Center">
-
+        <ScrollView Style="{StaticResource ScrollViewHomePage}">
+            <StackLayout Style="{StaticResource StackOuterBox}" >
 
                 <Grid
                     RowSpacing="10"
