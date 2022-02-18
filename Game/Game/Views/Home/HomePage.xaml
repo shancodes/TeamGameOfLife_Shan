@@ -9,7 +9,7 @@
             <StackLayout Style="{StaticResource StackLayoutHomePage}">
 
                 <!--Image for home page-->
-                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+                <StackLayout Style="{StaticResource HorizontalStack}" >
                     <Image
                          Source="logo_medium.png"
                          Style="{StaticResource ImageLargeLogoStyle}"/>
