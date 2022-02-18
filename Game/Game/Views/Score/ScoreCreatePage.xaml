@@ -12,11 +12,11 @@
 
     <!--NavigationView for button and label-->
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            
-            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
-            <Label Text="Create Score" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
-            
+        <StackLayout Style="{StaticResource NavigationHeader}">
+
+            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
+            <Label Text="Create Score" Style="{StaticResource TitleHeader}" />
+
         </StackLayout>
     </NavigationPage.TitleView>
 
