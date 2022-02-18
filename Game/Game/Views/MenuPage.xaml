@@ -7,9 +7,9 @@
              x:Class="Game.Views.MenuPage"
              Title="Menu">
              
-    <StackLayout VerticalOptions="FillAndExpand">
+    <StackLayout Style="{StaticResource MenuStyle}">
         <ListView x:Name="ListViewMenu"
-                    HasUnevenRows="True">
+                    Style="{StaticResource ListViewMenuStyle}">
             <d:ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:string>Item 1</x:string>
