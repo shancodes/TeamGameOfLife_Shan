@@ -34,7 +34,7 @@
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterStack}">
 
-                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
+                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
 
                         <ImageButton 
                                 x:Name="RollDice"
