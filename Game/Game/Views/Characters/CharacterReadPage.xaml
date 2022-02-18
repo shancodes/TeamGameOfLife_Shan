@@ -58,17 +58,6 @@
                             <Frame Style="{StaticResource FrameStyle}">
                                 <Grid Style="{StaticResource CharacterReadGridStyle}">
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto"/>
-                                        <ColumnDefinition Width="auto"/>
-                                        <ColumnDefinition Width="auto"/>
-                                        <ColumnDefinition Width="auto"/>
-                                        <ColumnDefinition Width="auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-
                                     <Label Grid.Column="0" Grid.Row="0"
                                        Text="Attribute" 
                                        Style="{StaticResource GridLabelStyle}"/>
