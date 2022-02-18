@@ -34,7 +34,7 @@
                 <Grid
                     Style="{StaticResource ScoreCreateGridStyle}">
 
-                    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Style="{StaticResource StackReadStyle}" Grid.Row="0" Grid.Column="1">
 
                         <!--Name-->
                         <Label
