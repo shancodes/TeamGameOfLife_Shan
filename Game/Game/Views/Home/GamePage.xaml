@@ -6,7 +6,7 @@
 
     <ContentPage.Content>
 
-        <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" Padding="10">
+        <ScrollView Style="{StaticResource ScrollViewGamePage}">
 
             <FlexLayout x:Name="flexLayout"
                         Style="{StaticResource FlexLayoutGamePage}">
