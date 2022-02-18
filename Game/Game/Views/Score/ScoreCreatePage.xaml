@@ -63,8 +63,8 @@
                     </StackLayout>
 
                     <!--Cancel and Create buttons-->
-                    <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
-                    <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="Start" Grid.Row="2" Grid.Column="2"/>
+                    <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
+                    <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" Style="{StaticResource ButtonItemDeleteOneStyle}" Grid.Row="2" Grid.Column="2"/>
 
                 </Grid>
                 
