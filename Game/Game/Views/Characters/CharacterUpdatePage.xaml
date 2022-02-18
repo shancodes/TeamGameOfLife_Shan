@@ -45,13 +45,7 @@
                                 Clicked="RollDice_Clicked"/>
 
                             <!--Name Field-->
-                            <Grid RowSpacing="10" ColumnSpacing="5" VerticalOptions="CenterAndExpand" Margin="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+                            <Grid Style="{StaticResource MonsterReadGridStyle}">
 
                                 <Label Grid.Row="0" Grid.Column="0"
                                     Text="Name: " 
@@ -92,13 +86,7 @@
                                     x:Name="LevelPicker"/>
                             </Grid>
 
-                            <Grid RowSpacing="10" ColumnSpacing="15" VerticalOptions="CenterAndExpand" Margin="10">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+                            <Grid Style="{StaticResource MonsterReadGridStyle}">
 
                                 <!--Attack-->
                                 <Label Text="Attack:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="0" />
