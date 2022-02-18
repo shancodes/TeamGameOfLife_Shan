@@ -32,11 +32,7 @@
             <StackLayout Style="{StaticResource StackOuterBox}" >
 
                 <Grid
-                    RowSpacing="10"
-                    ColumnSpacing="0"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    >
+                    Style="{StaticResource ScoreCreateGridStyle}">
 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />

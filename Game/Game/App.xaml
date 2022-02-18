@@ -474,6 +474,14 @@
             </Style>
 
             <Style TargetType="Grid"
+                x:Key="ScoreCreateGridStyle">
+                <Setter Property="RowSpacing" Value="10" />
+                <Setter Property="ColumnSpacing" Value="0" />
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Grid"
                 x:Key="ReadPageButtonGrid">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="RowSpacing" Value="10" />
