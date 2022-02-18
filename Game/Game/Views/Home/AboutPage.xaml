@@ -18,7 +18,7 @@
 
             <Label Text=" A battle between powerful ladies and Ice monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
             <Label Text="Makers" Style="{StaticResource LabelAboutMakersStyle}"/>
-            <Label Text="Developers" WidthRequest="280" HorizontalTextAlignment="Center"/>
+            <Label Text="Developers" Style="{StaticResource LabelAboutDevsStyle}"/>
 
 
             <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">

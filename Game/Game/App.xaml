@@ -130,6 +130,12 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="LabelAboutDevsStyle">
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="WidthRequest" Value="280"/>
+            </Style>
+
             <Style TargetType="Label" x:Key="LabelMenuStyle">
                 <Setter Property="FontSize" Value="20"/>
             </Style>
