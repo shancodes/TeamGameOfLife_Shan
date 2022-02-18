@@ -77,7 +77,7 @@
 
                                 <!--Attack-->
                                 <Label Text="Attack:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="1" Grid.Column="0" />
-                                <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                                <StackLayout  Style="{StaticResource StackUpdate}" Grid.Row="1" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
@@ -86,13 +86,12 @@
 
                                     <Stepper 
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged"
-                                    HorizontalOptions="Start"/>
+                                    ValueChanged="Attack_OnStepperValueChanged"/>
                                 </StackLayout>
 
                                 <!--Defense-->
                                 <Label Text="Defense:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="2" Grid.Column="0" />
-                                <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                                <StackLayout Style="{StaticResource StackUpdate}" Grid.Row="2" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
@@ -100,13 +99,12 @@
 
                                     <Stepper 
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
-                                    ValueChanged="Defense_OnStepperValueChanged"
-                                        HorizontalOptions="Start"/>
+                                    ValueChanged="Defense_OnStepperValueChanged"/>
                                 </StackLayout>
 
                                 <!--Speed-->
                                 <Label Text="Speed:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="3" Grid.Column="0" />
-                                <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+                                <StackLayout Style="{StaticResource StackUpdate}" Grid.Row="3" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
@@ -114,8 +112,7 @@
 
                                     <Stepper 
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
-                                    ValueChanged="Speed_OnStepperValueChanged"
-                                        HorizontalOptions="Start"/>
+                                    ValueChanged="Speed_OnStepperValueChanged"/>
                                 </StackLayout>
                             </Grid>
 
@@ -123,8 +120,8 @@
 
 
                         <StackLayout Style="{StaticResource ButtonPair}">
-                            <Button ImageSource="reset.png"  Clicked="Reset_Clicked" HorizontalOptions="End"/>
-                            <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                            <Button ImageSource="reset.png"  Clicked="Reset_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
+                            <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
                         </StackLayout>
                     </StackLayout>
                 </ScrollView>
