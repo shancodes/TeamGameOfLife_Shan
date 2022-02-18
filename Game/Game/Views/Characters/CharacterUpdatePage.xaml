@@ -90,7 +90,7 @@
 
                                 <!--Attack-->
                                 <Label Text="Attack:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="0" Grid.Column="0" />
-                                
+
                                 <StackLayout Style="{StaticResource StackUpdate}" Grid.Row="0" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
@@ -118,7 +118,7 @@
 
                                 <!--Speed-->
                                 <Label Text="Speed:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="2" Grid.Column="0"/>
-                                
+
                                 <StackLayout  Style="{StaticResource StackUpdate}" Grid.Row="2" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
@@ -129,7 +129,7 @@
                                         Value="{Binding Data.Speed, Mode=TwoWay}"
                                         ValueChanged="Speed_OnStepperValueChanged"/>
                                 </StackLayout>
-                                
+
                             </Grid>
                         </StackLayout>
 
@@ -141,13 +141,11 @@
                         <!--Reset and Update buttons-->
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
 
-                            <Button ImageSource="reset.png" Clicked="Reset_Clicked" HorizontalOptions="End"/>
-                            <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End"/>
-                            
+                            <Button ImageSource="reset.png" Clicked="Reset_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
+                            <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
+
                         </StackLayout>
-
                     </StackLayout>
-
                 </ScrollView>
             </StackLayout>
 
