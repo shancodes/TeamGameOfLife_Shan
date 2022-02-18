@@ -49,7 +49,6 @@
                                 <Label Grid.Row="2" Grid.Column="0"
                                     Text="Description : " 
                                     Style="{StaticResource StyleLabel}"/>
-                                       
 
                                 <Entry Grid.Row="2" Grid.Column="1"
                                      Text="{Binding Data.Description, Mode=TwoWay}" 
@@ -69,8 +68,6 @@
                                     x:Name="DifficultyPicker"
                                     Style="{StaticResource EntryItemCreateNonStackStyle}"/>
 
-
-
                             </Grid>
 
                             <Grid Style="{StaticResource MonsterReadGridStyle}">
@@ -82,7 +79,6 @@
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
                                     Style="{StaticResource StyleValue}"/>
-
 
                                     <Stepper 
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
@@ -117,7 +113,6 @@
                             </Grid>
 
                         </StackLayout>
-
 
                         <StackLayout Style="{StaticResource ButtonPair}">
                             <Button ImageSource="reset.png"  Clicked="Reset_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
