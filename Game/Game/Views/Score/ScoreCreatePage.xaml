@@ -39,8 +39,7 @@
                         <!--Name-->
                         <Label
                             Text="Name: " 
-                            Style="{StaticResource LabelStyle}"
-                            HorizontalTextAlignment="Start"/>
+                            Style="{StaticResource NewLabel}"/>
 
                         <Entry
                             x:Name="Name_Entry"
