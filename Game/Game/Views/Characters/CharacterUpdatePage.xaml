@@ -11,7 +11,7 @@
 
     <!--NavigationPage with Back button and Text-->
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" Spacing="20">
+        <StackLayout Style="{StaticResource NavigationHeader}">
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
             <Label Text="Update Character" Style="{StaticResource TitleHeader}"/>
         </StackLayout>
@@ -29,15 +29,11 @@
             Style="{StaticResource BasicAbsoluteLayout}">
 
             <StackLayout Style="{StaticResource Boundaries}">
-
                 <ScrollView>
-
                     <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
-
                         <StackLayout Style="{StaticResource CharacterStackBox}" >
 
                             <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageItemCreatePageStyle}" />
-
                             <ImageButton 
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
