@@ -13,13 +13,11 @@
             <Label Text="Score Detail " Style="{StaticResource TitleHeader}"/>
         </StackLayout>
      </NavigationPage.TitleView>
-    
-    <ScrollView VerticalOptions="CenterAndExpand"
-            HorizontalOptions="CenterAndExpand">
-        <StackLayout Style="{StaticResource OuterBoxStack}" 
-            Spacing="50" HorizontalOptions="FillAndExpand">
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+    <ScrollView Style="{StaticResource ScrollViewHomePage}">
+        <StackLayout Style="{StaticResource StackOuterBox}" >
+
+            <StackLayout Style="{StaticResource HorizontalCenterStack}">
 
                 <!--GameDate-->
                 <Label 
@@ -32,7 +30,7 @@
                 
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalCenterStack}">
 
                 <!--Name-->
                 <Label 
@@ -45,12 +43,12 @@
                 
             </StackLayout>
 
-            <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+            <StackLayout Style="{StaticResource CharacterStackBox}" >
                 
                 <!--Score-->
                 <Label 
                     Text=" Your Score:" 
-                    Style="{StaticResource LabelStyle}" FontSize="Subtitle"/>
+                    Style="{StaticResource LabelStyle}" />
                 
                 <Label 
                     Text="{Binding Data.ScoreTotal}"
