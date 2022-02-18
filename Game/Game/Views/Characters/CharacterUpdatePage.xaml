@@ -89,8 +89,8 @@
                             <Grid Style="{StaticResource MonsterReadGridStyle}">
 
                                 <!--Attack-->
-                                <Label Text="Attack:" Style="{StaticResource LabelStyle}" HorizontalOptions="End" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="0" />
-                                <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                                <Label Text="Attack:" Style="{StaticResource LabelStyleForAttributes}" Grid.Row="0" Grid.Column="0" />
+                                <StackLayout Style="{StaticResource StackUpdate}" Grid.Row="0" Grid.Column="1">
                                     <Label 
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
@@ -98,8 +98,7 @@
 
                                     <Stepper 
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged"
-                                    HorizontalOptions="Start"/>
+                                    ValueChanged="Attack_OnStepperValueChanged"/>
                                 </StackLayout>
 
                                 <!--Defense-->
