@@ -34,13 +34,6 @@
                 <Grid
                     Style="{StaticResource ScoreCreateGridStyle}">
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
                     <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand">
 
                         <!--Name-->

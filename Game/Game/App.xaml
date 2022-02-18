@@ -479,6 +479,8 @@
                 <Setter Property="ColumnSpacing" Value="0" />
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="RowDefinitions" Value="auto"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
             </Style>
 
             <Style TargetType="Grid"
