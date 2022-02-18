@@ -17,8 +17,7 @@
 
     <ScrollView >
         <FlexLayout Style="{StaticResource FlexLayoutCrudi}">
-        <StackLayout Style="{StaticResource OuterBoxStack}"
-                 HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource OuterBoxStack}">
 
             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
 
