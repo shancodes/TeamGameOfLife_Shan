@@ -43,8 +43,7 @@
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
                                 Source="dice.png"
-                                Clicked="RollDice_Clicked"
-                                HorizontalOptions="Center"/>
+                                Clicked="RollDice_Clicked"/>
 
                         <Grid
                              Style="{StaticResource MonsterCreateGridStyle}" >
@@ -88,8 +87,7 @@
                             Style="{StaticResource MonsterCreateGridStyle}" >
 
                             <!--Grid for Attack-->
-                            <Label Grid.Row="0" Grid.Column="0" Text="Attack:" Style="{StaticResource LabelStyle}"
-                                   HorizontalOptions="End"/>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Attack:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Attack field-->
                             <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="0" Grid.Column="1">
@@ -101,14 +99,12 @@
 
                                 <Stepper
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged"
-                                    HorizontalOptions="End"/>
+                                    ValueChanged="Attack_OnStepperValueChanged"/>
 
                             </StackLayout>
 
                             <!--Grid for Defense-->
-                            <Label Grid.Row="1" Grid.Column="0" Text="Defense:" Style="{StaticResource LabelStyle}"
-                                   HorizontalOptions="End"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Defense:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Defense field-->
                             <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="1" Grid.Column="1">
@@ -124,8 +120,7 @@
                             </StackLayout>
 
                             <!--Grid for Speed-->
-                            <Label Grid.Row="2" Grid.Column="0" Text="Speed:" Style="{StaticResource LabelStyle}"
-                                   HorizontalOptions="End"/>
+                            <Label Grid.Row="2" Grid.Column="0" Text="Speed:" Style="{StaticResource StyleLabel}"/>
 
                             <!--StackLayout for Text and Stepper for Speed field-->
                             <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="2" Grid.Column="1">
@@ -144,8 +139,8 @@
                         <!--Cancel and Create buttons -->
                         <StackLayout Style="{StaticResource ButtonPair}">
 
-                            <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" HorizontalOptions="End"/>
-                            <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" HorizontalOptions="End"/>
+                            <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
+                            <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
 
                         </StackLayout>
                     </StackLayout>
