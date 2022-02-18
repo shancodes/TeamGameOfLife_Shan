@@ -17,7 +17,7 @@
             <Image Source="logo_small.png" Style="{StaticResource ImageItemCreatePageStyle}"/>
 
             <Label Text=" A battle between powerful ladies and Ice monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
-            <Label Text="Makers" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label Text="Makers" Style="{StaticResource LabelAboutMakersStyle}"/>
             <Label Text="Developers" WidthRequest="280" HorizontalTextAlignment="Center"/>
 
 

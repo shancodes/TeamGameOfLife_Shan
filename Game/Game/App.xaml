@@ -124,6 +124,12 @@
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="LabelAboutMakersStyle">
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+
             <Style TargetType="Label" x:Key="LabelMenuStyle">
                 <Setter Property="FontSize" Value="20"/>
             </Style>
