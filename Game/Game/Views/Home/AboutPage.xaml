@@ -24,32 +24,32 @@
             <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="kruta.png" Style="{StaticResource ImageAboutPage}"/>
-                    <Label Text="Kruta" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Kruta" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="shipra.png" Style="{StaticResource ImageAboutPage}"/>
-                    <Label Text="Shipra" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Shipra" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
                 </StackLayout>
 
 
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="priya.png" Style="{StaticResource ImageAboutPage}"/>
-                    <Label Text="Shanmugapriya" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Shanmugapriya" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
                 </StackLayout>
             </StackLayout>
-            
-            <Label Text="Designers" HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Designers" Style="{StaticResource LabelAboutDevsStyle}"/>
             
             <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="natasha.png" Style="{StaticResource ImageAboutPage}"/>
-                    <Label Text="Natasha" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Natasha" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource VerticalStack}">
                     <Image Source="megan.png" Style="{StaticResource ImageAboutPage}"/>
-                    <Label Text="Megan" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="Megan" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
                 </StackLayout>
             </StackLayout>
 

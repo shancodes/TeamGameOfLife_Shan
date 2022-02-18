@@ -136,6 +136,11 @@
                 <Setter Property="WidthRequest" Value="280"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="LabelAboutDevsNamesStyle">
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+
             <Style TargetType="Label" x:Key="LabelMenuStyle">
                 <Setter Property="FontSize" Value="20"/>
             </Style>
