@@ -52,7 +52,7 @@
                 
                 <Label 
                     Text="{Binding Data.ScoreTotal}"
-                    Style="{StaticResource ValueStyle}"  FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+                    Style="{StaticResource ScoreLargeStyle}" />
                 
             </StackLayout>
 
