@@ -127,6 +127,13 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="ScoreListStyle"
+                BasedOn="{StaticResource ListStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="HeaderStyle"
                 BasedOn="{StaticResource LabelBaseStyle}">
                 <Setter Property="BackgroundColor" Value="Transparent" />
@@ -668,7 +675,16 @@
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="Spacing" Value="20"/>
             </Style>
+            
+            <Style TargetType="StackLayout"
+                x:Key="StackScoreIndex">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
 
+            <Style TargetType="StackLayout"
+                x:Key="StackScoreIndexPage" BasedOn="{StaticResource StackScoreIndex}">
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
 
             <Style TargetType="StackLayout"
                    x:Key="NavigationHeader" >
@@ -724,7 +740,14 @@
                 BasedOn="{StaticResource VerticalStack}">
                 <Setter Property="Spacing" Value="20"/>
             </Style>
-
+            
+            <Style TargetType="StackLayout"
+                x:Key="ScoreOuterBoxStack"
+                BasedOn="{StaticResource OuterBoxStack}">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            
             <Style TargetType="StackLayout"
                 x:Key="CharacterOuterBoxStack"
                 BasedOn="{StaticResource OuterBoxStack}">

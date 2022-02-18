@@ -12,12 +12,12 @@
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
             <Label Text="Score Index" Style="{StaticResource TitleHeader}"/>
-            <Button ImageSource="create_navibar_top.png" Clicked="AddScore_Clicked" HorizontalOptions="End"/>
+            <Button ImageSource="create_navibar_top.png" Clicked="AddScore_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout Style="{StaticResource ScoreOuterBoxStack}">
 
             <ListView x:Name="DataListView" 
                     ItemsSource="{Binding Dataset}"
@@ -35,8 +35,7 @@
                             <Grid Style="{StaticResource ScoreIndexGrid}"
                                   >
 
-                                <StackLayout 
-                                    HorizontalOptions="CenterAndExpand">
+                                <StackLayout Style="{StaticResource StackScoreIndex}">
 
                                     <Frame 
                                     OutlineColor="Black" >
@@ -46,15 +45,10 @@
                                             <!--Label for Name-->
                                             <Label 
                                                Text="{Binding Name}" 
-                                               Style="{StaticResource ListStyle}"
-                                               HorizontalTextAlignment="Center"
-                                               HorizontalOptions="CenterAndExpand"
+                                               Style="{StaticResource ScoreListStyle}"
                                                />
 
-                                            <StackLayout 
-                                               Orientation="Horizontal"
-                                               HorizontalOptions="CenterAndExpand"
-                                               >
+                                            <StackLayout Style="{StaticResource StackScoreIndexPage}">
 
                                                 <!--Label for Rounds-->
                                                 <Label 
@@ -70,10 +64,7 @@
 
                                             </StackLayout>
 
-                                            <StackLayout 
-                                               Orientation="Horizontal"
-                                               HorizontalOptions="CenterAndExpand"
-                                               >
+                                            <StackLayout Style="{StaticResource StackScoreIndexPage}">
 
                                                 <!--Label for Score-->
                                                 <Label 
