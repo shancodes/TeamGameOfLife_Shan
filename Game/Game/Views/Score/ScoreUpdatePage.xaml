@@ -12,17 +12,17 @@
 
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
-            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
+            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
             <Label Text="Update Score " Style="{StaticResource TitleHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <ScrollView VerticalOptions="CenterAndExpand"
-            HorizontalOptions="CenterAndExpand">
+    <ScrollView Style="{StaticResource ScrollViewHomePage}">
+        
         <StackLayout Style="{StaticResource StackLayoutOuterBox}">
 
             <!--Completion Time-->
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalCenterStack}">
                 <Label 
                     Text="Completion Time:"
                     Style="{StaticResource LabelStyle}"/>
@@ -35,7 +35,7 @@
             </StackLayout>
             
              <!--Name-->
-            <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center">
+            <StackLayout Style="{StaticResource HorizontalCenterStack}">
                 <Label 
                    Text="Name : " 
                     Style="{StaticResource LabelStyle}"/>
@@ -47,7 +47,7 @@
             </StackLayout>
 
             <!--Score-->
-            <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+            <StackLayout Style="{StaticResource CharacterStackBox}">
                 <Label 
                     Text=" Your Score:" 
                     Style="{StaticResource LabelStyle}" FontSize="Subtitle"/>
@@ -60,8 +60,8 @@
 
             <StackLayout Style="{StaticResource ButtonPair}" >
 
-                <Button ImageSource="reset.png" Clicked="Reset_Clicked" HorizontalOptions="End"/>
-                <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" HorizontalOptions="End" />
+                <Button ImageSource="reset.png" Clicked="Reset_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
+                <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}" />
             </StackLayout>
         </StackLayout>
         </ScrollView>
