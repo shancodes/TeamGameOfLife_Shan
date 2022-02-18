@@ -124,6 +124,10 @@
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="LabelMenuStyle">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+
             <Style TargetType="Label"
                 x:Key="ListStyle"
                 BasedOn="{StaticResource LabelBaseStyle}">
@@ -351,6 +355,10 @@
                 <Setter Property="ColumnDefinitions" Value="auto"/>
             </Style>
 
+            <Style TargetType="Grid" x:Key="GridMenuStyle">
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+            
             <Style TargetType="Grid"
                 x:Key="GridIndexStyle">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
