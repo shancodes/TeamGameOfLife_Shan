@@ -123,7 +123,7 @@
 
                     <StackLayout Style="{StaticResource VerticalStack}">
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                        <StackLayout Style="{StaticResource AboutHorizontalStackStyle}">
                             <Label
                                 Style="{DynamicResource LabelInsideStackAboutStyle}"/>
 
