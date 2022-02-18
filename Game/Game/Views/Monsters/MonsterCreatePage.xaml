@@ -27,12 +27,9 @@
 
     <ContentPage.Content>
         <AbsoluteLayout
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
-        >
+       Style="{StaticResource BasicAbsoluteLayout}">
 
             <StackLayout Style="{StaticResource BasicAbsoluteLayout}">
-                
 
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterStack}">
