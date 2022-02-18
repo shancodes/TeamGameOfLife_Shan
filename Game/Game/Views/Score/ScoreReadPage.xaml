@@ -10,9 +10,7 @@
     <!--NavigationView for label-->
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource StackScore}">
-
-            <Label Text="Score Detail " FontSize="Subtitle" Style="{StaticResource HeaderStyle}" />
-            
+            <Label Text="Score Detail " Style="{StaticResource TitleHeader}"/>
         </StackLayout>
      </NavigationPage.TitleView>
     
