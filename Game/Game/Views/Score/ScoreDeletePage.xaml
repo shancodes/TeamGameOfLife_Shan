@@ -9,16 +9,15 @@
 
     <!--NavigationView for button and label-->
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" Spacing="20">
-            
-            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" HorizontalOptions="Start"/>
-            <Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" FontSize="Medium" Style="{StaticResource HeaderStyle}" />
+        <StackLayout Style="{StaticResource NavigationHeader}">
+
+            <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
+            <Label Text="{Binding Title}" Style="{StaticResource TitleHeader}"/>
             
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <ScrollView VerticalOptions="CenterAndExpand"
-            HorizontalOptions="CenterAndExpand">
+    <ScrollView Style="{StaticResource ScrollViewHomePage}">
         
         <StackLayout 
             Style="{StaticResource OuterBoxStack}"
