@@ -91,8 +91,6 @@ namespace Game.Views
             DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToMessage();
         }
 
-
-
         /// <summary>
         /// Cancel the Create
         /// </summary>
@@ -103,8 +101,6 @@ namespace Game.Views
             this.ViewModel.Data.Update(OriginalModel);
             _ = await Navigation.PopModalAsync();
         }
-
-        
 
         /// <summary>
         /// Reset the fields to original values before update
@@ -117,7 +113,6 @@ namespace Game.Views
             MessagingCenter.Send(this, "Update", ViewModel.Data);
             UpdateUIElements();
         }
-
 
         /// <summary>
         /// Input Validation for Name
