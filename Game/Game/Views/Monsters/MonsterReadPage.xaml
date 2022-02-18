@@ -15,102 +15,91 @@
     </NavigationPage.TitleView>
 
     <AbsoluteLayout
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
-        >
+         Style="{StaticResource BasicAbsoluteLayout}">
 
         <StackLayout Style="{StaticResource Boundaries}">
-            
 
             <ScrollView x:Name="ScrollView">
-                <StackLayout Style="{StaticResource OuterBoxStack}" HorizontalOptions="FillAndExpand">
+                <StackLayout Style="{StaticResource CharacterOuterBoxStack}">
 
-                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Style="{StaticResource CharacterStackBox}">
 
-                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" HorizontalOptions="Center"/>
+                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageItemCreatePageStyle}"/>
 
                         <Grid  Style="{StaticResource MonsterReadGridStyle}">
 
                             <!--Name Field-->
                             <Label Grid.Row="0" Grid.Column="0"
                                     Text="Name : " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.Name}" Grid.Row="0" Grid.Column="1"
-                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+                                     Style="{StaticResource LabelItemCreateStackStyle}"/>
 
                             <!--Description Field-->
                             <Label Grid.Row="1" Grid.Column="0"
                                     Text="Description : " 
-                                    Style="{StaticResource LabelStyle}"
-                                     HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.Description}" Grid.Row="1" Grid.Column="1"
-                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+                                     Style="{StaticResource LabelItemCreateStackStyle}" />
 
                             <!--Difficulty Field-->
                             <Label Grid.Row="2" Grid.Column="0"
                                     Text="Difficulty : " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.Difficulty}" Grid.Row="2" Grid.Column="1"
-                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+                                     Style="{StaticResource LabelItemCreateStackStyle}" />
 
                             <!--Attack Field-->
                             <Label Grid.Row="3" Grid.Column="0"
                                     Text="Attack : " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.Attack}" Grid.Row="3" Grid.Column="1"
-                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+                                     Style="{StaticResource LabelItemCreateStackStyle}" />
 
                             <!--Defense Field-->
                             <Label Grid.Row="4" Grid.Column="0"
                                     Text="Defense : " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.Defense}" Grid.Row="4" Grid.Column="1"
-                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+                                     Style="{StaticResource LabelItemCreateStackStyle}" />
 
                             <!--Speed Field-->
                             <Label Grid.Row="5" Grid.Column="0"
                                     Text="Speed : " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.Speed}" Grid.Row="5" Grid.Column="1"
-                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+                                     Style="{StaticResource LabelItemCreateStackStyle}" />
 
                             <!--Total Exp Field-->
                             <Label Grid.Row="6" Grid.Column="0"
                                     Text="Total Experience : " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.ExperienceTotal}" Grid.Row="6" Grid.Column="1"
-                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+                                     Style="{StaticResource LabelItemCreateStackStyle}" />
 
                             <!--Experience Remaining Field-->
                             <Label Grid.Row="7" Grid.Column="0"
                                     Text="Experience Remaining: " 
-                                    Style="{StaticResource LabelStyle}"
-                                    HorizontalOptions="End"/>
+                                    Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.ExperienceRemaining}" Grid.Row="7" Grid.Column="1"
-                                     Style="{StaticResource ValueStyle}" HorizontalOptions="Start" />
+                                     Style="{StaticResource LabelItemCreateStackStyle}" />
 
                         </Grid>
 
                         <Grid
                             Style="{StaticResource ReadPageButtonGrid}">
 
-                            <Button ImageSource="delete.png" Clicked="Delete_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"/>
-                            <Button ImageSource="done.png"  Clicked="Done_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
-                            <Button ImageSource="update.png" Clicked="Update_Clicked" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2"/>
+                            <Button ImageSource="delete.png" Clicked="Delete_Clicked" Style="{StaticResource ButtonItemReadStyle}" Grid.Row="0" Grid.Column="0"/>
+                            <Button ImageSource="done.png"  Clicked="Done_Clicked" Style="{StaticResource ButtonItemReadStyle}" Grid.Row="0" Grid.Column="1"/>
+                            <Button ImageSource="update.png" Clicked="Update_Clicked" Style="{StaticResource ButtonItemReadStyle}" Grid.Row="0" Grid.Column="2"/>
                         </Grid>
 
                     </StackLayout>
