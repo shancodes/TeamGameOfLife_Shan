@@ -115,16 +115,17 @@ namespace Game.GameRules
                     Value = 9,
                     Location = ItemLocationEnum.Necklace,
                     Attribute = AttributeEnum.Attack},
-/*
+
                 new ItemModel {
-                    Name = "Fire Bow",
-                    Description = "Fast Bow",
-                    ImageURI = "sword11.png",
-                    Range = 10,
+                    Name = "Swift boots",
+                    Description = "Fast running boots",
+                    ImageURI = "swift_boots.png",
+                    Range = 2,
                     Damage = 10,
                     Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
-                    Attribute = AttributeEnum.Attack},
+                    Location = ItemLocationEnum.Feet,
+                    Attribute = AttributeEnum.Speed},
+/*
 
                 new ItemModel {
                     Name = "Strong Shield",

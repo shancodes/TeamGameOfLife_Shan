@@ -424,4 +424,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\iron_shield.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\swift_boots.png" />
+  </ItemGroup>
 </Project>
