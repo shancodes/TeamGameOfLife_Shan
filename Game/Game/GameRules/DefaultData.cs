@@ -86,6 +86,7 @@ namespace Game.GameRules
                     Value = 9,
                     Location = ItemLocationEnum.PrimaryHand,
                     Attribute = AttributeEnum.Speed},
+
                 new ItemModel {
                     Name = "Infinity Tiara",
                     Description = "Powerful tiara",
@@ -114,7 +115,7 @@ namespace Game.GameRules
                     Damage = 10,
                     Value = 9,
                     Location = ItemLocationEnum.Necklace,
-                    Attribute = AttributeEnum.Attack},
+                    Attribute = AttributeEnum.MaxHealth},
 
                 new ItemModel {
                     Name = "Swift boots",
