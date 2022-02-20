@@ -103,7 +103,7 @@ namespace Game.GameRules
                     Range = 2,
                     Damage = 6,
                     Value = 9,
-                    Location = ItemLocationEnum.PrimaryHand,
+                    Location = ItemLocationEnum.OffHand,
                     Attribute = AttributeEnum.Attack},
 
                 new ItemModel {
