@@ -23,6 +23,8 @@
                     Clicked="PickUpCharacterPage_Clicked">
                 </Button>
 
+                <Button Text="Thank you Page" Clicked="ThankyouButtonClickedAsync" HorizontalOptions="Start"></Button>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
