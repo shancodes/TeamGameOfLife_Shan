@@ -144,8 +144,8 @@
                         <!--Cancel and Create buttons -->
                         <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
 
-                            <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}" />
-                            <Button ImageSource="create.png" x:Name="CreateButton" Clicked="Save_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}" />
+                            <ImageButton Source="cancel.png" Clicked="Cancel_Clicked" />
+                            <ImageButton Source="create.png" x:Name="CreateButton" Clicked="Save_Clicked" />
 
                         </StackLayout>
                     </StackLayout>
