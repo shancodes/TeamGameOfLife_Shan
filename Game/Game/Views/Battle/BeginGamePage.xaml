@@ -15,8 +15,7 @@
                          Source="logo_medium.png"
                          Style="{StaticResource ImageLargeLogoStyle}"/>
                 </StackLayout>
-                
-                <Label Text="This is the begin game page" />
+               
                 <Button 
                             Text="Click to pick Characters" 
                             Clicked="ThankYouPage"
