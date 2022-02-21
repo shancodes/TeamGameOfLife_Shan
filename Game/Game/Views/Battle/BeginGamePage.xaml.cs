@@ -18,7 +18,7 @@ namespace Game.Views
             InitializeComponent();
         }
         /// <summary>
-        /// Jump to the ThankYou page
+        /// Jump to the PickCharacters page
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
