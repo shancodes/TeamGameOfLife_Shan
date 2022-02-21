@@ -19,8 +19,8 @@
 
                 <!--PickCharacters button-->
                 <Button 
-                    Text="Click to pick Characters" 
-                    Clicked="ThankYouPage">
+                    Text="Select Characters" 
+                    Clicked="PickUpCharacterPage_Clicked">
                 </Button>
 
             </StackLayout>
