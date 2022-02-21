@@ -15,6 +15,10 @@
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
                         <Label Text="This is the begin game page" />
+                        <Button 
+                            Text="Click to pick Characters" 
+                             >
+                        </Button>
 
                     </StackLayout>
 
