@@ -6,19 +6,17 @@
 
     <ContentPage.Content>
 
-        <ScrollView Style="{StaticResource ScrollViewGamePage}">
-            
-            <StackLayout Orientation="Horizontal">
-                <StackLayout Style="{StaticResource CardImageTextBox}">
+        <ScrollView Style="{StaticResource ScrollViewHomePage}">
 
-                    <Label Text="This is the begin game page" />
-                    <Button 
+            <StackLayout Style="{StaticResource StackLayoutHomePage}">
+
+
+                <Label Text="This is the begin game page" />
+                <Button 
                             Text="Click to pick Characters" 
                             Clicked="ThankYouPage"
                              >
-                    </Button>
-
-                </StackLayout>
+                </Button>
 
             </StackLayout>
         </ScrollView>
