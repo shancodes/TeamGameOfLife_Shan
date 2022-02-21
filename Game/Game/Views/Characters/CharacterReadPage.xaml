@@ -175,9 +175,9 @@
             <!--Delete Done and Update buttons-->
             <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
 
-                <Button ImageSource="delete.png" Style="{StaticResource CharacterButtons}" Clicked="Delete_Clicked"></Button>
-                <Button ImageSource="done.png" Style="{StaticResource CharacterButtons}" Clicked="Done_Clicked"></Button>
-                <Button  ImageSource="update.png" Style="{StaticResource CharacterButtons}" Clicked="Update_Clicked"></Button>
+                <ImageButton Source="delete.png" Clicked="Delete_Clicked"></ImageButton>
+                <ImageButton Source="done.png" Clicked="Done_Clicked"></ImageButton>
+                <ImageButton Source="update.png" Clicked="Update_Clicked"></ImageButton>
                 
             </StackLayout>
             
