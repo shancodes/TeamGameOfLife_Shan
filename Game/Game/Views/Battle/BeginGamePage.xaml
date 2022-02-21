@@ -7,24 +7,20 @@
     <ContentPage.Content>
 
         <ScrollView Style="{StaticResource ScrollViewGamePage}">
+            
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Style="{StaticResource CardImageTextBox}">
 
-            <FlexLayout x:Name="flexLayout"
-                        Style="{StaticResource FlexLayoutGamePage}">
-
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout Style="{StaticResource CardImageTextBox}">
-
-                        <Label Text="This is the begin game page" />
-                        <Button 
+                    <Label Text="This is the begin game page" />
+                    <Button 
                             Text="Click to pick Characters" 
                             Clicked="ThankYouPage"
                              >
-                        </Button>
-
-                    </StackLayout>
+                    </Button>
 
                 </StackLayout>
-            </FlexLayout>
+
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
