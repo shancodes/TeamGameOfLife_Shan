@@ -17,6 +17,7 @@
                         <Label Text="This is the begin game page" />
                         <Button 
                             Text="Click to pick Characters" 
+                            Clicked="ThankYouPage"
                              >
                         </Button>
 
