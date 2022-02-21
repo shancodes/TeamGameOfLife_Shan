@@ -5,9 +5,9 @@
 
     <NavigationPage.TitleView>
         <!--Menu Bar-->
-        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+        <StackLayout x:Name="StacklayoutGamePage" Style="{StaticResource HorizontalStack}" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
             <Frame Padding="10,0,0,0"/>
-            <Label Text="Elves vs Monsters" Style="{StaticResource CenterMessageLargeStyle}"/>
+            <Label  x:Name="title" Text="Elves vs Monsters" Style="{StaticResource CenterMessageLargeStyle}"/>
             <Frame Padding="10,0,0,0"/>
             <ImageButton Source="icon_edit.png" Clicked="Setttings_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
             <ImageButton Source="icon_cancel.png" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
@@ -17,17 +17,16 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <AbsoluteLayout
-                IsVisible="True"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand">
+
+        <FlexLayout x:Name="flexLayout"
+                        Style="{StaticResource FlexLayoutGamePage}">
 
             <!--The Game UI Screen -->
             <StackLayout VerticalOptions="FillAndExpand"
                         x:Name="GameUIDisplay" 
-                        IsVisible="True" 
-                        AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                        AbsoluteLayout.LayoutFlags="All">
+                        IsVisible="True" >
+                <!--AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                        AbsoluteLayout.LayoutFlags="All"-->
 
                 <!--The Top of the Battle UI Holds the List of Players-->
                 <StackLayout VerticalOptions="Start" x:Name="TopPlayerDisplay">
@@ -129,24 +128,17 @@
 
             <!--The Game Over Screen -->
             <StackLayout 
-                    Style="{StaticResource VerticalStack}"
-                    AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                    AbsoluteLayout.LayoutFlags="All"
-                    HorizontalOptions="FillAndExpand"
+                    Style="{StaticResource VerticalStackThankYouPageStyle}"
                     x:Name="GameOverDisplay" 
-                    IsVisible="false">
+             >
+                <Label Text="Thank you for Playing!" Style="{StaticResource CenterMessageLargeStyle}"/>
 
-                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
-                    <Label Text="Thank you for Playing" Style="{StaticResource CenterMessageLargeStyle}"/>
-
-                    <Label Text="Check your score, or click Exit and return soon" Style="{StaticResource MessageStyle}" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" MaxLines="5" Padding="20"/>
-
-                    <Button x:Name="ShowScoreButton" Clicked="ShowScoreButton_Clicked" Text="Score" WidthRequest="50"/>
-
-                    <Button x:Name="ExitButton" Clicked="ExitButton_Clicked" Text="Exit" WidthRequest="50"></Button>
-
+                    <!--Label Text="Check your score, or click Exit and return soon" Style="{StaticResource MessageStyle}" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" MaxLines="5" Padding="20"/-->
+                <StackLayout Style="{StaticResource ThankYouPageHorizontalStackStyle}">
+                    <Button x:Name="ShowScoreButton" Clicked="ShowScoreButton_Clicked" Text="Score"/>
+                    <Button x:Name="ExitButton" Clicked="ExitButton_Clicked" Text="Exit"></Button>
                 </StackLayout>
             </StackLayout>
-        </AbsoluteLayout>
+        </FlexLayout>
     </ContentPage.Content>
 </ContentPage>

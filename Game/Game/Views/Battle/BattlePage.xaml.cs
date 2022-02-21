@@ -903,7 +903,7 @@ namespace Game.Views
                     // Hide the Game Board
                     GameUIDisplay.IsVisible = false;
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
-
+                    StacklayoutGamePage.IsVisible = false;
                     // Show the Game Over Display
                     GameOverDisplay.IsVisible = true;
                     break;
