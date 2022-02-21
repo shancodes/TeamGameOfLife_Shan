@@ -10,7 +10,12 @@
 
             <StackLayout Style="{StaticResource StackLayoutHomePage}">
 
-
+                <StackLayout Style="{StaticResource HorizontalStack}" >
+                    <Image
+                         Source="logo_medium.png"
+                         Style="{StaticResource ImageLargeLogoStyle}"/>
+                </StackLayout>
+                
                 <Label Text="This is the begin game page" />
                 <Button 
                             Text="Click to pick Characters" 
