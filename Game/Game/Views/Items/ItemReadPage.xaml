@@ -73,9 +73,9 @@
             </StackLayout>
 
             <Grid Style="{StaticResource GridItemReadStyle}">
-                    <Button ImageSource="delete.png" Clicked="Delete_Clicked"  Grid.Row="0" Grid.Column="0"  Style="{StaticResource ButtonItemReadStyle}"/>
-                    <Button ImageSource="done.png" Style ="{StaticResource ButtonItemReadStyle}" Clicked="Done_Clicked" Grid.Row="0" Grid.Column="1"/>
-                    <Button ImageSource="update.png" Clicked="Update_Clicked" Grid.Row="0" Grid.Column="2" Style="{StaticResource ButtonItemReadStyle}"/>
+                    <ImageButton Source="delete.png" Clicked="Delete_Clicked"  Grid.Row="0" Grid.Column="0" />
+                    <ImageButton Source="done.png" Clicked="Done_Clicked" Grid.Row="0" Grid.Column="1"/>
+                    <ImageButton Source="update.png" Clicked="Update_Clicked" Grid.Row="0" Grid.Column="2"/>
             </Grid>
             </StackLayout>
         </FlexLayout>
