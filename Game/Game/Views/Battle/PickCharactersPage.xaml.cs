@@ -133,6 +133,11 @@ namespace Game.Views
             _ = await Navigation.PopAsync();
         }
 
+        /// <summary>
+        /// funtion to redirect player to the thank you page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void ThankyouButtonClickedAsync(object sender, EventArgs e)
         {
             //BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
