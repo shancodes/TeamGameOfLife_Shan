@@ -13,11 +13,15 @@
 
                 <StackLayout Orientation="Horizontal">
                     <StackLayout Style="{StaticResource CardImageTextBox}">
-
+                        
                         <ImageButton
                         Source="battle.png"
                         Style="{StaticResource ImageLargeStyle}"
                         Clicked="DungeonButton_Clicked"/>
+
+                        <StackLayout>
+                            <Label Text="Battle" Style="{StaticResource CenterMessageStyle}"/>
+                        </StackLayout>
 
                     </StackLayout>
 
@@ -26,6 +30,11 @@
                         Source="auto_battle.png"
                         Style="{StaticResource ImageLargeStyle}"
                         Clicked="AutobattleButton_Clicked"/>
+
+                        <StackLayout>
+                            <Label Text="AutoBattle" Style="{StaticResource CenterMessageStyle}"/>
+                        </StackLayout>
+                        
                     </StackLayout>
 
                 </StackLayout>
@@ -36,6 +45,10 @@
                         Source="village.png"
                         Style="{StaticResource ImageLargeStyle}"
                         Clicked="VillageButton_Clicked"/>
+
+                    <StackLayout>
+                        <Label Text="Village" Style="{StaticResource CenterMessageStyle}" />
+                    </StackLayout>
 
                 </StackLayout>
             </FlexLayout>
