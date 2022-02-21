@@ -8,12 +8,12 @@ namespace Game.Views
     /// The Main Game Page
     /// </summary>
     
-    public partial class BeginGame : ContentPage
+    public partial class BeginGamePage : ContentPage
     {
         /// <summary>
         /// Constructor
         /// </summary>
-        public BeginGame()
+        public BeginGamePage()
         {
             InitializeComponent();
         }
