@@ -69,8 +69,8 @@
 
             <StackLayout Style="{StaticResource ButtonPair}">
 
-                <Button ImageSource="delete.png" Clicked="Delete_Clicked" Style="{StaticResource ButtonItemDeleteOneStyle}"/>
-                <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}"/>
+                <ImageButton Source="delete.png" Clicked="Delete_Clicked" />
+                <ImageButton Source="cancel.png" Clicked="Cancel_Clicked" />
 
             </StackLayout>
 
