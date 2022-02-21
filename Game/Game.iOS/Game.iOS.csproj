@@ -427,4 +427,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\swift_boots.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\exit.png" />
+  </ItemGroup>
 </Project>
