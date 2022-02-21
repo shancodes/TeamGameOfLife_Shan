@@ -15,6 +15,7 @@
                 <Label Text="Battle Time" Style="{StaticResource CenterMessageLargeStyle}"/>
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Thank you" Clicked="ThankyouButtonClickedAsync" HorizontalOptions="Start"></Button>
 
                     <StackLayout HorizontalOptions="Start">
 
@@ -118,6 +119,7 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </StackLayout>
+                    
                 </StackLayout>
 
             </StackLayout>

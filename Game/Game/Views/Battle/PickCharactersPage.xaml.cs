@@ -7,6 +7,7 @@ using Xamarin.Forms.Xaml;
 using Game.Models;
 using Game.ViewModels;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Game.Views
 {
@@ -130,6 +131,17 @@ namespace Game.Views
 
             await Navigation.PushModalAsync(new NavigationPage(new BattlePage()));
             _ = await Navigation.PopAsync();
+        }
+
+        public async void ThankyouButtonClickedAsync(object sender, EventArgs e)
+        {
+            //BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
+            BattlePage thankyoupage = new BattlePage();
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
+            await Navigation.PushModalAsync(new NavigationPage(thankyoupage));
+            //ShowBattleModeUIElements();
+            _ = await Navigation.PopAsync();
+
         }
 
         /// <summary>
