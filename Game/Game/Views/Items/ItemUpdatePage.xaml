@@ -155,10 +155,11 @@
                 </StackLayout>
 
                 <!--stack layout for Update and Reset buttons-->
-
-                    <Button ImageSource="reset.png" Clicked="Reset_Clicked" Style="{StaticResource ButtonItemCreatepageOneStyle}" Grid.Row="8" Grid.Column="1"/>
-                    <Button x:Name="Update_button" ImageSource="update.png" Clicked="Save_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}" Grid.Row="8" Grid.Column="1" />
             </Grid>
+                <StackLayout Style="{StaticResource HorizontalCenterStack}">
+                    <ImageButton Source="reset.png" Clicked="Reset_Clicked"/>
+                    <ImageButton x:Name="Update_button" Source="update.png" Clicked="Save_Clicked"/>
+                </StackLayout>
 
         </FlexLayout>
 
