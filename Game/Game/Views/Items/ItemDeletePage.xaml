@@ -53,22 +53,20 @@
                 </StackLayout>
             </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalStackDeleteItemPageStyle}">
+                <StackLayout Style="{StaticResource HorizontalStackDeleteItemPageStyle}">
 
-                <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
-                
+                    <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
+
+                </StackLayout>
+            
             </StackLayout>
-
             <!--stack layout for Delete and Cancel buttons-->
-
             <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
 
-                <Button ImageSource="delete.png" Clicked="Delete_Clicked" Style="{StaticResource ButtonItemDeleteOneStyle}"/>
-                <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}"/>
-                
+                <ImageButton Source="delete.png" Clicked="Delete_Clicked"/>
+                <ImageButton Source="cancel.png" Clicked="Cancel_Clicked"/>
+
             </StackLayout>
-        
-        </StackLayout>
         </FlexLayout>
     </ScrollView>
 </ContentPage>
