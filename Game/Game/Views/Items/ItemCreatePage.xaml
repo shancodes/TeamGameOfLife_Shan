@@ -142,11 +142,12 @@
                                 Value="{Binding Data.Value, Mode=TwoWay}"
                                 ValueChanged="Value_OnStepperValueChanged"/>
                     </StackLayout>
-
-                    <Button ImageSource="cancel.png"  Clicked="Cancel_Clicked" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtonItemCreatepageOneStyle}"/>
-                    <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" Grid.Row="8" Grid.Column="1" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
                 </Grid>
                 
+                <StackLayout Style="{StaticResource HorizontalStack}" Spacing="50">
+                    <ImageButton Source="cancel.png"  Clicked="Cancel_Clicked" Grid.Row="8" Grid.Column="1"/>
+                    <ImageButton x:Name="CreateButton" Source="create.png" Clicked="Save_Clicked" Grid.Row="8" Grid.Column="1"/>
+                </StackLayout>
             </FlexLayout>
         </ScrollView>
     </ContentPage.Content>
