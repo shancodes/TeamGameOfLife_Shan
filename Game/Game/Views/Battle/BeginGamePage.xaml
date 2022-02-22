@@ -25,6 +25,7 @@
 
                 <Button Text="Thank you Page" Clicked="ThankyouButtonClickedAsync" HorizontalOptions="Start"></Button>
                 <Button Text="Battle map page" Clicked="BattleMapClickedAsync" HorizontalOptions="Start"></Button>
+                <Button Text="Pick Items Page" Clicked="AutoAssignButton_Clicked" HorizontalOptions="Start"></Button>
 
             </StackLayout>
         </ScrollView>

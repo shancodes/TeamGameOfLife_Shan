@@ -56,5 +56,15 @@ namespace Game.Views
             _ = await Navigation.PopAsync();
 
         }
+
+        /// <summary>
+        /// Start next Round, returning to the battle screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void AutoAssignButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PickItemsPage());
+        }
     }
 }
