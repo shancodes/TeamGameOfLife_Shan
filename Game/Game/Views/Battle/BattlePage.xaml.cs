@@ -913,6 +913,8 @@ namespace Game.Views
                     GameUIDisplay.IsVisible = true;
                     //BattlePlayerInfomationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
+
+                    //Next Attack button removed
                     AttackButton.IsVisible = false;
                     break;
 
@@ -937,6 +939,8 @@ namespace Game.Views
                     BattleMapDisplay.IsVisible = true;
                     // MessageDisplayBox.IsVisible = true;
                     StacklayoutGamePage.IsVisible = false;
+
+                    //Next Attack button disabled
                     AttackButton.IsVisible = false;
                     break;
 
