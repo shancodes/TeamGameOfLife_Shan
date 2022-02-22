@@ -17,16 +17,5 @@ namespace Game.Views
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// Quit the Battle
-        /// 
-        /// Quitting out
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public async void CloseButton_Clicked(object sender, EventArgs e)
-        {
-            //_ = await Navigation.PopModalAsync();
-        }
     }
 }
