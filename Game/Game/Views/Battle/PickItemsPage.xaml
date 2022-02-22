@@ -5,7 +5,7 @@
              >
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
-            <Label Text="Item Inventory" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
+            <Label Text="Grab Your Gear" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
         </StackLayout>
     </NavigationPage.TitleView>
 
