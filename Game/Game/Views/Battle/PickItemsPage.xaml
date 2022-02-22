@@ -8,7 +8,7 @@
              x:Class="Game.Views.PickItemsPage"
              >
 
-    
+    <!-- NavigationPage for Label -->
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
             <Label Text="Grab Your Gear" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
@@ -17,6 +17,8 @@
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
+            
+            <!-- Collection View -->
             <CollectionView
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
@@ -25,18 +27,22 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Style="{StaticResource GridIndexStyle}">
-                            
+
+                            <!-- CheckBox to select one or more than one items -->
                             <CheckBox BindingContext="{Binding Name}">
                             </CheckBox>
-                            
+
+                            <!-- Images for items -->
                             <Image 
                                 Grid.RowSpan="2"
                                 Source="{Binding ImageURI}"
                                 Style="{StaticResource ImageMediumStyle}"/>
 
+                            <!-- Label for Name -->
                             <Label Grid.Column="1"
                                 Text="{Binding Name}"/>
 
+                            <!-- Label for Damage -->
                             <Label 
                                 Grid.Row="1"
                                 Grid.Column="1"
@@ -44,6 +50,7 @@
                             
                             <Label Grid.Row="1" Grid.Column="2" Text="{Binding Damage}"></Label>
 
+                            <!-- Label for Range -->
                             <Label 
                                 Grid.Row="2"
                                 Grid.Column="1"
@@ -51,6 +58,7 @@
                             
                             <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
 
+                            <!-- Label for Value -->
                             <Label 
                                 Grid.Row="3"
                                 Grid.Column="1"
@@ -63,6 +71,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
+            <!-- Select Button -->
             <Button Text="Select"/>
 
         </StackLayout>
