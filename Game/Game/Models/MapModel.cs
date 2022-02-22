@@ -53,6 +53,8 @@ namespace Game.Models
         /// <summary>
         /// Initialize the Data Structure
         /// Add Characters and Monsters to the Map
+        /// 
+        /// placed characters and monsters alligned in y axis
         /// </summary>
         /// <param name="PlayerList"></param>
         /// <returns></returns>
@@ -60,33 +62,33 @@ namespace Game.Models
         {
             _ = ClearMapGrid();
 
-            var x = 0;
             var y = 0;
+            var x = 0;
             foreach (var data in PlayerList.Where(m => m.PlayerType == PlayerTypeEnum.Character))
             {
                 MapGridLocation[x, y].Player = data;
 
                 // If too many to fit on a row, start at the next row
-                x++;
-                if (x >= MapXAxiesCount)
+                y++;
+                if (y >= MapYAxiesCount)
                 {
-                    x = 0;
-                    y++;
+                    y = 0;
+                    x++;
                 }
             }
 
-            x = 0;
-            y = MapYAxiesCount - 1;
+            y = 0;
+            x = MapXAxiesCount - 1;
             foreach (var data in PlayerList.Where(m => m.PlayerType == PlayerTypeEnum.Monster))
             {
                 MapGridLocation[x, y].Player = data;
 
                 // If too many to fit on a row, start at the next row
-                x++;
-                if (x >= MapXAxiesCount)
+                y++;
+                if (y >= MapXAxiesCount)
                 {
-                    x = 0;
-                    y--;
+                    y = 0;
+                    x--;
                 }
             }
 
