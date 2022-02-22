@@ -25,7 +25,10 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Style="{StaticResource GridIndexStyle}">
-                            <Label Text="Pick Items"></Label>
+                            <Image 
+                                Grid.RowSpan="2"
+                                Source="{Binding ImageURI}"
+                                Style="{StaticResource ImageMediumStyle}"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
