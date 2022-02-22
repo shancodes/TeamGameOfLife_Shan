@@ -26,7 +26,7 @@
                 <Button Text="Thank you Page" Clicked="ThankyouButtonClickedAsync" HorizontalOptions="Start"></Button>
                 <Button Text="Battle map page" Clicked="BattleMapClickedAsync" HorizontalOptions="Start"></Button>
                 <Button Text="Pick Items Page" Clicked="AutoAssignButton_Clicked" HorizontalOptions="Start"></Button>
-                <Button Text="Round Over Page" Clicked="RoundOverPage_Clicked" HorizontalOptions="Start"></Button>
+                <!-- <Button Text="Round Over Page" Clicked="RoundOverPage_Clicked" HorizontalOptions="Start"></Button> -->
                 <Button Text="Show Monsters Page" Clicked="NextRoundPage_Clicked" HorizontalOptions="Start"></Button>
 
             </StackLayout>

@@ -279,14 +279,14 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        //public void CloseButton_Clicked(object sender, EventArgs e)
-        //{
-        //    // Reset to a new Round
-        //    _ = BattleEngineViewModel.Instance.Engine.Round.NewRound();
+        public void CloseButton_Clicked(object sender, EventArgs e)
+        {
+            // Reset to a new Round
+            _ = BattleEngineViewModel.Instance.Engine.Round.NewRound();
 
-        //    // Show the New Round Screen
-        //    ShowModalNewRoundPage();
-        //}
+            // Show the New Round Screen
+            ShowModalNewRoundPage();
+        }
 
         /// <summary>
         /// Start next Round, returning to the battle screen
@@ -296,10 +296,10 @@ namespace Game.Views
         public void AutoAssignButton_Clicked(object sender, EventArgs e)
         {
             // Distribute the Items
-            //_ = BattleEngineViewModel.Instance.Engine.Round.PickupItemsForAllCharacters();
+           _ = BattleEngineViewModel.Instance.Engine.Round.PickupItemsForAllCharacters();
 
-            // Show what was picked up
-            //DrawItemLists();
+           // Show what was picked up
+            DrawItemLists();
         }
 
         /// <summary>
