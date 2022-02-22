@@ -24,6 +24,7 @@
                 </Button>
 
                 <Button Text="Thank you Page" Clicked="ThankyouButtonClickedAsync" HorizontalOptions="Start"></Button>
+                <Button Text="Battle map page" Clicked="BattleMapClickedAsync" HorizontalOptions="Start"></Button>
 
             </StackLayout>
         </ScrollView>

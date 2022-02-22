@@ -45,5 +45,16 @@ namespace Game.Views
 
         }
 
+        public async void BattleMapClickedAsync(object sender, EventArgs e)
+        {
+            //BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
+            BattlePage mapgridpage = new BattlePage();
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum = BattleModeEnum.MapNext;
+            await Navigation.PushModalAsync(new NavigationPage(mapgridpage));
+            //ShowBattleModeUIElements();
+            _ = await Navigation.PopAsync();
+
+        }
     }
 }
