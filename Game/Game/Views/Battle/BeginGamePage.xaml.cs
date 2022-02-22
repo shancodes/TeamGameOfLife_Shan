@@ -73,11 +73,11 @@ namespace Game.Views
         /// Round Over is where characters get items
         /// 
         /// </summary>
-        //public async void RoundOverPage_Clicked(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new RoundOverPage());
-        //}
-        
+        public async void RoundPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RoundOverPage());
+        }
+
         /// <summary>
         /// button to the next round page
         /// that displays characters and monsters
