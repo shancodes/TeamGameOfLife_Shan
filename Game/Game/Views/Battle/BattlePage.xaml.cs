@@ -913,7 +913,7 @@ namespace Game.Views
                     GameUIDisplay.IsVisible = true;
                     //BattlePlayerInfomationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
-                    AttackButton.IsVisible = true;
+                    AttackButton.IsVisible = false;
                     break;
 
                 // Based on the State disable buttons
@@ -937,6 +937,7 @@ namespace Game.Views
                     BattleMapDisplay.IsVisible = true;
                     // MessageDisplayBox.IsVisible = true;
                     StacklayoutGamePage.IsVisible = false;
+                    AttackButton.IsVisible = false;
                     break;
 
                 case BattleModeEnum.SimpleAbility:
