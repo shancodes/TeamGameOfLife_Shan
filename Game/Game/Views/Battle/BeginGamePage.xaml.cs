@@ -66,5 +66,16 @@ namespace Game.Views
         {
             await Navigation.PushAsync(new PickItemsPage());
         }
+
+        /// <summary>
+        /// Show the Round Over page
+        /// 
+        /// Round Over is where characters get items
+        /// 
+        /// </summary>
+        private async void RoundOverPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RoundOverPage());
+        }
     }
 }
