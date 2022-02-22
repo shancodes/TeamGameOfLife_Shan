@@ -96,14 +96,16 @@
                             HorizontalOptions="CenterAndExpand"  >
                         <Frame BorderColor="Black">
 
-                        <StackLayout x:Name="MessageDisplayBox" 
+                            <StackLayout x:Name="MessageDisplayBox" 
                             IsVisible="false"
                             Style="{StaticResource VerticalStack}" 
                                     VerticalOptions="StartAndExpand"
                                     HorizontalOptions="CenterAndExpand">
 
-                            <Label x:Name="BattleMessages" 
+                                <Label x:Name="BattleMessages" 
                                     HorizontalOptions="FillAndExpand" 
+                                       WidthRequest="400"
+                                       HeightRequest="50"
                                     LineBreakMode="WordWrap" 
                                     MaxLines="3"
                                     LineHeight="1"
@@ -111,7 +113,7 @@
                                     Style="{StaticResource LabelStyle}"
                                     FontSize="Micro"/>
 
-                            <!--<WebView
+                                <!--<WebView
                         x:Name="HtmlBox"
                         WidthRequest="100"
                         MinimumWidthRequest="100"
@@ -122,11 +124,15 @@
                         BackgroundColor="Transparent"
                         IsVisible="false"
                         />-->
+                            </StackLayout>
+
+                        </Frame>
+                        <StackLayout Style="{StaticResource HorizontalStack}" Spacing="50" HorizontalOptions="CenterAndExpand">
+                            <Button Text="Restart"  ></Button>
+                            <Button Text="Quit"></Button>
                         </StackLayout>
 
-                    </Frame>
                     </StackLayout>
-
                 </StackLayout>
             </StackLayout>
 
