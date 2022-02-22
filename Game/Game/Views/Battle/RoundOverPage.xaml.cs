@@ -293,13 +293,14 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void AutoAssignButton_Clicked(object sender, EventArgs e)
+        public async void AutoAssignButton_Clicked(object sender, EventArgs e)
         {
             // Distribute the Items
-           _ = BattleEngineViewModel.Instance.Engine.Round.PickupItemsForAllCharacters();
+            //_ = BattleEngineViewModel.Instance.Engine.Round.PickupItemsForAllCharacters();
 
-           // Show what was picked up
-            DrawItemLists();
+            // Show what was picked up
+            //DrawItemLists();
+            await Navigation.PushAsync(new PickItemsPage());
         }
 
         /// <summary>
