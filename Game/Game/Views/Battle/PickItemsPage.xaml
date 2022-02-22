@@ -11,7 +11,11 @@
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
-
+            <CollectionView
+                    ItemsSource="{Binding Dataset, Mode=OneWay}"
+                    SelectionMode="Single"
+                    Style="{StaticResource CollectionViewIndexPage}">
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
