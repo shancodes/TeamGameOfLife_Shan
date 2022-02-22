@@ -29,6 +29,11 @@
                                 Grid.RowSpan="2"
                                 Source="{Binding ImageURI}"
                                 Style="{StaticResource ImageMediumStyle}"/>
+
+                            <Label Grid.Column="1"
+                            Text="{Binding Name}"
+                            />
+                            
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
