@@ -25,6 +25,10 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Style="{StaticResource GridIndexStyle}">
+                            
+                            <CheckBox BindingContext="{Binding Name}">
+                            </CheckBox>
+                            
                             <Image 
                                 Grid.RowSpan="2"
                                 Source="{Binding ImageURI}"
