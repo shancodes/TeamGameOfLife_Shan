@@ -58,6 +58,9 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
+            <Button Text="Select"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
