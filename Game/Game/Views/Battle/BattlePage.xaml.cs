@@ -935,7 +935,8 @@ namespace Game.Views
                 case BattleModeEnum.MapNext:
                     GamePlayersTopDisplay.IsVisible = false;
                     BattleMapDisplay.IsVisible = true;
-                   // MessageDisplayBox.IsVisible = true;
+                    // MessageDisplayBox.IsVisible = true;
+                    StacklayoutGamePage.IsVisible = false;
                     break;
 
                 case BattleModeEnum.SimpleAbility:
