@@ -45,6 +45,8 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void BeginButton_Clicked(object sender, EventArgs e)
         {
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum = BattleModeEnum.MapNext;
+            //BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum.
             _ = await Navigation.PopModalAsync();
         }
 
