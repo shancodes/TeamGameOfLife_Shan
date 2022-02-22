@@ -911,7 +911,7 @@ namespace Game.Views
                 case BattleStateEnum.RoundOver:
                 case BattleStateEnum.Battling:
                     GameUIDisplay.IsVisible = true;
-                    BattlePlayerInfomationBox.IsVisible = true;
+                    //BattlePlayerInfomationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
                     AttackButton.IsVisible = true;
                     break;
@@ -935,6 +935,7 @@ namespace Game.Views
                 case BattleModeEnum.MapNext:
                     GamePlayersTopDisplay.IsVisible = false;
                     BattleMapDisplay.IsVisible = true;
+                   // MessageDisplayBox.IsVisible = true;
                     break;
 
                 case BattleModeEnum.SimpleAbility:

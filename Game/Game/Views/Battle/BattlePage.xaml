@@ -93,7 +93,8 @@
                     <StackLayout 
                             Style="{StaticResource VerticalStack}" 
                             HeightRequest="100"
-                            HorizontalOptions="CenterAndExpand">
+                            HorizontalOptions="CenterAndExpand"  >
+                        <Frame BorderColor="Black">
 
                         <StackLayout x:Name="MessageDisplayBox" 
                             IsVisible="false"
@@ -122,7 +123,10 @@
                         IsVisible="false"
                         />-->
                         </StackLayout>
+
+                    </Frame>
                     </StackLayout>
+
                 </StackLayout>
             </StackLayout>
 
