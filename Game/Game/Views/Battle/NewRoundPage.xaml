@@ -30,7 +30,7 @@
 
                 <StackLayout Padding="10"></StackLayout>
 
-                <Button Clicked="BeginButton_Clicked" Text="Start!"/>
+                <ImageButton Clicked="BeginButton_Clicked" Source="start.png"/>
                 
             </StackLayout>
         </ScrollView>
