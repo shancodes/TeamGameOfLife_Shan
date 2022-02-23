@@ -4,7 +4,7 @@
              x:Class="Game.Views.NewRoundPage">
 
     <ContentPage.Content>
-        <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+        <ScrollView>
 
             <StackLayout Style="{StaticResource VerticalStack}">
 
@@ -14,19 +14,13 @@
 
                 <Label Text="Characters" Style="{StaticResource MessageLargeStyle}" HorizontalOptions="Center"/>
 
-                <FlexLayout x:Name="PartyListFrame" 
-                                    JustifyContent="Center"
-                                    AlignContent="Center"
-                                    Wrap="Wrap"/>
+                <FlexLayout x:Name="PartyListFrame" Style="{StaticResource FlexLayoutNextRoundPageStyle}"/>
 
                 <Label Text="V/S" Style="{StaticResource CenterMessageLargeStyle}"></Label>
 
                 <Label Text="Monsters" Style="{StaticResource MessageLargeStyle}" HorizontalOptions="Center"/>
 
-                <FlexLayout x:Name="MonsterListFrame"
-                                    JustifyContent="Center"
-                                    AlignContent="Center"
-                                    Wrap="Wrap"/>
+                <FlexLayout x:Name="MonsterListFrame" Style="{StaticResource FlexLayoutNextRoundPageStyle}"/>
 
                 <StackLayout Padding="10"></StackLayout>
 

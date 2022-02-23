@@ -81,8 +81,7 @@
 
             <!-- Scroll View -->
 
-            <Style TargetType="ScrollView" >
-                 
+            <Style TargetType="ScrollView">
                 <Setter Property="VerticalScrollBarVisibility" Value="Never"/>
                 <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
             </Style>
@@ -377,6 +376,12 @@
                 <Setter Property="Direction" Value="Column"/>
             </Style>
 
+            <Style TargetType="FlexLayout"
+                   x:Key="FlexLayoutNextRoundPageStyle">
+                <Setter Property="AlignContent" Value="Center"/>
+                <Setter Property="JustifyContent" Value="Center"/>
+                <Setter Property="Wrap" Value="Wrap"/>
+            </Style>
             <!--Grid-->
 
             <Style TargetType="Grid"
