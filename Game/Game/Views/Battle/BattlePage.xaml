@@ -128,8 +128,8 @@
 
                         </Frame>
                         <StackLayout Style="{StaticResource HorizontalStack}" Spacing="50" HorizontalOptions="CenterAndExpand">
-                            <Button Text="Restart"  ></Button>
-                            <Button Text="Quit"></Button>
+                            <ImageButton Source="restart.png" ></ImageButton>
+                            <ImageButton Source="quit.png"></ImageButton>
                         </StackLayout>
 
                     </StackLayout>
