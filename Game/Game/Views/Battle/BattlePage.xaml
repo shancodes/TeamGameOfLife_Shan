@@ -7,8 +7,6 @@
         <!--Menu Bar-->
         <StackLayout x:Name="StacklayoutGamePage" Style="{StaticResource HorizontalStack}" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
             <Frame Padding="10,0,0,0"/>
-            <Label  x:Name="title" Text="Elves vs Monsters" Style="{StaticResource CenterMessageLargeStyle}"/>
-            <Frame Padding="10,0,0,0"/>
             <ImageButton Source="icon_edit.png" Clicked="Setttings_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
             <ImageButton Source="icon_cancel.png" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
             <Frame Padding="10,0,0,0"/>
@@ -25,8 +23,6 @@
             <StackLayout VerticalOptions="FillAndExpand"
                         x:Name="GameUIDisplay" 
                         IsVisible="True" >
-                <!--AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                        AbsoluteLayout.LayoutFlags="All"-->
 
                 <!--The Top of the Battle UI Holds the List of Players-->
                 <StackLayout VerticalOptions="Start" x:Name="TopPlayerDisplay">
@@ -113,17 +109,6 @@
                                     Style="{StaticResource LabelStyle}"
                                     FontSize="Micro"/>
 
-                                <!--<WebView
-                        x:Name="HtmlBox"
-                        WidthRequest="100"
-                        MinimumWidthRequest="100"
-                        HeightRequest="100"
-                        MinimumHeightRequest="100"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Start"
-                        BackgroundColor="Transparent"
-                        IsVisible="false"
-                        />-->
                             </StackLayout>
 
                         </Frame>
@@ -142,8 +127,7 @@
                     x:Name="GameOverDisplay" 
              >
                 <Label Text="Thank you for Playing!" Style="{StaticResource CenterMessageLargeStyle}"/>
-
-                    <!--Label Text="Check your score, or click Exit and return soon" Style="{StaticResource MessageStyle}" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" MaxLines="5" Padding="20"/-->
+                
                 <StackLayout Style="{StaticResource ThankYouPageHorizontalStackStyle}">
                     <ImageButton x:Name="ShowScoreButton" Source="score.png" Clicked="ShowScoreButton_Clicked"/>
                     <ImageButton x:Name="ExitButton" Source="exit.png" Clicked="ExitButton_Clicked"></ImageButton>
