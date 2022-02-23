@@ -4,7 +4,9 @@
              x:Class="Game.Views.RoundOverPage">
 
     <NavigationPage.TitleView>
-        <Label Text="Round Over" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
+        <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
+            <Label Text="Round Over" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
+        </StackLayout>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
