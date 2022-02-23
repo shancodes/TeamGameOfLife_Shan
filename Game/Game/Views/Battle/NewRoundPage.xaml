@@ -22,7 +22,7 @@
 
                 <FlexLayout x:Name="MonsterListFrame" Style="{StaticResource FlexLayoutNextRoundPageStyle}"/>
 
-                <StackLayout Padding="10"></StackLayout>
+                <StackLayout Style="{StaticResource NewRoundPageStyle}"></StackLayout>
 
                 <ImageButton Clicked="BeginButton_Clicked" Source="start.png"/>
                 

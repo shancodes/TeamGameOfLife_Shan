@@ -448,6 +448,11 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="NewRoundPageStyle">
+                <Setter Property="Padding" Value="10" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="ItemReadStyle">
                 <Setter Property="Spacing" Value="20" />
             </Style>
