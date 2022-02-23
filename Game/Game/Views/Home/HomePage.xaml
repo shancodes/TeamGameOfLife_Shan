@@ -16,8 +16,8 @@
                 </StackLayout>
 
                 <!--Enter button-->
-                <Button
-                    Text="Enter"
+                <ImageButton
+                    Source="enter.png"
                     Clicked="GameButton_Clicked"/>
                 
             </StackLayout>
