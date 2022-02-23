@@ -160,6 +160,7 @@
     <Content Include="elf5.png" />
     <Content Include="elf6.png" />
     <Content Include="elf7.png" />
+    <Content Include="enter.png" />
     <Content Include="exit.png" />
     <Content Include="fast_dagger.png" />
     <Content Include="feet1.png" />
@@ -201,8 +202,10 @@
     <Content Include="night_walker.png" />
     <Content Include="priya.png" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="quit.png" />
     <Content Include="red_necklace.png" />
     <Content Include="reset.png" />
+    <Content Include="restart.png" />
     <Content Include="ring1.png" />
     <Content Include="ring2.png" />
     <Content Include="score.png" />
