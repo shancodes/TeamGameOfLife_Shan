@@ -43,7 +43,7 @@
                                 Grid.Row="1"
                                 Grid.Column="1"
                                 Text="Damage:"/>
-                            
+
                             <Label Grid.Row="1" Grid.Column="2" Text="{Binding Damage}"></Label>
 
                             <!-- Label for Range -->
@@ -51,7 +51,7 @@
                                 Grid.Row="2"
                                 Grid.Column="1"
                                 Text="Range:"/>
-                            
+
                             <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
 
                             <!-- Label for Value -->
@@ -66,9 +66,6 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
-            <!-- Select Button -->
-            <Button Text="Select"/>
 
         </StackLayout>
     </ContentPage.Content>
