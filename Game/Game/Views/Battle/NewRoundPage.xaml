@@ -12,13 +12,13 @@
 
                 <!--Button Clicked="BeginButton_Clicked" Text="Begin"/-->
 
-                <Label Text="Characters" Style="{StaticResource MessageLargeStyle}" HorizontalOptions="Center"/>
+                <Label Text="Characters" Style="{StaticResource NewRoundPageLabelStyle}"/>
 
                 <FlexLayout x:Name="PartyListFrame" Style="{StaticResource FlexLayoutNextRoundPageStyle}"/>
 
                 <Label Text="V/S" Style="{StaticResource CenterMessageLargeStyle}"></Label>
 
-                <Label Text="Monsters" Style="{StaticResource MessageLargeStyle}" HorizontalOptions="Center"/>
+                <Label Text="Monsters" Style="{StaticResource NewRoundPageLabelStyle}"/>
 
                 <FlexLayout x:Name="MonsterListFrame" Style="{StaticResource FlexLayoutNextRoundPageStyle}"/>
 

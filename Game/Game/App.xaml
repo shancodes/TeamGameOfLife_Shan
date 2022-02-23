@@ -123,6 +123,7 @@
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
+            
             <Style TargetType="Label" x:Key="LabelInsideStackAboutStyle" BasedOn="{StaticResource LabelBaseStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -307,6 +308,10 @@
                 x:Key="MessageLargeStyle"
                 BasedOn="{StaticResource MessageStyle}">
                 <Setter Property="FontSize" Value="Large" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="NewRoundPageLabelStyle" BasedOn="{StaticResource MessageLargeStyle}">
+                <Setter Property="HorizontalOptions" Value="Center"/>
             </Style>
 
             <Style TargetType="Label"
