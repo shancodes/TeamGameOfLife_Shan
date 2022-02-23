@@ -5,26 +5,25 @@
              >
 
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand">
+        <ScrollView Style="{StaticResource ScrollViewGamePage}">
             <FlexLayout x:Name="flexLayout"
                         Style="{StaticResource FlexLayoutGamePage}">
 
                 <StackLayout Orientation="Horizontal">
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
-                        <ImageButton
+                        <Image
                         Source="character_icon.png"
                         Style="{StaticResource ImageLargeStyle}"
                        />
-
-                    </StackLayout>
+                        </StackLayout>
 
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
-                        <ImageButton
+                        <Image
                         Source="monster_icon.png"
-                        Style="{StaticResource ImageLargeStyle}"
-                        Clicked="AutobattleButton_Clicked"/>
+                        Style="{StaticResource ImageLargeStyle}"/>
+                        <!--Clicked="AutobattleButton_Clicked"/>-->
 
                     </StackLayout>
 
@@ -32,10 +31,10 @@
 
                 <StackLayout Orientation="Horizontal">
 
-                    <Label 
+                    <Label
                         Text="Begin Battle"
                         Style="{StaticResource CenterMessageStyle}"/>
-                    <!--Clicked="AutobattleButton_Clicked"-->
+                    <!--Clicked="AutobattleButton_Clicked"/>-->
                     <!--</StackLayout>-->
 
                 </StackLayout>
@@ -63,6 +62,6 @@
                 </StackLayout>
 
             </FlexLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
