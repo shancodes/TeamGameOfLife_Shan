@@ -20,9 +20,8 @@
                         Style="{StaticResource FlexLayoutGamePage}">
 
             <!--The Game UI Screen -->
-            <StackLayout VerticalOptions="FillAndExpand"
-                        x:Name="GameUIDisplay" 
-                        IsVisible="True" >
+            <StackLayout Style="{StaticResource BattlePageGameUIStyle}"
+                        x:Name="GameUIDisplay">
 
                 <!--The Top of the Battle UI Holds the List of Players-->
                 <StackLayout VerticalOptions="Start" x:Name="TopPlayerDisplay">
