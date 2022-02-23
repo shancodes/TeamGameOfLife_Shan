@@ -25,11 +25,8 @@
 
                 <!--The Top of the Battle UI Holds the List of Players-->
                 <StackLayout VerticalOptions="Start" x:Name="TopPlayerDisplay">
-                    <StackLayout Style="{StaticResource VerticalStack}"
-                        x:Name="GamePlayersTopDisplay" 
-                        IsVisible="true" 
-                        VerticalOptions="Start" 
-                        HorizontalOptions="CenterAndExpand">
+                    <StackLayout Style="{StaticResource BattlePageBattleUIStyle}"
+                        x:Name="GamePlayersTopDisplay">
 
                         <Label Text="Characters" Style="{StaticResource CenterMessageStyle}" HorizontalOptions="CenterAndExpand"/>
                         <StackLayout x:Name="CharacterBox" Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand"/>

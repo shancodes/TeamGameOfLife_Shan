@@ -459,6 +459,13 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="BattlePageBattleUIStyle">
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="IsVisible" Value="True" />
+            </Style>
+            
+            <Style TargetType="StackLayout"
                 x:Key="ItemReadStyle">
                 <Setter Property="Spacing" Value="20" />
             </Style>
