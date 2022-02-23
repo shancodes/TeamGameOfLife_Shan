@@ -216,6 +216,7 @@
     <Content Include="shield3.png" />
     <Content Include="shield4.png" />
     <Content Include="shipra.png" />
+    <Content Include="start.png" />
     <Content Include="swiftblade.png" />
     <Content Include="swift_boots.png" />
     <Content Include="sword1.png" />
