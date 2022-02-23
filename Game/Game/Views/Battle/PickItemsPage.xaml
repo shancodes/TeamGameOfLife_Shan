@@ -28,10 +28,6 @@
                     <DataTemplate>
                         <Grid Style="{StaticResource GridIndexStyle}">
 
-                            <!-- CheckBox to select one or more than one items -->
-                            <CheckBox BindingContext="{Binding Name}">
-                            </CheckBox>
-
                             <!-- Images for items -->
                             <Image 
                                 Grid.RowSpan="2"
