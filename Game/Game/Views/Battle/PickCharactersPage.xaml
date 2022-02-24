@@ -58,7 +58,7 @@
     <!--To choose Characters-->
             <Grid 
                 Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1">
-                
+                <Button Text="L" FontSize="Medium"></Button>
 
                 <Frame Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="18"
                 WidthRequest="1000"
@@ -100,6 +100,9 @@
                     </CollectionView>
 
                 </Frame>
+
+                <Button Grid.Row="0" Grid.Column="19"
+                        Text="R" FontSize="Medium"></Button>
             </Grid>
             <!--Button for Begin Battle-->
             <Button Text="Begin Battle" FontAttributes="Bold" FontSize="Medium"    Style="{StaticResource ButtonItemReadStyle}"/>
