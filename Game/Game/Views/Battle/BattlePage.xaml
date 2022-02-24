@@ -84,11 +84,9 @@
                             Style="{StaticResource BattlePageLowerStackStyle}">
 
                         <Frame Style="{StaticResource FrameBattlePageLower}">
-                            <StackLayout x:Name="MessageDisplayBox" 
-                            IsVisible="false"
-                            Style="{StaticResource VerticalStack}" 
-                                    VerticalOptions="StartAndExpand"
-                                    HorizontalOptions="CenterAndExpand">
+                            <StackLayout x:Name="MessageDisplayBox"
+                                         IsVisible="false"
+                            Style="{StaticResource BattlePageLowerStackStyletwo}">
 
                                 <Label x:Name="BattleMessages" 
                                     HorizontalOptions="FillAndExpand" 
