@@ -49,7 +49,7 @@
                                     Wrap="Wrap"/>
 
                         <Button 
-                            Text="Assign Items"
+                            Text="Collect Items"
                             Clicked="AutoAssignButton_Clicked" />
 
                         <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
