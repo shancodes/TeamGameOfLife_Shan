@@ -36,23 +36,24 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void ThankyouButtonClickedAsync(object sender, EventArgs e)
         {
-            //BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
             BattlePage thankyoupage = new BattlePage();
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
             await Navigation.PushModalAsync(new NavigationPage(thankyoupage));
-            //ShowBattleModeUIElements();
             _ = await Navigation.PopAsync();
 
         }
 
+        /// <summary>
+        /// Directs player to the battle page with map
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void BattleMapClickedAsync(object sender, EventArgs e)
         {
-            //BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.GameOver;
             BattlePage mapgridpage = new BattlePage();
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.Battling;
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum = BattleModeEnum.MapNext;
             await Navigation.PushModalAsync(new NavigationPage(mapgridpage));
-            //ShowBattleModeUIElements();
             _ = await Navigation.PopAsync();
 
         }
