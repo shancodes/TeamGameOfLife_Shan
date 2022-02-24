@@ -140,6 +140,7 @@
     <Content Include="back_triangle.png" />
     <Content Include="battle.png" />
     <Content Include="battleboard.png" />
+    <Content Include="black_knight.png" />
     <Content Include="blazing_hammer.png" />
     <Content Include="burning_polyarm.png" />
     <Content Include="cancel.png" />
