@@ -420,6 +420,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\begin_battle.png" />
+    <AndroidResource Include="Resources\drawable\battle_grid.png" />
     <Content Include="Resources\drawable\black_knight.png" />
     <AndroidResource Include="Resources\drawable\ice_knight.png" />
     <AndroidResource Include="Resources\drawable\ice_slime.png" />

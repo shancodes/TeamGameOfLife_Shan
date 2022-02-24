@@ -1146,7 +1146,7 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="HasShadow" Value="false" />
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryBackgroundColor}" />
-                <Setter Property="BackgroundColor" Value="Teal" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
             </Style>
 
             <Style TargetType="Frame"
