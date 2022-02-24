@@ -31,7 +31,6 @@
                                 SelectionChanged="OnDatabaseCharacterItemSelected"
                                 Margin="5,0,5,0">
 
-
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             
@@ -39,13 +38,9 @@
                                 <Image  Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1"
                                                     Source="{Binding ImageURI}"/>
 
-
                                 <Label Grid.Column="1" Grid.Row="1"
                                                    Text="{Binding Name}" 
                                                    FontAttributes="Bold"/>
-
-                                  
-
                                 </Grid>
                             
                         </DataTemplate>
@@ -103,6 +98,7 @@
                 <Button Grid.Row="0" Grid.Column="19"
                         Text="R" FontSize="Medium"></Button>
             </Grid>
+            
             <!--Button for Begin Battle-->
             <ImageButton Source="begin_battle.png" Clicked="BattleButton_Clicked"   Style="{StaticResource ButtonItemReadStyle}"/>
         </StackLayout>
