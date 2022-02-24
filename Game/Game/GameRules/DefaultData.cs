@@ -369,6 +369,14 @@ namespace Game.GameRules
                     Level = 5,
                     MaxHealth = 43,
                     ImageURI = "wizard.png"
+                },
+
+                new CharacterModel {
+                    Name = "Black Knight",
+                    Description = "Black Knight",
+                    Level = 5,
+                    MaxHealth = 43,
+                    ImageURI = "black_knight.png"
                 }
             };
 
