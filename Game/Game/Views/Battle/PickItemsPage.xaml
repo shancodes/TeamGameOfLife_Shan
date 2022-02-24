@@ -67,6 +67,12 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
+            <!-- ImageButtons for Assign items and done -->
+            <Grid Style="{StaticResource ReadPageButtonGrid}">
+                <ImageButton Source="collect_items.png" Grid.Row="0" Grid.Column="0" />
+                <ImageButton Source="done.png" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
