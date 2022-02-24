@@ -63,7 +63,7 @@ namespace Game.Views
             }
 
             // Manually deselect Character.
-            CharactersListView.SelectedItem = null;
+            //CharactersListView.SelectedItem = null;
 
             // Don't add more than the party max
             if (BattleEngineViewModel.Instance.PartyCharacterList.Count() < BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyCharacters)
@@ -107,15 +107,15 @@ namespace Game.Views
         public void UpdateNextButtonState()
         {
             // If no characters disable Next button
-            BeginBattleButton.IsEnabled = true;
+            //BeginBattleButton.IsEnabled = true;
 
             var currentCount = BattleEngineViewModel.Instance.PartyCharacterList.Count();
             if (currentCount == 0)
             {
-                BeginBattleButton.IsEnabled = false;
+                //BeginBattleButton.IsEnabled = false;
             }
 
-            PartyCountLabel.Text = currentCount.ToString();
+            //PartyCountLabel.Text = currentCount.ToString();
         }
 
         /// <summary>
