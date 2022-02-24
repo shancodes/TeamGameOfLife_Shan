@@ -172,6 +172,8 @@
     <Content Include="fire_wielder.png" />
     <Content Include="hat1.png" />
     <Content Include="hat2.png" />
+    <Content Include="ice_knight.png" />
+    <Content Include="ice_slime.png" />
     <Content Include="ice_thief.png" />
     <Content Include="ice_bear.png" />
     <Content Include="ice_jester.png" />
