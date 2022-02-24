@@ -567,6 +567,13 @@
             </Style>
 
             <Style TargetType="FlexLayout"
+                x:Key="BattleFlex">
+                <Setter Property="JustifyContent" Value="Start" />
+                <Setter Property="AlignContent" Value="Start" />
+                <Setter Property="Wrap" Value="Wrap" />
+            </Style>
+
+            <Style TargetType="FlexLayout"
                 x:Key="CharacterReadFlex">
                 <Setter Property="Margin" Value="5" />
                 <Setter Property="Wrap" Value="Wrap" />

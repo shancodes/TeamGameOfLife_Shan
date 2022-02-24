@@ -22,9 +22,7 @@
                     <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
                     
                     <FlexLayout x:Name="CharacterListFrame"
-                        JustifyContent="Start"
-                        AlignContent="Start"
-                        Wrap="Wrap"/>
+                        Style="{StaticResource BattleFlex}"/>
                     
                 </StackLayout>
 
@@ -34,9 +32,7 @@
                     <Label Text="Monsters Killed" Style="{StaticResource MessageStyle}"/>
 
                     <FlexLayout x:Name="MonsterListFrame"
-                        JustifyContent="Start"
-                        AlignContent="Start"
-                        Wrap="Wrap"/>
+                        Style="{StaticResource BattleFlex}"/>
                     
                 </StackLayout>
 
