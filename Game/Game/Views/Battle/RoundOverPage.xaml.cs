@@ -31,7 +31,7 @@ namespace Game.Views
 
             DrawCharacterList();
 
-            DrawItemLists();
+            //DrawItemLists();
         }
 
         /// <summary>

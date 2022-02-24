@@ -179,83 +179,83 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-        [Test]
-        public void RoundOverPage_DrawDroppedItems_Valid_Should_Pass()
-        {
-            // Arrange
+       // [Test]
+        //public void RoundOverPage_DrawDroppedItems_Valid_Should_Pass()
+        //{
+        //    // Arrange
 
-            // Draw the Items
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(new ItemModel());
+        //    // Draw the Items
+        //    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(new ItemModel());
 
-            // Draw two times
-            page.DrawDroppedItems();
+        //    // Draw two times
+        //    page.DrawDroppedItems();
 
-            // Act
-            page.DrawDroppedItems();
+        //    // Act
+        //    page.DrawDroppedItems();
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
 
-        [Test]
-        public void RoundOverPage_DrawItemLists_Valid_Should_Pass()
-        {
-            // Arrange
+        //[Test]
+        //public void RoundOverPage_DrawItemLists_Valid_Should_Pass()
+        //{
+        //    // Arrange
 
-            // Draw the Items
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(new ItemModel());
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Add(new ItemModel());
+        //    // Draw the Items
+        //    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(new ItemModel());
+        //    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Add(new ItemModel());
 
-            // Draw two times
-            page.DrawItemLists();
+        //    // Draw two times
+        //    page.DrawItemLists();
 
-            // Act  BattleEngineViewModel.Instance.Engine.EngineSettings.
-            page.DrawItemLists();
+        //    // Act  BattleEngineViewModel.Instance.Engine.EngineSettings.
+        //    page.DrawItemLists();
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
 
-        [Test]
-        public void RoundOverPage_DrawSelectedItems_Valid_Should_Pass()
-        {
-            // Arrange
+        //[Test]
+        //public void RoundOverPage_DrawSelectedItems_Valid_Should_Pass()
+        //{
+        //    // Arrange
 
-            // Draw the Items
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(new ItemModel());
-            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Add(new ItemModel());
+        //    // Draw the Items
+        //    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(new ItemModel());
+        //    BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Add(new ItemModel());
 
-            // Draw two times
-            page.DrawSelectedItems();
+        //    // Draw two times
+        //    page.DrawSelectedItems();
 
-            // Act
-            page.DrawSelectedItems();
+        //    // Act
+        //    page.DrawSelectedItems();
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
 
-        [Test]
-        public void RoundOverPage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
-        {
-            // Arrange
-            var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.Finger);
-            var StackItem = page.GetItemToDisplay(item);
-            var dataImage = StackItem.Children[0];
+        //[Test]
+        //public void RoundOverPage_GetItemToDisplay_Click_Button_Valid_Should_Pass()
+        //{
+        //    // Arrange
+        //    var item = ItemIndexViewModel.Instance.GetDefaultItem(ItemLocationEnum.Finger);
+        //    var StackItem = page.GetItemToDisplay(item);
+        //    var dataImage = StackItem.Children[0];
 
-            // Act
-            ((ImageButton)dataImage).PropagateUpClicked();
+        //    // Act
+        //    ((ImageButton)dataImage).PropagateUpClicked();
 
-            // Reset
+        //    // Reset
 
-            // Assert
-            Assert.IsTrue(true); // Got to here, so it happened...
-        }
+        //    // Assert
+        //    Assert.IsTrue(true); // Got to here, so it happened...
+        //}
     }
 }
