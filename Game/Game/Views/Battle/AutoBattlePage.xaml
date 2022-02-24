@@ -31,10 +31,10 @@
 
                 <StackLayout Orientation="Horizontal">
 
-                    <Label
-                        Text="Begin Battle"
-                        Style="{StaticResource CenterMessageStyle}"/>
-                    <!--Clicked="AutobattleButton_Clicked"/>-->
+                    <ImageButton 
+                        Source="begin_battle.png"
+                        Style="{StaticResource ButtonItemReadStyle}"
+                        Clicked="AutobattleButton_Clicked"/>
                     <!--</StackLayout>-->
 
                 </StackLayout>
