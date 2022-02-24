@@ -602,7 +602,7 @@
             <Style TargetType="Image" x:Key="BattleMapImageStyle">
                 <Setter Property="AbsoluteLayout.LayoutBounds" Value="0,0,1,1"/>
                 <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
-                <Setter Property="Aspect" Value="Fill"/>
+                <Setter Property="Aspect" Value="AspectFit"/>
             </Style>
 
             <Style TargetType="Image" x:Key="ImageAboutPage">
