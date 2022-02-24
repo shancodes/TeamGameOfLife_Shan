@@ -23,22 +23,31 @@
                     Clicked="PickUpCharacterPage_Clicked">
                 </Button>
 
+                <!--ThankYou button-->
                 <Button 
                     Text="Thank you Page" 
                     Clicked="ThankyouButtonClickedAsync" >
                 </Button>
+
+                <!--Battle map page button-->
                 <Button 
                     Text="Battle map page" 
                     Clicked="BattleMapClickedAsync" >
                 </Button>
+
+                <!--Pick Items Page button-->
                 <Button 
                     Text="Pick Items Page" 
                     Clicked="AutoAssignButton_Clicked" >
                 </Button>
+
+                <!--Round Over Page button-->
                 <Button 
                     Text="Round Over Page" 
                     Clicked="RoundPage_Clicked" >
                 </Button>
+
+                <!--Show Monsters Page button-->
                 <Button 
                     Text="Show Monsters Page" 
                     Clicked="NextRoundPage_Clicked" >
