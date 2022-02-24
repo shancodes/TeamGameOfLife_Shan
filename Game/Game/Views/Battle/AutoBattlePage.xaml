@@ -10,6 +10,7 @@
                         Style="{StaticResource FlexLayoutGamePage}">
 
                 <StackLayout Orientation="Horizontal">
+                    <!--Character Icon-->
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
                         <Image
@@ -18,18 +19,19 @@
                        />
                         </StackLayout>
 
+                    <!--VS-->
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
                         <Label Text="VS" TextColor="Red"  FontAttributes="Bold" Style="{StaticResource CenterMessageLargeStyle}"></Label>
 
                     </StackLayout>
 
+                    <!--Monster Icon-->
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
                         <Image
                         Source="monster_icon.png"
                         Style="{StaticResource ImageLargeStyle}"/>
-                        <!--Clicked="AutobattleButton_Clicked"/>-->
 
                     </StackLayout>
 
@@ -41,7 +43,6 @@
                         Source="begin_battle.png"
                         Style="{StaticResource ButtonItemReadStyle}"
                         Clicked="AutobattleButton_Clicked"/>
-                    <!--</StackLayout>-->
 
                 </StackLayout>
 
