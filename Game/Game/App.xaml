@@ -291,7 +291,17 @@
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="LineBreakMode" Value="NoWrap" />
             </Style>
-            
+
+            <Style TargetType="Label"
+                x:Key="ValueStyleBattleMicroNew"
+                BasedOn="{StaticResource ValueStyleBattleMicro}">
+                <Setter Property="Padding" Value="0,5,0,0" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
             <Style TargetType="Label"
                 x:Key="MessageStyle"
                 BasedOn="{StaticResource HeaderStyle}">
@@ -1057,6 +1067,12 @@
                 <Setter Property="WidthRequest" Value="100" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalOptions" Value="EndAndExpand" />
+            </Style>
+
+            <Style TargetType="StackLayout"
+                x:Key="PlayerBattleInfoBoxone"
+                BasedOn="{StaticResource PlayerBattleInfoBox}">
+                <Setter Property="HorizontalOptions" Value="Start"/>
             </Style>
 
             <Style TargetType="StackLayout"
