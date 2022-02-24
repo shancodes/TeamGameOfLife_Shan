@@ -13,22 +13,35 @@
 
         <ScrollView x:Name="ScrollView">
 
-            <StackLayout Style="{StaticResource VerticalStack}">
+            <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
 
-                <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
-                <FlexLayout x:Name="CharacterListFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
-                                    Wrap="Wrap"/>
+                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                <Label Text="Monsters Killed" Style="{StaticResource MessageStyle}"/>
+                    <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
+                    
+                    <FlexLayout x:Name="CharacterListFrame"
+                        JustifyContent="Start"
+                        AlignContent="Start"
+                        Wrap="Wrap"/>
+                    
+                </StackLayout>
 
-                <FlexLayout x:Name="MonsterListFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
-                                    Wrap="Wrap"/>
+                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                <ImageButton Source="collect_items.png" Grid.Row="0" Grid.Column="0" Clicked="AutoAssignButton_Clicked"/>
+                    <Label Text="Monsters Killed" Style="{StaticResource MessageStyle}"/>
+
+                    <FlexLayout x:Name="MonsterListFrame"
+                        JustifyContent="Start"
+                        AlignContent="Start"
+                        Wrap="Wrap"/>
+                    
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+
+                    <ImageButton Source="collect_items.png" Grid.Row="0" Grid.Column="0" Clicked="AutoAssignButton_Clicked"/>
+                    
+                </StackLayout>
 
             </StackLayout>
         </ScrollView>
