@@ -64,7 +64,7 @@
                                 <Image x:Name="AttackerAttack" Source="mapcell.png" Style="{StaticResource ImageSmallStyle}"/>
                             </StackLayout>
 
-                            <StackLayout x:Name="DefenderBox" Style="{StaticResource PlayerBattleInfoBox}" HorizontalOptions="End">
+                            <StackLayout x:Name="DefenderBox" Style="{StaticResource PlayerBattleInfoBox}">
                                 <Image x:Name="DefenderImage" Source="troll.png" Style="{StaticResource ImageBattleMediumStyle}"/>
                                 <Label x:Name="DefenderName" Text="" Style="{StaticResource ValueStyleBattleMicro}"/>
                                 <Label x:Name="DefenderHealth" Text="" Style="{StaticResource ValueStyleBattleMicro}"/>
