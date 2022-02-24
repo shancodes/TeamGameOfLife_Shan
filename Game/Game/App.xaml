@@ -573,6 +573,12 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
             </Style>
 
+            <Style TargetType="Image" x:Key="BattleMapImageStyle">
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="0,0,1,1"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+                <Setter Property="Aspect" Value="Fill"/>
+            </Style>
+
             <Style TargetType="Image" x:Key="ImageAboutPage">
                 <Setter Property="MinimumHeightRequest" Value="10"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
@@ -642,6 +648,17 @@
             <Style TargetType="Image"
                 x:Key="BattleMapPlayerSmallStyle"
                 BasedOn="{StaticResource ImageBattleSmallStyle}">
+            </Style>
+            
+            <!--Grid-->
+
+            <Style TargetType="Grid" x:Key="GridBattleMap">
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalOptions" Value="Start"></Setter>
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="0,0,1,1"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+                <Setter Property="RowSpacing" Value="0"/>
+                <Setter Property="ColumnSpacing" Value="0"/>
             </Style>
 
             <!-- ImageButton -->
