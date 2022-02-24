@@ -15,7 +15,7 @@
             <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
 
                 <StackLayout Style="{StaticResource CharacterStackBox}" >
-                    
+
                     <!--Game Date-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                         <Label 
@@ -30,18 +30,18 @@
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
                         <Label Text=" Your Score" Style="{StaticResource CenterMessageLargeStyle}"/>
-                        
+
                     </StackLayout>
 
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                        
+
                         <Label Text="0" x:Name="TotalScore" Style="{StaticResource CenterMessageLargeStyle}"/>
 
                     </StackLayout>
 
                     <!--List Of Characters-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                        
+
                         <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
                         <FlexLayout x:Name="CharacterListFrame"
                                     JustifyContent="Start"
@@ -53,7 +53,7 @@
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
                         <Label Text="0" FontSize="Medium" x:Name="TotalKilled" Style="{StaticResource ValueStyle}"/>
-                        
+
                         <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
 
                         <Label Text="Killed" Style="{StaticResource MessageStyle}"/>
@@ -65,20 +65,25 @@
 
                     </StackLayout>
 
-                </StackLayout>
-                
-                
+                    <!--List Of Items Collected-->
+                    <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-            <Label Text="Items" Style="{StaticResource MessageStyle}"/>
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label Text="Collected : " Style="{StaticResource LabelStyle}"/>
-                    <Label Text="0" x:Name="TotalCollected" Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
-                <FlexLayout x:Name="ItemListFrame"
+                        <Label Text="0" FontSize="Medium" x:Name="TotalCollected" Style="{StaticResource ValueStyle}"/>
+
+                        <Label Text="Items" Style="{StaticResource MessageStyle}"/>
+
+                        <Label Text="Collected" Style="{StaticResource MessageStyle}"/>
+
+                        <FlexLayout x:Name="ItemListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
-                
+
+                    </StackLayout>
+
+                </StackLayout>
+
+
                 <Button Clicked="CloseButton_Clicked" Text="Close"/>
 
         </StackLayout>
