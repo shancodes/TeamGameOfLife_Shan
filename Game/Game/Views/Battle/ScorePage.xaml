@@ -26,7 +26,7 @@
                     </StackLayout>
 
 
-                    
+                    <!--Score-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
                         <Label Text=" Your Score" Style="{StaticResource CenterMessageLargeStyle}"/>
