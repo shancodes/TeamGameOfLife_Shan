@@ -174,10 +174,24 @@
                 BasedOn="{StaticResource HeaderStyle}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
             </Style>
+
             <Style TargetType="Label"
                 x:Key="LabelStyle"
                 BasedOn="{StaticResource LabelBaseStyle}">
                 <Setter Property="FontSize" Value="Micro" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="StyleLabelBattlePageLowerFrameLabel"
+                BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="WidthRequest" Value="350"/>
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+                <Setter Property="MaxLines" Value="4"/>
+                <Setter Property="LineHeight" Value="1"/>
+                <Setter Property="CharacterSpacing" Value="1"/>
+                <Setter Property="FontSize" Value="Micro"/>
             </Style>
 
             <Style TargetType="Label"
