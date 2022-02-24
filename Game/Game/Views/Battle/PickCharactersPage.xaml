@@ -99,7 +99,7 @@
                         Text="R" FontSize="Medium"></Button>
             </Grid>
             <!--Button for Begin Battle-->
-            <Button Text="Begin Battle" FontAttributes="Bold" FontSize="Medium"    Style="{StaticResource ButtonItemReadStyle}"/>
+            <Button Text="Begin Battle" FontAttributes="Bold" FontSize="Medium" Clicked="BattleButton_Clicked"   Style="{StaticResource ButtonItemReadStyle}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
