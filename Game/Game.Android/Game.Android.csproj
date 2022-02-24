@@ -419,6 +419,7 @@
     <AndroidResource Include="Resources\drawable\start.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\begin_battle.png" />
     <Content Include="Resources\drawable\black_knight.png" />
     <AndroidResource Include="Resources\drawable\ice_knight.png" />
     <AndroidResource Include="Resources\drawable\ice_slime.png" />
