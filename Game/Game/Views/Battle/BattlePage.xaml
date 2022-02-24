@@ -89,8 +89,8 @@
                                 <Label x:Name="BattleMessages" 
                                        Style="{StaticResource StyleLabelBattlePageLowerFrameLabel}"/>
                             </StackLayout>
-
                         </Frame>
+                        
                         <StackLayout Style="{StaticResource BattlePageBattleUIStackStyleBeforeResetButton}">
                             <ImageButton Source="restart.png" Clicked="RestartButton_Clicked" ></ImageButton>
                             <ImageButton Source="quit.png"></ImageButton>
@@ -101,16 +101,14 @@
             </StackLayout>
 
             <!--The Game Over Screen -->
-            <StackLayout 
-                    Style="{StaticResource VerticalStackThankYouPageStyle}"
-                    x:Name="GameOverDisplay" 
-             >
+            <StackLayout Style="{StaticResource VerticalStackThankYouPageStyle}" x:Name="GameOverDisplay" >
                 <Label Text="Thank you for Playing!" Style="{StaticResource CenterMessageLargeStyle}"/>
 
                 <StackLayout Style="{StaticResource ThankYouPageHorizontalStackStyle}">
                     <ImageButton x:Name="ShowScoreButton" Source="score.png" Clicked="ShowScoreButton_Clicked"/>
                     <ImageButton x:Name="ExitButton" Source="exit.png" Clicked="ExitButton_Clicked"></ImageButton>
                 </StackLayout>
+                
             </StackLayout>
         </FlexLayout>
     </ContentPage.Content>
