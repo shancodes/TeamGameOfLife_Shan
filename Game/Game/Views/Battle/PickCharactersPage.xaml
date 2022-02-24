@@ -97,6 +97,9 @@
                 </CollectionView>
 
             </Frame>
+            
+    <!--Button for Begin Battle-->
+            <Button Text="Begin Battle" FontAttributes="Bold" FontSize="Medium"    Style="{StaticResource ButtonItemReadStyle}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
