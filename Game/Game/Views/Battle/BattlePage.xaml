@@ -15,7 +15,6 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-
         <FlexLayout x:Name="flexLayout"
                         Style="{StaticResource FlexLayoutGamePage}">
 
@@ -108,7 +107,7 @@
                     x:Name="GameOverDisplay" 
              >
                 <Label Text="Thank you for Playing!" Style="{StaticResource CenterMessageLargeStyle}"/>
-                
+
                 <StackLayout Style="{StaticResource ThankYouPageHorizontalStackStyle}">
                     <ImageButton x:Name="ShowScoreButton" Source="score.png" Clicked="ShowScoreButton_Clicked"/>
                     <ImageButton x:Name="ExitButton" Source="exit.png" Clicked="ExitButton_Clicked"></ImageButton>
