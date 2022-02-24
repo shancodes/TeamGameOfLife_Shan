@@ -423,6 +423,18 @@ namespace Game.GameRules
                 },
 
                 new MonsterModel {
+                    Name = "Ice Knight",
+                    Description = "Powerful Monster Black Knight",
+                    ImageURI = "ice_knight.png",
+                },
+
+                 new MonsterModel {
+                    Name = "Ice Slime",
+                    Description = "Cruel Monster Slime",
+                    ImageURI = "ice_slime.png",
+                },
+
+                new MonsterModel {
                     Name = "Ice Wolf",
                     Description = "Fast Monster Wolf",
                     ImageURI = "ice_wolf.png",
