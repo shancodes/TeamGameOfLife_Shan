@@ -24,7 +24,7 @@
 
                     <StackLayout Style="{StaticResource VerticalStack}">
 
-                        <Button Text="Close"/>
+                        <!--<Button Text="Close"/>-->
 
                         <!--<StackLayout Style="{StaticResource HorizontalStack}">
                             <Label Text="Round : " Style="{StaticResource MessageStyle}"/>
@@ -60,8 +60,8 @@
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
-                        
-                        <Button Text="Close"/>
+
+                        <!--<Button Text="Close"/> -->
                         
 
                     </StackLayout>
