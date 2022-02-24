@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.RoundOverPage">
 
+    <!-- Label in NavigationPage TitleView -->
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
             <Label Text="Round Over" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
@@ -17,6 +18,7 @@
 
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
+                    <!-- List Of Characters -->
                     <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
                     
                     <FlexLayout x:Name="CharacterListFrame"
@@ -28,6 +30,7 @@
 
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
+                    <!-- List Of Monsters -->
                     <Label Text="Monsters Killed" Style="{StaticResource MessageStyle}"/>
 
                     <FlexLayout x:Name="MonsterListFrame"
@@ -37,6 +40,7 @@
                     
                 </StackLayout>
 
+                <!-- StackLayout for button -->
                 <StackLayout Style="{StaticResource StackScore}">
 
                     <ImageButton Source="collect_items.png" Grid.Row="0" Grid.Column="0" Clicked="AutoAssignButton_Clicked"/>
