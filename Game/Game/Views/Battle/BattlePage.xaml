@@ -93,7 +93,7 @@
                             </StackLayout>
 
                         </Frame>
-                        <StackLayout Style="{StaticResource HorizontalStack}" Spacing="50" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Style="{StaticResource BattlePageBattleUIStackStyleBeforeResetButton}">
                             <ImageButton Source="restart.png" ></ImageButton>
                             <ImageButton Source="quit.png"></ImageButton>
                         </StackLayout>
