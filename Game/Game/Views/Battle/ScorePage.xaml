@@ -88,10 +88,8 @@
                     </StackLayout>
 
                 </StackLayout>
-
-
-
-        </StackLayout>
+                
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
