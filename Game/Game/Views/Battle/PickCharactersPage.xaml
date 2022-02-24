@@ -5,8 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Name="BrowseItemsPage"
-             x:Class="Game.Views.PickCharactersPage"
-             Title="{Binding Title}">
+             x:Class="Game.Views.PickCharactersPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Style="{StaticResource NavigationHeader}">
+            <Label Text="Character Selection" Style="{StaticResource TitleHeader}"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ScrollView Orientation="Vertical">
 
