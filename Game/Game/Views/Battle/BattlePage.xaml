@@ -84,7 +84,6 @@
 
                         <Frame Style="{StaticResource FrameBattlePageLower}">
                             <StackLayout x:Name="MessageDisplayBox"
-                                         IsVisible="false"
                             Style="{StaticResource BattlePageLowerStackStyletwo}">
 
                                 <Label x:Name="BattleMessages" 

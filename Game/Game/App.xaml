@@ -899,7 +899,8 @@
 
             <Style TargetType="StackLayout"
                 x:Key="BattlePageLowerStackStyletwo" BasedOn="{StaticResource VerticalStack}">
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="IsVisible" Value="false" />
                 <Setter Property="VerticalOptions" Value="StartAndExpand" />
             </Style>
 
