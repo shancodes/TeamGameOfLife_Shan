@@ -15,6 +15,7 @@
             <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
 
                 <StackLayout Style="{StaticResource CharacterStackBox}" >
+                    
                     <!--Game Date-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                         <Label 
@@ -24,7 +25,6 @@
                                 Text="{Binding Data.GameDate}" 
                                 Style="{StaticResource StyleItemReadValueStyle}" />
                     </StackLayout>
-
 
                     <!--Score-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
@@ -38,15 +38,24 @@
                         <Label Text="0" x:Name="TotalScore" Style="{StaticResource CenterMessageLargeStyle}"/>
 
                     </StackLayout>
-                </StackLayout>
 
-                <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
-            <FlexLayout x:Name="CharacterListFrame"
+                    <!--List Of Characters-->
+                    <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+                        
+                        <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
+                        <FlexLayout x:Name="CharacterListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
-
-            <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
+                    </StackLayout>
+                    
+                </StackLayout>
+                
+                
+                
+                
+                
+                <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
                 <StackLayout Style="{StaticResource HorizontalStack}">
                     <Label Text="Killed : " Style="{StaticResource LabelStyle}"/>
                     <Label Text="0" x:Name="TotalKilled" Style="{StaticResource ValueStyle}"/>
