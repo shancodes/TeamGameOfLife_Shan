@@ -24,7 +24,7 @@
                         x:Name="GameUIDisplay">
 
                 <!--The Top of the Battle UI Holds the List of Players-->
-                <StackLayout VerticalOptions="Start" x:Name="TopPlayerDisplay">
+                <StackLayout x:Name="TopPlayerDisplay">
                     <StackLayout Style="{StaticResource BattlePageBattleUIStyle}"
                         x:Name="GamePlayersTopDisplay">
 
@@ -37,8 +37,8 @@
                 </StackLayout>
 
                 <!--The Battle Map Display -->
-                <StackLayout x:Name="BattleMapDisplay" Style="{StaticResource BattleMapBox}"  HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
-                    <AbsoluteLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <StackLayout x:Name="BattleMapDisplay" Style="{StaticResource BattleMapBox}">
+                    <AbsoluteLayout Style="{StaticResource BattleMapAbsoluteLayout}">
                         <Image Source="battleboard.png" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="Fill"/>
                         <Grid x:Name="MapGrid" HorizontalOptions="Center" VerticalOptions="Start" ColumnSpacing="0" RowSpacing="0" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
                     </AbsoluteLayout>
