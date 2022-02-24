@@ -20,6 +20,12 @@
 
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
+                        <Label Text="VS" TextColor="Red"  FontAttributes="Bold" Style="{StaticResource CenterMessageLargeStyle}"></Label>
+
+                    </StackLayout>
+
+                    <StackLayout Style="{StaticResource CardImageTextBox}">
+
                         <Image
                         Source="monster_icon.png"
                         Style="{StaticResource ImageLargeStyle}"/>
