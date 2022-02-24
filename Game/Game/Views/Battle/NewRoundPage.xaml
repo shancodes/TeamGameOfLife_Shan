@@ -10,8 +10,6 @@
 
                 <Label Text="Get Ready for the Battle" Style="{StaticResource CenterMessageLargeStyle}"/>
 
-                <!--Button Clicked="BeginButton_Clicked" Text="Begin"/-->
-
                 <Label Text="Characters" Style="{StaticResource NewRoundPageLabelStyle}"/>
 
                 <FlexLayout x:Name="PartyListFrame" Style="{StaticResource FlexLayoutNextRoundPageStyle}"/>
