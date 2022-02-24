@@ -51,7 +51,7 @@
                             Text="Collect Items"
                             Clicked="AutoAssignButton_Clicked" />
 
-                        <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
+                        <!--<Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Label Text="Selected : " Style="{StaticResource LabelStyle}"/>
                             <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
@@ -59,7 +59,7 @@
                         <FlexLayout x:Name="ItemListSelectedFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
-                                    Wrap="Wrap"/>
+                                    Wrap="Wrap"/>-->
 
                         <!--<Button Text="Close"/> -->
                         
@@ -69,7 +69,7 @@
             </StackLayout>
 
             <!--The Item Popup-->
-            <StackLayout 
+           <!-- <StackLayout 
                     x:Name="PopupLoadingView" 
                     BackgroundColor="{StaticResource PageBackgroundColor}" 
                     IsVisible="false" 
@@ -104,11 +104,11 @@
 
                             <Button x:Name="PopupCloseButton" 
                                 Clicked="ClosePopup_Clicked" 
-                                Text="Close"/>
+                                Text="Close"/> 
                         </StackLayout>
                     </Frame>
                 </StackLayout>
-            </StackLayout>
+            </StackLayout> -->
 
         </AbsoluteLayout>
     </ContentPage.Content>
