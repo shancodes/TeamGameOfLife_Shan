@@ -775,6 +775,19 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// logic for restart button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void RestartButton_Clicked(object sender, EventArgs e)
+        {
+            BeginGamePage pickcharacterpage = new BeginGamePage();
+            await Navigation.PushModalAsync(new NavigationPage(pickcharacterpage));
+            //ShowBattleModeUIElements();
+            _ = await Navigation.PopAsync();
+        }
+
+        /// <summary>
         /// The Next Round Button
         /// </summary>
         /// <param name="sender"></param>
