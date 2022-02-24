@@ -24,7 +24,7 @@ namespace Game.Views
             //TotalRound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.RoundCount.ToString();
 
             // Update the Found Number
-            TotalFound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
+            //TotalFound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
 
             // Update the Selected Number, this gets updated later when selected refresh happens
             TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
@@ -63,30 +63,30 @@ namespace Game.Views
         /// </summary>
         public void DrawItemLists()
         {
-            DrawDroppedItems();
-            DrawSelectedItems();
+            //DrawDroppedItems();
+            //DrawSelectedItems();
 
             // Only need to update the selected, the Dropped is set in the constructor
-            TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+            //TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
         }
 
         /// <summary>
         /// Add the Dropped Items to the Display
         /// </summary>
-        public void DrawDroppedItems()
-        {
-            // Clear and Populate the Dropped Items
-            var FlexList = ItemListFoundFrame.Children.ToList();
-            foreach (var data in FlexList)
-            {
-                _ = ItemListFoundFrame.Children.Remove(data);
-            }
+        //public void DrawDroppedItems()
+        //{
+        //    // Clear and Populate the Dropped Items
+        //    var FlexList = ItemListFoundFrame.Children.ToList();
+        //    foreach (var data in FlexList)
+        //    {
+        //        _ = ItemListFoundFrame.Children.Remove(data);
+        //    }
 
-            foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Distinct())
-            {
-                ItemListFoundFrame.Children.Add(GetItemToDisplay(data));
-            }
-        }
+        //    foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Distinct())
+        //    {
+        //        ItemListFoundFrame.Children.Add(GetItemToDisplay(data));
+        //    }
+        //}
 
         /// <summary>
         /// Add the Dropped Items to the Display
