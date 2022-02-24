@@ -55,9 +55,9 @@
 
             </Frame>
             
+    <!--To choose Characters-->
 
-
-                <Frame Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="18"
+            <Frame Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="18"
                 WidthRequest="1000"
                 HeightRequest="300"
                 BackgroundColor="LightYellow"
@@ -65,12 +65,38 @@
                 Margin="10"
                 CornerRadius="15">
 
+                <CollectionView 
+                        
+                    x:Name="CharactersListView" 
+                    ItemsSource="{Binding DatabaseCharacterList}"
+                    ItemsLayout="HorizontalList"
+                    SelectionChanged="OnDatabaseCharacterItemSelected">
 
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
 
-                </Frame>
+                            <Grid>
 
-               
+                                <Image  Grid.Column="1" Grid.Row="0" Grid.RowSpan="3"
+                                                 Source="{Binding ImageURI}"/>
 
+                                <Label Grid.Column="1" Grid.Row="4"
+                                                Text="{Binding Name}" 
+                                                FontAttributes="Bold"/>
+
+                                <Label Grid.Column="1" Grid.Row="5"
+                                                Text="{Binding Path=Level, StringFormat='Level {0:G}'}" />
+
+                                <Label Grid.Column="1" Grid.Row="6"
+                                                Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" />
+
+                            </Grid>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </Frame>
         </StackLayout>
     </ScrollView>
 </ContentPage>
