@@ -173,14 +173,15 @@
             </ScrollView>
 
             <!--Delete Done and Update buttons-->
-            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="30">
 
-                <ImageButton Source="delete.png" Clicked="Delete_Clicked"></ImageButton>
-                <ImageButton Source="done.png" Clicked="Done_Clicked"></ImageButton>
-                <ImageButton Source="update.png" Clicked="Update_Clicked"></ImageButton>
+            <Grid Style="{StaticResource GridItemReadStyle}">
+
+                <ImageButton Source="delete.png" Clicked="Delete_Clicked" Grid.Row="0" Grid.Column="0"></ImageButton>
+                <ImageButton Source="done.png" Clicked="Done_Clicked" Grid.Row="0" Grid.Column="1"></ImageButton>
+                <ImageButton Source="update.png" Clicked="Update_Clicked" Grid.Row="0" Grid.Column="2"></ImageButton>
                 
-            </StackLayout>
-            
+            </Grid>
+
         </StackLayout>
 
         <!--The Item Popup-->
