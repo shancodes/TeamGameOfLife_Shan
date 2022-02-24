@@ -460,6 +460,8 @@
                 <Setter Property="Padding" Value="10" />
             </Style>
 
+     
+
             <Style TargetType="StackLayout"
                 x:Key="NewRoundPageStyle">
                 <Setter Property="Padding" Value="10" />
@@ -865,6 +867,12 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="BattlePageLowerStackStyle" BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="HeightRequest" Value="100" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="VerticalStackThankYouPageStyle"
                    BasedOn="{StaticResource VerticalStack}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
@@ -1113,6 +1121,11 @@
                 <Setter Property="HasShadow" Value="false" />
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryBackgroundColor}" />
                 <Setter Property="BackgroundColor" Value="Teal" />
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="FrameBattlePageLower">
+                <Setter Property="BorderColor" Value="Black"/>
             </Style>
 
             <Style TargetType="Frame"

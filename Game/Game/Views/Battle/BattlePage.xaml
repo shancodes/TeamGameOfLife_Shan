@@ -81,11 +81,9 @@
                     </StackLayout>
 
                     <StackLayout 
-                            Style="{StaticResource VerticalStack}" 
-                            HeightRequest="100"
-                            HorizontalOptions="CenterAndExpand"  >
-                        <Frame BorderColor="Black">
+                            Style="{StaticResource BattlePageLowerStackStyle}">
 
+                        <Frame Style="{StaticResource FrameBattlePageLower}">
                             <StackLayout x:Name="MessageDisplayBox" 
                             IsVisible="false"
                             Style="{StaticResource VerticalStack}" 
