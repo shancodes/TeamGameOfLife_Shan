@@ -48,22 +48,26 @@
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
                     </StackLayout>
-                    
-                </StackLayout>
-                
-                
-                
-                
-                
-                <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
-                <StackLayout Style="{StaticResource HorizontalStack}">
-                    <Label Text="Killed : " Style="{StaticResource LabelStyle}"/>
-                    <Label Text="0" x:Name="TotalKilled" Style="{StaticResource ValueStyle}"/>
-                </StackLayout>
-                <FlexLayout x:Name="MonsterListFrame"
+
+                    <!--List Of Monsters-->
+                    <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+
+                        <Label Text="0" FontSize="Medium" x:Name="TotalKilled" Style="{StaticResource ValueStyle}"/>
+                        
+                        <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
+
+                        <Label Text="Killed" Style="{StaticResource MessageStyle}"/>
+
+                        <FlexLayout x:Name="MonsterListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+                
+                
 
             <Label Text="Items" Style="{StaticResource MessageStyle}"/>
                 <StackLayout Style="{StaticResource HorizontalStack}">
