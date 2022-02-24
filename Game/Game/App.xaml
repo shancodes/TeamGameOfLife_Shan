@@ -727,6 +727,10 @@
                 <Setter Property="HeightRequest" Value="30"/>
             </Style>
 
+            <Style TargetType="Button" x:Key="ButtonInvisibleStyle">
+                <Setter Property="IsVisible" Value="False"/>
+            </Style>
+
             <Style TargetType="Button" x:Key="ButtonItemReadStyle">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="BackgroundColor" Value="Transparent"/>
