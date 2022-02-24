@@ -10,18 +10,37 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
-            <StackLayout Style="{StaticResource VerticalStack}">
+
+        <ScrollView>
+            <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
+
+                <StackLayout Style="{StaticResource CharacterStackBox}" >
+                    <!--Game Date-->
+                    <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+                        <Label 
+                               Text="Game Date: " 
+                               Style="{StaticResource StyleItemReadLabelStyle}" />
+                        <Label 
+                                Text="{Binding Data.GameDate}" 
+                                Style="{StaticResource StyleItemReadValueStyle}" />
+                    </StackLayout>
 
 
-                <StackLayout Style="{StaticResource HorizontalStack}">
                     
-                    <Label Text=" Your Score : " Style="{StaticResource CenterMessageLargeStyle}"/>
-                    <Label Text="0" x:Name="TotalScore" Style="{StaticResource MessageStyle}"/>
-                    
+                    <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+
+                        <Label Text=" Your Score" Style="{StaticResource CenterMessageLargeStyle}"/>
+                        
+                    </StackLayout>
+
+                    <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+                        
+                        <Label Text="0" x:Name="TotalScore" Style="{StaticResource CenterMessageLargeStyle}"/>
+
+                    </StackLayout>
                 </StackLayout>
 
-            <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
+                <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
             <FlexLayout x:Name="CharacterListFrame"
                                     JustifyContent="Start"
                                     AlignContent="Start"
