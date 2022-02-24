@@ -81,10 +81,15 @@
 
                     </StackLayout>
 
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+
+                        <ImageButton Source="done.png"></ImageButton>
+
+                    </StackLayout>
+
                 </StackLayout>
 
 
-                <Button Clicked="CloseButton_Clicked" Text="Close"/>
 
         </StackLayout>
         </ScrollView>
