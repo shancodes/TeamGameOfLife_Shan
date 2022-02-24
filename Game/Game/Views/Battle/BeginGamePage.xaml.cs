@@ -44,6 +44,17 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Show the Game Over Screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public async void ShowScoreButton_Clicked(object sender, EventArgs args)
+        {
+            //ShowBattleMode();
+            await Navigation.PushModalAsync(new ScorePage());
+        }
+
+        /// <summary>
         /// Directs player to the battle page with map
         /// </summary>
         /// <param name="sender"></param>

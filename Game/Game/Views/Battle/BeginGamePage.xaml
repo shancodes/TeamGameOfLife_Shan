@@ -29,6 +29,12 @@
                     Clicked="ThankyouButtonClickedAsync" >
                 </Button>
 
+                <!--Game Over button-->
+                <Button 
+                    Text="Score Page" 
+                    Clicked="ShowScoreButton_Clicked" >
+                </Button>
+
                 <!--Battle map page button-->
                 <Button 
                     Text="Battle map page" 
