@@ -47,6 +47,13 @@
                                     AlignContent="Start"
                                     Wrap="Wrap"/>-->
 
+                        <Label Text="Monsters Killed" Style="{StaticResource MessageStyle}"/>
+                        
+                        <FlexLayout x:Name="MonsterListFrame"
+                                    JustifyContent="Start"
+                                    AlignContent="Start"
+                                    Wrap="Wrap"/>
+
                         <Button 
                             Text="Collect Items"
                             Clicked="AutoAssignButton_Clicked" />

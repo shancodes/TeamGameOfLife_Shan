@@ -13,6 +13,7 @@ namespace Game.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RoundOverPage : ContentPage
     {
+        public BattleEngineViewModel EngineViewModel = BattleEngineViewModel.Instance;
         /// <summary>
         /// Constructor
         /// </summary>
@@ -30,6 +31,8 @@ namespace Game.Views
             //TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
 
             DrawCharacterList();
+
+            DrawMonsterList();
 
             //DrawItemLists();
         }
@@ -54,6 +57,74 @@ namespace Game.Views
         }
 
         /// <summary>
+        /// Clear and Add the Monsters that survived
+        /// </summary>
+        public void DrawMonsterList()
+        {
+            // Clear and Populate the Characters Remaining
+            var FlexList = CharacterListFrame.Children.ToList();
+            foreach (var data in FlexList)
+            {
+                _ = CharacterListFrame.Children.Remove(data);
+            }
+
+            // Draw the Monsters
+            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.MonsterModelDeathList.Distinct())
+            {
+                MonsterListFrame.Children.Add(CreateMonsterDisplayBox(data));
+            }
+        }
+
+        /// <summary>
+        /// Return a stack layout for the Monsters
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public StackLayout CreateMonsterDisplayBox(PlayerInfoModel data)
+        {
+            if (data == null)
+            {
+                data = new PlayerInfoModel();
+            }
+
+            // Hookup the image
+            var PlayerImage = new Image
+            {
+                Style = (Style)Application.Current.Resources["PlayerBattleSmallStyle"],
+                Source = data.ImageURI
+            };
+
+            // Add the Level
+            var PlayerLevelLabel = new Label
+            {
+                Text = "Level : " + data.Level,
+                Style = (Style)Application.Current.Resources["ValueStyleMicro"],
+                HorizontalOptions = LayoutOptions.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
+                Padding = 0,
+                LineBreakMode = LineBreakMode.TailTruncation,
+                CharacterSpacing = 1,
+                LineHeight = 1,
+                MaxLines = 1,
+            };
+
+            // Put the Image Button and Text inside a layout
+            var PlayerStack = new StackLayout
+            {
+                Style = (Style)Application.Current.Resources["ScoreMonsterInfoBox"],
+                HorizontalOptions = LayoutOptions.Center,
+                Padding = 0,
+                Spacing = 0,
+                Children = {
+                    PlayerImage,
+                    PlayerLevelLabel,
+                },
+            };
+
+            return PlayerStack;
+        }
+
+        /// <summary>
         /// Draw the List of Items
         /// 
         /// The Ones Dropped
@@ -63,11 +134,11 @@ namespace Game.Views
         /// </summary>
         //public void DrawItemLists()
         //{
-            //DrawDroppedItems();
-            //DrawSelectedItems();
+        //DrawDroppedItems();
+        //DrawSelectedItems();
 
-            // Only need to update the selected, the Dropped is set in the constructor
-            //TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+        // Only need to update the selected, the Dropped is set in the constructor
+        //TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
         //}
 
         /// <summary>
