@@ -27,7 +27,7 @@
                 <Label Text="Are you sure you want to &#x0d; delete this Score page?" Style="{StaticResource MessageStyle}"/>
 
                 <!--Delete and Cancel buttons-->
-                <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}" HorizontalOptions="CenterAndExpand">
+                <StackLayout Style="{StaticResource StackIndexPageStyle}" >
 
                     <Button ImageSource="delete.png" Clicked="Delete_Clicked" Style="{StaticResource ButtonItemDeleteOneStyle}"/>
                     <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}"/>
