@@ -77,12 +77,14 @@ namespace Game.Views
                 _ = CharacterBox.Children.Remove(data);
             }
 
+
             // Draw the Characters
             foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.PlayerList.Where(m => m.PlayerType == PlayerTypeEnum.Character).ToList())
             {
                 CharacterBox.Children.Add(PlayerInfoDisplayBox(data));
             }
 
+           
             var MonsterBoxList = MonsterBox.Children.ToList();
             foreach (var data in MonsterBoxList)
             {
@@ -930,7 +932,11 @@ namespace Game.Views
                     MessageDisplayBox.IsVisible = true;
 
                     //Next Attack button removed
-                    AttackButton.IsVisible = false;
+                    /*
+                     * 
+                     * Adding next button to test if characters are getting added by clicking 
+                     * begin on pick characters*/
+                    AttackButton.IsVisible = true;
                     break;
 
                 // Based on the State disable buttons
@@ -956,7 +962,7 @@ namespace Game.Views
                     StacklayoutGamePage.IsVisible = false;
 
                     //Next Attack button disabled
-                    AttackButton.IsVisible = false;
+                    AttackButton.IsVisible = true;
                     break;
 
                 case BattleModeEnum.SimpleAbility:
