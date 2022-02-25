@@ -58,11 +58,17 @@
 
             <!--Delete Done and Update buttons-->
             <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                
-                <Button ImageSource="delete.png" Clicked="Delete_Clicked" />
-                <Button ImageSource="done.png" Clicked="Done_Clicked" />
-                <Button ImageSource="update.png" Clicked="Update_Clicked" />
-                
+                <ImageButton 
+                        Source="delete.png"
+                        Clicked="Delete_Clicked"/>
+
+                <ImageButton 
+                        Source="done.png"
+                        Clicked="Done_Clicked"/>
+
+                <ImageButton 
+                        Source="update.png"
+                        Clicked="Update_Clicked"/>
             </StackLayout>
 
         </StackLayout>
