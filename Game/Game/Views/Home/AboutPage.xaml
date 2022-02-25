@@ -144,9 +144,7 @@
                         </StackLayout>
 
                         <Editor
-                            x:Name="ServerItemsList"
-                            IsVisible="false"
-                            IsEnabled="false"
+                            x:Name="ServerItemsList" 
                             Style="{StaticResource EditorAboutPageStyle}"
                         />
                     </StackLayout>

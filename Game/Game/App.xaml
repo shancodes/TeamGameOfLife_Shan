@@ -1267,6 +1267,8 @@
 
             <Style TargetType="Editor" x:Key="EditorAboutPageStyle">
                 <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="IsEnabled" Value="False"/>
+                <Setter Property="IsVisible" Value="False"/>
                 <Setter Property="VerticalOptions" Value="StartAndExpand"/>
             </Style>
 
