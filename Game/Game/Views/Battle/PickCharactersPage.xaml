@@ -13,23 +13,19 @@
         </StackLayout>
     </NavigationPage.TitleView>
 
-    <ScrollView Orientation="Vertical">
+    <ScrollView Style="{StaticResource ScrollViewOrientation}">
 
-        <StackLayout Margin="20">
+        <StackLayout>
 
             <Frame
-            WidthRequest="500"
-            HeightRequest="500"
-            BackgroundColor="LightYellow"
-            BorderColor="Blue"
-            Margin="10"
-            CornerRadius="15">
+            Style="{StaticResource PickedCharactersFrame}">
+                
                 <CollectionView 
                                 x:Name="PartyListView" 
                                 ItemsSource="{Binding DatabaseCharacterList}"
                                 ItemsLayout="HorizontalList"
                                 SelectionChanged="OnDatabaseCharacterItemSelected"
-                                Margin="5,0,5,0">
+                                Style="{StaticResource CollectionViewBattlePage}">
 
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -40,8 +36,8 @@
 
                                 <Label Grid.Column="1" Grid.Row="1"
                                                    Text="{Binding Name}" 
-                                                   FontAttributes="Bold"/>
-                                </Grid>
+                                                   Style="{StaticResource BoldText}" />
+                            </Grid>
                             
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
@@ -50,20 +46,9 @@
             </Frame>
             
     <!--To choose Characters-->
-            <Grid 
-                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1">
-                <Button Text="L" FontSize="Medium"></Button>
+            <Frame Style="{StaticResource PickCharactersFrame}">
 
-                <Frame Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="18"
-                WidthRequest="1000"
-                HeightRequest="300"
-                BackgroundColor="LightYellow"
-                BorderColor="Blue"
-                Margin="10"
-                CornerRadius="15">
-
-                    <CollectionView 
-                        
+                <CollectionView 
                     x:Name="CharactersListView" 
                     ItemsSource="{Binding DatabaseCharacterList}"
                     ItemsLayout="HorizontalList"
@@ -79,7 +64,7 @@
 
                                     <Label Grid.Column="1" Grid.Row="4"
                                                 Text="{Binding Name}" 
-                                                FontAttributes="Bold"/>
+                                                Style="{StaticResource BoldText}" />
 
                                     <Label Grid.Column="1" Grid.Row="5"
                                                 Text="{Binding Path=Level, StringFormat='Level {0:G}'}" />
@@ -95,10 +80,6 @@
 
                 </Frame>
 
-                <Button Grid.Row="0" Grid.Column="19"
-                        Text="R" FontSize="Medium"></Button>
-            </Grid>
-            
             <!--Button for Begin Battle-->
             <ImageButton Source="begin_battle.png" Clicked="BattleButton_Clicked"   Style="{StaticResource ButtonItemReadStyle}"/>
         </StackLayout>

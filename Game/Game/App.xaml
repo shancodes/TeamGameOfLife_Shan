@@ -81,6 +81,11 @@
 
             <!-- Scroll View -->
 
+
+            <Style TargetType="ScrollView" x:Key="ScrollViewOrientation">
+                <Setter Property="Orientation" Value="Vertical"/>
+            </Style>
+
             <Style TargetType="ScrollView">
                 <Setter Property="VerticalScrollBarVisibility" Value="Never"/>
                 <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
@@ -111,6 +116,12 @@
                 <Setter Property="Margin" Value="5,0,5,0"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="ItemsLayout" Value="VerticalGrid,2"/>
+            </Style>
+
+
+            <Style TargetType="CollectionView" x:Key="CollectionViewBattlePage">
+
+                <Setter Property="Margin" Value="5,0,5,0"/>
             </Style>
             <!-- Label -->
 
@@ -158,6 +169,11 @@
                 x:Key="ListStyle"
                 BasedOn="{StaticResource LabelBaseStyle}">
                 <Setter Property="FontSize" Value="Micro" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="BoldText">
+                <Setter Property="FontAttributes" Value="Bold" />
             </Style>
 
             <Style TargetType="Label"
@@ -1165,6 +1181,21 @@
                 <Setter Property="HasShadow" Value="false" />
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryBackgroundColor}" />
                 <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+
+            <Style TargetType="Frame" x:Key="PickedCharactersFrame">
+                <Setter Property="WidthRequest" Value="500"/>
+                <Setter Property="HeightRequest" Value="400"/>
+                <Setter Property="BackgroundColor" Value="LightYellow"/>
+                <Setter Property="BorderColor" Value="Blue"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="PickCharactersFrame" 
+                   BasedOn="{StaticResource PickedCharactersFrame}">
+                <Setter Property="WidthRequest" Value="1000"/>
+                <Setter Property="HeightRequest" Value="300"/>
             </Style>
 
             <Style TargetType="Frame"
