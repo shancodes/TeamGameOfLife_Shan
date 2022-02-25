@@ -144,7 +144,7 @@
                     </StackLayout>
                 </Grid>
                 
-                <StackLayout Style="{StaticResource HorizontalStack}" Spacing="50">
+                <StackLayout Style="{StaticResource HorizontalStack}">
                     <ImageButton Source="cancel.png"  Clicked="Cancel_Clicked" Grid.Row="8" Grid.Column="1"/>
                     <ImageButton x:Name="CreateButton" Source="create.png" Clicked="Save_Clicked" Grid.Row="8" Grid.Column="1"/>
                 </StackLayout>
