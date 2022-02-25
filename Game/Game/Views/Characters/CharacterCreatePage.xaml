@@ -166,6 +166,7 @@
 
                             <ListView x:Name="PopupLocationItemListView" 
                                 Style="{StaticResource ListViewStyle}"
+                                CachingStrategy="RecycleElement"
                                 ItemSelected="OnPopupItemSelected"
                                 >
 

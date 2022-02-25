@@ -80,7 +80,6 @@
             </Style>
 
             <Style TargetType="ListView" x:Key="ListViewStyle">
-                <Setter Property="CachingStrategy" Value="RecycleElement"/>
                 <Setter Property="HasUnevenRows" Value="True"/>
                 <Setter Property="Margin" Value="5,0,5,0"/>
                 <Setter Property="RowHeight" Value="80"/>
@@ -349,7 +348,7 @@
             <Style TargetType="Label"
                 x:Key="MessageStyle"
                 BasedOn="{StaticResource HeaderStyle}">
-                <Setter Property="TextColor" Value="{StaticResource TriciaryTextColor}" />
+                <Setter Property="TextColor" Value= "{StaticResource TriciaryTextColor}"/>
             </Style>
 
             <Style TargetType="Label"
