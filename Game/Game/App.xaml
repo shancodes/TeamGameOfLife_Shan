@@ -972,6 +972,13 @@
                 <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
             </Style>
 
+            <Style TargetType="StackLayout" x:Key="Popup">
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value=".5, .5,.5,.5" />
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}" />
+                <Setter Property="IsVisible" Value="false" />
+            </Style>
+
             <Style TargetType="StackLayout"
                 x:Key="OuterBoxStack"
                 BasedOn="{StaticResource VerticalStack}">
