@@ -132,12 +132,28 @@ namespace Game.Views
              * 
              * @shipra @priya, I have added this part to test and create battle engine. so that I can proceed
              * you can delete this later after you write + test the backend code for the pick characters page.
-             * 
+             * Please do not remove this until 28 th feb
              * 
              * 
              * */
-            CharacterModel data = new CharacterModel();
+            /*CharacterModel data = new CharacterModel();
             BattleEngineViewModel.Instance.PartyCharacterList.Add(data);
+
+            CharacterModel charactertesttwo = new CharacterModel();
+            charactertesttwo.Name = "Fire Wielder";
+            charactertesttwo.Description = "Fire Wielder";
+            charactertesttwo.Level = 1;
+            charactertesttwo.MaxHealth = 5;
+            charactertesttwo.ImageURI = "fire_wielder.png";
+            BattleEngineViewModel.Instance.PartyCharacterList.Add(charactertesttwo);
+
+            CharacterModel charactertestthree = new CharacterModel();
+            charactertestthree.Name = "Night Walker";
+            charactertestthree.Description = "Night Walker";
+            charactertestthree.Level = 1;
+            charactertestthree.MaxHealth = 8;
+            charactertestthree.ImageURI = "night_walker.png";
+            BattleEngineViewModel.Instance.PartyCharacterList.Add(charactertestthree);*/
 
             CreateEngineCharacterList();
 
