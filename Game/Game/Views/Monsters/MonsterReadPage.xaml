@@ -96,10 +96,23 @@
 
                         <Grid
                             Style="{StaticResource ReadPageButtonGrid}">
+                            <ImageButton 
+                                Grid.Row="0" Grid.Column="0"
+                                Source="delete.png"
+                                Style="{StaticResource ButtonItemReadStyle}"
+                                Clicked="Delete_Clicked"/>
 
-                            <Button ImageSource="delete.png" Clicked="Delete_Clicked" Style="{StaticResource ButtonItemReadStyle}" Grid.Row="0" Grid.Column="0"/>
-                            <Button ImageSource="done.png"  Clicked="Done_Clicked" Style="{StaticResource ButtonItemReadStyle}" Grid.Row="0" Grid.Column="1"/>
-                            <Button ImageSource="update.png" Clicked="Update_Clicked" Style="{StaticResource ButtonItemReadStyle}" Grid.Row="0" Grid.Column="2"/>
+                            <ImageButton 
+                                Grid.Row="0" Grid.Column="1"
+                                Source="done.png"
+                                Style="{StaticResource ButtonItemReadStyle}"
+                                Clicked="Done_Clicked"/>
+
+                            <ImageButton 
+                                Grid.Row="0" Grid.Column="2"
+                                Source="update.png"
+                                Style="{StaticResource ButtonItemReadStyle}"
+                                Clicked="Update_Clicked"/>
                         </Grid>
 
                     </StackLayout>
