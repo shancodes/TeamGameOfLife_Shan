@@ -193,12 +193,12 @@
                 >
 
                 <Frame 
-                    BorderColor="{StaticResource TriciaryTextColor}" Padding="1">
-                    <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" Padding="2">
+                    Style="{StaticResource FrameNewStyle}">
+                    <StackLayout Style="{StaticResource VerticalNewStack}" >
                         <Image x:Name="PopupItemImage" Style="{StaticResource ImageLargeStyle}"/>
 
-                        <Label x:Name="PopupItemName" Style="{StaticResource PopupItemTextStyle} " MaxLines="2" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" />
-                        <Label x:Name="PopupItemDescription" Style="{StaticResource PopupItemTextStyle}" MaxLines="2" LineBreakMode="WordWrap"  HorizontalTextAlignment="Center"/>
+                        <Label x:Name="PopupItemName" Style="{StaticResource PopupItemNewStyle} " />
+                        <Label x:Name="PopupItemDescription" Style="{StaticResource PopupItemNewStyle}" />
 
                         <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
                             <Label Text="Location : " Style="{StaticResource LabelStyle}" />

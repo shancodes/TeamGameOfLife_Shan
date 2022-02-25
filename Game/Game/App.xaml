@@ -421,6 +421,13 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="PopupItemNewStyle"
+                BasedOn="{StaticResource PopupItemTextStyle}">
+                <Setter Property="MaxLines" Value="2" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+
+            <Style TargetType="Label"
                    x:Key="DeletePageLabelStyle">
                    <Setter Property="Padding" Value="0,0,10,0"/>
                 <Setter Property="HorizontalOptions" Value="End"/>
