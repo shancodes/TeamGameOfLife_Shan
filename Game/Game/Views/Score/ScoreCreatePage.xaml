@@ -29,45 +29,53 @@
     <ContentPage.Content>
 
         <ScrollView Style="{StaticResource ScrollViewHomePage}">
-            <StackLayout Style="{StaticResource StackOuterBox}" >
+            <StackLayout Style="{StaticResource StackLayoutOuterBox}" >
 
-                <Grid
-                    Style="{StaticResource ScoreCreateGridStyle}">
+                <!--Name-->
+                <StackLayout Style="{StaticResource HorizontalCenterStack}">
+                    
+                    <Label 
+                    Text="Name: " 
+                    Style="{StaticResource NewLabel}"/>
 
-                    <StackLayout Style="{StaticResource StackReadStyle}" Grid.Row="0" Grid.Column="1">
+                    <Entry 
+                        Text="{Binding Data.Name}" 
+                        TextChanged="EntryName_TextChanged"
+                        x:Name="Name_Entry"
+                        Style="{StaticResource EntryStyle}" />
+                </StackLayout>
 
-                        <!--Name-->
-                        <Label
-                            Text="Name: " 
-                            Style="{StaticResource NewLabel}"/>
+                <!--Score-->
+                <StackLayout Style="{StaticResource HorizontalCenterStack}">
+                    
+                    <Label
+                        Text="Score: " 
+                        Style="{StaticResource NewLabel}"/>
 
-                        <Entry
-                            x:Name="Name_Entry"
-                            TextChanged="EntryName_TextChanged"
-                            Text="{Binding Data.Name}" 
-                            Style="{StaticResource EntryStyle}"
-                            />
-                    </StackLayout>
+                    <Entry
+                        x:Name="Score_Entry"
+                        Text="{Binding Data.ScoreTotal}" 
+                        TextChanged="EntryDescription_TextChanged"
+                        Style="{StaticResource EntryStyle}"/>
+                    
+                </StackLayout>
 
-                    <StackLayout Style="{StaticResource StackReadStyle}" Grid.Row="1" Grid.Column="1">
-                        
-                        <Label
-                            Text="Score: " 
-                            Style="{StaticResource LabelStyle}"/>
+                <!--Buttons-->
+                <StackLayout Style="{StaticResource ButtonPair}" >
 
-                        <Entry
-                            x:Name="Score_Entry"
-                            Text="{Binding Data.ScoreTotal}" 
-                            TextChanged="EntryDescription_TextChanged"
-                            Style="{StaticResource EntryStyle}"/>
-                    </StackLayout>
+                    <ImageButton 
+                        Source="cancel.png"
+                        Style="{StaticResource ButtonItemCreatepagetwoStyle}"
+                        Clicked="Cancel_Clicked"/>
 
-                    <!--Cancel and Create buttons-->
-                    <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemDeleteTwoStyle}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
-                    <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" Style="{StaticResource ButtonItemDeleteOneStyle}" Grid.Row="2" Grid.Column="2"/>
+                    <ImageButton 
+                        x:Name="CreateButton"
+                        Source="create.png"
+                        Style="{StaticResource ButtonItemCreatepagetwoStyle}"
+                        Clicked="Save_Clicked"/>
+                    
+                </StackLayout>
 
-                </Grid>
-                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
