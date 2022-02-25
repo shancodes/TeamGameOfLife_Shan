@@ -70,8 +70,15 @@
 
             <StackLayout Style="{StaticResource ButtonPair}">
 
-                <Button ImageSource="delete.png" Clicked="Delete_Clicked" Style="{StaticResource ButtonItemCreatepageOneStyle}"/>
-                <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
+                <ImageButton 
+                    Source="delete.png"
+                    Style="{StaticResource ButtonItemCreatepageOneStyle}"
+                    Clicked="Delete_Clicked"/>
+
+                <ImageButton 
+                    Source="cancel.png"
+                    Style="{StaticResource ButtonItemCreatepagetwoStyle}"
+                    Clicked="Cancel_Clicked"/>
 
             </StackLayout>
 
