@@ -310,11 +310,6 @@ namespace Game.GameRules
                     ImageURI = "fire_princess.png",
                     Head = HeadString,
                     Necklass = NecklassString,
-                    PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
-                    Feet = FeetString,
-                    RightFinger = RightFingerString,
-                    LeftFinger = LeftFingerString,
                 },
 
                 new CharacterModel {
@@ -323,13 +318,8 @@ namespace Game.GameRules
                     Level = 1,
                     MaxHealth = 5,
                     ImageURI = "fire_wielder.png",
-                    Head = HeadString,
-                    Necklass = NecklassString,
                     PrimaryHand = PrimaryHandString,
                     OffHand = OffHandString,
-                    Feet = FeetString,
-                    RightFinger = RightFingerString,
-                    LeftFinger = LeftFingerString,
                 },
 
                 new CharacterModel {
@@ -338,10 +328,6 @@ namespace Game.GameRules
                     Level = 1,
                     MaxHealth = 8,
                     ImageURI = "night_walker.png",
-                    Head = HeadString,
-                    Necklass = NecklassString,
-                    PrimaryHand = PrimaryHandString,
-                    OffHand = OffHandString,
                     Feet = FeetString,
                     RightFinger = RightFingerString,
                     LeftFinger = LeftFingerString,
@@ -352,7 +338,9 @@ namespace Game.GameRules
                     Description = "Sharp Shooter",
                     Level = 4,
                     MaxHealth = 38,
-                    ImageURI = "sharpshooter.png"
+                    ImageURI = "sharpshooter.png",
+                    Feet = FeetString,
+                    RightFinger = RightFingerString,
                 },
 
                 new CharacterModel {
@@ -360,7 +348,9 @@ namespace Game.GameRules
                     Description = "Swiftblade",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "swiftblade.png"
+                    ImageURI = "swiftblade.png",
+                    RightFinger = RightFingerString,
+                    LeftFinger = LeftFingerString,
                 },
 
                 new CharacterModel {
@@ -368,7 +358,9 @@ namespace Game.GameRules
                     Description = "Wizard",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "wizard.png"
+                    ImageURI = "wizard.png",
+                    Feet = FeetString,
+                    PrimaryHand = PrimaryHandString,
                 },
 
                 new CharacterModel {
@@ -376,7 +368,10 @@ namespace Game.GameRules
                     Description = "Black Knight",
                     Level = 5,
                     MaxHealth = 43,
-                    ImageURI = "black_knight.png"
+                    ImageURI = "black_knight.png",
+                    Feet = FeetString,
+                    Head = HeadString,
+                    Necklass = NecklassString,
                 }
             };
 
