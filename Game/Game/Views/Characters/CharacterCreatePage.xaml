@@ -165,11 +165,8 @@
                             <Label x:Name="PopupLocationValue" Style="{StaticResource PopupItemTextStyle}" />
 
                             <ListView x:Name="PopupLocationItemListView" 
-                                CachingStrategy="RecycleElement"
+                                Style="{StaticResource ListViewStyle}"
                                 ItemSelected="OnPopupItemSelected"
-                                HasUnevenRows="true"
-                                Margin="5,0,5,0"
-                                RowHeight="80"
                                 >
 
                                 <ListView.ItemTemplate>

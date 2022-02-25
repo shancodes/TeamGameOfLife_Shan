@@ -79,6 +79,13 @@
                 <Setter Property="HasUnevenRows" Value="True"/>
             </Style>
 
+            <Style TargetType="ListView" x:Key="ListViewStyle">
+                <Setter Property="CachingStrategy" Value="RecycleElement"/>
+                <Setter Property="HasUnevenRows" Value="True"/>
+                <Setter Property="Margin" Value="5,0,5,0"/>
+                <Setter Property="RowHeight" Value="80"/>
+            </Style>
+
             <!-- Scroll View -->
 
 
