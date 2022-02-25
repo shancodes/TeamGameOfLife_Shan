@@ -176,6 +176,8 @@
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
 
+           
+
             <Style TargetType="Label"
                 x:Key="ScoreListStyle"
                 BasedOn="{StaticResource ListStyle}">
@@ -379,6 +381,13 @@
                 x:Key="CenterMessageLargeStyle"
                 BasedOn="{StaticResource CenterMessageStyle}">
                 <Setter Property="FontSize" Value="Large" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="AutoBattleLabel"
+                 BasedOn="{StaticResource CenterMessageLargeStyle}"  >
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontAttributes" Value="Bold" />
             </Style>
             
             <Style TargetType="Label"

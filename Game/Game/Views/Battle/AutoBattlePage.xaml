@@ -22,7 +22,7 @@
                     <!--VS-->
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
-                        <Label Text="VS" TextColor="Red"  FontAttributes="Bold" Style="{StaticResource CenterMessageLargeStyle}"></Label>
+                        <Label Text="VS" Style="{StaticResource AutoBattleLabel}"></Label>
 
                     </StackLayout>
 
