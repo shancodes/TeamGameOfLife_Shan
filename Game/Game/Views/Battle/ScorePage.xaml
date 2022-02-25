@@ -154,7 +154,7 @@
                             </StackLayout>
                         </StackLayout>
 
-                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <StackLayout Style="{StaticResource HorizontalCenterStack}">
 
                         <ImageButton Source="done.png" Clicked="CloseButton_Clicked"/>
 
