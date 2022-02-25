@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 using Game.Models;
 using Game.ViewModels;
+using Game.Engine.EngineBase;
 
 namespace Game.Views
 {
@@ -781,6 +782,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void RestartButton_Clicked(object sender, EventArgs e)
         {
+            _ = BattleEngineViewModel.Instance.Engine.EndBattle();
             BeginGamePage pickcharacterpage = new BeginGamePage();
             await Navigation.PushModalAsync(new NavigationPage(pickcharacterpage));
             //ShowBattleModeUIElements();
