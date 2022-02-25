@@ -156,7 +156,7 @@
 
                     <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
 
-                        <ImageButton Source="done.png"></ImageButton>
+                        <ImageButton Source="done.png" Clicked="CloseButton_Clicked"/>
 
                     </StackLayout>
 

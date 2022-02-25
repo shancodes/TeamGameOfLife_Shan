@@ -199,5 +199,6 @@ namespace Game.Views
         {
             _ = await Navigation.PopModalAsync();
         }
+
     }
 }
