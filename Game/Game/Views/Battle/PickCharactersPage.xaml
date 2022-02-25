@@ -16,36 +16,62 @@
     <ScrollView Style="{StaticResource ScrollViewOrientation}">
 
         <StackLayout>
+            <Label Text="Selected Characters" Style="{StaticResource CenterMessageLargeStyle}" />
 
-            <Frame
-            Style="{StaticResource PickedCharactersFrame}">
-                
-                <CollectionView 
-                                x:Name="PartyListView" 
-                                ItemsSource="{Binding DatabaseCharacterList}"
-                                ItemsLayout="HorizontalList"
-                                SelectionChanged="OnDatabaseCharacterItemSelected"
-                                Style="{StaticResource CollectionViewBattlePage}">
+            <Frame Style="{StaticResource PickedCharactersFrame}">
+                <StackLayout>
+                    <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
+                        <StackLayout>
+                            <Image Source="fire_princess.png"/>
 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            
-                                <Grid>
-                                <Image  Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1"
-                                                    Source="{Binding ImageURI}"/>
+                            <Label  
+                            Text="Fire Princess" 
+                            Style="{StaticResource BoldText}" />
+                        </StackLayout>
+                        <StackLayout>
+                            <Image Source="black_knight.png"/>
 
-                                <Label Grid.Column="1" Grid.Row="1"
-                                                   Text="{Binding Name}" 
-                                                   Style="{StaticResource BoldText}" />
-                            </Grid>
-                            
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                            <Label  
+                            Text="Black Knight" 
+                            Style="{StaticResource BoldText}" />
+                        </StackLayout>
+                        <StackLayout>
+                            <Image Source="fire_wielder.png"/>
 
+                            <Label  
+                            Text="Fire Wielder" 
+                            Style="{StaticResource BoldText}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
+                        <StackLayout>
+                            <Image Source="night_walker.png"/>
+
+                            <Label  
+                            Text="Night Walker " 
+                            Style="{StaticResource BoldText}" />
+                        </StackLayout>
+                        <StackLayout>
+                            <Image Source="sharpshooter.png"/>
+
+                            <Label  
+                            Text="Sharp Shooter" 
+                            Style="{StaticResource BoldText}" />
+                        </StackLayout>
+                        <StackLayout>
+                            <Image Source="fire_princess.png"/>
+
+                            <Label  
+                            Text="Fire Princess" 
+                            Style="{StaticResource BoldText}" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
             </Frame>
             
-    <!--To choose Characters-->
+            <Label Text="Pick Characters" Style="{StaticResource CenterMessageLargeStyle}" />
+
+            <!--To choose Characters-->
             <Frame Style="{StaticResource PickCharactersFrame}">
 
                 <CollectionView 
