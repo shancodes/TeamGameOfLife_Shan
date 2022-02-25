@@ -115,8 +115,16 @@
                         </StackLayout>
 
                         <StackLayout Style="{StaticResource ButtonPair}">
-                            <Button ImageSource="reset.png"  Clicked="Reset_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
-                            <Button ImageSource="update.png" x:Name="Update" Clicked="Save_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
+                            <ImageButton 
+                                Source="reset.png"
+                                Style="{StaticResource ButtonItemCreatepagetwoStyle}"
+                                Clicked="Reset_Clicked"/>
+
+                            <ImageButton 
+                                x:Name="Update"
+                                Source="update.png"
+                                Style="{StaticResource ButtonItemCreatepagetwoStyle}"
+                                Clicked="Save_Clicked"/>
                         </StackLayout>
                     </StackLayout>
                 </ScrollView>
