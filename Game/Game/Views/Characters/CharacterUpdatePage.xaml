@@ -135,7 +135,7 @@
                         </FlexLayout>
 
                         <!--Reset and Update buttons-->
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="Center" Spacing="40">
+                        <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
 
                             <ImageButton Source="reset.png" Clicked="Reset_Clicked" />
                             <ImageButton Source="update.png" x:Name="Update" Clicked="Save_Clicked" />
