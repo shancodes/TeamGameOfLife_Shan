@@ -1004,6 +1004,11 @@
                 <Setter Property="IsVisible" Value="false" />
             </Style>
 
+            <Style TargetType="StackLayout" x:Key="NewPopup"
+                   BasedOn="{StaticResource Popup}">
+                <Setter Property="BackgroundColor" Value="{StaticResource PageBackgroundColor}" />
+            </Style>
+
             <Style TargetType="StackLayout"
                 x:Key="OuterBoxStack"
                 BasedOn="{StaticResource VerticalStack}">
