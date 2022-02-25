@@ -189,10 +189,7 @@
                  Style="{StaticResource NewPopup}">
 
             <StackLayout 
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                WidthRequest="300"
-                HeightRequest="300"
+                Style="{StaticResource CharacterPopupBox}"
                 >
 
                 <Frame 
