@@ -147,35 +147,27 @@
 
             <!--The Item Popup-->
             <StackLayout x:Name="PopupItemSelector" 
-                 BackgroundColor="{StaticResource PageBackgroundColor}" 
-                 IsVisible="false" 
-                 AbsoluteLayout.LayoutBounds=".5, .5,.5,.5" 
-                 AbsoluteLayout.LayoutFlags="All">
+                 Style="{StaticResource NewPopup}">
 
                 <StackLayout 
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"
-                    WidthRequest="300"
-                    HeightRequest="300"
+                    Style="{StaticResource CharacterPopupBox}"
                     >
 
-                    <Frame BorderColor="{StaticResource TriciaryTextColor}" Padding="1">
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" Padding="2">
+                    <Frame Style="{StaticResource FrameNewStyle}">
+                        <StackLayout Style="{StaticResource VerticalNewStack}" >
                             <Label x:Name="PopupLocationLabel" Style="{StaticResource PopupItemTextStyle}" />
                             <Label x:Name="PopupLocationValue" Style="{StaticResource PopupItemTextStyle}" />
 
                             <ListView x:Name="PopupLocationItemListView" 
                                 CachingStrategy="RecycleElement"
                                 ItemSelected="OnPopupItemSelected"
-                                HasUnevenRows="true"
-                                Margin="5,0,5,0"
-                                RowHeight="80"
+                                Style="{StaticResource ListViewStyle}"
                                 >
 
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell>
-                                            <Grid ColumnSpacing="5" RowSpacing="1">
+                                            <Grid Style="{StaticResource NewGridStyle}">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="auto"/>
                                                     <ColumnDefinition Width="*"/>
@@ -187,13 +179,12 @@
                                                 </Grid.RowDefinitions>
 
                                                 <Image  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
-                                            Source="{Binding ImageURI}"
-                                            Style="{StaticResource ImageSmallStyle}"
-                                            VerticalOptions="CenterAndExpand"/>
+                                                    Source="{Binding ImageURI}"
+                                                    Style="{StaticResource ImageNewStyle}"/>
 
                                                 <Label Grid.Column="1" Grid.Row="0"
-                                            Text="{Binding Name}" 
-                                            Style="{StaticResource ListStyle}"/>
+                                                    Text="{Binding Name}" 
+                                                    Style="{StaticResource ListStyle}"/>
 
                                                 <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
                                                     <Label Text="{Binding Attribute}" Style="{StaticResource ListStyle}"/>
@@ -201,9 +192,8 @@
                                                 </StackLayout>
 
                                                 <Label Grid.Column="1" Grid.Row="2"
-                                                Text="{Binding Description}" 
-                                                Style="{StaticResource ListStyle}"
-                                                FontSize="Micro"/>
+                                                    Text="{Binding Description}" 
+                                                    Style="{StaticResource ListStyle}"/>
                                             </Grid>
                                         </ViewCell>
                                     </DataTemplate>
