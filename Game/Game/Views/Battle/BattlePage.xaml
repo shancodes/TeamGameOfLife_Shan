@@ -93,7 +93,7 @@
                         
                         <StackLayout Style="{StaticResource BattlePageBattleUIStackStyleBeforeResetButton}">
                             <ImageButton Source="restart.png" Clicked="RestartButton_Clicked" ></ImageButton>
-                            <ImageButton Source="quit.png"></ImageButton>
+                            <ImageButton Source="quit.png" Clicked="ExitButton_Clicked"></ImageButton>
                         </StackLayout>
 
                     </StackLayout>
