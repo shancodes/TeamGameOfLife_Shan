@@ -86,8 +86,13 @@
                 <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
             </Style>
 
-            <Style TargetType="ScrollView" x:Key="ScrollViewGamePage">
+            <Style TargetType="ScrollView" x:Key="ScrollViewVillagePage">
+                <Setter Property="HorizontalScrollBarVisibility" Value="Never"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Orientation" Value="Vertical"/>
+            </Style>
 
+            <Style TargetType="ScrollView" x:Key="ScrollViewGamePage">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
                 <Setter Property="Padding" Value="10"/>
