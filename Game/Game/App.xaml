@@ -934,6 +934,13 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="VerticalNewStack"
+                   BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="Padding" Value="2" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="BattlePageLowerStackStyle" BasedOn="{StaticResource VerticalStack}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="Spacing" Value="10"/>
@@ -1233,6 +1240,12 @@
             <Style TargetType="Frame"
                    x:Key="FrameStyle">
                 <Setter Property="OutlineColor" Value="Black" />
+                <Setter Property="Padding" Value="1" />
+            </Style>
+
+            <Style TargetType="Frame"
+                x:Key="FrameNewStyle">
+                <Setter Property="BorderColor" Value="{StaticResource TriciaryTextColor}" />
                 <Setter Property="Padding" Value="1" />
             </Style>
 
