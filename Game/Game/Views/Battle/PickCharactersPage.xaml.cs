@@ -136,12 +136,14 @@ namespace Game.Views
              * 
              * 
              * */
-            /*CharacterModel data = new CharacterModel();
+            CharacterModel data = new CharacterModel();
+            data.Head = "Infinity Tiara";
             BattleEngineViewModel.Instance.PartyCharacterList.Add(data);
 
             CharacterModel charactertesttwo = new CharacterModel();
             charactertesttwo.Name = "Fire Wielder";
             charactertesttwo.Description = "Fire Wielder";
+            charactertesttwo.Necklass = "Red Necklace";
             charactertesttwo.Level = 1;
             charactertesttwo.MaxHealth = 5;
             charactertesttwo.ImageURI = "fire_wielder.png";
@@ -151,9 +153,10 @@ namespace Game.Views
             charactertestthree.Name = "Night Walker";
             charactertestthree.Description = "Night Walker";
             charactertestthree.Level = 1;
+            charactertestthree.Feet = "Swift boots";
             charactertestthree.MaxHealth = 8;
             charactertestthree.ImageURI = "night_walker.png";
-            BattleEngineViewModel.Instance.PartyCharacterList.Add(charactertestthree);*/
+            BattleEngineViewModel.Instance.PartyCharacterList.Add(charactertestthree);
 
             CreateEngineCharacterList();
 
