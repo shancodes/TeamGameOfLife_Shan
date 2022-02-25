@@ -35,7 +35,8 @@
 
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text="0" x:Name="TotalScore" Style="{StaticResource CenterMessageLargeStyle}"/>
+                        <Label Text="500" Style="{StaticResource CenterMessageLargeStyle}"/>
+                        <!--x:Name="TotalScore"-->
 
                     </StackLayout>
 
@@ -49,10 +50,35 @@
                                     Wrap="Wrap"/>
                     </StackLayout>
 
+                    <StackLayout Style="{StaticResource HorizontalReadItemStyle}" >
+                            <StackLayout>
+                                <Image Source="fire_princess.png"/>
+
+                                <Label  
+                            Text="Fire Princess" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout>
+                            <StackLayout>
+                                <Image Source="black_knight.png"/>
+
+                                <Label  
+                            Text="Black Knight" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout>
+                            <StackLayout>
+                                <Image Source="fire_wielder.png"/>
+
+                                <Label  
+                            Text="Fire Wielder" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout>
+                        </StackLayout>
+
                     <!--List Of Monsters-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text="0" FontSize="Medium" x:Name="TotalKilled" Style="{StaticResource ValueStyle}"/>
+                        <Label Text="3" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
+                        <!--x:Name="TotalKilled"-->
 
                         <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
 
@@ -62,13 +88,37 @@
                                     JustifyContent="Start"
                                     AlignContent="Start"
                                     Wrap="Wrap"/>
-
+                        
                     </StackLayout>
+
+                    <StackLayout Style="{StaticResource HorizontalReadItemStyle}" >
+                            <StackLayout>
+                            <Image Source="ice_thief.png"/>
+                            <Label  
+                            Text="Ice Thief" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout>
+                        
+                            <StackLayout>
+                            <Image Source="ice_jester.png"/>
+                            <Label  
+                            Text="Ice Jester" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout>
+                        
+                            <StackLayout>
+                            <Image Source="ice_princess.png"/>
+                            <Label  
+                            Text="Ice Princess" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout>
+                        </StackLayout>
 
                     <!--List Of Items Collected-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text="0" FontSize="Medium" x:Name="TotalCollected" Style="{StaticResource ValueStyle}"/>
+                        <Label Text="3" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
+                        <!--x:Name="TotalCollected"-->
 
                         <Label Text="Items" Style="{StaticResource MessageStyle}"/>
 
@@ -80,6 +130,29 @@
                                     Wrap="Wrap"/>
 
                     </StackLayout>
+
+                    <StackLayout Style="{StaticResource HorizontalReadItemStyle}" >
+                            <StackLayout>
+                            <Image Source="infinity_tiara.png"/>
+                            <Label  
+                            Text="Infinity Tiara" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout> 
+                        
+                            <StackLayout>
+                            <Image Source="red_necklace.png"/>
+                            <Label  
+                            Text="Red Necklace" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout>
+                        
+                            <StackLayout>
+                            <Image Source="swift_boots.png"/>
+                            <Label  
+                            Text="Swift boots" 
+                            Style="{StaticResource BoldText}" />
+                            </StackLayout>
+                        </StackLayout>
 
                     <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
 
