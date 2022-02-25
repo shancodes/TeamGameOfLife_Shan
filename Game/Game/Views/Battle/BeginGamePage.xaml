@@ -24,10 +24,10 @@
                 </Button>
 
                 <!--ThankYou button-->
-                <Button 
+                <!--Button 
                     Text="Thank you Page" 
                     Clicked="ThankyouButtonClickedAsync" >
-                </Button>
+                </Button-->
 
                 <!--Game Over button-->
                 <Button 
@@ -36,10 +36,10 @@
                 </Button>
 
                 <!--Battle map page button-->
-                <Button 
+                <!--Button 
                     Text="Battle map page" 
                     Clicked="BattleMapClickedAsync" >
-                </Button>
+                </Button-->
 
                 <!--Pick Items Page button-->
                 <Button 
@@ -54,10 +54,10 @@
                 </Button>
 
                 <!--Show Monsters Page button-->
-                <Button 
+                <!--Button 
                     Text="Show Monsters Page" 
                     Clicked="NextRoundPage_Clicked" >
-                </Button>
+                </Button-->
 
             </StackLayout>
         </ScrollView>
