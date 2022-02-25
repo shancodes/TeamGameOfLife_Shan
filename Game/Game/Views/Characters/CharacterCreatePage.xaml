@@ -186,8 +186,7 @@
 
                                                 <Image  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
                                                 Source="{Binding ImageURI}"
-                                                Style="{StaticResource ImageSmallStyle}"
-                                                VerticalOptions="CenterAndExpand"/>
+                                                Style="{StaticResource ImageNewStyle}"/>
 
                                                 <Label Grid.Column="1" Grid.Row="0"
                                                 Text="{Binding Name}" 
@@ -201,7 +200,7 @@
                                                 <Label Grid.Column="1" Grid.Row="2"
                                                     Text="{Binding Description}" 
                                                     Style="{StaticResource ListStyle}"
-                                                    FontSize="Micro"/>
+                                                    />
                                             </Grid>
                                         </ViewCell>
                                     </DataTemplate>

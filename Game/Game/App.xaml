@@ -692,6 +692,12 @@
             </Style>
 
             <Style TargetType="Image"
+                x:Key="ImageNewStyle"
+                BasedOn="{StaticResource ImageSmallStyle}">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style TargetType="Image"
                 x:Key="PlayerBattleSmallStyle"
                 BasedOn="{StaticResource ImageLargeStyle}">
                 <Setter Property="HeightRequest" Value="40" />
