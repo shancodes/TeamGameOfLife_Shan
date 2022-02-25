@@ -127,6 +127,18 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void BattleButton_Clicked(object sender, EventArgs e)
         {
+            /*
+             * 
+             * 
+             * @shipra @priya, I have added this part to test and create battle engine. so that I can proceed
+             * you can delete this later after you write + test the backend code for the pick characters page.
+             * 
+             * 
+             * 
+             * */
+            CharacterModel data = new CharacterModel();
+            BattleEngineViewModel.Instance.PartyCharacterList.Add(data);
+
             CreateEngineCharacterList();
 
             await Navigation.PushModalAsync(new NavigationPage(new BattlePage()));
