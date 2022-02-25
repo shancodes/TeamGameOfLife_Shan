@@ -135,10 +135,16 @@
 
                         <!--Cancel and Create buttons -->
                         <StackLayout Style="{StaticResource ButtonPair}">
+                            <ImageButton 
+                                Source="cancel.png"
+                                Style="{StaticResource ButtonItemCreatepagetwoStyle}"
+                                Clicked="Cancel_Clicked"/>
 
-                            <Button ImageSource="cancel.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
-                            <Button x:Name="CreateButton" ImageSource="create.png" Clicked="Save_Clicked" Style="{StaticResource ButtonItemCreatepagetwoStyle}"/>
-
+                            <ImageButton 
+                                x:Name="CreateButton"
+                                Source="create.png"
+                                Style="{StaticResource ButtonItemCreatepagetwoStyle}"
+                                Clicked="Save_Clicked"/>
                         </StackLayout>
                     </StackLayout>
                 </ScrollView>
