@@ -200,12 +200,12 @@
                         <Label x:Name="PopupItemName" Style="{StaticResource PopupItemNewStyle} " />
                         <Label x:Name="PopupItemDescription" Style="{StaticResource PopupItemNewStyle}" />
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Style="{StaticResource BattlePageBattleUIStackStyle}">
                             <Label Text="Location : " Style="{StaticResource LabelStyle}" />
                             <Label x:Name="PopupItemLocation" Style="{StaticResource ValueStyle}" />
                         </StackLayout>
 
-                        <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Style="{StaticResource BattlePageBattleUIStackStyle}">
                             <Label x:Name="PopupItemAttribute" Style="{StaticResource LabelStyle}" />
                             <Label x:Name="PopupItemValue" Style="{StaticResource ValueStyle}" />
                         </StackLayout>
