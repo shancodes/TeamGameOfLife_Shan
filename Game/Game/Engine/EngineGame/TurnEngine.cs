@@ -106,18 +106,6 @@ namespace Game.Engine.EngineBase
         /// <returns></returns>
         public override bool MoveAsTurn(PlayerInfoModel Attacker)
         {
-            /*
-             * TODO: TEAMS Work out your own move logic if you are implementing move
-             * 
-             * Mike's Logic
-             * The monster or charcter will move to a different square if one is open
-             * Find the Desired Target
-             * Jump to the closest space near the target that is open
-             * 
-             * If no open spaces, return false
-             * 
-             */
-
             if (Attacker.PlayerType == PlayerTypeEnum.Monster)
             {
                 // For Attack, Choose Who
@@ -213,12 +201,24 @@ namespace Game.Engine.EngineBase
                 return null;
             }
 
-            // Select first in the list
+            // Select closest
+            var locationAttacker = EngineSettings.MapModel.GetLocationForPlayer(EngineSettings.CurrentAttacker);
+            int minDistance = 999;
+            PlayerInfoModel Defender = null;
 
-            // TODO: Teams, You need to implement your own Logic can not use mine.
-            var Defender = EngineSettings.PlayerList
-                .Where(m => m.Alive && m.PlayerType == PlayerTypeEnum.Character)
-                .OrderBy(m => m.ListOrder).FirstOrDefault();
+            foreach(var data in EngineSettings.PlayerList)
+            {
+                if (data.PlayerType == PlayerTypeEnum.Character)
+                {
+                    var locationDefender = EngineSettings.MapModel.GetLocationForPlayer(data);
+                    int currentDistance = EngineSettings.MapModel.CalculateDistance(locationAttacker, locationDefender);
+                    if (currentDistance < minDistance)
+                    {
+                        minDistance = currentDistance;
+                        Defender = data;
+                    }
+                }
+            }
 
             return Defender;
         }
@@ -253,16 +253,6 @@ namespace Game.Engine.EngineBase
             }
 
             return null;
-            // Select first one to hit in the list for now...
-            // Attack the Weakness (lowest HP) MonsterModel first 
-
-            // TODO: Teams, You need to implement your own Logic can not use mine.
-
-            /*var Defender = EngineSettings.PlayerList
-                .Where(m => m.Alive && m.PlayerType == PlayerTypeEnum.Monster)
-                .OrderBy(m => m.CurrentHealth).FirstOrDefault();
-
-            return Defender;*/
         }
 
         /// <summary>
@@ -481,20 +471,16 @@ namespace Game.Engine.EngineBase
         /// </summary>
         public override List<ItemModel> GetRandomMonsterItemDrops(int round)
         {
-            // TODO: Teams, You need to implement your own modification to the Logic cannot use mine as is.
-
-            // You decide how to drop monster items, level, etc.
-
             // The Number drop can be Up to the Round Count, but may be less.  
             // Negative results in nothing dropped
             var NumberToDrop = (DiceHelper.RollDice(1, round + 1) - 1);
 
             var result = new List<ItemModel>();
 
+            //drop items with highest value first
             for (var i = 0; i < NumberToDrop; i++)
             {
-                // Get a random Unique Item
-                var data = ItemIndexViewModel.Instance.GetItem(RandomPlayerHelper.GetMonsterUniqueItem());
+                var data = ItemIndexViewModel.Instance.Dataset.OrderByDescending(m => m.Value).ToList().FirstOrDefault();
                 result.Add(data);
             }
 
