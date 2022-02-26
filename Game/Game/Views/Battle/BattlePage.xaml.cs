@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using Game.Models;
 using Game.ViewModels;
 using Game.Engine.EngineBase;
+using Game.Engine.EngineModels;
 
 namespace Game.Views
 {
@@ -33,6 +34,8 @@ namespace Game.Views
         // Empty Constructor for UTs
         bool UnitTestSetting;
         public BattlePage(bool UnitTest) { UnitTestSetting = UnitTest; }
+
+        public EngineSettingsModel EngineSettings = EngineSettingsModel.Instance;
 
         /// <summary>
         /// Constructor
@@ -473,6 +476,13 @@ namespace Game.Views
              * For Mike's simple battle grammar there is no selection of action so I just return true
              */
 
+            if(EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
+            {
+                MapModelLocation locationAttacker = EngineSettings.MapModel.GetLocationForPlayer(EngineSettings.CurrentAttacker);
+                EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, data);
+                DrawGameAttackerDefenderBoard();
+            }
+
             return true;
         }
 
@@ -609,6 +619,11 @@ namespace Game.Views
         public void AttackButton_Clicked(object sender, EventArgs e)
         {
             NextAttackExample();
+        }
+
+        public void DoneButton_Clicked(object sender, EventArgs e)
+        {
+            
         }
 
         /// <summary>
@@ -937,6 +952,7 @@ namespace Game.Views
                      * Adding next button to test if characters are getting added by clicking 
                      * begin on pick characters*/
                     AttackButton.IsVisible = true;
+                    DoneButton.IsVisible = true;
                     break;
 
                 // Based on the State disable buttons
@@ -963,6 +979,7 @@ namespace Game.Views
 
                     //Next Attack button disabled
                     AttackButton.IsVisible = true;
+                    DoneButton.IsVisible = true;
                     break;
 
                 case BattleModeEnum.SimpleAbility:
