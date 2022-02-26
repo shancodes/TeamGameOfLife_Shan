@@ -67,6 +67,8 @@ namespace Game.Views
 
             // Set the Battle Mode
             ShowBattleMode();
+
+            NextAttackExample();
         }
 
         /// <summary>
@@ -616,12 +618,12 @@ namespace Game.Views
         /// <param name="e"></param>
         public void AttackButton_Clicked(object sender, EventArgs e)
         {
-            NextAttackExample();
+            //NextAttackExample();
         }
 
         public void DoneButton_Clicked(object sender, EventArgs e)
         {
-            
+            NextAttackExample();
         }
 
         /// <summary>
@@ -693,6 +695,15 @@ namespace Game.Views
                 GameOver();
                 return;
             }
+
+            if (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
+            {
+                return;
+            }
+            else 
+            {
+                NextAttackExample();
+            }
         }
 
         /// <summary>
@@ -701,7 +712,12 @@ namespace Game.Views
         public void SetAttackerAndDefender()
         {
             _ = BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(BattleEngineViewModel.Instance.Engine.Round.GetNextPlayerTurn());
-
+             
+            if(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
+            {
+                EngineSettings.BattleMessagesModel.TurnMessage = BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.Name + "'s turn to move";
+            }
+               
             switch (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.PlayerType)
             {
                 case PlayerTypeEnum.Character:
@@ -949,7 +965,7 @@ namespace Game.Views
                      * 
                      * Adding next button to test if characters are getting added by clicking 
                      * begin on pick characters*/
-                    AttackButton.IsVisible = true;
+                    AttackButton.IsVisible = false;
                     DoneButton.IsVisible = true;
                     break;
 
@@ -976,7 +992,7 @@ namespace Game.Views
                     StacklayoutGamePage.IsVisible = false;
 
                     //Next Attack button disabled
-                    AttackButton.IsVisible = true;
+                    AttackButton.IsVisible = false;
                     DoneButton.IsVisible = true;
                     break;
 
