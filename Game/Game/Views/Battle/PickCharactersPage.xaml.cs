@@ -147,6 +147,8 @@ namespace Game.Views
             charactertesttwo.Necklass = "Red Necklace";
             charactertesttwo.Level = 1;
             charactertesttwo.MaxHealth = 5;
+            charactertesttwo.Speed = 101;
+
             charactertesttwo.ImageURI = "fire_wielder.png";
             BattleEngineViewModel.Instance.PartyCharacterList.Add(charactertesttwo);
 
