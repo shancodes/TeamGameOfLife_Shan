@@ -467,8 +467,6 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedEmpty(MapModelLocation data)
         {
-            // TODO: Info
-
             /*
              * This gets called when the characters is clicked on
              * Usefull if you want to select the location to move to etc.
