@@ -627,7 +627,7 @@ namespace Game.Engine.EngineBase
             // Drop Items to ItemModel Pool
             var myItemList = Target.DropAllItems();
 
-            // I feel generous, even when characters die, random drops happen :-)
+            // I feel generous, even when characters die, DropAllItems drops happen :-)
             // If Random drops are enabled, then add some....
             myItemList.AddRange(GetRandomMonsterItemDrops(EngineSettings.BattleScore.RoundCount));
 
