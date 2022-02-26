@@ -108,7 +108,7 @@ namespace Game.Engine.EngineGame
         /// </summary>
         /// <returns></returns>
         public override int AddMonstersToRound()
-        {
+        { 
             var TargetLevel = 1;
 
             if (EngineSettings.CharacterList.Count() > 0)
@@ -117,6 +117,7 @@ namespace Game.Engine.EngineGame
                 TargetLevel = Convert.ToInt32(EngineSettings.CharacterList.Min(m => m.Level));
             }
 
+            //Adding monsters from monster CRUDi
             AddUserCreatedMonsters();
 
             for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters && EngineSettings.MonsterList.Count < EngineSettings.MaxNumberPartyMonsters; i++)
