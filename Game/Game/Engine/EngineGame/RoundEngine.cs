@@ -109,8 +109,6 @@ namespace Game.Engine.EngineGame
         /// <returns></returns>
         public override int AddMonstersToRound()
         {
-            // TODO: Teams, You need to implement your own Logic can not use mine.
-
             var TargetLevel = 1;
 
             if (EngineSettings.CharacterList.Count() > 0)
