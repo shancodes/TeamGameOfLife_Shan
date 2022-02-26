@@ -138,6 +138,7 @@ namespace Game.Views
              * */
             CharacterModel data = new CharacterModel();
             data.Head = "Infinity Tiara";
+            data.Speed = 100;
             BattleEngineViewModel.Instance.PartyCharacterList.Add(data);
 
             CharacterModel charactertesttwo = new CharacterModel();
