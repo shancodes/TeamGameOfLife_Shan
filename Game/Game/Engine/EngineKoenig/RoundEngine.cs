@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 using Game.Engine.EngineBase;
@@ -7,6 +8,7 @@ using Game.Engine.EngineInterfaces;
 using Game.Engine.EngineModels;
 using Game.GameRules;
 using Game.Models;
+using Game.ViewModels;
 
 namespace Game.Engine.EngineKoenig
 {
@@ -71,6 +73,25 @@ namespace Game.Engine.EngineKoenig
             return true;
         }
 
+        private void AddUserCreatedMonsters()
+        {
+            ObservableCollection<MonsterModel> DbMonsterList = MonsterIndexViewModel.Instance.Dataset;
+
+            // If there are no Monsters in the system, return a default one
+            if (DbMonsterList.Count == 0)
+            {
+                return;
+            }
+
+            DbMonsterList = new ObservableCollection<MonsterModel>(DbMonsterList.OrderBy(i => i.Level));
+
+            for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters && i < DbMonsterList.Count; i++)
+            {
+                EngineSettings.MonsterList.Add(new PlayerInfoModel(DbMonsterList[i]));
+            }
+
+        }
+
         /// <summary>
         /// Add Monsters to the Round
         /// 
@@ -98,8 +119,11 @@ namespace Game.Engine.EngineKoenig
                 TargetLevel = Convert.ToInt32(EngineSettings.CharacterList.Min(m => m.Level));
             }
 
-            for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters; i++)
+            AddUserCreatedMonsters();
+
+            for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters && EngineSettings.MonsterList.Count < EngineSettings.MaxNumberPartyMonsters; i++)
             {
+
                 var data = RandomPlayerHelper.GetRandomMonster(TargetLevel, EngineSettings.BattleSettingsModel.AllowMonsterItems);
 
                 // Help identify which Monster it is
