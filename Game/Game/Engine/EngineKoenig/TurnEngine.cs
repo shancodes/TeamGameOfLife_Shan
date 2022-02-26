@@ -66,11 +66,6 @@ namespace Game.Engine.EngineKoenig
                 }
             }
 
-            if(EngineSettings.CurrentAction == ActionEnum.Attack && EngineSettings.CurrentDefender == null)
-            {
-                EngineSettings.CurrentAction = ActionEnum.Move;
-            }
-
             switch (EngineSettings.CurrentAction)
             {
                 case ActionEnum.Attack:
@@ -151,10 +146,6 @@ namespace Game.Engine.EngineKoenig
                 EngineSettings.BattleMessagesModel.TurnMessage = Attacker.Name + " moves closer to " + EngineSettings.CurrentDefender.Name;
 
                 return EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, openSquare);
-            }
-            else
-            {
-                EngineSettings.BattleMessagesModel.TurnMessage = Attacker.Name + "'s turn to move" ;
             }
 
             return true;
@@ -238,31 +229,16 @@ namespace Game.Engine.EngineKoenig
                 return null;
             }
 
-            var locationAttacker = EngineSettings.MapModel.GetLocationForPlayer(EngineSettings.CurrentAttacker);
-
-            foreach (var data in EngineSettings.PlayerList)
-            {
-                if(data.PlayerType == PlayerTypeEnum.Monster)
-                {
-                    var locationDefender = EngineSettings.MapModel.GetLocationForPlayer(data);
-                    if (EngineSettings.MapModel.AreCharactersNeighbors(locationAttacker, locationDefender))
-                    {
-                        return data;
-                    }
-                }
-            }
-
-            return null;
             // Select first one to hit in the list for now...
             // Attack the Weakness (lowest HP) MonsterModel first 
 
             // TODO: Teams, You need to implement your own Logic can not use mine.
 
-            /*var Defender = EngineSettings.PlayerList
+            var Defender = EngineSettings.PlayerList
                 .Where(m => m.Alive && m.PlayerType == PlayerTypeEnum.Monster)
                 .OrderBy(m => m.CurrentHealth).FirstOrDefault();
 
-            return Defender;*/
+            return Defender;
         }
 
         /// <summary>
