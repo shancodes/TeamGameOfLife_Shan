@@ -314,6 +314,11 @@ namespace Game.Models
             return false;
         }
 
+        public bool AreCharactersNeighbors(MapModelLocation Attacker, MapModelLocation Defender)
+        {
+            return (CalculateDistance(Attacker, Defender) == 1);
+        }
+
         /// <summary>
         /// Calculate distance between two map locations
         /// </summary>
