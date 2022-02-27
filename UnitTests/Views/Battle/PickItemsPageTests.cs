@@ -61,7 +61,7 @@ namespace UnitTests.Views
         }
 
         [Test]
-        public void RoundOverPage_ClosePopup_Clicked_Default_Should_Pass()
+        public void PickItemsPage_ClosePopup_Clicked_Default_Should_Pass()
         {
             // Arrange
             // Act
