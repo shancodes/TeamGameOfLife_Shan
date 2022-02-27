@@ -37,6 +37,8 @@ namespace Game.Views
 
         public EngineSettingsModel EngineSettings = EngineSettingsModel.Instance;
 
+        private static bool isAppStarted = false;
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -67,8 +69,6 @@ namespace Game.Views
 
             // Set the Battle Mode
             ShowBattleMode();
-
-            NextAttackExample();
         }
 
         /// <summary>
@@ -924,6 +924,14 @@ namespace Game.Views
             ShowBattleModeDisplay();
 
             ShowBattleModeUIElements();
+
+
+            if (StartBattleButton.IsVisible != true && isAppStarted == false
+                && BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum == BattleModeEnum.MapNext)
+            {
+                isAppStarted = true;
+                NextAttackExample();
+            }
         }
 
         /// <summary>
@@ -964,8 +972,13 @@ namespace Game.Views
                     /*
                      * 
                      * Adding next button to test if characters are getting added by clicking 
-                     * begin on pick characters*/
-                    AttackButton.IsVisible = false;
+                     * begin on pick characters
+                    AttackButton.IsVisible = true;*/
+
+                    //animation to open up the battle board
+                    mapImage.Opacity = 0;
+                    mapImage.FadeTo(1, 8000);
+
                     DoneButton.IsVisible = true;
                     break;
 
@@ -992,7 +1005,7 @@ namespace Game.Views
                     StacklayoutGamePage.IsVisible = false;
 
                     //Next Attack button disabled
-                    AttackButton.IsVisible = false;
+                    AttackButton.IsVisible = true;
                     DoneButton.IsVisible = true;
                     break;
 

@@ -38,7 +38,7 @@
                 <!--The Battle Map Display -->
                 <StackLayout x:Name="BattleMapDisplay" Style="{StaticResource BattleMapBox}">
                     <AbsoluteLayout Style="{StaticResource BattleMapAbsoluteLayout}">
-                        <Image Source="battle_grid.png"  Style="{StaticResource BattleMapImageStyle}"/>
+                        <Image x:Name="mapImage" Source="battle_grid.png"  Style="{StaticResource BattleMapImageStyle}"/>
                         <Grid x:Name="MapGrid" Style="{StaticResource GridBattleMap}"/>
                     </AbsoluteLayout>
                 </StackLayout>
