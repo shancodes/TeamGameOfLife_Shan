@@ -64,6 +64,7 @@ namespace UnitTests.Views
         public void PickItemsPage_ClosePopup_Clicked_Default_Should_Pass()
         {
             // Arrange
+
             // Act
             page.ClosePopup_Clicked(null, null);
 
@@ -77,8 +78,23 @@ namespace UnitTests.Views
         public void PickItemsPage_ShowPopup_Default_Should_Pass()
         {
             // Arrange
+
             // Act
             _ = page.ShowPopup(new ItemModel());
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void PickItemsPage_GetItemToDisplay_Null_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            _ = page.GetItemToDisplay(null);
 
             // Reset
 
