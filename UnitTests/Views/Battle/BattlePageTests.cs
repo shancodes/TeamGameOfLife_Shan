@@ -650,6 +650,7 @@ namespace UnitTests.Views
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
             BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.AutoBattle = true;
+            BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(MonsterPlayer);
 
             // Make UI Map
             _ = page.CreateMapGridObjects();
@@ -664,6 +665,7 @@ namespace UnitTests.Views
             _ = page.UpdateMapGrid();
 
             // Reset
+            BattleEngineViewModel.Instance.Engine.Round.SetCurrentAttacker(null);
 
             // Assert
             Assert.AreEqual(true, result); // Got to here, so it happened...
