@@ -13,51 +13,52 @@
     <ContentPage.Content>
 
         <AbsoluteLayout
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
-        >
-
-            <StackLayout Style="{StaticResource VerticalStack}"
-                    AbsoluteLayout.LayoutBounds="1,1,1,1" 
-                    AbsoluteLayout.LayoutFlags="All">
+        Style="{StaticResource BasicAbsoluteLayout}">
+            
+            <StackLayout Style="{StaticResource Boundaries}">
 
                 <ScrollView x:Name="ScrollView">
 
-                    <StackLayout Style="{StaticResource VerticalStack}">
+                    <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
 
-                        <Label Text="Items Found" Style="{StaticResource MessageStyle}"/>
-                        
-                        <StackLayout Style="{StaticResource HorizontalStack}">
-                            <Label Text="Found : " Style="{StaticResource LabelStyle}"/>
-                            <Label Text="0" x:Name="TotalFound" Style="{StaticResource ValueStyle}"/>
+                        <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+
+                            <Label Text="Items Found" Style="{StaticResource MessageStyle}"/>
+
+                            <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label Text="Found : " Style="{StaticResource LabelStyle}"/>
+                                <Label Text="0" x:Name="TotalFound" Style="{StaticResource ValueStyle}"/>
+                            </StackLayout>
+                            
                         </StackLayout>
-                        
+
                         <FlexLayout x:Name="ItemListFoundFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
-                                    Wrap="Wrap"/>
+                                    Style="{StaticResource CharacterFlex}"/>
 
-                        <Button Clicked="AutoAssignButton_Clicked" Text="Assign Items"/>
+                        <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
-                        
-                        <StackLayout Style="{StaticResource HorizontalStack}">
-                            <Label Text="Selected : " Style="{StaticResource LabelStyle}"/>
-                            <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
+                            <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
+
+                            <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label Text="Selected : " Style="{StaticResource LabelStyle}"/>
+                                <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
+                            </StackLayout>
+
                         </StackLayout>
-                        
-                        <FlexLayout x:Name="ItemListSelectedFrame"
-                                    JustifyContent="Start"
-                                    AlignContent="Start"
-                                    Wrap="Wrap"/>
 
-                        <Button Text="Close"/>
+                        <FlexLayout x:Name="ItemListSelectedFrame"
+                                    Style="{StaticResource CharacterFlex}"/>
+
+                        <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
+                            <Button Text="Close"/>
+                            <Button Clicked="AutoAssignButton_Clicked" Text="Assign Items"/>
+                        </StackLayout>
 
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
 
-            <!--The Item Popup-->
+            <!-- The Item Popup -->
             <StackLayout 
                     x:Name="PopupLoadingView" 
                     BackgroundColor="{StaticResource PageBackgroundColor}" 
@@ -98,7 +99,6 @@
                     </Frame>
                 </StackLayout>
             </StackLayout>
-
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
