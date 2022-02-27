@@ -5,6 +5,7 @@ using Game.Views;
 using Xamarin.Forms.Mocks;
 using Xamarin.Forms;
 using Game.Models;
+using Game.ViewModels;
 
 namespace UnitTests.Views
 {
@@ -109,6 +110,26 @@ namespace UnitTests.Views
 
             // Act
             _ = page.GetItemToDisplay(new ItemModel { Id = "" });
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void PickItemsPage_DrawDroppedItems_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Draw the Items
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(new ItemModel());
+
+            // Draw two times
+            page.DrawDroppedItems();
+
+            // Act
+            page.DrawDroppedItems();
 
             // Reset
 
