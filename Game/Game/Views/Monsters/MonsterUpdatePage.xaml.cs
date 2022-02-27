@@ -57,7 +57,7 @@ namespace Game.Views
 
             // This resets the Picker to -1 index, need to reset it back
             ViewModel.Data.Difficulty = difficulty;
-            DifficultyPicker.SelectedItem = difficulty.ToMessage();
+            DifficultyPicker.SelectedItem = difficulty.ToString();
 
             return true;
         }
@@ -88,7 +88,7 @@ namespace Game.Views
             Name_Entry.Text = ViewModel.Data.Name;
             Description_Entry.Text = ViewModel.Data.Description;
             AttackValue.Text = string.Format("{0}", ViewModel.Data.Attack);
-            DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToMessage();
+            DifficultyPicker.SelectedItem = ViewModel.Data.Difficulty.ToString();
         }
 
         /// <summary>
