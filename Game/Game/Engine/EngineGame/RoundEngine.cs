@@ -87,6 +87,23 @@ namespace Game.Engine.EngineGame
 
             for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters && i < DbMonsterList.Count; i++)
             {
+                if(DbMonsterList[i].Difficulty == DifficultyEnum.Average)
+                {
+                    DbMonsterList[i].CurrentHealth = 1;
+
+                }
+                else if (DbMonsterList[i].Difficulty == DifficultyEnum.Difficult)
+                {
+                    DbMonsterList[i].CurrentHealth = 2;
+
+                }
+
+                else if (DbMonsterList[i].Difficulty == DifficultyEnum.Hard)
+                {
+                    DbMonsterList[i].CurrentHealth = 5;
+
+                }
+
                 EngineSettings.MonsterList.Add(new PlayerInfoModel(DbMonsterList[i]));
             }
 
