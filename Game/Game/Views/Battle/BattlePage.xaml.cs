@@ -865,7 +865,7 @@ namespace Game.Views
         public async void ShowModalRoundOverPage()
         {
             ShowBattleMode();
-            await Navigation.PushModalAsync(new RoundOverPage());
+            await Navigation.PushModalAsync(new NavigationPage(new RoundOverPage()));
         }
 
         /// <summary>
