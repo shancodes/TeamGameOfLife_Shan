@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.PickItemsPage">
 
+    <!-- Label in NavigationPage TitleView -->
+    <NavigationPage.TitleView>
+        <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
+            <Label Text="Grab Your Gear" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
 
         <AbsoluteLayout
