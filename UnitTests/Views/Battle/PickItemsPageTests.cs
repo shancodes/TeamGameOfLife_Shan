@@ -101,5 +101,19 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void PickItemsPage_GetItemToDisplay_InValid_Id_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            _ = page.GetItemToDisplay(new ItemModel { Id = "" });
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
