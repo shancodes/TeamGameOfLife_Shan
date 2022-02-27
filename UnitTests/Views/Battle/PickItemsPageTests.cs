@@ -158,5 +158,26 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        [Test]
+        public void PickItemsPage_DrawItemLists_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Draw the Items
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Add(new ItemModel());
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Add(new ItemModel());
+
+            // Draw two times
+            page.DrawItemLists();
+
+            // Act  BattleEngineViewModel.Instance.Engine.EngineSettings.
+            page.DrawItemLists();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
     }
 }
