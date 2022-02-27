@@ -4,6 +4,7 @@ using Game;
 using Game.Views;
 using Xamarin.Forms.Mocks;
 using Xamarin.Forms;
+using Game.Models;
 
 namespace UnitTests.Views
 {
@@ -65,6 +66,19 @@ namespace UnitTests.Views
             // Arrange
             // Act
             page.ClosePopup_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void PickItemsPage_ShowPopup_Default_Should_Pass()
+        {
+            // Arrange
+            // Act
+            _ = page.ShowPopup(new ItemModel());
 
             // Reset
 
