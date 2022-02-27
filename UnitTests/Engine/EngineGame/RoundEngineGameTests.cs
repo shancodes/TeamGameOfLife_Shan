@@ -269,6 +269,7 @@ namespace UnitTests.Engine.EngineGame
 
             // Reset
             Engine.EngineSettings.CharacterList.Clear();
+            _ = Engine.Round.ClearLists();
 
             // Assert
             Assert.AreEqual(RoundEnum.GameOver, result);
@@ -306,6 +307,7 @@ namespace UnitTests.Engine.EngineGame
             var result = Engine.Round.RoundNextTurn();
 
             // Reset
+            _ = Engine.Round.ClearLists();
 
             // Assert
             Assert.AreEqual(RoundEnum.NewRound, result);
@@ -323,7 +325,7 @@ namespace UnitTests.Engine.EngineGame
                 Level = 1,
                 CurrentHealth = 1,
                 ExperienceTotal = 1,
-                Name = "Characer",
+                Name = "Character",
                 ListOrder = 1,
             };
 
@@ -343,6 +345,7 @@ namespace UnitTests.Engine.EngineGame
             var result = Engine.Round.RoundNextTurn();
 
             // Reset
+            _ = Engine.Round.ClearLists();
 
             // Assert
             Assert.AreEqual(RoundEnum.NextTurn, result);
@@ -366,7 +369,7 @@ namespace UnitTests.Engine.EngineGame
         }
 
         [Test]
-        public void RoundEngine_GetNextPlayerInList_Valid_Monster_Should_Return_Mike()
+        public void RoundEngine_GetNextPlayerInList_Valid_Monster_Should_Return_Null()
         {
             // Arrange
 
