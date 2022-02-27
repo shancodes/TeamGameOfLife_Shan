@@ -1376,7 +1376,7 @@ namespace UnitTests.Engine.EngineBase
         }
 
         [Test]
-        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Attack()
+        public void TurnEngine_DetermineActionChoice_Valid_Character_Range_Should_Return_Move()
         {
             // Arrange
 
@@ -1402,7 +1402,7 @@ namespace UnitTests.Engine.EngineBase
             // Reset
 
             // Assert
-            Assert.AreEqual(ActionEnum.Attack, result);
+            Assert.AreEqual(ActionEnum.Move, result);
         }
         #endregion DetermineActionChoice
 
