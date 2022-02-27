@@ -1,80 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Name="BrowseItemsPage"
-             x:Class="Game.Views.PickItemsPage"
-             >
-
-    <!-- NavigationPage for Label -->
-    <NavigationPage.TitleView>
-        <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
-            <Label Text="Grab Your Gear" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
-        </StackLayout>
-    </NavigationPage.TitleView>
+             x:Class="Game.Views.PickItemsPage">
 
     <ContentPage.Content>
-        <StackLayout Style="{StaticResource OuterBoxStack}">
-            
-            <!-- Collection View -->
-            <CollectionView
-                    ItemsSource="{Binding Dataset, Mode=OneWay}"
-                    SelectionMode="Single"
-                    Style="{StaticResource CollectionViewIndexPage}">
 
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Style="{StaticResource GridIndexStyle}">
+        <AbsoluteLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        >
 
-                            <!-- Images for items -->
-                            <Image 
-                                Grid.RowSpan="2"
-                                Source="{Binding ImageURI}"
-                                Style="{StaticResource ImageMediumStyle}"/>
+            <StackLayout Style="{StaticResource VerticalStack}"
+                    AbsoluteLayout.LayoutBounds="1,1,1,1" 
+                    AbsoluteLayout.LayoutFlags="All">
 
-                            <!-- Label for Name -->
-                            <Label Grid.Column="1"
-                                Text="{Binding Name}"/>
+                <ScrollView x:Name="ScrollView">
 
-                            <!-- Label for Damage -->
-                            <Label 
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                Text="Damage:"/>
+                    <StackLayout Style="{StaticResource VerticalStack}">
 
-                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding Damage}"></Label>
+                        <Label Text="Items Found" Style="{StaticResource MessageStyle}"/>
+                        
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+                            <Label Text="Found : " Style="{StaticResource LabelStyle}"/>
+                            <Label Text="0" x:Name="TotalFound" Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
+                        <FlexLayout x:Name="ItemListFoundFrame"
+                                    JustifyContent="Start"
+                                    AlignContent="Start"
+                                    Wrap="Wrap"/>
 
-                            <!-- Label for Range -->
-                            <Label 
-                                Grid.Row="2"
-                                Grid.Column="1"
-                                Text="Range:"/>
+                        <Button Clicked="AutoAssignButton_Clicked" Text="Assign Items"/>
 
-                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
+                        <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
+                        <StackLayout Style="{StaticResource HorizontalStack}">
+                            <Label Text="Selected : " Style="{StaticResource LabelStyle}"/>
+                            <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
+                        </StackLayout>
+                        <FlexLayout x:Name="ItemListSelectedFrame"
+                                    JustifyContent="Start"
+                                    AlignContent="Start"
+                                    Wrap="Wrap"/>
 
-                            <!-- Label for Value -->
-                            <Label 
-                                Grid.Row="3"
-                                Grid.Column="1"
-                                Text="Value:"/>
+                        <Button Text="Close"/>
 
-                            <Label Grid.Row="3" Grid.Column="2" Text="{Binding Value}"></Label>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
 
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <!--The Item Popup-->
+            <StackLayout 
+                    x:Name="PopupLoadingView" 
+                    BackgroundColor="{StaticResource PageBackgroundColor}" 
+                    IsVisible="false" 
+                    AbsoluteLayout.LayoutBounds=".5, .5,.5,.5" 
+                    AbsoluteLayout.LayoutFlags="All">
 
-            <!-- ImageButtons for Assign items and done -->
-            <Grid Style="{StaticResource ReadPageButtonGrid}">
-                
-                <ImageButton Source="collect_items.png" Grid.Row="0" Grid.Column="0" />
-                <ImageButton Source="done.png" Grid.Row="0" Grid.Column="1"/>
-                
-            </Grid>
-            
-        </StackLayout>
+                <StackLayout 
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="300"
+                        HeightRequest="300"
+                        >
+
+                    <Frame 
+                             BorderColor="{StaticResource TriciaryTextColor}" Padding="1">
+
+                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" Padding="2">
+                            <Image x:Name="PopupItemImage" Style="{StaticResource ImageLargeStyle}"/>
+
+                            <Label x:Name="PopupItemName" Style="{StaticResource PopupItemTextStyle}" MaxLines="2" LineBreakMode="WordWrap" />
+                            <Label x:Name="PopupItemDescription" Style="{StaticResource PopupItemTextStyle}" MaxLines="2" LineBreakMode="WordWrap" />
+
+                            <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label Text="Location : " Style="{StaticResource LabelStyle}" />
+                                <Label x:Name="PopupItemLocation" Style="{StaticResource ValueStyle}" />
+                            </StackLayout>
+
+                            <StackLayout Style="{StaticResource HorizontalStack}">
+                                <Label x:Name="PopupItemAttribute" Style="{StaticResource LabelStyle}" />
+                                <Label x:Name="PopupItemValue" Style="{StaticResource ValueStyle}" />
+                            </StackLayout>
+
+                            <Button x:Name="PopupCloseButton" 
+                                Clicked="ClosePopup_Clicked" 
+                                Text="Close"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
