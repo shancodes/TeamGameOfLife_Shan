@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 using Game.Engine.EngineGame;
 using Game.Models;
+using Game.Engine.EngineBase;
 
 namespace UnitTests.Engine.EngineGame
 {
