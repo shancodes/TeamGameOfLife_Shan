@@ -23,29 +23,11 @@
                     Clicked="PickUpCharacterPage_Clicked">
                 </Button>
 
-                <!--ThankYou button-->
-                <!--Button 
-                    Text="Thank you Page" 
-                    Clicked="ThankyouButtonClickedAsync" >
-                </Button-->
-
                 <!--Game Over button-->
                 <Button 
                     Text="Score Page" 
                     Clicked="ShowScoreButton_Clicked" >
                 </Button>
-
-                <!--Battle map page button-->
-                <!--Button 
-                    Text="Battle map page" 
-                    Clicked="BattleMapClickedAsync" >
-                </Button-->
-
-                <!--Show Monsters Page button-->
-                <!--Button 
-                    Text="Show Monsters Page" 
-                    Clicked="NextRoundPage_Clicked" >
-                </Button-->
 
             </StackLayout>
         </ScrollView>
