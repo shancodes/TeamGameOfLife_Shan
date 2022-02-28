@@ -4,6 +4,7 @@ using NUnit.Framework;
 using Game.Engine.EngineGame;
 using Game.Models;
 using Game.Engine.EngineBase;
+using Game.Helpers;
 
 namespace UnitTests.Engine.EngineGame
 {
@@ -19,6 +20,8 @@ namespace UnitTests.Engine.EngineGame
             Engine = new BattleEngine();
             Engine.Round = new RoundEngine();
             Engine.Round.Turn = new TurnEngine();
+            Engine.EngineSettings.BattleScore.AutoBattle = false;
+            Engine.EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Unknown;
             //Engine.StartBattle(true);   // Start engine in auto battle mode
         }
 
@@ -102,7 +105,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(false, result);
+            Assert.AreEqual(true, result);
         }
         #endregion Attack
 
@@ -143,9 +146,10 @@ namespace UnitTests.Engine.EngineGame
         public void RoundEngine_UseAbility_Valid_Default_Should_Pass()
         {
             // Arrange 
+            
 
             // Act
-            var result = Engine.Round.Turn.UseAbility(null);
+            var result = Engine.Round.Turn.UseAbility(new PlayerInfoModel());
 
             // Reset
 
@@ -198,7 +202,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(false, result);
+            Assert.AreEqual(true, result);
         }
         #endregion CalculateExperience
 
@@ -206,15 +210,18 @@ namespace UnitTests.Engine.EngineGame
         [Test]
         public void RoundEngine_CalculateAttackStatus_Valid_Default_Should_Pass()
         {
-            // Arrange 
+            // Arrange
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(11);
 
             // Act
             var result = Engine.Round.Turn.CalculateAttackStatus(new PlayerInfoModel(), new PlayerInfoModel());
 
             // Reset
+            _ = DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual(HitStatusEnum.Unknown, result);
+            Assert.AreEqual(HitStatusEnum.Hit, result);
         }
         #endregion CalculateAttackStatus
 
@@ -278,7 +285,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(ActionEnum.Unknown, result);
+            Assert.AreEqual(ActionEnum.Move, result);
         }
         #endregion DetermineActionChoice
 
@@ -294,7 +301,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(false, result);
+            Assert.AreEqual(true, result);
         }
         #endregion TurnAsAttack
 
@@ -310,7 +317,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(false, result);
+            Assert.AreEqual(true, result);
         }
         #endregion TargetDied
 
@@ -326,7 +333,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(false, result);
+            Assert.AreEqual(true, result);
         }
         #endregion TakeTurn
 
@@ -335,14 +342,20 @@ namespace UnitTests.Engine.EngineGame
         public void RoundEngine_RollToHitTarget_Valid_Default_Should_Pass()
         {
             // Arrange 
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(20);
+            bool previousAllowCriticalHit = Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit;
+            Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = false;
 
             // Act
             var result = Engine.Round.Turn.RollToHitTarget(1,1);
 
             // Reset
+            _ = DiceHelper.DisableForcedRolls();
+            Engine.EngineSettings.BattleSettingsModel.AllowCriticalHit = previousAllowCriticalHit;
 
             // Assert
-            Assert.AreEqual(HitStatusEnum.Unknown, result);
+            Assert.AreEqual(HitStatusEnum.Hit, result);
         }
         #endregion RollToHitTarget
 
@@ -351,14 +364,18 @@ namespace UnitTests.Engine.EngineGame
         public void RoundEngine_GetRandomMonsterItemDrops_Valid_Default_Should_Pass()
         {
             // Arrange 
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(1);
+
 
             // Act
             var result = Engine.Round.Turn.GetRandomMonsterItemDrops(1);
 
             // Reset
+            _ = DiceHelper.DisableForcedRolls();
 
             // Assert
-            Assert.AreEqual(null, result);
+            Assert.AreEqual(0, result.Count);
         }
         #endregion GetRandomMonsterItemDrops
 
@@ -374,7 +391,7 @@ namespace UnitTests.Engine.EngineGame
             // Reset
 
             // Assert
-            Assert.AreEqual(false, result);
+            Assert.AreEqual(true, result);
         }
         #endregion DetermineCriticalMissProblem
 
@@ -383,14 +400,15 @@ namespace UnitTests.Engine.EngineGame
         public void RoundEngine_DropItems_Valid_Default_Should_Pass()
         {
             // Arrange 
+            PlayerInfoModel player = new PlayerInfoModel();
 
             // Act
-            var result = Engine.Round.Turn.DropItems(new PlayerInfoModel());
+            var result = Engine.Round.Turn.DropItems(player);
 
             // Reset
 
             // Assert
-            Assert.AreEqual(0, result);
+            Assert.IsTrue(result >= 0);
         }
         #endregion DropItems
     }
