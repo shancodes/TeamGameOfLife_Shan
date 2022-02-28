@@ -41,18 +41,6 @@
                     Clicked="BattleMapClickedAsync" >
                 </Button-->
 
-                <!--Pick Items Page button-->
-                <Button 
-                    Text="Pick Items Page" 
-                    Clicked="AutoAssignButton_Clicked" >
-                </Button>
-
-                <!--Round Over Page button-->
-                <Button 
-                    Text="Round Over Page" 
-                    Clicked="RoundPage_Clicked" >
-                </Button>
-
                 <!--Show Monsters Page button-->
                 <!--Button 
                     Text="Show Monsters Page" 
