@@ -391,48 +391,56 @@ namespace Game.GameRules
                     Name = "Ice Thief",
                     Description = "Big and Ugly",
                     ImageURI = "ice_thief.png",
+                    Difficulty = DifficultyEnum.Average,
                 },
 
                 new MonsterModel {
                     Name = "Ice Bear",
                     Description = "Large Monster Bear",
                     ImageURI = "ice_bear.png",
+                    Difficulty = DifficultyEnum.Difficult,
                 },
 
                 new MonsterModel {
                     Name = "Ice Jester",
                     Description = "and fast",
                     ImageURI = "ice_jester.png",
+                    Difficulty = DifficultyEnum.Hard,
                 },
 
                 new MonsterModel {
                     Name = "Ice Princess",
                     Description = "Monster Princess",
                     ImageURI = "ice_princess.png",
+                    Difficulty = DifficultyEnum.Average,
                 },
 
                 new MonsterModel {
                     Name = "Ice Queen",
                     Description = "Powerful Monster Queen",
                     ImageURI = "ice_queen.png",
+                    Difficulty = DifficultyEnum.Difficult,
                 },
 
                 new MonsterModel {
                     Name = "Ice Knight",
                     Description = "Powerful Monster Black Knight",
                     ImageURI = "ice_knight.png",
+                     Difficulty = DifficultyEnum.Hard,
                 },
 
                  new MonsterModel {
                     Name = "Ice Slime",
                     Description = "Cruel Monster Slime",
                     ImageURI = "ice_slime.png",
+                    Difficulty = DifficultyEnum.Hard,
                 },
 
                 new MonsterModel {
                     Name = "Ice Wolf",
                     Description = "Fast Monster Wolf",
                     ImageURI = "ice_wolf.png",
+                    Difficulty = DifficultyEnum.Easy,
                 },
             };
 
