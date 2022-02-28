@@ -56,6 +56,9 @@ namespace Game.Views
         /// <param name="args"></param>
         public void OnDatabaseCharacterItemSelected(object sender, SelectionChangedEventArgs args)
         {
+            if (args.CurrentSelection.Count == 0) {
+                return;
+            }
             CharacterModel data = args.CurrentSelection[0] as CharacterModel;
             if (data == null)
             {
@@ -63,7 +66,7 @@ namespace Game.Views
             }
 
             // Manually deselect Character.
-            //CharactersListView.SelectedItem = null;
+            CharactersListView.SelectedItem = null;
 
             // Don't add more than the party max
             if (BattleEngineViewModel.Instance.PartyCharacterList.Count() < BattleEngineViewModel.Instance.Engine.EngineSettings.MaxNumberPartyCharacters)
