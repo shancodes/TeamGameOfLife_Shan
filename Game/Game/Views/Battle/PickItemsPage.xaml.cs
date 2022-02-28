@@ -58,7 +58,7 @@ namespace Game.Views
                 _ = ItemListFoundFrame.Children.Remove(data);
             }
 
-            foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Distinct())
+            foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList)
             {
                 ItemListFoundFrame.Children.Add(GetItemToDisplay(data));
             }
