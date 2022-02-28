@@ -205,24 +205,7 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void AutoAssignButton_Clicked(object sender, EventArgs e)
         {
-            // Distribute the Items
-            //_ = BattleEngineViewModel.Instance.Engine.Round.PickupItemsForAllCharacters();
-
-            // Show what was picked up
-            //DrawItemLists();
             await Navigation.PushAsync(new PickItemsPage());
         }
-
-        /// <summary>
-        /// Show the Page for New Round
-        /// 
-        /// Upcomming Monsters
-        /// 
-        /// </summary>
-        public async void ShowModalNewRoundPage()
-        {
-            _ = await Navigation.PopModalAsync();
-        }
-
     }
 }
