@@ -45,8 +45,14 @@ namespace Game.Views
                 _ = CharacterListFrame.Children.Remove(data);
             }
 
+            //// Draw the Characters
+            //foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.CharacterModelDeathList)
+            //{
+            // CharacterListFrame.Children.Add(CreatePlayerDisplayBox(data));
+            //}
+
             // Draw the Characters
-            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.CharacterModelDeathList)
+            foreach (var data in EngineViewModel.Engine.EngineSettings.CharacterList)
             {
                 CharacterListFrame.Children.Add(CreatePlayerDisplayBox(data));
             }
@@ -183,7 +189,7 @@ namespace Game.Views
             // Put the Image Button and Text inside a layout
             var PlayerStack = new StackLayout
             {
-                Style = (Style)Application.Current.Resources["PlayerInfoBox"],
+                Style = (Style)Application.Current.Resources["ScoreCharacterInfoBox"],
                 HorizontalOptions = LayoutOptions.Center,
                 Padding = 0,
                 Spacing = 0,
