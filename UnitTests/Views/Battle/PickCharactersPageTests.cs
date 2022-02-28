@@ -162,16 +162,15 @@ namespace UnitTests.Views
         public void PickCharactersPage_OnPartyCharacterItemSelected_InValid_Should_Pass()
         {
             // Arrange
+            CollectionView cv = (CollectionView)page.FindByName("PartyListView");
 
-            //var selectedCharacterChangedEventArgs = new SelectedItemChangedEventArgs(null, 0);
+            // Act
+            cv.SelectedItem = null;
 
-            //// Act
-            //page.OnPartyCharacterItemSelected(null, selectedCharacterChangedEventArgs);
+            // Reset
 
-            //// Reset
-
-            //// Assert
-            //Assert.IsTrue(true); // Got to here, so it happened...
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
         }
 
         [Test]
