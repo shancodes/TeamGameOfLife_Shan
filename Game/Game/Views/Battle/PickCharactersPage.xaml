@@ -93,7 +93,7 @@
                 </Frame>
 
             <!--Button for Begin Battle-->
-            <ImageButton Source="begin_battle.png" Clicked="BattleButton_Clicked" Style="{StaticResource ButtonItemReadStyle}"/>
+            <ImageButton Source="begin_battle.png" x:Name ="BeginBattleButton" Clicked="BattleButton_Clicked" Style="{StaticResource ButtonItemReadStyle}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

@@ -114,12 +114,12 @@ namespace Game.Views
         public void UpdateNextButtonState()
         {
             // If no characters disable Next button
-            //BeginBattleButton.IsEnabled = true;
+            BeginBattleButton.IsEnabled = true;
 
             var currentCount = BattleEngineViewModel.Instance.PartyCharacterList.Count();
             if (currentCount == 0)
             {
-                //BeginBattleButton.IsEnabled = false;
+                BeginBattleButton.IsEnabled = false;
             }
 
             //PartyCountLabel.Text = currentCount.ToString();
