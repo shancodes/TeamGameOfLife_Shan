@@ -18,10 +18,8 @@
                 </StackLayout>
 
                 <!--PickCharacters button-->
-                <Button 
-                    Text="Select Characters" 
-                    Clicked="PickUpCharacterPage_Clicked">
-                </Button>
+
+                <ImageButton Source="select_characters.png" Clicked="PickUpCharacterPage_Clicked" />
 
                 <!--Game Over button-->
                 <Button 
