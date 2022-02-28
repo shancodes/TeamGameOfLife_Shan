@@ -13,6 +13,9 @@ namespace Game.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PickItemsPage : ContentPage
     {
+        // This uses the Instance so it can be shared with other Battle Pages as needed
+        public BattleEngineViewModel EngineViewModel = BattleEngineViewModel.Instance;
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -21,10 +24,10 @@ namespace Game.Views
             InitializeComponent();
 
             // Update the Found Number
-            TotalFound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
+            TotalFound.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
 
             // Update the Selected Number, this gets updated later when selected refresh happens
-            TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+            TotalSelected.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
 
             DrawItemLists();
         }
@@ -43,7 +46,7 @@ namespace Game.Views
             DrawSelectedItems();
 
             // Only need to update the selected, the Dropped is set in the constructor
-            TotalSelected.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+            TotalSelected.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
         }
 
         /// <summary>
@@ -58,7 +61,7 @@ namespace Game.Views
                 _ = ItemListFoundFrame.Children.Remove(data);
             }
 
-            foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelDropList)
+            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList.Distinct())
             {
                 ItemListFoundFrame.Children.Add(GetItemToDisplay(data));
             }
@@ -76,7 +79,7 @@ namespace Game.Views
                 _ = ItemListSelectedFrame.Children.Remove(data);
             }
 
-            foreach (var data in BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.ItemModelSelectList)
+            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList)
             {
                 ItemListSelectedFrame.Children.Add(GetItemToDisplay(data));
             }
