@@ -1007,7 +1007,7 @@ namespace Game.Views
                     StacklayoutGamePage.IsVisible = false;
 
                     //Next Attack button disabled
-                    AttackButton.IsVisible = true;
+                    AttackButton.IsVisible = false;
                     DoneButton.IsVisible = true;
                     break;
 
