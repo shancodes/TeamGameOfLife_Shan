@@ -368,6 +368,10 @@ namespace Game.Engine.EngineGame
         /// <param name="character"></param>
         public override bool PickupItemsFromPool(PlayerInfoModel character)
         {
+            if(character == null)
+            {
+                return false;
+            }
 
             // TODO: Teams, You need to implement your own Logic if not using auto apply
 
@@ -449,6 +453,11 @@ namespace Game.Engine.EngineGame
         /// <returns></returns>
         public override ItemModel SwapCharacterItem(PlayerInfoModel character, ItemLocationEnum setLocation, ItemModel PoolItem)
         {
+            if(character == null || PoolItem == null)
+            {
+                return null;
+            }
+
             // Put on the new ItemModel, which drops the one back to the pool
             var droppedItem = character.AddItem(setLocation, PoolItem.Id);
 
