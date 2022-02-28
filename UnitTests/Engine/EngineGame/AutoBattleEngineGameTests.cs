@@ -19,6 +19,7 @@ namespace UnitTests.Engine.EngineGame
         [SetUp]
         public void Setup()
         {
+
             AutoBattleEngine = new AutoBattleEngine();
 
             AutoBattleEngine.Battle.EngineSettings.CharacterList.Clear();
@@ -77,10 +78,12 @@ namespace UnitTests.Engine.EngineGame
         {
             //Arrange
 
+
             //Act
             var result = await AutoBattleEngine.RunAutoBattle();
 
             //Reset
+            //AutoBattleEngine.Battle.EngineSettings.MaxRoundCount = oldRoundCountMax;
 
             //Assert
             Assert.AreEqual(false, result);
