@@ -181,22 +181,17 @@ namespace UnitTests.Views
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_Default_Should_Pass()
         {
             //// Arrange
-
-            //var selectedCharacter = new CharacterModel();
-            //CollectionView cv = page.FindByName('CharactersListView');
-            //cv.SelectedItems.Add(selectedCharacter);
-
-     
-            //SelectionChangedEventArgs selectedCharacterChangedEventArgs = null;
-            //    //SelectionChangedEventArgs();
+            var selectedCharacter = new CharacterModel();
+            CollectionView cv = (CollectionView) page.FindByName("CharactersListView");
 
             //// Act
-            //page.OnDatabaseCharacterItemSelected(null, selectedCharacterChangedEventArgs);
+            /// Trigger OnDatabaseCharacterItemSelected by setting SelectedItem on CollectionView
+            cv.SelectedItem = selectedCharacter;
 
             //// Reset
 
             //// Assert
-            //Assert.IsTrue(true); // Got to here, so it happened...
+            Assert.IsTrue(true); // Got to here, so it happened...
         }
 
         [Test]
