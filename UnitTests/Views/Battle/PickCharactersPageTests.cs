@@ -198,16 +198,17 @@ namespace UnitTests.Views
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_InValid_Should_Pass()
         {
             //// Arrange
-
-            //var selectedCharacterChangedEventArgs = new SelectedItemChangedEventArgs(null, 0);
+            
+            CollectionView cv = (CollectionView)page.FindByName("CharactersListView");
 
             //// Act
-            //page.OnDatabaseCharacterItemSelected(null, null);
+            /// Trigger OnDatabaseCharacterItemSelected by setting SelectedItem on CollectionView
+            cv.SelectedItem = null;
 
             //// Reset
 
             //// Assert
-            //Assert.IsTrue(true); // Got to here, so it happened...
+            Assert.IsTrue(true); 
         }
     }
 }
