@@ -76,7 +76,7 @@
                         <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" Style="{StaticResource ButtonInvisibleStyle}"/>
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" Style="{StaticResource ButtonInvisibleStyle}"/>
                         <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" Style="{StaticResource ButtonInvisibleStyle}"/>
-                        <Button x:Name="DoneButton" Clicked="DoneButton_Clicked" Text="Done" Style="{StaticResource ButtonInvisibleStyle}"/>
+                        <Button x:Name="DoneButton" Clicked="DoneButton_Clicked" Text="Character Location selected" Style="{StaticResource ButtonInvisibleStyle}"/>
                     </StackLayout>
 
                     <StackLayout 
