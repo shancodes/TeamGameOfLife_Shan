@@ -61,33 +61,26 @@
             <!-- The Item Popup -->
             <StackLayout 
                     x:Name="PopupLoadingView" 
-                    BackgroundColor="{StaticResource PageBackgroundColor}" 
-                    IsVisible="false" 
-                    AbsoluteLayout.LayoutBounds=".5, .5,.5,.5" 
-                    AbsoluteLayout.LayoutFlags="All">
+                    Style="{StaticResource NewPopup}">
 
                 <StackLayout 
-                        VerticalOptions="CenterAndExpand" 
-                        HorizontalOptions="CenterAndExpand"
-                        WidthRequest="300"
-                        HeightRequest="300"
+                        Style="{StaticResource CharacterPopupBox}"
                         >
 
-                    <Frame 
-                             BorderColor="{StaticResource TriciaryTextColor}" Padding="1">
+                    <Frame Style="{StaticResource FrameNewStyle}">
 
-                        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="CenterAndExpand" Padding="2">
+                        <StackLayout Style="{StaticResource VerticalNewStack}" >
                             <Image x:Name="PopupItemImage" Style="{StaticResource ImageLargeStyle}"/>
 
-                            <Label x:Name="PopupItemName" Style="{StaticResource PopupItemTextStyle}" MaxLines="2" LineBreakMode="WordWrap" />
-                            <Label x:Name="PopupItemDescription" Style="{StaticResource PopupItemTextStyle}" MaxLines="2" LineBreakMode="WordWrap" />
+                            <Label x:Name="PopupItemName" Style="{StaticResource PopupItemTextStyle}" />
+                            <Label x:Name="PopupItemDescription" Style="{StaticResource PopupItemTextStyle}" />
 
-                            <StackLayout Style="{StaticResource HorizontalStack}">
+                            <StackLayout Style="{StaticResource BattlePageBattleUIStackStyle}">
                                 <Label Text="Location : " Style="{StaticResource LabelStyle}" />
                                 <Label x:Name="PopupItemLocation" Style="{StaticResource ValueStyle}" />
                             </StackLayout>
 
-                            <StackLayout Style="{StaticResource HorizontalStack}">
+                            <StackLayout Style="{StaticResource BattlePageBattleUIStackStyle}">
                                 <Label x:Name="PopupItemAttribute" Style="{StaticResource LabelStyle}" />
                                 <Label x:Name="PopupItemValue" Style="{StaticResource ValueStyle}" />
                             </StackLayout>
