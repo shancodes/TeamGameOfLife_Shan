@@ -82,16 +82,20 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        public void OnPartyCharacterItemSelected(object sender, SelectedItemChangedEventArgs args)
+        public void OnPartyCharacterItemSelected(object sender, SelectionChangedEventArgs args)
         {
-            CharacterModel data = args.SelectedItem as CharacterModel;
+            if (args.CurrentSelection.Count == 0)
+            {
+                return;
+            }
+            CharacterModel data = args.CurrentSelection[0] as CharacterModel;
             if (data == null)
             {
                 return;
             }
 
             // Manually deselect Character.
-            //PartyListView.SelectedItem = null;
+            PartyListView.SelectedItem = null;
 
             // Remove the character from the list
             _ = BattleEngineViewModel.Instance.PartyCharacterList.Remove(data);
