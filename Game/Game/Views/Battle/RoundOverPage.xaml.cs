@@ -21,6 +21,12 @@ namespace Game.Views
         {
             InitializeComponent();
 
+            // Update the Round Count
+            TotalRound.Text = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.RoundCount.ToString();
+
+            // Update Count of Monsters killed
+            TotalKilled.Text = EngineViewModel.Engine.EngineSettings.BattleScore.MonsterModelDeathList.Count().ToString();
+
             DrawCharacterList();
 
             DrawMonsterList();

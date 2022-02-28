@@ -18,6 +18,11 @@
             <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
 
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+                    <Label Text="ROUND " Style="{StaticResource MessageStyle}"/>
+                    <Label Text="0" x:Name="TotalRound" FontSize="Medium" Style="{StaticResource MessageStyle}"/>
+                </StackLayout>
+
+                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
                     <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
 
@@ -29,7 +34,7 @@
                 <!-- List Of Monsters -->
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                    <Label Text="3" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
+                    <Label Text="3" x:Name="TotalKilled" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
 
                     <Label Text="Monsters Killed" Style="{StaticResource MessageStyle}"/>
 
