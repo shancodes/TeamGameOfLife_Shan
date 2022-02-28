@@ -19,54 +19,7 @@
             <Label Text="Selected Characters" Style="{StaticResource CenterMessageLargeStyle}" />
 
             <Frame Style="{StaticResource PickedCharactersFrame}">
-                <StackLayout>
-                    <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
-                        <StackLayout>
-                            <Image Source="fire_princess.png"/>
-
-                            <Label  
-                            Text="Fire Princess" 
-                            Style="{StaticResource BoldText}" />
-                        </StackLayout>
-                        <StackLayout>
-                            <Image Source="black_knight.png"/>
-
-                            <Label  
-                            Text="Black Knight" 
-                            Style="{StaticResource BoldText}" />
-                        </StackLayout>
-                        <StackLayout>
-                            <Image Source="fire_wielder.png"/>
-
-                            <Label  
-                            Text="Fire Wielder" 
-                            Style="{StaticResource BoldText}" />
-                        </StackLayout>
-                    </StackLayout>
-                    <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
-                        <StackLayout>
-                            <Image Source="night_walker.png"/>
-
-                            <Label  
-                            Text="Night Walker " 
-                            Style="{StaticResource BoldText}" />
-                        </StackLayout>
-                        <StackLayout>
-                            <Image Source="sharpshooter.png"/>
-
-                            <Label  
-                            Text="Sharp Shooter" 
-                            Style="{StaticResource BoldText}" />
-                        </StackLayout>
-                        <StackLayout>
-                            <Image Source="fire_princess.png"/>
-
-                            <Label  
-                            Text="Fire Princess" 
-                            Style="{StaticResource BoldText}" />
-                        </StackLayout>
-                    </StackLayout>
-                </StackLayout>
+               
             </Frame>
             
             <Label Text="Pick Characters" Style="{StaticResource CenterMessageLargeStyle}" />
