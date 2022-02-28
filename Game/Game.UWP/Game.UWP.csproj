@@ -205,6 +205,7 @@
     <Content Include="natasha.png" />
     <Content Include="neck1.png" />
     <Content Include="neck2.png" />
+    <Content Include="next_round.png" />
     <Content Include="night_walker.png" />
     <Content Include="priya.png" />
     <Content Include="Properties\Default.rd.xml" />
