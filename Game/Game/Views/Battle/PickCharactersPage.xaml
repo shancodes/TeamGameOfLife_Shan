@@ -22,7 +22,9 @@
                 <CollectionView 
                                 x:Name="PartyListView" 
                                 ItemsSource="{Binding PartyCharacterList}"
+                                SelectionMode="Single"
                                 SelectionChanged="OnPartyCharacterItemSelected">
+                    
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
 
