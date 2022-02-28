@@ -168,7 +168,7 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Closes the Round Over Popup
+        /// Closes the PickItems Page
         /// 
         /// Launches the Next Round Popup
         /// 
@@ -177,14 +177,14 @@ namespace Game.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        //public void CloseButton_Clicked(object sender, EventArgs e)
-        //{
-        //    // Reset to a new Round
-        //    _ = BattleEngineViewModel.Instance.Engine.Round.NewRound();
+        public void NextRoundButton_Clicked(object sender, EventArgs e)
+        {
+            // Reset to a new Round
+            _ = BattleEngineViewModel.Instance.Engine.Round.NewRound();
 
-        //    // Show the New Round Screen
-        //    ShowModalNewRoundPage();
-        //}
+            // Show the New Round Screen
+            ShowModalNewRoundPage();
+        }
 
         /// <summary>
         /// Start next Round, returning to the battle screen
@@ -203,7 +203,7 @@ namespace Game.Views
         /// <summary>
         /// Show the Page for New Round
         /// 
-        /// Upcomming Monsters
+        /// Upcoming Monsters
         /// 
         /// </summary>
         public async void ShowModalNewRoundPage()

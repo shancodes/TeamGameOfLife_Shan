@@ -50,7 +50,7 @@
                                     Style="{StaticResource CharacterFlex}"/>
 
                         <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
-                            <Button Text="Close"/>
+                            <Button Text="Next Round" Clicked="NextRoundButton_Clicked"/>
                             <Button Clicked="AutoAssignButton_Clicked" Text="Assign Items"/>
                         </StackLayout>
 
