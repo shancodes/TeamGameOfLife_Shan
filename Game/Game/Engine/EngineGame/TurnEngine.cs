@@ -90,6 +90,12 @@ namespace Game.Engine.EngineBase
 
             // Save the Previous Action off
             EngineSettings.PreviousAction = EngineSettings.CurrentAction;
+            
+
+            if (EngineSettings.CurrentAction == ActionEnum.Attack && EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
+            {
+                EngineSettings.BattleMessagesModel.TurnMessage += " Character Can choose to move and click Done button";
+            }
 
             // Reset the Action to unknown for next time
             EngineSettings.CurrentAction = ActionEnum.Unknown;
