@@ -216,6 +216,7 @@
     <Content Include="ring2.png" />
     <Content Include="score.png" />
     <Content Include="scores_icon.png" />
+    <Content Include="select_characters.png" />
     <Content Include="sharpshooter.png" />
     <Content Include="shield1.png" />
     <Content Include="shield2.png" />
