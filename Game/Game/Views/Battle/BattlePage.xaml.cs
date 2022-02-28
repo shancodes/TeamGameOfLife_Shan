@@ -476,7 +476,9 @@ namespace Game.Views
              * For Mike's simple battle grammar there is no selection of action so I just return true
              */
 
-            if(EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
+            if(EngineSettings != null && 
+                EngineSettings.CurrentAttacker != null &&
+                EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
             {
                 MapModelLocation locationAttacker = EngineSettings.MapModel.GetLocationForPlayer(EngineSettings.CurrentAttacker);
                 EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, data);
