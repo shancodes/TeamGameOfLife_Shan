@@ -28,42 +28,20 @@
                     
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout>
+                            <StackLayout Style="{StaticResource PickedCharacterItemBox}">
                                 <Image Source="{Binding ImageURI}"
                                        Style="{StaticResource ImageMediumStyle}"/>
                                 <Label 
                                       Text="{Binding Name}" 
-                                      Style="{StaticResource ListStyle}"
+                                      Style="{StaticResource ListStyleCenter}"
                                       FontAttributes="Bold"/>
-
                                 <Label
                                        Text="{Binding Path=Level, StringFormat='Level {0:G}'}" 
-                                       Style="{StaticResource ListStyle}"/>
-
+                                       Style="{StaticResource ListStyleCenter}"/>
                                 <Label
                                       Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
-                                      Style="{StaticResource ListStyle}"/>
+                                      Style="{StaticResource ListStyleCenter}"/>
                             </StackLayout>
-
-                            <!--<Grid>
-                                <Image  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
-                                                    Source="{Binding ImageURI}"
-                                                    Style="{StaticResource ImageMediumStyle}"/>
-
-                                <Label Grid.Column="1" Grid.Row="0"
-                                                   Text="{Binding Name}" 
-                                                   Style="{StaticResource ListStyle}"
-                                                   FontAttributes="Bold"/>
-
-                                <Label Grid.Column="1" Grid.Row="1"
-                                                   Text="{Binding Path=Level, StringFormat='Level {0:G}'}" 
-                                                   Style="{StaticResource ListStyle}"/>
-
-                                <Label Grid.Column="1" Grid.Row="2"
-                                                    Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
-                                                    Style="{StaticResource ListStyle}"/>
-
-                            </Grid>-->
 
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
