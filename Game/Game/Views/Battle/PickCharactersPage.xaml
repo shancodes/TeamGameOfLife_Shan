@@ -63,25 +63,21 @@
 
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-
-                                <Grid>
-
-                                    <Image  Grid.Column="1" Grid.Row="0" Grid.RowSpan="3"
-                                                 Source="{Binding ImageURI}"/>
-
-                                    <Label Grid.Column="1" Grid.Row="4"
-                                                Text="{Binding Name}" 
-                                                Style="{StaticResource BoldText}" />
-
-                                    <Label Grid.Column="1" Grid.Row="5"
-                                                Text="{Binding Path=Level, StringFormat='Level {0:G}'}" />
-
-                                    <Label Grid.Column="1" Grid.Row="6"
-                                                Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" />
-
-                                </Grid>
-
-                            </DataTemplate>
+                            <StackLayout Style="{StaticResource PickCharactersItemBox}">
+                                <Image Source="{Binding ImageURI}"
+                                       />
+                                <Label 
+                                      Text="{Binding Name}" 
+                                      Style="{StaticResource ListStyleCenter}"
+                                      FontAttributes="Bold"/>
+                                <Label
+                                       Text="{Binding Path=Level, StringFormat='Level {0:G}'}" 
+                                       Style="{StaticResource ListStyleCenter}"/>
+                                <Label
+                                      Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
+                                      Style="{StaticResource ListStyleCenter}"/>
+                            </StackLayout>
+                        </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
 
