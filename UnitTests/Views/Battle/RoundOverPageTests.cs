@@ -180,6 +180,28 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void RoundOverPage_DrawMonsterList_Valid_Should_Pass()
+        {
+            // Arrange
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.MonsterModelDeathList.Add(new PlayerInfoModel(new MonsterModel()));
+
+            // Draw the Monsters
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleScore.MonsterModelDeathList.Add(new PlayerInfoModel(new MonsterModel()));
+
+            // Do it two times
+            page.DrawMonsterList();
+
+            // Act
+            page.DrawMonsterList();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void RoundOverPage_CreateMonsterBox_Default_Should_Pass()
         {
             // Arrange
