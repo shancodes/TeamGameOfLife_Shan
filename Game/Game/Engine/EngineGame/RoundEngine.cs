@@ -431,7 +431,7 @@ namespace Game.Engine.EngineGame
 
             foreach (var PoolItem in myList)
             {
-                if (PoolItem.Value > CharacterItem.Value)
+                if (PoolItem.Damage > CharacterItem.Damage && character.CurrentHealth > 1)
                 {
                     _ = SwapCharacterItem(character, setLocation, PoolItem);
                     return true;
