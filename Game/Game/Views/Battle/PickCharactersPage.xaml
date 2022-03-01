@@ -20,7 +20,7 @@
 
             <Frame Style="{StaticResource PickedCharactersFrame}">
                 <CollectionView 
-                    ItemsLayout="VerticalGrid, 2"
+                    ItemsLayout="VerticalGrid, 3"
                                 x:Name="PartyListView" 
                                 ItemsSource="{Binding PartyCharacterList}"
                                 SelectionMode="Single"
@@ -28,8 +28,24 @@
                     
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
+                            <StackLayout>
+                                <Image Source="{Binding ImageURI}"
+                                       Style="{StaticResource ImageMediumStyle}"/>
+                                <Label 
+                                      Text="{Binding Name}" 
+                                      Style="{StaticResource ListStyle}"
+                                      FontAttributes="Bold"/>
 
-                            <Grid>
+                                <Label
+                                       Text="{Binding Path=Level, StringFormat='Level {0:G}'}" 
+                                       Style="{StaticResource ListStyle}"/>
+
+                                <Label
+                                      Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
+                                      Style="{StaticResource ListStyle}"/>
+                            </StackLayout>
+
+                            <!--<Grid>
                                 <Image  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
                                                     Source="{Binding ImageURI}"
                                                     Style="{StaticResource ImageMediumStyle}"/>
@@ -47,7 +63,7 @@
                                                     Text="{Binding Path=MaxHealth, StringFormat= '{0:G} hp'}" 
                                                     Style="{StaticResource ListStyle}"/>
 
-                            </Grid>
+                            </Grid>-->
 
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
