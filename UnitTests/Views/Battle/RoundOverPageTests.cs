@@ -179,7 +179,22 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-       // [Test]
+        [Test]
+        public void RoundOverPage_CreateMonsterBox_Default_Should_Pass()
+        {
+            // Arrange
+            var data = new PlayerInfoModel(new MonsterModel());
+
+            // Act
+            _ = page.CreateMonsterDisplayBox(data);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        // [Test]
         //public void RoundOverPage_DrawDroppedItems_Valid_Should_Pass()
         //{
         //    // Arrange
