@@ -20,7 +20,8 @@
                 <ScrollView x:Name="ScrollView">
 
                     <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
-
+                        
+                        <!-- Items Details Found in the pool -->
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
                             <Label Text="Items Found" Style="{StaticResource MessageStyle}"/>
@@ -35,6 +36,7 @@
                         <FlexLayout x:Name="ItemListFoundFrame"
                                     Style="{StaticResource CharacterFlex}"/>
 
+                        <!-- Items Details Selected from the pool -->
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
                             <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
@@ -49,6 +51,7 @@
                         <FlexLayout x:Name="ItemListSelectedFrame"
                                     Style="{StaticResource CharacterFlex}"/>
 
+                        <!-- ImageButtons -->
                         <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
                             <ImageButton Source="next_round.png" Clicked="NextRoundButton_Clicked"/>
                             <ImageButton Source="collect_items.png" Clicked="AutoAssignButton_Clicked" />
