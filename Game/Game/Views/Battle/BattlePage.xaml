@@ -75,7 +75,7 @@
                     <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
 
                         <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" Style="{StaticResource ButtonInvisibleStyle}"/>
-                        <Label x:Name="Characterdiedtext" Text="Character Died" Style="{StaticResource CenterMessageStyle}" IsVisible="false"></Label>
+                        <Label x:Name="Characterdiedtext" Text="Character Died" Style="{StaticResource ImageSmallStyle}" TextColor="Black" IsVisible="false"></Label>
                         <Label x:Name="monsterdiedtext" Text="Monster Died" HorizontalOptions="End" IsVisible="false" TextColor="Red"></Label>
                         <Image x:Name="characterimage" Source="black_knight.png" Style="{StaticResource ImageSmallStyle}" IsVisible="false"/>
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" Style="{StaticResource ButtonInvisibleStyle}"/>
