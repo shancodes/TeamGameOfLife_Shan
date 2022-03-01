@@ -190,6 +190,12 @@
                 <Setter Property="Padding" Value="5" />
             </Style>
 
+            <Style TargetType="StackLayout"
+                   x:Key="PickCharactersItemBox">
+                <Setter Property="Margin" Value="50"/>
+                <Setter Property="Padding" Value="25" />
+            </Style>
+
             <Style TargetType="Label"
                 x:Key="BoldText">
                 <Setter Property="FontAttributes" Value="Bold" />
@@ -1274,7 +1280,7 @@
             <Style TargetType="Frame" x:Key="PickCharactersFrame" 
                    BasedOn="{StaticResource PickedCharactersFrame}">
                 <Setter Property="WidthRequest" Value="1000"/>
-                <Setter Property="HeightRequest" Value="300"/>
+                <Setter Property="HeightRequest" Value="250"/>
             </Style>
 
             <Style TargetType="Frame"
