@@ -14,14 +14,16 @@
 
         <ScrollView x:Name="ScrollView">
 
-            <!-- List Of Characters -->
+            
             <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
 
+                <!-- Round Details -->
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                     <Label Text="ROUND " Style="{StaticResource MessageStyle}"/>
                     <Label Text="0" x:Name="TotalRound" FontSize="Medium" Style="{StaticResource MessageStyle}"/>
                 </StackLayout>
 
+                <!-- List Of Characters -->
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
                     <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
