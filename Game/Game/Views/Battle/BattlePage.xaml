@@ -41,8 +41,6 @@
                     <AbsoluteLayout Style="{StaticResource BattleMapAbsoluteLayout}">
                         <Image x:Name="mapImage" Source="battle_grid.png"  Style="{StaticResource BattleMapImageStyle}"/>
                         <Grid x:Name="MapGrid" Style="{StaticResource GridBattleMap}"/>
-                        <Label x:Name="Characterdiedtext" Text="Character Died" Style="{StaticResource CenterMessageStyle}" IsVisible="false"></Label>
-                        <Label x:Name="monsterdiedtext" Text="Monster Died" Style="{StaticResource CenterMessageStyle}" IsVisible="false" TextColor="Red"></Label>
                     </AbsoluteLayout>
                 </StackLayout>
 
@@ -77,6 +75,8 @@
                     <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
 
                         <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" Style="{StaticResource ButtonInvisibleStyle}"/>
+                        <Label x:Name="Characterdiedtext" Text="Character Died" Style="{StaticResource CenterMessageStyle}" IsVisible="false"></Label>
+                        <Label x:Name="monsterdiedtext" Text="Monster Died" HorizontalOptions="End" IsVisible="false" TextColor="Red"></Label>
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" Style="{StaticResource ButtonInvisibleStyle}"/>
                         <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" Style="{StaticResource ButtonInvisibleStyle}"/>
                         <Button x:Name="DoneButton" Clicked="DoneButton_Clicked" Text="Character Location selected" Style="{StaticResource ButtonInvisibleStyle}"/>
