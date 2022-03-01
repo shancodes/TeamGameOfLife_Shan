@@ -198,6 +198,9 @@ namespace Game.Views
 
                 var imageObject = (ImageButton)MapObject;
 
+
+                
+
                 // Check automation ID on the Image, That should match the Player, if not a match, the cell is now different need to update
                 if (!imageObject.AutomationId.Equals(data.Player.Guid))
                 {
@@ -589,6 +592,16 @@ namespace Game.Views
 
             if (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.Alive == false)
             {
+                if(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.PlayerType == PlayerTypeEnum.Character)
+                {
+                    Characterdiedtext.IsVisible = true;
+                }
+
+                if (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.PlayerType == PlayerTypeEnum.Monster)
+                {
+                    monsterdiedtext.IsVisible = true;
+                }
+                
                 _ = UpdateMapGrid();
                 DefenderImage.BackgroundColor = Color.Red;
             }
@@ -625,6 +638,8 @@ namespace Game.Views
 
         public void DoneButton_Clicked(object sender, EventArgs e)
         {
+            Characterdiedtext.IsVisible = false;
+            monsterdiedtext.IsVisible = false;
             NextAttackExample();
         }
 
@@ -953,7 +968,7 @@ namespace Game.Views
                     _ = UpdateMapGrid();
                     DoneButton.IsVisible = false;
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
-                    NextRoundButton.IsVisible = true;
+                    NextRoundButton.IsVisible = false;
                     break;
 
                 case BattleStateEnum.GameOver:
