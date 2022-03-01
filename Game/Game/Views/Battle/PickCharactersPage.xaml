@@ -20,6 +20,7 @@
 
             <Frame Style="{StaticResource PickedCharactersFrame}">
                 <CollectionView 
+                    ItemsLayout="VerticalGrid, 2"
                                 x:Name="PartyListView" 
                                 ItemsSource="{Binding PartyCharacterList}"
                                 SelectionMode="Single"
