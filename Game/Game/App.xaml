@@ -1269,7 +1269,7 @@
 
             <Style TargetType="Frame" x:Key="PickedCharactersFrame">
                 <Setter Property="WidthRequest" Value="500"/>
-                <Setter Property="HeightRequest" Value="250"/>
+                <Setter Property="HeightRequest" Value="300"/>
                 <Setter Property="BackgroundColor" Value="LightYellow"/>
                 <Setter Property="BorderColor" Value="Blue"/>
                 <Setter Property="Margin" Value="10"/>
