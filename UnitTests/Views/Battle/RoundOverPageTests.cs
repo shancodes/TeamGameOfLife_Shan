@@ -183,10 +183,9 @@ namespace UnitTests.Views
         public void RoundOverPage_CreateMonsterBox_Default_Should_Pass()
         {
             // Arrange
-            var data = new PlayerInfoModel(new MonsterModel());
 
             // Act
-            _ = page.CreateMonsterDisplayBox(data);
+            _ = page.CreateMonsterDisplayBox(null);
 
             // Reset
 
