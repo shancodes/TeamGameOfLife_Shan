@@ -594,11 +594,20 @@ namespace Game.Views
             {
                 if(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.PlayerType == PlayerTypeEnum.Character)
                 {
+                    characterimage.Source = DefenderImage.Source;
+                    characterimage.IsVisible = true;
+                    Characterdiedtext.Text = DefenderName.Text;
                     Characterdiedtext.IsVisible = true;
                 }
 
                 if (BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.PlayerType == PlayerTypeEnum.Monster)
                 {
+                    //Image image_new = (Image)BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.ImageURI;
+                    // characterimage.Source = image_new;
+                    //Uri imageUri = new Uri(BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.ImageURI);
+                    characterimage.Source = DefenderImage.Source;
+                    characterimage.IsVisible = true;
+                    monsterdiedtext.Text = DefenderName.Text;
                     monsterdiedtext.IsVisible = true;
                 }
                 
@@ -638,6 +647,7 @@ namespace Game.Views
 
         public void DoneButton_Clicked(object sender, EventArgs e)
         {
+            characterimage.IsVisible = false;
             Characterdiedtext.IsVisible = false;
             monsterdiedtext.IsVisible = false;
             NextAttackExample();
