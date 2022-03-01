@@ -13,7 +13,7 @@
                 <!--Image for BeginGamePage page-->
                 <StackLayout Style="{StaticResource HorizontalStack}" >
                     <Image
-                         Source="logo_medium.png"
+                         Source="logo_final.png"
                          Style="{StaticResource ImageLargeLogoStyle}"/>
                 </StackLayout>
 
