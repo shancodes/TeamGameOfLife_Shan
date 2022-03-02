@@ -35,8 +35,8 @@
 
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text="500" Style="{StaticResource CenterMessageLargeStyle}"/>
-                        <!--x:Name="TotalScore"-->
+                        <Label Text="500" x:Name="TotalScore" Style="{StaticResource CenterMessageLargeStyle}"/>
+                        <!---->
 
                     </StackLayout>
 
@@ -53,8 +53,8 @@
                     <!--List Of Monsters-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text="3" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
-                        <!--x:Name="TotalKilled"-->
+                        <Label Text="3" x:Name="TotalKilled" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
+                        <!---->
 
                         <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
 
@@ -70,8 +70,8 @@
                     <!--List Of Items Collected-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text="3" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
-                        <!--x:Name="TotalCollected"-->
+                        <Label Text="3" x:Name="TotalCollected" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
+                        <!---->
 
                         <Label Text="Items" Style="{StaticResource MessageStyle}"/>
 
