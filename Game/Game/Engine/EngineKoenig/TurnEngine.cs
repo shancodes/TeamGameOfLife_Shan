@@ -145,7 +145,7 @@ namespace Game.Engine.EngineKoenig
 
                 EngineSettings.BattleMessagesModel.TurnMessage = Attacker.Name + " moves closer to " + EngineSettings.CurrentDefender.Name;
 
-                return EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, openSquare);
+                return EngineSettings.MapModel.MovePlayerOnMap(Attacker, locationAttacker, openSquare);
             }
 
             return true;

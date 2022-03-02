@@ -307,6 +307,7 @@ namespace Game.GameRules
                     Description = "Fire Princess",
                     Level = 1,
                     MaxHealth = 5,
+                    Speed = 2,
                     ImageURI = "fire_princess.png",
                     Head = HeadString,
                     Necklass = NecklassString,
@@ -317,6 +318,7 @@ namespace Game.GameRules
                     Description = "Fire Wielder",
                     Level = 1,
                     MaxHealth = 5,
+                    Speed = 3,
                     ImageURI = "fire_wielder.png",
                     PrimaryHand = PrimaryHandString,
                     OffHand = OffHandString,
@@ -327,6 +329,7 @@ namespace Game.GameRules
                     Description = "Night Walker",
                     Level = 1,
                     MaxHealth = 8,
+                    Speed = 1,
                     ImageURI = "night_walker.png",
                     Feet = FeetString,
                     RightFinger = RightFingerString,
@@ -338,6 +341,7 @@ namespace Game.GameRules
                     Description = "Sharp Shooter",
                     Level = 4,
                     MaxHealth = 38,
+                    Speed = 4,
                     ImageURI = "sharpshooter.png",
                     Feet = FeetString,
                     RightFinger = RightFingerString,
@@ -348,6 +352,7 @@ namespace Game.GameRules
                     Description = "Swiftblade",
                     Level = 5,
                     MaxHealth = 43,
+                    Speed = 3,
                     ImageURI = "swiftblade.png",
                     RightFinger = RightFingerString,
                     LeftFinger = LeftFingerString,
@@ -358,6 +363,7 @@ namespace Game.GameRules
                     Description = "Wizard",
                     Level = 5,
                     MaxHealth = 43,
+                    Speed = 2,
                     ImageURI = "wizard.png",
                     Feet = FeetString,
                     PrimaryHand = PrimaryHandString,
@@ -368,6 +374,7 @@ namespace Game.GameRules
                     Description = "Black Knight",
                     Level = 5,
                     MaxHealth = 43,
+                    Speed = 4,
                     ImageURI = "black_knight.png",
                     Feet = FeetString,
                     Head = HeadString,
@@ -441,6 +448,124 @@ namespace Game.GameRules
                     Description = "Fast Monster Wolf",
                     ImageURI = "ice_wolf.png",
                     Difficulty = DifficultyEnum.Easy,
+                },
+            };
+
+            var hardList = new List<MonsterModel>()
+            {
+                new MonsterModel {
+                    Name = "Ice Thief",
+                    Description = "Big and Ugly",
+                    ImageURI = "ice_thief.png",
+                    Difficulty = DifficultyEnum.Hard,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Bear",
+                    Description = "Large Monster Bear",
+                    ImageURI = "ice_bear.png",
+                    Difficulty = DifficultyEnum.Difficult,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Jester",
+                    Description = "and fast",
+                    ImageURI = "ice_jester.png",
+                    Difficulty = DifficultyEnum.Hard,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Princess",
+                    Description = "Monster Princess",
+                    ImageURI = "ice_princess.png",
+                    Difficulty = DifficultyEnum.Hard,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Queen",
+                    Description = "Powerful Monster Queen",
+                    ImageURI = "ice_queen.png",
+                    Difficulty = DifficultyEnum.Difficult,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Knight",
+                    Description = "Powerful Monster Black Knight",
+                    ImageURI = "ice_knight.png",
+                     Difficulty = DifficultyEnum.Hard,
+                },
+
+                 new MonsterModel {
+                    Name = "Ice Slime",
+                    Description = "Cruel Monster Slime",
+                    ImageURI = "ice_slime.png",
+                    Difficulty = DifficultyEnum.Hard,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Wolf",
+                    Description = "Fast Monster Wolf",
+                    ImageURI = "ice_wolf.png",
+                    Difficulty = DifficultyEnum.Hard,
+                },
+            };
+
+            var easyList = new List<MonsterModel>()
+            {
+                new MonsterModel {
+                    Name = "Ice Thief",
+                    Description = "Big and Ugly",
+                    ImageURI = "ice_thief.png",
+                    Difficulty = DifficultyEnum.Easy,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Bear",
+                    Description = "Large Monster Bear",
+                    ImageURI = "ice_bear.png",
+                    Difficulty = DifficultyEnum.Easy,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Jester",
+                    Description = "and fast",
+                    ImageURI = "ice_jester.png",
+                    Difficulty = DifficultyEnum.Easy,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Princess",
+                    Description = "Monster Princess",
+                    ImageURI = "ice_princess.png",
+                    Difficulty = DifficultyEnum.Easy,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Queen",
+                    Description = "Powerful Monster Queen",
+                    ImageURI = "ice_queen.png",
+                    Difficulty = DifficultyEnum.Easy,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Knight",
+                    Description = "Powerful Monster Black Knight",
+                    ImageURI = "ice_knight.png",
+                     Difficulty = DifficultyEnum.Average,
+                },
+
+                 new MonsterModel {
+                    Name = "Ice Slime",
+                    Description = "Cruel Monster Slime",
+                    ImageURI = "ice_slime.png",
+                    Difficulty = DifficultyEnum.Easy,
+                },
+
+                new MonsterModel {
+                    Name = "Ice Wolf",
+                    Description = "Fast Monster Wolf",
+                    ImageURI = "ice_wolf.png",
+                    Difficulty = DifficultyEnum.Average,
                 },
             };
 

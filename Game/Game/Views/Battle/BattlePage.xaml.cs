@@ -481,10 +481,12 @@ namespace Game.Views
 
             if(EngineSettings != null && 
                 EngineSettings.CurrentAttacker != null &&
-                EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
+                EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character )
             {
                 MapModelLocation locationAttacker = EngineSettings.MapModel.GetLocationForPlayer(EngineSettings.CurrentAttacker);
-                EngineSettings.MapModel.MovePlayerOnMap(locationAttacker, data);
+                if (!EngineSettings.MapModel.MovePlayerOnMap(EngineSettings.CurrentAttacker, locationAttacker, data)) {
+                    return false;
+                }
                 DrawGameAttackerDefenderBoard();
             }
 

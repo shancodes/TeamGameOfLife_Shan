@@ -144,7 +144,7 @@ namespace UnitTests.Models
             var MapLocationData = map.MapGridLocation[0, 0];
 
             // Act
-            var result = map.MovePlayerOnMap(MapLocationData, new MapModelLocation { Column = -1, Row = 0 });
+            var result = map.MovePlayerOnMap(PlayerList[0], MapLocationData, new MapModelLocation { Column = -1, Row = 0 });
 
             // Reset
 
@@ -176,7 +176,7 @@ namespace UnitTests.Models
             var MapLocationData = map.MapGridLocation[0, 0];
 
             // Act
-            var result = map.MovePlayerOnMap(MapLocationData, new MapModelLocation { Column = 0, Row = -1 });
+            var result = map.MovePlayerOnMap(PlayerList[0], MapLocationData, new MapModelLocation { Column = 0, Row = -1 });
 
             // Reset
 
@@ -208,7 +208,7 @@ namespace UnitTests.Models
             var MapLocationData = map.MapGridLocation[0, 0];
 
             // Act
-            var result = map.MovePlayerOnMap(MapLocationData, new MapModelLocation { Column = 100, Row = 0 });
+            var result = map.MovePlayerOnMap(PlayerList[0], MapLocationData, new MapModelLocation { Column = 100, Row = 0 });
 
             // Reset
 
@@ -240,7 +240,7 @@ namespace UnitTests.Models
             var MapLocationData = map.MapGridLocation[0, 0];
 
             // Act
-            var result = map.MovePlayerOnMap(MapLocationData, new MapModelLocation { Column = 0, Row = 100 });
+            var result = map.MovePlayerOnMap(PlayerList[0], MapLocationData, new MapModelLocation { Column = 0, Row = 100 });
 
             // Reset
 
@@ -272,7 +272,7 @@ namespace UnitTests.Models
             var MapLocationData = map.MapGridLocation[0, 0];
 
             // Act
-            var result = map.MovePlayerOnMap(MapLocationData, new MapModelLocation { Column = 1, Row = 1 });
+            var result = map.MovePlayerOnMap(PlayerList[0], MapLocationData, new MapModelLocation { Column = 1, Row = 1 });
 
             // Reset
 

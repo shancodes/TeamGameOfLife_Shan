@@ -95,12 +95,17 @@ namespace Game.Models
             return true;
         }
 
+        public bool isMoveValid(MapModelLocation data, MapModelLocation target, int MaxDistance) {
+            if (MaxDistance == 0) return true;
+            return CalculateDistance(data, target) <= MaxDistance;
+        }
+
         /// <summary>
         /// Changes the Row and Column for the Player
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public bool MovePlayerOnMap(MapModelLocation data, MapModelLocation target)
+        public bool MovePlayerOnMap(PlayerInfoModel player, MapModelLocation data, MapModelLocation target)
         {
             if (target.Column < 0)
             {
@@ -119,6 +124,10 @@ namespace Game.Models
 
             if (target.Row >= MapYAxiesCount)
             {
+                return false;
+            }
+
+            if (player.PlayerType == PlayerTypeEnum.Character && !isMoveValid(data, target, player.Speed)) {
                 return false;
             }
 

@@ -270,5 +270,82 @@ namespace Scenario
             Assert.AreEqual(HitStatusEnum.Miss, EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum);
         }
         #endregion Scenario2
+        [Test]
+        #region Scenario34
+        public async Task HackathonScenario_Scenario_34_Valid_Default_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *      34
+            *      
+            * Description: 
+            *      Move Based on Speed - A player is allowed to move a maximum distance units thats equal to their speed.
+            * 
+            * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
+            *      TurnEngine.cs 
+            *      - Updated Usage of MovePlayerOnMap Method
+            *      MapModel.cs
+            *       - isMoveValid - Method checks if a Move from one cell to other is valid
+            *       - Above function is called in MovePlayerOnMap function, which should return false when the move is not true
+            *      BattlePage.xaml.cs
+            *      - Updated Usage of MovePlayerOnMap Method
+            *      TurnEngineBase.cs
+            *      - Updated Usage of MovePlayerOnMap Method
+            *      TurnEngineBase.cs
+            *      - Updated Usage of MovePlayerOnMap Method
+            * 
+            * Test Algrorithm:
+            *      Added a Character with speed to Players List
+            *      Move the charactger to a cell that is more than speed units away - The move should fail
+            *      Move the Character to a cell that is speed units away - The move should be successful
+            *     
+            * 
+            * Test Conditions:
+            *      Default condition is sufficient
+            * 
+            * Validation:
+            *      Verify if the Moves appropriately return true or false
+            *  
+            */
+
+            //Arrange
+
+            // Set Character Conditions
+
+            var charmodel = new PlayerInfoModel(new CharacterModel
+            {
+                Speed = 2, 
+                Level = 1,
+                CurrentHealth = 1,
+                ExperienceTotal = 1,
+                ExperienceRemaining = 1,
+                Name = "Speedster",
+            });
+            EngineViewModel.Engine.EngineSettings.PlayerList.Add(charmodel);
+            EngineViewModel.Engine.EngineSettings.CurrentAttacker = charmodel;
+
+
+            EngineViewModel.Engine.EngineSettings.MapModel.PopulateMapModel(EngineViewModel.Engine.EngineSettings.PlayerList);
+
+            var mapModel = EngineViewModel.Engine.EngineSettings.MapModel;
+            var playerLocation = mapModel.GetLocationForPlayer(charmodel);
+            Assert.IsNotNull(playerLocation);
+            var locations = mapModel.GetEmptyLocations();
+            Assert.IsNotEmpty(locations);
+            Assert.Greater(locations.Count, charmodel.Speed);
+
+            ///Act and Verify
+            ///
+            //Check if moving player to a location that is at a distance more than the speed fails
+            Assert.IsFalse(mapModel.MovePlayerOnMap(charmodel, playerLocation, locations[charmodel.Speed + 1]));
+            //Check if moving player to a location within its speed-distance range is succeeds
+            Assert.IsTrue(mapModel.MovePlayerOnMap(charmodel, playerLocation, locations[1]));
+
+            var result = await EngineViewModel.AutoBattleEngine.RunAutoBattle();
+            
+            Assert.AreEqual(result, true);
+        }
+        #endregion Scenario34
+
     }
 }
