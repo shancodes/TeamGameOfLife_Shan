@@ -189,5 +189,86 @@ namespace Scenario
             Assert.AreEqual(true, EngineViewModel.Engine.EngineSettings.CharacterList.Count == 2);
         }
         #endregion Scenario1
+
+        #region Scenario2
+        [Test]
+        public async Task HackathonScenario_Scenario_2_Valid_Default_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *   2
+            *    
+            * Description: 
+            *   Character Doug always misses
+            * 
+            * Changes Required (Classes, Methods etc.) List Files, Methods, and Describe Changes: 
+            *   No Code changes requied 
+            * 
+            * Test Algrorithm:
+            *   Create Character named Doug along with 2 more characters
+            *   Set Doug hit status to always miss
+            *  
+            *   Startup Battle
+            *   Run Auto Battle
+            * 
+            * Test Conditions:
+            *   Default condition is sufficient
+            * 
+            * Validation:
+            *   Verify Battle Returned True
+            *   Verify Doug is not able to attack 
+            *   Verify HitStatusEnum is a Miss for character Doug
+            *  
+            */
+            //Arrange
+            // Set Character Conditions
+
+            // Set Character Conditions
+            EngineViewModel.Engine.EngineSettings.MaxNumberPartyCharacters = 3;
+            EngineViewModel.Engine.EngineSettings.MaxNumberPartyMonsters = 6;
+
+            // Add character Doug
+
+            var CharacterPlayerDoug = new PlayerInfoModel(
+                    new CharacterModel
+                    {
+                        Name = "Doug"
+                    });
+
+            EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerDoug);
+
+            // Add Character Jill
+            var CharacterPlayerJill = new PlayerInfoModel(
+                    new CharacterModel
+                    {
+                        Name = "Jill"
+                    });
+
+            // Add Character Bill
+            var CharacterPlayerBill = new PlayerInfoModel(
+                    new CharacterModel
+                    {
+                        Name = "Bill"
+                    });
+
+            // Set Monster Conditions
+            // Auto Battle will add the monsters
+            // Monsters always hit
+
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Miss;
+
+            //Act
+            var result = await EngineViewModel.AutoBattleEngine.RunAutoBattle();
+
+            //Reset
+            //EngineViewModel.Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Default;
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Miss;
+
+            //Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(HitStatusEnum.Miss, EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum);
+        }
+        #endregion Scenario2
     }
 }
