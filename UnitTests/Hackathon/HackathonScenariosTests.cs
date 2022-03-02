@@ -3,6 +3,7 @@
 using Game.Models;
 using System.Threading.Tasks;
 using Game.ViewModels;
+using Game.Helpers;
 
 namespace Scenario
 {
@@ -87,48 +88,85 @@ namespace Scenario
             *      1
             *      
             * Description: 
-            *      Make a Character called Mike, who dies in the first round
+            *      A character named Mike dies in the first round, but rest of the
+            *      characters fight longer
+            *    
             * 
             * Changes Required (Classes, Methods etc.)  List Files, Methods, and Describe Changes: 
             *      No Code changes requied 
             * 
             * Test Algrorithm:
-            *      Create Character named Mike
-            *      Set speed to -1 so he is really slow
-            *      Set Max health to 1 so he is weak
+            *      Create a list of charcters and add character Mike to it, total 3 characters
+            *      Set Mike's speed to -1 so he is really slow
+            *      Set Mike's Max health to 1 so he is weak
             *      Set Current Health to 1 so he is weak
+            *      set the speed of other characters to be high and current total, experience remainng and 
+            *      experience total as high
             *  
             *      Startup Battle
             *      Run Auto Battle
+            *      set MaxRoundCount as 1, to check what happens after first round
             * 
             * Test Conditions:
             *      Default condition is sufficient
             * 
             * Validation:
-            *      Verify Battle Returned True
+            *      Verify Battle Returned False since MaxRoundCount is 1and characters are stronger to advance 2nd round
             *      Verify Mike is not in the Player List
-            *      Verify Round Count is 1
+            *      Verify other players are in the list
+            *      Verify Round Count of player after round 1 is 2, without Mike
             *  
             */
 
             //Arrange
+            // Always roll a 1
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(1);
+
+            EngineViewModel.Engine.EngineSettings.BattleScore.RoundCount = 0;
+            EngineViewModel.Engine.EngineSettings.MaxRoundCount = 1;
 
             // Set Character Conditions
-
-            EngineViewModel.Engine.EngineSettings.MaxNumberPartyCharacters = 1;
+            EngineViewModel.Engine.EngineSettings.MaxNumberPartyCharacters = 3;
+            EngineViewModel.Engine.EngineSettings.MaxNumberPartyMonsters = 6;
 
             var CharacterPlayerMike = new PlayerInfoModel(
-                            new CharacterModel
-                            {
-                                Speed = -1, // Will go last...
-                                Level = 1,
-                                CurrentHealth = 1,
-                                ExperienceTotal = 1,
-                                ExperienceRemaining = 1,
-                                Name = "Mike",
-                            });
-
+            new CharacterModel
+            {
+                Speed = -1, // Will go last...
+                Level = 1,
+                CurrentHealth = 1,
+                ExperienceTotal = 1,
+                ExperienceRemaining = 1,
+                Name = "Mike",
+            });
             EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerMike);
+            
+            var CharacterPlayerJim = new PlayerInfoModel(
+                new CharacterModel
+                {
+                    Speed = 100,
+                    Level = 1,
+                    CurrentHealth = 100,
+                    ExperienceTotal = 10,
+                    ExperienceRemaining = 10,
+                    Name = "Jim",
+                    PrimaryHand = "Long Flame Sword"
+                });
+            EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerJim);
+
+            var CharacterPlayerPam = new PlayerInfoModel(
+                new CharacterModel
+                {
+                    Speed = 100, 
+                    Level = 2,
+                    CurrentHealth = 100,
+                    ExperienceTotal = 10,
+                    ExperienceRemaining = 10,
+                    Name = "Pam",
+                    PrimaryHand = "Long Flame Sword"
+                });
+            EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerPam);
 
             // Set Monster Conditions
 
@@ -136,17 +174,19 @@ namespace Scenario
 
             // Monsters always hit
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Hit;
-
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.CriticalHit;
             //Act
             var result = await EngineViewModel.AutoBattleEngine.RunAutoBattle();
 
             //Reset
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.MonsterHitEnum = HitStatusEnum.Default;
+            EngineViewModel.Engine.EngineSettings.MaxRoundCount = 100;
+            _ = DiceHelper.DisableForcedRolls();
 
             //Assert
-            Assert.AreEqual(true, result);
+            Assert.AreEqual(false, result);
             Assert.AreEqual(null, EngineViewModel.Engine.EngineSettings.PlayerList.Find(m => m.Name.Equals("Mike")));
-            Assert.AreEqual(1, EngineViewModel.Engine.EngineSettings.BattleScore.RoundCount);
+            Assert.AreEqual(true, EngineViewModel.Engine.EngineSettings.CharacterList.Count == 2);
         }
         #endregion Scenario1
     }
