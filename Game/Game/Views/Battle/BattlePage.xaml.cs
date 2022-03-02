@@ -1019,6 +1019,21 @@ namespace Game.Views
             }
         }
 
+        public void AllowMonsterZombie_Toggled(object sender, EventArgs e)
+        {
+            // Flip the settings
+            if (AllowMonsterZombies.IsToggled == true && percentage.Text != null)
+            {
+                int percent = int.Parse(percentage.Text);
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters = true;
+                BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage = percent;
+                return;
+            }
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters = false;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage = 0;
+        }
+
         /// <summary>
         /// Control the Map Mode or Simple
         /// </summary>
@@ -1033,6 +1048,7 @@ namespace Game.Views
                     BattleMapDisplay.IsVisible = true;
                     // MessageDisplayBox.IsVisible = true;
                     StacklayoutGamePage.IsVisible = false;
+                    AllowMonsterZombies.IsVisible = true;
 
                     //Next Attack button disabled
                     AttackButton.IsVisible = false;

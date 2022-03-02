@@ -16,6 +16,7 @@ namespace Game.Models
         // Track the Abilities in the Battle
         // The Ability will be the List of Abilities per Job, and a count of how many times they can use it per round
         public Dictionary<AbilityEnum, int> AbilityTracker = new Dictionary<AbilityEnum, int>();
+        public int OriginalHealth = 0;
 
         /// <summary>
         /// Default Constructor
@@ -44,6 +45,7 @@ namespace Game.Models
             Attack = data.Attack;
             MaxHealth = data.MaxHealth;
             CurrentHealth = data.CurrentHealth;
+            OriginalHealth = CurrentHealth;
 
             ImageURI = data.ImageURI;
 
@@ -86,6 +88,7 @@ namespace Game.Models
             Attack = data.Attack;
             MaxHealth = data.MaxHealth;
             CurrentHealth = data.CurrentHealth;
+            OriginalHealth = CurrentHealth;
 
             ImageURI = data.ImageURI;
 
@@ -154,6 +157,7 @@ namespace Game.Models
             ImageURI = data.ImageURI;
             MaxHealth = data.GetMaxHealthTotal;
             CurrentHealth = data.GetCurrentHealthTotal;
+            OriginalHealth = CurrentHealth;
 
             // Set the Base Attributes
             Speed = data.Speed;

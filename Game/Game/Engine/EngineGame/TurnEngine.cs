@@ -53,6 +53,7 @@ namespace Game.Engine.EngineBase
 
             var result = false;
 
+            
             // If the action is not set, then try to set it or use Attact
             if (EngineSettings.CurrentAction == ActionEnum.Unknown)
             {
@@ -345,9 +346,6 @@ namespace Game.Engine.EngineBase
             // Mark Status in output
             EngineSettings.BattleMessagesModel.TurnMessageSpecial = " and causes death. ";
 
-            // Removing the 
-            _ = EngineSettings.MapModel.RemovePlayerFromMap(Target);
-
             // INFO: Teams, Hookup your Boss if you have one...
 
             // Using a switch so in the future additional PlayerTypes can be added (Boss...)
@@ -364,10 +362,34 @@ namespace Game.Engine.EngineBase
                     found = EngineSettings.CharacterList.Remove(EngineSettings.CharacterList.Find(m => m.Guid.Equals(Target.Guid)));
                     found = EngineSettings.PlayerList.Remove(EngineSettings.PlayerList.Find(m => m.Guid.Equals(Target.Guid)));
 
+                    // Removing the 
+                    _ = EngineSettings.MapModel.RemovePlayerFromMap(Target);
                     return true;
 
                 case PlayerTypeEnum.Monster:
                 default:
+                    System.Random randomGen = new System.Random();
+                    int randomVal = randomGen.Next(100) + 1;
+                    if (EngineSettings.BattleSettingsModel.AllowZombieMonsters == true &&
+                        randomVal <= EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage)
+                    {
+                        int index = Target.Name.IndexOf("Zombie ");
+                        Target.Name = (index < 0)
+                            ? Target.Name
+                            : Target.Name.Remove(index, 7);
+
+                        Target.Name = "Zombie " + Target.Name;
+                        Target.Alive = true;
+                        EngineSettings.CurrentDefender.Alive = true;
+                        Target.CurrentHealth = Target.OriginalHealth / 2;
+
+                        if(Target.CurrentHealth == 0)
+                        {
+                            Target.CurrentHealth = 1;
+                        }
+                        return true;
+                    }
+
                     // Add one to the monsters killed count...
                     EngineSettings.BattleScore.MonsterSlainNumber++;
 
@@ -380,6 +402,9 @@ namespace Game.Engine.EngineBase
 
                     found = EngineSettings.MonsterList.Remove(EngineSettings.MonsterList.Find(m => m.Guid.Equals(Target.Guid)));
                     found = EngineSettings.PlayerList.Remove(EngineSettings.PlayerList.Find(m => m.Guid.Equals(Target.Guid)));
+
+                    // Removing the 
+                    _ = EngineSettings.MapModel.RemovePlayerFromMap(Target);
 
                     return true;
             }

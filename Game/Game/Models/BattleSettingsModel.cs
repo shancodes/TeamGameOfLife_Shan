@@ -22,5 +22,9 @@
 
         // Can monsters have Items and weapons?
         public bool AllowMonsterItems = false;
+
+        public bool AllowZombieMonsters = false;
+
+        public int ZombieOccuerencePercentage = 0;
     }
 }

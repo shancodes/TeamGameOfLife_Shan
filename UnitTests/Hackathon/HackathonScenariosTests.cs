@@ -270,6 +270,7 @@ namespace Scenario
             Assert.AreEqual(HitStatusEnum.Miss, EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum);
         }
         #endregion Scenario2
+
         [Test]
         #region Scenario34
         public async Task HackathonScenario_Scenario_34_Valid_Default_Should_Pass()
@@ -347,5 +348,91 @@ namespace Scenario
         }
         #endregion Scenario34
 
+        #region Scenario3
+        [Test]
+        public async Task HackathonScenario_Scenario_3_Valid_Default_Should_Pass()
+        {
+            /* 
+            * Scenario Number:  
+            *   2
+            *    
+            * Description: 
+            *   sleepless zombies in Seattle
+            * 
+            * Changes Required (Classes, Methods etc.) List Files, Methods, and Describe Changes: 
+            *   No Code changes requied 
+            * 
+            * Test Algrorithm:
+            *   Create Character named Doug along with 2 more characters
+            *   Set Doug hit status to always miss
+            *  
+            *   Startup Battle
+            *   Run Auto Battle
+            * 
+            * Test Conditions:
+            *   Default condition is sufficient
+            * 
+            * Validation:
+            *   Verify Battle Returned True
+            *   Verify Doug is not able to attack 
+            *   Verify HitStatusEnum is a Miss for character Doug
+            *  
+            */
+            //Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters = true;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage = 100;
+            // Set Character Conditions
+
+            // Set Character Conditions
+
+            var CharacterPlayerJim = new PlayerInfoModel(
+                new CharacterModel
+                {
+                    Speed = 100,
+                    Level = 1,
+                    CurrentHealth = 100,
+                    ExperienceTotal = 10,
+                    ExperienceRemaining = 10,
+                    Name = "Jim",
+                    PrimaryHand = "Long Flame Sword"
+                });
+            EngineViewModel.Engine.EngineSettings.CharacterList.Add(CharacterPlayerJim);
+
+            var MonsterOne = new PlayerInfoModel(
+                new MonsterModel
+                {
+                    Speed = -1, // Will go last...
+                    Level = 1,
+                    CurrentHealth = 1,
+                    ExperienceTotal = 0,
+                    ExperienceRemaining = 0,
+                    Name = "MonsterOne",
+                });
+            EngineViewModel.Engine.EngineSettings.MonsterList.Add(MonsterOne);
+
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender = MonsterOne;
+
+            // Set Monster Conditions
+            // Auto Battle will add the monsters
+            // Monsters always hit
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.CriticalHit;
+
+            //Act
+            var result = EngineViewModel.Engine.Round.Turn.TurnAsAttack(CharacterPlayerJim, MonsterOne);
+
+
+            //Reset
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender = null;
+            EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.Default;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters = false;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage = 0;
+            EngineViewModel.Engine.EngineSettings.MonsterList.Clear();
+            EngineViewModel.Engine.EngineSettings.CharacterList.Clear();
+
+            //Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(true, MonsterOne.Alive);
+        }
+        #endregion Scenario3
     }
 }
