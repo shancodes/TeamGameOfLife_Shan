@@ -9,7 +9,7 @@ using Game.GameRules;
 using Game.Engine.EngineInterfaces;
 using Game.Engine.EngineModels;
 
-namespace Game.Engine.EngineBase
+namespace Game.Engine.EngineGame
 {
     /// <summary>
     /// Engine controls the turns
