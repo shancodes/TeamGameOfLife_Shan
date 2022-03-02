@@ -277,6 +277,11 @@ namespace Game.Engine.EngineBase
                 return false;
             }
 
+            if (Attacker.Name == "Doug" && EngineSettings.BattleMessagesModel.PlayerType == PlayerTypeEnum.Character)
+            {
+                EngineSettings.BattleMessagesModel.HitStatus = HitStatusEnum.Miss;
+            }
+
             // Set Messages to empty
             _ = EngineSettings.BattleMessagesModel.ClearMessages();
 
