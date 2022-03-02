@@ -348,13 +348,13 @@ namespace Scenario
         }
         #endregion Scenario34
 
-        #region Scenario3
+        #region Scenario17
         [Test]
-        public async Task HackathonScenario_Scenario_3_Valid_Default_Should_Pass()
+        public async Task HackathonScenario_Scenario_17_Valid_Default_Should_Pass()
         {
             /* 
             * Scenario Number:  
-            *   2
+            *   17
             *    
             * Description: 
             *   sleepless zombies in Seattle
@@ -363,19 +363,18 @@ namespace Scenario
             *   No Code changes requied 
             * 
             * Test Algrorithm:
-            *   Create Character named Doug along with 2 more characters
-            *   Set Doug hit status to always miss
+            *   Create Character named Jim and a monster named MonsterOne
+            *   Set attributes of MonsterOne low, so that he dies
             *  
             *   Startup Battle
-            *   Run Auto Battle
+            *   
             * 
             * Test Conditions:
             *   Default condition is sufficient
             * 
             * Validation:
             *   Verify Battle Returned True
-            *   Verify Doug is not able to attack 
-            *   Verify HitStatusEnum is a Miss for character Doug
+            *   Verify after the round MonsterOne is still alive
             *  
             */
             //Arrange
@@ -412,9 +411,8 @@ namespace Scenario
 
             BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender = MonsterOne;
 
-            // Set Monster Conditions
-            // Auto Battle will add the monsters
-            // Monsters always hit
+
+            // Character always hit
             EngineViewModel.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.CriticalHit;
 
             //Act
@@ -433,6 +431,6 @@ namespace Scenario
             Assert.AreEqual(true, result);
             Assert.AreEqual(true, MonsterOne.Alive);
         }
-        #endregion Scenario3
+        #endregion Scenario17
     }
 }
