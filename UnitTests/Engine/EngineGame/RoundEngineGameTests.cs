@@ -304,6 +304,57 @@ namespace UnitTests.Engine.EngineGame
 
         #region GetItemFromPoolIfBetter
 
+        [Test]
+        public async Task RoundEngine_GetItemFromPoolIfBetter_InValid_Location_Empty_Should_Fail()
+        {
+            Engine.EngineSettings.MonsterList.Clear();
+
+            // Both need to be character to fall through to the Name Test
+            // Arrange
+            var Character = new CharacterModel
+            {
+                Speed = 20,
+                Level = 1,
+                CurrentHealth = 1,
+                ExperienceTotal = 1,
+                Name = "Z",
+                ListOrder = 1,
+                Guid = "me"
+            };
+
+            // Add each model here to warm up and load it.
+            _ = Game.Helpers.DataSetsHelper.WarmUp();
+
+            var item1 = new ItemModel { Attribute = AttributeEnum.Attack, Value = 1, Location = ItemLocationEnum.Feet };
+            var item2 = new ItemModel { Attribute = AttributeEnum.Attack, Value = 20, Location = ItemLocationEnum.Feet };
+
+            _ = await ItemIndexViewModel.Instance.CreateAsync(item1);
+            _ = await ItemIndexViewModel.Instance.CreateAsync(item2);
+
+            Engine.EngineSettings.ItemPool.Add(item1);
+            Engine.EngineSettings.ItemPool.Add(item2);
+
+            // Put the Item on the Character
+            Character.Head = null;
+
+            var CharacterPlayer = new PlayerInfoModel(Character);
+            Engine.EngineSettings.CharacterList.Clear();
+            Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(Character));
+
+            // Make the List
+            Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
+
+            // Act
+
+            var result = Engine.Round.GetItemFromPoolIfBetter(CharacterPlayer, ItemLocationEnum.Feet);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(item2.Id, CharacterPlayer.Feet);    // The 2nd item is better, so did they swap?
+        }
+
         //[Test]
         //public async Task RoundEngine_GetItemFromPoolIfBetter_InValid_Pool_Empty_Should_Fail()
         //{
