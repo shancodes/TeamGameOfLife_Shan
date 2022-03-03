@@ -22,7 +22,7 @@
                                Text="Game Date: " 
                                Style="{StaticResource StyleItemReadLabelStyle}" />
                         <Label 
-                                Text="{Binding Data.GameDate}" 
+                                x:Name="CurrentDateTime" 
                                 Style="{StaticResource StyleItemReadValueStyle}" />
                     </StackLayout>
 

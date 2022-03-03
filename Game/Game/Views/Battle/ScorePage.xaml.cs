@@ -23,6 +23,8 @@ namespace Game.Views
         {
             InitializeComponent();
             DrawOutput();
+            // Set to the curent date and time
+            CurrentDateTime.Text = DateTime.Now.ToString("MM/dd/yy hh:mm:ss");
         }
 
         /// <summary>
