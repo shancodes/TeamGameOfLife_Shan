@@ -336,6 +336,68 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(true, result);
         }
+
+        [Test]
+        public void RoundEngine_TakeTurn_Valid_Unknown_Action_Should_Pass()
+        {
+            // Arrange 
+            var previousAction = Engine.EngineSettings.CurrentAction;
+            Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
+
+            PlayerInfoModel character = new PlayerInfoModel();
+            character.PlayerType = PlayerTypeEnum.Character;
+
+            PlayerInfoModel monster = new PlayerInfoModel();
+            monster.PlayerType = PlayerTypeEnum.Monster;
+
+            Engine.EngineSettings.PlayerList.Add(character);
+            Engine.EngineSettings.PlayerList.Add(monster);
+
+            Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
+
+            // Act
+            var result = Engine.Round.Turn.TakeTurn(character);
+
+            // Reset
+            Engine.EngineSettings.CurrentAction = previousAction;
+            Engine.EngineSettings.PlayerList.Clear();
+            Engine.EngineSettings.MapModel.ClearMapGrid();
+
+            // Assert
+            Assert.AreEqual(true, result);
+        }
+
+        [Test]
+        public void RoundEngine_TakeTurn_Valid_Character_Ability_Action_Should_Pass()
+        {
+            // Arrange 
+            var previousAction = Engine.EngineSettings.CurrentAction;
+            Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
+
+            PlayerInfoModel character = new PlayerInfoModel();
+            character.PlayerType = PlayerTypeEnum.Character;
+
+            PlayerInfoModel monster = new PlayerInfoModel();
+            monster.PlayerType = PlayerTypeEnum.Monster;
+
+            Engine.EngineSettings.PlayerList.Add(character);
+            Engine.EngineSettings.PlayerList.Add(monster);
+
+            Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
+            Engine.EngineSettings.CurrentAction = ActionEnum.Ability;
+
+            // Act
+            var result = Engine.Round.Turn.TakeTurn(character);
+
+            // Reset
+            Engine.EngineSettings.CurrentAction = previousAction;
+            Engine.EngineSettings.PlayerList.Clear();
+            Engine.EngineSettings.MapModel.ClearMapGrid();
+            Engine.EngineSettings.CurrentAction = ActionEnum.Unknown;
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
         #endregion TakeTurn
 
         #region RollToHitTarget
