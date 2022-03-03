@@ -134,24 +134,27 @@ namespace Game.Engine.EngineGame
 
             // To use your own characters, populate the List before calling RunAutoBattle
 
-            // Will first pull from existing characters
-            foreach (var data in CharacterIndexViewModel.Instance.Dataset)
-            {
-                if (Battle.EngineSettings.CharacterList.Count() >= Battle.EngineSettings.MaxNumberPartyCharacters)
-                {
-                    break;
-                }
+            var CharaceterModlList = CharacterIndexViewModel.Instance.Dataset;
 
-                // Start off with max health if adding a character in
-                data.CurrentHealth = data.GetMaxHealthTotal;
-                _ = Battle.PopulateCharacterList(data);
+            if (CharaceterModlList == null || CharaceterModlList.Count == 0) {
+                return false;
+            }
+
+            // Will first pull from existing characters
+                foreach (var data in CharaceterModlList)
+            {
+                if (Battle.EngineSettings.CharacterList.Count() < Battle.EngineSettings.MaxNumberPartyCharacters)
+                {
+                    data.CurrentHealth = data.GetMaxHealthTotal;
+                    _ = Battle.PopulateCharacterList(data);
+                }
             }
 
             //If there are not enough will add random ones
-            for (var i = Battle.EngineSettings.CharacterList.Count(); i < Battle.EngineSettings.MaxNumberPartyCharacters; i++)
-            {
-                _ = Battle.PopulateCharacterList(RandomPlayerHelper.GetRandomCharacter(1));
-            }
+            //for (var i = Battle.EngineSettings.CharacterList.Count(); i < Battle.EngineSettings.MaxNumberPartyCharacters; i++)
+            //{
+            //    _ = Battle.PopulateCharacterList(RandomPlayerHelper.GetRandomCharacter(1));
+            //}
 
             return true;
         }
