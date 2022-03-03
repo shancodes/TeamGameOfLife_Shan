@@ -28,16 +28,6 @@ namespace Game.Views
         {
             await Navigation.PushAsync(new PickCharactersPage());
         }
-
-        /// <summary>
-        /// Show the Game Over Screen
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        public async void ShowScoreButton_Clicked(object sender, EventArgs args)
-        {
-            //ShowBattleMode();
-            await Navigation.PushModalAsync(new ScorePage());
-        }
+      
     }
 }

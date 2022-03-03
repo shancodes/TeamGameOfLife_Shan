@@ -21,12 +21,6 @@
 
                 <ImageButton Source="select_characters.png" Clicked="PickUpCharacterPage_Clicked" />
 
-                <!--Game Over button-->
-                <Button 
-                    Text="Score Page" 
-                    Clicked="ShowScoreButton_Clicked" >
-                </Button>
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
