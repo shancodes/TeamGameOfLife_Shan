@@ -145,6 +145,18 @@
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
+            <Style TargetType="Label" x:Key="characterdiedtext">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="IsVisible" Value="false" />
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="monsterdiedtext">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="IsVisible" Value="false" />
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+
             <Style TargetType="Label" x:Key="LabelInsideStackAboutStyle" BasedOn="{StaticResource LabelBaseStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
