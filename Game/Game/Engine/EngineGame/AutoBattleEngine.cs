@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -142,45 +143,25 @@ namespace Game.Engine.EngineGame
 
             int dataSetCount = CharaceterModlList.Count;
             int cListCount = Battle.EngineSettings.CharacterList.Count();
+
+            return addCharacterToBattle(CharaceterModlList, cListCount);
+        }
+
+        public bool addCharacterToBattle(ObservableCollection<CharacterModel> characterList, int cListCount) {
             int i = 0;
 
             while (cListCount < Battle.EngineSettings.MaxNumberPartyCharacters)
             {
-                
-                    var data = CharaceterModlList[i];
-                    data.CurrentHealth = data.GetMaxHealthTotal;
-                    Battle.PopulateCharacterList(data);
-                    i++;
-                    cListCount++;
+
+                var data = characterList[i];
+                data.CurrentHealth = data.GetMaxHealthTotal;
+                Battle.PopulateCharacterList(data);
+                i++;
+                cListCount++;
             }
 
             return true;
         }
-
-        //    while (Battle.EngineSettings.CharacterList.Count() < Battle.EngineSettings.MaxNumberPartyCharacters && i < C)
-        //    {
-        //        data.CurrentHealth = data.GetMaxHealthTotal;
-        //        _ = Battle.PopulateCharacterList(data);
-        //    }
-
-        //    // Will first pull from existing characters
-        //    foreach (var data in CharaceterModlList)
-        //    {
-                
-        //    }
-
-        //    //If there are not enough will add random ones
-        //    //for (var i = Battle.EngineSettings.CharacterList.Count(); i < Battle.EngineSettings.MaxNumberPartyCharacters; i++)
-        //    //{
-        //    //    _ = Battle.PopulateCharacterList(RandomPlayerHelper.GetRandomCharacter(1));
-        //    //}
-
-        //    return true;
-        //}
-
-        //public bool AssignHealth(var data) {
-        //    return true;
-        //}
 
     }
 }
