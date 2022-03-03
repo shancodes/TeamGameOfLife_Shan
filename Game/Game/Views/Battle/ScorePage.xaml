@@ -56,15 +56,15 @@
 
                         <Label Text=" " x:Name="TotalKilled" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
 
-                        <Label Text="Monsters" Style="{StaticResource MessageStyle}"/>
+                        <Label Text="Monsters" Style="{StaticResource CenterMessageStyle}"/>
 
-                        <Label Text="Killed" Style="{StaticResource MessageStyle}"/>
+                        <Label Text="Killed" Style="{StaticResource CenterMessageStyle}"/>
 
                     </StackLayout>
 
                     <StackLayout Style="{StaticResource HorizontalReadItemStyle}" >
 
-                        <FlexLayout x:Name="MonsterListFrame" />
+                        <FlexLayout x:Name="MonsterListFrame"/>
 
                     </StackLayout>
 
@@ -73,15 +73,15 @@
 
                         <Label Text=" " x:Name="TotalCollected" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
 
-                        <Label Text="Items" Style="{StaticResource MessageStyle}"/>
+                        <Label Text="Items" Style="{StaticResource CenterMessageStyle}"/>
 
-                        <Label Text="Collected" Style="{StaticResource MessageStyle}"/>
+                        <Label Text="Collected" Style="{StaticResource CenterMessageStyle}"/>
 
                     </StackLayout>
 
                     <StackLayout Style="{StaticResource HorizontalReadItemStyle}" >
 
-                        <FlexLayout x:Name="ItemListFrame" />
+                        <FlexLayout x:Name="ItemListFrame"/>
 
                     </StackLayout>
 
