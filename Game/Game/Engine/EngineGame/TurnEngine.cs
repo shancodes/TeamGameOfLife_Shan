@@ -125,16 +125,7 @@ namespace Game.Engine.EngineGame
 
                 // Get X, Y for Defender
                 var locationDefender = EngineSettings.MapModel.GetLocationForPlayer(EngineSettings.CurrentDefender);
-                if (locationDefender == null)
-                {
-                    return false;
-                }
-
                 var locationAttacker = EngineSettings.MapModel.GetLocationForPlayer(Attacker);
-                if (locationAttacker == null)
-                {
-                    return false;
-                }
 
                 // Find Location Nearest to Defender that is Open.
 
