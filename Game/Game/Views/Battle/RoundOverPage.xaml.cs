@@ -75,6 +75,7 @@ namespace Game.Views
             {
                 MonsterListFrame.Children.Add(CreateMonsterDisplayBox(data));
             }
+            EngineViewModel.Engine.EngineSettings.BattleScore.MonsterModelDeathList.Clear();
         }
 
         /// <summary>
