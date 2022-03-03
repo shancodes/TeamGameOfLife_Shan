@@ -36,12 +36,14 @@
                 </StackLayout>
 
                 <!--The Battle Map Display -->
+                
                 <StackLayout x:Name="BattleMapDisplay" Style="{StaticResource BattleMapBox}">
                     <AbsoluteLayout Style="{StaticResource BattleMapAbsoluteLayout}">
                         <Image x:Name="mapImage" Source="battle_grid.png"  Style="{StaticResource BattleMapImageStyle}"/>
                         <Grid x:Name="MapGrid" Style="{StaticResource GridBattleMap}"/>
                     </AbsoluteLayout>
                 </StackLayout>
+
 
                 <!--The Bottom of the Battle UI  Holds the Player to Player boxes, Buttons, and the Messages-->
                 <StackLayout x:Name="BattleBottomBox" Style="{StaticResource BattleUIBottomBox}">
@@ -99,8 +101,8 @@
                         </Frame>
                         
                         <StackLayout Style="{StaticResource BattlePageBattleUIStackStyleBeforeResetButton}">
-                            <ImageButton Source="restart.png" Clicked="RestartButton_Clicked" ></ImageButton>
-                            <ImageButton Source="quit.png" Clicked="ExitButton_Clicked"></ImageButton>
+                            <ImageButton x:Name="restart_button" Source="restart.png" Clicked="RestartButton_Clicked" IsVisible="false"></ImageButton>
+                            <ImageButton x:Name="quit_button" Source="quit.png" Clicked="ExitButton_Clicked" IsVisible="false"></ImageButton>
                         </StackLayout>
 
                     </StackLayout>

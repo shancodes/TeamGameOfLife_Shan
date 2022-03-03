@@ -1049,6 +1049,8 @@ namespace Game.Views
                     // MessageDisplayBox.IsVisible = true;
                     StacklayoutGamePage.IsVisible = false;
                     AllowMonsterZombies.IsVisible = true;
+                    restart_button.IsVisible = true;
+                    quit_button.IsVisible = true;
 
                     //Next Attack button disabled
                     AttackButton.IsVisible = false;
