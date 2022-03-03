@@ -5,6 +5,7 @@ using Game.Engine.EngineGame;
 using Game.Models;
 using Game.Engine.EngineBase;
 using Game.Helpers;
+using System.Collections.Generic;
 
 namespace UnitTests.Engine.EngineGame
 {
@@ -411,5 +412,236 @@ namespace UnitTests.Engine.EngineGame
             Assert.IsTrue(result >= 0);
         }
         #endregion DropItems
+
+        #region DetermineActionChoice
+        [Test]
+        public void RoundEngine_DetermineActionChoice_Valid_In_Range_Attack_Should_Pass()
+        {
+            // Arrange 
+            PlayerInfoModel character = new PlayerInfoModel();
+            character.PlayerType = PlayerTypeEnum.Character;
+
+            PlayerInfoModel monster = new PlayerInfoModel();
+            monster.Range = 999;
+            monster.PlayerType = PlayerTypeEnum.Monster;
+
+            Engine.EngineSettings.PlayerList.Add(character);
+            Engine.EngineSettings.PlayerList.Add(monster);
+
+            Engine.EngineSettings.MapModel.PopulateMapModel(Engine.EngineSettings.PlayerList);
+
+            Engine.EngineSettings.CurrentAttacker = monster;
+
+            // Act
+            var result = Engine.Round.Turn.DetermineActionChoice(monster);
+
+            // Reset
+            Engine.EngineSettings.PlayerList.Clear();
+            Engine.EngineSettings.MapModel.ClearMapGrid();
+            Engine.EngineSettings.CurrentAttacker = null;
+
+            // Assert
+            Assert.AreEqual(ActionEnum.Attack, result);
+        }
+        #endregion DetermineActionChoice
+
+        #region SelectCharacterToAttack
+        [Test]
+        public void RoundEngine_SelectCharacterToAttack_Valid_Empty_PlayerList_Should_Pass()
+        {
+            // Arrange 
+            Engine.EngineSettings.PlayerList = null;
+
+            // Act
+            var result = Engine.Round.Turn.SelectCharacterToAttack();
+
+            // Reset
+            Engine.EngineSettings.PlayerList = new List<PlayerInfoModel>();
+
+            // Assert
+            Assert.AreEqual(null, result);
+        }
+        #endregion SelectCharacterToAttack
+
+        #region SelectMonsterToAttack
+        [Test]
+        public void RoundEngine_SelectMonsterToAttack_Valid_Empty_PlayerList_Should_Pass()
+        {
+            // Arrange 
+            Engine.EngineSettings.PlayerList = null;
+
+            // Act
+            var result = Engine.Round.Turn.SelectMonsterToAttack();
+
+            // Reset
+            Engine.EngineSettings.PlayerList = new List<PlayerInfoModel>();
+
+            // Assert
+            Assert.AreEqual(null, result);
+        }
+        #endregion SelectMonsterToAttack
+
+        #region TurnAsAttack
+        [Test]
+        public void RoundEngine_TurnAsAttack_Valid_Null_Attacker_Should_Pass()
+        {
+            // Arrange 
+
+            // Act
+            var result = Engine.Round.Turn.TurnAsAttack(null, new PlayerInfoModel());
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void RoundEngine_TurnAsAttack_Valid_Attacker_Doug_Miss_Should_Pass()
+        {
+            // Arrange 
+            PlayerInfoModel attacker = new PlayerInfoModel();
+            attacker.Name = "Doug";
+            var currentType = Engine.EngineSettings.BattleMessagesModel.PlayerType;
+            Engine.EngineSettings.BattleMessagesModel.PlayerType = PlayerTypeEnum.Character;
+
+            // Act
+            var result = Engine.Round.Turn.TurnAsAttack(attacker, new PlayerInfoModel());
+
+            // Reset
+            Engine.EngineSettings.BattleMessagesModel.PlayerType = currentType;
+
+            // Assert
+            Assert.AreEqual(HitStatusEnum.Hit, Engine.EngineSettings.BattleMessagesModel.HitStatus);
+        }
+
+        [Test]
+        public void RoundEngine_TurnAsAttack_Valid_Attacker_Defender_Critical_Miss_Should_Pass()
+        {
+            // Arrange 
+            var previousHitEnum = Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum;
+            Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = HitStatusEnum.CriticalMiss;
+
+            // Act
+           _ = Engine.Round.Turn.TurnAsAttack(new PlayerInfoModel(), new PlayerInfoModel());
+
+            // Reset
+            Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum = previousHitEnum;
+
+            // Assert
+            Assert.AreEqual(HitStatusEnum.CriticalMiss, Engine.EngineSettings.BattleMessagesModel.HitStatus);
+        }
+
+
+        #endregion TurnAsAttack
+
+        #region RollToHitTarget
+        [Test]
+        public void RoundEngine_RollToHitTarget_Valid_Critical_Miss_Should_Pass()
+        {
+            // Arrange 
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(1);
+            var previousHitEnum = Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss;
+            Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss = true;
+
+            // Act
+            var result = Engine.Round.Turn.RollToHitTarget(5, 5);
+
+            // Reset
+            Engine.EngineSettings.BattleSettingsModel.AllowCriticalMiss = previousHitEnum;
+            _ = DiceHelper.DisableForcedRolls();
+
+            // Assert
+            Assert.AreEqual(HitStatusEnum.CriticalMiss, result);
+        }
+        #endregion RollToHitTarget
+
+        #region TargetDied
+        [Test]
+        public void RoundEngine_TargetDied_Valid_Zombie_Name_Should_Pass()
+        {
+            // Arrange 
+            PlayerInfoModel monster = new PlayerInfoModel();
+            monster.PlayerType = PlayerTypeEnum.Monster;
+            monster.Name = "Zombie Monster";
+
+            Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters = true;
+            Engine.EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage = 100;
+            Engine.EngineSettings.CurrentDefender = monster;
+
+            // Act
+            var result = Engine.Round.Turn.TargetDied(monster);
+
+            // Reset
+            Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters = false;
+            Engine.EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage = 0;
+            Engine.EngineSettings.CurrentDefender = null;
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual("Zombie Monster", monster.Name);
+        }
+        #endregion TargetDied
+
+
+        #region ChooseToUseAbility
+        [Test]
+        public void RoundEngine_ChooseToUseAbility_Valid_No_Ability_Should_Pass()
+        {
+            // Arrange 
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(1);
+            PlayerInfoModel player = new PlayerInfoModel();
+
+            // Act
+            var result = Engine.Round.Turn.ChooseToUseAbility(player);
+
+            // Reset
+            _ = DiceHelper.DisableForcedRolls();
+
+            // Assert
+            Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void RoundEngine_ChooseToUseAbility_Valid_Use_Healing_Ability_Should_Pass()
+        {
+            // Arrange
+            PlayerInfoModel player = new PlayerInfoModel();
+            player.MaxHealth = 100;
+            player.CurrentHealth = 20;
+            player.AbilityTracker.Add(AbilityEnum.Heal, 5);
+
+            // Act
+            var result = Engine.Round.Turn.ChooseToUseAbility(player);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(ActionEnum.Ability, Engine.EngineSettings.CurrentAction);
+        }
+
+        [Test]
+        public void RoundEngine_ChooseToUseAbility_Valid_Use_Ability_Should_Pass()
+        {
+            // Arrange 
+            _ = DiceHelper.EnableForcedRolls();
+            _ = DiceHelper.SetForcedRollValue(1);
+            PlayerInfoModel player = new PlayerInfoModel();
+            player.AbilityTracker.Add(AbilityEnum.Toughness, 5);
+
+            // Act
+            var result = Engine.Round.Turn.ChooseToUseAbility(player);
+
+            // Reset
+            _ = DiceHelper.DisableForcedRolls();
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(ActionEnum.Ability, Engine.EngineSettings.CurrentAction);
+        }
+        #endregion ChooseToUseAbility
     }
 }
