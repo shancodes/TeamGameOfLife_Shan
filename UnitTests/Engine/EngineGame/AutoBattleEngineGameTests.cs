@@ -174,7 +174,7 @@ namespace UnitTests.Engine.EngineGame
         }
 
         [Test]
-        public void AutoBattleEngine_CreateCharacterParty_Valid_Characters_CharacterIndex_None_Should_Create_6()
+        public void AutoBattleEngine_CreateCharacterParty_Invalid_Characters_ShouldReturn_False()
         {
             //Arrange
             AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
@@ -187,7 +187,8 @@ namespace UnitTests.Engine.EngineGame
             //Reset
 
             //Assert
-            Assert.AreEqual(6, AutoBattleEngine.Battle.EngineSettings.CharacterList.Count);
+            Assert.AreEqual(0, AutoBattleEngine.Battle.EngineSettings.CharacterList.Count);
+            Assert.AreEqual(result, false);
         }
         #endregion CreateCharacterParty   
 
