@@ -11,6 +11,10 @@
             <ImageButton Source="icon_cancel.png" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
             <Frame Style="{StaticResource FrameMenuBattlePageStyle}"/>
             <Label x:Name="BattleModeValue" Text="" Style="{StaticResource BattlePageMenuLabelStyle}"/>
+            <Label Text="Allow Monster Zombies" Style="{DynamicResource LabelStyle}"/>
+            <Switch x:Name="AllowMonsterZombies" Toggled="AllowMonsterZombie_Toggled"/>
+            <Label Text="Enter percentage of zombie occurance" Style="{DynamicResource LabelStyle}"/>
+            <Entry x:Name="percentage"></Entry>
         </StackLayout>
     </NavigationPage.TitleView>
 
@@ -86,12 +90,7 @@
 
                     <StackLayout 
                         Style="{StaticResource BattlePageLowerStackStyle}">
-                        <Label Text="Allow Monster Zombies" Style="{DynamicResource LabelStyle}"/>
-                        <Switch x:Name="AllowMonsterZombies" Toggled="AllowMonsterZombie_Toggled"/>
-                        <Label Text="Enter percentage of zombie occurance" Style="{DynamicResource LabelStyle}"/>
-                        <Entry x:Name="percentage"></Entry>
-
-                        <Frame Style="{StaticResource FrameBattlePageLower}">
+                        <Frame Style="{StaticResource FrameBattlePageLower}" >
                             <StackLayout x:Name="MessageDisplayBox"
                             Style="{StaticResource BattlePageLowerStackStyletwo}">
 
