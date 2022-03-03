@@ -7,6 +7,7 @@ using Game.Engine.EngineGame;
 using Game.Models;
 using Game.ViewModels;
 using Game.Engine.EngineBase;
+using System.Collections.ObjectModel;
 
 namespace UnitTests.Engine.EngineGame
 {
@@ -15,6 +16,7 @@ namespace UnitTests.Engine.EngineGame
     {
         #region TestSetup
         AutoBattleEngine AutoBattleEngine;
+        ObservableCollection<CharacterModel> Dataset = new ObservableCollection<CharacterModel>(CharacterIndexViewModel.Instance.Dataset);
 
         [SetUp]
         public void Setup()
@@ -30,12 +32,16 @@ namespace UnitTests.Engine.EngineGame
             AutoBattleEngine.Battle.Round = new RoundEngine();
             AutoBattleEngine.Battle.Round.Turn = new TurnEngine();
 
+            CharacterIndexViewModel.Instance.Dataset = new ObservableCollection<CharacterModel>(Dataset);
+
+
             //AutoBattleEngine.Battle.StartBattle(true);   // Clear the Engine
         }
 
         [TearDown]
         public void TearDown()
         {
+            CharacterIndexViewModel.Instance.Dataset = new ObservableCollection<CharacterModel>(Dataset);
         }
         #endregion TestSetup
 
@@ -78,6 +84,7 @@ namespace UnitTests.Engine.EngineGame
         {
             //Arrange
 
+            CharacterIndexViewModel.Instance.Dataset = new ObservableCollection<CharacterModel>(Dataset);
 
             //Act
             var result = await AutoBattleEngine.RunAutoBattle();
@@ -162,10 +169,12 @@ namespace UnitTests.Engine.EngineGame
         [Test]
         public void AutoBattleEngine_CreateCharacterParty_Valid_Characters_Should_Assign_6()
         {
+            //Assert.AreNotEqual(CharacterIndexViewModel.Instance.Dataset.Count, 0);
+            CharacterIndexViewModel.Instance.Dataset = new ObservableCollection<CharacterModel>(Dataset);
             //Arrange
-
+            var battleEngine = new AutoBattleEngine();
             //Act
-            var result = AutoBattleEngine.CreateCharacterParty();
+            var result = battleEngine.CreateCharacterParty();
 
             //Reset
 
@@ -189,6 +198,7 @@ namespace UnitTests.Engine.EngineGame
             //Assert
             Assert.AreEqual(0, AutoBattleEngine.Battle.EngineSettings.CharacterList.Count);
             Assert.AreEqual(result, false);
+            Assert.AreEqual(CharacterIndexViewModel.Instance.Dataset.Count, 0);
         }
         #endregion CreateCharacterParty   
 
