@@ -185,7 +185,7 @@ namespace Game.Engine.EngineGame
         }
 
         /// <summary>
-        /// Pick the Character to Attack
+        /// Pick the Character to Attack based to distance
         /// </summary>
         public override PlayerInfoModel SelectCharacterToAttack()
         {
@@ -365,6 +365,8 @@ namespace Game.Engine.EngineGame
                 case PlayerTypeEnum.Monster:
                 default:
                     System.Random randomGen = new System.Random();
+
+                    //code for zombie feature
                     int randomVal = randomGen.Next(100) + 1;
                     if (EngineSettings.BattleSettingsModel.AllowZombieMonsters == true &&
                         randomVal <= EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage)
