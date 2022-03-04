@@ -769,5 +769,37 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(null, result);
         }
         #endregion GetNextPlayerTurn
+
+        #region AddMonstersToRound
+        [Test]
+        public void RoundEngine_AddMonstersToRound_Valid_Should_Pass()
+        {
+            // Arrange
+            var Monster = new MonsterModel
+            {
+                Speed = 20,
+                Level = 20,
+                CurrentHealth = 100,
+                ExperienceTotal = 1000,
+                Name = "Z",
+                ListOrder = 1,
+            };
+
+            var MonsterPlayer = new PlayerInfoModel(Monster);
+            Engine.EngineSettings.MonsterList.Clear();
+            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
+            Engine.EngineSettings.CharacterList.Clear();
+
+            Engine.EngineSettings.MaxNumberPartyMonsters = 10;
+
+            // Act
+            var result = Engine.Round.AddMonstersToRound();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(10, result);
+        }
+        #endregion GetNextPlayerTurn
     }
 }
