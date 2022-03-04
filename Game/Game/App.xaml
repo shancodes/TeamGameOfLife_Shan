@@ -196,6 +196,12 @@
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
 
+            <Style TargetType="Label"
+                   x:Key="ListStyleCenterBold"
+                   BasedOn="{StaticResource ListStyleCenter}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
             <Style TargetType="StackLayout"
                    x:Key="PickedCharacterItemBox">
                 <Setter Property="Margin" Value="5"/>
