@@ -140,8 +140,6 @@ namespace Game.Views
             _ = await Navigation.PopAsync();
         }
 
-
-
         /// <summary>
         /// Clear out the old list and make the new list
         /// </summary>
