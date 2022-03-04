@@ -846,7 +846,6 @@ namespace Game.Views
             _ = BattleEngineViewModel.Instance.Engine.EndBattle();
             BeginGamePage pickcharacterpage = new BeginGamePage();
             await Navigation.PushModalAsync(new NavigationPage(pickcharacterpage));
-            //ShowBattleModeUIElements();
             _ = await Navigation.PopAsync();
         }
 
@@ -972,7 +971,6 @@ namespace Game.Views
             switch (BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum)
             {
                 case BattleStateEnum.Starting:
-                    //GameUIDisplay.IsVisible = false;
                     AttackerAttack.Source = ActionEnum.Unknown.ToImageURI();
                     StartBattleButton.IsVisible = true;
                     break;
@@ -996,15 +994,7 @@ namespace Game.Views
                 case BattleStateEnum.RoundOver:
                 case BattleStateEnum.Battling:
                     GameUIDisplay.IsVisible = true;
-                    //BattlePlayerInfomationBox.IsVisible = true;
                     MessageDisplayBox.IsVisible = true;
-
-                    //Next Attack button removed
-                    /*
-                     * 
-                     * Adding next button to test if characters are getting added by clicking 
-                     * begin on pick characters
-                    AttackButton.IsVisible = true;*/
 
                     //animation to open up the battle board
                     mapImage.Opacity = 0;
