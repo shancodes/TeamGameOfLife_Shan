@@ -117,13 +117,8 @@ namespace Game.Engine.EngineGame
             {
                 return true;
             }
-
-            if (Battle.EngineSettings.BattleScore.TurnCount > Battle.EngineSettings.MaxTurnCount)
-            {
-                return true;
-            }
-
-            return false;
+            return Battle.EngineSettings.BattleScore.TurnCount > Battle.EngineSettings.MaxTurnCount;
+           
         }
 
         /// <summary>
