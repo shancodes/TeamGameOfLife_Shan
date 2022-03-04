@@ -48,7 +48,11 @@ namespace UnitTests.Engine.EngineGame
         }
         #endregion Constructor
 
+
         #region MoveAsTurn
+        /// <summary>
+        /// move as turn
+        /// </summary>
         [Test]
         public void RoundEngine_MoveAsTurn_Valid_Default_Should_Pass()
         {
@@ -63,6 +67,9 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(true, result);
         }
 
+        /// <summary>
+        /// move as turn valid monsters
+        /// </summary>
         [Test]
         public void RoundEngine_MoveAsTurn_Valid_Monster_Default_Should_Pass()
         {
@@ -79,6 +86,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion MoveAsTurn
 
         #region ApplyDamage
+        /// <summary>
+        /// Appply damage
+        /// </summary>
         [Test]
         public void RoundEngine_ApplyDamage_Valid_Default_Should_Pass()
         {
@@ -95,6 +105,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion ApplyDamage
 
         #region Attack
+        /// <summary>
+        /// Attack for round engine
+        /// </summary>
         [Test]
         public void RoundEngine_Attack_Valid_Default_Should_Pass()
         {
@@ -111,6 +124,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion Attack
 
         #region AttackChoice
+        /// <summary>
+        /// Attack choice for round engine
+        /// </summary>
         [Test]
         public void RoundEngine_AttackChoice_Valid_Default_Should_Pass()
         {
@@ -127,6 +143,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion AttackChoice
 
         #region SelectCharacterToAttack
+        /// <summary>
+        /// test for selecting characters to attack
+        /// </summary>
         [Test]
         public void RoundEngine_SelectCharacterToAttack_Valid_Default_Should_Pass()
         {
@@ -143,6 +162,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion SelectCharacterToAttack
 
         #region UseAbility
+        /// <summary>
+        /// use ability in round engine
+        /// </summary>
         [Test]
         public void RoundEngine_UseAbility_Valid_Default_Should_Pass()
         {
@@ -160,6 +182,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion UseAbility
 
         #region BattleSettingsOverrideHitStatusEnum
+        /// <summary>
+        /// Test for BattleSettingsOverrideHitStatusEnum
+        /// </summary>
         [Test]
         public void RoundEngine_BattleSettingsOverrideHitStatusEnum_Valid_Default_Should_Pass()
         {
@@ -176,6 +201,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion BattleSettingsOverrideHitStatusEnum
 
         #region BattleSettingsOverride
+        /// <summary>
+        /// Test for BattleSettingsOverride
+        /// </summary>
         [Test]
         public void RoundEngine_BattleSettingsOverride_Valid_Default_Should_Pass()
         {
@@ -192,6 +220,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion BattleSettingsOverride
 
         #region CalculateExperience
+        /// <summary>
+        /// Test for calculating experience
+        /// </summary>
         [Test]
         public void RoundEngine_CalculateExperience_Valid_Default_Should_Pass()
         {
@@ -208,6 +239,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion CalculateExperience
 
         #region CalculateAttackStatus
+        /// <summary>
+        /// Test for calculating attack status
+        /// </summary>
         [Test]
         public void RoundEngine_CalculateAttackStatus_Valid_Default_Should_Pass()
         {
@@ -227,6 +261,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion CalculateAttackStatus
 
         #region RemoveIfDead
+        /// <summary>
+        /// Test for removing dead player
+        /// </summary>
         [Test]
         public void RoundEngine_RemoveIfDead_Valid_Default_Should_Pass()
         {
@@ -243,6 +280,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion RemoveIfDead
 
         #region ChooseToUseAbility
+        /// <summary>
+        /// Test for choosing ability
+        /// </summary>
         [Test]
         public void RoundEngine_ChooseToUseAbility_Valid_Default_Should_Pass()
         {
@@ -259,6 +299,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion ChooseToUseAbility
 
         #region SelectMonsterToAttack
+        /// <summary>
+        /// Test for selecting monsters to attack
+        /// </summary>
         [Test]
         public void RoundEngine_SelectMonsterToAttack_Valid_Default_Should_Pass()
         {
@@ -275,6 +318,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion SelectMonsterToAttack
 
         #region DetermineActionChoice
+        /// <summary>
+        /// Determining action choice
+        /// </summary>
         [Test]
         public void RoundEngine_DetermineActionChoice_Valid_Default_Should_Pass()
         {
@@ -291,6 +337,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion DetermineActionChoice
 
         #region TurnAsAttack
+        /// <summary>
+        /// Test for turn as attack
+        /// </summary>
         [Test]
         public void RoundEngine_TurnAsAttack_Valid_Default_Should_Pass()
         {
@@ -307,6 +356,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion TurnAsAttack
 
         #region TargetDied
+        /// <summary>
+        /// Test for target is dead
+        /// </summary>
         [Test]
         public void RoundEngine_TargetDied_Valid_Default_Should_Pass()
         {
@@ -337,6 +389,9 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(true, result);
         }
 
+        /// <summary>
+        /// Test to unknown action
+        /// </summary>
         [Test]
         public void RoundEngine_TakeTurn_Valid_Unknown_Action_Should_Pass()
         {
@@ -367,6 +422,9 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(true, result);
         }
 
+        /// <summary>
+        /// Take turn using ability action
+        /// </summary>
         [Test]
         public void RoundEngine_TakeTurn_Valid_Character_Ability_Action_Should_Pass()
         {
@@ -401,6 +459,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion TakeTurn
 
         #region RollToHitTarget
+        /// <summary>
+        /// Test for checking roll to hit
+        /// </summary>
         [Test]
         public void RoundEngine_RollToHitTarget_Valid_Default_Should_Pass()
         {
@@ -423,6 +484,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion RollToHitTarget
 
         #region GetRandomMonsterItemDrops
+        /// <summary>
+        /// Test tor getting monsters random item drop
+        /// </summary>
         [Test]
         public void RoundEngine_GetRandomMonsterItemDrops_Valid_Default_Should_Pass()
         {
@@ -443,6 +507,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion GetRandomMonsterItemDrops
 
         #region DetermineCriticalMissProblem
+        /// <summary>
+        /// Test for determining critical miss
+        /// </summary>
         [Test]
         public void RoundEngine_DetermineCriticalMissProblem_Valid_Default_Should_Pass()
         {
@@ -459,6 +526,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion DetermineCriticalMissProblem
 
         #region DropItems
+        /// <summary>
+        /// Test for drop items
+        /// </summary>
         [Test]
         public void RoundEngine_DropItems_Valid_Default_Should_Pass()
         {
@@ -476,6 +546,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion DropItems
 
         #region DetermineActionChoice
+        /// <summary>
+        /// Test for determining action choice
+        /// </summary>
         [Test]
         public void RoundEngine_DetermineActionChoice_Valid_In_Range_Attack_Should_Pass()
         {
@@ -508,6 +581,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion DetermineActionChoice
 
         #region SelectCharacterToAttack
+        /// <summary>
+        /// Test for selecting character to attack
+        /// </summary>
         [Test]
         public void RoundEngine_SelectCharacterToAttack_Valid_Empty_PlayerList_Should_Pass()
         {
@@ -526,6 +602,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion SelectCharacterToAttack
 
         #region SelectMonsterToAttack
+        /// <summary>
+        /// Test for selecting monsters to attack
+        /// </summary>
         [Test]
         public void RoundEngine_SelectMonsterToAttack_Valid_Empty_PlayerList_Should_Pass()
         {
@@ -544,6 +623,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion SelectMonsterToAttack
 
         #region TurnAsAttack
+        /// <summary>
+        /// Test for turn as Attack
+        /// </summary>
         [Test]
         public void RoundEngine_TurnAsAttack_Valid_Null_Attacker_Should_Pass()
         {
@@ -558,6 +640,9 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// Test for character Dough to always miss
+        /// </summary>
         [Test]
         public void RoundEngine_TurnAsAttack_Valid_Attacker_Doug_Miss_Should_Pass()
         {
@@ -577,6 +662,9 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(HitStatusEnum.Hit, Engine.EngineSettings.BattleMessagesModel.HitStatus);
         }
 
+        /// <summary>
+        /// Test for critical miss
+        /// </summary>
         [Test]
         public void RoundEngine_TurnAsAttack_Valid_Attacker_Defender_Critical_Miss_Should_Pass()
         {
@@ -598,6 +686,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion TurnAsAttack
 
         #region RollToHitTarget
+        /// <summary>
+        /// Test for Roll to hit target
+        /// </summary>
         [Test]
         public void RoundEngine_RollToHitTarget_Valid_Critical_Miss_Should_Pass()
         {
@@ -620,6 +711,9 @@ namespace UnitTests.Engine.EngineGame
         #endregion RollToHitTarget
 
         #region TargetDied
+        /// <summary>
+        /// Test to check for target died
+        /// </summary>
         [Test]
         public void RoundEngine_TargetDied_Valid_Zombie_Name_Should_Pass()
         {
@@ -648,6 +742,9 @@ namespace UnitTests.Engine.EngineGame
 
 
         #region ChooseToUseAbility
+        /// <summary>
+        /// test for function ChooseToUseAbility
+        /// </summary>
         [Test]
         public void RoundEngine_ChooseToUseAbility_Valid_No_Ability_Should_Pass()
         {
@@ -666,6 +763,9 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// Test for ChooseToUseAbility using healing ability
+        /// </summary>
         [Test]
         public void RoundEngine_ChooseToUseAbility_Valid_Use_Healing_Ability_Should_Pass()
         {
@@ -685,6 +785,9 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(ActionEnum.Ability, Engine.EngineSettings.CurrentAction);
         }
 
+        /// <summary>
+        /// Test for ability
+        /// </summary>
         [Test]
         public void RoundEngine_ChooseToUseAbility_Valid_Use_Ability_Should_Pass()
         {
