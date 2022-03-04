@@ -659,6 +659,64 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(false, result);
         }
+
+        /// <summary>
+        /// Added unit test to swap items with item pool items
+        /// </summary>
+        /// <returns></returns>
+        [Test]
+        public async Task RoundEngine_GetItemFromPoolIfBetter_Valid_Swap_Should_Pass()
+        {
+            Engine.EngineSettings.MonsterList.Clear();
+
+            // Both need to be character to fall through to the Name Test
+            // Arrange
+            var Character = new CharacterModel
+            {
+                Speed = 20,
+                Level = 1,
+                CurrentHealth = 1,
+                ExperienceTotal = 1,
+                Name = "Z",
+                ListOrder = 1,
+                Guid = "me"
+            };
+
+            // Add each model here to warm up and load it.
+            _ = Game.Helpers.DataSetsHelper.WarmUp();
+
+            var item1 = new ItemModel { Attribute = AttributeEnum.Attack, Value = 1, Location = ItemLocationEnum.Finger, Damage = 10 };
+            var item2 = new ItemModel { Attribute = AttributeEnum.Attack, Value = 20, Location = ItemLocationEnum.Finger, Damage = 10 };
+            var item3 = new ItemModel { Attribute = AttributeEnum.Attack, Value = 20, Location = ItemLocationEnum.Finger, Damage = 5 };
+
+            _ = await ItemIndexViewModel.Instance.CreateAsync(item1);
+            _ = await ItemIndexViewModel.Instance.CreateAsync(item2);
+            _ = await ItemIndexViewModel.Instance.CreateAsync(item3);
+
+            Engine.EngineSettings.ItemPool.Add(item1);
+            Engine.EngineSettings.ItemPool.Add(item2);
+            Engine.EngineSettings.ItemPool.Add(item3);
+
+            // Put the Item on the Character
+            _ = Character.AddItem(ItemLocationEnum.LeftFinger, item3.Id);
+
+            var CharacterPlayer = new PlayerInfoModel(Character);
+            CharacterPlayer.CurrentHealth = 5;
+            Engine.EngineSettings.CharacterList.Clear();
+            Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(Character));
+
+            // Make the List
+            Engine.EngineSettings.PlayerList = Engine.Round.MakePlayerList();
+
+            // Act
+            var result = Engine.Round.GetItemFromPoolIfBetter(CharacterPlayer, ItemLocationEnum.LeftFinger);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, result);
+            Assert.AreEqual(item2.Id, CharacterPlayer.LeftFinger);    // The 2nd item is better, so did they swap?
+        }
         #endregion GetItemFromPoolIfBetter
 
         #region RemoveDeadPlayersFromList
