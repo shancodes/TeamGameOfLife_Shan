@@ -166,6 +166,24 @@ namespace UnitTests.Engine.EngineGame
         #endregion RunAutoBattle
 
         #region CreateCharacterParty
+
+        [Test]
+        public void AutoBattleEngine_CreateCharacterParty_Valid_Characters_CharacterIndex_None_Should_Create_6()
+        {
+            //Arrange
+            AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
+
+            CharacterIndexViewModel.Instance.Dataset.Clear();
+
+            //Act
+            var result = AutoBattleEngine.CreateCharacterParty();
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual(6, AutoBattleEngine.Battle.EngineSettings.CharacterList.Count);
+        }
+
         [Test]
         public void AutoBattleEngine_CreateCharacterParty_Valid_Characters_Should_Assign_6()
         {
@@ -182,24 +200,7 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(6, AutoBattleEngine.Battle.EngineSettings.CharacterList.Count);
         }
 
-        [Test]
-        public void AutoBattleEngine_CreateCharacterParty_Invalid_Characters_ShouldReturn_False()
-        {
-            //Arrange
-            AutoBattleEngine.Battle.EngineSettings.MaxNumberPartyCharacters = 6;
-
-            CharacterIndexViewModel.Instance.Dataset.Clear();
-
-            //Act
-            var result = AutoBattleEngine.CreateCharacterParty();
-
-            //Reset
-
-            //Assert
-            Assert.AreEqual(0, AutoBattleEngine.Battle.EngineSettings.CharacterList.Count);
-            Assert.AreEqual(result, false);
-            Assert.AreEqual(CharacterIndexViewModel.Instance.Dataset.Count, 0);
-        }
+       
         #endregion CreateCharacterParty   
 
         #region DetectInfinateLoop
