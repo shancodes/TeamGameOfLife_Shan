@@ -126,36 +126,33 @@ namespace Game.Engine.EngineGame
         /// </summary>
         public override bool CreateCharacterParty()
         {
+
             // Picks 6 Characters
 
             // To use your own characters, populate the List before calling RunAutoBattle
 
-            var CharaceterModlList = CharacterIndexViewModel.Instance.Dataset;
+            // Will first pull from existing characters
+            foreach (var data in CharacterIndexViewModel.Instance.Dataset)
+            {
+                if (Battle.EngineSettings.CharacterList.Count() >= Battle.EngineSettings.MaxNumberPartyCharacters)
+                {
+                    break;
+                }
 
-            if (CharaceterModlList == null || CharaceterModlList.Count == 0) {
-                return false;
+                // Start off with max health if adding a character in
+                data.CurrentHealth = data.GetMaxHealthTotal;
+                _ = Battle.PopulateCharacterList(data);
             }
 
-            int dataSetCount = CharaceterModlList.Count;
-            int cListCount = Battle.EngineSettings.CharacterList.Count();
-
-            return addCharacterToBattle(CharaceterModlList, cListCount);
-        }
-
-        public bool addCharacterToBattle(ObservableCollection<CharacterModel> characterList, int cListCount) {
-            int i = 0;
-
-            while (cListCount < Battle.EngineSettings.MaxNumberPartyCharacters)
+            //If there are not enough will add random ones
+            for (var i = Battle.EngineSettings.CharacterList.Count(); i < Battle.EngineSettings.MaxNumberPartyCharacters; i++)
             {
-
-                var data = characterList[i];
-                data.CurrentHealth = data.GetMaxHealthTotal;
-                Battle.PopulateCharacterList(data);
-                i++;
-                cListCount++;
+                _ = Battle.PopulateCharacterList(RandomPlayerHelper.GetRandomCharacter(1));
             }
 
             return true;
+
+          
         }
 
     }
