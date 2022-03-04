@@ -147,19 +147,6 @@ namespace Game.Engine.EngineBase
         /// <returns></returns>
         public virtual bool MoveAsTurn(PlayerInfoModel Attacker)
         {
-
-            /*
-             * TODO: TEAMS Work out your own move logic if you are implementing move
-             * 
-             * Mike's Logic
-             * The monster or charcter will move to a different square if one is open
-             * Find the Desired Target
-             * Jump to the closest space near the target that is open
-             * 
-             * If no open spaces, return false
-             * 
-             */
-
             if (Attacker.PlayerType == PlayerTypeEnum.Monster)
             {
                 // For Attack, Choose Who
