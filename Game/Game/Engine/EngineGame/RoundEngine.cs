@@ -18,9 +18,9 @@ namespace Game.Engine.EngineGame
     public class RoundEngine : RoundEngineBase, IRoundEngineInterface
     {
         // Hold the BaseEngine
-        public new EngineSettingsModel EngineSettings = EngineSettingsModel.Instance;
+        public new EngineSettingsModel EngineSettings = EngineSettingsModel.Instance; 
 
-        // The Turn Engine
+        // The Turn Engine 
         public new ITurnEngineInterface Turn
         {
             get
@@ -123,8 +123,9 @@ namespace Game.Engine.EngineGame
             //Adding monsters from monster CRUDi
             AddUserCreatedMonsters();
 
-            for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters && EngineSettings.MonsterList.Count < EngineSettings.MaxNumberPartyMonsters; i++)
+            for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters; i++)
             {
+                if (EngineSettings.MonsterList.Count >= EngineSettings.MaxNumberPartyMonsters) break;
 
                 var data = RandomPlayerHelper.GetRandomMonster(TargetLevel, EngineSettings.BattleSettingsModel.AllowMonsterItems);
 

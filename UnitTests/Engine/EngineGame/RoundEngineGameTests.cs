@@ -774,6 +774,7 @@ namespace UnitTests.Engine.EngineGame
         [Test]
         public void RoundEngine_AddMonstersToRound_Valid_Should_Pass()
         {
+            RoundEngine e = new RoundEngine();
             // Arrange
             var Monster = new MonsterModel
             {
@@ -786,11 +787,11 @@ namespace UnitTests.Engine.EngineGame
             };
 
             var MonsterPlayer = new PlayerInfoModel(Monster);
-            Engine.EngineSettings.MonsterList.Clear();
-            Engine.EngineSettings.MonsterList.Add(MonsterPlayer);
-            Engine.EngineSettings.CharacterList.Clear();
+            e.EngineSettings.MonsterList.Clear();
+            e.EngineSettings.MonsterList.Add(MonsterPlayer);
+            e.EngineSettings.CharacterList.Clear();
 
-            Engine.EngineSettings.MaxNumberPartyMonsters = 10;
+            e.EngineSettings.MaxNumberPartyMonsters = 10;
 
             // Act
             var result = Engine.Round.AddMonstersToRound();
@@ -800,7 +801,7 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(10, result);
         }
-        #endregion GetNextPlayerTurn
+        #endregion AddMonstersToRound
 
         #region AddUserCreatedMonsters
         [Test]
