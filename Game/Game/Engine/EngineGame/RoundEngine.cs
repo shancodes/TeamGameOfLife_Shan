@@ -87,6 +87,7 @@ namespace Game.Engine.EngineGame
 
             for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters && i < DbMonsterList.Count; i++)
             {
+                //set the monster's health based on difficulty  level
                 if(DbMonsterList[i].Difficulty == DifficultyEnum.Average)
                 {
                     DbMonsterList[i].CurrentHealth = 1;
@@ -109,21 +110,6 @@ namespace Game.Engine.EngineGame
 
         }
 
-        /// <summary>
-        /// Add Monsters to the Round
-        /// 
-        /// Because Monsters can be duplicated, will add 1, 2, 3 to their name
-        ///   
-        /*
-            * Hint: 
-            * I don't have crudi monsters yet so will add 6 new ones...
-            * If you have crudi monsters, then pick from the list
-
-            * Consdier how you will scale the monsters up to be appropriate for the characters to fight
-            * 
-            */
-        /// </summary>
-        /// <returns></returns>
         public override int AddMonstersToRound()
         { 
             var TargetLevel = 1;
