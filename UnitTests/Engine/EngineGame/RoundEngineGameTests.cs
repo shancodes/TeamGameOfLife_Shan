@@ -801,5 +801,27 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(10, result);
         }
         #endregion GetNextPlayerTurn
+
+        #region AddUserCreatedMonsters
+        [Test]
+        public void RoundEngine_AddUserCreatedMonsters_Valid_Should_Pass()
+        {
+            // Arrange
+            var MonsterList = MonsterIndexViewModel.Instance.Dataset;
+
+            // Act
+            MonsterIndexViewModel.Instance.Dataset.Clear();
+
+            RoundEngine roundEngine = new RoundEngine();
+            roundEngine.AddUserCreatedMonsters();
+
+            var result = MonsterIndexViewModel.Instance.Dataset.Count();
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(0, result);
+        }
+        #endregion AddUserCreatedMonsters
     }
 }

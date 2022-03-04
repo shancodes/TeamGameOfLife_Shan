@@ -73,7 +73,7 @@ namespace Game.Engine.EngineGame
             return true;
         }
 
-        private void AddUserCreatedMonsters()
+        public void AddUserCreatedMonsters()
         {
             ObservableCollection<MonsterModel> DbMonsterList = MonsterIndexViewModel.Instance.Dataset;
 
