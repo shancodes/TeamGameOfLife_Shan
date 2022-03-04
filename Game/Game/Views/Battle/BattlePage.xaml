@@ -91,10 +91,9 @@
 
                     <StackLayout 
                         Style="{StaticResource BattlePageLowerStackStyle}">
-                        <Frame Style="{StaticResource FrameBattlePageLower}" >
+                        <Frame x:Name="messageframe" Style="{StaticResource FrameBattlePageLower}" IsVisible="false">
                             <StackLayout x:Name="MessageDisplayBox"
-                            Style="{StaticResource BattlePageLowerStackStyletwo}">
-
+                                Style="{StaticResource BattlePageLowerStackStyletwo}">
                                 <Label x:Name="BattleMessages" 
                                        Style="{StaticResource StyleLabelBattlePageLowerFrameLabel}"/>
                             </StackLayout>

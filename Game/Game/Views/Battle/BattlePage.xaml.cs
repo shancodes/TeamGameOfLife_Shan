@@ -69,6 +69,8 @@ namespace Game.Views
 
             // Set the Battle Mode
             ShowBattleMode();
+
+            MessageDisplayBox.IsVisible = false;
         }
 
         /// <summary>
@@ -1045,12 +1047,13 @@ namespace Game.Views
                 case BattleModeEnum.MapNext:
                     GamePlayersTopDisplay.IsVisible = false;
                     BattleMapDisplay.IsVisible = true;
-                    // MessageDisplayBox.IsVisible = true;
+                    MessageDisplayBox.IsVisible = true;
                     StacklayoutGamePage.IsVisible = false;
                     AllowMonsterZombies.IsVisible = true;
                     restart_button.IsVisible = true;
                     quit_button.IsVisible = true;
                     StacklayoutGamePage.IsVisible = true;
+                    messageframe.IsVisible = true;
 
                     //Next Attack button disabled
                     AttackButton.IsVisible = false;
