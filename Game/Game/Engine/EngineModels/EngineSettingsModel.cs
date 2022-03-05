@@ -101,5 +101,16 @@ namespace Game.Engine.EngineModels
         // Hold the Battle State, Unknown is default
         public BattleStateEnum BattleStateEnum { get; set; } = BattleStateEnum.Unknown;
 
+        public UserDifficultyEnum userDifficulty { get; set; } = UserDifficultyEnum.Pro;
+
+        public enum UserDifficultyEnum
+        {
+            Noob = 0,
+
+            Joe = 1,
+
+            Pro = 2
+        }
+
     }
 }
