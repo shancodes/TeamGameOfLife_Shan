@@ -404,7 +404,8 @@
             </Style>
 
             <Style TargetType="Label" x:Key="NewRoundPageLabelStyle" BasedOn="{StaticResource MessageLargeStyle}">
-                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="TextColor" Value="Wheat"></Setter>
             </Style>
 
             <Style TargetType="Label"

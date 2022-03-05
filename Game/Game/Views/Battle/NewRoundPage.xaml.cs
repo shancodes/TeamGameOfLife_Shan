@@ -79,6 +79,7 @@ namespace Game.Views
                 LineBreakMode = LineBreakMode.TailTruncation,
                 CharacterSpacing = 1,
                 LineHeight = 1,
+                TextColor = Color.Wheat,
                 MaxLines = 1,
             };
 
@@ -94,6 +95,7 @@ namespace Game.Views
                 CharacterSpacing = 1,
                 LineHeight = 1,
                 MaxLines = 1,
+                TextColor = Color.Wheat
             };
 
             var PlayerNameLabel = new Label()
@@ -107,6 +109,7 @@ namespace Game.Views
                 CharacterSpacing = 1,
                 LineHeight = 1,
                 MaxLines = 1,
+                TextColor = Color.Wheat
             };
 
             // Put the Image Button and Text inside a layout
