@@ -74,8 +74,10 @@ namespace Game.Engine.EngineGame
         }
 
         public void AddUserCreatedMonsters()
-        {
-            ObservableCollection<MonsterModel> DbMonsterList = MonsterIndexViewModel.Instance.Dataset;
+        {  
+            var monstersList = DefaultData.LoadDataForDifficulties();
+            var monstersForDifficulty = monstersList[(int)EngineSettingsModel.Instance.userDifficulty];
+            ObservableCollection<MonsterModel> DbMonsterList = new ObservableCollection<MonsterModel>(monstersForDifficulty);
 
             // If there are no Monsters in the system, return a default one
             if (DbMonsterList.Count == 0)
