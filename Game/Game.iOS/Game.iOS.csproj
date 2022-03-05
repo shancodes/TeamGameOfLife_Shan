@@ -448,4 +448,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\inside_background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\homepage.png" />
+  </ItemGroup>
 </Project>

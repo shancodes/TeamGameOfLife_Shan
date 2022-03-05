@@ -175,6 +175,7 @@
     <Content Include="fire_wielder.png" />
     <Content Include="hat1.png" />
     <Content Include="hat2.png" />
+    <Content Include="homepage.png" />
     <Content Include="ice_knight.png" />
     <Content Include="ice_slime.png" />
     <Content Include="ice_thief.png" />
