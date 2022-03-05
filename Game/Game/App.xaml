@@ -443,6 +443,21 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NumberLabelStyle"
+                BasedOn="{StaticResource GridLabelStyle}">
+                <Setter Property="BackgroundColor" Value= "#443a34" />
+                <Setter Property="TextColor" Value= "#ffffff" />
+            </Style>
+
+
+            <Style TargetType="Label"
+                x:Key="CategoryLabelStyle"
+                BasedOn="{StaticResource GridLabelStyle}">
+                <Setter Property="BackgroundColor" Value= "#efe8e4" />
+                <Setter Property="TextColor" Value= "#443a34" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="GridValueStyle"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="BackgroundColor" Value="{StaticResource ViewBackgroundColor}" />
