@@ -190,6 +190,7 @@
     <Content Include="icon_new.png" />
     <Content Include="icon_save.png" />
     <Content Include="infinity_tiara.png" />
+    <Content Include="inside_background.png" />
     <Content Include="iron_shield.png" />
     <Content Include="item.png" />
     <Content Include="items.png" />
