@@ -400,6 +400,68 @@ namespace Game.GameRules
                     ImageURI = "ice_thief.png",
                     Difficulty = DifficultyEnum.Average,
                 },
+                new MonsterModel {
+                    Name = "Ice Bear",
+                    Description = "Large Monster Bear",
+                    ImageURI = "ice_bear.png",
+                    Difficulty = DifficultyEnum.Difficult,
+                },
+                new MonsterModel {
+                    Name = "Ice Jester",
+                    Description = "and fast",
+                    ImageURI = "ice_jester.png",
+                    Difficulty = DifficultyEnum.Hard,
+                },
+                new MonsterModel {
+                    Name = "Ice Princess",
+                    Description = "Monster Princess",
+                    ImageURI = "ice_princess.png",
+                    Difficulty = DifficultyEnum.Average,
+                },
+                new MonsterModel {
+                    Name = "Ice Queen",
+                    Description = "Powerful Monster Queen",
+                    ImageURI = "ice_queen.png",
+                    Difficulty = DifficultyEnum.Difficult,
+                },
+                new MonsterModel {
+                    Name = "Ice Knight",
+                    Description = "Powerful Monster Black Knight",
+                    ImageURI = "ice_knight.png",
+                     Difficulty = DifficultyEnum.Hard,
+                },
+                 new MonsterModel {
+                    Name = "Ice Slime",
+                    Description = "Cruel Monster Slime",
+                    ImageURI = "ice_slime.png",
+                    Difficulty = DifficultyEnum.Hard,
+                },
+                new MonsterModel {
+                    Name = "Ice Wolf",
+                    Description = "Fast Monster Wolf",
+                    ImageURI = "ice_wolf.png",
+                    Difficulty = DifficultyEnum.Easy,
+                }
+            };
+
+            return datalist;
+        }
+
+            /// <summary>
+            /// Load Characters
+            /// </summary>
+            /// <param name="temp"></param>
+            /// <returns></returns>
+        public static List<List<MonsterModel>> LoadDataForDifficulties()
+        {
+            var joeList = new List<MonsterModel>()
+            {
+                new MonsterModel {
+                    Name = "Ice Thief",
+                    Description = "Big and Ugly",
+                    ImageURI = "ice_thief.png",
+                    Difficulty = DifficultyEnum.Average,
+                },
 
                 new MonsterModel {
                     Name = "Ice Bear",
@@ -451,7 +513,7 @@ namespace Game.GameRules
                 },
             };
 
-            var hardList = new List<MonsterModel>()
+            var proList = new List<MonsterModel>()
             {
                 new MonsterModel {
                     Name = "Ice Thief",
@@ -510,7 +572,7 @@ namespace Game.GameRules
                 },
             };
 
-            var easyList = new List<MonsterModel>()
+            var noobList = new List<MonsterModel>()
             {
                 new MonsterModel {
                     Name = "Ice Thief",
@@ -569,6 +631,10 @@ namespace Game.GameRules
                 },
             };
 
+            var datalist = new List<List<MonsterModel>>();
+            datalist.Add(noobList);
+            datalist.Add(joeList);
+            datalist.Add(proList);
             return datalist;
         }
     }
