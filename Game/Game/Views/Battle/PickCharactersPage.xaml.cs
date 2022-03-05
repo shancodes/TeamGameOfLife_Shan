@@ -8,6 +8,7 @@ using Game.Models;
 using Game.ViewModels;
 using System.Linq;
 using System.Threading.Tasks;
+using Game.Engine.EngineModels;
 
 namespace Game.Views
 {
@@ -30,6 +31,8 @@ namespace Game.Views
 
         // Empty Constructor for UTs
         public PickCharactersPage(bool UnitTest) { }
+
+        public EngineSettingsModel EngineSettings = EngineSettingsModel.Instance;
 
         /// <summary>
         /// Constructor for Index Page
@@ -153,6 +156,38 @@ namespace Game.Views
             {
                 data.CurrentHealth = data.GetMaxHealthTotal;
                 BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList.Add(new PlayerInfoModel(data));
+            }
+        }
+
+        public void UnsetUserDifficultyStyles()
+        {
+            noobbutton.BackgroundColor = default;
+            joebutton.BackgroundColor = default;
+            probutton.BackgroundColor = default;
+        }
+
+
+        public void UpdateUserDifficulty(object sender, EventArgs e)
+        {
+            var btn = (Button)sender;
+            UnsetUserDifficultyStyles(); 
+
+            if (btn.Text == "Noob")
+            {
+                EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Noob;
+                btn.BackgroundColor = Color.Green;
+            }
+
+            if (btn.Text == "Joe")
+            {
+                EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Joe;
+                btn.BackgroundColor = Color.Green;
+            }
+
+            if (btn.Text == "Pro")
+            {
+                EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Pro;
+                btn.BackgroundColor = Color.Green;
             }
         }
     }
