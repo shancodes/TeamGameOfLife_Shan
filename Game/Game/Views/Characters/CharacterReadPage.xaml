@@ -9,7 +9,7 @@
 
     <!--NavigationPage with Text-->
     <NavigationPage.TitleView >
-        <Label Text ="{Binding Title}" Style="{StaticResource TitleHeader}"/>
+        <Label Text ="{Binding Title}" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
     </NavigationPage.TitleView>
 
     <AbsoluteLayout
@@ -27,18 +27,12 @@
                         <!--Name-->
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                             <Label 
-                               Text="Name: " 
-                               Style="{StaticResource StyleItemReadLabelStyle}" />
-                            <Label 
                                 Text="{Binding Data.Name}" 
                                 Style="{StaticResource StyleItemReadValueStyle}" />
                         </StackLayout>
 
                         <!--Description-->
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                            <Label 
-                                Text="Description: " 
-                                Style="{StaticResource StyleItemReadLabelStyle}" />
                             <Label 
                                 Text="{Binding Data.Description}" 
                                 Style="{StaticResource StyleItemReadValueStyle}" />
