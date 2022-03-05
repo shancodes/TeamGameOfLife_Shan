@@ -1286,6 +1286,13 @@
                 <Setter Property="BackgroundColor" Value="Transparent" />
             </Style>
 
+            <Style TargetType="Frame"
+                   x:Key="FrameForRead">
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="210" />
+                <Setter Property="WidthRequest" Value="200" />
+            </Style>
+
             <Style TargetType="Frame" x:Key="PickedCharactersFrame">
                 <Setter Property="WidthRequest" Value="500"/>
                 <Setter Property="HeightRequest" Value="300"/>

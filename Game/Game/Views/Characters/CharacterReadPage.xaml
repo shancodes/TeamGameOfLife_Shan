@@ -22,31 +22,35 @@
 
                     <StackLayout Style="{StaticResource CharacterStackBox}" >
 
-                        <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" />
+                        <Frame Style="{StaticResource FrameForRead}">
+                            <StackLayout>
+                                <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}" />
 
-                        <!--Name-->
-                        <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                            <Label 
+                                <!--Name-->
+                                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+                                    <Label 
                                 Text="{Binding Data.Name}" 
                                 Style="{StaticResource StyleItemReadValueStyle}" />
-                        </StackLayout>
+                                </StackLayout>
 
-                        <!--Description-->
-                        <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                            <Label 
+                                <!--Description-->
+                                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+                                    <Label 
                                 Text="{Binding Data.Description}" 
                                 Style="{StaticResource StyleItemReadValueStyle}" />
-                        </StackLayout>
+                                </StackLayout>
 
-                        <!--Level-->
-                        <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                            <Label 
+                                <!--Level-->
+                                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
+                                    <Label 
                                 Text="Level: " 
                                 Style="{StaticResource LabelStyle}"/>
-                            <Label 
+                                    <Label 
                                 Text="{Binding Data.Level}" 
                                 Style="{StaticResource ValueStyle}"/>
-                        </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
 
                         <StackLayout Style="{StaticResource HorizontalStack}">
                             <Frame Style="{StaticResource FrameStyle}">
@@ -158,11 +162,12 @@
 
                     </StackLayout>
 
-                    <FlexLayout 
-                        Style="{StaticResource CharacterReadFlex}"
-                        x:Name="ItemBox">
-                    </FlexLayout>
-
+                        <FlexLayout
+                            Style="{StaticResource CharacterReadFlex}"
+                            x:Name="ItemBox"
+                        >
+                        </FlexLayout>
+                    
                 </StackLayout>
             </ScrollView>
 
