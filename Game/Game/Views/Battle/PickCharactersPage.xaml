@@ -16,7 +16,7 @@
     <ScrollView Style="{StaticResource ScrollViewOrientation}">
 
         <StackLayout>
-            <Label Text="Selected Characters" Style="{StaticResource CenterMessageLargeStyle}" />
+            <Label Text="Selected Characters" Style="{StaticResource CenterMessageStyle}" />
 
             <Frame Style="{StaticResource PickedCharactersFrame}">
                 <CollectionView 
@@ -48,7 +48,7 @@
                 </CollectionView>
             </Frame>
             
-            <Label Text="Pick Characters" Style="{StaticResource CenterMessageLargeStyle}" />
+            <Label Text="Pick Characters" Style="{StaticResource CenterMessageStyle}" />
 
             <!--To choose Characters-->
             <Frame Style="{StaticResource PickCharactersFrame}">
@@ -80,6 +80,17 @@
                     </CollectionView>
 
                 </Frame>
+
+            <StackLayout>
+                <Label Text="User Difficulty" Style="{StaticResource BoldText}" HorizontalOptions="Center"/>
+            </StackLayout>
+            <Grid>
+                <Button Text="  Noob " Grid.Row="0" Grid.Column="0" Style="{StaticResource BoldText}" x:Name="noobbutton" Clicked="UpdateUserDifficulty"/>
+                <Button Text="Joe" Grid.Row="0" Grid.Column="1" Style="{StaticResource BoldText}" x:Name="joebutton" Clicked="UpdateUserDifficulty"/>
+                <Button Text="Pro" Grid.Row="0" Grid.Column="2" Style="{StaticResource BoldText}" x:Name="probutton" Clicked="UpdateUserDifficulty"/>
+                </Grid>
+            
+
 
             <!--Button for Begin Battle-->
             <ImageButton Source="begin_battle.png" x:Name ="BeginBattleButton" Clicked="BattleButton_Clicked" Style="{StaticResource ButtonItemReadStyle}"/>
