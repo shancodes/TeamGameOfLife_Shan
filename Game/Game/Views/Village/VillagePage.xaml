@@ -10,6 +10,35 @@
 
             <FlexLayout x:Name="flexLayout" Style="{StaticResource FlexLayoutGamePage}">
 
+                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                    <Label
+                                Text="Number of Items to add:"
+                                HorizontalTextAlignment="Start"
+                                HorizontalOptions="Start"
+                                Style="{DynamicResource LabelStyle}"
+                                />
+
+                    <Entry
+                                x:Name="ServerItemValue"
+                                Text="1" 
+                                FontSize="Micro"
+                                MaxLength="5"
+                                CursorPosition="0"
+                                SelectionLength = "5"
+                                Keyboard="Numeric"
+                                WidthRequest="50"
+                                HorizontalOptions="FillAndExpand"
+                                Style="{DynamicResource EntryStyle}"
+                                />
+                </StackLayout>
+
+
+                <StackLayout>
+                    <Button
+                           Text="Fetch Items"
+                                Clicked="FetchItemsPost_Command"/>
+                </StackLayout>
+
                 <StackLayout Style="{StaticResource CardImageTextBox}">
                     
                     <ImageButton
