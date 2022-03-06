@@ -12,22 +12,20 @@
 
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
                     <Label
-                                Text="Number of Items to add:"
-                                Style="{StaticResource NewLabelStyle}"
-                                />
+                        Text="Number of Items to add:"
+                        Style="{StaticResource NewLabelStyle}"
+                    />
 
                     <Entry
-                                x:Name="ServerItemValue"
-                              
-                                Style="{DynamicResource NewEntryStyle}"
-                                />
+                        x:Name="ServerItemValue"
+                        Style="{DynamicResource NewEntryStyle}"
+                    />
                 </StackLayout>
-
 
                 <StackLayout>
                     <Button
-                           Text="Fetch Items"
-                                Clicked="FetchItemsPost_Command"/>
+                        Text="Fetch Items"
+                        Clicked="FetchItemsPost_Command"/>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
