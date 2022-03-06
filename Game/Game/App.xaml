@@ -860,6 +860,11 @@
                 <Setter Property="IsVisible" Value="False"/>
             </Style>
 
+            <Style TargetType="Button" x:Key="NewButtonStyle">
+                <Setter Property="TextColor" Value="AntiqueWhite"/>
+                <Setter Property="BackgroundColor" Value="RosyBrown"/>
+            </Style>
+
             <Style TargetType="Button" x:Key="ButtonItemReadStyle">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
                 <Setter Property="BackgroundColor" Value="Transparent"/>

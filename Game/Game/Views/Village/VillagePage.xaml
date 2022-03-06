@@ -10,7 +10,7 @@
 
             <FlexLayout x:Name="flexLayout" Style="{StaticResource FlexLayoutGamePage}">
 
-                <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
+                <StackLayout Style="{StaticResource AboutHorizontalStackStyle}" >
                     <Label
                         Text="Number of Items to add:"
                         Style="{StaticResource NewLabelStyle}"
@@ -25,7 +25,8 @@
                 <StackLayout>
                     <Button
                         Text="Fetch Items"
-                        Clicked="FetchItemsPost_Command"/>
+                        Clicked="FetchItemsPost_Command"
+                        Style="{StaticResource NewButtonStyle}"/>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
