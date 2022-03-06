@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Name="BrowseItemsPage"
-             x:Class="Game.Views.PickCharactersPage">
+             x:Class="Game.Views.PickCharactersPage"
+             BackgroundImageSource="battle_bg.png">
 
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
