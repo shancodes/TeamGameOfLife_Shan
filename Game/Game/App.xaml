@@ -281,6 +281,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="CrudiFrameLabel"
+                BasedOn="{StaticResource StyleLabel}">
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="StyleItemReadLabelStyle"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
@@ -1331,6 +1337,16 @@
                 <Setter Property="CornerRadius" Value="15"/>
             </Style>
 
+            <Style TargetType="Frame" x:Key="CrudiFrame">
+                <Setter Property="WidthRequest" Value="500"/>
+                <Setter Property="HeightRequest" Value="500"/>
+                <Setter Property="BackgroundColor" Value="#443a34"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+
             <Style TargetType="Frame" x:Key="PickCharactersFrame" 
                    BasedOn="{StaticResource PickedCharactersFrame}">
                 <Setter Property="WidthRequest" Value="1000"/>
@@ -1422,6 +1438,10 @@
 
             <Style x:Key="EntryItemCreateNonStackStyle" TargetType="Entry" BasedOn="{StaticResource EntryStyle}" >
                 <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+
+            <Style x:Key="EntryCrudiFrame" TargetType="Entry" BasedOn="{StaticResource EntryItemCreateNonStackStyle}" >
+                <Setter Property="HorizontalOptions" Value="Center"/>
             </Style>
 
             <Style x:Key="EntryStyleRed" TargetType="Entry" BasedOn="{StaticResource EntryStyle}" >

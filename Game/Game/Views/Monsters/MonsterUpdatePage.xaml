@@ -34,13 +34,7 @@
                         <StackLayout Style="{StaticResource BattleMapBox}" >
 
                             <Frame 
-                               WidthRequest="500"
-                                HeightRequest="500"
-                                BackgroundColor="#443a34"
-                                BorderColor="Black"
-                                Margin="10"
-                                Padding="10"
-                                CornerRadius="15">
+                              Style="{StaticResource CrudiFrame}">
 
                                 <StackLayout Style="{StaticResource PickedCharacterItemBox}">
                                     
@@ -52,34 +46,34 @@
                                     <!--Name Field-->
                                     <Grid Style="{StaticResource MonsterReadGridStyle}">
                                         <Label Grid.Row="2" Grid.Column="0"
-                                            Text="Name : "  Style="{StaticResource StyleLabel}" HorizontalOptions="Center"/>
+                                            Text="Name : "  Style="{StaticResource CrudiFrameLabel}"/>
                                     
 
                                         <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"
                                             x:Name="Name_Entry"
-                                            Style="{StaticResource EntryItemCreateNonStackStyle}" HorizontalOptions="Center" TextChanged="EntryName_TextChanged"/>
+                                            Style="{StaticResource EntryCrudiFrame}" TextChanged="EntryName_TextChanged"/>
 
                                         <!--Description Field-->
                                         <Label Grid.Row="4" Grid.Column="0"
                                             Text="Description : " 
-                                            Style="{StaticResource StyleLabel}" HorizontalOptions="Center"/>
+                                            Style="{StaticResource CrudiFrameLabel}"/>
 
                                         <Entry Grid.Row="4" Grid.Column="1"
                                              Text="{Binding Data.Description, Mode=TwoWay}" 
                                              x:Name="Description_Entry"
-                                             Style="{StaticResource EntryItemCreateNonStackStyle}"
-                                             TextChanged="EntryDescription_TextChanged" HorizontalOptions="Center"/>
+                                             Style="{StaticResource EntryCrudiFrame}"
+                                             TextChanged="EntryDescription_TextChanged"/>
 
                                         <!--Difficulty-->
                                         <Label Grid.Row="6" Grid.Column="0"
                                             Text="Difficulty : " 
-                                            Style="{StaticResource StyleLabel}" HorizontalOptions="Center"/>
+                                            Style="{StaticResource CrudiFrameLabel}"/>
 
                                         <Picker Grid.Row="6" Grid.Column="1"
                                         ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
                                         SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                         x:Name="DifficultyPicker"
-                                        Style="{StaticResource EntryItemCreateNonStackStyle}" HorizontalOptions="Center"/>
+                                        Style="{StaticResource EntryCrudiFrame}"/>
 
                                     </Grid>
                                 </StackLayout>
