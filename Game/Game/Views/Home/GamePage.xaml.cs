@@ -15,6 +15,7 @@ namespace Game.Views
         /// </summary>
         public GamePage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
 
