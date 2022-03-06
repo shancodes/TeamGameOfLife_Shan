@@ -138,7 +138,7 @@
     <Content Include="auto_battle.png" />
     <Content Include="back_image_two.png" />
     <Content Include="back_triangle.png" />
-    <Content Include="battle bg.png" />
+    <Content Include="battle_bg.png" />
     <Content Include="battle.png" />
     <Content Include="battleboard.png" />
     <Content Include="battle_grid.png" />
