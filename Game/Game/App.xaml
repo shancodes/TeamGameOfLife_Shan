@@ -20,7 +20,7 @@
                 Dark
                 -->
 
-            <Color x:Key="PageBackgroundColor">lightgray</Color>
+            <Color x:Key="PageBackgroundColor">#efe8e4</Color>
             <Color x:Key="ViewBackgroundColor">Teal</Color>
             <Color x:Key="NavigationBarColor">Teal</Color>
 
@@ -1345,6 +1345,16 @@
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="Padding" Value="10" />
                 <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="CrudiFrame_new">
+                <Setter Property="WidthRequest" Value="400"/>
+                <Setter Property="HeightRequest" Value="600"/>
+                <Setter Property="BackgroundColor" Value="#443a34"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="CornerRadius" Value="30"/>
             </Style>
 
             <Style TargetType="Frame" x:Key="PickCharactersFrame" 
