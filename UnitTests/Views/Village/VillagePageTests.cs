@@ -4,6 +4,9 @@ using Game;
 using Game.Views;
 using Xamarin.Forms.Mocks;
 using Xamarin.Forms;
+using Game.Models;
+using UnitTests.TestHelpers;
+using System.Threading.Tasks;
 
 namespace UnitTests.Views
 {
@@ -112,6 +115,29 @@ namespace UnitTests.Views
 
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public async Task VillagePage_GetItemsPost_Invalid_BadURL_Should_Fail()
+        {
+            // Arrange
+            var hold = WebGlobalsModel.WebSiteAPIURL;
+            WebGlobalsModel.WebSiteAPIURL = "https://bogusurl";
+
+            _ = TestBaseHelper.SetHttpClientToMock();
+            ResponseMessage.SetResponseMessageStringContent(JsonSampleData.StringContent_Example_API_Pass);
+            ResponseMessage.SetResponseMessageStringContent(ResponseMessage.NullStringContent);
+            ResponseMessage.SetHttpStatusCode(ResponseMessage.HttpStatusCodeSuccess);
+
+            // Act
+            var result = await page.GetItemsPost();
+
+            // Reset
+            WebGlobalsModel.WebSiteAPIURL = hold;
+            _ = TestBaseHelper.SetHttpClientToReal();
+
+            // Assert
+            Assert.AreEqual(true, result); // Got to here, so it happened...
         }
     }
 }
