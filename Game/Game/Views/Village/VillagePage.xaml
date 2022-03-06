@@ -13,9 +13,7 @@
                 <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="FillAndExpand">
                     <Label
                                 Text="Number of Items to add:"
-                                HorizontalTextAlignment="Start"
-                                HorizontalOptions="Start"
-                                Style="{DynamicResource LabelStyle}"
+                                Style="{StaticResource NewLabelStyle}"
                                 />
 
                     <Entry

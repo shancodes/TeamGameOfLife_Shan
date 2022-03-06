@@ -248,6 +248,14 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NewLabelStyle"
+                BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="TextColor" Value="AntiqueWhite" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="StyleLabelBattlePageLowerFrameLabel"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
