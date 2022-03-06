@@ -1403,6 +1403,18 @@
                 <Setter Property="PlaceholderColor" Value="{StaticResource TriciaryTextColor}" />
             </Style>
 
+            <Style TargetType="Entry"
+                x:Key="NewEntryStyle" BasedOn="{StaticResource EntryStyle}">
+                <Setter Property="Text" Value="1" />
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="MaxLength" Value="5" />
+                <Setter Property="CursorPosition" Value="0" />
+                <Setter Property="SelectionLength" Value= "5" />
+                <Setter Property="Keyboard" Value="Numeric"/>
+                <Setter Property="WidthRequest" Value="50" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+
             <Style x:Key="EntryItemCreateNonStackStyle" TargetType="Entry" BasedOn="{StaticResource EntryStyle}" >
                 <Setter Property="HorizontalOptions" Value="Start"/>
             </Style>
