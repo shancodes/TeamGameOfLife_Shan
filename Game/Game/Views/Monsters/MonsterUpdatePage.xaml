@@ -45,35 +45,34 @@
 
                                     <!--Name Field-->
                                     <Grid Style="{StaticResource MonsterReadGridStyle}">
-                                        <Label Grid.Row="2" Grid.Column="0"
+                                        <Label Grid.Row="0" Grid.Column="0"
                                             Text="Name : "  Style="{StaticResource CrudiFrameLabel}"/>
-                                    
 
-                                        <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"
+                                        <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
                                             x:Name="Name_Entry"
                                             Style="{StaticResource EntryCrudiFrame}" TextChanged="EntryName_TextChanged"/>
 
                                         <!--Description Field-->
-                                        <Label Grid.Row="4" Grid.Column="0"
+                                        <Label Grid.Row="2" Grid.Column="0"
                                             Text="Description : " 
                                             Style="{StaticResource CrudiFrameLabel}"/>
 
-                                        <Entry Grid.Row="4" Grid.Column="1"
+                                        <Entry Grid.Row="2" Grid.Column="1"
                                              Text="{Binding Data.Description, Mode=TwoWay}" 
                                              x:Name="Description_Entry"
                                              Style="{StaticResource EntryCrudiFrame}"
                                              TextChanged="EntryDescription_TextChanged"/>
 
                                         <!--Difficulty-->
-                                        <Label Grid.Row="6" Grid.Column="0"
+                                        <Label Grid.Row="4" Grid.Column="0"
                                             Text="Difficulty : " 
                                             Style="{StaticResource CrudiFrameLabel}"/>
 
-                                        <Picker Grid.Row="6" Grid.Column="1"
-                                        ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
-                                        SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
-                                        x:Name="DifficultyPicker"
-                                        Style="{StaticResource EntryCrudiFrame}"/>
+                                        <Picker Grid.Row="4" Grid.Column="1"
+                                            ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
+                                            SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
+                                            x:Name="DifficultyPicker"
+                                            Style="{StaticResource EntryCrudiFrame}"/>
 
                                     </Grid>
                                 </StackLayout>
