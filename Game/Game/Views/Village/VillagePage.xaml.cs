@@ -79,7 +79,6 @@ namespace Game.Views
 		/// <returns></returns>
 		public async Task<bool> GetItemsPost()
 		{
-			//var number = Convert.ToInt32(ServerItemValue.Text);
 			if (int.TryParse(ServerItemValue.Text, out var number) == false)
 			{
 				return false;
@@ -93,41 +92,8 @@ namespace Game.Views
 			var category = 8;   // What category to filter down to, 0 is all
 
 			var dataList = await ItemService.GetItemsFromServerPostAsync(number, level, attribute, location, category, random, updateDataBase);
-			//_ = DisplayServerResults(dataList);
 
 			return true;
 		}
-
-		/// <summary>
-		/// Show the Results of the server call
-		/// </summary>
-		/// <param name="result"></param>
-		/// <returns></returns>
-		//public bool DisplayServerResults(List<ItemModel> dataList)
-		//{
-		//	var result = new StringBuilder("");
-		//	ServerItemsList.IsVisible = true;
-		//	ServerItemsList.Text = "No Results";
-
-		//	if (dataList == null)
-		//	{
-		//		return false;
-		//	}
-
-		//	foreach (var ItemModel in dataList)
-		//	{
-		//		// Add them line by one, use \n to force new line for output display.
-		//		// Build up the output string by adding formatted ItemModel Output
-		//		_ = result.AppendLine(ItemModel.FormatOutput());
-		//	}
-
-		//	// If there is results show them
-		//	if (dataList.Count > 0)
-		//	{
-		//		ServerItemsList.Text = result.ToString();
-		//	}
-
-		//	return true;
-		//}
 	}
 }
