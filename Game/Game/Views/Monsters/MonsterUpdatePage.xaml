@@ -32,43 +32,58 @@
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterStack}">
                         <StackLayout Style="{StaticResource BattleMapBox}" >
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
 
-                            <!--Name Field-->
-                            <Grid Style="{StaticResource MonsterReadGridStyle}">
+                            <Frame 
+                               WidthRequest="500"
+                                HeightRequest="500"
+                                BackgroundColor="#443a34"
+                                BorderColor="Black"
+                                Margin="10"
+                                Padding="10"
+                                CornerRadius="15">
 
-                                <Label Grid.Row="0" Grid.Column="0"
-                                    Text="Name : " 
-                                    Style="{StaticResource StyleLabel}"/>
+                                <StackLayout Style="{StaticResource PickedCharacterItemBox}">
+                                    
+                                    <!--Image-->
+                                        
+                                    <Image 
+                                           Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
 
-                                <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
-                                     x:Name="Name_Entry"
-                                     Style="{StaticResource EntryItemCreateNonStackStyle}"  TextChanged="EntryName_TextChanged"/>
+                                    <!--Name Field-->
+                                    <Grid Style="{StaticResource MonsterReadGridStyle}">
+                                        <Label Grid.Row="2" Grid.Column="0"
+                                            Text="Name : "  Style="{StaticResource StyleLabel}" HorizontalOptions="Center"/>
+                                    
 
-                                <!--Description Field-->
-                                <Label Grid.Row="2" Grid.Column="0"
-                                    Text="Description : " 
-                                    Style="{StaticResource StyleLabel}"/>
+                                        <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"
+                                            x:Name="Name_Entry"
+                                            Style="{StaticResource EntryItemCreateNonStackStyle}" HorizontalOptions="Center" TextChanged="EntryName_TextChanged"/>
 
-                                <Entry Grid.Row="2" Grid.Column="1"
-                                     Text="{Binding Data.Description, Mode=TwoWay}" 
-                                     x:Name="Description_Entry"
-                                     Style="{StaticResource EntryItemCreateNonStackStyle}"
-                                     TextChanged="EntryDescription_TextChanged"/>
+                                        <!--Description Field-->
+                                        <Label Grid.Row="4" Grid.Column="0"
+                                            Text="Description : " 
+                                            Style="{StaticResource StyleLabel}" HorizontalOptions="Center"/>
 
-                                <!--Difficulty-->
-                                <Label Grid.Row="4" Grid.Column="0"
-                                    Text="Difficulty : " 
-                                    Style="{StaticResource StyleLabel}"/>
+                                        <Entry Grid.Row="4" Grid.Column="1"
+                                             Text="{Binding Data.Description, Mode=TwoWay}" 
+                                             x:Name="Description_Entry"
+                                             Style="{StaticResource EntryItemCreateNonStackStyle}"
+                                             TextChanged="EntryDescription_TextChanged" HorizontalOptions="Center"/>
 
+                                        <!--Difficulty-->
+                                        <Label Grid.Row="6" Grid.Column="0"
+                                            Text="Difficulty : " 
+                                            Style="{StaticResource StyleLabel}" HorizontalOptions="Center"/>
 
-                                <Picker Grid.Row="4" Grid.Column="1"
+                                        <Picker Grid.Row="6" Grid.Column="1"
                                         ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
-                                    SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
-                                    x:Name="DifficultyPicker"
-                                    Style="{StaticResource EntryItemCreateNonStackStyle}"/>
+                                        SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
+                                        x:Name="DifficultyPicker"
+                                        Style="{StaticResource EntryItemCreateNonStackStyle}" HorizontalOptions="Center"/>
 
-                            </Grid>
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
 
                             <Grid Style="{StaticResource MonsterReadGridStyle}">
 
