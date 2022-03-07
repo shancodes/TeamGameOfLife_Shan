@@ -1044,6 +1044,8 @@ namespace Game.Views
                     quit_button.IsVisible = true;
                     StacklayoutGamePage.IsVisible = true;
                     messageframe.IsVisible = true;
+                    //removed navigation bar from battle page
+                    NavigationPage.SetHasNavigationBar(this, false);
 
                     //Next Attack button disabled
                     AttackButton.IsVisible = false;
