@@ -28,26 +28,26 @@
 
                                 <!--Name-->
                                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                                    <Label 
+                                <Label 
                                 Text="{Binding Data.Name}" 
-                                Style="{StaticResource StyleItemReadValueStyle}" />
+                                Style="{StaticResource StyleCharacterReadValueStyle}" />
                                 </StackLayout>
 
                                 <!--Description-->
                                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                                     <Label 
                                 Text="{Binding Data.Description}" 
-                                Style="{StaticResource StyleItemReadValueStyle}" />
+                                Style="{StaticResource StyleCharacterReadValueStyle}" />
                                 </StackLayout>
 
                                 <!--Level-->
                                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                                     <Label 
                                 Text="Level: " 
-                                Style="{StaticResource LabelStyle}"/>
+                                Style="{StaticResource NewFrameLabelStyle}"/>
                                     <Label 
                                 Text="{Binding Data.Level}" 
-                                Style="{StaticResource ValueStyle}"/>
+                                Style="{StaticResource NewFrameValueStyle}"/>
                                 </StackLayout>
                             </StackLayout>
                         </Frame>

@@ -248,6 +248,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NewFrameLabelStyle"
+                BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="TextColor" Value="#ffffff" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="NewLabelStyle"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
@@ -313,6 +319,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NewFrameValueStyle"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="TextColor" Value="#ffffff"/>
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="LabelItemCreateStackStyle"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalOptions" Value="Start" />
@@ -335,6 +347,12 @@
                 x:Key="StyleItemReadValueStyle"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="StyleCharacterReadValueStyle"
+                BasedOn="{StaticResource StyleItemReadValueStyle}">
+                <Setter Property="TextColor" Value="#ffffff" />
             </Style>
 
             <Style TargetType="Label"
@@ -1323,6 +1341,7 @@
             <Style TargetType="Frame"
                    x:Key="FrameForRead">
                 <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#443a34" />
                 <Setter Property="HeightRequest" Value="210" />
                 <Setter Property="WidthRequest" Value="200" />
             </Style>
