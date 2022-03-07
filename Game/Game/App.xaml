@@ -1367,8 +1367,8 @@
             </Style>
 
             <Style TargetType="Frame" x:Key="CrudiFrame_new">
-                <Setter Property="WidthRequest" Value="400"/>
-                <Setter Property="HeightRequest" Value="600"/>
+                <Setter Property="WidthRequest" Value="390"/>
+                <Setter Property="HeightRequest" Value="400"/>
                 <Setter Property="BackgroundColor" Value="#443a34"/>
                 <Setter Property="BorderColor" Value="Black"/>
                 <Setter Property="Margin" Value="10"/>
