@@ -28,55 +28,61 @@
     <ScrollView>
         <FlexLayout x:Name="flexLayout"
                         Style="{StaticResource FlexLayoutCrudi}">
-
             <StackLayout x:Name="StackLayout" Style="{StaticResource ItemReadStyle}">
 
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageItemCreatePageStyle}"/>
+                <Frame Style="{StaticResource CrudiFrame_readpage}">
 
-                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
-                    <Label Text="Name : " Style="{StaticResource StyleItemReadLabelStyle}"/>
+                    <StackLayout Style="{StaticResource PickedCharacterItemBox}">
+                        <FlexLayout
+                        Style="{StaticResource FlexLayoutCrudi}">
 
-                    <Label Text="{Binding Data.Name}"  Style="{StaticResource StyleItemReadValueStyle}" />
-            </StackLayout>
+                            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageItemCreatePageStyle}"/>
 
-                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
-                    <Label Text="Description : " Style="{StaticResource StyleItemReadLabelStyle}"/>
+                            <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
+                                <Label Text="Name : " Style="{StaticResource StyleItemReadLabelStyle}"/>
 
-                    <Label Text="{Binding Data.Description}" Style="{StaticResource StyleItemReadValueStyle}"/>
-            </StackLayout>
+                                <Label Text="{Binding Data.Name}"  Style="{StaticResource StyleItemReadValueStyle}" />
+                            </StackLayout>
 
-                <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
-                    <Label Text="Location : " Style="{StaticResource StyleItemReadLabelStyle}"/>
+                            <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
+                                <Label Text="Description : " Style="{StaticResource StyleItemReadLabelStyle}"/>
+                                <Label Text="{Binding Data.Description}" Style="{StaticResource StyleItemReadValueStyle}"/>
+                            </StackLayout>
 
-                    <Label Text="{Binding Data.Location}" Style="{StaticResource StyleItemReadValueStyle}"/>
-            </StackLayout>
+                            <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
+                                <Label Text="Location : " Style="{StaticResource StyleItemReadLabelStyle}"/>
+                                <Label Text="{Binding Data.Location}" Style="{StaticResource StyleItemReadValueStyle}"/>
+                            </StackLayout>
+                        </FlexLayout>
+                    </StackLayout>
+                </Frame>
 
-            <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
-                <Label
+                <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
+                    <Label
                     Text="Damage   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
-                <Label 
+                    <Label 
                     Text="{Binding Data.Damage}" Style="{StaticResource LabelItemReadStyle}"/>
-            </StackLayout>
+                </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
-                <Label
+                <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
+                    <Label
                     Text="Range   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
-                <Label 
+                    <Label 
                     Text="{Binding Data.Range}" Style="{StaticResource LabelItemReadStyle}"/>
-            </StackLayout>
+                </StackLayout>
 
-            <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
-                <Label
+                <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
+                    <Label
                     Text="Value   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
-                <Label 
+                    <Label 
                     Text="{Binding Data.Value}" Style="{StaticResource LabelItemReadStyle}"/>
-            </StackLayout>
+                </StackLayout>
 
-            <Grid Style="{StaticResource GridItemReadStyle}">
+                <Grid Style="{StaticResource GridItemReadStyle}">
                     <ImageButton Source="delete.png" Clicked="Delete_Clicked"  Grid.Row="0" Grid.Column="0" />
                     <ImageButton Source="done.png" Clicked="Done_Clicked" Grid.Row="0" Grid.Column="1"/>
                     <ImageButton Source="update.png" Clicked="Update_Clicked" Grid.Row="0" Grid.Column="2"/>
-            </Grid>
+                </Grid>
             </StackLayout>
         </FlexLayout>
     </ScrollView>
