@@ -16,10 +16,15 @@
     </NavigationPage.TitleView>
 
     <ScrollView >
-        <FlexLayout Style="{StaticResource FlexLayoutCrudi}">
-        <StackLayout Style="{StaticResource OuterBoxStack}">
+        <FlexLayout Style="{StaticResource Flexlayoutitemdelete}">
+            <StackLayout Style="{StaticResource Itemdeletepage}">
+                <Frame Style="{StaticResource CrudiFrame_new}">
 
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                    <StackLayout Style="{StaticResource PickedCharacterItemBox}">
+                        <FlexLayout
+                        Style="{StaticResource FlexLayoutCrudi}">
+
+                            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageItemdeletePageStyle}"/>
 
             <!--Stack layout for Name-->
             <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
@@ -52,6 +57,9 @@
                     
                 </StackLayout>
             </StackLayout>
+                        </FlexLayout>
+                    </StackLayout>
+                </Frame>
 
                 <StackLayout Style="{StaticResource HorizontalStackDeleteItemPageStyle}">
 

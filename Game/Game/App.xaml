@@ -529,6 +529,15 @@
             </Style>
 
             <Style TargetType="FlexLayout"
+                   x:Key="Flexlayoutitemdelete">
+                <Setter Property="AlignContent" Value="SpaceAround"/>
+                <Setter Property="AlignItems" Value="Center"/>
+                <Setter Property="Direction" Value="Column"/>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalOptions" Value="Center"></Setter>
+            </Style>
+
+            <Style TargetType="FlexLayout"
                    x:Key="FlexLayoutGamePage">
                 <Setter Property="AlignContent" Value="SpaceAround"/>
                 <Setter Property="JustifyContent" Value="Center"/>
@@ -744,6 +753,12 @@
 
             <Style TargetType="Image" x:Key="ImageItemCreatePageStyle" BasedOn="{StaticResource ImageLargeStyle}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+
+            <Style TargetType="Image" x:Key="ImageItemdeletePageStyle" BasedOn="{StaticResource ImageLargeStyle}">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HeightRequest" Value="200" />
+                <Setter Property="WidthRequest" Value="200" />
             </Style>
 
             <Style TargetType="Image" x:Key="BattleMapImageStyle">
@@ -1122,7 +1137,14 @@
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
-            
+
+            <Style TargetType="StackLayout"
+                x:Key="Itemdeletepage">
+                <Setter Property="Spacing" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            </Style>
+
             <Style TargetType="StackLayout"
                 x:Key="CharacterOuterBoxStack"
                 BasedOn="{StaticResource OuterBoxStack}">
