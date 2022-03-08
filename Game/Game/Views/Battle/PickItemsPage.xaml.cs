@@ -24,10 +24,10 @@ namespace Game.Views
             InitializeComponent();
 
             // Update the Found Number
-            TotalFound.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
+            TotalFound.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList.Distinct().Count().ToString();
 
             // Update the Selected Number, this gets updated later when selected refresh happens
-            TotalSelected.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+            TotalSelected.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList.Distinct().Count().ToString();
 
             DrawItemLists();
         }
@@ -46,7 +46,7 @@ namespace Game.Views
             DrawSelectedItems();
 
             // Only need to update the selected, the Dropped is set in the constructor
-            TotalSelected.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList.Count().ToString();
+            TotalSelected.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList.Distinct().Count().ToString();
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Game.Views
                 _ = ItemListSelectedFrame.Children.Remove(data);
             }
 
-            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList)
+            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelSelectList.Distinct())
             {
                 ItemListSelectedFrame.Children.Add(GetItemToDisplay(data));
             }
