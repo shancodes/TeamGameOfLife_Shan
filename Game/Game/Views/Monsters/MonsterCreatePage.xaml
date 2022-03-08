@@ -34,51 +34,58 @@
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterStack}">
 
-                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
+                        <Frame 
+                              Style="{StaticResource CrudiFrame}">
 
-                        <ImageButton 
+                            <StackLayout Style="{StaticResource PickedCharacterItemBox}">
+
+                                <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}"/>
+
+                                <ImageButton 
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
                                 Source="dice.png"
                                 Clicked="RollDice_Clicked"/>
 
-                        <Grid
+                                <Grid
                              Style="{StaticResource MonsterCreateGridStyle}" >
 
-                            <!--Grid for Name-->
-                            <Label Grid.Row="0" Grid.Column="0"
+                                    <!--Grid for Name-->
+                                    <Label Grid.Row="0" Grid.Column="0"
                                 Text="Name:" 
-                                Style="{StaticResource StyleLabel}"/>
+                                Style="{StaticResource CrudiFrameLabel}"/>
 
-                            <Entry Grid.Row="0" Grid.Column="1"
+                                    <Entry Grid.Row="0" Grid.Column="1"
                                 Text="{Binding Data.Name, Mode=TwoWay}"
                                 x:Name="Name_Entry"
                                 TextChanged="EntryName_TextChanged"
-                                Style="{StaticResource EntryItemCreateNonStackStyle}"/>
+                                Style="{StaticResource EntryCrudiFrame}"/>
 
-                            <!--Grid for Description-->
-                            <Label Grid.Row="1" Grid.Column="0"
+                                    <!--Grid for Description-->
+                                    <Label Grid.Row="1" Grid.Column="0"
                                 Text="Description:" 
-                                Style="{StaticResource StyleLabel}"/>
+                                Style="{StaticResource CrudiFrameLabel}"/>
 
-                            <Entry Grid.Row="1" Grid.Column="1"
+                                    <Entry Grid.Row="1" Grid.Column="1"
                                 Text="{Binding Data.Description, Mode=TwoWay}" 
                                 x:Name="Description_Entry"
                                 TextChanged="EntryDescription_TextChanged"
-                                Style="{StaticResource EntryItemCreateNonStackStyle}"/>
+                                Style="{StaticResource EntryCrudiFrame}"/>
 
-                            <!--Grid for Difficulty-->
-                            <Label Grid.Row="2" Grid.Column="0"
+                                    <!--Grid for Difficulty-->
+                                    <Label Grid.Row="2" Grid.Column="0"
                                 Text="Difficulty:" 
-                                Style="{StaticResource StyleLabel}"/>
+                                Style="{StaticResource CrudiFrameLabel}"/>
 
-                            <Picker Grid.Row="2" Grid.Column="1"
+                                    <Picker Grid.Row="2" Grid.Column="1"
                                 ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
                                 SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                 x:Name="DifficultyPicker"
-                                Style="{StaticResource EntryItemCreateNonStackStyle}"/>
+                                Style="{StaticResource EntryCrudiFrame}"/>
 
-                        </Grid>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
 
                         <Grid
                             Style="{StaticResource MonsterCreateGridStyle}" >
