@@ -143,6 +143,7 @@
     <Content Include="battleboard.png" />
     <Content Include="battle_grid.png" />
     <Content Include="begin_battle.png" />
+    <Content Include="black_knight.gif" />
     <Content Include="black_knight.png" />
     <Content Include="blazing_hammer.png" />
     <Content Include="burning_polyarm.png" />
@@ -171,8 +172,10 @@
     <Content Include="feet1.png" />
     <Content Include="feet2.png" />
     <Content Include="fiery_katana.png" />
+    <Content Include="fire_princess.gif" />
     <Content Include="fire_princess.png" />
     <Content Include="fire_ring.png" />
+    <Content Include="fire_wielder.gif" />
     <Content Include="fire_wielder.png" />
     <Content Include="hat1.png" />
     <Content Include="hat2.png" />
@@ -210,6 +213,7 @@
     <Content Include="neck1.png" />
     <Content Include="neck2.png" />
     <Content Include="next_round.png" />
+    <Content Include="night_walker.gif" />
     <Content Include="night_walker.png" />
     <Content Include="priya.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -222,6 +226,7 @@
     <Content Include="score.png" />
     <Content Include="scores_icon.png" />
     <Content Include="select_characters.png" />
+    <Content Include="sharpshooter.gif" />
     <Content Include="sharpshooter.png" />
     <Content Include="shield1.png" />
     <Content Include="shield2.png" />
@@ -229,6 +234,8 @@
     <Content Include="shield4.png" />
     <Content Include="shipra.png" />
     <Content Include="start.png" />
+    <Content Include="steelhand.gif" />
+    <Content Include="swiftblade.gif" />
     <Content Include="swiftblade.png" />
     <Content Include="swift_boots.png" />
     <Content Include="sword1.png" />
@@ -251,6 +258,7 @@
     <Content Include="troll6.png" />
     <Content Include="update.png" />
     <Content Include="village.png" />
+    <Content Include="wizard.gif" />
     <Content Include="wizard.png" />
   </ItemGroup>
   <ItemGroup>
