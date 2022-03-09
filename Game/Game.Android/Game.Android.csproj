@@ -445,6 +445,14 @@
     <AndroidResource Include="Resources\drawable\steelhand.gif" />
     <AndroidResource Include="Resources\drawable\swiftblade.gif" />
     <AndroidResource Include="Resources\drawable\wizard.gif" />
+    <AndroidResource Include="Resources\drawable\ice_queen_gif.gif" />
+    <AndroidResource Include="Resources\drawable\ice_princess_gif.gif" />
+    <AndroidResource Include="Resources\drawable\ice_knight_gif.gif" />
+    <AndroidResource Include="Resources\drawable\ice_jester_gif.gif" />
+    <AndroidResource Include="Resources\drawable\ice_bear_gif.gif" />
+    <AndroidResource Include="Resources\drawable\ice_wolf_gif.gif" />
+    <AndroidResource Include="Resources\drawable\ice_thief_gif.gif" />
+    <AndroidResource Include="Resources\drawable\ice_slime_gif.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
