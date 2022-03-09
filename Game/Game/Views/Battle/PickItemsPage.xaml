@@ -30,7 +30,7 @@
                         </StackLayout>
 
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
-                            <Label Text="Found : " Style="{StaticResource LabelStyle}"/>
+                            <Label Text="Found : " Style="{StaticResource NewColorLabelStyle}"/>
                             <Label Text="0" x:Name="TotalFound" Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
 
@@ -45,7 +45,7 @@
                         </StackLayout>
 
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
-                            <Label Text="Selected : " Style="{StaticResource LabelStyle}"/>
+                            <Label Text="Selected : " Style="{StaticResource NewColorLabelStyle}"/>
                             <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
                         </StackLayout>
 

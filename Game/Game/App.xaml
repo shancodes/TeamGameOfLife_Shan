@@ -248,6 +248,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NewColorLabelStyle"
+                BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="TextColor" Value="Wheat" />
+            </Style>
+            
+            <Style TargetType="Label"
                 x:Key="NewFrameLabelStyle"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="TextColor" Value="#ffffff" />
@@ -318,6 +324,13 @@
                 <Setter Property="Padding" Value="0,0,10,0"/>
             </Style>
 
+            <Style TargetType="Label"
+                x:Key="NewCharValueStyle"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="TextColor" Value="Wheat"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            
             <Style TargetType="Label"
                 x:Key="NewFrameValueStyle"
                 BasedOn="{StaticResource ValueStyle}">
@@ -417,7 +430,7 @@
             <Style TargetType="Label"
                 x:Key="MessageStyle"
                 BasedOn="{StaticResource HeaderStyle}">
-                <Setter Property="TextColor" Value= "{StaticResource TriciaryTextColor}"/>
+                <Setter Property="TextColor" Value= "Wheat"/>
             </Style>
 
             <Style TargetType="Label"

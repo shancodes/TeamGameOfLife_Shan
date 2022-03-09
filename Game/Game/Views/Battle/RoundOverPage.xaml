@@ -32,13 +32,13 @@
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource HorizontalReadItemStyle}" >
-                    <FlexLayout x:Name="CharacterListFrame"/>
+                    <FlexLayout x:Name="CharacterListFrame" />
                 </StackLayout>
 
                 <!-- List Of Monsters -->
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                    <Label Text="3" x:Name="TotalKilled" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
+                    <Label Text="3" x:Name="TotalKilled" Style="{StaticResource NewCharValueStyle}"/>
 
                     <Label Text="Monsters Killed" Style="{StaticResource MessageStyle}"/>
 
