@@ -82,8 +82,8 @@
 
                         <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" Style="{StaticResource ButtonInvisibleStyle}"/>
                         <Label x:Name="Characterdiedtext" Text="Character Died" Style="{StaticResource characterdiedtext}"></Label>
+                        <Image x:Name="characterimage" Source="black_knight.gif" IsAnimationPlaying="True" Style="{StaticResource ImageLargeStyle}" IsVisible="false"/>
                         <Label x:Name="monsterdiedtext" Text="Monster Died" Style="{StaticResource monsterdiedtext}"></Label>
-                        <Image x:Name="characterimage" Source="black_knight.png" Style="{StaticResource ImageSmallStyle}" IsVisible="false"/>
                         <Image x:Name="monsterimage" Source="black_knight.gif" IsAnimationPlaying="True" Style="{StaticResource ImageLargeStyle}" IsVisible="false"/>
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" Style="{StaticResource ButtonInvisibleStyle}"/>
                         <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" Style="{StaticResource ButtonInvisibleStyle}"/>
