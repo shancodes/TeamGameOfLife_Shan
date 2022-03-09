@@ -26,6 +26,7 @@ namespace Game.Models
             Difficulty = DifficultyEnum.Average;
             UniqueItem = null;
             ImageURI = "ice_thief.png";
+            GIFURI = "ice_thief_gif.gif";
             ExperienceTotal = 0;
             ExperienceRemaining = LevelTableHelper.LevelDetailsList[Level + 1].Experience - 1;
 
@@ -60,6 +61,7 @@ namespace Game.Models
             Description = newData.Description;
             Level = newData.Level;
             ImageURI = newData.ImageURI;
+            GIFURI = newData.GIFURI;
 
             Difficulty = newData.Difficulty;
 

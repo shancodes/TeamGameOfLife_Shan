@@ -48,6 +48,7 @@ namespace Game.Models
             OriginalHealth = CurrentHealth;
 
             ImageURI = data.ImageURI;
+            GIFURI = data.GIFURI;
 
             // Set the strings for the items
             Head = data.Head;
@@ -91,6 +92,7 @@ namespace Game.Models
             OriginalHealth = CurrentHealth;
 
             ImageURI = data.ImageURI;
+            GIFURI = data.GIFURI;
 
             // Set the strings for the items
             Head = data.Head;
@@ -155,6 +157,7 @@ namespace Game.Models
             Description = data.Description;
             Speed = data.GetSpeed();
             ImageURI = data.ImageURI;
+            GIFURI = data.GIFURI;
             MaxHealth = data.GetMaxHealthTotal;
             CurrentHealth = data.GetCurrentHealthTotal;
             OriginalHealth = CurrentHealth;
