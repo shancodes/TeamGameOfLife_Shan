@@ -115,6 +115,8 @@
     <Content Include="Assets\SmallTile.scale-200.png" />
     <Content Include="Assets\SmallTile.scale-400.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-400.png" />
     <Content Include="Assets\Square150x150Logo.scale-100.png" />
@@ -210,6 +212,9 @@
     <Content Include="items_icon.png" />
     <Content Include="knight.png" />
     <Content Include="kruta.png" />
+    <Content Include="logo_large_150.png" />
+    <Content Include="logo_large_300.png" />
+    <Content Include="logo_large_600.png" />
     <Content Include="logo_medium.png" />
     <Content Include="logo_small.png" />
     <Content Include="long_flame_sword.png" />
