@@ -31,7 +31,7 @@
 
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
                             <Label Text="Found : " Style="{StaticResource NewColorLabelStyle}"/>
-                            <Label Text="0" x:Name="TotalFound" Style="{StaticResource ValueStyle}"/>
+                            <Label Text="0" x:Name="TotalFound" Style="{StaticResource NewCharValueStyle}"/>
                         </StackLayout>
 
                         <FlexLayout x:Name="ItemListFoundFrame"
@@ -46,7 +46,7 @@
 
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
                             <Label Text="Selected : " Style="{StaticResource NewColorLabelStyle}"/>
-                            <Label Text="0" x:Name="TotalSelected" Style="{StaticResource ValueStyle}"/>
+                            <Label Text="0" x:Name="TotalSelected" Style="{StaticResource NewCharValueStyle}"/>
                         </StackLayout>
 
                         <FlexLayout x:Name="ItemListSelectedFrame"
