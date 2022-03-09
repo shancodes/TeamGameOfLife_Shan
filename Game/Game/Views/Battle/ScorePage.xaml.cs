@@ -43,13 +43,13 @@ namespace Game.Views
             }
 
             // Draw the Monsters
-            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.MonsterModelDeathList.Distinct())
+            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.MonsterModelDeathList)
             {
                 MonsterListFrame.Children.Add(CreateMonsterDisplayBox(data));
             }
 
             // Draw the Items
-            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList.Distinct())
+            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList)
             {
                 ItemListFrame.Children.Add(CreateItemDisplayBox(data));
             }
