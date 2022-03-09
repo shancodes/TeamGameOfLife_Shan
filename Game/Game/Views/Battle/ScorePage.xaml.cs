@@ -49,14 +49,14 @@ namespace Game.Views
             }
 
             // Draw the Items
-            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList)
+            foreach (var data in EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList.Distinct())
             {
                 ItemListFrame.Children.Add(CreateItemDisplayBox(data));
             }
 
             // Update Values in the UI
             TotalKilled.Text = EngineViewModel.Engine.EngineSettings.BattleScore.MonsterModelDeathList.Count().ToString();
-            TotalCollected.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList.Count().ToString();
+            TotalCollected.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ItemModelDropList.Distinct().Count().ToString();
             TotalScore.Text = EngineViewModel.Engine.EngineSettings.BattleScore.ExperienceGainedTotal.ToString();
         }
 
