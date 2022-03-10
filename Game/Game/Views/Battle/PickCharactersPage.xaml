@@ -83,7 +83,7 @@
                 </Frame>
 
             <StackLayout>
-                <Label Text="User Difficulty" Style="{StaticResource BoldText}" HorizontalOptions="Center"/>
+                <Label Text="User Difficulty" Style="{StaticResource BoldTextColor}" HorizontalOptions="Center"/>
             </StackLayout>
             <Grid>
                 <Button Text="Noob" Grid.Row="0" Grid.Column="0" Style="{StaticResource BoldText}" x:Name="noobbutton" Clicked="noobbutton_Clicked"/>
