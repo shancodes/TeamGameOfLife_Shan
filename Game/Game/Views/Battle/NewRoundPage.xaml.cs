@@ -16,6 +16,7 @@ namespace Game.Views
     {
         // This uses the Instance so it can be shared with other Battle Pages as needed
         public BattleEngineViewModel EngineViewModel = BattleEngineViewModel.Instance;
+        string difficulty_text;
 
         /// <summary>
         /// Constructor
@@ -59,6 +60,32 @@ namespace Game.Views
             if (data == null)
             {
                 data = new PlayerInfoModel();
+            }
+            
+
+            if(data.Difficulty == DifficultyEnum.Average)
+            {                
+                difficulty_text = "Average";
+            }
+            else if(data.Difficulty == DifficultyEnum.Difficult)
+            {
+                difficulty_text = "Difficult";
+            }
+            else if (data.Difficulty == DifficultyEnum.Easy)
+            {
+                difficulty_text = "Easy";
+            }
+            else if (data.Difficulty == DifficultyEnum.Hard)
+            {
+                difficulty_text = "Hard";
+            }
+            else if (data.Difficulty == DifficultyEnum.Impossible)
+            {
+                difficulty_text = "Impossible";
+            }
+            else if (data.Difficulty == DifficultyEnum.Unknown)
+            {
+                difficulty_text = "Unknown";
             }
 
             // Hookup the image
@@ -112,22 +139,54 @@ namespace Game.Views
                 TextColor = Color.Wheat
             };
 
-            // Put the Image Button and Text inside a layout
-            var PlayerStack = new StackLayout
+            var PlayerDifficultyLabel = new Label()
             {
-                Style = (Style)Application.Current.Resources["PlayerInfoBox"],
+                Text = difficulty_text,
+                Style = (Style)Application.Current.Resources["ValueStyle"],
                 HorizontalOptions = LayoutOptions.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
                 Padding = 0,
-                Spacing = 0,
-                Children = {
+                LineBreakMode = LineBreakMode.TailTruncation,
+                CharacterSpacing = 1,
+                LineHeight = 1,
+                MaxLines = 1,
+                TextColor = Color.Wheat
+            };
+
+            if(data.PlayerType == PlayerTypeEnum.Character)
+            {
+                // Put the Image Button and Text inside a layout
+                var PlayerStack = new StackLayout
+                {
+                    Style = (Style)Application.Current.Resources["PlayerInfoBox"],
+                    HorizontalOptions = LayoutOptions.Center,
+                    Padding = 0,
+                    Spacing = 0,
+                    Children = {
                     PlayerImage,
                     PlayerNameLabel,
                     PlayerLevelLabel,
                     PlayerHPLabel,
                 },
-            };
-
-            return PlayerStack;
+                };
+                return PlayerStack;
+            }
+            else
+            {
+                var MonsterStack = new StackLayout
+                {
+                    Style = (Style)Application.Current.Resources["PlayerInfoBox"],
+                    HorizontalOptions = LayoutOptions.Center,
+                    Padding = 0,
+                    Spacing = 0,
+                    Children = {
+                    PlayerImage,
+                    PlayerNameLabel,
+                    PlayerDifficultyLabel,
+                },
+                };
+                return MonsterStack;
+            }
         }
     }
 }
