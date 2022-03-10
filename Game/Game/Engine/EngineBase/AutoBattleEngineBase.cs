@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -137,6 +138,11 @@ namespace Game.Engine.EngineBase
             }
 
             return true;
+        }
+
+        public virtual IEnumerable getBattleMessagesList()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -36,6 +37,8 @@ namespace Game.Engine.EngineGame
         // Output Score
         #endregion Algrorithm
 
+        public ObservableCollection<string> battleMessages = new ObservableCollection<string>();
+
         public new IBattleEngineInterface Battle
         {
             get
@@ -57,7 +60,11 @@ namespace Game.Engine.EngineGame
         public override async Task<bool> RunAutoBattle()
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
+            
+            battleMessages.Clear();
             RoundEnum RoundCondition;
+
+            battleMessages.Add("Auto Battle Starting");
 
             Debug.WriteLine("Auto Battle Starting");
 
@@ -76,6 +83,7 @@ namespace Game.Engine.EngineGame
                 // Check for excessive duration.
                 if (DetectInfinateLoop())
                 {
+                    battleMessages.Add("Aborting, More than Max Rounds");
                     Debug.WriteLine("Aborting, More than Max Rounds");
                     _ = Battle.EndBattle();
                     return false;
@@ -86,6 +94,10 @@ namespace Game.Engine.EngineGame
                 // Do the turn...
                 // If the round is over start a new one...
                 RoundCondition = Battle.Round.RoundNextTurn();
+                string roundMessage = Battle.EngineSettings.BattleMessagesModel.GetTurnMessage();
+                if (roundMessage != "Unknown") {
+                    battleMessages.Add(roundMessage);
+                }
 
                 if (RoundCondition == RoundEnum.NewRound)
                 {
@@ -95,6 +107,7 @@ namespace Game.Engine.EngineGame
 
             } while (RoundCondition != RoundEnum.GameOver);
 
+            battleMessages.Add("Game Over");
             Debug.WriteLine("Game Over");
 
             // Wrap up
@@ -155,5 +168,9 @@ namespace Game.Engine.EngineGame
           
         }
 
+        public override IEnumerable getBattleMessagesList()
+        {
+            return battleMessages;
+        }
     }
 }

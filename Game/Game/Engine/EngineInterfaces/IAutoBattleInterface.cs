@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections;
+using System.Threading.Tasks;
 
 namespace Game.Engine.EngineInterfaces
 {
@@ -9,5 +10,6 @@ namespace Game.Engine.EngineInterfaces
         Task<bool> RunAutoBattle();
         bool DetectInfinateLoop();
         bool CreateCharacterParty();
+        IEnumerable getBattleMessagesList();
     }
 }
