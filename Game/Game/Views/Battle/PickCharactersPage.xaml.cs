@@ -166,29 +166,26 @@ namespace Game.Views
             probutton.BackgroundColor = default;
         }
 
-
-        public void UpdateUserDifficulty(object sender, EventArgs e)
+        public void noobbutton_Clicked(object sender, EventArgs e)
         {
-            var btn = (Button)sender;
-            UnsetUserDifficultyStyles(); 
+            UnsetUserDifficultyStyles();
+            EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Noob;
+            noobbutton.BackgroundColor = Color.Green;
+        }
 
-            if (btn.Text == "Noob")
-            {
-                EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Noob;
-                btn.BackgroundColor = Color.Green;
-            }
+        public void joebutton_Clicked(object sender, EventArgs e)
+        {
+            UnsetUserDifficultyStyles();
+            EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Joe;
+            joebutton.BackgroundColor = Color.Green;
 
-            if (btn.Text == "Joe")
-            {
-                EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Joe;
-                btn.BackgroundColor = Color.Green;
-            }
+        }
 
-            if (btn.Text == "Pro")
-            {
-                EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Pro;
-                btn.BackgroundColor = Color.Green;
-            }
+        public void probutton_Clicked(object sender, EventArgs e)
+        {
+            UnsetUserDifficultyStyles();
+            EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Pro;
+            probutton.BackgroundColor = Color.Green;
         }
     }
 }
