@@ -190,6 +190,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="ListStyleColor"
+                BasedOn="{StaticResource ListStyle}">
+                <Setter Property="TextColor" Value="Wheat" />
+            </Style>
+
+            <Style TargetType="Label"
                    x:Key="ListStyleCenter"
                    BasedOn="{StaticResource ListStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
@@ -947,7 +953,8 @@
 
             <Style TargetType="Button"
                 x:Key="VisibleButton">
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="TextColor" Value="Wheat" />
+                <Setter Property="FontAttributes" Value="Bold" />
             </Style>
 
             <!-- ImageButton -->
@@ -1465,7 +1472,8 @@
             <Style TargetType="Frame" x:Key="AutoBattleFrame">
                 <Setter Property="WidthRequest" Value="500"/>
                 <Setter Property="HeightRequest" Value="500"/>
-                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="BorderColor" Value="Maroon"/>
+                <Setter Property="BackgroundColor" Value="LightYellow"/>
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="Padding" Value="10" />
                 <Setter Property="CornerRadius" Value="15"/>

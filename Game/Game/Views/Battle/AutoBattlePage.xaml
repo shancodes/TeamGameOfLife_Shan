@@ -63,7 +63,7 @@
                     HorizontalOptions="CenterAndExpand"
                     VerticalTextAlignment="Center"
                     HorizontalTextAlignment="Center"
-                    Style="{StaticResource ListStyle}"
+                    Style="{StaticResource ListStyleColor}"
                     />
 
                     <Image
