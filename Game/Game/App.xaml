@@ -1440,6 +1440,12 @@
                 <Setter Property="BorderColor" Value="Black"/>
             </Style>
 
+            <Style TargetType="Frame" x:Key="NewCrudiFrameStyle">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="BorderColor" Value="Black"/>
+            </Style>
+
             <Style TargetType="Frame" x:Key="CrudiFrame_readpage">
                 <Setter Property="WidthRequest" Value="450"/>
                 <Setter Property="HeightRequest" Value="250"/>

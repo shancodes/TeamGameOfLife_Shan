@@ -32,7 +32,7 @@
                     <DataTemplate>
                         <Frame Style="{StaticResource NewCrudiFrame}" >
                             <Grid Style="{StaticResource GridIndexStyle}">
-                                <Frame BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Frame Style="{StaticResource NewCrudiFrameStyle}">
                                     <Image Grid.RowSpan="2"
                                          Source="{Binding ImageURI}"
                                          Style="{StaticResource ImageMediumStyle}"/>
@@ -40,29 +40,29 @@
 
                                 <!--Name-->
                                 <Label Grid.Column="1"
-                                Text="{Binding Name}"/>
+                                    Text="{Binding Name}"/>
 
                                 <!--Attack-->
                                 <Label 
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                Text="Attack:"/>
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text="Attack:"/>
 
                                 <Label Grid.Row="1" Grid.Column="2" Text="{Binding GetAttackTotal}"></Label>
 
                                 <!--Defense-->
                                 <Label 
-                                Grid.Row="2"
-                                Grid.Column="1"
-                                Text="Defense:"/>
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Text="Defense:"/>
 
                                 <Label Grid.Row="2" Grid.Column="2" Text="{Binding GetDefenseTotal}"></Label>
 
                                 <!--Speed-->
                                 <Label 
-                                Grid.Row="3"
-                                Grid.Column="1"
-                                Text="Speed:"/>
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Text="Speed:"/>
 
                                 <Label Grid.Row="3" Grid.Column="2" Text="{Binding GetSpeedTotal}"></Label>
 
