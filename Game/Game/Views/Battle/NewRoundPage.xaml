@@ -9,13 +9,13 @@
 
             <StackLayout Style="{StaticResource VerticalStack}">
 
-                <Label Text="Get Ready for the Battle" Style="{StaticResource CenterMessageLargeStyle}"/>
+                <Label Text="Get Ready for the Battle" Style="{StaticResource NewMessageLargeStyle}"/>
 
                 <Label Text="Characters" Style="{StaticResource NewRoundPageLabelStyle}"/>
 
                 <FlexLayout x:Name="PartyListFrame" Style="{StaticResource FlexLayoutNextRoundPageStyle}"/>
 
-                <Label Text="V/S" Style="{StaticResource CenterMessageLargeStyle}"></Label>
+                <Label Text="V/S" Style="{StaticResource NewMessageLargeStyle}"></Label>
 
                 <Label Text="Monsters" Style="{StaticResource NewRoundPageLabelStyle}"/>
 

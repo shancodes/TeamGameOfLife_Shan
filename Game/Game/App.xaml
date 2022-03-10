@@ -530,6 +530,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NewMessageLargeStyle"
+                BasedOn="{StaticResource CenterMessageLargeStyle}">
+                <Setter Property="TextColor" Value="Wheat" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="CenterMessageLargeStylewithColor"
                 BasedOn="{StaticResource CenterMessageStyle}">
                 <Setter Property="TextColor" Value="Wheat" />
