@@ -49,6 +49,19 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void ViewBattleInfo_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.ViewBattleInfo_Clicked(null, null);
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true);
+        }
+
+        [Test]
         public void AutoBattlePage_AttackButton_Clicked_Default_Should_Pass()
         {
             // Arrange
