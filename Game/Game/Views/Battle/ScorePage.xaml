@@ -21,7 +21,7 @@
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                         <Label 
                                Text="Game Date: " 
-                               Style="{StaticResource StyleItemReadLabelStyle}" />
+                               Style="{StaticResource BattleScoreLabel}" />
                         <Label 
                                 x:Name="CurrentDateTime" 
                                 Style="{StaticResource StyleItemReadValueStyle}" />
@@ -30,20 +30,20 @@
                     <!--Score-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text=" Your Score" Style="{StaticResource CenterMessageLargeStyle}"/>
+                        <Label Text=" Your Score" Style="{StaticResource Thankyoulabel}"/>
 
                     </StackLayout>
 
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text=" " x:Name="TotalScore" Style="{StaticResource CenterMessageLargeStyle}"/>
+                        <Label Text=" " x:Name="TotalScore" Style="{StaticResource AutoBattleLabel}"/>
 
                     </StackLayout>
 
                     <!--List Of Characters-->
                     <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                        <Label Text="Characters" Style="{StaticResource CenterMessageStyle}"/>
+                        <Label Text="Characters" Style="{StaticResource CenterMessageLargeStylewithColor}"/>
                     </StackLayout>
 
                     <StackLayout Style="{StaticResource HorizontalReadItemStyle}" >
@@ -57,9 +57,9 @@
 
                         <Label Text=" " x:Name="TotalKilled" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
 
-                        <Label Text="Monsters" Style="{StaticResource CenterMessageStyle}"/>
+                        <Label Text="Monsters" Style="{StaticResource CenterMessageLargeStylewithColor}"/>
 
-                        <Label Text="Killed" Style="{StaticResource CenterMessageStyle}"/>
+                        <Label Text="Killed" Style="{StaticResource CenterMessageLargeStylewithColor}"/>
 
                     </StackLayout>
 
@@ -74,9 +74,9 @@
 
                         <Label Text=" " x:Name="TotalCollected" FontSize="Medium" Style="{StaticResource ValueStyle}"/>
 
-                        <Label Text="Items" Style="{StaticResource CenterMessageStyle}"/>
+                        <Label Text="Items" Style="{StaticResource CenterMessageLargeStylewithColor}"/>
 
-                        <Label Text="Collected" Style="{StaticResource CenterMessageStyle}"/>
+                        <Label Text="Collected" Style="{StaticResource CenterMessageLargeStylewithColor}"/>
 
                     </StackLayout>
 

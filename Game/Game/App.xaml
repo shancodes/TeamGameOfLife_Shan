@@ -323,6 +323,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="BattleScoreLabel"
+                BasedOn="{StaticResource StyleItemReadLabelStyle}">
+                <Setter Property="TextColor" Value="Wheat" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="StyleItemReadStackLabelStyle"
                 BasedOn="{StaticResource LabelBaseStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
@@ -512,6 +518,12 @@
                 x:Key="CenterMessageLargeStyle"
                 BasedOn="{StaticResource CenterMessageStyle}">
                 <Setter Property="FontSize" Value="Large" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="CenterMessageLargeStylewithColor"
+                BasedOn="{StaticResource CenterMessageStyle}">
+                <Setter Property="TextColor" Value="Wheat" />
             </Style>
 
             <Style TargetType="Label"
