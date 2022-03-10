@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game.Views.AutoBattlePage"
              >
+    <NavigationPage.TitleView>
+        <StackLayout Style="{StaticResource NavigationHeader}">
+            <Label Text="Auto Battle" Style="{StaticResource TitleHeader}"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <ScrollView Style="{StaticResource ScrollViewGamePage}">
@@ -70,8 +75,8 @@
 
                 <StackLayout>
 
-                    <Button Text="View Battle Info" Clicked="ViewBattleInfo_Clicked"></Button>
-                    <Frame Style="{StaticResource AutoBattleFrame}">
+                    <Button Text="View Battle Info" Clicked="ViewBattleInfo_Clicked" Style="{StaticResource VisibleButton}"></Button>
+                    <Frame x:Name="AutoBattleFrame" Style="{StaticResource AutoBattleFrame}">
                         
                     <ListView x:Name="battleMessagesList"></ListView>
                         

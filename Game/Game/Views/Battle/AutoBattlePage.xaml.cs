@@ -23,6 +23,7 @@ namespace Game.Views
         public AutoBattlePage()
         {
             InitializeComponent();
+            AutoBattleFrame.IsVisible = false; 
         }
 
         public async void AutobattleButton_Clicked(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace Game.Views
             var Character = new CharacterModel
             {
                 ExperienceTotal = 300,    // Enough for next level
-                Name = "Mike Level Example",
+                Name = "Fire Fighter",
                 Speed = 100,    // Go first
             };
 
@@ -55,6 +56,7 @@ namespace Game.Views
 
         public void ViewBattleInfo_Clicked(object sender, EventArgs e)
         {
+            AutoBattleFrame.IsVisible = true;
             battleMessagesList.ItemsSource = AutoBattle.getBattleMessagesList();
         }
     }
