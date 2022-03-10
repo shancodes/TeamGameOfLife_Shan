@@ -248,6 +248,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="PopLabelStyle"
+                BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="TextColor" Value="DarkBlue" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="NewCharLabelStyle"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="TextColor" Value="#FFFFFF" />
@@ -334,6 +340,12 @@
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
                 <Setter Property="Padding" Value="0,0,10,0"/>
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="PopValueStyle"
+                BasedOn="{StaticResource ValueStyle}">
+                <Setter Property="TextColor" Value="DarkBlue"/>
             </Style>
 
             <Style TargetType="Label"
@@ -546,6 +558,7 @@
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="DarkBlue" />
             </Style>
 
             <Style TargetType="Label"
@@ -945,6 +958,10 @@
             <Style TargetType="Button" x:Key="NewButtonStyle">
                 <Setter Property="TextColor" Value="AntiqueWhite"/>
                 <Setter Property="BackgroundColor" Value="RosyBrown"/>
+            </Style>
+
+            <Style TargetType="Button" x:Key="NewColorButton">
+                <Setter Property="TextColor" Value="DarkBlue"/>
             </Style>
 
             <Style TargetType="Button" x:Key="ButtonItemReadStyle">
