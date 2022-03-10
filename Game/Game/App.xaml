@@ -1421,6 +1421,15 @@
                 <Setter Property="CornerRadius" Value="15"/>
             </Style>
 
+            <Style TargetType="Frame" x:Key="AutoBattleFrame">
+                <Setter Property="WidthRequest" Value="500"/>
+                <Setter Property="HeightRequest" Value="500"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+
             <Style TargetType="Frame" x:Key="CrudiFrame">
                 <Setter Property="WidthRequest" Value="500"/>
                 <Setter Property="HeightRequest" Value="500"/>
