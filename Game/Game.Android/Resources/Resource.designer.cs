@@ -16967,88 +16967,91 @@ namespace Game.Droid
 			public const int shipra = 2131165428;
 			
 			// aapt resource value: 0x7F0700F5
-			public const int start = 2131165429;
+			public const int sky_background = 2131165429;
 			
 			// aapt resource value: 0x7F0700F6
-			public const int steelhand = 2131165430;
-			
-			// aapt resource value: 0x7F0700F8
-			public const int swiftblade = 2131165432;
+			public const int start = 2131165430;
 			
 			// aapt resource value: 0x7F0700F7
-			public const int swift_boots = 2131165431;
+			public const int steelhand = 2131165431;
 			
 			// aapt resource value: 0x7F0700F9
-			public const int sword1 = 2131165433;
+			public const int swiftblade = 2131165433;
+			
+			// aapt resource value: 0x7F0700F8
+			public const int swift_boots = 2131165432;
 			
 			// aapt resource value: 0x7F0700FA
-			public const int sword10 = 2131165434;
+			public const int sword1 = 2131165434;
 			
 			// aapt resource value: 0x7F0700FB
-			public const int sword11 = 2131165435;
+			public const int sword10 = 2131165435;
 			
 			// aapt resource value: 0x7F0700FC
-			public const int sword2 = 2131165436;
+			public const int sword11 = 2131165436;
 			
 			// aapt resource value: 0x7F0700FD
-			public const int sword3 = 2131165437;
+			public const int sword2 = 2131165437;
 			
 			// aapt resource value: 0x7F0700FE
-			public const int sword4 = 2131165438;
+			public const int sword3 = 2131165438;
 			
 			// aapt resource value: 0x7F0700FF
-			public const int sword5 = 2131165439;
+			public const int sword4 = 2131165439;
 			
 			// aapt resource value: 0x7F070100
-			public const int sword6 = 2131165440;
+			public const int sword5 = 2131165440;
 			
 			// aapt resource value: 0x7F070101
-			public const int sword7 = 2131165441;
+			public const int sword6 = 2131165441;
 			
 			// aapt resource value: 0x7F070102
-			public const int sword8 = 2131165442;
+			public const int sword7 = 2131165442;
 			
 			// aapt resource value: 0x7F070103
-			public const int sword9 = 2131165443;
+			public const int sword8 = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int test_custom_background = 2131165444;
+			public const int sword9 = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int tooltip_frame_dark = 2131165445;
+			public const int test_custom_background = 2131165445;
 			
 			// aapt resource value: 0x7F070106
-			public const int tooltip_frame_light = 2131165446;
+			public const int tooltip_frame_dark = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int troll = 2131165447;
+			public const int tooltip_frame_light = 2131165447;
 			
 			// aapt resource value: 0x7F070108
-			public const int troll1 = 2131165448;
+			public const int troll = 2131165448;
 			
 			// aapt resource value: 0x7F070109
-			public const int troll2 = 2131165449;
+			public const int troll1 = 2131165449;
 			
 			// aapt resource value: 0x7F07010A
-			public const int troll3 = 2131165450;
+			public const int troll2 = 2131165450;
 			
 			// aapt resource value: 0x7F07010B
-			public const int troll4 = 2131165451;
+			public const int troll3 = 2131165451;
 			
 			// aapt resource value: 0x7F07010C
-			public const int troll5 = 2131165452;
+			public const int troll4 = 2131165452;
 			
 			// aapt resource value: 0x7F07010D
-			public const int troll6 = 2131165453;
+			public const int troll5 = 2131165453;
 			
 			// aapt resource value: 0x7F07010E
-			public const int update = 2131165454;
+			public const int troll6 = 2131165454;
 			
 			// aapt resource value: 0x7F07010F
-			public const int village = 2131165455;
+			public const int update = 2131165455;
 			
 			// aapt resource value: 0x7F070110
-			public const int wizard = 2131165456;
+			public const int village = 2131165456;
+			
+			// aapt resource value: 0x7F070111
+			public const int wizard = 2131165457;
 			
 			static Drawable()
 			{

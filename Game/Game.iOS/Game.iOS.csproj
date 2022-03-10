@@ -457,4 +457,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\homepage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sky_background.png" />
+  </ItemGroup>
 </Project>

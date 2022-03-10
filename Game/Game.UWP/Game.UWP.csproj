@@ -273,6 +273,7 @@
     <Content Include="shield3.png" />
     <Content Include="shield4.png" />
     <Content Include="shipra.png" />
+    <Content Include="sky_background.png" />
     <Content Include="start.png" />
     <Content Include="steelhand.gif" />
     <Content Include="swiftblade.gif" />
