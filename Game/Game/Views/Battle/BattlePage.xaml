@@ -111,7 +111,7 @@
 
             <!--The Game Over Screen -->
             <StackLayout Style="{StaticResource VerticalStackThankYouPageStyle}" x:Name="GameOverDisplay" >
-                <Label Text="Thank you for Playing!" Style="{StaticResource CenterMessageLargeStyle}"/>
+                <Label Text="Thank you for Playing!" Style="{StaticResource Thankyoulabel}"/>
 
                 <StackLayout Style="{StaticResource ThankYouPageHorizontalStackStyle}">
                     <ImageButton x:Name="ShowScoreButton" Source="score.png" Clicked="ShowScoreButton_Clicked"/>
