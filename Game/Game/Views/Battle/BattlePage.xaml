@@ -87,7 +87,7 @@
                         <Image x:Name="monsterimage" Source="black_knight.gif" IsAnimationPlaying="True" Style="{StaticResource ImageLargeStyle}" IsVisible="false"/>
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" Style="{StaticResource ButtonInvisibleStyle}"/>
                         <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" Style="{StaticResource ButtonInvisibleStyle}"/>
-                        <Button x:Name="DoneButton" Clicked="DoneButton_Clicked" BorderColor="Black" BackgroundColor="#EBDDCF" Text="Character Location selected" Style="{StaticResource ButtonInvisibleStyle}"/>
+                        <Button x:Name="DoneButton" Clicked="DoneButton_Clicked" BorderColor="Black" BackgroundColor="#EBDDCF" TextColor="DarkBlue" Text="Character Location selected" Style="{StaticResource ButtonInvisibleStyle}"/>
                     </StackLayout>
 
                     <StackLayout 
