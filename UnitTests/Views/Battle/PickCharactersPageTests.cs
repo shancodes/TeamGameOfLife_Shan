@@ -9,6 +9,7 @@ using Game;
 using Game.Views;
 using Game.ViewModels;
 using Game.Models;
+using Game.GameRules;
 
 namespace UnitTests.Views
 {
@@ -193,18 +194,63 @@ namespace UnitTests.Views
         [Test]
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_InValid_Should_Pass()
         {
-            //// Arrange
-            
-            CollectionView cv = (CollectionView)page.FindByName("CharactersListView");
+            // Arrange
 
-            //// Act
-            /// Trigger OnDatabaseCharacterItemSelected by setting SelectedItem on CollectionView
-            cv.SelectedItem = null;
+            CollectionView CharactersListView = (CollectionView)page.FindByName("CharactersListView");
+            var list = new ObservableCollection<CharacterModel>(DefaultData.LoadData(new CharacterModel()));
+            CharactersListView.ItemsSource = list;
 
-            //// Reset
+            // Act
 
-            //// Assert
-            Assert.IsTrue(true); 
+            // Triggers the OnCollectionViewSelectionChanged
+            CharactersListView.SelectedItem = list[0];
+
+            // Reset
+            CharactersListView.SelectedItem = null;
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void PickCharactersPage_On_NoobClicked_Should_Pass() {
+            // Arrange
+            var btn = (Button) page.FindByName("noobbutton");
+
+            //Act
+            page.noobbutton_Clicked(null, new System.EventArgs());
+
+            Assert.IsTrue(true);
+        }
+
+        [Test]
+        public void PickCharactersPage_On_JoeClicked_Should_Pass() {
+            // Arrange
+            var btn = (Button)page.FindByName("noobbutton");
+
+            //Act
+            page.joebutton_Clicked(null, new System.EventArgs());
+
+            Assert.IsTrue(true);
+        }
+
+        [Test]
+        public void PickCharactersPage_On_ProClicked_Should_Pass() {
+            // Arrange
+            var btn = (Button)page.FindByName("pro");
+
+            //Act
+            page.probutton_Clicked(null, new System.EventArgs());
+
+            Assert.IsTrue(true);
+        }
+
+        [Test]
+        public void PickCharactersPage_UnsetUserDifficultyStyles_Should_Pass()
+        {
+            page.UnsetUserDifficultyStyles();
+
+            Assert.IsTrue(true);
         }
     }
 }
