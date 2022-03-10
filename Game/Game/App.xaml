@@ -933,6 +933,11 @@
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
             </Style>
 
+            <Style TargetType="Button"
+                x:Key="VisibleButton">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
             <!-- ImageButton -->
             <Style TargetType="ImageButton"
                    x:Key="BattleToolbarStyle">
