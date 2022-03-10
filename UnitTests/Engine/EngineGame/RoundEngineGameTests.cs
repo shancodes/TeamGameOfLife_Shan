@@ -14,6 +14,8 @@ using NUnit.Framework;
 using Game.Engine.EngineGame;
 using Game.Models;
 using Game.Engine.EngineBase;
+using System.Collections.Generic;
+using static Game.Engine.EngineModels.EngineSettingsModel;
 
 namespace UnitTests.Engine.EngineGame
 {
@@ -824,5 +826,28 @@ namespace UnitTests.Engine.EngineGame
             Assert.AreEqual(0, result);
         }
         #endregion AddUserCreatedMonsters
+
+        #region setMonsterList
+        [Test]
+        public void RoundEngine_setMonstersList_Valid_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            RoundEngine roundEngine = new RoundEngine();
+
+            roundEngine.setMonstersList(UserDifficultyEnum.Pro);
+
+            var result = roundEngine.DbMonsterList;
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(8, roundEngine.DbMonsterList.Count);
+            int firstDifficulty = (int) result[0].Difficulty;
+            int lastDifficulty = (int)result[7].Difficulty;
+            Assert.GreaterOrEqual(lastDifficulty, firstDifficulty);
+        }
+        #endregion setMonsterList
     }
 }
