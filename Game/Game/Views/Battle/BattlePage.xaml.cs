@@ -833,7 +833,8 @@ namespace Game.Views
         /// <param name="e"></param>
         public async void ExitButton_Clicked(object sender, EventArgs e)
         {
-            _ = await Navigation.PopModalAsync();
+            GamePage gamepage = new GamePage();
+            await Navigation.PushModalAsync(new NavigationPage(gamepage));
         }
 
         /// <summary>
