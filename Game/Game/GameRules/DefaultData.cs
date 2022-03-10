@@ -476,7 +476,7 @@ namespace Game.GameRules
                     Description = "Big and Ugly",
                     ImageURI = "ice_thief.png",
                     GIFURI = "ice_thief_gif.gif",
-                    Difficulty = DifficultyEnum.Average,
+                    Difficulty = DifficultyEnum.Easy,
                 },
 
                 new MonsterModel {
@@ -484,7 +484,7 @@ namespace Game.GameRules
                     Description = "Large Monster Bear",
                     ImageURI = "ice_bear.png",
                     GIFURI = "ice_bear_gif.gif",
-                    Difficulty = DifficultyEnum.Difficult,
+                    Difficulty = DifficultyEnum.Easy,
                 },
 
                 new MonsterModel {
@@ -492,7 +492,7 @@ namespace Game.GameRules
                     Description = "and fast",
                     ImageURI = "ice_jester.png",
                     GIFURI = "ice_jester_gif.gif",
-                    Difficulty = DifficultyEnum.Hard,
+                    Difficulty = DifficultyEnum.Average,
                 },
 
                 new MonsterModel {
@@ -508,7 +508,7 @@ namespace Game.GameRules
                     Description = "Powerful Monster Queen",
                     ImageURI = "ice_queen.png",
                     GIFURI = "ice_queen_gif.gif",
-                    Difficulty = DifficultyEnum.Difficult,
+                    Difficulty = DifficultyEnum.Hard,
                 },
 
                 new MonsterModel {
@@ -532,7 +532,7 @@ namespace Game.GameRules
                     Description = "Fast Monster Wolf",
                     ImageURI = "ice_wolf.png",
                      GIFURI = "ice_wolf_gif.gif",
-                    Difficulty = DifficultyEnum.Easy,
+                    Difficulty = DifficultyEnum.Difficult,
                 },
             };
 
@@ -551,7 +551,7 @@ namespace Game.GameRules
                     Description = "Large Monster Bear",
                     ImageURI = "ice_bear.png",
                     GIFURI = "ice_bear_gif.gif",
-                    Difficulty = DifficultyEnum.Difficult,
+                    Difficulty = DifficultyEnum.Hard,
                 },
 
                 new MonsterModel {
@@ -567,7 +567,7 @@ namespace Game.GameRules
                     Description = "Monster Princess",
                     ImageURI = "ice_princess.png",
                     GIFURI = "ice_princess_gif.gif",
-                    Difficulty = DifficultyEnum.Average,
+                    Difficulty = DifficultyEnum.Difficult,
                 },
 
                 new MonsterModel {
@@ -583,7 +583,7 @@ namespace Game.GameRules
                     Description = "Powerful Monster Black Knight",
                     ImageURI = "ice_knight.png",
                     GIFURI = "ice_knight_gif.gif",
-                     Difficulty = DifficultyEnum.Hard,
+                     Difficulty = DifficultyEnum.Difficult,
                 },
 
                  new MonsterModel {
@@ -591,7 +591,7 @@ namespace Game.GameRules
                     Description = "Cruel Monster Slime",
                     ImageURI = "ice_slime.png",
                     GIFURI = "ice_slime_gif.gif",
-                    Difficulty = DifficultyEnum.Hard,
+                    Difficulty = DifficultyEnum.Impossible,
                 },
 
                 new MonsterModel {
@@ -599,7 +599,7 @@ namespace Game.GameRules
                     Description = "Fast Monster Wolf",
                     ImageURI = "ice_wolf.png",
                      GIFURI = "ice_wolf_gif.gif",
-                    Difficulty = DifficultyEnum.Easy,
+                    Difficulty = DifficultyEnum.Impossible,
                 },
             };
 
@@ -610,7 +610,7 @@ namespace Game.GameRules
                     Description = "Big and Ugly",
                     ImageURI = "ice_thief.png",
                     GIFURI = "ice_thief_gif.gif",
-                    Difficulty = DifficultyEnum.Average,
+                    Difficulty = DifficultyEnum.Easy,
                 },
 
                 new MonsterModel {
@@ -618,7 +618,7 @@ namespace Game.GameRules
                     Description = "Large Monster Bear",
                     ImageURI = "ice_bear.png",
                     GIFURI = "ice_bear_gif.gif",
-                    Difficulty = DifficultyEnum.Difficult,
+                    Difficulty = DifficultyEnum.Easy,
                 },
 
                 new MonsterModel {
@@ -626,7 +626,7 @@ namespace Game.GameRules
                     Description = "and fast",
                     ImageURI = "ice_jester.png",
                     GIFURI = "ice_jester_gif.gif",
-                    Difficulty = DifficultyEnum.Hard,
+                    Difficulty = DifficultyEnum.Easy,
                 },
 
                 new MonsterModel {
@@ -634,7 +634,7 @@ namespace Game.GameRules
                     Description = "Monster Princess",
                     ImageURI = "ice_princess.png",
                     GIFURI = "ice_princess_gif.gif",
-                    Difficulty = DifficultyEnum.Average,
+                    Difficulty = DifficultyEnum.Easy,
                 },
 
                 new MonsterModel {
@@ -642,7 +642,7 @@ namespace Game.GameRules
                     Description = "Powerful Monster Queen",
                     ImageURI = "ice_queen.png",
                     GIFURI = "ice_queen_gif.gif",
-                    Difficulty = DifficultyEnum.Difficult,
+                    Difficulty = DifficultyEnum.Average,
                 },
 
                 new MonsterModel {
@@ -650,7 +650,7 @@ namespace Game.GameRules
                     Description = "Powerful Monster Black Knight",
                     ImageURI = "ice_knight.png",
                     GIFURI = "ice_knight_gif.gif",
-                     Difficulty = DifficultyEnum.Hard,
+                     Difficulty = DifficultyEnum.Average,
                 },
 
                  new MonsterModel {
@@ -658,7 +658,7 @@ namespace Game.GameRules
                     Description = "Cruel Monster Slime",
                     ImageURI = "ice_slime.png",
                     GIFURI = "ice_slime_gif.gif",
-                    Difficulty = DifficultyEnum.Hard,
+                    Difficulty = DifficultyEnum.Average,
                 },
 
                 new MonsterModel {
@@ -666,7 +666,7 @@ namespace Game.GameRules
                     Description = "Fast Monster Wolf",
                     ImageURI = "ice_wolf.png",
                      GIFURI = "ice_wolf_gif.gif",
-                    Difficulty = DifficultyEnum.Easy,
+                    Difficulty = DifficultyEnum.Average,
                 },
             };
 

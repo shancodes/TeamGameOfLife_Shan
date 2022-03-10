@@ -54,6 +54,7 @@ namespace UnitTests.Engine.EngineModels
             result.CurrentActionAbility = AbilityEnum.Heal;
             result.RoundStateEnum = RoundEnum.Unknown;
             result.BattleStateEnum = BattleStateEnum.Unknown;
+            result.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Noob;
 
             // Reset
 
@@ -70,6 +71,7 @@ namespace UnitTests.Engine.EngineModels
             Assert.IsNotNull(result.PlayerList);
             Assert.IsNotNull(result.MapModel);
             Assert.IsNotNull(result.BattleSettingsModel);
+            Assert.IsNotNull(result.userDifficulty);
 
             Assert.AreEqual(6, result.MaxNumberPartyCharacters);
             Assert.AreEqual(6, result.MaxNumberPartyMonsters);
@@ -81,7 +83,6 @@ namespace UnitTests.Engine.EngineModels
             Assert.AreEqual(AbilityEnum.Heal, result.CurrentActionAbility);
             Assert.AreEqual(RoundEnum.Unknown, result.RoundStateEnum);
             Assert.AreEqual(BattleStateEnum.Unknown, result.BattleStateEnum);
-
         }
 
     }

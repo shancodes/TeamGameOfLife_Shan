@@ -9,6 +9,7 @@ using Game.Engine.EngineModels;
 using Game.GameRules;
 using Game.Models;
 using Game.ViewModels;
+using static Game.Engine.EngineModels.EngineSettingsModel;
 
 namespace Game.Engine.EngineGame
 {
@@ -18,7 +19,28 @@ namespace Game.Engine.EngineGame
     public class RoundEngine : RoundEngineBase, IRoundEngineInterface
     {
         // Hold the BaseEngine
-        public new EngineSettingsModel EngineSettings = EngineSettingsModel.Instance; 
+        public new EngineSettingsModel EngineSettings = EngineSettingsModel.Instance;
+
+        public Dictionary<DifficultyEnum, int> healthMap;
+        public ObservableCollection<MonsterModel> DbMonsterList;
+        public List<List<MonsterModel>> monstersList;
+
+        public RoundEngine() {
+            healthMap = new Dictionary<DifficultyEnum, int>();
+            healthMap[DifficultyEnum.Unknown] = 0;
+            healthMap[DifficultyEnum.Easy] = 1;
+            healthMap[DifficultyEnum.Average] = 2;
+            healthMap[DifficultyEnum.Difficult] = 3;
+            healthMap[DifficultyEnum.Hard] = 4;
+            healthMap[DifficultyEnum.Impossible] = 5;
+            monstersList = DefaultData.LoadDataForDifficulties();
+        }
+
+        public void setMonstersList(UserDifficultyEnum userDifficulty)
+        {
+            var monstersForDifficulty = monstersList[(int)userDifficulty];
+            DbMonsterList = new ObservableCollection<MonsterModel>(monstersForDifficulty);
+        }
 
         // The Turn Engine 
         public new ITurnEngineInterface Turn
@@ -74,38 +96,13 @@ namespace Game.Engine.EngineGame
         }
 
         public void AddUserCreatedMonsters()
-        {  
-            var monstersList = DefaultData.LoadDataForDifficulties();
-            var monstersForDifficulty = monstersList[(int)EngineSettingsModel.Instance.userDifficulty];
-            ObservableCollection<MonsterModel> DbMonsterList = new ObservableCollection<MonsterModel>(monstersForDifficulty);
-
-            // If there are no Monsters in the system, return a default one
-            if (DbMonsterList.Count == 0)
-            {
-                return;
-            }
-
-            DbMonsterList = new ObservableCollection<MonsterModel>(DbMonsterList.OrderBy(i => i.Level));
+        {
+            setMonstersList(EngineSettingsModel.Instance.userDifficulty);
 
             for (var i = 0; i < EngineSettings.MaxNumberPartyMonsters && i < DbMonsterList.Count; i++)
             {
                 //set the monster's health based on difficulty  level
-                if(DbMonsterList[i].Difficulty == DifficultyEnum.Average)
-                {
-                    DbMonsterList[i].CurrentHealth = 1;
-
-                }
-                else if (DbMonsterList[i].Difficulty == DifficultyEnum.Difficult)
-                {
-                    DbMonsterList[i].CurrentHealth = 2;
-
-                }
-
-                else if (DbMonsterList[i].Difficulty == DifficultyEnum.Hard)
-                {
-                    DbMonsterList[i].CurrentHealth = 5;
-
-                }
+                DbMonsterList[i].CurrentHealth = healthMap[DbMonsterList[i].Difficulty];
 
                 EngineSettings.MonsterList.Add(new PlayerInfoModel(DbMonsterList[i]));
             }
