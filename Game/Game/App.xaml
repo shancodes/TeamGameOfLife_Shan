@@ -248,6 +248,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NewCharLabelStyle"
+                BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="TextColor" Value="#FFFFFF" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="NewColorLabelStyle"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="TextColor" Value="Wheat" />
@@ -395,6 +401,12 @@
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="End" />
                 <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="NewValueStyleTextRight"
+                BasedOn="{StaticResource ValueStyleTextRight}">
+                <Setter Property="TextColor" Value="#FFFFFF" />
             </Style>
 
 

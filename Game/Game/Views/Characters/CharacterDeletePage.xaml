@@ -32,13 +32,13 @@
 
                         <Label 
                     Text="Name: " 
-                    Style="{StaticResource LabelStyle}"/>
+                    Style="{StaticResource NewCharLabelStyle}"/>
 
                         <StackLayout Style="{StaticResource HorizontalStack}" >
 
                             <Label 
                                 Text="{Binding Data.Name}" 
-                                Style="{StaticResource ValueStyleTextRight}"/>
+                                Style="{StaticResource NewValueStyleTextRight}"/>
 
                         </StackLayout>
 
@@ -49,13 +49,13 @@
 
                         <Label 
                             Text="Description: " 
-                            Style="{StaticResource LabelStyle}"/>
+                            Style="{StaticResource NewCharLabelStyle}"/>
 
                         <StackLayout Style="{StaticResource HorizontalStack}" >
 
                             <Label 
                             Text="{Binding Data.Description}" 
-                            Style="{StaticResource ValueStyleTextRight}"/>
+                            Style="{StaticResource NewValueStyleTextRight}"/>
 
                         </StackLayout>
 
