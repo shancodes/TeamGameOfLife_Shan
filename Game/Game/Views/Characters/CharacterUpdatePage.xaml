@@ -51,7 +51,7 @@
 
                                         <Label Grid.Row="0" Grid.Column="0"
                                             Text="Name: " 
-                                            Style="{StaticResource StyleLabel}"/>
+                                            Style="{StaticResource NewStyleLabel}"/>
 
                                         <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
                                             x:Name="Name_Entry"
@@ -60,7 +60,7 @@
                                         <!--Description Field-->
                                         <Label Grid.Row="1" Grid.Column="0"
                                            Text="Description: " 
-                                           Style="{StaticResource StyleLabel}"/>
+                                           Style="{StaticResource NewStyleLabel}"/>
 
                                         <Entry Grid.Row="1" Grid.Column="1"
                                             Text="{Binding Data.Description, Mode=TwoWay}" 
@@ -70,16 +70,16 @@
 
                                         <Label Grid.Row="2" Grid.Column="0"
                                             Text="Max HP: " 
-                                            Style="{StaticResource StyleLabel}"/>
+                                            Style="{StaticResource NewStyleLabel}"/>
 
                                         <Label Grid.Row="2" Grid.Column="1"
                                             x:Name="MaxHealthValue"
-                                            Style="{StaticResource LabelCharacterCreateStyle}"/>
+                                            Style="{StaticResource ColorCreateStyle}"/>
 
                                         <!--Level-->
                                         <Label Grid.Row="3" Grid.Column="0"
                                             Text="Level: " 
-                                            Style="{StaticResource StyleLabel}"/>
+                                            Style="{StaticResource NewStyleLabel}"/>
 
                                         <Picker Grid.Row="3" Grid.Column="1"
                                             SelectedItem="{Binding SelectedItemProperty}" 

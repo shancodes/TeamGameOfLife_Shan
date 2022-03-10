@@ -293,6 +293,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NewStyleLabel"
+                BasedOn="{StaticResource StyleLabel}">
+                <Setter Property="TextColor" Value="#FFFFFF" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="NewLabel"
                 BasedOn="{StaticResource LabelStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
@@ -355,7 +361,13 @@
                 <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="Padding" Value="10,10,40,10"/>
             </Style>
-            
+
+            <Style TargetType="Label"
+                x:Key="ColorCreateStyle"
+                BasedOn="{StaticResource LabelCharacterCreateStyle}">
+                <Setter Property="TextColor" Value="#FFFFFF" />
+            </Style>
+
             <Style TargetType="Label"
                 x:Key="LabelItemReadStyle"
                 BasedOn="{StaticResource ValueStyle}">
