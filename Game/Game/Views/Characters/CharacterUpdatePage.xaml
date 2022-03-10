@@ -33,54 +33,59 @@
                     <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
                         <StackLayout Style="{StaticResource CharacterStackBox}" >
 
-                            <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageItemCreatePageStyle}" />
-                            <ImageButton 
+                            <Frame 
+                              Style="{StaticResource CrudiFrame}">
+                                <StackLayout Style="{StaticResource PickedCharacterItemBox}">
+                                    <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageItemCreatePageStyle}" />
+                                    <ImageButton 
                                 x:Name="RollDice"
                                 Style="{StaticResource BattleToolbarStyle}"
                                 Source="dice.png"
                                 Clicked="RollDice_Clicked"/>
 
-                            <!--Name Field-->
-                            <Grid Style="{StaticResource MonsterReadGridStyle}">
+                                    <!--Name Field-->
+                                    <Grid Style="{StaticResource MonsterReadGridStyle}">
 
-                                <Label Grid.Row="0" Grid.Column="0"
+                                        <Label Grid.Row="0" Grid.Column="0"
                                     Text="Name: " 
                                     Style="{StaticResource StyleLabel}"/>
 
-                                <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
+                                        <Entry Text="{Binding Data.Name, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"
                                      x:Name="Name_Entry"
                                      Style="{StaticResource EntryItemCreateNonStackStyle}" TextChanged="EntryName_TextChanged"/>
 
-                                <!--Description Field-->
-                                <Label Grid.Row="1" Grid.Column="0"
+                                        <!--Description Field-->
+                                        <Label Grid.Row="1" Grid.Column="0"
                                     Text="Description: " 
                                     Style="{StaticResource StyleLabel}"/>
 
-                                <Entry Grid.Row="1" Grid.Column="1"
+                                        <Entry Grid.Row="1" Grid.Column="1"
                                      Text="{Binding Data.Description, Mode=TwoWay}" 
                                      x:Name="Description_Entry"
                                      Style="{StaticResource EntryItemCreateNonStackStyle}"
                                      TextChanged="EntryDescription_TextChanged"/>
 
-                                <Label Grid.Row="2" Grid.Column="0"
+                                        <Label Grid.Row="2" Grid.Column="0"
                                     Text="Max HP: " 
                                     Style="{StaticResource StyleLabel}"/>
 
-                                <Label Grid.Row="2" Grid.Column="1"
+                                        <Label Grid.Row="2" Grid.Column="1"
                                     x:Name="MaxHealthValue"
                                     Style="{StaticResource LabelCharacterCreateStyle}"/>
 
-                                <!--Level-->
-                                <Label Grid.Row="3" Grid.Column="0"
+                                        <!--Level-->
+                                        <Label Grid.Row="3" Grid.Column="0"
                                     Text="Level: " 
                                     Style="{StaticResource StyleLabel}"/>
 
-                                <Picker Grid.Row="3" Grid.Column="1"
+                                        <Picker Grid.Row="3" Grid.Column="1"
                                     SelectedItem="{Binding SelectedItemProperty}" 
                                     SelectedIndexChanged="Level_Changed"
                                     Style="{StaticResource CharacterUpdatePicker}"
                                     x:Name="LevelPicker"/>
-                            </Grid>
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
 
                             <Grid Style="{StaticResource MonsterReadGridStyle}">
 
