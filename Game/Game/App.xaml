@@ -21,8 +21,8 @@
                 -->
 
             <Color x:Key="PageBackgroundColor">#efe8e4</Color>
-            <Color x:Key="ViewBackgroundColor">Teal</Color>
-            <Color x:Key="NavigationBarColor">Teal</Color>
+            <Color x:Key="ViewBackgroundColor">#2C3E4C</Color>
+            <Color x:Key="NavigationBarColor">#443a34</Color>
 
             <Color x:Key="PrimaryBackgroundColor">red</Color>
             <Color x:Key="SecondaryBackgroundColor">gray</Color>
@@ -439,7 +439,7 @@
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
-                <Setter Property="TextColor" Value="{StaticResource TriciaryTextColor}" />
+                <Setter Property="TextColor" Value="#FFFFFF" />
             </Style>
 
             <Style TargetType="Label"
