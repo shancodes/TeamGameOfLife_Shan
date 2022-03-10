@@ -30,41 +30,44 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Style="{StaticResource GridIndexStyle}">
+                        <Frame Style="{StaticResource NewCrudiFrame}" >
+                            <Grid Style="{StaticResource GridIndexStyle}">
+                                <Frame BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Grid.RowSpan="2"
+                                         Source="{Binding ImageURI}"
+                                         Style="{StaticResource ImageMediumStyle}"/>
+                                </Frame>
 
-                            <Image Grid.RowSpan="2"
-                                Source="{Binding ImageURI}"
-                                Style="{StaticResource ImageMediumStyle}"/>
-
-                            <!--Name-->
-                            <Label Grid.Column="1"
+                                <!--Name-->
+                                <Label Grid.Column="1"
                                 Text="{Binding Name}"/>
 
-                            <!--Attack-->
-                            <Label 
+                                <!--Attack-->
+                                <Label 
                                 Grid.Row="1"
                                 Grid.Column="1"
                                 Text="Attack:"/>
 
-                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding GetAttackTotal}"></Label>
+                                <Label Grid.Row="1" Grid.Column="2" Text="{Binding GetAttackTotal}"></Label>
 
-                            <!--Defense-->
-                            <Label 
+                                <!--Defense-->
+                                <Label 
                                 Grid.Row="2"
                                 Grid.Column="1"
                                 Text="Defense:"/>
 
-                            <Label Grid.Row="2" Grid.Column="2" Text="{Binding GetDefenseTotal}"></Label>
+                                <Label Grid.Row="2" Grid.Column="2" Text="{Binding GetDefenseTotal}"></Label>
 
-                            <!--Speed-->
-                            <Label 
+                                <!--Speed-->
+                                <Label 
                                 Grid.Row="3"
                                 Grid.Column="1"
                                 Text="Speed:"/>
 
-                            <Label Grid.Row="3" Grid.Column="2" Text="{Binding GetSpeedTotal}"></Label>
+                                <Label Grid.Row="3" Grid.Column="2" Text="{Binding GetSpeedTotal}"></Label>
 
-                        </Grid>
+                            </Grid>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

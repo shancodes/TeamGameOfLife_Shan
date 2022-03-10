@@ -442,7 +442,7 @@
             <Style TargetType="Label"
                 x:Key="MessageStyle"
                 BasedOn="{StaticResource HeaderStyle}">
-                <Setter Property="TextColor" Value= "Wheat"/>
+                <Setter Property="TextColor" Value= "Black"/>
             </Style>
 
             <Style TargetType="Label"
@@ -1433,6 +1433,13 @@
                 <Setter Property="Padding" Value="10" />
                 <Setter Property="CornerRadius" Value="30"/>
             </Style>
+
+            <Style TargetType="Frame" x:Key="NewCrudiFrame">
+                <Setter Property="MinimumWidthRequest" Value="20"/>
+                <Setter Property="MinimumHeightRequest" Value="20"/>
+                <Setter Property="BorderColor" Value="Black"/>
+            </Style>
+
             <Style TargetType="Frame" x:Key="CrudiFrame_readpage">
                 <Setter Property="WidthRequest" Value="450"/>
                 <Setter Property="HeightRequest" Value="250"/>
