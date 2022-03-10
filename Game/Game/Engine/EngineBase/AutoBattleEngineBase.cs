@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -36,6 +37,8 @@ namespace Game.Engine.EngineBase
         #endregion Algrorithm
 
         // The Battle Engine
+
+        public ObservableCollection<string> battleMessages = new ObservableCollection<string>();
         public IBattleEngineInterface Battle { get; set; } = null;
 
         /// <summary>
@@ -142,7 +145,7 @@ namespace Game.Engine.EngineBase
 
         public virtual IEnumerable getBattleMessagesList()
         {
-            throw new System.NotImplementedException();
+            return battleMessages;
         }
     }
 }

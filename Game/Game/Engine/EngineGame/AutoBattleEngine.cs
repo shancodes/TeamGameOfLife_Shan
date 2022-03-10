@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -36,8 +34,6 @@ namespace Game.Engine.EngineGame
         // Save Score
         // Output Score
         #endregion Algrorithm
-
-        public ObservableCollection<string> battleMessages = new ObservableCollection<string>();
 
         public new IBattleEngineInterface Battle
         {
@@ -166,11 +162,6 @@ namespace Game.Engine.EngineGame
             return true;
 
           
-        }
-
-        public override IEnumerable getBattleMessagesList()
-        {
-            return battleMessages;
         }
     }
 }
