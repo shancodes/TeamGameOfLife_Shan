@@ -18,7 +18,7 @@
 
                     <Entry
                         x:Name="ServerItemValue"
-                        Style="{DynamicResource NewEntryStyle}"
+                        Style="{DynamicResource ColorEntryStyle}"
                     />
                 </StackLayout>
 

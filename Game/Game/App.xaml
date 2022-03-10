@@ -1622,6 +1622,11 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
+            <Style TargetType="Entry"
+                x:Key="ColorEntryStyle" BasedOn="{StaticResource NewEntryStyle}">
+                <Setter Property="TextColor" Value="DarkBlue" />
+            </Style>
+
             <Style x:Key="EntryItemCreateNonStackStyle" TargetType="Entry" BasedOn="{StaticResource EntryStyle}" >
                 <Setter Property="HorizontalOptions" Value="Start"/>
             </Style>
