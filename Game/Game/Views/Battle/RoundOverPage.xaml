@@ -20,14 +20,14 @@
 
                 <!-- Round Details -->
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
-                    <Label Text="ROUND " Style="{StaticResource MessageStyle}"/>
-                    <Label Text="0" x:Name="TotalRound" FontSize="Medium" Style="{StaticResource MessageStyle}"/>
+                    <Label Text="ROUND " Style="{StaticResource NewWheatMessageStyle}"/>
+                    <Label Text="0" x:Name="TotalRound" FontSize="Medium" Style="{StaticResource NewWheatMessageStyle}"/>
                 </StackLayout>
 
                 <!-- List Of Characters -->
                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                    <Label Text="Characters" Style="{StaticResource MessageStyle}"/>
+                    <Label Text="Characters" Style="{StaticResource NewWheatMessageStyle}"/>
 
                 </StackLayout>
 
@@ -40,7 +40,7 @@
 
                     <Label Text="3" x:Name="TotalKilled" Style="{StaticResource NewCharValueStyle}"/>
 
-                    <Label Text="Monsters Killed" Style="{StaticResource MessageStyle}"/>
+                    <Label Text="Monsters Killed" Style="{StaticResource NewWheatMessageStyle}"/>
 
                 </StackLayout>
 

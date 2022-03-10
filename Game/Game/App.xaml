@@ -446,6 +446,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="NewWheatMessageStyle"
+                BasedOn="{StaticResource MessageStyle}">
+                <Setter Property="TextColor" Value= "Wheat"/>
+            </Style>
+            
+            <Style TargetType="Label"
                 x:Key="TitleHeader"
                 BasedOn="{StaticResource HeaderStyle}">
                 <Setter Property="FontSize" Value="Medium" />

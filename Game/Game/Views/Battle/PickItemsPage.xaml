@@ -25,7 +25,7 @@
                         <!-- Items Details Found in the pool -->
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                            <Label Text="Items Found" Style="{StaticResource MessageStyle}"/>
+                            <Label Text="Items Found" Style="{StaticResource NewWheatMessageStyle}"/>
 
                         </StackLayout>
 
@@ -40,7 +40,7 @@
                         <!-- Items Details Selected from the pool -->
                         <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
 
-                            <Label Text="Items Selected" Style="{StaticResource MessageStyle}"/>
+                            <Label Text="Items Selected" Style="{StaticResource NewWheatMessageStyle}"/>
 
                         </StackLayout>
 
