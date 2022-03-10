@@ -27,6 +27,9 @@ namespace Game.Views
 
         public async void AutobattleButton_Clicked(object sender, EventArgs e)
         {
+            var BattleStartMessage = "Auto Battle Started..";
+
+            BattleMessageValue.Text = BattleStartMessage;
             // Call into Auto Battle from here to do the Battle...
 
             // To See Level UP happening, a character needs to be close to the next level
@@ -48,6 +51,11 @@ namespace Game.Views
             BattleMessageValue.Text = BattleMessage;
 
             AutobattleImage.Source = "troll6_d.gif";
+        }
+
+        public void ViewBattleInfo_Clicked(object sender, EventArgs e)
+        {
+            battleMessagesList.ItemsSource = AutoBattle.getBattleMessagesList();
         }
     }
 }

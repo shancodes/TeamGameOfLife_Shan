@@ -68,6 +68,16 @@
 
                 </StackLayout>
 
+                <StackLayout>
+
+                    <Button Text="View Battle Info" Clicked="ViewBattleInfo_Clicked"></Button>
+                    <Frame Style="{StaticResource AutoBattleFrame}">
+                        
+                    <ListView x:Name="battleMessagesList"></ListView>
+                        
+                    </Frame>
+                </StackLayout>
+
             </FlexLayout>
         </ScrollView>
     </ContentPage.Content>
