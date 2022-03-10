@@ -1594,6 +1594,10 @@
                 <Setter Property="HorizontalOptions" Value="Start"/>
             </Style>
 
+            <Style x:Key="ColorNonStackStyle" TargetType="Entry" BasedOn="{StaticResource EntryItemCreateNonStackStyle}" >
+                <Setter Property="TextColor" Value="DarkBlue"/>
+            </Style>
+
             <Style x:Key="EntryCrudiFrame" TargetType="Entry" BasedOn="{StaticResource EntryItemCreateNonStackStyle}" >
                 <Setter Property="HorizontalOptions" Value="Center"/>
             </Style>
@@ -1678,6 +1682,11 @@
                  x:Key="CharacterUpdatePicker">
                 <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="WidthRequest" Value="280"/>
+            </Style>
+
+            <Style TargetType="Picker"
+                 x:Key="NewUpdatePicker" BasedOn="{StaticResource CharacterUpdatePicker}">
+                <Setter Property="TextColor" Value="DarkBlue" />
             </Style>
 
         </ResourceDictionary>

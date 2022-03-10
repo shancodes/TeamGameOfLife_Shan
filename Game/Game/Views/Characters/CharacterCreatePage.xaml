@@ -57,7 +57,7 @@
 
                                         <Entry Grid.Row="0" Grid.Column="1"
                                             Text="{Binding Data.Name, Mode=TwoWay}" 
-                                            Style="{StaticResource EntryItemCreateNonStackStyle}"
+                                            Style="{StaticResource ColorNonStackStyle}"
                                             x:Name="Name_Entry"
                                             TextChanged="EntryName_TextChanged"/>
 
@@ -68,7 +68,7 @@
 
                                         <Entry Grid.Row="1" Grid.Column="1"
                                             Text="{Binding Data.Description, Mode=TwoWay}" 
-                                            Style="{StaticResource EntryItemCreateNonStackStyle}"
+                                            Style="{StaticResource ColorNonStackStyle}"
                                             x:Name="Description_entry"
                                             TextChanged="EntryDescription_TextChanged"/>
 
@@ -81,7 +81,7 @@
                                             SelectedItem="{Binding SelectedItemProperty}" 
                                             SelectedIndexChanged="Level_Changed"
                                             x:Name="LevelPicker"
-                                            Style="{StaticResource CharacterUpdatePicker}"/>
+                                            Style="{StaticResource NewUpdatePicker}"/>
 
                                         <!--Grid for Max Health-->
                                         <Label Grid.Row="3" Grid.Column="0"
@@ -217,7 +217,8 @@
 
                             <Button x:Name="PopupCloseButton" 
                                 Clicked="ClosePopup_Clicked" 
-                                Text="Close"/>
+                                Text="Close"
+                                Style="{StaticResource NewColorButton}"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
