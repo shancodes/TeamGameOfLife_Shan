@@ -17,7 +17,7 @@
     <ScrollView Style="{StaticResource ScrollViewOrientation}">
 
         <StackLayout>
-            <Label Text="Selected Characters" Style="{StaticResource CenterMessageStyle}" />
+            <Label Text="Selected Characters" Style="{StaticResource CenterMessageLargeStylewithColor}" />
 
             <Frame Style="{StaticResource PickedCharactersFrame}">
                 <CollectionView 
@@ -48,8 +48,8 @@
 
                 </CollectionView>
             </Frame>
-            
-            <Label Text="Pick Characters" Style="{StaticResource CenterMessageStyle}" />
+
+            <Label Text="Pick Characters To Begin Battle" Style="{StaticResource CenterMessageLargeStylewithColor}" />
 
             <!--To choose Characters-->
             <Frame Style="{StaticResource PickCharactersFrame}">
