@@ -34,107 +34,115 @@
             <StackLayout Style="{StaticResource Boundaries}">
 
                 <ScrollView>
-                    <StackLayout Style="{StaticResource OuterBoxStack}" >
+                    <StackLayout Style="{StaticResource CharacterOuterBoxStack}" >
+                        <StackLayout Style="{StaticResource CharacterStackBox}" >
+                            <Frame 
+                              Style="{StaticResource CrudiFrame}">
+                                <StackLayout Style="{StaticResource PickedCharacterItemBox}">
+                                    <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" />
 
-                        <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageLargeStyle}" />
+                                    <ImageButton 
+                                        x:Name="RollDice"
+                                        Style="{StaticResource BattleToolbarStyle}"
+                                        Source="dice.png"
+                                        Clicked="RollDice_Clicked"/>
 
-                        <ImageButton 
-                                x:Name="RollDice"
-                                Style="{StaticResource BattleToolbarStyle}"
-                                Source="dice.png"
-                                Clicked="RollDice_Clicked"/>
+                                    <Grid
+                                        Style="{StaticResource CharacterCreateGridStyle}" >
 
-                        <Grid
-                            Style="{StaticResource CharacterCreateGridStyle}" >
+                                        <!--Grid for Name-->
+                                        <Label Grid.Row="0" Grid.Column="0"
+                                            Text="Name:" 
+                                            Style="{StaticResource StyleLabel}"/>
 
-                            <!--Grid for Name-->
-                            <Label Grid.Row="0" Grid.Column="0"
-                                Text="Name:" 
-                                Style="{StaticResource StyleLabel}"/>
+                                        <Entry Grid.Row="0" Grid.Column="1"
+                                            Text="{Binding Data.Name, Mode=TwoWay}" 
+                                            Style="{StaticResource EntryItemCreateNonStackStyle}"
+                                            x:Name="Name_Entry"
+                                            TextChanged="EntryName_TextChanged"/>
 
-                            <Entry Grid.Row="0" Grid.Column="1"
-                                Text="{Binding Data.Name, Mode=TwoWay}" 
-                                Style="{StaticResource EntryItemCreateNonStackStyle}"
-                                x:Name="Name_Entry"
-                                TextChanged="EntryName_TextChanged"/>
+                                        <!--Grid for Description-->
+                                        <Label Grid.Row="1" Grid.Column="0"
+                                            Text="Description:" 
+                                            Style="{StaticResource StyleLabel}"/>   
 
-                            <!--Grid for Description-->
-                            <Label Grid.Row="1" Grid.Column="0"
-                                Text="Description:" 
-                                Style="{StaticResource StyleLabel}"/>
+                                        <Entry Grid.Row="1" Grid.Column="1"
+                                            Text="{Binding Data.Description, Mode=TwoWay}" 
+                                            Style="{StaticResource EntryItemCreateNonStackStyle}"
+                                            x:Name="Description_entry"
+                                            TextChanged="EntryDescription_TextChanged"/>
 
-                            <Entry Grid.Row="1" Grid.Column="1"
-                                Text="{Binding Data.Description, Mode=TwoWay}" 
-                                Style="{StaticResource EntryItemCreateNonStackStyle}"
-                                x:Name="Description_entry"
-                                TextChanged="EntryDescription_TextChanged"/>
+                                        <!--Grid for Level-->
+                                        <Label Grid.Row="2" Grid.Column="0"
+                                            Text="Level:" 
+                                            Style="{StaticResource StyleLabel}"/>
 
-                            <!--Grid for Level-->
-                            <Label Grid.Row="2" Grid.Column="0"
-                                Text="Level:" 
-                                Style="{StaticResource StyleLabel}"/>
+                                        <Picker Grid.Row="2" Grid.Column="1"
+                                            SelectedItem="{Binding SelectedItemProperty}" 
+                                            SelectedIndexChanged="Level_Changed"
+                                            x:Name="LevelPicker"
+                                            Style="{StaticResource CharacterUpdatePicker}"/>
 
-                            <Picker Grid.Row="2" Grid.Column="1"
-                                SelectedItem="{Binding SelectedItemProperty}" 
-                                SelectedIndexChanged="Level_Changed"
-                                x:Name="LevelPicker"
-                                Style="{StaticResource CharacterUpdatePicker}"/>
+                                        <!--Grid for Max Health-->
+                                        <Label Grid.Row="3" Grid.Column="0"
+                                            Text="Max Health:" 
+                                            Style="{StaticResource StyleLabel}"/>
 
-                            <!--Grid for Max Health-->
-                            <Label Grid.Row="3" Grid.Column="0"
-                                Text="Max Health:" 
-                                Style="{StaticResource StyleLabel}"/>
+                                        <Label Grid.Row="3" Grid.Column="1"
+                                            x:Name="MaxHealthValue"
+                                            Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
+                                            Style="{StaticResource LabelCharacterCreateStyle}"/>
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
 
-                            <Label Grid.Row="3" Grid.Column="1"
-                                x:Name="MaxHealthValue"
-                                Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
-                                Style="{StaticResource LabelCharacterCreateStyle}"/>
+                            <Grid Style="{StaticResource MonsterReadGridStyle}">
+                                <!--Grid for Attack-->
+                                <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource StyleLabel}"/>
 
-                            <!--Grid for Attack-->
-                            <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource StyleLabel}"/>
-
-                            <!--StackLayout for Text and Stepper for Attack field-->
-                            <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="4" Grid.Column="1">
-                                <Label
+                                <!--StackLayout for Text and Stepper for Attack field-->
+                                <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="4" Grid.Column="1">
+                                    <Label
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
                                     Style="{StaticResource StyleCharacterValueStyle}"/>
 
-                                <Stepper
+                                    <Stepper
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
                                     ValueChanged="Attack_OnStepperValueChanged" Style="{StaticResource StepperStyle}"/>
-                            </StackLayout>
+                                </StackLayout>
 
-                            <!--Grid for Defense-->
-                            <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource StyleLabel}"/>
+                                <!--Grid for Defense-->
+                                <Label Grid.Row="5" Grid.Column="0" Text="Defense:" Style="{StaticResource StyleLabel}"/>
 
-                            <!--StackLayout for Text and Stepper for Defense field-->
-                            <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="5" Grid.Column="1">
-                                <Label
+                                <!--StackLayout for Text and Stepper for Defense field-->
+                                <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="5" Grid.Column="1">
+                                    <Label
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
                                     Style="{StaticResource StyleCharacterValueStyle}"/>
 
-                                <Stepper
+                                    <Stepper
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
                                     ValueChanged="Defense_OnStepperValueChanged"/>
-                            </StackLayout>
+                                </StackLayout>
 
-                            <!--Grid for Speed-->
-                            <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource StyleLabel}"/>
+                                <!--Grid for Speed-->
+                                <Label Grid.Row="6" Grid.Column="0" Text="Speed:" Style="{StaticResource StyleLabel}"/>
 
-                            <!--StackLayout for Text and Stepper for Speed field-->
-                            <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="6" Grid.Column="1">
-                                <Label
+                                <!--StackLayout for Text and Stepper for Speed field-->
+                                <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}" Grid.Row="6" Grid.Column="1">
+                                    <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
                                     Style="{StaticResource StyleCharacterValueStyle}"/>
 
-                                <Stepper
+                                    <Stepper
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
                                     ValueChanged="Speed_OnStepperValueChanged"/>
-                            </StackLayout>
-                        </Grid>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
 
                         <!--Flex Layout to show items to select-->
                         <FlexLayout Style="{StaticResource CharacterFlex}"
