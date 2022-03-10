@@ -86,7 +86,7 @@
                 <Label Text="User Difficulty" Style="{StaticResource BoldText}" HorizontalOptions="Center"/>
             </StackLayout>
             <Grid>
-                <Button Text="  Noob " Grid.Row="0" Grid.Column="0" Style="{StaticResource BoldText}" x:Name="noobbutton" Clicked="UpdateUserDifficulty"/>
+                <Button Text="Noob" Grid.Row="0" Grid.Column="0" Style="{StaticResource BoldText}" x:Name="noobbutton" Clicked="UpdateUserDifficulty"/>
                 <Button Text="Joe" Grid.Row="0" Grid.Column="1" Style="{StaticResource BoldText}" x:Name="joebutton" Clicked="UpdateUserDifficulty"/>
                 <Button Text="Pro" Grid.Row="0" Grid.Column="2" Style="{StaticResource BoldText}" x:Name="probutton" Clicked="UpdateUserDifficulty"/>
                 </Grid>
