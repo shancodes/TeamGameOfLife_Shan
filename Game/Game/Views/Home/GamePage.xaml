@@ -20,7 +20,7 @@
                         Clicked="DungeonButton_Clicked"/>
 
                         <StackLayout>
-                            <Label Text="Battle" Style="{StaticResource CenterMessageStyle}"/>
+                            <Label Text="Battle" Style="{StaticResource CenterMessageLargeStylewithColor}"/>
                         </StackLayout>
 
                     </StackLayout>
@@ -32,7 +32,7 @@
                         Clicked="AutobattleButton_Clicked"/>
 
                         <StackLayout>
-                            <Label Text="AutoBattle" Style="{StaticResource CenterMessageStyle}"/>
+                            <Label Text="AutoBattle" Style="{StaticResource CenterMessageLargeStylewithColor}"/>
                         </StackLayout>
                         
                     </StackLayout>
@@ -47,7 +47,7 @@
                         Clicked="VillageButton_Clicked"/>
 
                     <StackLayout>
-                        <Label Text="Village" Style="{StaticResource CenterMessageStyle}" />
+                        <Label Text="Village" Style="{StaticResource CenterMessageLargeStylewithColor}" />
                     </StackLayout>
 
                 </StackLayout>
