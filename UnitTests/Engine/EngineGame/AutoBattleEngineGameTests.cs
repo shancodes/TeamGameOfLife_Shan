@@ -1,6 +1,4 @@
 ﻿using System.Threading.Tasks;
-using System.Linq;
-
 using NUnit.Framework;
 
 using Game.Engine.EngineGame;
@@ -8,6 +6,7 @@ using Game.Models;
 using Game.ViewModels;
 using Game.Engine.EngineBase;
 using System.Collections.ObjectModel;
+using System.Collections;
 
 namespace UnitTests.Engine.EngineGame
 {
@@ -249,6 +248,18 @@ namespace UnitTests.Engine.EngineGame
             // Assert
             Assert.AreEqual(false, result);
         }
-        #endregion DetectInfinateLoop
+        #endregion 
+
+        #region getBattleMessagesList
+        [Test]
+        public async Task AutoBattleEngine_getBattleMessagesList_ReturnsMessagesList()
+        {
+            var success = await AutoBattleEngine.RunAutoBattle();
+            ObservableCollection<string> result = (ObservableCollection<string>)AutoBattleEngine.getBattleMessagesList();
+
+            Assert.IsNotNull(success);
+            Assert.IsNotEmpty(result);
+        }
+        #endregion
     }
 }
