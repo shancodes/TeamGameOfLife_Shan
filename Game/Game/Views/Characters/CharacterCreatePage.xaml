@@ -53,7 +53,7 @@
                                         <!--Grid for Name-->
                                         <Label Grid.Row="0" Grid.Column="0"
                                             Text="Name:" 
-                                            Style="{StaticResource StyleLabel}"/>
+                                            Style="{StaticResource NewStyleLabel}"/>
 
                                         <Entry Grid.Row="0" Grid.Column="1"
                                             Text="{Binding Data.Name, Mode=TwoWay}" 
@@ -64,7 +64,7 @@
                                         <!--Grid for Description-->
                                         <Label Grid.Row="1" Grid.Column="0"
                                             Text="Description:" 
-                                            Style="{StaticResource StyleLabel}"/>   
+                                            Style="{StaticResource NewStyleLabel}"/>   
 
                                         <Entry Grid.Row="1" Grid.Column="1"
                                             Text="{Binding Data.Description, Mode=TwoWay}" 
@@ -75,7 +75,7 @@
                                         <!--Grid for Level-->
                                         <Label Grid.Row="2" Grid.Column="0"
                                             Text="Level:" 
-                                            Style="{StaticResource StyleLabel}"/>
+                                            Style="{StaticResource NewStyleLabel}"/>
 
                                         <Picker Grid.Row="2" Grid.Column="1"
                                             SelectedItem="{Binding SelectedItemProperty}" 
@@ -86,12 +86,12 @@
                                         <!--Grid for Max Health-->
                                         <Label Grid.Row="3" Grid.Column="0"
                                             Text="Max Health:" 
-                                            Style="{StaticResource StyleLabel}"/>
+                                            Style="{StaticResource NewStyleLabel}"/>
 
                                         <Label Grid.Row="3" Grid.Column="1"
                                             x:Name="MaxHealthValue"
                                             Text="{Binding Data.MaxHealth, StringFormat= '{0:G} hp'}" 
-                                            Style="{StaticResource LabelCharacterCreateStyle}"/>
+                                            Style="{StaticResource ColorCreateStyle}"/>
                                     </Grid>
                                 </StackLayout>
                             </Frame>
