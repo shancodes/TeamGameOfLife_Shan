@@ -62,32 +62,27 @@ namespace Game.Views
                 data = new PlayerInfoModel();
             }
             
-
-            if(data.Difficulty == DifficultyEnum.Average)
-            {                
-                difficulty_text = "Average";
-            }
-            else if(data.Difficulty == DifficultyEnum.Difficult)
+            switch(data.Difficulty)
             {
-                difficulty_text = "Difficult";
+                case DifficultyEnum.Average:
+                    difficulty_text = "Average";
+                    break;
+                case DifficultyEnum.Difficult:
+                    difficulty_text = "Difficult";
+                    break;
+                case DifficultyEnum.Easy:
+                    difficulty_text = "Easy";
+                    break;
+                case DifficultyEnum.Hard:
+                    difficulty_text = "Hard";
+                    break;
+                case DifficultyEnum.Impossible:
+                    difficulty_text = "Impossible";
+                    break;
+                case DifficultyEnum.Unknown:
+                    difficulty_text = "Unknown";
+                    break;
             }
-            else if (data.Difficulty == DifficultyEnum.Easy)
-            {
-                difficulty_text = "Easy";
-            }
-            else if (data.Difficulty == DifficultyEnum.Hard)
-            {
-                difficulty_text = "Hard";
-            }
-            else if (data.Difficulty == DifficultyEnum.Impossible)
-            {
-                difficulty_text = "Impossible";
-            }
-            else if (data.Difficulty == DifficultyEnum.Unknown)
-            {
-                difficulty_text = "Unknown";
-            }
-
             // Hookup the image
             var PlayerImage = new Image
             {
