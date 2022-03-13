@@ -95,7 +95,7 @@ namespace Game.Engine.EngineGame
 
             if (EngineSettings.CurrentAction == ActionEnum.Attack && EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
             {
-                EngineSettings.BattleMessagesModel.TurnMessage += " Character Can choose to move and click Done button";
+                EngineSettings.BattleMessagesModel.TurnMessage += "Select character's location and click Character Location Selected button";
             }
 
             // Reset the Action to unknown for next time
