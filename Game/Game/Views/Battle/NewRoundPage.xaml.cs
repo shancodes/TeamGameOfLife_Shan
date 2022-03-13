@@ -113,7 +113,7 @@ namespace Game.Views
             // Add the HP
             var PlayerHPLabel = new Label
             {
-                Text = "HP : " + data.GetCurrentHealthTotal,
+                Text = "HP : " + data.MaxHealth,
                 Style = (Style)Application.Current.Resources["ValueStyleMicro"],
                 HorizontalOptions = LayoutOptions.Center,
                 HorizontalTextAlignment = TextAlignment.Center,
