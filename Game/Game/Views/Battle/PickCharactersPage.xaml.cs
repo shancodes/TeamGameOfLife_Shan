@@ -160,14 +160,14 @@ namespace Game.Views
             probutton.BackgroundColor = default;
         }
 
-        public void noobbutton_Clicked(object sender, EventArgs e)
+        public void NoobButton_Clicked(object sender, EventArgs e)
         {
             UnsetUserDifficultyStyles();
             EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Noob;
             noobbutton.BackgroundColor = Color.Green;
         }
 
-        public void joebutton_Clicked(object sender, EventArgs e)
+        public void JoeButton_Clicked(object sender, EventArgs e)
         {
             UnsetUserDifficultyStyles();
             EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Joe;
@@ -175,7 +175,7 @@ namespace Game.Views
 
         }
 
-        public void probutton_Clicked(object sender, EventArgs e)
+        public void ProButton_Clicked(object sender, EventArgs e)
         {
             UnsetUserDifficultyStyles();
             EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Pro;
