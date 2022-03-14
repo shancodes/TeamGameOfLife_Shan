@@ -36,7 +36,6 @@ namespace Game.Views
             {
                 MonsterListFrame.Children.Add(CreatePlayerDisplayBox(data));
             }
-
         }
 
         /// <summary>
@@ -120,6 +119,7 @@ namespace Game.Views
                 TextColor = Color.Wheat
             };
 
+            //Add the name
             var PlayerNameLabel = new Label()
             {
                 Text = data.Name,
@@ -134,6 +134,7 @@ namespace Game.Views
                 TextColor = Color.Wheat
             };
 
+            //Add difficulty
             var PlayerDifficultyLabel = new Label()
             {
                 Text = difficulty_text,
