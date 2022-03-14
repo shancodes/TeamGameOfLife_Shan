@@ -87,14 +87,14 @@
                         <Image x:Name="monsterimage" Source="black_knight.gif" IsAnimationPlaying="True" Style="{StaticResource ImageLargeStyle}" IsVisible="false"/>
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" Style="{StaticResource ButtonInvisibleStyle}"/>
                         <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" Style="{StaticResource ButtonInvisibleStyle}"/>
-                        <Button x:Name="DoneButton" Clicked="DoneButton_Clicked" BorderColor="Black" BackgroundColor="#EBDDCF" TextColor="DarkBlue" Text="Character Location selected" Style="{StaticResource ButtonInvisibleStyle}"/>
+                        <Button x:Name="DoneButton" Clicked="DoneButton_Clicked" Text="Character Location selected" Style="{StaticResource ButtonInvisibleDoneButtonStyle}"/>
                     </StackLayout>
 
                     <StackLayout 
                         Style="{StaticResource BattlePageLowerStackStyle}">
                         <Frame x:Name="messageframe" Style="{StaticResource FrameBattlePageLower}" IsVisible="false">
                             <StackLayout x:Name="MessageDisplayBox"
-                                Style="{StaticResource BattlePageLowerStackStyletwo}" BackgroundColor="#EBDDCF">
+                                Style="{StaticResource BattlePageLowerStackStyletwonewstyle}">
                                 <Label x:Name="BattleMessages" 
                                        Style="{StaticResource StyleLabelBattlePageLowerFrameLabel}"/>
                             </StackLayout>
