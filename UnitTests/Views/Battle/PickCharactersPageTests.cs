@@ -195,7 +195,6 @@ namespace UnitTests.Views
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_InValid_Should_Pass()
         {
             // Arrange
-
             CollectionView CharactersListView = (CollectionView)page.FindByName("CharactersListView");
             var list = new ObservableCollection<CharacterModel>(DefaultData.LoadData(new CharacterModel()));
             CharactersListView.ItemsSource = list;
@@ -219,7 +218,9 @@ namespace UnitTests.Views
 
             //Act
             page.noobbutton_Clicked(null, new System.EventArgs());
+            //Reset
 
+            //Assert
             Assert.IsTrue(true);
         }
 
@@ -230,7 +231,9 @@ namespace UnitTests.Views
 
             //Act
             page.joebutton_Clicked(null, new System.EventArgs());
+            //Reset
 
+            //Assert
             Assert.IsTrue(true);
         }
 
@@ -241,15 +244,21 @@ namespace UnitTests.Views
 
             //Act
             page.probutton_Clicked(null, new System.EventArgs());
+            //Reset
 
+            //Assert
             Assert.IsTrue(true);
         }
 
         [Test]
         public void PickCharactersPage_UnsetUserDifficultyStyles_Should_Pass()
         {
+            //Arrange
+            //Act
             page.UnsetUserDifficultyStyles();
+            //Reset
 
+            //Assert
             Assert.IsTrue(true);
         }
     }
