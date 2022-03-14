@@ -89,10 +89,7 @@
                 <Button Text="Noob" Grid.Row="0" Grid.Column="0" Style="{StaticResource BoldText}" x:Name="noobbutton" Clicked="NoobButton_Clicked"/>
                 <Button Text="Joe" Grid.Row="0" Grid.Column="1" Style="{StaticResource BoldText}" x:Name="joebutton" Clicked="JoeButton_Clicked"/>
                 <Button Text="Pro" Grid.Row="0" Grid.Column="2" Style="{StaticResource BoldText}" x:Name="probutton" Clicked="ProButton_Clicked"/>
-                </Grid>
-            
-
-
+            </Grid>
             <!--Button for Begin Battle-->
             <ImageButton Source="begin_battle.png" x:Name ="BeginBattleButton" Clicked="BattleButton_Clicked" Style="{StaticResource ButtonItemReadStyle}"/>
         </StackLayout>
