@@ -9,10 +9,15 @@
 
     <!--stack layout for Back button and Title-->
     <NavigationPage.TitleView>
+        
         <StackLayout Style="{StaticResource NavigationHeader}" >
+            
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
+            
             <Label Text= "{Binding Title}" Style="{StaticResource TitleHeader}"/>
+            
         </StackLayout>
+        
     </NavigationPage.TitleView>
 
     <ScrollView >
@@ -36,6 +41,7 @@
                                 Style="{StaticResource LabelStyle}"/>
 
                             <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}">
+                                
                                 <Label 
                                     Text="{Binding Data.Name}"
                                     Style="{StaticResource LabelStyle}"/>
@@ -52,12 +58,17 @@
                                 Style="{StaticResource LabelStyle}"/>
 
                             <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}">
+                               
                                 <Label 
                                     Text="{Binding Data.Description}"
                                     Style="{StaticResource LabelStyle}"/>
+                                
                             </StackLayout>
+                            
                         </StackLayout>
+                        
                     </FlexLayout>
+                    
                 </Frame>
 
                 <StackLayout Style="{StaticResource HorizontalStackDeleteItemPageStyle}">
@@ -65,6 +76,7 @@
                     <Label Text="Are you sure?" Style="{StaticResource MessageStyle}"/>
 
                 </StackLayout>
+                
             </StackLayout>
             
             <!--stack layout for Delete and Cancel buttons-->
