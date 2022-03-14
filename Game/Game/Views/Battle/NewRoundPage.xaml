@@ -5,6 +5,7 @@
              BackgroundImageSource="inside_background.png">
 
     <ContentPage.Content>
+        
         <ScrollView>
 
             <StackLayout Style="{StaticResource VerticalStack}">
