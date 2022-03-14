@@ -625,6 +625,11 @@ namespace Game.Views
             //NextAttackExample();
         }
 
+        /// <summary>
+        /// Button used to change the turn after character location is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void DoneButton_Clicked(object sender, EventArgs e)
         {
             characterimage.IsVisible = false;
@@ -885,6 +890,9 @@ namespace Game.Views
         }
         #endregion PageHandelers
 
+        /// <summary>
+        /// on appearing starts the battle
+        /// </summary>
         protected override void OnAppearing()
         {
             base.OnAppearing();
