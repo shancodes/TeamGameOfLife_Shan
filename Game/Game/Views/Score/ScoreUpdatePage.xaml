@@ -31,7 +31,7 @@
                     Text="{Binding Data.GameDate}"
                     TextChanged="GameTime_Entry_TextChanged"
                     x:Name="GameTime_Entry"
-                    Style="{StaticResource EntryItemCreateNonStackStyle}"/>
+                    Style="{StaticResource ColorNonStackStyle}"/>
             </StackLayout>
             
              <!--Name-->
@@ -43,7 +43,7 @@
                     Text="{Binding Data.Name, Mode=TwoWay}" 
                     TextChanged="Name_Entry_TextChanged"
                     x:Name="Name_Entry"
-                    Style="{StaticResource EntryItemCreateNonStackStyle}"/>
+                    Style="{StaticResource ColorNonStackStyle}"/>
             </StackLayout>
 
             <!--Score-->
