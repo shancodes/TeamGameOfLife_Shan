@@ -1681,6 +1681,11 @@
                 <Setter Property="TextColor" Value="DarkBlue" />
             </Style>
 
+            <Style TargetType="Entry"
+                x:Key="NewColorEntryStyle" BasedOn="{StaticResource EntryStyle}">
+                <Setter Property="TextColor" Value="DarkBlue" />
+            </Style>
+
             <Style x:Key="EntryItemCreateNonStackStyle" TargetType="Entry" BasedOn="{StaticResource EntryStyle}" >
                 <Setter Property="HorizontalOptions" Value="Start"/>
             </Style>

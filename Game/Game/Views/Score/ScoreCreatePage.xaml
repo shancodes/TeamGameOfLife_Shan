@@ -42,7 +42,7 @@
                         Text="{Binding Data.Name}" 
                         TextChanged="EntryName_TextChanged"
                         x:Name="Name_Entry"
-                        Style="{StaticResource EntryStyle}" />
+                        Style="{StaticResource NewColorEntryStyle}" />
                 </StackLayout>
 
                 <!--Score-->
@@ -56,7 +56,7 @@
                         x:Name="Score_Entry"
                         Text="{Binding Data.ScoreTotal}" 
                         TextChanged="EntryDescription_TextChanged"
-                        Style="{StaticResource EntryStyle}"/>
+                        Style="{StaticResource NewColorEntryStyle}"/>
                     
                 </StackLayout>
 
