@@ -12,7 +12,7 @@
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource StackLayoutIndexPageStyle}">
 
-            <Label Text="Character Index" Style="{StaticResource HeaderStyleItemIndexStyle}" />
+            <Label Text="Character Index" Style="{StaticResource TitleHeader}" />
             <Button ImageSource="create_navibar_top.png" Clicked="Add_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
             
         </StackLayout>
