@@ -424,7 +424,6 @@ namespace Game.Views
                     data.Clicked += (sender, args) => SetSelectedCharacter(MapLocationModel);
                     break;
                 case PlayerTypeEnum.Monster:
-                    data.Clicked += (sender, args) => SetSelectedMonster(MapLocationModel);
                     break;
                 case PlayerTypeEnum.Unknown:
                 default:
@@ -1008,6 +1007,18 @@ namespace Game.Views
                 default:
                     break;
             }
+        }
+
+        public void EnableZombieMonsterToggleAndSet100Percent()
+        {
+            AllowMonsterZombies.IsToggled = true;
+            percentage.Text = "100";
+        }
+
+        public void DisableZombieMonsterToggleAndSetNull()
+        {
+            AllowMonsterZombies.IsToggled = false;
+            percentage.Text = null;
         }
 
         public void AllowMonsterZombie_Toggled(object sender, EventArgs e)
