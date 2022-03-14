@@ -40,6 +40,10 @@ namespace Game.Views
             AttributePicker.SelectedItem = ViewModel.Data.Attribute.ToString();
         }
         
+        /// <summary>
+        /// return the state of create button
+        /// </summary>
+        /// <returns></returns>
         public bool CreateButton_state()
         {
             return CreateButton.IsEnabled;
@@ -133,7 +137,6 @@ namespace Game.Views
         {
             DamageValue.Text = string.Format("{0}", e.NewValue);
         }
-
 
         /// <summary>
         /// function to check if Name and Description is empty field
