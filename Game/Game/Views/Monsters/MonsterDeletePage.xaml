@@ -21,42 +21,39 @@
         <StackLayout 
             Style="{StaticResource StackOuterBox}">
 
+            <Frame Style="{StaticResource CrudiFrameitemdelete_new}">
+                <FlexLayout
+                        Style="{StaticResource FlexLayoutCrudi}">
+                    <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                    <Grid  Style="{StaticResource MonsterReadGridStyle}">
 
-            <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageLargeStyle}"/>
+                        <!--Name Field-->
+                        <Label Grid.Row="0" Grid.Column="0"
+                                    Text="Name : " 
+                                    Style="{StaticResource NewStyleLabel}"/>
 
-            <!--Stack layout for Name-->
-            <StackLayout Style="{StaticResource HorizontalCenterStack}">
+                        <Label Text="{Binding Data.Name}" Grid.Row="0" Grid.Column="1"
+                                     Style="{StaticResource LabelItemCreateStackStyleColor}"/>
 
-                <Label 
-                    Text="Name : " 
-                    Style="{StaticResource LabelStyle}"/>
+                        <!--Description Field-->
+                        <Label Grid.Row="2" Grid.Column="0"
+                                    Text="Description : " 
+                                    Style="{StaticResource NewStyleLabel}"/>
 
-                <StackLayout Style="{StaticResource HorizontalCenterStack}" >
+                        <Label Text="{Binding Data.Description}" Grid.Row="2" Grid.Column="1"
+                                     Style="{StaticResource LabelItemCreateStackStyleColor}" />
 
-                    <Label 
-                        Text="{Binding Data.Name}" 
-                        Style="{StaticResource ValueStyleTextRight}"/>
+                        <!--Difficulty Field-->
+                        <Label Grid.Row="4" Grid.Column="0"
+                                    Text="Difficulty : " 
+                                    Style="{StaticResource NewStyleLabel}"/>
 
-                </StackLayout>
-
-            </StackLayout>
-
-            <!--Stack layout for Description-->
-            <StackLayout Style="{StaticResource HorizontalCenterStack}" >
-
-                <Label 
-                    Text="Description : " 
-                    Style="{StaticResource LabelStyle}"/>
-
-                <StackLayout Style="{StaticResource HorizontalCenterStack}">
-
-                    <Label 
-                        Text="{Binding Data.Description}" 
-                        Style="{StaticResource ValueStyleTextRight}"/>
+                        <Label Text="{Binding Data.Difficulty}" Grid.Row="4" Grid.Column="1"
+                                     Style="{StaticResource LabelItemCreateStackStyleColor}" />
+                    </Grid>
                     
-                </StackLayout>
-
-            </StackLayout>
+                </FlexLayout>
+            </Frame>
 
             <!--stack layout for Label-->
 
