@@ -29,9 +29,7 @@
 
                 <Picker 
                     Grid.Row="0" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
-                    FontSize="Micro"
+                    Style="{StaticResource PickerBattleSettingStyle}"
                     x:Name="BattleModePicker"
                     SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
                     SelectedIndexChanged="BattleModePicker_Changed"/>
