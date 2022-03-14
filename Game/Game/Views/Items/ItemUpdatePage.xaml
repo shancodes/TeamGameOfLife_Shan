@@ -12,6 +12,7 @@
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
+            
             <Label Text="Update this item" Style="{StaticResource TitleHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
@@ -19,6 +20,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            
             <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -104,35 +106,41 @@
                                             Style="{StaticResource EntryItemCreateNonStackStyle}"
                                         />
                                 </Grid>
+                                
                             </FlexLayout>
+                            
                         </StackLayout>
+                        
                     </Frame>
 
                     <FlexLayout
                         Style="{StaticResource FlexLayoutCrudi}">
+                        
                         <Grid Style="{StaticResource GridCrudiStyle}">
 
                             <Label Grid.Row="0" Grid.Column="0"
-                            Text= "Damage:" 
-                            Style="{StaticResource StyleLabel}"
+                                Text= "Damage:" 
+                                Style="{StaticResource StyleLabel}"
                             />
+                            
                             <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="0" Grid.Column="1">
 
                                 <Label 
-                                Text="{Binding Data.Damage}" 
-                                x:Name="DamageValue"
-                                Style="{StaticResource LabelItemCreateStackStyle}"
+                                    Text="{Binding Data.Damage}" 
+                                    x:Name="DamageValue"
+                                    Style="{StaticResource LabelItemCreateStackStyle}"
                                 />
 
                                 <Stepper 
-                                Value="{Binding Data.Damage, Mode=TwoWay}"
-                                ValueChanged="Damage_OnStepperValueChanged" />
+                                    Value="{Binding Data.Damage, Mode=TwoWay}"
+                                    ValueChanged="Damage_OnStepperValueChanged"
+                                />
 
                             </StackLayout>
 
                             <Label 
-                            Text="Range:" 
-                            Style="{StaticResource StyleLabel}" Grid.Row="1" Grid.Column="0"/>
+                                Text="Range:" 
+                                Style="{StaticResource StyleLabel}" Grid.Row="1" Grid.Column="0"/>
 
                             <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}"  Grid.Row="1" Grid.Column="1">
 
@@ -148,34 +156,41 @@
 
                             </StackLayout>
 
-
                             <Label 
-                            Text="Value:"
-                            Style="{StaticResource StyleLabel}" Grid.Row="2" Grid.Column="0"/>
+                                Text="Value:"
+                                Style="{StaticResource StyleLabel}" Grid.Row="2" Grid.Column="0"/>
 
                             <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="2" Grid.Column="1">
 
                                 <Label
-                                Text="{Binding Data.Value}" 
-                                x:Name="ValueValue"
-                                Style="{StaticResource LabelItemCreateStackStyle}"
+                                    Text="{Binding Data.Value}" 
+                                    x:Name="ValueValue"
+                                    Style="{StaticResource LabelItemCreateStackStyle}"
                                 />
 
                                 <Stepper 
-                                Value="{Binding Data.Value, Mode=TwoWay}"
-                                ValueChanged="Value_OnStepperValueChanged"/>
+                                    Value="{Binding Data.Value, Mode=TwoWay}"
+                                    ValueChanged="Value_OnStepperValueChanged"/>
+                                
                             </StackLayout>
+                            
                         </Grid>
                         
                         <!--stack layout for Update and Reset buttons-->
                     </FlexLayout>
+                    
                     <StackLayout Style="{StaticResource HorizontalCenterStack}">
-                    <ImageButton Source="reset.png" Clicked="Reset_Clicked"/>
-                    <ImageButton x:Name="Update_button" Source="update.png" Clicked="Save_Clicked"/>
-                </StackLayout>
+                        <ImageButton Source="reset.png" Clicked="Reset_Clicked"/>
+                        
+                        <ImageButton x:Name="Update_button" Source="update.png" Clicked="Save_Clicked"/>
+                    </StackLayout>
 
                 </StackLayout>
+                
             </FlexLayout>
+            
         </ScrollView>
+        
     </ContentPage.Content>
+    
 </ContentPage>
