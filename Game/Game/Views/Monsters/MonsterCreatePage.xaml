@@ -53,35 +53,35 @@
                                     <!--Grid for Name-->
                                     <Label Grid.Row="0" Grid.Column="0"
                                 Text="Name:" 
-                                Style="{StaticResource CrudiFrameLabel}"/>
+                                Style="{StaticResource CrudiFrameLabelColor}"/>
 
                                     <Entry Grid.Row="0" Grid.Column="1"
                                 Text="{Binding Data.Name, Mode=TwoWay}"
                                 x:Name="Name_Entry"
                                 TextChanged="EntryName_TextChanged"
-                                Style="{StaticResource EntryCrudiFrame}"/>
+                                Style="{StaticResource EntryCrudiFrameColor}"/>
 
                                     <!--Grid for Description-->
                                     <Label Grid.Row="1" Grid.Column="0"
                                 Text="Description:" 
-                                Style="{StaticResource CrudiFrameLabel}"/>
+                                Style="{StaticResource CrudiFrameLabelColor}"/>
 
                                     <Entry Grid.Row="1" Grid.Column="1"
                                 Text="{Binding Data.Description, Mode=TwoWay}" 
                                 x:Name="Description_Entry"
                                 TextChanged="EntryDescription_TextChanged"
-                                Style="{StaticResource EntryCrudiFrame}"/>
+                                Style="{StaticResource EntryCrudiFrameColor}"/>
 
                                     <!--Grid for Difficulty-->
                                     <Label Grid.Row="2" Grid.Column="0"
                                 Text="Difficulty:" 
-                                Style="{StaticResource CrudiFrameLabel}"/>
+                                Style="{StaticResource CrudiFrameLabelColor}"/>
 
                                     <Picker Grid.Row="2" Grid.Column="1"
                                 ItemsSource="{x:Static local:DifficultyEnumHelper.GetListAll}"
                                 SelectedItem="{Binding Data.Difficulty, Converter={StaticResource StringEnum}, Mode=TwoWay}"
                                 x:Name="DifficultyPicker"
-                                Style="{StaticResource EntryCrudiFrame}"/>
+                                Style="{StaticResource EntryCrudiFrameColor}"/>
 
                                 </Grid>
                             </StackLayout>
@@ -98,7 +98,7 @@
                                 <Label
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
-                                    Style="{StaticResource StyleValue}"/>
+                                    Style="{StaticResource StyleValueColor}"/>
 
 
                                 <Stepper
@@ -115,7 +115,7 @@
                                 <Label
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
-                                    Style="{StaticResource StyleValue}"/>
+                                    Style="{StaticResource StyleValueColor}"/>
 
                                 <Stepper
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
@@ -131,7 +131,7 @@
                                 <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
-                                   Style="{StaticResource StyleValue}"/>
+                                   Style="{StaticResource StyleValueColor}"/>
 
                                 <Stepper
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
