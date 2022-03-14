@@ -844,8 +844,8 @@ namespace Game.Views
         public async void RestartButton_Clicked(object sender, EventArgs e)
         {
             _ = BattleEngineViewModel.Instance.Engine.EndBattle();
-            BeginGamePage pickcharacterpage = new BeginGamePage();
-            await Navigation.PushModalAsync(new NavigationPage(pickcharacterpage));
+            PickCharactersPage page = new PickCharactersPage();
+            await Navigation.PushModalAsync(new NavigationPage(page));
             _ = await Navigation.PopAsync();
         }
 
