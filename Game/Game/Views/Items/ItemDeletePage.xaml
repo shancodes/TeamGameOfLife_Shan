@@ -16,9 +16,13 @@
     </NavigationPage.TitleView>
 
     <ScrollView >
+        
         <FlexLayout Style="{StaticResource Flexlayoutitemdelete}">
+            
             <StackLayout Style="{StaticResource Itemdeletepage}">
+                
                 <Frame Style="{StaticResource CrudiFrameitemdelete_new}">
+                    
                     <FlexLayout
                         Style="{StaticResource FlexLayoutCrudi}">
 
@@ -28,28 +32,29 @@
                         <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
 
                             <Label
-                            Text="Name: " 
-                            Style="{StaticResource LabelStyle}"/>
+                                Text="Name: " 
+                                Style="{StaticResource LabelStyle}"/>
 
                             <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}">
                                 <Label 
-                                Text="{Binding Data.Name}"
-                                Style="{StaticResource LabelStyle}"/>
+                                    Text="{Binding Data.Name}"
+                                    Style="{StaticResource LabelStyle}"/>
 
                             </StackLayout>
+                            
                         </StackLayout>
 
                         <!--Stack layout for Description-->
                         <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}">
 
                             <Label
-                            Text="Description: " 
-                            Style="{StaticResource LabelStyle}"/>
+                                Text="Description: " 
+                                Style="{StaticResource LabelStyle}"/>
 
                             <StackLayout Style="{StaticResource HorizontalStackPaddingStyle}">
                                 <Label 
-                                Text="{Binding Data.Description}"
-                                Style="{StaticResource LabelStyle}"/>
+                                    Text="{Binding Data.Description}"
+                                    Style="{StaticResource LabelStyle}"/>
                             </StackLayout>
                         </StackLayout>
                     </FlexLayout>
@@ -61,12 +66,18 @@
 
                 </StackLayout>
             </StackLayout>
+            
             <!--stack layout for Delete and Cancel buttons-->
             <StackLayout Style="{StaticResource HorizontalDeleteItemStyle}">
+                
                 <ImageButton Source="delete.png" Clicked="Delete_Clicked"/>
+                
                 <ImageButton Source="cancel.png" Clicked="Cancel_Clicked"/>
+                
             </StackLayout>
             
         </FlexLayout>
+        
     </ScrollView>
+    
 </ContentPage>
