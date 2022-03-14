@@ -1344,6 +1344,11 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="StackLayoutOrientations">
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+
+            <Style TargetType="StackLayout"
                 x:Key="ItemImageBox"
                 BasedOn="{StaticResource CardImageTextBox}">
                 <Setter Property="HeightRequest" Value="60" />

@@ -15,7 +15,7 @@
             <FlexLayout x:Name="flexLayout"
                         Style="{StaticResource FlexLayoutGamePage}">
 
-                <StackLayout Orientation="Horizontal">
+                <StackLayout Style="{StaticResource StackLayoutOrientations}">
                     <!--Character Icon-->
                     <StackLayout Style="{StaticResource CardImageTextBox}">
 
@@ -43,7 +43,7 @@
 
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal">
+                <StackLayout Style="{StaticResource StackLayoutOrientations}">
 
                     <ImageButton 
                         Source="begin_battle.png"
