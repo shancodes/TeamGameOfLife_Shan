@@ -96,7 +96,7 @@
                                 </StackLayout>
                             </Frame>
 
-                            <Grid Style="{StaticResource MonsterReadGridStyle}">
+                            <Grid Style="{StaticResource MonsterCreateGridStyle}">
                                 <!--Grid for Attack-->
                                 <Label Grid.Row="4" Grid.Column="0" Text="Attack:" Style="{StaticResource StyleLabel}"/>
 
@@ -105,11 +105,11 @@
                                     <Label
                                     Text="{Binding Data.Attack, Mode=TwoWay}" 
                                     x:Name="AttackValue"
-                                    Style="{StaticResource StyleCharacterValueStyle}"/>
+                                    Style="{StaticResource StyleValueColor}"/>
 
                                     <Stepper
                                     Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged" Style="{StaticResource StepperStyle}"/>
+                                    ValueChanged="Attack_OnStepperValueChanged"/>
                                 </StackLayout>
 
                                 <!--Grid for Defense-->
@@ -120,7 +120,7 @@
                                     <Label
                                     Text="{Binding Data.Defense, Mode=TwoWay}" 
                                     x:Name="DefenseValue"
-                                    Style="{StaticResource StyleCharacterValueStyle}"/>
+                                    Style="{StaticResource StyleValueColor}"/>
 
                                     <Stepper
                                     Value="{Binding Data.Defense, Mode=TwoWay}"
@@ -135,7 +135,7 @@
                                     <Label
                                     Text="{Binding Data.Speed, Mode=TwoWay}" 
                                     x:Name="SpeedValue"
-                                    Style="{StaticResource StyleCharacterValueStyle}"/>
+                                    Style="{StaticResource StyleValueColor}"/>
 
                                     <Stepper
                                     Value="{Binding Data.Speed, Mode=TwoWay}"
