@@ -380,6 +380,7 @@
                 x:Key="LabelItemCreateStackStyle"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="TextColor" Value="#443A34" />
             </Style>
 
             <Style TargetType="Label"
@@ -399,6 +400,7 @@
                 x:Key="LabelItemReadStyle"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="TextColor" Value="#443A34" />
             </Style>
 
             <Style TargetType="Label"
