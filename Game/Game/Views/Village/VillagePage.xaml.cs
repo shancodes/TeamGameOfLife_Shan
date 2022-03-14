@@ -21,6 +21,9 @@ namespace Game.Views
 		public VillagePage ()
 		{
 			InitializeComponent ();
+
+			// Init the Server Item Value to 100 to get everything
+			SetServerItemValue("100");
 		}
 
 		/// <summary>
@@ -91,9 +94,19 @@ namespace Game.Views
 			var updateDataBase = true;  // Add them to the DB
 			var category = 8;   // What category to filter down to, 0 is all
 
+			
 			var dataList = await ItemService.GetItemsFromServerPostAsync(number, level, attribute, location, category, random, updateDataBase);
 
 			return true;
+		}
+
+		/// <summary>
+		/// Set the value for the Server Item
+		/// </summary>
+		/// <param name="value"></param>
+		public void SetServerItemValue(string value)
+		{
+			ServerItemValue.Text = value;
 		}
 	}
 }
