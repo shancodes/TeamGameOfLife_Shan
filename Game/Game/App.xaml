@@ -927,6 +927,13 @@
             </Style>
 
             <Style TargetType="Image"
+                x:Key="ImageonItemIndexstyle"
+                BasedOn="{StaticResource ImageMediumStyle}">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style TargetType="Image"
                 x:Key="ImageSmallStyle"
                 BasedOn="{StaticResource ImageLargeStyle}">
                 <Setter Property="HeightRequest" Value="30" />
@@ -1515,6 +1522,25 @@
                 <Setter Property="HasShadow" Value="false" />
                 <Setter Property="BorderColor" Value="{StaticResource PrimaryBackgroundColor}" />
                 <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="FrameItemIndexoutside">
+                <Setter Property="BorderColor" Value="Black" />
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="FrameItemIndexmiddlestyle">
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="MinimumHeightRequest" Value="20"/>
+                <Setter Property="MinimumWidthRequest" Value="20"/>
+            </Style>
+
+            <Style TargetType="Frame"
+                   x:Key="FrameItemIndexinsidestyle">
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
             <Style TargetType="Frame"

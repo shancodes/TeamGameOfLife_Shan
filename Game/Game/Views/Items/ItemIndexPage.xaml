@@ -18,56 +18,59 @@
 
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
-            <Frame BorderColor="Black">
+            <Frame Style="{StaticResource FrameItemIndexoutside}">
 
-            <CollectionView x:Name="ItemsListView" 
+                <CollectionView x:Name="ItemsListView" 
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
                     SelectionChanged="OnCollectionViewSelectionChanged"
                     Style="{StaticResource CollectionViewIndexPage}"
-                    >
+                >
                 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                            <Frame BorderColor="Black"  MinimumWidthRequest="20" MinimumHeightRequest="20">
-                                <Grid Style="{StaticResource GridIndexStyle}" >
-                                    <Frame BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
-                                        <Image Grid.RowSpan="1"
-                                    Source="{Binding ImageURI}"
-                                    Style="{StaticResource ImageMediumStyle}"
-                                   HorizontalOptions="Center" VerticalOptions="Center"
+                        <Frame Style="{StaticResource FrameItemIndexmiddlestyle}">
+                            <Grid Style="{StaticResource GridIndexStyle}" >
+                                <Frame Style="{StaticResource FrameItemIndexinsidestyle}">
+                                    <Image Grid.RowSpan="1"
+                                        Source="{Binding ImageURI}"
+                                        Style="{StaticResource ImageonItemIndexstyle}"
                                     />
-                                    </Frame>
+                                    
+                                </Frame>
 
-                                    <Label Grid.Column="1"
+                                <Label Grid.Column="1"
                                     Text="{Binding Name}"
                                     FontAttributes="Bold"
-                            />
+                                />
 
-                                    <Label 
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            Text="Damage:"/>
-                                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Damage}"></Label>
+                                <Label 
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text="Damage:"/>
+                                
+                                <Label Grid.Row="1" Grid.Column="2" Text="{Binding Damage}"></Label>
 
 
-                                    <Label 
-                            Grid.Row="2"
-                            Grid.Column="1"
-                            Text="Range:"/>
-                                    <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
+                                <Label 
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Text="Range:"/>
+                                
+                                <Label Grid.Row="2" Grid.Column="2" Text="{Binding Range}"></Label>
 
-                                    <Label 
-                            Grid.Row="3"
-                            Grid.Column="1"
-                            Text="Value:"/>
-                                    <Label Grid.Row="3" Grid.Column="2" Text="{Binding Value}"></Label>
+                                <Label 
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Text="Value:"/>
+                                
+                                <Label Grid.Row="3" Grid.Column="2" Text="{Binding Value}"></Label>
 
-                                </Grid>
-                            </Frame>
-                        </DataTemplate>
-            </CollectionView.ItemTemplate>
-            </CollectionView>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                </CollectionView>
             </Frame>
         </StackLayout>
     </ContentPage.Content>
