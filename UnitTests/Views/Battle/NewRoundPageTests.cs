@@ -90,6 +90,49 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void NewRoundPage_CreatePlayerDisplayBox_Difficulty_Difficult_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.CreatePlayerDisplayBox(new PlayerInfoModel(new CharacterModel { Name = "test", Difficulty = DifficultyEnum.Difficult }));
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void NewRoundPage_CreatePlayerDisplayBox_Difficulty_Hard_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.CreatePlayerDisplayBox(new PlayerInfoModel(new CharacterModel { Name = "test", Difficulty = DifficultyEnum.Hard }));
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void NewRoundPage_CreatePlayerDisplayBox_Difficulty_Impossible_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.CreatePlayerDisplayBox(new PlayerInfoModel(new CharacterModel { Name = "test", Difficulty = DifficultyEnum.Impossible }));
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+
+        [Test]
         public void NewRoundPage_NewRoundPage_CharacterList_MonsterList_Should_Pass()
         {
             // Arrange
