@@ -18,8 +18,8 @@
     
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
-
-            <CollectionView x:Name="MonstersListView" 
+            <Frame BorderColor="Black">
+                <CollectionView x:Name="MonstersListView" 
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
                     SelectionChanged="OnCollectionViewSelectionChanged"
@@ -27,39 +27,42 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Style="{StaticResource GridIndexStyle}">
-
-                            <Image Grid.RowSpan="2"
+                            <Frame BorderColor="Black"  MinimumWidthRequest="20" MinimumHeightRequest="20">
+                                <Grid Style="{StaticResource GridIndexStyle}">
+                                    <Frame BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
+                                        <Image Grid.RowSpan="2"
                             Source="{Binding ImageURI}"
                             Style="{StaticResource ImageMediumStyle}"
                             />
-
-                            <Label Grid.Column="1"
+                                    </Frame>
+                                    <Label Grid.Column="1"
                             Text="{Binding Name}"
                             />
 
-                            <Label 
+                                    <Label 
                                 Grid.Row="1"
                                 Grid.Column="1"
                                 Text="Attack:"/>
 
-                            <Label Grid.Row="1" 
+                                    <Label Grid.Row="1" 
                                    Grid.Column="2" 
                                    Text="{Binding Attack}"></Label>
 
-                            <Label 
+                                    <Label 
                                 Grid.Row="2"
                                 Grid.Column="1"
                                 Text="Difficulty:"/>
 
-                            <Label Grid.Row="2" 
+                                    <Label Grid.Row="2" 
                                    Grid.Column="2" 
                                    Text="{Binding Difficulty}"></Label>
 
-                        </Grid>
-                    </DataTemplate>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
