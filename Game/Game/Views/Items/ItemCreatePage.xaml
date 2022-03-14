@@ -10,24 +10,33 @@
 
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
+            
             <Button ImageSource="back_image_two.png" Clicked="Cancel_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
+            
             <Label Text="Create a new item" Style="{StaticResource TitleHeader}"/>
+            
         </StackLayout>
     </NavigationPage.TitleView>
 
     <ContentPage.Resources>
+        
         <ResourceDictionary>
+            
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            
             <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
+            
         </ResourceDictionary>
+        
     </ContentPage.Resources>
 
     <ContentPage.Content>
 
         <ScrollView>
+            
             <FlexLayout x:Name="flexLayout"
                 Style="{StaticResource FlexLayoutCrudi}">
-                
+      
                 <StackLayout Style="{StaticResource OuterStack}">
 
                     <Frame Style="{StaticResource CrudiFrame_new}">
@@ -105,11 +114,14 @@
                     <!--Frame for second part of the page-->
                     <FlexLayout
                         Style="{StaticResource FlexLayoutCrudi}">
+                        
                         <Grid Style="{StaticResource GridCrudiStyle}">
+                            
                             <Label Grid.Row="0" Grid.Column="0"
                                 Text= "Damage:" 
                                 Style="{StaticResource StyleLabel}"
-                           />
+                            />
+                            
                             <StackLayout Style="{StaticResource StackLayoutItemCreateStyle}" Grid.Row="0" Grid.Column="1" >
 
                                 <Label 
@@ -156,7 +168,9 @@
                                     Value="{Binding Data.Value, Mode=TwoWay}"
                                     ValueChanged="Value_OnStepperValueChanged"/>
                             </StackLayout>
+                            
                         </Grid>
+                        
                     </FlexLayout>
 
                     <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions= "Center">
@@ -164,8 +178,13 @@
                         
                         <ImageButton x:Name="CreateButton" Source="create.png" Clicked="Save_Clicked" Grid.Row="8" Grid.Column="1"/>
                     </StackLayout>
+                    
                 </StackLayout>
+                
             </FlexLayout>
+            
         </ScrollView>
+        
     </ContentPage.Content>
+    
 </ContentPage>
