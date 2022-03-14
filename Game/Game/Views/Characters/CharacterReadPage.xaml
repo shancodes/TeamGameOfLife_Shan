@@ -201,17 +201,18 @@
 
                         <StackLayout Style="{StaticResource BattlePageBattleUIStackStyle}">
                             <Label Text="Location : " Style="{StaticResource LabelStyle}" />
-                            <Label x:Name="PopupItemLocation" Style="{StaticResource ValueStyle}" />
+                            <Label x:Name="PopupItemLocation" Style="{StaticResource PopValueStyle}" />
                         </StackLayout>
 
                         <StackLayout Style="{StaticResource BattlePageBattleUIStackStyle}">
                             <Label x:Name="PopupItemAttribute" Style="{StaticResource LabelStyle}" />
-                            <Label x:Name="PopupItemValue" Style="{StaticResource ValueStyle}" />
+                            <Label x:Name="PopupItemValue" Style="{StaticResource PopValueStyle}" />
                         </StackLayout>
 
                         <Button x:Name="PopupCloseButton" 
                                 Clicked="ClosePopup_Clicked" 
-                                Text="Close"/>
+                                Text="Close"
+                                Style="{StaticResource NewColorButton}"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>
