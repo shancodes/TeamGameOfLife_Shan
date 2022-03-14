@@ -26,6 +26,9 @@
                 <ImageButton Clicked="BeginButton_Clicked" Source="start.png"/>
                 
             </StackLayout>
+            
         </ScrollView>
+        
     </ContentPage.Content>
+    
 </ContentPage>
