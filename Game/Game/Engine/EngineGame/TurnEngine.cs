@@ -358,7 +358,7 @@ namespace Game.Engine.EngineGame
                     found = EngineSettings.CharacterList.Remove(EngineSettings.CharacterList.Find(m => m.Guid.Equals(Target.Guid)));
                     found = EngineSettings.PlayerList.Remove(EngineSettings.PlayerList.Find(m => m.Guid.Equals(Target.Guid)));
 
-                    // Removing the 
+                    // Removing the player
                     _ = EngineSettings.MapModel.RemovePlayerFromMap(Target);
                     return true;
 
@@ -371,11 +371,13 @@ namespace Game.Engine.EngineGame
                     if (EngineSettings.BattleSettingsModel.AllowZombieMonsters == true &&
                         randomVal <= EngineSettings.BattleSettingsModel.ZombieOccuerencePercentage)
                     {
+                        //removing Zombie to the name of monster after turning zombie
                         int index = Target.Name.IndexOf("Zombie ");
                         Target.Name = (index < 0)
                             ? Target.Name
                             : Target.Name.Remove(index, 7);
 
+                        //adding Zombie to the name of monsters
                         Target.Name = "Zombie " + Target.Name;
                         Target.Alive = true;
                         EngineSettings.CurrentDefender.Alive = true;
