@@ -7,50 +7,75 @@
              x:Class="Game.Views.AboutPage"
              BackgroundImageSource="homepage.png">
     <NavigationPage.TitleView>
+        
         <StackLayout Orientation="Horizontal" Style="{StaticResource StackLayoutAboutPage}">
+            
             <Label Text="Game Information" Style="{StaticResource HeaderStyle}"/>
+            
         </StackLayout>
+        
     </NavigationPage.TitleView>
 
     <ScrollView>
+        
         <StackLayout Style="{StaticResource OuterStackAboutStyle}">
+            
             <Image Source="logo_small.png" Style="{StaticResource ImageItemCreatePageStyle}"/>
 
             <Label Text=" A battle between powerful ladies and Ice monsters&#x0d;" Style="{StaticResource CenterMessageStyle}"/>
+            
             <Label Text="Makers" Style="{StaticResource LabelAboutMakersStyle}"/>
+            
             <Label Text="Developers" Style="{StaticResource LabelAboutDevsStyle}"/>
 
-
             <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
+                
                 <StackLayout Style="{StaticResource VerticalStack}">
+                    
                     <Image Source="kruta.png" Style="{StaticResource ImageAboutPage}"/>
+                    
                     <Label Text="Kruta" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
+                    
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource VerticalStack}">
+                    
                     <Image Source="shipra.png" Style="{StaticResource ImageAboutPage}"/>
+                    
                     <Label Text="Shipra" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
+                    
                 </StackLayout>
-
 
                 <StackLayout Style="{StaticResource VerticalStack}">
+                    
                     <Image Source="priya.png" Style="{StaticResource ImageAboutPage}"/>
+                    
                     <Label Text="Shanmugapriya" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
+                    
                 </StackLayout>
+                
             </StackLayout>
 
             <Label Text="Designers" Style="{StaticResource LabelAboutDevsStyle}"/>
             
             <StackLayout Style="{StaticResource HorizontalStackAboutPageStyle}">
+                
                 <StackLayout Style="{StaticResource VerticalStack}">
+                    
                     <Image Source="natasha.png" Style="{StaticResource ImageAboutPage}"/>
+                    
                     <Label Text="Natasha" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
+                    
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource VerticalStack}">
+                    
                     <Image Source="megan.png" Style="{StaticResource ImageAboutPage}"/>
+                    
                     <Label Text="Megan" Style="{StaticResource LabelAboutDevsNamesStyle}"></Label>
+                    
                 </StackLayout>
+                
             </StackLayout>
 
             <!--Database Settings Frame-->
@@ -66,6 +91,7 @@
                         Style="{StaticResource AboutSwitchStyle}"
                         Toggled="DatabaseSettingsSwitch_OnToggled"
                         IsToggled="False"/>
+                
             </StackLayout>
 
             <StackLayout Style="{StaticResource VerticalStack}"
@@ -98,6 +124,7 @@
                         />
 
                 </StackLayout>
+                
             </StackLayout>
 
             <!--Debug Settings Frame-->
@@ -113,6 +140,7 @@
                     HorizontalOptions="EndAndExpand"
                     Toggled="DebugSettingsSwitch_OnToggled"
                     IsToggled="False"/>
+                
             </StackLayout>
 
             <StackLayout Style="{StaticResource VerticalStack}" x:Name="DebugSettingsFrame" IsVisible="False">
@@ -147,9 +175,15 @@
                             x:Name="ServerItemsList" 
                             Style="{StaticResource EditorAboutPageStyle}"
                         />
+                        
                     </StackLayout>
+                    
                 </StackLayout>
+                
             </StackLayout>
+            
         </StackLayout>
+        
     </ScrollView>
+    
 </ContentPage>
