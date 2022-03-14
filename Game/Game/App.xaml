@@ -1842,7 +1842,7 @@
                 <Setter Property="FontSize" Value="Small" />
                 <Setter Property="FontAttributes" Value="None" />
                 <Setter Property="WidthRequest" Value="280"/>
-                <Setter Property="BackgroundColor" Value = "LightGray" />
+                <Setter Property="BackgroundColor" Value = "Transparent" />
             </Style>
 
             <Style TargetType="Picker" x:Key="PickerItemCreateStyle">
