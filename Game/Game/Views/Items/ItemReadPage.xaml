@@ -10,20 +10,22 @@
              >
 
     <ContentPage.Resources>
+        
         <ResourceDictionary>
             <local_helpers:StringEnumConverter x:Key="StringEnum"/>
+            
             <local_helpers:ItemLocationEnumConverter x:Key="ItemLocationEnumConverter"/>
         </ResourceDictionary>
+        
     </ContentPage.Resources>
-
 
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
             <Button ImageSource="back_image_two.png" Clicked="Done_Clicked" Style="{StaticResource ButtoNavigationBar}"/>
+            
             <Label Text="Details" Style="{StaticResource TitleHeader}"/>
         </StackLayout>
     </NavigationPage.TitleView>
-
 
     <ScrollView>
         <FlexLayout x:Name="flexLayout"
@@ -34,7 +36,7 @@
 
                     <StackLayout Style="{StaticResource PickedCharacterItemBox}">
                         <FlexLayout
-                        Style="{StaticResource FlexLayoutCrudi}">
+                            Style="{StaticResource FlexLayoutCrudi}">
 
                             <Image Source="{Binding Data.ImageURI}" Style="{StaticResource ImageItemCreatePageStyle}"/>
 
@@ -46,6 +48,7 @@
 
                             <StackLayout Style="{StaticResource StackLayoutItemReadStyle}">
                                 <Label Text="Description : " Style="{StaticResource StyleItemReadLabelStyle}"/>
+                                
                                 <Label Text="{Binding Data.Description}" Style="{StaticResource StyleItemReadValueStyle}"/>
                             </StackLayout>
 
@@ -53,37 +56,54 @@
                                 <Label Text="Location : " Style="{StaticResource StyleItemReadLabelStyle}"/>
                                 <Label Text="{Binding Data.Location}" Style="{StaticResource StyleItemReadValueStyle}"/>
                             </StackLayout>
+                            
                         </FlexLayout>
+                        
                     </StackLayout>
+                    
                 </Frame>
 
                 <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                     <Label
-                    Text="Damage   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
+                        Text="Damage   " 
+                        Style="{StaticResource StyleItemReadStackLabelStyle}"/>
+                    
                     <Label 
-                    Text="{Binding Data.Damage}" Style="{StaticResource LabelItemReadStyle}"/>
+                        Text="{Binding Data.Damage}" 
+                        Style="{StaticResource LabelItemReadStyle}"/>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                     <Label
-                    Text="Range   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
+                        Text="Range   " 
+                        Style="{StaticResource StyleItemReadStackLabelStyle}"/>
+                    
                     <Label 
-                    Text="{Binding Data.Range}" Style="{StaticResource LabelItemReadStyle}"/>
+                        Text="{Binding Data.Range}"
+                        Style="{StaticResource LabelItemReadStyle}"/>
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource HorizontalReadItemStyle}">
                     <Label
-                    Text="Value   " Style="{StaticResource StyleItemReadStackLabelStyle}"/>
+                        Text="Value   " 
+                        Style="{StaticResource StyleItemReadStackLabelStyle}"/>
+                    
                     <Label 
                     Text="{Binding Data.Value}" Style="{StaticResource LabelItemReadStyle}"/>
                 </StackLayout>
 
                 <Grid Style="{StaticResource GridItemReadStyle}">
                     <ImageButton Source="delete.png" Clicked="Delete_Clicked"  Grid.Row="0" Grid.Column="0" />
+                    
                     <ImageButton Source="done.png" Clicked="Done_Clicked" Grid.Row="0" Grid.Column="1"/>
+                    
                     <ImageButton Source="update.png" Clicked="Update_Clicked" Grid.Row="0" Grid.Column="2"/>
                 </Grid>
+                
             </StackLayout>
+            
         </FlexLayout>
+        
     </ScrollView>
+    
 </ContentPage>
