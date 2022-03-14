@@ -541,6 +541,12 @@
                 BasedOn="{StaticResource MessageStyle}">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
             </Style>
+            <Style TargetType="Label"
+                x:Key="ScoreLargeStyleColor"
+                BasedOn="{StaticResource ScoreLargeStyle}">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
 
             <Style TargetType="Label"
                 x:Key="CenterMessageStyle"
