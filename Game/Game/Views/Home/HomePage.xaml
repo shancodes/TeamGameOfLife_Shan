@@ -11,9 +11,11 @@
 
                 <!--Image for home page-->
                 <StackLayout Style="{StaticResource HorizontalStack}" >
+                    
                     <Image
                          Source="logo_final.png"
                          Style="{StaticResource ImageLargeLogoStyle}"/>
+                    
                 </StackLayout>
 
                 <!--Enter button-->
@@ -22,6 +24,9 @@
                     Clicked="GameButton_Clicked"/>
                 
             </StackLayout>
+            
         </ScrollView>
+        
     </ContentPage.Content>
+    
 </ContentPage>
