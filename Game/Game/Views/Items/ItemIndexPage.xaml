@@ -39,7 +39,7 @@
 
                                     <Label Grid.Column="1"
                                         Text="{Binding Name}"
-                                        FontAttributes="Bold"
+                                        Style="{StaticResource itemindexboldstyle}"
                                     />
 
                                     <Label 
