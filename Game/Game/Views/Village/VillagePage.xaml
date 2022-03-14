@@ -11,6 +11,7 @@
             <FlexLayout x:Name="flexLayout" Style="{StaticResource FlexLayoutGamePage}">
 
                 <StackLayout Style="{StaticResource AboutHorizontalStackStyle}" >
+                    
                     <Label
                         Text="Number of Items to add:"
                         Style="{StaticResource NewLabelStyle}"
@@ -20,13 +21,16 @@
                         x:Name="ServerItemValue"
                         Style="{DynamicResource ColorEntryStyle}"
                     />
+                    
                 </StackLayout>
 
                 <StackLayout>
+                    
                     <Button
                         Text="Fetch Items"
                         Clicked="FetchItemsPost_Command"
                         Style="{StaticResource NewButtonStyle}"/>
+                    
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
@@ -35,6 +39,7 @@
                                 Source="character_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="CharactersButton_Clicked"/>
+                    
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
@@ -43,8 +48,8 @@
                                 Source="monster_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="MonstersButton_Clicked"/>
+                    
                 </StackLayout>
-
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
 
@@ -52,6 +57,7 @@
                                 Source="items_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ItemsButton_Clicked"/>
+                    
                 </StackLayout>
 
                 <StackLayout Style="{StaticResource CardImageTextBox}">
@@ -60,9 +66,13 @@
                                 Source="scores_icon.png"
                                 Style="{StaticResource ImageLargeStyle}"
                                 Clicked="ScoresButton_Clicked"/>
+                    
                 </StackLayout>
             
             </FlexLayout>
+            
         </ScrollView>
+        
     </ContentPage.Content>
+    
 </ContentPage>
