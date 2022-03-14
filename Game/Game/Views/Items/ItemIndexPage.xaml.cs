@@ -105,6 +105,5 @@ namespace Game.Views
             ItemsListView.SelectedItem = null;
             return;
         }
-
     }
 }
