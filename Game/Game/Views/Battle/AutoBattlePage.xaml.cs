@@ -26,6 +26,11 @@ namespace Game.Views
             AutoBattleFrame.IsVisible = false; 
         }
 
+        /// <summary>
+        /// Starts the Auto Battle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void AutobattleButton_Clicked(object sender, EventArgs e)
         {
             var BattleStartMessage = "Auto Battle Started..";
@@ -51,9 +56,14 @@ namespace Game.Views
 
             BattleMessageValue.Text = BattleMessage;
 
-            AutobattleImage.Source = "troll6_d.gif";
+            AutobattleImage.Source = "fire_princess.gif";
         }
 
+        /// <summary>
+        /// Displays all the background battle messages
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ViewBattleInfo_Clicked(object sender, EventArgs e)
         {
             AutoBattleFrame.IsVisible = true;
