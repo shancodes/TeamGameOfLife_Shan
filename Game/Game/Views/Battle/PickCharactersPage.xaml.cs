@@ -153,6 +153,9 @@ namespace Game.Views
             }
         }
 
+        /// <summary>
+        /// Setting background color to Default
+        /// </summary>
         public void UnsetUserDifficultyStyles()
         {
             noobbutton.BackgroundColor = default;
@@ -160,6 +163,13 @@ namespace Game.Views
             probutton.BackgroundColor = default;
         }
 
+        /// <summary>
+        /// Set Background color of the button to Default
+        /// Set User Difficulty 
+        /// Set the Background color of the selected button to Green
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void NoobButton_Clicked(object sender, EventArgs e)
         {
             UnsetUserDifficultyStyles();
@@ -167,6 +177,13 @@ namespace Game.Views
             noobbutton.BackgroundColor = Color.Green;
         }
 
+        /// <summary>
+        /// Set Background color of the button to Default
+        /// Set User Difficulty 
+        /// Set the Background color of the selected button to Green
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void JoeButton_Clicked(object sender, EventArgs e)
         {
             UnsetUserDifficultyStyles();
@@ -175,6 +192,13 @@ namespace Game.Views
 
         }
 
+        /// <summary>
+        /// Set Background color of the button to Default
+        /// Set User Difficulty 
+        /// Set the Background color of the selected button to Green
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ProButton_Clicked(object sender, EventArgs e)
         {
             UnsetUserDifficultyStyles();
