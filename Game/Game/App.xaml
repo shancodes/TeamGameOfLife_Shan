@@ -574,6 +574,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="CenterMessageLargeStyleBattleSettingspagestyle"
+                BasedOn="{StaticResource CenterMessageLargeStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="NewMessageLargeStyle"
                 BasedOn="{StaticResource CenterMessageLargeStyle}">
                 <Setter Property="TextColor" Value="Wheat" />
@@ -686,6 +692,14 @@
                 <Setter Property="Wrap" Value="Wrap"/>
             </Style>
             <!--Grid-->
+            <Style TargetType="Grid"
+                x:Key="GridBattlesettingspageStyle">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="RowSpacing" Value="1" />
+                <Setter Property="ColumnSpacing" Value="2" />
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
 
             <Style TargetType="Grid"
                 x:Key="GridCrudiStyle">
@@ -1047,6 +1061,10 @@
                 <Setter Property="IsVisible" Value="False"/>
             </Style>
 
+            <Style TargetType="Button" x:Key="ButtoncloseBattlesettingsStyle">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+                
             <Style TargetType="Button" x:Key="ButtonInvisibleDoneButtonStyle"
                 BasedOn="{StaticResource ButtonInvisibleStyle}">
                 <Setter Property="BackgroundColor" Value="#EBDDCF"/>
@@ -1220,6 +1238,12 @@
                 x:Key="VerticalStack"
                    BasedOn="{StaticResource HorizontalStack}">
                 <Setter Property="Orientation" Value="Vertical" />
+            </Style>
+
+            <Style TargetType="StackLayout"
+                x:Key="VerticalStackBattlesettingspagestyle"
+                   BasedOn="{StaticResource VerticalStack}">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
             <Style TargetType="StackLayout"
@@ -1804,7 +1828,7 @@
 
             <Style TargetType="Switch" x:Key="AboutSwitchCenterStyle">
                 <Setter Property="HorizontalOptions" Value="Start"/>
-                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
             <!-- Picker -->
@@ -1819,6 +1843,12 @@
 
             <Style TargetType="Picker" x:Key="PickerItemCreateStyle">
                 <Setter Property="HorizontalOptions" Value="Start" />   
+            </Style>
+
+            <Style TargetType="Picker" x:Key="PickerBattleSettingStyle">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Micro" />
             </Style>
 
             <Style TargetType="Picker"

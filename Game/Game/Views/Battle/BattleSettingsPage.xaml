@@ -5,18 +5,14 @@
 
     <ContentPage.Content>
 
-        <StackLayout Style="{StaticResource VerticalStack}" HorizontalOptions="FillAndExpand">
+        <StackLayout Style="{StaticResource VerticalStackBattlesettingspagestyle}">
 
-            <Label Style="{StaticResource CenterMessageLargeStyle}" Text="Battle Settings" HorizontalTextAlignment="Center"/>
+            <Label Style="{StaticResource CenterMessageLargeStyleBattleSettingspagestyle}" Text="Battle Settings"/>
 
-            <Label Text ="Battle Mode" Style="{StaticResource HeaderStyle}" />
+            <Label Text ="Battle Mode" Style="{StaticResource HeaderStyle}"/>
 
             <Grid 
-                HorizontalOptions="StartAndExpand" 
-                Padding="10"
-                RowSpacing="1"
-                ColumnSpacing="2"
-                VerticalOptions="Center">
+                Style="{StaticResource GridBattlesettingspageStyle}">
                 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
@@ -44,11 +40,7 @@
             <Label Text ="Control Hit Actions" Style="{StaticResource HeaderStyle}" />
 
             <Grid
-                HorizontalOptions="StartAndExpand" 
-                Padding="10"
-                RowSpacing="1"
-                ColumnSpacing="2"
-                VerticalOptions="Center">
+                Style="{StaticResource GridBattlesettingspageStyle}">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
@@ -58,7 +50,7 @@
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
+                
                 <Label 
                     Grid.Row="0" Grid.Column="0"
                     Text="Monster Hit Control" 
@@ -66,9 +58,7 @@
                 
                 <Picker 
                     Grid.Row="0" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
-                    FontSize="Micro"
+                    Style="{StaticResource PickerBattleSettingStyle}"
                     x:Name="MonsterHitPicker"
                     SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
                     SelectedIndexChanged="MonsterHitPicker_Changed"/>
@@ -81,9 +71,7 @@
 
                 <Picker 
                     Grid.Row="1" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
-                    FontSize="Micro"
+                    Style="{StaticResource PickerBattleSettingStyle}"
                     x:Name="CharacterHitPicker"
                     SelectedItem="{Binding SelectedItemProperty, Mode=TwoWay}" 
                     SelectedIndexChanged="CharacterHitPicker_Changed"/>
@@ -95,8 +83,7 @@
 
                 <Switch 
                     Grid.Row="2" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
+                    Style="{StaticResource AboutSwitchCenterStyle}"
                     x:Name="AllowCriticalHitSwitch"
                     Toggled="AllowCriticalHit_Toggled"/>
 
@@ -107,8 +94,7 @@
 
                 <Switch 
                     Grid.Row="3" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
+                    Style="{StaticResource AboutSwitchCenterStyle}"
                     x:Name="AllowCriticalMissSwitch"
                     Toggled="AllowCriticalMiss_Toggled"/>
 
@@ -119,13 +105,12 @@
 
                 <Switch 
                     Grid.Row="4" Grid.Column="1"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Center"
+                    Style="{StaticResource AboutSwitchCenterStyle}"
                     x:Name="AllowMonsterItemsSwitch"
                     Toggled="AllowMonsterItems_Toggled"/>
             </Grid>
 
-            <Button Clicked="CloseButton_Clicked" Text="Close" HorizontalOptions="CenterAndExpand"/>
+            <Button Clicked="CloseButton_Clicked" Text="Close" Style="{StaticResource ButtoncloseBattlesettingsStyle}"/>
 
         </StackLayout>
     </ContentPage.Content>
