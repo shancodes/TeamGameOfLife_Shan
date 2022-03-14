@@ -217,7 +217,7 @@ namespace UnitTests.Views
             var btn = (Button) page.FindByName("noobbutton");
 
             //Act
-            page.noobbutton_Clicked(null, new System.EventArgs());
+            page.NoobButton_Clicked(null, new System.EventArgs());
             //Reset
 
             //Assert
@@ -230,7 +230,7 @@ namespace UnitTests.Views
             var btn = (Button)page.FindByName("noobbutton");
 
             //Act
-            page.joebutton_Clicked(null, new System.EventArgs());
+            page.JoeButton_Clicked(null, new System.EventArgs());
             //Reset
 
             //Assert
@@ -243,7 +243,7 @@ namespace UnitTests.Views
             var btn = (Button)page.FindByName("pro");
 
             //Act
-            page.probutton_Clicked(null, new System.EventArgs());
+            page.ProButton_Clicked(null, new System.EventArgs());
             //Reset
 
             //Assert
