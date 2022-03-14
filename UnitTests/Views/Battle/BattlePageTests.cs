@@ -321,6 +321,24 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void BattlePage_NextAttackExample_Monster_Turn_Should_Pass()
+        {
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList[0];
+
+            // Has no monster, so should show next round.
+
+            // Act
+            page.NextAttackExample();
+
+            // Reset
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = null;
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
         public void BattlePage_NextAttackExample_GameOver_Should_Pass()
         {
             // Arrange
@@ -729,6 +747,26 @@ namespace UnitTests.Views
         }
 
         [Test]
+        public void BattleSettingsPage_ShowBattleMode_App_Started_Should_Pass()
+        {
+            // Arrange
+            var battleModeEnumpreviousValue = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum = BattleModeEnum.MapNext;
+            var battleStateEnumPreviousValue = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = BattleStateEnum.NewRound;
+
+            // Act
+            page.ShowBattleMode();
+
+            // Reset
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.BattleModeEnum = battleModeEnumpreviousValue;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.BattleStateEnum = battleStateEnumPreviousValue;
+
+            // Assert
+            Assert.IsTrue(true); // Got Here
+        }
+
+        [Test]
         public void BattleSettingsPage_ShowBattleModeUIElements_Starting_Should_Pass()
         {
             // Arrange
@@ -1017,6 +1055,125 @@ namespace UnitTests.Views
 
             // Assert
             Assert.IsTrue(true); // Got Here
+        }
+
+        [Test]
+        public void BattlePage_DoneButton_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.DoneButton_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void BattlePage_RestartButton_Clicked_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.RestartButton_Clicked(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void BattlePage_AllowMonsterZombie_Toggled_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            page.AllowMonsterZombie_Toggled(null, null);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(false, BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void BattlePage_AllowMonsterZombie_Toggled_Enable_Should_Pass()
+        {
+            // Arrange
+            page.EnableZombieMonsterToggleAndSet100Percent();
+
+            // Act
+            page.AllowMonsterZombie_Toggled(null, null);
+            bool isZombiesEnabled = BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters;
+
+            // Reset
+            page.DisableZombieMonsterToggleAndSetNull();
+
+            // Assert
+            Assert.IsTrue(isZombiesEnabled); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void BattlePage_SetSelectedEmptyd_Default_Should_Pass()
+        {
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.PopulateMapModel(BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList);
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList[0];
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker.Speed = 3;
+            MapModelLocation location = new MapModelLocation();
+            location.Column = 0;
+            location.Row = 0;
+
+            // Act
+            var result = page.SetSelectedEmpty(location);
+
+
+            // Reset
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.ClearMapGrid();
+
+            // Assert
+            Assert.AreEqual(true, result); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void BattlePage_SetSelectedEmptyd_Invalid_Location_Should_Pass()
+        {
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.PopulateMapModel(BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList);
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = BattleEngineViewModel.Instance.Engine.EngineSettings.CharacterList[0];
+            MapModelLocation location = new MapModelLocation();
+            location.Column = 0;
+            location.Row = -1;
+
+            // Act
+            var result = page.SetSelectedEmpty(location);
+
+
+            // Reset
+            BattleEngineViewModel.Instance.Engine.EngineSettings.MapModel.ClearMapGrid();
+
+            // Assert
+            Assert.AreEqual(false, result); // Got to here, so it happened...
+        }
+
+        [Test]
+        public void BattlePage_DrawGameBoardAttackerDefenderSection_Monster_Dies_Should_Pass()
+        {
+            // Arrange
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender = BattleEngineViewModel.Instance.Engine.EngineSettings.MonsterList[0];
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentDefender.Alive = false;
+            BattleEngineViewModel.Instance.Engine.EngineSettings.CurrentAttacker = new PlayerInfoModel();
+
+            // Act
+            page.DrawGameBoardAttackerDefenderSection();
+
+            // Reset
+
+            // Assert
+            Assert.IsTrue(true); // Got to here, so it happened...
         }
     }
 }
