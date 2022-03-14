@@ -7,19 +7,31 @@
     <NavigationPage.TitleView>
         <!--Menu Bar-->
         <StackLayout x:Name="StacklayoutGamePage" Style="{StaticResource BattlePageMenuStyle}">
+            
             <Frame Style="{StaticResource FrameMenuBattlePageStyle}"/>
-            <Button Text="Edit battle settings" Clicked="Setttings_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
-            <Button Text="exit the game" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
+            
+            <Button Text="Edit" Clicked="Setttings_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
+            
+            <Button Text="Exit" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
+            
             <Frame Style="{StaticResource FrameMenuBattlePageStyle}"/>
+            
             <Label x:Name="BattleModeValue" Text="" Style="{StaticResource BattlePageMenuLabelStyle}"/>
+            
             <Label Text="Allow Monster Zombies" Style="{DynamicResource LabelStyle}"/>
+            
             <Switch x:Name="AllowMonsterZombies" Toggled="AllowMonsterZombie_Toggled"/>
+            
             <Label Text="Enter percentage of zombie occurance" Style="{DynamicResource LabelStyle}"/>
+            
             <Entry x:Name="percentage"></Entry>
+            
         </StackLayout>
+        
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
+        
         <FlexLayout x:Name="flexLayout"
                         Style="{StaticResource FlexLayoutGamePage}">
 
@@ -29,24 +41,34 @@
 
                 <!--The Top of the Battle UI Holds the List of Players-->
                 <StackLayout x:Name="TopPlayerDisplay">
+                    
                     <StackLayout Style="{StaticResource BattlePageBattleUIStyle}"
                         x:Name="GamePlayersTopDisplay">
 
                         <Label Text="Characters" Style="{StaticResource CenterMessageStyle}"/>
+                        
                         <StackLayout x:Name="CharacterBox" Style="{StaticResource BattlePageBattleUIStackStyle}"/>
 
                         <Label Text="Monsters" Style="{StaticResource CenterMessageStyle}"/>
+                        
                         <StackLayout x:Name="MonsterBox" Style="{StaticResource BattlePageBattleUIStackStyle}"/>
+                        
                     </StackLayout>
+                    
                 </StackLayout>
 
                 <!--The Battle Map Display -->
                 
                 <StackLayout x:Name="BattleMapDisplay" Style="{StaticResource BattleMapBox}">
+                    
                     <AbsoluteLayout Style="{StaticResource BattleMapAbsoluteLayout}">
+                        
                         <Image x:Name="mapImage" Source="battle_grid.png"  Style="{StaticResource BattleMapImageStyle}"/>
+                        
                         <Grid x:Name="MapGrid" Style="{StaticResource GridBattleMap}"/>
+                        
                     </AbsoluteLayout>
+                    
                 </StackLayout>
 
 
@@ -60,65 +82,103 @@
                         <StackLayout x:Name="BattlePlayerBox" Style="{StaticResource PlayerBattleOuterBox}">
 
                             <StackLayout x:Name="AttackerBox" Style="{StaticResource PlayerBattleInfoBoxone}">
+                                
                                 <Image x:Name="AttackerImage" Source="knight.png" Style="{StaticResource ImageBattleMediumStyle}"/>
+                                
                                 <Label x:Name="AttackerName" Text="" Style="{StaticResource ValueStyleBattleMicro}"/>
+                                
                                 <Label x:Name="AttackerHealth" Text="" Style="{StaticResource ValueStyleBattleMicro}"/>
+                                
                             </StackLayout>
 
                             <StackLayout Style="{StaticResource StackLayoutHomePage}">
+                                
                                 <Label x:Name="BattlePlayerBoxVersus" Text="vs" Style="{StaticResource ValueStyleBattleMicroNew}"/>
+                                
                                 <Image x:Name="AttackerAttack" Source="mapcell.png" Style="{StaticResource ImageSmallStyle}"/>
+                                
                             </StackLayout>
 
                             <StackLayout x:Name="DefenderBox" Style="{StaticResource PlayerBattleInfoBox}">
+                                
                                 <Image x:Name="DefenderImage" Source="troll.png" Style="{StaticResource ImageBattleMediumStyle}"/>
+                                
                                 <Label x:Name="DefenderName" Text="" Style="{StaticResource ValueStyleBattleMicro}"/>
+                                
                                 <Label x:Name="DefenderHealth" Text="" Style="{StaticResource ValueStyleBattleMicro}"/>
+                                
                             </StackLayout>
+                            
                         </StackLayout>
+                        
                     </Frame>
 
                     <StackLayout Style="{StaticResource HorizontalStack}" HorizontalOptions="CenterAndExpand">
 
                         <Button x:Name="AttackButton" Clicked="AttackButton_Clicked" Text="Next Attack" Style="{StaticResource ButtonInvisibleStyle}"/>
+                        
                         <Label x:Name="Characterdiedtext" Text="Character Died" Style="{StaticResource characterdiedtext}"></Label>
+                        
                         <Image x:Name="characterimage" Source="black_knight.gif" IsAnimationPlaying="True" Style="{StaticResource ImageLargeStyle}" IsVisible="false"/>
+                        
                         <Label x:Name="monsterdiedtext" Text="Monster Died" Style="{StaticResource monsterdiedtext}"></Label>
+                        
                         <Image x:Name="monsterimage" Source="black_knight.gif" IsAnimationPlaying="True" Style="{StaticResource ImageLargeStyle}" IsVisible="false"/>
+                        
                         <Button x:Name="NextRoundButton" Clicked="NextRoundButton_Clicked" Text="Next Round" Style="{StaticResource ButtonInvisibleStyle}"/>
+                        
                         <Button x:Name="StartBattleButton" Clicked="StartButton_Clicked" Text="Start Battle" Style="{StaticResource ButtonInvisibleStyle}"/>
+                        
                         <Button x:Name="DoneButton" Clicked="DoneButton_Clicked" Text="Character Location selected" Style="{StaticResource ButtonInvisibleDoneButtonStyle}"/>
+                    
                     </StackLayout>
 
                     <StackLayout 
                         Style="{StaticResource BattlePageLowerStackStyle}">
+                        
                         <Frame x:Name="messageframe" Style="{StaticResource FrameBattlePageLower}" IsVisible="false">
+                           
                             <StackLayout x:Name="MessageDisplayBox"
                                 Style="{StaticResource BattlePageLowerStackStyletwonewstyle}">
+                                
                                 <Label x:Name="BattleMessages" 
                                        Style="{StaticResource StyleLabelBattlePageLowerFrameLabel}"/>
+                                
                             </StackLayout>
+                            
                         </Frame>
                         
                         <StackLayout Style="{StaticResource BattlePageBattleUIStackStyleBeforeResetButton}">
+                            
                             <ImageButton x:Name="restart_button" Source="restart.png" Clicked="RestartButton_Clicked" IsVisible="false"></ImageButton>
+                            
                             <ImageButton x:Name="quit_button" Source="quit.png" Clicked="ExitButton_Clicked" IsVisible="false"></ImageButton>
+                        
                         </StackLayout>
 
                     </StackLayout>
+                    
                 </StackLayout>
+                
             </StackLayout>
 
             <!--The Game Over Screen -->
             <StackLayout Style="{StaticResource VerticalStackThankYouPageStyle}" x:Name="GameOverDisplay" >
+                
                 <Label Text="Thank you for Playing!" Style="{StaticResource Thankyoulabel}"/>
 
                 <StackLayout Style="{StaticResource ThankYouPageHorizontalStackStyle}">
+                    
                     <ImageButton x:Name="ShowScoreButton" Source="score.png" Clicked="ShowScoreButton_Clicked"/>
+                    
                     <ImageButton x:Name="ExitButton" Source="exit.png" Clicked="ExitButton_Clicked"></ImageButton>
+                    
                 </StackLayout>
                 
             </StackLayout>
+            
         </FlexLayout>
+        
     </ContentPage.Content>
+    
 </ContentPage>
