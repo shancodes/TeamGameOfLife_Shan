@@ -8,8 +8,8 @@
         <!--Menu Bar-->
         <StackLayout x:Name="StacklayoutGamePage" Style="{StaticResource BattlePageMenuStyle}">
             <Frame Style="{StaticResource FrameMenuBattlePageStyle}"/>
-            <ImageButton Source="icon_edit.png" Clicked="Setttings_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
-            <ImageButton Source="icon_cancel.png" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
+            <Button Text="Edit battle settings" Clicked="Setttings_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
+            <Button Text="exit the game" Clicked="ExitButton_Clicked" Style="{StaticResource BattleToolbarStyle}"/>
             <Frame Style="{StaticResource FrameMenuBattlePageStyle}"/>
             <Label x:Name="BattleModeValue" Text="" Style="{StaticResource BattlePageMenuLabelStyle}"/>
             <Label Text="Allow Monster Zombies" Style="{DynamicResource LabelStyle}"/>
