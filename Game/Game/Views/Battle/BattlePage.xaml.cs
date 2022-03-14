@@ -200,9 +200,6 @@ namespace Game.Views
 
                 var imageObject = (ImageButton)MapObject;
 
-
-                
-
                 // Check automation ID on the Image, That should match the Player, if not a match, the cell is now different need to update
                 if (!imageObject.AutomationId.Equals(data.Player.Guid))
                 {
@@ -501,15 +498,6 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedMonster(MapModelLocation data)
         {
-            // TODO: Info
-
-            /*
-             * This gets called when the Monster is clicked on
-             * Usefull if you want to select the monster to attack etc.
-             * 
-             * For Mike's simple battle grammar there is no selection of action so I just return true
-             */
-
             data.IsSelectedTarget = true;
             return true;
         }
@@ -521,15 +509,6 @@ namespace Game.Views
         /// <returns></returns>
         public bool SetSelectedCharacter(MapModelLocation data)
         {
-            // TODO: Info
-
-            /*
-             * This gets called when the characters is clicked on
-             * Usefull if you want to select the character and then set state or do something
-             * 
-             * For Mike's simple battle grammar there is no selection of action so I just return true
-             */
-
             return true;
         }
         #endregion MapEvents
@@ -1009,18 +988,29 @@ namespace Game.Views
             }
         }
 
+        /// <summary>
+        /// Function used in the unit test to check  toggle the zombie switch to 100%
+        /// </summary>
         public void EnableZombieMonsterToggleAndSet100Percent()
         {
             AllowMonsterZombies.IsToggled = true;
             percentage.Text = "100";
         }
 
+        /// <summary>
+        /// Function used in UT to check for when zombie switch is off
+        /// </summary>
         public void DisableZombieMonsterToggleAndSetNull()
         {
             AllowMonsterZombies.IsToggled = false;
             percentage.Text = null;
         }
 
+        /// <summary>
+        /// logic for swich, when turned on, monsters will be reincarnated as zombies
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void AllowMonsterZombie_Toggled(object sender, EventArgs e)
         {
             // Flip the settings
