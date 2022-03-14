@@ -9,6 +9,7 @@ using Game.ViewModels;
 using System.Linq;
 using System.Threading.Tasks;
 using Game.Engine.EngineModels;
+using System.Collections.Generic;
 
 namespace Game.Views
 {
@@ -59,14 +60,11 @@ namespace Game.Views
         /// <param name="args"></param>
         public void OnDatabaseCharacterItemSelected(object sender, SelectionChangedEventArgs args)
         {
-            if (args.CurrentSelection.Count == 0) {
-                return;
-            }
-            CharacterModel data = args.CurrentSelection[0] as CharacterModel;
-            if (data == null)
+            if (args.CurrentSelection.Count == 0)
             {
                 return;
             }
+            CharacterModel data = args.CurrentSelection[0] as CharacterModel;
 
             // Manually deselect Character.
             CharactersListView.SelectedItem = null;
@@ -92,10 +90,6 @@ namespace Game.Views
                 return;
             }
             CharacterModel data = args.CurrentSelection[0] as CharacterModel;
-            if (data == null)
-            {
-                return;
-            }
 
             // Manually deselect Character.
             PartyListView.SelectedItem = null;
