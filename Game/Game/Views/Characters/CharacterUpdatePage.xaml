@@ -209,7 +209,8 @@
 
                             <Button x:Name="PopupCloseButton" 
                                 Clicked="ClosePopup_Clicked" 
-                                Text="Close"/>
+                                Text="Close"
+                                Style="{StaticResource NewColorButton}"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
