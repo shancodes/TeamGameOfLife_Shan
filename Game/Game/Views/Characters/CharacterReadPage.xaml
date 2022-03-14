@@ -9,7 +9,7 @@
 
     <!--NavigationPage with Text-->
     <NavigationPage.TitleView >
-        <Label Text ="{Binding Title}" Style="{StaticResource HeaderStyleItemIndexStyle}"/>
+        <Label Text ="{Binding Title}" Style="{StaticResource TitleHeader}" />
     </NavigationPage.TitleView>
 
     <AbsoluteLayout
