@@ -190,6 +190,12 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="ListStyleBColor"
+                BasedOn="{StaticResource ListStyle}">
+                <Setter Property="TextColor" Value="#ffffff" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="ListStyleColor"
                 BasedOn="{StaticResource ListStyle}">
                 <Setter Property="TextColor" Value="Wheat" />
@@ -235,6 +241,12 @@
                 BasedOn="{StaticResource ListStyle}">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="ScoreListStyleColor"
+                BasedOn="{StaticResource ScoreListStyle}">
+                <Setter Property="TextColor" Value="#ffff" />
             </Style>
 
             <Style TargetType="Label"

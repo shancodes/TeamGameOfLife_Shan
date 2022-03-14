@@ -45,7 +45,7 @@
                                             <!--Label for Name-->
                                             <Label 
                                                Text="{Binding Name}" 
-                                               Style="{StaticResource ScoreListStyle}"
+                                               Style="{StaticResource ScoreListStyleColor}"
                                                />
 
                                             <StackLayout Style="{StaticResource StackScoreIndexPage}">
@@ -53,13 +53,13 @@
                                                 <!--Label for Rounds-->
                                                 <Label 
                                                    Text="Rounds:"
-                                                   Style="{StaticResource ListStyle}"
+                                                   Style="{StaticResource ListStyleBColor}"
                                                     />
 
                                                 <!--Label for Roundcount-->
                                                 <Label 
                                                     Text="{Binding RoundCount}" 
-                                                    Style="{StaticResource ListStyle}"
+                                                    Style="{StaticResource ListStyleBColor}"
                                                     />
 
                                             </StackLayout>
@@ -69,13 +69,13 @@
                                                 <!--Label for Score-->
                                                 <Label 
                                                    Text="Score:"
-                                                   Style="{StaticResource ListStyle}"
+                                                   Style="{StaticResource ListStyleBColor}"
                                                     />
 
                                                 <!--Label for ScoreTotal-->
                                                 <Label 
                                                     Text="{Binding ScoreTotal}" 
-                                                    Style="{StaticResource ListStyle}"
+                                                    Style="{StaticResource ListStyleBColor}"
                                                     />
 
                                             </StackLayout>
