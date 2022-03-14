@@ -390,6 +390,18 @@
             </Style>
 
             <Style TargetType="Label"
+                x:Key="LabelItemCreateStackStyleColor"
+                BasedOn="{StaticResource LabelItemCreateStackStyle}">
+                <Setter Property="TextColor" Value="#ffffff" />
+            </Style>
+
+            <Style TargetType="Label"
+                x:Key="LabelItemCreateStackStyleBColor"
+                BasedOn="{StaticResource LabelItemCreateStackStyle}">
+                <Setter Property="TextColor" Value="DarkBlue" />
+            </Style>
+
+            <Style TargetType="Label"
                 x:Key="LabelCharacterCreateStyle"
                 BasedOn="{StaticResource ValueStyle}">
                 <Setter Property="HorizontalOptions" Value="Start" />

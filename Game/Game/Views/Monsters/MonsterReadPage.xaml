@@ -36,26 +36,26 @@
                                     <!--Name Field-->
                                     <Label Grid.Row="0" Grid.Column="0"
                                     Text="Name : " 
-                                    Style="{StaticResource StyleLabel}"/>
+                                    Style="{StaticResource NewStyleLabel}"/>
 
                                     <Label Text="{Binding Data.Name}" Grid.Row="0" Grid.Column="1"
-                                     Style="{StaticResource LabelItemCreateStackStyle}"/>
+                                     Style="{StaticResource LabelItemCreateStackStyleColor}"/>
 
                                     <!--Description Field-->
                                     <Label Grid.Row="2" Grid.Column="0"
                                     Text="Description : " 
-                                    Style="{StaticResource StyleLabel}"/>
+                                    Style="{StaticResource NewStyleLabel}"/>
 
                                     <Label Text="{Binding Data.Description}" Grid.Row="2" Grid.Column="1"
-                                     Style="{StaticResource LabelItemCreateStackStyle}" />
+                                     Style="{StaticResource LabelItemCreateStackStyleColor}" />
 
                                     <!--Difficulty Field-->
                                     <Label Grid.Row="4" Grid.Column="0"
                                     Text="Difficulty : " 
-                                    Style="{StaticResource StyleLabel}"/>
+                                    Style="{StaticResource NewStyleLabel}"/>
 
                                     <Label Text="{Binding Data.Difficulty}" Grid.Row="4" Grid.Column="1"
-                                     Style="{StaticResource LabelItemCreateStackStyle}" />
+                                     Style="{StaticResource LabelItemCreateStackStyleColor}" />
                                 </Grid>
                             </StackLayout>
                         </Frame>
@@ -67,7 +67,7 @@
                                     Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.Attack}" Grid.Row="1" Grid.Column="1"
-                                     Style="{StaticResource LabelItemCreateStackStyle}" />
+                                     Style="{StaticResource LabelItemCreateStackStyleBColor}" />
 
                             <!--Defense Field-->
                             <Label Grid.Row="2" Grid.Column="0"
@@ -83,7 +83,7 @@
                                     Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.Speed}" Grid.Row="3" Grid.Column="1"
-                                     Style="{StaticResource LabelItemCreateStackStyle}" />
+                                     Style="{StaticResource LabelItemCreateStackStyleBColor}" />
 
                             <!--Total Exp Field-->
                             <Label Grid.Row="4" Grid.Column="0"
@@ -91,7 +91,7 @@
                                     Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.ExperienceTotal}" Grid.Row="4" Grid.Column="1"
-                                     Style="{StaticResource LabelItemCreateStackStyle}" />
+                                     Style="{StaticResource LabelItemCreateStackStyleBColor}" />
 
                             <!--Experience Remaining Field-->
                             <Label Grid.Row="5" Grid.Column="0"
@@ -99,7 +99,7 @@
                                     Style="{StaticResource StyleLabel}"/>
 
                             <Label Text="{Binding Data.ExperienceRemaining}" Grid.Row="5" Grid.Column="1"
-                                     Style="{StaticResource LabelItemCreateStackStyle}" />
+                                     Style="{StaticResource LabelItemCreateStackStyleBColor}" />
 
                         </Grid>
 
