@@ -20,7 +20,7 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Jump to the Dungeon
+        /// Jump to the battle
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -40,7 +40,7 @@ namespace Game.Views
         }
 
         /// <summary>
-        /// Jump to the Dungeon
+        /// Jump to the autobattle
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
