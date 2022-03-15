@@ -143,6 +143,10 @@ namespace Game.Engine.EngineBase
             return true;
         }
 
+        /// <summary>
+        /// Stores all Background Battle Messages
+        /// </summary>
+        /// <returns></returns>
         public virtual IEnumerable getBattleMessagesList()
         {
             return battleMessages;
