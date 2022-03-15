@@ -7,7 +7,6 @@
              x:Class="Game.Views.MonsterReadPage"
              >
 
-
     <NavigationPage.TitleView >
         <StackLayout Style="{StaticResource NavigationHeader}">
             <Label  Text ="Monster Detail"   Style="{StaticResource TitleHeader}"/>
