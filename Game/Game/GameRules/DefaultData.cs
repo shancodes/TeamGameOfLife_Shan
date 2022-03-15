@@ -262,7 +262,7 @@ namespace Game.GameRules
         }
 
         /// <summary>
-        /// Load Characters
+        /// Load Monsters
         /// </summary>
         /// <param name="temp"></param>
         /// <returns></returns>
@@ -332,7 +332,7 @@ namespace Game.GameRules
         }
 
             /// <summary>
-            /// Load Characters
+            /// Load Monsters based on User Difficulty
             /// </summary>
             /// <param name="temp"></param>
             /// <returns></returns>
