@@ -18,7 +18,7 @@
     
     <ContentPage.Content>
         <StackLayout Style="{StaticResource OuterBoxStack}">
-            <Frame BorderColor="Black">
+            <Frame Style="{StaticResource FrameItemIndexoutside}">
                 <CollectionView x:Name="MonstersListView" 
                     ItemsSource="{Binding Dataset, Mode=OneWay}"
                     SelectionMode="Single"
@@ -27,9 +27,9 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                            <Frame BorderColor="Black"  MinimumWidthRequest="20" MinimumHeightRequest="20">
+                            <Frame Style="{StaticResource FrameItemIndexmiddlestyle}">
                                 <Grid Style="{StaticResource GridIndexStyle}">
-                                    <Frame BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Frame Style="{StaticResource FrameItemIndexinsidestyle}">
                                         <Image Grid.RowSpan="2"
                             Source="{Binding ImageURI}"
                             Style="{StaticResource ImageMediumStyle}"
