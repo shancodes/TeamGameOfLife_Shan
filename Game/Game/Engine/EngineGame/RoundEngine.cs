@@ -366,10 +366,6 @@ namespace Game.Engine.EngineGame
                 return false;
             }
 
-            // TODO: Teams, You need to implement your own Logic if not using auto apply
-
-            // I use the same logic for Auto Battle as I do for Manual Battle
-
             //if (BaseEngine.BattleScore.AutoBattle)
             {
                 // Have the character, walk the items in the pool, and decide if any are better than current one.
