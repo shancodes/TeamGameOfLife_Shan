@@ -95,6 +95,13 @@ namespace Game.Models
             return true;
         }
 
+        /// <summary>
+        /// checks if the move is valid for player
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="target"></param>
+        /// <param name="MaxDistance"></param>
+        /// <returns></returns>
         public bool isMoveValid(MapModelLocation data, MapModelLocation target, int MaxDistance) {
             if (MaxDistance == 0) return true;
             return CalculateDistance(data, target) <= MaxDistance;
@@ -322,6 +329,12 @@ namespace Game.Models
             return false;
         }
 
+        /// <summary>
+        /// checks if two players are neighbours
+        /// </summary>
+        /// <param name="Attacker"></param>
+        /// <param name="Defender"></param>
+        /// <returns></returns>
         public bool AreCharactersNeighbors(MapModelLocation Attacker, MapModelLocation Defender)
         {
             return (CalculateDistance(Attacker, Defender) == 1);
