@@ -7,8 +7,6 @@
              x:Name="BrowseItemsPage"
              x:Class="Game.Views.MonsterIndexPage"
              >
-
-
     <NavigationPage.TitleView>
         <StackLayout Style="{StaticResource NavigationHeader}">
             <Label Text="Monster Index" Style="{StaticResource TitleHeader}"/>
