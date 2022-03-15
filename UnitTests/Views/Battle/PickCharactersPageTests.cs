@@ -214,7 +214,7 @@ namespace UnitTests.Views
         [Test]
         public void PickCharactersPage_On_NoobClicked_Should_Pass() {
             // Arrange
-            var btn = (Button) page.FindByName("noobbutton");
+            var btn = (Button) page.FindByName("NoobButton");
 
             //Act
             page.NoobButton_Clicked(null, new System.EventArgs());
@@ -227,7 +227,7 @@ namespace UnitTests.Views
         [Test]
         public void PickCharactersPage_On_JoeClicked_Should_Pass() {
             // Arrange
-            var btn = (Button)page.FindByName("noobbutton");
+            var btn = (Button)page.FindByName("JoeButton");
 
             //Act
             page.JoeButton_Clicked(null, new System.EventArgs());
@@ -240,7 +240,7 @@ namespace UnitTests.Views
         [Test]
         public void PickCharactersPage_On_ProClicked_Should_Pass() {
             // Arrange
-            var btn = (Button)page.FindByName("pro");
+            var btn = (Button)page.FindByName("Pro");
 
             //Act
             page.ProButton_Clicked(null, new System.EventArgs());
