@@ -37,7 +37,6 @@ namespace Game.Engine.EngineModels
 
         #endregion Singleton
 
-
         // Holds the official ScoreModel
         public ScoreModel BattleScore { get; set; } = new ScoreModel();
 
@@ -101,8 +100,10 @@ namespace Game.Engine.EngineModels
         // Hold the Battle State, Unknown is default
         public BattleStateEnum BattleStateEnum { get; set; } = BattleStateEnum.Unknown;
 
+        // Sets Pro as Default User Difficulty
         public UserDifficultyEnum userDifficulty { get; set; } = UserDifficultyEnum.Pro;
 
+        // Holds Index for User Difficulty
         public enum UserDifficultyEnum
         {
             Noob = 0,
