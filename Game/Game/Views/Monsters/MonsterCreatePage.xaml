@@ -29,7 +29,7 @@
         <AbsoluteLayout
        Style="{StaticResource BasicAbsoluteLayout}">
 
-            <StackLayout Style="{StaticResource BasicAbsoluteLayout}">
+            <StackLayout Style="{StaticResource Boundaries}">
 
                 <ScrollView>
                     <StackLayout Style="{StaticResource OuterStack}">
