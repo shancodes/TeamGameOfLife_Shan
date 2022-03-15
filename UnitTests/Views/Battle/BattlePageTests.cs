@@ -618,6 +618,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for SetSelectedCharacter
+        /// </summary>
         [Test]
         public void BattlePage_SetSelectedCharacter_Default_Should_Pass()
         {
@@ -632,6 +635,9 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for SetSelectedMonster
+        /// </summary>
         [Test]
         public void BattlePage_SetSelectedMonster_Default_Should_Pass()
         {
@@ -646,6 +652,9 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for SetSelectedEmpty
+        /// </summary>
         [Test]
         public void BattlePage_SetSelectedEmpty_Default_Should_Pass()
         {
@@ -660,6 +669,9 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for UpdateMapGrid with bogus image
+        /// </summary>
         [Test]
         public void BattlePage_UpdateMapGrid_InValid_Bogus_Image_Should_Fail()
         {
@@ -676,6 +688,9 @@ namespace UnitTests.Views
             Assert.AreEqual(false, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for UpdateMapGrid with bogus image button
+        /// </summary>
         [Test]
         public void BattlePage_UpdateMapGrid_InValid_Bogus_ImageButton_Should_Fail()
         {
@@ -694,6 +709,9 @@ namespace UnitTests.Views
             Assert.AreEqual(false, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Bogus stack
+        /// </summary>
         [Test]
         public void BattlePage_UpdateMapGrid_InValid_Bogus_Stack_Should_Fail()
         {
@@ -722,6 +740,9 @@ namespace UnitTests.Views
             Assert.AreEqual(false, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for UpdateMapGrid
+        /// </summary>
         [Test]
         public void BattlePage_UpdateMapGrid_Valid_Stack_Should_Pass()
         {
@@ -758,6 +779,10 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for ShowBattleSettingsPage
+        /// </summary>
+        /// <returns></returns>
         [Test]
         public async Task BattlePage_ShowBattleSettingsPage_Default_Should_Pass()
         {
@@ -772,6 +797,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Setttings_Clicked
+        /// </summary>
         [Test]
         public void BattlePage_Settings_Clicked_Default_Should_Pass()
         {
@@ -786,6 +814,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for MakeMapGridBox
+        /// </summary>
         [Test]
         public void BattleSettingsPage_MakeMapGridBox_InValid_Should_Fail()
         {
@@ -801,6 +832,9 @@ namespace UnitTests.Views
             Assert.AreEqual(HitStatusEnum.Default, BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.CharacterHitEnum);
         }
 
+        /// <summary>
+        /// Test for ShowBattleMode
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleMode_Default_Should_Pass()
         {
@@ -815,6 +849,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for ShowBattleMode when App starting
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleMode_App_Started_Should_Pass()
         {
@@ -835,6 +872,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for ShowBattleModeUIElements when starting
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeUIElements_Starting_Should_Pass()
         {
@@ -852,6 +892,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for ShowBattleModeUIElements for New Round
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeUIElements_NewRound_Should_Pass()
         {
@@ -869,6 +912,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for ShowBattleModeUIElements when game is over
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeUIElements_GameOver_Should_Pass()
         {
@@ -886,6 +932,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for ShowBattleModeUIElements when Round is over
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeUIElements_RoundOver_Should_Pass()
         {
@@ -903,6 +952,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for ShowBattleModeUIElements when battling
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeUIElements_Battling_Should_Pass()
         {
@@ -920,6 +972,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for ShowBattleUIElements
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeUIElements_Unknown_Should_Pass()
         {
@@ -937,6 +992,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for map ability
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeDisplay_MapAbility_Should_Pass()
         {
@@ -954,6 +1012,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for map full
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeDisplay_MapFull_Should_Pass()
         {
@@ -971,6 +1032,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for map next
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeDisplay_MapNext_Should_Pass()
         {
@@ -988,6 +1052,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for simple ability
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeDisplay_SimpleAbility_Should_Pass()
         {
@@ -1005,6 +1072,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for Unknown mode
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeDisplay_SimpleUnknown_Should_Pass()
         {
@@ -1022,6 +1092,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for SimpleNext
+        /// </summary>
         [Test]
         public void BattleSettingsPage_ShowBattleModeDisplay_SimpleNext_Should_Pass()
         {
@@ -1039,6 +1112,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for MapIcon_Clicked Character
+        /// </summary>
         [Test]
         public void BattleSettingsPage_MapIcon_Clicked_Character_Should_Pass()
         {
@@ -1068,6 +1144,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for MapIcon_Clicked_Monster
+        /// </summary>
         [Test]
         public void BattleSettingsPage_MapIcon_Clicked_Monster_Should_Pass()
         {
@@ -1097,6 +1176,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for MapIcon_Clicked
+        /// </summary>
         [Test]
         public void BattleSettingsPage_MapIcon_Clicked_Empty_Should_Pass()
         {
@@ -1126,6 +1208,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got Here
         }
 
+        /// <summary>
+        /// Test for done button
+        /// </summary>
         [Test]
         public void BattlePage_DoneButton_Clicked_Default_Should_Pass()
         {
@@ -1140,6 +1225,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for the restart button
+        /// </summary>
         [Test]
         public void BattlePage_RestartButton_Clicked_Default_Should_Pass()
         {
@@ -1154,6 +1242,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for default zobie switch toggled
+        /// </summary>
         [Test]
         public void BattlePage_AllowMonsterZombie_Toggled_Default_Should_Pass()
         {
@@ -1168,6 +1259,9 @@ namespace UnitTests.Views
             Assert.AreEqual(false, BattleEngineViewModel.Instance.Engine.EngineSettings.BattleSettingsModel.AllowZombieMonsters); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Zobie switch toggled
+        /// </summary>
         [Test]
         public void BattlePage_AllowMonsterZombie_Toggled_Enable_Should_Pass()
         {
@@ -1185,6 +1279,9 @@ namespace UnitTests.Views
             Assert.IsTrue(isZombiesEnabled); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// test for SetSelectedEmtyd
+        /// </summary>
         [Test]
         public void BattlePage_SetSelectedEmptyd_Default_Should_Pass()
         {
