@@ -39,7 +39,8 @@
                                 <StackLayout Style="{StaticResource PickedCharacterItemBox}">
                                     
                                     <Image Source="{Binding Data.ImageURI, Mode=TwoWay}" Style="{StaticResource ImageItemCreatePageStyle}" />
-                                    
+
+                                    <!--Imagebutton for Dice-->
                                     <ImageButton 
                                         x:Name="RollDice"
                                         Style="{StaticResource BattleToolbarStyle}"
@@ -97,13 +98,13 @@
 
                                 <StackLayout Style="{StaticResource StackUpdate}" Grid.Row="0" Grid.Column="1">
                                     <Label 
-                                    Text="{Binding Data.Attack, Mode=TwoWay}" 
-                                    x:Name="AttackValue"
-                                    Style="{StaticResource StyleValueColor}"/>
+                                        Text="{Binding Data.Attack, Mode=TwoWay}" 
+                                        x:Name="AttackValue"
+                                        Style="{StaticResource StyleValueColor}"/>
 
                                     <Stepper 
-                                    Value="{Binding Data.Attack, Mode=TwoWay}"
-                                    ValueChanged="Attack_OnStepperValueChanged"/>
+                                        Value="{Binding Data.Attack, Mode=TwoWay}"
+                                        ValueChanged="Attack_OnStepperValueChanged"/>
                                 </StackLayout>
 
                                 <!--Defense-->
@@ -125,9 +126,9 @@
 
                                 <StackLayout  Style="{StaticResource StackUpdate}" Grid.Row="2" Grid.Column="1">
                                     <Label 
-                                    Text="{Binding Data.Speed, Mode=TwoWay}" 
-                                    x:Name="SpeedValue"
-                                    Style="{StaticResource StyleValueColor}"/>
+                                        Text="{Binding Data.Speed, Mode=TwoWay}" 
+                                        x:Name="SpeedValue"
+                                        Style="{StaticResource StyleValueColor}"/>
 
                                     <Stepper
                                         Value="{Binding Data.Speed, Mode=TwoWay}"
@@ -157,8 +158,7 @@
                  Style="{StaticResource NewPopup}">
 
                 <StackLayout 
-                    Style="{StaticResource CharacterPopupBox}"
-                    >
+                    Style="{StaticResource CharacterPopupBox}" >
 
                     <Frame Style="{StaticResource FrameNewStyle}">
                         <StackLayout Style="{StaticResource VerticalNewStack}" >
@@ -175,15 +175,6 @@
                                     <DataTemplate>
                                         <ViewCell>
                                             <Grid Style="{StaticResource NewGridStyle}">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="auto"/>
-                                                    <ColumnDefinition Width="*"/>
-                                                </Grid.ColumnDefinitions>
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="auto"/>
-                                                    <RowDefinition Height="auto"/>
-                                                    <RowDefinition Height="auto"/>
-                                                </Grid.RowDefinitions>
 
                                                 <Image  Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"
                                                     Source="{Binding ImageURI}"
@@ -193,7 +184,7 @@
                                                     Text="{Binding Name}" 
                                                     Style="{StaticResource ListStyle}"/>
 
-                                                <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                                                <StackLayout Grid.Column="1" Grid.Row="1" Style="{StaticResource PopupStyleNew}">
                                                     <Label Text="{Binding Attribute}" Style="{StaticResource ListStyle}"/>
                                                     <Label Text="{Binding Value}" Style="{StaticResource ListStyle}"/>
                                                 </StackLayout>

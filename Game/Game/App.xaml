@@ -1213,6 +1213,12 @@
             </Style>
 
             <Style TargetType="StackLayout"
+                x:Key="PopupStyleNew">
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+
+
+            <Style TargetType="StackLayout"
                    x:Key="NavigationHeader" >
                 <Setter Property="Orientation" Value="Horizontal" />
                 <Setter Property="Spacing" Value="20" />
