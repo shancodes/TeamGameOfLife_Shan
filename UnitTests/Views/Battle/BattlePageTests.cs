@@ -49,6 +49,9 @@ namespace UnitTests.Views
             Application.Current = null;
         }
 
+        /// <summary>
+        /// test for Battle Page on appearing
+        /// </summary>
         [Test]
         public void BattlePage_OnAppearing_Should_Pass()
         {
@@ -63,6 +66,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// test for battle page constructor
+        /// </summary>
         [Test]
         public void BattlePage_Constructor_Default_Should_Pass()
         {
@@ -77,6 +83,9 @@ namespace UnitTests.Views
             Assert.IsNotNull(result);
         }
 
+        /// <summary>
+        /// Test for the attack button
+        /// </summary>
         [Test]
         public void BattlePage_AttackButton_Clicked_Default_Should_Pass()
         {
@@ -91,6 +100,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for the Show score button
+        /// </summary>
         [Test]
         public void BattlePage_ShowScoreButton_Clicked_Default_Should_Pass()
         {
@@ -105,6 +117,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for the exit button
+        /// </summary>
         [Test]
         public void BattlePage_ExitButton_Clicked_Default_Should_Pass()
         {
@@ -119,6 +134,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for the start button
+        /// </summary>
         [Test]
         public void BattlePage_StartButton_Clicked_Default_Should_Pass()
         {
@@ -133,6 +151,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for next round button
+        /// </summary>
         [Test]
         public void BattlePage_NextRoundButton_Clicked_Default_Should_Pass()
         {
@@ -147,6 +168,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// test to show Round over page
+        /// </summary>
         [Test]
         public void BattlePage_ShowModalRoundOverPage_Default_Should_Pass()
         {
@@ -161,7 +185,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
-
+        /// <summary>
+        /// Test for clear messages
+        /// </summary>
         [Test]
         public void BattlePage_ClearMessages_Default_Should_Pass()
         {
@@ -176,6 +202,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test gor game messages
+        /// </summary>
         [Test]
         public void BattlePage_GameMessage_Default_Should_Pass()
         {
@@ -190,6 +219,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// test for level up
+        /// </summary>
         [Test]
         public void BattlePage_GameMessage_LevelUp_Default_Should_Pass()
         {
@@ -204,6 +236,10 @@ namespace UnitTests.Views
             // Assert
             Assert.IsTrue(true); // Got to here, so it happened...
         }
+
+        /// <summary>
+        /// Test for DrawGameBoardAttackerDefender
+        /// </summary>
         [Test]
         public void BattlePage_DrawGameBoardAttackerDefender_CurrentAttacker_Null_CurrentDefender_Null_Should_Pass()
         {
@@ -220,6 +256,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// test for DrawGameBoardAttackerDefender when current attacker is null
+        /// </summary>
         [Test]
         public void BattlePage_DrawGameBoardAttackerDefender_CurrentAttacker_InValid_Null_Should_Pass()
         {
@@ -239,6 +278,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for DrawGameBoardAttackerDefender when current defender is null
+        /// </summary>
         [Test]
         public void BattlePage_DrawGameBoardAttackerDefender_CurrentDefender_InValid_Null_Should_Pass()
         {
@@ -258,6 +300,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for DrawGameBoardAttackerDefender when current defender is valid
+        /// </summary>
         [Test]
         public void BattlePage_DrawGameBoardAttackerDefender_CurrentDefender_Valid_Should_Pass()
         {
@@ -275,6 +320,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for invalid Attacker source
+        /// </summary>
         [Test]
         public void BattlePage_DrawGameBoardAttackerDefender_Invalid_AttackerSource_Null_Should_Pass()
         {
@@ -298,6 +346,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for NextAttackExample
+        /// </summary>
         [Test]
         public void BattlePage_NextAttackExample_NextRound_Should_Pass()
         {
@@ -320,6 +371,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Next Attack Example for monster's turn
+        /// </summary>
         [Test]
         public void BattlePage_NextAttackExample_Monster_Turn_Should_Pass()
         {
@@ -338,6 +392,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Game over
+        /// </summary>
         [Test]
         public void BattlePage_NextAttackExample_GameOver_Should_Pass()
         {
@@ -362,6 +419,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for SetAttackerAndDefender
+        /// </summary>
         [Test]
         public void BattlePage_SetAttackerAndDefender_Character_vs_Monster_Should_Pass()
         {
@@ -419,6 +479,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for monster vs character
+        /// </summary>
         [Test]
         public void BattlePage_SetAttackerAndDefender_Monster_vs_Character_Should_Pass()
         {
@@ -477,6 +540,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for character vs unknown
+        /// </summary>
         [Test]
         public void BattlePage_SetAttackerAndDefender_Character_vs_Unknown_Should_Pass()
         {
@@ -535,6 +601,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Game Over
+        /// </summary>
         [Test]
         public void BattlePage_GameOver_Default_Should_Pass()
         {
@@ -1138,6 +1207,9 @@ namespace UnitTests.Views
             Assert.AreEqual(true, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Invalid location on battle map
+        /// </summary>
         [Test]
         public void BattlePage_SetSelectedEmptyd_Invalid_Location_Should_Pass()
         {
@@ -1159,6 +1231,9 @@ namespace UnitTests.Views
             Assert.AreEqual(false, result); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Monster Dies
+        /// </summary>
         [Test]
         public void BattlePage_DrawGameBoardAttackerDefenderSection_Monster_Dies_Should_Pass()
         {
