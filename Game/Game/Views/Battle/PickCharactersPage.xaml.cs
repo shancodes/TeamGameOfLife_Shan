@@ -158,9 +158,9 @@ namespace Game.Views
         /// </summary>
         public void UnsetUserDifficultyStyles()
         {
-            noobbutton.BackgroundColor = default;
-            joebutton.BackgroundColor = default;
-            probutton.BackgroundColor = default;
+            NoobButton.BackgroundColor = default;
+            JoeButton.BackgroundColor = default;
+            ProButton.BackgroundColor = default;
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Game.Views
         {
             UnsetUserDifficultyStyles();
             EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Noob;
-            noobbutton.BackgroundColor = Color.Green;
+            NoobButton.BackgroundColor = Color.Green;
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Game.Views
         {
             UnsetUserDifficultyStyles();
             EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Joe;
-            joebutton.BackgroundColor = Color.Green;
+            JoeButton.BackgroundColor = Color.Green;
 
         }
 
@@ -203,7 +203,7 @@ namespace Game.Views
         {
             UnsetUserDifficultyStyles();
             EngineSettings.userDifficulty = EngineSettingsModel.UserDifficultyEnum.Pro;
-            probutton.BackgroundColor = Color.Green;
+            ProButton.BackgroundColor = Color.Green;
         }
     }
 }
