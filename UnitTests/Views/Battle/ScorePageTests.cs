@@ -34,6 +34,9 @@ namespace UnitTests.Views
             Application.Current = null;
         }
 
+        /// <summary>
+        /// Test for Score Page Const
+        /// </summary>
         [Test]
         public void ScorePage_Constructor_Default_Should_Pass()
         {
@@ -48,6 +51,9 @@ namespace UnitTests.Views
             Assert.IsNotNull(result);
         }
 
+        /// <summary>
+        /// Test for Score Page Closed Button
+        /// </summary>
         [Test]
         public void ScorePage_CloseButton_Clicked_Default_Should_Pass()
         {
@@ -62,6 +68,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Score Page CreateChar display
+        /// </summary>
         [Test]
         public void ScorePage_CreateCharacterBox_Default_Should_Pass()
         {
@@ -77,6 +86,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Score Page CreateChar display
+        /// </summary>
         [Test]
         public void ScorePage_CreateCharacterBox_Null_Should_Pass()
         {
@@ -91,6 +103,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Score Page CreateMonster display
+        /// </summary>
         [Test]
         public void ScorePage_CreateMonsterBox_Default_Should_Pass()
         {
@@ -106,6 +121,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Score Page CreateMonster display
+        /// </summary>
         [Test]
         public void ScorePage_CreateMonsterBox_Null_Should_Pass()
         {
@@ -120,6 +138,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Score Page CreateItem display
+        /// </summary>
         [Test]
         public void ScorePage_CreateItemBox_Default_Should_Pass()
         {
@@ -135,6 +156,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Score Page CreateItem display
+        /// </summary>
         [Test]
         public void ScorePage_CreateItemBox_Null_Should_Pass()
         {
@@ -149,6 +173,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Score Page
+        /// </summary>
         [Test]
         public void ScorePage__Default_Should_Pass()
         {
