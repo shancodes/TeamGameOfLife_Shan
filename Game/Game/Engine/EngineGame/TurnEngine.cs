@@ -53,7 +53,6 @@ namespace Game.Engine.EngineGame
 
             var result = false;
 
-            
             // If the action is not set, then try to set it or use Attact
             if (EngineSettings.CurrentAction == ActionEnum.Unknown)
             {
@@ -92,7 +91,6 @@ namespace Game.Engine.EngineGame
             // Save the Previous Action off
             EngineSettings.PreviousAction = EngineSettings.CurrentAction;
             
-
             if (EngineSettings.CurrentAction == ActionEnum.Attack && EngineSettings.CurrentAttacker.PlayerType == PlayerTypeEnum.Character)
             {
                 EngineSettings.BattleMessagesModel.TurnMessage += "Select character's location and click Character Location Selected button";
