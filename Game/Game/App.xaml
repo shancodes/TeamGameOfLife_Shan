@@ -1730,7 +1730,7 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}" />
-                <Setter Property="BackgroundColor" Value= "Transparent" />
+                <Setter Property="BackgroundColor" Value= "Gray" />
                 <Setter Property="WidthRequest" Value="280"/>
                 <Setter Property="PlaceholderColor" Value="{StaticResource TriciaryTextColor}" />
             </Style>
@@ -1842,7 +1842,7 @@
                 <Setter Property="FontSize" Value="Small" />
                 <Setter Property="FontAttributes" Value="None" />
                 <Setter Property="WidthRequest" Value="280"/>
-                <Setter Property="BackgroundColor" Value = "Transparent" />
+                <Setter Property="BackgroundColor" Value = "Gray" />
             </Style>
 
             <Style TargetType="Picker" x:Key="PickerItemCreateStyle">
