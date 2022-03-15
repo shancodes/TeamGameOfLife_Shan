@@ -31,8 +31,8 @@
                     <StackLayout Style="{StaticResource HorizontalCenterStack}">
 
                         <Label 
-                    Text="Name: " 
-                    Style="{StaticResource NewCharLabelStyle}"/>
+                            Text="Name: " 
+                            Style="{StaticResource NewCharLabelStyle}"/>
 
                         <StackLayout Style="{StaticResource HorizontalStack}" >
 
