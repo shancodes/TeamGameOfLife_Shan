@@ -35,6 +35,7 @@ namespace Game.Engine.EngineGame
         // Output Score
         #endregion Algrorithm
 
+        //The Battle Engine
         public new IBattleEngineInterface Battle
         {
             get
