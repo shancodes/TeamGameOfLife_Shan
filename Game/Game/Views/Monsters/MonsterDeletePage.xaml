@@ -6,8 +6,6 @@
              mc:Ignorable="d"
              x:Class="Game.Views.MonsterDeletePage"
              >
-
-
     <!--stack layout for Back button and Title-->
 
     <NavigationPage.TitleView>
