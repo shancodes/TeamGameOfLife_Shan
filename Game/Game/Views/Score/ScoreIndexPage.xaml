@@ -27,19 +27,16 @@
                     ItemSelected="OnItemSelected"
                     HasUnevenRows="true"
                     HorizontalOptions="Center">
-
-
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Style="{StaticResource ScoreIndexGrid}"
-                                  >
+                            <Grid Style="{StaticResource ScoreIndexGrid}">
 
                                 <StackLayout Style="{StaticResource StackScoreIndex}">
 
                                     <Frame 
-                                    OutlineColor="Black" >
-
+                                    Style="{StaticResource FrameItemIndexoutside}" >
 
                                         <StackLayout Style="{StaticResource StackColorSpacing}">
                                             <!--Label for Name-->
