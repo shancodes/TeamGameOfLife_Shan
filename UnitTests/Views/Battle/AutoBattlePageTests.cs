@@ -34,6 +34,9 @@ namespace UnitTests.Views
             Application.Current = null;
         }
 
+        /// <summary>
+        /// Test for Auto Battle Page constructor
+        /// </summary>
         [Test]
         public void AutoBattlePage_Constructor_Default_Should_Pass()
         {
@@ -48,6 +51,9 @@ namespace UnitTests.Views
             Assert.IsNotNull(result);
         }
 
+        /// <summary>
+        /// Test for ViewBattleInfo Button Clicked
+        /// </summary>
         [Test]
         public void ViewBattleInfo_Clicked_Default_Should_Pass()
         {
@@ -61,6 +67,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        /// <summary>
+        /// Test for Attack button clicked
+        /// </summary>
         [Test]
         public void AutoBattlePage_AttackButton_Clicked_Default_Should_Pass()
         {
