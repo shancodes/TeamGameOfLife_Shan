@@ -29,25 +29,25 @@
                                 <!--Name-->
                                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                                 <Label 
-                                Text="{Binding Data.Name}" 
-                                Style="{StaticResource StyleCharacterReadValueStyle}" />
+                                        Text="{Binding Data.Name}" 
+                                        Style="{StaticResource StyleCharacterReadValueStyle}" />
                                 </StackLayout>
 
                                 <!--Description-->
                                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                                     <Label 
-                                Text="{Binding Data.Description}" 
-                                Style="{StaticResource StyleCharacterReadValueStyle}" />
+                                        Text="{Binding Data.Description}" 
+                                        Style="{StaticResource StyleCharacterReadValueStyle}" />
                                 </StackLayout>
 
                                 <!--Level-->
                                 <StackLayout Style="{StaticResource StackLayoutItemReadStyle}" >
                                     <Label 
-                                Text="Level: " 
-                                Style="{StaticResource NewFrameLabelStyle}"/>
+                                        Text="Level: " 
+                                        Style="{StaticResource NewFrameLabelStyle}"/>
                                     <Label 
-                                Text="{Binding Data.Level}" 
-                                Style="{StaticResource NewFrameValueStyle}"/>
+                                        Text="{Binding Data.Level}" 
+                                        Style="{StaticResource NewFrameValueStyle}"/>
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
@@ -159,15 +159,12 @@
                                 </Grid>
                             </Frame>
                         </StackLayout>
-
                     </StackLayout>
 
-                        <FlexLayout
-                            Style="{StaticResource CharacterReadFlex}"
-                            x:Name="ItemBox"
-                        >
-                        </FlexLayout>
-                    
+                    <FlexLayout
+                        Style="{StaticResource CharacterReadFlex}"
+                        x:Name="ItemBox">
+                    </FlexLayout>
                 </StackLayout>
             </ScrollView>
 
@@ -188,8 +185,7 @@
                  Style="{StaticResource NewPopup}">
 
             <StackLayout 
-                Style="{StaticResource CharacterPopupBox}"
-                >
+                Style="{StaticResource CharacterPopupBox}">
 
                 <Frame 
                     Style="{StaticResource FrameNewStyle}">
