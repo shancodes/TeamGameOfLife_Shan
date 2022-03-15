@@ -95,6 +95,9 @@ namespace Game.Engine.EngineGame
             return true;
         }
 
+        /// <summary>
+        /// Add monsters from Monsters created using crudi pages
+        /// </summary>
         public void AddUserCreatedMonsters()
         {
             setMonstersList(EngineSettingsModel.Instance.userDifficulty);
@@ -109,6 +112,10 @@ namespace Game.Engine.EngineGame
 
         }
 
+        /// <summary>
+        /// Adding monsters to the round
+        /// </summary>
+        /// <returns></returns>
         public override int AddMonstersToRound()
         { 
             var TargetLevel = 1;
