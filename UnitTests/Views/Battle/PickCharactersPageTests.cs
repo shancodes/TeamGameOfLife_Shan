@@ -40,6 +40,9 @@ namespace UnitTests.Views
             Application.Current = null;
         }
 
+        /// <summary>
+        /// Test for Pick Characters Page Const
+        /// </summary>
         [Test]
         public void PickCharactersPage_Constructor_Default_Should_Pass()
         {
@@ -54,6 +57,9 @@ namespace UnitTests.Views
             Assert.IsNotNull(result);
         }
 
+        /// <summary>
+        /// Test for Pick Charcaters Page Const
+        /// </summary>
         [Test]
         public void PickCharactersPage_Constructor_UT_Default_Should_Pass()
         {
@@ -68,6 +74,9 @@ namespace UnitTests.Views
             Assert.IsNotNull(result);
         }
 
+        /// <summary>
+        /// Test for Battle Button Clicked
+        /// </summary>
         [Test]
         public void PickCharactersPage_BattleButton_Clicked_Default_Should_Pass()
         {
@@ -82,6 +91,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for CreateEngineCharacterList
+        /// </summary>
         [Test]
         public void PickCharactersPage_CreateEngineCharacterList_Default_Should_Pass()
         {
@@ -130,6 +142,9 @@ namespace UnitTests.Views
         //    Assert.IsTrue(true); // Got to here, so it happened...
         //}
 
+        /// <summary>
+        /// Test for UpdateNextButton State
+        /// </summary>
         [Test]
         public void PickCharactersPage_UpdateButtonState_Default_Should_Pass()
         {
@@ -144,6 +159,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Selected Characters List
+        /// </summary>
         [Test]
         public void PickCharactersPage_OnPartyCharacterItemSelected_Default_Should_Pass()
         {
@@ -159,6 +177,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Selected character list Invalid
+        /// </summary>
         [Test]
         public void PickCharactersPage_OnPartyCharacterItemSelected_InValid_Should_Pass()
         {
@@ -174,6 +195,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Selecting Characters
+        /// </summary>
         [Test]
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_Default_Should_Pass()
         {
@@ -191,6 +215,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Test for Selecting Characters Invalid
+        /// </summary>
         [Test]
         public void PickCharactersPage_OnDatabaseCharacterItemSelected_InValid_Should_Pass()
         {
@@ -211,6 +238,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true); // Got to here, so it happened...
         }
 
+        /// <summary>
+        /// Tests for Noob Button Clicked
+        /// </summary>
         [Test]
         public void PickCharactersPage_On_NoobClicked_Should_Pass() {
             // Arrange
@@ -224,6 +254,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        /// <summary>
+        /// Tests for Joe Button Clicked
+        /// </summary>
         [Test]
         public void PickCharactersPage_On_JoeClicked_Should_Pass() {
             // Arrange
@@ -237,6 +270,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        /// <summary>
+        /// Tests for Pro Button Clicked
+        /// </summary>
         [Test]
         public void PickCharactersPage_On_ProClicked_Should_Pass() {
             // Arrange
@@ -250,6 +286,9 @@ namespace UnitTests.Views
             Assert.IsTrue(true);
         }
 
+        /// <summary>
+        /// Tests for Unset User Difficulty
+        /// </summary>
         [Test]
         public void PickCharactersPage_UnsetUserDifficultyStyles_Should_Pass()
         {
